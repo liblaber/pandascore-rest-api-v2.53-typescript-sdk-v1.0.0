@@ -1,0 +1,31 @@
+# LoLMatchGamePlayer
+
+Player's data for a Game in a LoL Match
+
+**Properties**
+
+| Name                  | Type                   | Required | Description      |
+| :-------------------- | :--------------------- | :------- | :--------------- |
+| assists               | number                 | ✅       |                  |
+| deaths                | number                 | ✅       |                  |
+| flags                 | LoLFlags               | ✅       |                  |
+| kills                 | number                 | ✅       |                  |
+| killsCounters         | LoLKillCounters        | ✅       |                  |
+| killsSeries           | LoLKillsSeries         | ✅       |                  |
+| largestCriticalStrike | number                 | ✅       |                  |
+| largestKillingSpree   | number                 | ✅       |                  |
+| largestMultiKill      | number                 | ✅       |                  |
+| playerId              | number                 | ✅       | ID of the player |
+| role                  | LoLMatchGamePlayerRole | ✅       |                  |
+
+# LoLMatchGamePlayerRole
+
+**Properties**
+
+| Name | Type   | Required | Description |
+| :--- | :----- | :------- | :---------- |
+| adc  | string | ✅       | "adc"       |
+| jun  | string | ✅       | "jun"       |
+| mid  | string | ✅       | "mid"       |
+| sup  | string | ✅       | "sup"       |
+| top  | string | ✅       | "top"       |

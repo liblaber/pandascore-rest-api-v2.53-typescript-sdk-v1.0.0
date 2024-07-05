@@ -1,0 +1,161 @@
+# LoLTeamsService
+
+A list of all methods in the `LoLTeamsService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                                   | Description                                                      |
+| :------------------------------------------------------------------------ | :--------------------------------------------------------------- |
+| [get_lol_series_serieIdOrSlug_teams](#get_lol_series_serieidorslug_teams) | List teams for the League of Legends videogame for a given serie |
+| [get_lol_teams](#get_lol_teams)                                           | List teams for the League of Legends videogame                   |
+
+## get_lol_series_serieIdOrSlug_teams
+
+List teams for the League of Legends videogame for a given serie
+
+- HTTP Method: `GET`
+- Endpoint: `/lol/series/{serie_id_or_slug}/teams`
+
+**Parameters**
+
+| Name          | Type                                                  | Required | Description                                                                                                                                         |
+| :------------ | :---------------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| serieIdOrSlug | [SerieIdOrSlug](../models/SerieIdOrSlug.md)           | ✅       | A serie ID or slug                                                                                                                                  |
+| filter        | [FilterOverLoLTeams](../models/FilterOverLoLTeams.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range         | [RangeOverLoLTeams](../models/RangeOverLoLTeams.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort          | any[]                                                 | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search        | [SearchOverLoLTeams](../models/SearchOverLoLTeams.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page          | [Page](../models/Page.md)                             | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage       | number                                                | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`Team[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+	token: 'YOUR_TOKEN'});
+
+  const serieIdOrSlug = 10;
+const videogameId = VideogameId.1;
+
+const filter: FilterOverLoLTeams = {
+  acronym: ["aliquip "],
+  id: [4],
+  location: ["adanim nisi"],
+  modifiedAt: ["mollit laborum"],
+  name: ["et pari"],
+  slug: ["k-_81o"],
+  videogameId: [videogameId]
+};
+
+const range: RangeOverLoLTeams = {
+  acronym: ["exercitation "],
+  id: [3],
+  location: ["sint al"],
+  modifiedAt: ["est"],
+  name: ["laborum cu"],
+  slug: ["p2e-mz"]
+};
+
+const search: SearchOverLoLTeams = {
+  acronym: "ipsum in",
+  location: "nisi m",
+  name: "esse mollit",
+  slug: "di"
+};
+const page = 1;
+
+  const { data } = await pandascore.loLTeams.getLolSeriesSerieIdOrSlugTeams(
+  ,
+  {
+		filter: filter,
+		range: range,
+    sort: [[]],
+		search: search,
+		page: page,
+    perPage: 50,
+  }
+);
+
+  console.log(data);
+})();
+```
+
+## get_lol_teams
+
+List teams for the League of Legends videogame
+
+- HTTP Method: `GET`
+- Endpoint: `/lol/teams`
+
+**Parameters**
+
+| Name    | Type                                                  | Required | Description                                                                                                                                         |
+| :------ | :---------------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filter  | [FilterOverLoLTeams](../models/FilterOverLoLTeams.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range   | [RangeOverLoLTeams](../models/RangeOverLoLTeams.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort    | any[]                                                 | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search  | [SearchOverLoLTeams](../models/SearchOverLoLTeams.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page    | [Page](../models/Page.md)                             | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage | number                                                | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`Team[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+	token: 'YOUR_TOKEN'});
+
+  const videogameId = VideogameId.1;
+
+const filter: FilterOverLoLTeams = {
+  acronym: ["aliquip "],
+  id: [4],
+  location: ["adanim nisi"],
+  modifiedAt: ["mollit laborum"],
+  name: ["et pari"],
+  slug: ["k-_81o"],
+  videogameId: [videogameId]
+};
+
+const range: RangeOverLoLTeams = {
+  acronym: ["exercitation "],
+  id: [3],
+  location: ["sint al"],
+  modifiedAt: ["est"],
+  name: ["laborum cu"],
+  slug: ["p2e-mz"]
+};
+
+const search: SearchOverLoLTeams = {
+  acronym: "ipsum in",
+  location: "nisi m",
+  name: "esse mollit",
+  slug: "di"
+};
+const page = 1;
+
+  const { data } = await pandascore.loLTeams.getLolTeams(
+  {
+		filter: filter,
+		range: range,
+    sort: [[]],
+		search: search,
+		page: page,
+    perPage: 50,
+  }
+);
+
+  console.log(data);
+})();
+```

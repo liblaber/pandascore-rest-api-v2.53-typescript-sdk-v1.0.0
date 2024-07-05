@@ -1,0 +1,17 @@
+# CsgoMatchGamePlayer
+
+Player's data for a Game in a CSGO Match
+
+**Properties**
+
+| Name         | Type   | Required | Description                                                                                |
+| :----------- | :----- | :------- | :----------------------------------------------------------------------------------------- |
+| adr          | number | ✅       | Player's average damage per round                                                          |
+| assists      | number | ✅       | Player's number of kill assists for a game                                                 |
+| deaths       | number | ✅       | Player's number of deaths                                                                  |
+| flashAssists | number | ✅       | Player's number of flash assists for a game                                                |
+| headshots    | number | ✅       | Player's number of headshots                                                               |
+| kDDiff       | number | ✅       | Player's kills deaths difference for a game                                                |
+| kast         | number | ✅       | Percentage of rounds in which the player either had a kill, assist, survived or was traded |
+| kills        | number | ✅       | Player's number of kills                                                                   |
+| playerId     | number | ✅       | ID of the player                                                                           |

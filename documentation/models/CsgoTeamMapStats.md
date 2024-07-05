@@ -1,0 +1,25 @@
+# CsgoTeamMapStats
+
+Statistics for a map
+
+**Properties**
+
+| Name                     | Type   | Required | Description                                                      |
+| :----------------------- | :----- | :------- | :--------------------------------------------------------------- |
+| ctPistolRoundTotalPlayed | number | ✅       | Number of pistol rounds played as Counter-Terrorists on this map |
+| ctPistolRoundWins        | number | ✅       | Number of pistol rounds won as Counter-Terrorists on this map    |
+| ctRoundTotalPlayed       | number | ✅       | Number of rounds played as Counter-Terrorists on this map        |
+| ctRoundWins              | number | ✅       | Number of rounds won as Counter-Terrorists on this map           |
+| id                       | number | ✅       | The ID of the map.                                               |
+| imageUrl                 | string | ✅       | A URL to the image of the map.                                   |
+| losses                   | number | ✅       | Number of team losses on this map                                |
+| name                     | string | ✅       | The name of the map.                                             |
+| pistolRoundTotalPlayed   | number | ✅       | Number of pistol rounds played on this map                       |
+| roundTotalPlayed         | number | ✅       | Number of rounds played on this map                              |
+| slug                     | string | ✅       | Human-readable identifier of the map                             |
+| tPistolRoundTotalPlayed  | number | ✅       | Number of pistol rounds played as Terrorists on this map         |
+| tPistolRoundWins         | number | ✅       | Number of pistol rounds won as Terrorists on this map            |
+| tRoundTotalPlayed        | number | ✅       | Number of rounds played as Terrorists on this map                |
+| tRoundWins               | number | ✅       | Number of rounds won as Terrorists on this map                   |
+| totalPlayed              | number | ✅       | Number of times the team played on this map                      |
+| wins                     | number | ✅       | Number of team wins on this map                                  |

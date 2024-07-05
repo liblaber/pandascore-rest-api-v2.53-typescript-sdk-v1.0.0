@@ -1,0 +1,34 @@
+# LoLGameTeam
+
+Team's data for a Game
+
+**Properties**
+
+| Name               | Type         | Required | Description                               |
+| :----------------- | :----------- | :------- | :---------------------------------------- |
+| bans               | number[]     | ✅       |                                           |
+| baronKills         | number       | ✅       |                                           |
+| chemtechDrakeKills | number       | ✅       |                                           |
+| cloudDrakeKills    | number       | ✅       |                                           |
+| color              | LoLTeamColor | ✅       |                                           |
+| dragonKills        | number       | ✅       |                                           |
+| elderDrakeKills    | number       | ✅       |                                           |
+| firstBaron         | boolean      | ✅       | Whether team got first baron Nashor       |
+| firstBlood         | boolean      | ✅       | Whether team got first blood              |
+| firstDragon        | boolean      | ✅       | Whether team got first dragon             |
+| firstHerald        | boolean      | ✅       | Whether team got first herald             |
+| firstInhibitor     | boolean      | ✅       | Whether team got first inhibitor          |
+| firstTower         | boolean      | ✅       | Whether team got first tower              |
+| firstVoidgrub      | boolean      | ✅       | Whether team killed the first voidgrub    |
+| goldEarned         | number       | ✅       |                                           |
+| heraldKills        | number       | ✅       |                                           |
+| hextechDrakeKills  | number       | ✅       |                                           |
+| infernalDrakeKills | number       | ✅       |                                           |
+| inhibitorKills     | number       | ✅       |                                           |
+| kills              | number       | ✅       |                                           |
+| mountainDrakeKills | number       | ✅       |                                           |
+| oceanDrakeKills    | number       | ✅       |                                           |
+| playerIds          | number[]     | ✅       |                                           |
+| team               | BaseTeam     | ✅       |                                           |
+| towerKills         | number       | ✅       |                                           |
+| voidgrubKills      | number       | ✅       | The number of voidgrubs killed by a team. |

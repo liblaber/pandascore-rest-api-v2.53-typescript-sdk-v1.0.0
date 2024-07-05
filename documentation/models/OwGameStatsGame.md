@@ -1,0 +1,46 @@
+# OwGameStatsGame
+
+A game
+
+**Properties**
+
+| Name          | Type                      | Required | Description                                                                         |
+| :------------ | :------------------------ | :------- | :---------------------------------------------------------------------------------- |
+| beginAt       | string                    | ✅       | The game begin time, UTC. <br/>`null` when the game status is `not_started`         |
+| complete      | boolean                   | ✅       | Whether When `true`, the game statistics are complete and will not be updated again |
+| detailedStats | boolean                   | ✅       | Whether historical data is available for the game                                   |
+| endAt         | string                    | ✅       | The game end time, UTC. <br/>`null` when the game status is not `finished`          |
+| finished      | boolean                   | ✅       | Whether the game is finished                                                        |
+| forfeit       | boolean                   | ✅       | Whether the game has been forfeited                                                 |
+| id            | number                    | ✅       |                                                                                     |
+| length        | number                    | ✅       | Duration of the game in seconds. <br/>`null` when the game status is not `finished` |
+| map           | OwGameStatsGameMap        | ✅       |                                                                                     |
+| match         | GamelessFullGameMatch     | ✅       | A match                                                                             |
+| matchId       | number                    | ✅       |                                                                                     |
+| position      | number                    | ✅       | Game position in the match. Starts at 1                                             |
+| rounds        | OwGameRound[]             | ✅       |                                                                                     |
+| status        | GameStatus                | ✅       | The game status                                                                     |
+| winner        | GameWinner                | ✅       |                                                                                     |
+| winnerType    | OwGameStatsGameWinnerType | ✅       |                                                                                     |
+
+# OwGameStatsGameMap
+
+**Properties**
+
+| Name         | Type          | Required | Description |
+| :----------- | :------------ | :------- | :---------- |
+| gameMode     | OwMapGameMode | ✅       |             |
+| id           | number        | ✅       |             |
+| imageUrl     | string        | ✅       |             |
+| name         | string        | ✅       |             |
+| slug         | string        | ✅       |             |
+| thumbnailUrl | string        | ✅       |             |
+
+# OwGameStatsGameWinnerType
+
+**Properties**
+
+| Name   | Type   | Required | Description |
+| :----- | :----- | :------- | :---------- |
+| Player | string | ✅       | "Player"    |
+| Team   | string | ✅       | "Team"      |

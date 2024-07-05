@@ -1,0 +1,20 @@
+# OwPlayerAverages
+
+**Properties**
+
+| Name                        | Type   | Required | Description |
+| :-------------------------- | :----- | :------- | :---------- |
+| averageTimeToChargeUltimate | number | ✅       |             |
+| deathsCount                 | number | ✅       |             |
+| deathsPer10Minutes          | number | ✅       |             |
+| destructionsCount           | number | ✅       |             |
+| destructionsPer10Minutes    | number | ✅       |             |
+| killsCount                  | number | ✅       |             |
+| killsPer10Minutes           | number | ✅       |             |
+| mapDraw                     | number | ✅       |             |
+| mapLost                     | number | ✅       |             |
+| mapWon                      | number | ✅       |             |
+| resurrectionsCount          | number | ✅       |             |
+| resurrectionsPer10Minutes   | number | ✅       |             |
+| ultimatesCount              | number | ✅       |             |
+| ultimatesPer10Minutes       | number | ✅       |             |

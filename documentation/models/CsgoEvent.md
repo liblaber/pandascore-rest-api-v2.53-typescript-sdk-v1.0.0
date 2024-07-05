@@ -1,0 +1,15 @@
+# CsgoEvent
+
+This is a union type which means it could be any of several possible types.
+
+# CsgoRoundStartEvent
+
+See all details about CsgoRoundStartEvent model [here](CsgoRoundStartEvent.md).
+
+# CsgoRoundEndEvent
+
+See all details about CsgoRoundEndEvent model [here](CsgoRoundEndEvent.md).
+
+# CsgoKillEvent
+
+See all details about CsgoKillEvent model [here](CsgoKillEvent.md).

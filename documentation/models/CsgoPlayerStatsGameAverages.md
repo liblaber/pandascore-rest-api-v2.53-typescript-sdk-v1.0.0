@@ -1,0 +1,16 @@
+# CsgoPlayerStatsGameAverages
+
+**Properties**
+
+| Name           | Type   | Required | Description                                                                                        |
+| :------------- | :----- | :------- | :------------------------------------------------------------------------------------------------- |
+| adr            | number | ✅       | Player's average damage per round                                                                  |
+| assists        | number | ✅       | Average number of kill assists                                                                     |
+| deaths         | number | ✅       | Average number of deaths                                                                           |
+| firstKillsDiff | number | ✅       | Average of first kill difference                                                                   |
+| flashAssists   | number | ✅       | Average number of flash assists                                                                    |
+| headshots      | number | ✅       | Average number of headshots                                                                        |
+| hltvGameRating | number | ✅       | Average rating                                                                                     |
+| kDDiff         | number | ✅       | Average kills deaths difference                                                                    |
+| kast           | number | ✅       | Average percentage of rounds in which the player either had a kill, assist, survived or was traded |
+| kills          | number | ✅       | Average number of kills                                                                            |

@@ -1,0 +1,14 @@
+# CsgoFullRoundTeamPlayer
+
+**Properties**
+
+| Name              | Type                       | Required | Description                                     |
+| :---------------- | :------------------------- | :------- | :---------------------------------------------- |
+| assists           | number                     | ✅       | Player's number of kill assists for a game      |
+| freezeTimeEconomy | CsgoFullRoundPlayerEconomy | ✅       |                                                 |
+| id                | number                     | ✅       | ID of the player                                |
+| isAlive           | boolean                    | ✅       | Whether the player is alive or not              |
+| kills             | number                     | ✅       | Player's number of kills                        |
+| name              | string                     | ✅       | Professional name of the player                 |
+| remainingHp       | number                     | ✅       | Number of health points at the end of the round |
+| roundStartEconomy | CsgoFullRoundPlayerEconomy | ✅       |                                                 |

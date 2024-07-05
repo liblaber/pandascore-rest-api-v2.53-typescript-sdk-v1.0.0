@@ -1,0 +1,102 @@
+# ValorantAgentsService
+
+A list of all methods in the `ValorantAgentsService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                                     | Description                    |
+| :-------------------------------------------------------------------------- | :----------------------------- |
+| [get_valorant_agents](#get_valorant_agents)                                 | List agents                    |
+| [get_valorant_agents_valorantAgentId](#get_valorant_agents_valorantagentid) | Get a Valorant agent by its ID |
+
+## get_valorant_agents
+
+List agents
+
+- HTTP Method: `GET`
+- Endpoint: `/valorant/agents`
+
+**Parameters**
+
+| Name    | Type                                                              | Required | Description                                                                                                                                         |
+| :------ | :---------------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filter  | [FilterOverValorantAgents](../models/FilterOverValorantAgents.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range   | [RangeOverValorantAgents](../models/RangeOverValorantAgents.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort    | any[]                                                             | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search  | [SearchOverValorantAgents](../models/SearchOverValorantAgents.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page    | [Page](../models/Page.md)                                         | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage | number                                                            | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`ValorantAgent[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const filter: FilterOverValorantAgents = {
+    id: [4],
+    name: ['incididunt ut e'],
+    videogameVersion: [],
+  };
+
+  const range: RangeOverValorantAgents = {
+    id: [2],
+    name: ['dolor e'],
+  };
+
+  const search: SearchOverValorantAgents = {
+    name: 'in el',
+  };
+  const page = 1;
+
+  const { data } = await pandascore.valorantAgents.getValorantAgents({
+    filter: filter,
+    range: range,
+    sort: [[]],
+    search: search,
+    page: page,
+    perPage: 50,
+  });
+
+  console.log(data);
+})();
+```
+
+## get_valorant_agents_valorantAgentId
+
+Get a Valorant agent by its ID
+
+- HTTP Method: `GET`
+- Endpoint: `/valorant/agents/{valorant_agent_id}`
+
+**Parameters**
+
+| Name            | Type   | Required | Description              |
+| :-------------- | :----- | :------- | :----------------------- |
+| valorantAgentId | number | ✅       | ID of the Valorant agent |
+
+**Return Type**
+
+`ValorantAgent`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const { data } = await pandascore.valorantAgents.getValorantAgentsValorantAgentId(1);
+
+  console.log(data);
+})();
+```

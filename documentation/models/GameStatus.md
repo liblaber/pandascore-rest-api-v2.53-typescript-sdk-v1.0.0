@@ -1,0 +1,12 @@
+# GameStatus
+
+The game status
+
+**Properties**
+
+| Name        | Type   | Required | Description   |
+| :---------- | :----- | :------- | :------------ |
+| finished    | string | ✅       | "finished"    |
+| not_played  | string | ✅       | "not_played"  |
+| not_started | string | ✅       | "not_started" |
+| running     | string | ✅       | "running"     |

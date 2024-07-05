@@ -1,0 +1,8 @@
+# SearchOverValorantAbilities
+
+**Properties**
+
+| Name        | Type                | Required | Description         |
+| :---------- | :------------------ | :------- | :------------------ |
+| abilityType | ValorantAbilityType | ❌       | Ability type        |
+| name        | string              | ❌       | Name of the ability |

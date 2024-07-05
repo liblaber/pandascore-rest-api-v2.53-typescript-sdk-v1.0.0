@@ -1,0 +1,14 @@
+# ValorantGameTeam
+
+**Properties**
+
+| Name     | Type                 | Required | Description                      |
+| :------- | :------------------- | :------- | :------------------------------- |
+| acronym  | string               | ✅       |                                  |
+| id       | number               | ✅       |                                  |
+| imageUrl | string               | ✅       | URL of the team logo             |
+| location | string               | ✅       | The team's organization location |
+| name     | string               | ✅       | The name of the team.            |
+| players  | ValorantGamePlayer[] | ✅       |                                  |
+| score    | number               | ✅       | Number of rounds won by the team |
+| slug     | string               | ✅       |                                  |

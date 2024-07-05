@@ -1,0 +1,19 @@
+# CsgoStatsForTeamByTournament
+
+Team's aggregated statistics for a tournament
+
+**Properties**
+
+| Name             | Type                      | Required | Description                      |
+| :--------------- | :------------------------ | :------- | :------------------------------- |
+| acronym          | string                    | ✅       |                                  |
+| currentVideogame | any                       | ✅       |                                  |
+| id               | number                    | ✅       |                                  |
+| imageUrl         | string                    | ✅       | URL of the team logo             |
+| lastGames        | BaseCsgoGame[]            | ✅       |                                  |
+| location         | string                    | ✅       | The team's organization location |
+| modifiedAt       | string                    | ✅       |                                  |
+| name             | string                    | ✅       | The name of the team.            |
+| players          | BasePlayer[]              | ✅       |                                  |
+| slug             | string                    | ✅       |                                  |
+| stats            | CsgoTeamStatsByTournament | ✅       | Statistics for a tournament      |

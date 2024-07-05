@@ -1,0 +1,25 @@
+# VideogameSlug
+
+A videogame slug
+
+**Properties**
+
+| Name                | Type   | Required | Description           |
+| :------------------ | :----- | :------- | :-------------------- |
+| cod-mw              | string | ✅       | "cod-mw"              |
+| cs-go               | string | ✅       | "cs-go"               |
+| dota-2              | string | ✅       | "dota-2"              |
+| e-basketball        | string | ✅       | "e-basketball"        |
+| e-cricket           | string | ✅       | "e-cricket"           |
+| e-soccer            | string | ✅       | "e-soccer"            |
+| fifa                | string | ✅       | "fifa"                |
+| kog                 | string | ✅       | "kog"                 |
+| league-of-legends   | string | ✅       | "league-of-legends"   |
+| lol-wild-rift       | string | ✅       | "lol-wild-rift"       |
+| ow                  | string | ✅       | "ow"                  |
+| pubg                | string | ✅       | "pubg"                |
+| r6-siege            | string | ✅       | "r6-siege"            |
+| rl                  | string | ✅       | "rl"                  |
+| starcraft-2         | string | ✅       | "starcraft-2"         |
+| starcraft-brood-war | string | ✅       | "starcraft-brood-war" |
+| valorant            | string | ✅       | "valorant"            |

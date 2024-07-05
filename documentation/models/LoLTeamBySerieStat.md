@@ -1,0 +1,12 @@
+# LoLTeamBySerieStat
+
+Team's statistics for a serie
+
+**Properties**
+
+| Name       | Type               | Required | Description                              |
+| :--------- | :----------------- | :------- | :--------------------------------------- |
+| averages   | LoLTeamAverages    | ✅       |                                          |
+| gamesCount | number             | ✅       | Number of games                          |
+| serie      | Serie              | ✅       | A serie, an occurrence of a league event |
+| totals     | LoLTeamStatsTotals | ✅       |                                          |

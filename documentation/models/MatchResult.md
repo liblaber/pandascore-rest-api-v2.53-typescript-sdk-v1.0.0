@@ -1,0 +1,11 @@
+# MatchResult
+
+This is a union type which means it could be any of several possible types.
+
+# MatchTeamResult
+
+See all details about MatchTeamResult model [here](MatchTeamResult.md).
+
+# MatchPlayerResult
+
+See all details about MatchPlayerResult model [here](MatchPlayerResult.md).

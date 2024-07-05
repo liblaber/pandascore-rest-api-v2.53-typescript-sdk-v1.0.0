@@ -1,0 +1,11 @@
+# Dota2FrameTeam
+
+**Properties**
+
+| Name          | Type               | Required | Description                                            |
+| :------------ | :----------------- | :------- | :----------------------------------------------------- |
+| goldAdvantage | number             | ✅       | Gold advantage of the team (negative if deficit)       |
+| id            | number             | ✅       |                                                        |
+| name          | string             | ✅       | The name of the team.                                  |
+| players       | Dota2FramePlayer[] | ✅       | The players of the team                                |
+| xpAdvantage   | number             | ✅       | Experience advantage of the team (negative if deficit) |

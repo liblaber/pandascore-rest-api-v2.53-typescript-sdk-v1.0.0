@@ -1,0 +1,8 @@
+# ValorantGameRoundWinner
+
+**Properties**
+
+| Name | Type             | Required | Description                       |
+| :--- | :--------------- | :------- | :-------------------------------- |
+| id   | number           | ✅       | ID of the team that won the round |
+| side | ValorantTeamSide | ✅       | Team side in the round            |

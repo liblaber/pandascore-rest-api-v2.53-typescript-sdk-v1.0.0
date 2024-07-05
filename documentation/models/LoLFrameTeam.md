@@ -1,0 +1,18 @@
+# LoLFrameTeam
+
+**Properties**
+
+| Name       | Type           | Required | Description                               |
+| :--------- | :------------- | :------- | :---------------------------------------- |
+| acronym    | string         | ✅       |                                           |
+| drakes     | number         | ✅       |                                           |
+| gold       | number         | ✅       |                                           |
+| id         | number         | ✅       |                                           |
+| inhibitors | number         | ✅       | Number of inhibitors killed by the player |
+| kills      | number         | ✅       |                                           |
+| name       | string         | ✅       | The name of the team.                     |
+| nashors    | number         | ✅       |                                           |
+| players    | LoLPlayersRole | ✅       |                                           |
+| score      | number         | ✅       |                                           |
+| towers     | number         | ✅       |                                           |
+| voidgrubs  | number         | ✅       | The number of voidgrubs killed by a team. |

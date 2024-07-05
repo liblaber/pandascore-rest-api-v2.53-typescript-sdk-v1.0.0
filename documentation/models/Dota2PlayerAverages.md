@@ -1,0 +1,32 @@
+# Dota2PlayerAverages
+
+**Properties**
+
+| Name                   | Type   | Required | Description                                                                            |
+| :--------------------- | :----- | :------- | :------------------------------------------------------------------------------------- |
+| assists                | number | ✅       |                                                                                        |
+| campsStacked           | number | ✅       | The average number of camps stacked by the team                                        |
+| creepsStacked          | number | ✅       |                                                                                        |
+| damageTaken            | number | ✅       | The average damage taken by the team                                                   |
+| deaths                 | number | ✅       |                                                                                        |
+| denies                 | number | ✅       | Average number of denies per game                                                      |
+| goldPerMinute          | number | ✅       |                                                                                        |
+| goldPercentage         | number | ✅       | Percentage of gold (per min) the player had compared to the total gold of the team     |
+| heal                   | number | ✅       |                                                                                        |
+| heroDamage             | number | ✅       |                                                                                        |
+| heroDamagePercentage   | number | ✅       | Percentage of damage to heroes the player had compared to the total damage of the team |
+| kills                  | number | ✅       |                                                                                        |
+| laneCreep              | number | ✅       |                                                                                        |
+| lastHits               | number | ✅       |                                                                                        |
+| netWorth               | number | ✅       |                                                                                        |
+| neutralCreep           | number | ✅       |                                                                                        |
+| observerWardsDestroyed | number | ✅       |                                                                                        |
+| observerWardsPlaced    | number | ✅       |                                                                                        |
+| observerWardsPurchased | number | ✅       |                                                                                        |
+| sentryWardsDestroyed   | number | ✅       |                                                                                        |
+| sentryWardsPlaced      | number | ✅       |                                                                                        |
+| sentryWardsPurchased   | number | ✅       |                                                                                        |
+| towerDamage            | number | ✅       |                                                                                        |
+| towerKills             | number | ✅       |                                                                                        |
+| wardsPlaced            | number | ✅       |                                                                                        |
+| xpPerMinute            | number | ✅       |                                                                                        |

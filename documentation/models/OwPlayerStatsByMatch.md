@@ -1,0 +1,14 @@
+# OwPlayerStatsByMatch
+
+Player's statistics for a match
+
+**Properties**
+
+| Name                 | Type                  | Required | Description     |
+| :------------------- | :-------------------- | :------- | :-------------- |
+| averages             | OwPlayerAverages      | ✅       |                 |
+| gamesCount           | number                | ✅       | Number of games |
+| match                | Match                 | ✅       |                 |
+| per10MinutesAverages | OwPlayer10MinAverages | ✅       |                 |
+| perGameAverages      | OwPlayerGameAverages  | ✅       |                 |
+| totals               | OwPlayerTotals        | ✅       |                 |

@@ -1,0 +1,21 @@
+# Dota2PlayerStatsTotals
+
+**Properties**
+
+| Name                   | Type   | Required | Description     |
+| :--------------------- | :----- | :------- | :-------------- |
+| assists                | number | ✅       |                 |
+| deaths                 | number | ✅       |                 |
+| gamesLost              | number | ✅       | Number of games |
+| gamesPlayed            | number | ✅       | Number of games |
+| gamesWon               | number | ✅       | Number of games |
+| kills                  | number | ✅       |                 |
+| matchesDraw            | number | ✅       |                 |
+| matchesLost            | number | ✅       |                 |
+| matchesPlayed          | number | ✅       |                 |
+| matchesWon             | number | ✅       |                 |
+| observerWardsDestroyed | number | ✅       |                 |
+| observerWardsPlaced    | number | ✅       |                 |
+| sentryWardsDestroyed   | number | ✅       |                 |
+| sentryWardsPlaced      | number | ✅       |                 |
+| towerKills             | number | ✅       |                 |

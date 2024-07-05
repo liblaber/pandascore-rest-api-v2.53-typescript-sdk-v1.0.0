@@ -1,0 +1,12 @@
+# LoLRuneReforgedType
+
+**Properties**
+
+| Name     | Type   | Required | Description |
+| :------- | :----- | :------- | :---------- |
+| keystone | string | ✅       | "keystone"  |
+| path     | string | ✅       | "path"      |
+| shard    | string | ✅       | "shard"     |
+| slot1    | string | ✅       | "slot1"     |
+| slot2    | string | ✅       | "slot2"     |
+| slot3    | string | ✅       | "slot3"     |

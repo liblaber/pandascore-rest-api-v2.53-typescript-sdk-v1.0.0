@@ -1,0 +1,13 @@
+# LoLAverageKillCounters
+
+**Properties**
+
+| Name                      | Type   | Required | Description |
+| :------------------------ | :----- | :------- | :---------- |
+| inhibitors                | number | ✅       |             |
+| neutralMinions            | number | ✅       |             |
+| neutralMinionsEnemyJungle | number | ✅       |             |
+| neutralMinionsTeamJungle  | number | ✅       |             |
+| players                   | number | ✅       |             |
+| turrets                   | number | ✅       |             |
+| wards                     | number | ✅       |             |

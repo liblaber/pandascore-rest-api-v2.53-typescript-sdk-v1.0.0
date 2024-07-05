@@ -1,0 +1,31 @@
+# ValorantTeamMapStats
+
+**Properties**
+
+| Name                   | Type                   | Required | Description                                                     |
+| :--------------------- | :--------------------- | :------- | :-------------------------------------------------------------- |
+| agents                 | ValorantAgentStats[]   | ✅       | Agents picks, wins, and losses stats for this map               |
+| assists                | number                 | ✅       | Number of team's assists                                        |
+| averageRounds          | number                 | ✅       | Average number of rounds played by the team on this map         |
+| clutchWins             | ValorantTeamClutchWins | ✅       | Rounds wins with a single team member alive                     |
+| deaths                 | number                 | ✅       | Number of team's death                                          |
+| defusedSpikes          | number                 | ✅       | Number of spikes defused by a team member                       |
+| draws                  | number                 | ✅       | Number of team draws on this map                                |
+| firstDeaths            | number                 | ✅       | Number of rounds where a team member died first                 |
+| firstKills             | number                 | ✅       | Number of rounds where a team member did the first kill         |
+| headshotPercentage     | number                 | ✅       | Percentage of headshots within the player's shots               |
+| id                     | number                 | ✅       | ID of the map                                                   |
+| imageUrl               | string                 | ✅       | URL to an image of the map                                      |
+| kills                  | number                 | ✅       | Number of team's kills                                          |
+| killsPerDeath          | number                 | ✅       | Ratio of team's kills per deaths                                |
+| losses                 | number                 | ✅       | Number of team losses on this map                               |
+| name                   | string                 | ✅       | Name of the map                                                 |
+| pistolRoundLosses      | number                 | ✅       | Number of pistol rounds lost by the team                        |
+| pistolRoundTotalPlayed | number                 | ✅       | Number of pistol rounds played by the team                      |
+| pistolRoundWins        | number                 | ✅       | Number of pistol rounds won by the team                         |
+| plantedSpikes          | number                 | ✅       | Number of spikes planted by a team member                       |
+| slug                   | string                 | ✅       | Human-readable identifier of the map                            |
+| streaks                | ValorantTeamStreaks    | ✅       | Streaks done by a team member (in a given round)                |
+| totalPlayed            | number                 | ✅       | Number of times the team played on this map                     |
+| videogameVersions      | string[]               | ✅       | Array of of video game versions (ie. patches) for this resource |
+| wins                   | number                 | ✅       | Number of team wins on this map                                 |

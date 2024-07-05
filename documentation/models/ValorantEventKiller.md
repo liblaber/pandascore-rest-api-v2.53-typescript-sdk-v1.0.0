@@ -1,0 +1,32 @@
+# ValorantEventKiller
+
+**Properties**
+
+| Name     | Type              | Required | Description                     |
+| :------- | :---------------- | :------- | :------------------------------ |
+| ability  | Ability           | ✅       |                                 |
+| agent    | BaseValorantAgent | ✅       |                                 |
+| id       | number            | ✅       | ID of the player                |
+| name     | string            | ✅       | Professional name of the player |
+| teamSide | ValorantTeamSide  | ✅       | Team side in the round          |
+| weapon   | Weapon            | ✅       |                                 |
+
+# Ability
+
+**Properties**
+
+| Name     | Type   | Required | Description                    |
+| :------- | :----- | :------- | :----------------------------- |
+| id       | number | ✅       | ID of the ability              |
+| imageUrl | string | ✅       | URL to an image of the ability |
+| name     | string | ✅       | Name of the ability            |
+
+# Weapon
+
+**Properties**
+
+| Name     | Type   | Required | Description                   |
+| :------- | :----- | :------- | :---------------------------- |
+| id       | number | ✅       | ID of the weapon              |
+| imageUrl | string | ✅       | URL to an image of the weapon |
+| name     | string | ✅       | Name of the weapon            |

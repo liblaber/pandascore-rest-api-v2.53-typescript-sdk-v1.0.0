@@ -1,0 +1,14 @@
+# SearchOverValorantShortTournamentsTier2
+
+The tier of the tournament, ranging from 'S' to 'Unranked'. Ranking 'S' > 'A' > 'B' > 'C' > 'D' > 'Unranked'
+
+**Properties**
+
+| Name     | Type   | Required | Description |
+| :------- | :----- | :------- | :---------- |
+| a        | string | ✅       | "a"         |
+| b        | string | ✅       | "b"         |
+| c        | string | ✅       | "c"         |
+| d        | string | ✅       | "d"         |
+| s        | string | ✅       | "s"         |
+| unranked | string | ✅       | "unranked"  |

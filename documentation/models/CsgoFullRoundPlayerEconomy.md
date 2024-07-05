@@ -1,0 +1,43 @@
+# CsgoFullRoundPlayerEconomy
+
+**Properties**
+
+| Name            | Type                   | Required | Description                             |
+| :-------------- | :--------------------- | :------- | :-------------------------------------- |
+| armor           | Armor                  | ✅       |                                         |
+| economy         | number                 | ✅       | The in-game money that a player has.    |
+| primaryWeapon   | PrimaryWeapon          | ✅       |                                         |
+| secondaryWeapon | SecondaryWeapon        | ✅       |                                         |
+| utilities       | CsgoFullRoundUtility[] | ✅       |                                         |
+| defuseKit       | boolean                | ❌       | Whether the player carries a defuse kit |
+
+# Armor
+
+**Properties**
+
+| Name              | Type   | Required | Description         |
+| :---------------- | :----- | :------- | :------------------ |
+| kevlar            | string | ✅       | "kevlar"            |
+| kevlar_and_helmet | string | ✅       | "kevlar_and_helmet" |
+
+# PrimaryWeapon
+
+**Properties**
+
+| Name     | Type   | Required | Description                       |
+| :------- | :----- | :------- | :-------------------------------- |
+| id       | number | ✅       |                                   |
+| imageUrl | string | ✅       | A URL to the image of the weapon. |
+| name     | string | ✅       |                                   |
+| slug     | string | ✅       | The slug of the weapon.           |
+
+# SecondaryWeapon
+
+**Properties**
+
+| Name     | Type   | Required | Description                       |
+| :------- | :----- | :------- | :-------------------------------- |
+| id       | number | ✅       |                                   |
+| imageUrl | string | ✅       | A URL to the image of the weapon. |
+| name     | string | ✅       |                                   |
+| slug     | string | ✅       | The slug of the weapon.           |

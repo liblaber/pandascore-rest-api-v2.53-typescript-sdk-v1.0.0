@@ -1,0 +1,12 @@
+# OwMap
+
+**Properties**
+
+| Name         | Type          | Required | Description |
+| :----------- | :------------ | :------- | :---------- |
+| gameMode     | OwMapGameMode | ✅       |             |
+| id           | number        | ✅       |             |
+| imageUrl     | string        | ✅       |             |
+| name         | string        | ✅       |             |
+| slug         | string        | ✅       |             |
+| thumbnailUrl | string        | ✅       |             |

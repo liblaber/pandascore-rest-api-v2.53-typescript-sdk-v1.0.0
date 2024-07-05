@@ -1,0 +1,15 @@
+# LoLEventType
+
+**Properties**
+
+| Name              | Type   | Required | Description         |
+| :---------------- | :----- | :------- | :------------------ |
+| baron_nashor_kill | string | ✅       | "baron_nashor_kill" |
+| drake_kill        | string | ✅       | "drake_kill"        |
+| inhibitor_kill    | string | ✅       | "inhibitor_kill"    |
+| other             | string | ✅       | "other"             |
+| player_kill       | string | ✅       | "player_kill"       |
+| rift_herald_kill  | string | ✅       | "rift_herald_kill"  |
+| suicide           | string | ✅       | "suicide"           |
+| tower_kill        | string | ✅       | "tower_kill"        |
+| voidgrub_kill     | string | ✅       | "voidgrub_kill"     |

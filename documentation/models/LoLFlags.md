@@ -1,0 +1,12 @@
+# LoLFlags
+
+**Properties**
+
+| Name                 | Type    | Required | Description                               |
+| :------------------- | :------ | :------- | :---------------------------------------- |
+| firstBloodAssist     | boolean | ✅       | Whether player got first blood assist     |
+| firstBloodKill       | boolean | ✅       | Whether player got first blood kill       |
+| firstInhibitorAssist | boolean | ✅       | Whether player got first inhibitor assist |
+| firstInhibitorKill   | boolean | ✅       | Whether player got first inhibitor kill   |
+| firstTowerAssist     | boolean | ✅       | Whether player got first tower assist     |
+| firstTowerKill       | boolean | ✅       | Whether player got first tower kill       |

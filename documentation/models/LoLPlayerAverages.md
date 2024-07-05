@@ -1,0 +1,25 @@
+# LoLPlayerAverages
+
+**Properties**
+
+| Name                       | Type                     | Required | Description                                                                     |
+| :------------------------- | :----------------------- | :------- | :------------------------------------------------------------------------------ |
+| assists                    | number                   | ✅       |                                                                                 |
+| csAt14                     | number                   | ✅       |                                                                                 |
+| csDiffAt14                 | number                   | ✅       | Player CS difference compared to their lane opponent at the 14th minute in-game |
+| deaths                     | number                   | ✅       |                                                                                 |
+| goldEarned                 | number                   | ✅       |                                                                                 |
+| goldPercentage             | number                   | ✅       | Percentage of gold the player had compared to the total gold of the team        |
+| goldSpent                  | number                   | ✅       |                                                                                 |
+| killCounters               | LoLAverageKillCounters   | ✅       |                                                                                 |
+| kills                      | number                   | ✅       |                                                                                 |
+| magicDamage                | LoLAverageMagicDamage    | ✅       |                                                                                 |
+| minionsKilled              | number                   | ✅       |                                                                                 |
+| physicalDamage             | LoLAveragePhysicalDamage | ✅       |                                                                                 |
+| totalDamage                | LoLAverageTotalDamage    | ✅       |                                                                                 |
+| totalHeal                  | number                   | ✅       |                                                                                 |
+| totalTimeCrowdControlDealt | number                   | ✅       |                                                                                 |
+| totalUnitsHealed           | number                   | ✅       |                                                                                 |
+| trueDamage                 | LoLAverageTrueDamage     | ✅       |                                                                                 |
+| visionWardsBoughtInGame    | number                   | ✅       |                                                                                 |
+| wardsPlaced                | number                   | ✅       |                                                                                 |

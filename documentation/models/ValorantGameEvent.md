@@ -1,0 +1,15 @@
+# ValorantGameEvent
+
+This is a union type which means it could be any of several possible types.
+
+# ValorantKillEvent
+
+See all details about ValorantKillEvent model [here](ValorantKillEvent.md).
+
+# ValorantSpikePlantedEvent
+
+See all details about ValorantSpikePlantedEvent model [here](ValorantSpikePlantedEvent.md).
+
+# ValorantSpikeDefusedEvent
+
+See all details about ValorantSpikeDefusedEvent model [here](ValorantSpikeDefusedEvent.md).

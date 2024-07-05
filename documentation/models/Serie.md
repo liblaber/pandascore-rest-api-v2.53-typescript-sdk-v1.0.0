@@ -1,0 +1,46 @@
+# Serie
+
+A serie, an occurrence of a league event
+
+**Properties**
+
+| Name           | Type                | Required | Description |
+| :------------- | :------------------ | :------- | :---------- |
+| beginAt        | string              | ✅       |             |
+| endAt          | string              | ✅       |             |
+| fullName       | string              | ✅       |             |
+| id             | number              | ✅       |             |
+| league1        | BaseLeague          | ✅       |             |
+| leagueId       | number              | ✅       |             |
+| modifiedAt     | string              | ✅       |             |
+| name           | string              | ✅       |             |
+| season         | string              | ✅       |             |
+| slug           | string              | ✅       |             |
+| tournaments    | BaseTournament[]    | ✅       |             |
+| videogame      | any                 | ✅       |             |
+| videogameTitle | SerieVideogameTitle | ✅       |             |
+| winnerId       | SerieWinnerId       | ✅       |             |
+| winnerType     | SerieWinnerType     | ✅       |             |
+| year           | number              | ✅       |             |
+
+# SerieVideogameTitle
+
+**Properties**
+
+| Name         | Type        | Required | Description    |
+| :----------- | :---------- | :------- | :------------- |
+| id           | number      | ✅       |                |
+| name         | string      | ✅       |                |
+| slug         | string      | ✅       |                |
+| videogameId1 | VideogameId | ✅       | A videogame ID |
+
+# SerieWinnerId
+
+# SerieWinnerType
+
+**Properties**
+
+| Name   | Type   | Required | Description |
+| :----- | :----- | :------- | :---------- |
+| Player | string | ✅       | "Player"    |
+| Team   | string | ✅       | "Team"      |

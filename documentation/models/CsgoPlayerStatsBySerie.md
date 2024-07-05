@@ -1,0 +1,12 @@
+# CsgoPlayerStatsBySerie
+
+Statistics for a serie
+
+**Properties**
+
+| Name             | Type                        | Required | Description                              |
+| :--------------- | :-------------------------- | :------- | :--------------------------------------- |
+| counts           | CsgoStatsCounts             | ✅       |                                          |
+| perGameAverages  | CsgoPlayerStatsGameAverages | ✅       |                                          |
+| perRoundAverages | CsgoStatsRoundAverages      | ✅       |                                          |
+| serie            | Serie                       | ✅       | A serie, an occurrence of a league event |

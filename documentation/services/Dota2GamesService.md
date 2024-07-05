@@ -1,0 +1,223 @@
+# Dota2GamesService
+
+A list of all methods in the `Dota2GamesService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                                         | Description                                 |
+| :------------------------------------------------------------------------------ | :------------------------------------------ |
+| [get_dota2_games_dota2GameId](#get_dota2_games_dota2gameid)                     | Get a single Dota 2 game by ID              |
+| [get_dota2_games_dota2GameId_frames](#get_dota2_games_dota2gameid_frames)       | List frames for a given Dota 2 game         |
+| [get_dota2_matches_matchIdOrSlug_games](#get_dota2_matches_matchidorslug_games) | List games for a given Dota 2 match         |
+| [get_dota2_teams_teamIdOrSlug_games](#get_dota2_teams_teamidorslug_games)       | List finished games for a given Dota 2 team |
+
+## get_dota2_games_dota2GameId
+
+Get a single Dota 2 game by ID
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/games/{dota2_game_id}`
+
+**Parameters**
+
+| Name        | Type   | Required | Description |
+| :---------- | :----- | :------- | :---------- |
+| dota2GameId | number | ✅       | A game ID   |
+
+**Return Type**
+
+`Dota2Game`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const { data } = await pandascore.dota2Games.getDota2GamesDota2GameId(1);
+
+  console.log(data);
+})();
+```
+
+## get_dota2_games_dota2GameId_frames
+
+List frames for a given Dota 2 game
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/games/{dota2_game_id}/frames`
+
+**Parameters**
+
+| Name        | Type                      | Required | Description                                                          |
+| :---------- | :------------------------ | :------- | :------------------------------------------------------------------- |
+| dota2GameId | number                    | ✅       | A game ID                                                            |
+| page        | [Page](../models/Page.md) | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2` |
+| perPage     | number                    | ❌       | Equivalent to `page[size]`                                           |
+
+**Return Type**
+
+`Dota2Frame[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const page = 1;
+
+  const { data } = await pandascore.dota2Games.getDota2GamesDota2GameIdFrames(10, {
+    page: page,
+    perPage: 50,
+  });
+
+  console.log(data);
+})();
+```
+
+## get_dota2_matches_matchIdOrSlug_games
+
+List games for a given Dota 2 match
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/matches/{match_id_or_slug}/games`
+
+**Parameters**
+
+| Name          | Type                                                      | Required | Description                                                                                                                                         |
+| :------------ | :-------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| matchIdOrSlug | [MatchIdOrSlug](../models/MatchIdOrSlug.md)               | ✅       | A match ID or slug                                                                                                                                  |
+| filter        | [FilterOverDota2Games](../models/FilterOverDota2Games.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range         | [RangeOverDota2Games](../models/RangeOverDota2Games.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort          | any[]                                                     | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search        | [SearchOverDota2Games](../models/SearchOverDota2Games.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page          | [Page](../models/Page.md)                                 | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage       | number                                                    | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`Dota2Game[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+	token: 'YOUR_TOKEN'});
+
+  const matchIdOrSlug = 6;
+const gameStatus = GameStatus.finished;
+
+const opponentType = OpponentType.Player;
+
+const filter: FilterOverDota2Games = {
+  beginAt: ["et ad L"],
+  complete: true,
+  detailedStats: true,
+  endAt: ["eiusmod"],
+  finished: true,
+  firstBlood: [7],
+  forfeit: true,
+  id: [5],
+  length: [123],
+  matchId: [6],
+  position: [7],
+  status: [gameStatus],
+  winnerType: [opponentType]
+};
+const gameStatus = GameStatus.finished;
+
+const opponentType = OpponentType.Player;
+
+const range: RangeOverDota2Games = {
+  beginAt: ["sed non proiden"],
+  complete: [true],
+  detailedStats: [true],
+  endAt: ["anim dolor con"],
+  finished: [true],
+  firstBlood: [2],
+  forfeit: [true],
+  id: [7],
+  length: [5],
+  matchId: [10],
+  position: [1],
+  status: [gameStatus],
+  winnerType: [opponentType]
+};
+const gameStatus = GameStatus.finished;
+
+const opponentType = OpponentType.Player;
+
+const search: SearchOverDota2Games = {
+  status: gameStatus,
+  winnerType: opponentType
+};
+const page = 1;
+
+  const { data } = await pandascore.dota2Games.getDota2MatchesMatchIdOrSlugGames(
+  ,
+  {
+		filter: filter,
+		range: range,
+    sort: [[]],
+		search: search,
+		page: page,
+    perPage: 50,
+  }
+);
+
+  console.log(data);
+})();
+```
+
+## get_dota2_teams_teamIdOrSlug_games
+
+List finished games for a given Dota 2 team
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/teams/{team_id_or_slug}/games`
+
+**Parameters**
+
+| Name         | Type                                      | Required | Description                                                          |
+| :----------- | :---------------------------------------- | :------- | :------------------------------------------------------------------- |
+| teamIdOrSlug | [TeamIdOrSlug](../models/TeamIdOrSlug.md) | ✅       | A team ID or slug                                                    |
+| page         | [Page](../models/Page.md)                 | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2` |
+| perPage      | number                                    | ❌       | Equivalent to `page[size]`                                           |
+
+**Return Type**
+
+`BaseDota2Game[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+	token: 'YOUR_TOKEN'});
+
+  const teamIdOrSlug = 3;
+const page = 1;
+
+  const { data } = await pandascore.dota2Games.getDota2TeamsTeamIdOrSlugGames(
+  ,
+  {
+		page: page,
+    perPage: 50,
+  }
+);
+
+  console.log(data);
+})();
+```

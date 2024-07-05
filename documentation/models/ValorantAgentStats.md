@@ -1,0 +1,24 @@
+# ValorantAgentStats
+
+**Properties**
+
+| Name               | Type                     | Required | Description                                                     |
+| :----------------- | :----------------------- | :------- | :-------------------------------------------------------------- |
+| assists            | number                   | ✅       | Number of player's assists                                      |
+| clutchWins         | ValorantPlayerClutchWins | ✅       | Round wins when the player was the last team member alive       |
+| deaths             | number                   | ✅       | Number of player's death                                        |
+| defusedSpikes      | number                   | ✅       | Number of spikes defused by the player                          |
+| firstDeaths        | number                   | ✅       | Number of rounds where the player died first                    |
+| firstKills         | number                   | ✅       | Number of rounds where the player did the first kill            |
+| headshotPercentage | number                   | ✅       | Percentage of headshots within the player's shots               |
+| id                 | number                   | ✅       | ID of the agent                                                 |
+| kills              | number                   | ✅       | Number of player's kills                                        |
+| losses             | number                   | ✅       | Number of games lost with this agent                            |
+| name               | string                   | ✅       | Name of the agent                                               |
+| picks              | number                   | ✅       | Number of times the agent was picked                            |
+| plantedSpikes      | number                   | ✅       | Number of spikes planted by the player                          |
+| portraitUrl        | string                   | ✅       | URL to a portrait image of the agent                            |
+| roundsPlayed       | number                   | ✅       | Number of rounds played                                         |
+| streaks            | ValorantPlayerStreaks    | ✅       | Streaks done by the player (in a given round)                   |
+| videogameVersions  | string[]                 | ✅       | Array of of video game versions (ie. patches) for this resource |
+| wins               | number                   | ✅       | Number of games won with this agent                             |

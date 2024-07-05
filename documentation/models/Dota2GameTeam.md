@@ -1,0 +1,51 @@
+# Dota2GameTeam
+
+Team's data for a game
+
+**Properties**
+
+| Name           | Type           | Required | Description                                                |
+| :------------- | :------------- | :------- | :--------------------------------------------------------- |
+| bans           | number[]       | ✅       |                                                            |
+| barracksStatus | BarracksStatus | ✅       |                                                            |
+| faction        | Dota2Faction   | ✅       |                                                            |
+| firstBlood     | boolean        | ✅       | Whether team got first blood                               |
+| firstRoshan    | boolean        | ✅       | Whether team got first Roshan                              |
+| firstTower     | boolean        | ✅       | Whether team got first tower                               |
+| picks          | number[]       | ✅       |                                                            |
+| playerIds      | number[]       | ✅       |                                                            |
+| roshanKills    | number         | ✅       | The total number of Roshans killed by the team in the game |
+| score          | number         | ✅       |                                                            |
+| team           | BaseTeam       | ✅       |                                                            |
+| towerStatus    | TowerStatus    | ✅       |                                                            |
+
+# BarracksStatus
+
+**Properties**
+
+| Name         | Type    | Required | Description                              |
+| :----------- | :------ | :------- | :--------------------------------------- |
+| bottomMelee  | boolean | ✅       | Whether bottom melee barracks are alive  |
+| bottomRanged | boolean | ✅       | Whether bottom ranged barracks are alive |
+| middleMelee  | boolean | ✅       | Whether middle melee barracks are alive  |
+| middleRanged | boolean | ✅       | Whether middle ranged barracks are alive |
+| topMelee     | boolean | ✅       | Whether top melee barracks are alive     |
+| topRanged    | boolean | ✅       | Whether top ranged barracks are alive    |
+
+# TowerStatus
+
+**Properties**
+
+| Name          | Type    | Required | Description                          |
+| :------------ | :------ | :------- | :----------------------------------- |
+| ancientBottom | boolean | ✅       | Whether bottom Ancient is alive      |
+| ancientTop    | boolean | ✅       | Whether top Ancient is alive         |
+| bottomTier1   | boolean | ✅       | Whether bottom tier 1 tower is alive |
+| bottomTier2   | boolean | ✅       | Whether bottom tier 2 tower is alive |
+| bottomTier3   | boolean | ✅       | Whether bottom tier 3 tower is alive |
+| middleTier1   | boolean | ✅       | Whether middle tier 1 tower is alive |
+| middleTier2   | boolean | ✅       | Whether middle tier 2 tower is alive |
+| middleTier3   | boolean | ✅       | Whether middle tier 3 tower is alive |
+| topTier1      | boolean | ✅       | Whether top tier 1 tower is alive    |
+| topTier2      | boolean | ✅       | Whether top tier 2 tower is alive    |
+| topTier3      | boolean | ✅       | Whether top tier 3 tower is alive    |

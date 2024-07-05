@@ -1,0 +1,25 @@
+# VideogameId
+
+A videogame ID
+
+**Properties**
+
+| Name | Type   | Required | Description |
+| :--- | :----- | :------- | :---------- |
+| 1    | number | ✅       | 1           |
+| 3    | number | ✅       | 3           |
+| 4    | number | ✅       | 4           |
+| 14   | number | ✅       | 14          |
+| 20   | number | ✅       | 20          |
+| 22   | number | ✅       | 22          |
+| 23   | number | ✅       | 23          |
+| 24   | number | ✅       | 24          |
+| 25   | number | ✅       | 25          |
+| 26   | number | ✅       | 26          |
+| 27   | number | ✅       | 27          |
+| 28   | number | ✅       | 28          |
+| 29   | number | ✅       | 29          |
+| 30   | number | ✅       | 30          |
+| 31   | number | ✅       | 31          |
+| 32   | number | ✅       | 32          |
+| 33   | number | ✅       | 33          |

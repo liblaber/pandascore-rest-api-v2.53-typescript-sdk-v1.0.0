@@ -1,0 +1,17 @@
+# RangeOverStarcraftBroodWarSeries
+
+**Properties**
+
+| Name       | Type           | Required | Description |
+| :--------- | :------------- | :------- | :---------- |
+| beginAt    | string[]       | ❌       |             |
+| endAt      | string[]       | ❌       |             |
+| id         | number[]       | ❌       |             |
+| leagueId   | number[]       | ❌       |             |
+| modifiedAt | string[]       | ❌       |             |
+| name       | string[]       | ❌       |             |
+| season     | string[]       | ❌       |             |
+| slug       | string[]       | ❌       |             |
+| winnerId   | OpponentId[]   | ❌       |             |
+| winnerType | OpponentType[] | ❌       |             |
+| year       | number[]       | ❌       |             |

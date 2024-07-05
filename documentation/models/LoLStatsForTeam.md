@@ -1,0 +1,22 @@
+# LoLStatsForTeam
+
+Aggregated statistics for a team grouped by serie
+
+**Properties**
+
+| Name              | Type                 | Required | Description                      |
+| :---------------- | :------------------- | :------- | :------------------------------- |
+| acronym           | string               | ✅       |                                  |
+| id                | number               | ✅       |                                  |
+| imageUrl          | string               | ✅       | URL of the team logo             |
+| lastGames         | LoLTeamLastGame[]    | ✅       |                                  |
+| location          | string               | ✅       | The team's organization location |
+| modifiedAt        | string               | ✅       |                                  |
+| mostBanned        | LoLBannedChampion[]  | ✅       |                                  |
+| mostBannedAgainst | LoLBannedChampion[]  | ✅       |                                  |
+| mostPicked        | LoLPickedChampion[]  | ✅       |                                  |
+| name              | string               | ✅       | The name of the team.            |
+| players           | BasePlayer[]         | ✅       |                                  |
+| slug              | string               | ✅       |                                  |
+| stats             | LoLTeamBySerieStat[] | ✅       |                                  |
+| totalStats        | LoLTotalTeamStat     | ✅       | Total Team's statistics          |

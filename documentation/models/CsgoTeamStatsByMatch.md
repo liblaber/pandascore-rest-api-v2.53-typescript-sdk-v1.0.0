@@ -1,0 +1,13 @@
+# CsgoTeamStatsByMatch
+
+Statistics for a match
+
+**Properties**
+
+| Name             | Type                      | Required | Description |
+| :--------------- | :------------------------ | :------- | :---------- |
+| counts           | CsgoStatsCountsForMatch   | ✅       |             |
+| maps             | CsgoTeamMapStats[]        | ✅       |             |
+| match            | Match                     | ✅       |             |
+| perGameAverages  | CsgoTeamStatsGameAverages | ✅       |             |
+| perRoundAverages | CsgoStatsRoundAverages    | ✅       |             |

@@ -1,0 +1,11 @@
+# CsgoFullRoundMap
+
+The location selected during the picks and bans phase for the game.
+
+**Properties**
+
+| Name     | Type   | Required | Description                    |
+| :------- | :----- | :------- | :----------------------------- |
+| id       | number | ✅       | The ID of the map.             |
+| imageUrl | string | ✅       | A URL to the image of the map. |
+| name     | string | ✅       | The name of the map.           |

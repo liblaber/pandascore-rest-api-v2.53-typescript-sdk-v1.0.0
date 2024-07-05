@@ -1,0 +1,27 @@
+# FilterOverLoLItems
+
+**Properties**
+
+| Name                    | Type     | Required | Description                                                                                                                                                      |
+| :---------------------- | :------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| flatArmorMod            | number[] | ❌       |                                                                                                                                                                  |
+| flatCritChanceMod       | number[] | ❌       |                                                                                                                                                                  |
+| flatHpPoolMod           | number[] | ❌       |                                                                                                                                                                  |
+| flatHpRegenMod          | number[] | ❌       |                                                                                                                                                                  |
+| flatMagicDamageMod      | number[] | ❌       |                                                                                                                                                                  |
+| flatMovementSpeedMod    | number[] | ❌       |                                                                                                                                                                  |
+| flatMpPoolMod           | number[] | ❌       |                                                                                                                                                                  |
+| flatMpRegenMod          | number[] | ❌       |                                                                                                                                                                  |
+| flatPhysicalDamageMod   | number[] | ❌       |                                                                                                                                                                  |
+| flatSpellBlockMod       | number[] | ❌       |                                                                                                                                                                  |
+| goldBase                | number[] | ❌       |                                                                                                                                                                  |
+| goldPurchasable         | boolean  | ❌       | Whether gold can be bought                                                                                                                                       |
+| goldSell                | number[] | ❌       |                                                                                                                                                                  |
+| goldTotal               | number[] | ❌       |                                                                                                                                                                  |
+| id                      | number[] | ❌       |                                                                                                                                                                  |
+| name                    | string[] | ❌       |                                                                                                                                                                  |
+| percentAttackSpeedMod   | number[] | ❌       |                                                                                                                                                                  |
+| percentLifeStealMod     | number[] | ❌       |                                                                                                                                                                  |
+| percentMovementSpeedMod | number[] | ❌       |                                                                                                                                                                  |
+| trinket                 | boolean  | ❌       | Whether item is a trinket                                                                                                                                        |
+| videogameVersion        | any      | ❌       | Filter by the names of videogame versions, all versions using `filter[videogame_version]=all`, or by the latest version using `filter[videogame_version]=latest` |

@@ -1,0 +1,20 @@
+# LoLTeamAverages
+
+**Properties**
+
+| Name               | Type          | Required | Description                                                                         |
+| :----------------- | :------------ | :------- | :---------------------------------------------------------------------------------- |
+| assists            | number        | ✅       |                                                                                     |
+| baronKills         | number        | ✅       |                                                                                     |
+| deaths             | number        | ✅       |                                                                                     |
+| dragonKills        | number        | ✅       |                                                                                     |
+| gameLength         | number        | ✅       | Duration of the game in seconds. <br/>`null` when the game status is not `finished` |
+| goldEarned         | number        | ✅       |                                                                                     |
+| heraldKill         | number        | ✅       |                                                                                     |
+| inhibitorKills     | number        | ✅       |                                                                                     |
+| kills              | number        | ✅       |                                                                                     |
+| ratios             | LoLTeamRatios | ✅       |                                                                                     |
+| totalMinionsKilled | number        | ✅       |                                                                                     |
+| towerKills         | number        | ✅       |                                                                                     |
+| voidgrubKills      | number        | ✅       | The number of voidgrubs killed by a team.                                           |
+| wardsPlaced        | number        | ✅       |                                                                                     |

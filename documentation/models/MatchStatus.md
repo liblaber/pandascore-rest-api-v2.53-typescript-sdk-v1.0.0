@@ -1,0 +1,11 @@
+# MatchStatus
+
+**Properties**
+
+| Name        | Type   | Required | Description   |
+| :---------- | :----- | :------- | :------------ |
+| canceled    | string | ✅       | "canceled"    |
+| finished    | string | ✅       | "finished"    |
+| not_started | string | ✅       | "not_started" |
+| postponed   | string | ✅       | "postponed"   |
+| running     | string | ✅       | "running"     |

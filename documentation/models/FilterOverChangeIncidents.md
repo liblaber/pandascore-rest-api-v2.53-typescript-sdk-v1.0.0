@@ -1,0 +1,9 @@
+# FilterOverChangeIncidents
+
+**Properties**
+
+| Name            | Type         | Required | Description                                                      |
+| :-------------- | :----------- | :------- | :--------------------------------------------------------------- |
+| id              | IncidentId[] | ❌       |                                                                  |
+| modifiedAt      | string[]     | ❌       |                                                                  |
+| opponentsFilled | boolean      | ❌       | Whether a match has opponents filled i.e. opponents are not TBD. |

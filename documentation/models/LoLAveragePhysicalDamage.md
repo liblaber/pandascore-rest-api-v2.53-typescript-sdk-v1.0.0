@@ -1,0 +1,11 @@
+# LoLAveragePhysicalDamage
+
+**Properties**
+
+| Name                       | Type   | Required | Description                                                                                     |
+| :------------------------- | :----- | :------- | :---------------------------------------------------------------------------------------------- |
+| dealt                      | number | ✅       |                                                                                                 |
+| dealtPercentage            | number | ✅       | Percentage of damage dealt the player had compared to the total damage of the team              |
+| dealtToChampions           | number | ✅       |                                                                                                 |
+| dealtToChampionsPercentage | number | ✅       | Percentage of damage dealt to champions the player had compared to the total damage of the team |
+| taken                      | number | ✅       |                                                                                                 |

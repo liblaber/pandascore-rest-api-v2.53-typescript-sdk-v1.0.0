@@ -1,0 +1,13 @@
+# LoLFavoriteChampion
+
+A player's most used champion
+
+**Properties**
+
+| Name          | Type          | Required | Description                                              |
+| :------------ | :------------ | :------- | :------------------------------------------------------- |
+| champion      | LoLChampion   | ✅       |                                                          |
+| gamesCount    | number        | ✅       | Number of games                                          |
+| gamesLost     | number        | ✅       | Number of games lost by the player on the given champion |
+| gamesWon      | number        | ✅       | Number of games won by the player on the given champion  |
+| mostUsedItems | LoLUsedItem[] | ✅       |                                                          |

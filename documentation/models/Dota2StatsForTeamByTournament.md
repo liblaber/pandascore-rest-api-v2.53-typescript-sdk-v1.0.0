@@ -1,0 +1,22 @@
+# Dota2StatsForTeamByTournament
+
+Team's aggregated statistics for a tournament
+
+**Properties**
+
+| Name              | Type                      | Required | Description                        |
+| :---------------- | :------------------------ | :------- | :--------------------------------- |
+| acronym           | string                    | ✅       |                                    |
+| id                | number                    | ✅       |                                    |
+| imageUrl          | string                    | ✅       | URL of the team logo               |
+| lastGames         | BaseDota2Game[]           | ✅       |                                    |
+| location          | string                    | ✅       | The team's organization location   |
+| modifiedAt        | string                    | ✅       |                                    |
+| mostBanned        | Dota2BannedHero[]         | ✅       |                                    |
+| mostBannedAgainst | Dota2BannedHero[]         | ✅       |                                    |
+| mostPicked        | Dota2PickedHero[]         | ✅       |                                    |
+| name              | string                    | ✅       | The name of the team.              |
+| players           | BasePlayer[]              | ✅       |                                    |
+| slug              | string                    | ✅       |                                    |
+| stats             | Dota2TeamByTournamentStat | ✅       | Team's statistics for a tournament |
+| videogame         | any                       | ✅       |                                    |

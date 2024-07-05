@@ -1,0 +1,9 @@
+# ValorantPlayerShield
+
+**Properties**
+
+| Name         | Type   | Required | Description    |
+| :----------- | :----- | :------- | :------------- |
+| heavy_shield | string | ✅       | "heavy_shield" |
+| light_shield | string | ✅       | "light_shield" |
+| no_shield    | string | ✅       | "no_shield"    |

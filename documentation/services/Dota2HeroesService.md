@@ -1,0 +1,106 @@
+# Dota2HeroesService
+
+A list of all methods in the `Dota2HeroesService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                                   | Description                        |
+| :------------------------------------------------------------------------ | :--------------------------------- |
+| [get_dota2_heroes](#get_dota2_heroes)                                     | List heroes                        |
+| [get_dota2_heroes_dota2HeroIdOrSlug](#get_dota2_heroes_dota2heroidorslug) | Get a single hero by ID or by slug |
+
+## get_dota2_heroes
+
+List heroes
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/heroes`
+
+**Parameters**
+
+| Name    | Type                                                        | Required | Description                                                                                                                                         |
+| :------ | :---------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filter  | [FilterOverDota2Heroes](../models/FilterOverDota2Heroes.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range   | [RangeOverDota2Heroes](../models/RangeOverDota2Heroes.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort    | any[]                                                       | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search  | [SearchOverDota2Heroes](../models/SearchOverDota2Heroes.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page    | [Page](../models/Page.md)                                   | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage | number                                                      | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`Dota2Hero[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const filter: FilterOverDota2Heroes = {
+    id: [9],
+    localizedName: ['Duissed magna a'],
+    name: ['h-'],
+  };
+
+  const range: RangeOverDota2Heroes = {
+    id: [7],
+    localizedName: ['occaecat'],
+    name: ['83o1y'],
+  };
+
+  const search: SearchOverDota2Heroes = {
+    localizedName: 'laborum offici',
+    name: 'acrtek',
+  };
+  const page = 1;
+
+  const { data } = await pandascore.dota2Heroes.getDota2Heroes({
+    filter: filter,
+    range: range,
+    sort: [[]],
+    search: search,
+    page: page,
+    perPage: 50,
+  });
+
+  console.log(data);
+})();
+```
+
+## get_dota2_heroes_dota2HeroIdOrSlug
+
+Get a single hero by ID or by slug
+
+- HTTP Method: `GET`
+- Endpoint: `/dota2/heroes/{dota2_hero_id_or_slug}`
+
+**Parameters**
+
+| Name              | Type                                                | Required | Description       |
+| :---------------- | :-------------------------------------------------- | :------- | :---------------- |
+| dota2HeroIdOrSlug | [Dota2HeroIdOrSlug](../models/Dota2HeroIdOrSlug.md) | ✅       | A hero ID or slug |
+
+**Return Type**
+
+`Dota2Hero`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const dota2HeroIdOrSlug = 9;
+
+  const { data } = await pandascore.dota2Heroes.getDota2HeroesDota2HeroIdOrSlug();
+
+  console.log(data);
+})();
+```

@@ -1,0 +1,102 @@
+# LoLSpellsService
+
+A list of all methods in the `LoLSpellsService` service. Click on the method name to view detailed information about that method.
+
+| Methods                                                 | Description              |
+| :------------------------------------------------------ | :----------------------- |
+| [get_lol_spells](#get_lol_spells)                       | List spells              |
+| [get_lol_spells_lolSpellId](#get_lol_spells_lolspellid) | Get a single spell by ID |
+
+## get_lol_spells
+
+List spells
+
+- HTTP Method: `GET`
+- Endpoint: `/lol/spells`
+
+**Parameters**
+
+| Name    | Type                                                    | Required | Description                                                                                                                                         |
+| :------ | :------------------------------------------------------ | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filter  | [FilterOverLoLSpells](../models/FilterOverLoLSpells.md) | ❌       | Options to filter results. String fields are case sensitive <br/>For more information on filtering, see [docs](/docs/filtering-and-sorting#filter). |
+| range   | [RangeOverLoLSpells](../models/RangeOverLoLSpells.md)   | ❌       | Options to select results within ranges <br/>For more information on ranges, see [docs](/docs/filtering-and-sorting#range).                         |
+| sort    | any[]                                                   | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
+| search  | [SearchOverLoLSpells](../models/SearchOverLoLSpells.md) | ❌       | Options to search results <br/>For more information on searching, see [docs](/docs/filtering-and-sorting#search).                                   |
+| page    | [Page](../models/Page.md)                               | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
+| perPage | number                                                  | ❌       | Equivalent to `page[size]`                                                                                                                          |
+
+**Return Type**
+
+`LoLSpell[]`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const filter: FilterOverLoLSpells = {
+    id: [7],
+    name: ['offici'],
+    videogameVersion: [],
+  };
+
+  const range: RangeOverLoLSpells = {
+    id: [5],
+    name: ['et esse qui '],
+  };
+
+  const search: SearchOverLoLSpells = {
+    name: 'veniam',
+  };
+  const page = 1;
+
+  const { data } = await pandascore.loLSpells.getLolSpells({
+    filter: filter,
+    range: range,
+    sort: [[]],
+    search: search,
+    page: page,
+    perPage: 50,
+  });
+
+  console.log(data);
+})();
+```
+
+## get_lol_spells_lolSpellId
+
+Get a single spell by ID
+
+- HTTP Method: `GET`
+- Endpoint: `/lol/spells/{lol_spell_id}`
+
+**Parameters**
+
+| Name       | Type   | Required | Description |
+| :--------- | :----- | :------- | :---------- |
+| lolSpellId | number | ✅       | A spell ID  |
+
+**Return Type**
+
+`LoLSpell`
+
+**Example Usage Code Snippet**
+
+```typescript
+import { Pandascore } from 'pandascore';
+
+(async () => {
+  const pandascore = new Pandascore({
+    token: 'YOUR_TOKEN',
+  });
+
+  const { data } = await pandascore.loLSpells.getLolSpellsLolSpellId(4);
+
+  console.log(data);
+})();
+```

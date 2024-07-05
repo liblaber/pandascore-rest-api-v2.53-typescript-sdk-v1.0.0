@@ -1,0 +1,10 @@
+# LoLEventPlayerObject
+
+**Properties**
+
+| Name       | Type             | Required | Description                     |
+| :--------- | :--------------- | :------- | :------------------------------ |
+| champion   | LoLEventChampion | ✅       |                                 |
+| playerId   | number           | ✅       | ID of the player                |
+| playerName | string           | ✅       | Professional name of the player |
+| side       | LoLTeamColor     | ✅       |                                 |
