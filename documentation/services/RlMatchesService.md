@@ -34,52 +34,52 @@ List matches for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverRlMatchesVideogameTitle = 3;
+const filterOverRlMatchesVideogameTitle = 4;
 
-const filterOverRlMatchesVideogameVersion = "65.69";
+const filterOverRlMatchesVideogameVersion = "6734585794.51.57967777";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverRlMatches = {
-  beginAt: ["magna sint id d"],
+  beginAt: ["culpa r"],
   detailedStats: true,
   draw: true,
-  endAt: ["mollit"],
+  endAt: ["in Ut "],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
+  id: [9],
   leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["qu"],
-  name: ["esse enim Ut c"],
+  modifiedAt: ["ut"],
+  name: ["ullamco en"],
   notStarted: true,
-  numberOfGames: [4],
+  numberOfGames: [8],
   opponentId: [filterOverRlMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["d"],
-  serieId: [10],
-  slug: ["0ZH2SdsV"],
+  scheduledAt: ["dolore"],
+  serieId: [6],
+  slug: ["L2B6u2"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [2],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverRlMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverRlMatches = {
-  beginAt: ["occaecat Ut"],
+  beginAt: ["amet "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["f"],
+  endAt: ["eu officia id d"],
   forfeit: [true],
-  id: [4],
+  id: [9],
   matchType: [matchType],
-  modifiedAt: ["dolore aliqui"],
-  name: ["sed ex "],
-  numberOfGames: [4],
-  scheduledAt: ["esse Lor"],
-  slug: ["pVzlIX_xv"],
+  modifiedAt: ["i"],
+  name: ["reprehend"],
+  numberOfGames: [7],
+  scheduledAt: ["occaecat mo"],
+  slug: ["SC"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [6],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverRlMatches = {
   matchType: matchType,
-  name: "enimin eu labo",
-  slug: "2UiULtRCW",
+  name: "commodo pariatu",
+  slug: "Y",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.rlMatches.getRlMatches(
+  const { data } = await pandascoreClient.rlMatches.getRlMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,52 +168,52 @@ List past Rocket League matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverRlMatchesVideogameTitle = 3;
+const filterOverRlMatchesVideogameTitle = 4;
 
-const filterOverRlMatchesVideogameVersion = "65.69";
+const filterOverRlMatchesVideogameVersion = "6734585794.51.57967777";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverRlMatches = {
-  beginAt: ["magna sint id d"],
+  beginAt: ["culpa r"],
   detailedStats: true,
   draw: true,
-  endAt: ["mollit"],
+  endAt: ["in Ut "],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
+  id: [9],
   leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["qu"],
-  name: ["esse enim Ut c"],
+  modifiedAt: ["ut"],
+  name: ["ullamco en"],
   notStarted: true,
-  numberOfGames: [4],
+  numberOfGames: [8],
   opponentId: [filterOverRlMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["d"],
-  serieId: [10],
-  slug: ["0ZH2SdsV"],
+  scheduledAt: ["dolore"],
+  serieId: [6],
+  slug: ["L2B6u2"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [2],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverRlMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverRlMatches = {
-  beginAt: ["occaecat Ut"],
+  beginAt: ["amet "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["f"],
+  endAt: ["eu officia id d"],
   forfeit: [true],
-  id: [4],
+  id: [9],
   matchType: [matchType],
-  modifiedAt: ["dolore aliqui"],
-  name: ["sed ex "],
-  numberOfGames: [4],
-  scheduledAt: ["esse Lor"],
-  slug: ["pVzlIX_xv"],
+  modifiedAt: ["i"],
+  name: ["reprehend"],
+  numberOfGames: [7],
+  scheduledAt: ["occaecat mo"],
+  slug: ["SC"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [6],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverRlMatches = {
   matchType: matchType,
-  name: "enimin eu labo",
-  slug: "2UiULtRCW",
+  name: "commodo pariatu",
+  slug: "Y",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.rlMatches.getRlMatchesPast(
+  const { data } = await pandascoreClient.rlMatches.getRlMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,52 +302,52 @@ List running Rocket League matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverRlMatchesVideogameTitle = 3;
+const filterOverRlMatchesVideogameTitle = 4;
 
-const filterOverRlMatchesVideogameVersion = "65.69";
+const filterOverRlMatchesVideogameVersion = "6734585794.51.57967777";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverRlMatches = {
-  beginAt: ["magna sint id d"],
+  beginAt: ["culpa r"],
   detailedStats: true,
   draw: true,
-  endAt: ["mollit"],
+  endAt: ["in Ut "],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
+  id: [9],
   leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["qu"],
-  name: ["esse enim Ut c"],
+  modifiedAt: ["ut"],
+  name: ["ullamco en"],
   notStarted: true,
-  numberOfGames: [4],
+  numberOfGames: [8],
   opponentId: [filterOverRlMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["d"],
-  serieId: [10],
-  slug: ["0ZH2SdsV"],
+  scheduledAt: ["dolore"],
+  serieId: [6],
+  slug: ["L2B6u2"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [2],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverRlMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverRlMatches = {
-  beginAt: ["occaecat Ut"],
+  beginAt: ["amet "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["f"],
+  endAt: ["eu officia id d"],
   forfeit: [true],
-  id: [4],
+  id: [9],
   matchType: [matchType],
-  modifiedAt: ["dolore aliqui"],
-  name: ["sed ex "],
-  numberOfGames: [4],
-  scheduledAt: ["esse Lor"],
-  slug: ["pVzlIX_xv"],
+  modifiedAt: ["i"],
+  name: ["reprehend"],
+  numberOfGames: [7],
+  scheduledAt: ["occaecat mo"],
+  slug: ["SC"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [6],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverRlMatches = {
   matchType: matchType,
-  name: "enimin eu labo",
-  slug: "2UiULtRCW",
+  name: "commodo pariatu",
+  slug: "Y",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.rlMatches.getRlMatchesRunning(
+  const { data } = await pandascoreClient.rlMatches.getRlMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,52 +436,52 @@ List upcoming Rocket League matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverRlMatchesVideogameTitle = 3;
+const filterOverRlMatchesVideogameTitle = 4;
 
-const filterOverRlMatchesVideogameVersion = "65.69";
+const filterOverRlMatchesVideogameVersion = "6734585794.51.57967777";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverRlMatches = {
-  beginAt: ["magna sint id d"],
+  beginAt: ["culpa r"],
   detailedStats: true,
   draw: true,
-  endAt: ["mollit"],
+  endAt: ["in Ut "],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
+  id: [9],
   leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["qu"],
-  name: ["esse enim Ut c"],
+  modifiedAt: ["ut"],
+  name: ["ullamco en"],
   notStarted: true,
-  numberOfGames: [4],
+  numberOfGames: [8],
   opponentId: [filterOverRlMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["d"],
-  serieId: [10],
-  slug: ["0ZH2SdsV"],
+  scheduledAt: ["dolore"],
+  serieId: [6],
+  slug: ["L2B6u2"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [2],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverRlMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverRlMatches = {
-  beginAt: ["occaecat Ut"],
+  beginAt: ["amet "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["f"],
+  endAt: ["eu officia id d"],
   forfeit: [true],
-  id: [4],
+  id: [9],
   matchType: [matchType],
-  modifiedAt: ["dolore aliqui"],
-  name: ["sed ex "],
-  numberOfGames: [4],
-  scheduledAt: ["esse Lor"],
-  slug: ["pVzlIX_xv"],
+  modifiedAt: ["i"],
+  name: ["reprehend"],
+  numberOfGames: [7],
+  scheduledAt: ["occaecat mo"],
+  slug: ["SC"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [6],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverRlMatches = {
   matchType: matchType,
-  name: "enimin eu labo",
-  slug: "2UiULtRCW",
+  name: "commodo pariatu",
+  slug: "Y",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.rlMatches.getRlMatchesUpcoming(
+  const { data } = await pandascoreClient.rlMatches.getRlMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -544,3 +544,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

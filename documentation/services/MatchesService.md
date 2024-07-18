@@ -36,15 +36,15 @@ List matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -52,34 +52,34 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "657764.975739.16948626";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverMatches = {
-  beginAt: ["dolor"],
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut do ullamco"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [8],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["con"],
-  name: ["mollit conseq"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [10],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["sint"],
-  serieId: [9],
-  slug: ["BfunCxm5-40"],
+  scheduledAt: ["esse aute n"],
+  serieId: [10],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
   tournamentId: [3],
   unscheduled: true,
@@ -93,25 +93,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverMatches = {
-  beginAt: ["dolore dolor e"],
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["eiusmo"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["sint venia"],
-  name: ["labore sunt"],
-  numberOfGames: [4],
-  scheduledAt: ["occaecat n"],
-  slug: ["FlKZ"],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -123,14 +123,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverMatches = {
   matchType: matchType,
-  name: "ut fugiat e",
-  slug: "grZ8U",
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.matches.getMatches(
+  const { data } = await pandascoreClient.matches.getMatches(
   {
 		filter: filter,
 		range: range,
@@ -170,15 +170,15 @@ List past matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -186,34 +186,34 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "657764.975739.16948626";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverMatches = {
-  beginAt: ["dolor"],
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut do ullamco"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [8],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["con"],
-  name: ["mollit conseq"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [10],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["sint"],
-  serieId: [9],
-  slug: ["BfunCxm5-40"],
+  scheduledAt: ["esse aute n"],
+  serieId: [10],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
   tournamentId: [3],
   unscheduled: true,
@@ -227,25 +227,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverMatches = {
-  beginAt: ["dolore dolor e"],
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["eiusmo"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["sint venia"],
-  name: ["labore sunt"],
-  numberOfGames: [4],
-  scheduledAt: ["occaecat n"],
-  slug: ["FlKZ"],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -257,14 +257,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverMatches = {
   matchType: matchType,
-  name: "ut fugiat e",
-  slug: "grZ8U",
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.matches.getMatchesPast(
+  const { data } = await pandascoreClient.matches.getMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -304,15 +304,15 @@ List currently running matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -320,34 +320,34 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "657764.975739.16948626";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverMatches = {
-  beginAt: ["dolor"],
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut do ullamco"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [8],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["con"],
-  name: ["mollit conseq"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [10],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["sint"],
-  serieId: [9],
-  slug: ["BfunCxm5-40"],
+  scheduledAt: ["esse aute n"],
+  serieId: [10],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
   tournamentId: [3],
   unscheduled: true,
@@ -361,25 +361,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverMatches = {
-  beginAt: ["dolore dolor e"],
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["eiusmo"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["sint venia"],
-  name: ["labore sunt"],
-  numberOfGames: [4],
-  scheduledAt: ["occaecat n"],
-  slug: ["FlKZ"],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -391,14 +391,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverMatches = {
   matchType: matchType,
-  name: "ut fugiat e",
-  slug: "grZ8U",
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.matches.getMatchesRunning(
+  const { data } = await pandascoreClient.matches.getMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -438,15 +438,15 @@ List upcoming matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -454,34 +454,34 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "657764.975739.16948626";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverMatches = {
-  beginAt: ["dolor"],
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut do ullamco"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [8],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["con"],
-  name: ["mollit conseq"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [10],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["sint"],
-  serieId: [9],
-  slug: ["BfunCxm5-40"],
+  scheduledAt: ["esse aute n"],
+  serieId: [10],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
   tournamentId: [3],
   unscheduled: true,
@@ -495,25 +495,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverMatches = {
-  beginAt: ["dolore dolor e"],
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["eiusmo"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["sint venia"],
-  name: ["labore sunt"],
-  numberOfGames: [4],
-  scheduledAt: ["occaecat n"],
-  slug: ["FlKZ"],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -525,14 +525,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverMatches = {
   matchType: matchType,
-  name: "ut fugiat e",
-  slug: "grZ8U",
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.matches.getMatchesUpcoming(
+  const { data } = await pandascoreClient.matches.getMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -567,16 +567,16 @@ Get a single match by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.matches.getMatchesMatchIdOrSlug();
+  const { data } = await pandascoreClient.matches.getMatchesMatchIdOrSlug();
 
   console.log(data);
 })();
@@ -602,17 +602,19 @@ List opponents (player or teams) for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.matches.getMatchesMatchIdOrSlugOpponents();
+  const { data } = await pandascoreClient.matches.getMatchesMatchIdOrSlugOpponents();
 
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

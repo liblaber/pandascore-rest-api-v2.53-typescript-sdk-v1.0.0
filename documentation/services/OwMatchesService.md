@@ -34,15 +34,15 @@ List matches for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -50,36 +50,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverOwMatchesVideogameTitle = 6;
 
-const filterOverOwMatchesVideogameVersion = "032422121.5141";
+const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverOwMatches = {
-  beginAt: ["pariatur"],
+  beginAt: ["Dui"],
   detailedStats: true,
   draw: true,
-  endAt: ["sint te"],
+  endAt: ["d"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [3],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["si"],
-  name: ["incididun"],
+  modifiedAt: ["voluptate dol"],
+  name: ["veniam"],
   notStarted: true,
   numberOfGames: [6],
   opponentId: [filterOverOwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nostrud irure "],
-  serieId: [3],
-  slug: ["Z"],
+  scheduledAt: ["laboru"],
+  serieId: [8],
+  slug: ["Bbdi W6S"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [9],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverOwMatches = {
-  beginAt: ["velit eu"],
+  beginAt: ["r"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["velit "],
+  endAt: ["incididunt"],
   forfeit: [true],
   id: [1],
   matchType: [matchType],
-  modifiedAt: ["et"],
-  name: ["laboris"],
-  numberOfGames: [123],
-  scheduledAt: ["quis repreh"],
-  slug: ["jVaCjFpOE"],
+  modifiedAt: ["ipsum labo"],
+  name: ["inetea "],
+  numberOfGames: [1],
+  scheduledAt: ["consequat"],
+  slug: ["epM"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverOwMatches = {
   matchType: matchType,
-  name: "minim et",
-  slug: "SQ8hf",
+  name: "ex Duis magn",
+  slug: "B",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.owMatches.getOwMatches(
+  const { data } = await pandascoreClient.owMatches.getOwMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,15 +168,15 @@ List past Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -184,36 +184,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverOwMatchesVideogameTitle = 6;
 
-const filterOverOwMatchesVideogameVersion = "032422121.5141";
+const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverOwMatches = {
-  beginAt: ["pariatur"],
+  beginAt: ["Dui"],
   detailedStats: true,
   draw: true,
-  endAt: ["sint te"],
+  endAt: ["d"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [3],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["si"],
-  name: ["incididun"],
+  modifiedAt: ["voluptate dol"],
+  name: ["veniam"],
   notStarted: true,
   numberOfGames: [6],
   opponentId: [filterOverOwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nostrud irure "],
-  serieId: [3],
-  slug: ["Z"],
+  scheduledAt: ["laboru"],
+  serieId: [8],
+  slug: ["Bbdi W6S"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [9],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverOwMatches = {
-  beginAt: ["velit eu"],
+  beginAt: ["r"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["velit "],
+  endAt: ["incididunt"],
   forfeit: [true],
   id: [1],
   matchType: [matchType],
-  modifiedAt: ["et"],
-  name: ["laboris"],
-  numberOfGames: [123],
-  scheduledAt: ["quis repreh"],
-  slug: ["jVaCjFpOE"],
+  modifiedAt: ["ipsum labo"],
+  name: ["inetea "],
+  numberOfGames: [1],
+  scheduledAt: ["consequat"],
+  slug: ["epM"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverOwMatches = {
   matchType: matchType,
-  name: "minim et",
-  slug: "SQ8hf",
+  name: "ex Duis magn",
+  slug: "B",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.owMatches.getOwMatchesPast(
+  const { data } = await pandascoreClient.owMatches.getOwMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,15 +302,15 @@ List running Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -318,36 +318,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverOwMatchesVideogameTitle = 6;
 
-const filterOverOwMatchesVideogameVersion = "032422121.5141";
+const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverOwMatches = {
-  beginAt: ["pariatur"],
+  beginAt: ["Dui"],
   detailedStats: true,
   draw: true,
-  endAt: ["sint te"],
+  endAt: ["d"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [3],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["si"],
-  name: ["incididun"],
+  modifiedAt: ["voluptate dol"],
+  name: ["veniam"],
   notStarted: true,
   numberOfGames: [6],
   opponentId: [filterOverOwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nostrud irure "],
-  serieId: [3],
-  slug: ["Z"],
+  scheduledAt: ["laboru"],
+  serieId: [8],
+  slug: ["Bbdi W6S"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [9],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverOwMatches = {
-  beginAt: ["velit eu"],
+  beginAt: ["r"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["velit "],
+  endAt: ["incididunt"],
   forfeit: [true],
   id: [1],
   matchType: [matchType],
-  modifiedAt: ["et"],
-  name: ["laboris"],
-  numberOfGames: [123],
-  scheduledAt: ["quis repreh"],
-  slug: ["jVaCjFpOE"],
+  modifiedAt: ["ipsum labo"],
+  name: ["inetea "],
+  numberOfGames: [1],
+  scheduledAt: ["consequat"],
+  slug: ["epM"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverOwMatches = {
   matchType: matchType,
-  name: "minim et",
-  slug: "SQ8hf",
+  name: "ex Duis magn",
+  slug: "B",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.owMatches.getOwMatchesRunning(
+  const { data } = await pandascoreClient.owMatches.getOwMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,15 +436,15 @@ List upcoming Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -452,36 +452,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverOwMatchesVideogameTitle = 6;
 
-const filterOverOwMatchesVideogameVersion = "032422121.5141";
+const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverOwMatches = {
-  beginAt: ["pariatur"],
+  beginAt: ["Dui"],
   detailedStats: true,
   draw: true,
-  endAt: ["sint te"],
+  endAt: ["d"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [3],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["si"],
-  name: ["incididun"],
+  modifiedAt: ["voluptate dol"],
+  name: ["veniam"],
   notStarted: true,
   numberOfGames: [6],
   opponentId: [filterOverOwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nostrud irure "],
-  serieId: [3],
-  slug: ["Z"],
+  scheduledAt: ["laboru"],
+  serieId: [8],
+  slug: ["Bbdi W6S"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [9],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverOwMatches = {
-  beginAt: ["velit eu"],
+  beginAt: ["r"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["velit "],
+  endAt: ["incididunt"],
   forfeit: [true],
   id: [1],
   matchType: [matchType],
-  modifiedAt: ["et"],
-  name: ["laboris"],
-  numberOfGames: [123],
-  scheduledAt: ["quis repreh"],
-  slug: ["jVaCjFpOE"],
+  modifiedAt: ["ipsum labo"],
+  name: ["inetea "],
+  numberOfGames: [1],
+  scheduledAt: ["consequat"],
+  slug: ["epM"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverOwMatches = {
   matchType: matchType,
-  name: "minim et",
-  slug: "SQ8hf",
+  name: "ex Duis magn",
+  slug: "B",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.owMatches.getOwMatchesUpcoming(
+  const { data } = await pandascoreClient.owMatches.getOwMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -544,3 +544,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

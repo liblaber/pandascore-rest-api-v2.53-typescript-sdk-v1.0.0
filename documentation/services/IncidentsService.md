@@ -2,12 +2,12 @@
 
 A list of all methods in the `IncidentsService` service. Click on the method name to view detailed information about that method.
 
-| Methods                         | Description                                                                                                                                                         |
-| :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [get_additions](#get_additions) | Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.                                                                                    |
-| [get_changes](#get_changes)     | Get the latest updates. <br/> <br/>This endpoint only provides the latest change for an object. It does not keep track of previous changes.                         |
-| [get_deletions](#get_deletions) | Get the latest deleted documents                                                                                                                                    |
-| [get_incidents](#get_incidents) | &nbsp;Get the latest updates and additions. <br/> <br/>This endpoint only provides the latest incident for an object. It does not keep track of previous incidents. |
+| Methods                         | Description                                                                                                                                                   |
+| :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [get_additions](#get_additions) | Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.                                                                              |
+| [get_changes](#get_changes)     | Get the latest updates. <br/> <br/>This endpoint only provides the latest change for an object. It does not keep track of previous changes.                   |
+| [get_deletions](#get_deletions) | Get the latest deleted documents                                                                                                                              |
+| [get_incidents](#get_incidents) | Get the latest updates and additions. <br/> <br/>This endpoint only provides the latest incident for an object. It does not keep track of previous incidents. |
 
 ## get_additions
 
@@ -25,7 +25,7 @@ Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.
 | sort      | any[]                                                                   | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
 | page      | [Page](../models/Page.md)                                               | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
 | perPage   | number                                                                  | ❌       | Equivalent to `page[size]`                                                                                                                          |
-| type\_    | any[]                                                                   | ❌       | Filter by result type(s)                                                                                                                            |
+| type      | any[]                                                                   | ❌       | Filter by result type(s)                                                                                                                            |
 | since     | string                                                                  | ❌       | Filter out older results                                                                                                                            |
 | videogame | [VideogameIdOrSlug[]](../models/VideogameIdOrSlug.md)                   | ❌       | Filter by videogame(s)                                                                                                                              |
 
@@ -36,36 +36,36 @@ Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 5;
+  const incidentId = 9;
 
   const filter: FilterOverAdditionIncidents = {
     id: [incidentId],
-    modifiedAt: ['nostrud '],
+    modifiedAt: ['labore nul'],
     opponentsFilled: true,
   };
-  const incidentId = 5;
+  const incidentId = 9;
 
   const range: RangeOverAdditionIncidents = {
     id: [incidentId],
-    modifiedAt: ['Lo'],
+    modifiedAt: ['id a'],
   };
   const page = 1;
 
-  const { data } = await pandascore.incidents.getAdditions({
+  const { data } = await pandascoreClient.incidents.getAdditions({
     filter: filter,
     range: range,
     sort: [[]],
     page: page,
     perPage: 50,
-    type_: [[]],
-    since: 'nisi ea',
+    type: [[]],
+    since: 'mollit magna no',
     videogame: [videogameIdOrSlug],
   });
 
@@ -89,7 +89,7 @@ Get the latest updates. <br/> <br/>This endpoint only provides the latest change
 | sort      | any[]                                                               | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
 | page      | [Page](../models/Page.md)                                           | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
 | perPage   | number                                                              | ❌       | Equivalent to `page[size]`                                                                                                                          |
-| type\_    | any[]                                                               | ❌       | Filter by result type(s)                                                                                                                            |
+| type      | any[]                                                               | ❌       | Filter by result type(s)                                                                                                                            |
 | since     | string                                                              | ❌       | Filter out older results                                                                                                                            |
 | videogame | [VideogameIdOrSlug[]](../models/VideogameIdOrSlug.md)               | ❌       | Filter by videogame(s)                                                                                                                              |
 
@@ -100,36 +100,36 @@ Get the latest updates. <br/> <br/>This endpoint only provides the latest change
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 5;
+  const incidentId = 9;
 
   const filter: FilterOverChangeIncidents = {
     id: [incidentId],
-    modifiedAt: ['do m'],
+    modifiedAt: ['id eiusmod'],
     opponentsFilled: true,
   };
-  const incidentId = 5;
+  const incidentId = 9;
 
   const range: RangeOverChangeIncidents = {
     id: [incidentId],
-    modifiedAt: ['eiu'],
+    modifiedAt: ['adipisici'],
   };
   const page = 1;
 
-  const { data } = await pandascore.incidents.getChanges({
+  const { data } = await pandascoreClient.incidents.getChanges({
     filter: filter,
     range: range,
     sort: [[]],
     page: page,
     perPage: 50,
-    type_: [[]],
-    since: 'nostrud magn',
+    type: [[]],
+    since: 'labori',
     videogame: [videogameIdOrSlug],
   });
 
@@ -153,7 +153,7 @@ Get the latest deleted documents
 | sort      | any[]                                                                   | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
 | page      | [Page](../models/Page.md)                                               | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
 | perPage   | number                                                                  | ❌       | Equivalent to `page[size]`                                                                                                                          |
-| type\_    | any[]                                                                   | ❌       | Filter by result type(s)                                                                                                                            |
+| type      | any[]                                                                   | ❌       | Filter by result type(s)                                                                                                                            |
 | since     | string                                                                  | ❌       | Filter out older results                                                                                                                            |
 | videogame | [VideogameIdOrSlug[]](../models/VideogameIdOrSlug.md)                   | ❌       | Filter by videogame(s)                                                                                                                              |
 
@@ -164,35 +164,35 @@ Get the latest deleted documents
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 5;
+  const incidentId = 9;
 
   const filter: FilterOverDeletionIncidents = {
     id: [incidentId],
-    modifiedAt: ['est ullamco'],
+    modifiedAt: ['voluptate cu'],
   };
-  const incidentId = 5;
+  const incidentId = 9;
 
   const range: RangeOverDeletionIncidents = {
     id: [incidentId],
-    modifiedAt: ['velit '],
+    modifiedAt: ['reprehenderit o'],
   };
   const page = 1;
 
-  const { data } = await pandascore.incidents.getDeletions({
+  const { data } = await pandascoreClient.incidents.getDeletions({
     filter: filter,
     range: range,
     sort: [[]],
     page: page,
     perPage: 50,
-    type_: [[]],
-    since: 'laboris veniam',
+    type: [[]],
+    since: 'voluptat',
     videogame: [videogameIdOrSlug],
   });
 
@@ -202,7 +202,7 @@ import { Pandascore } from 'pandascore';
 
 ## get_incidents
 
-&nbsp;Get the latest updates and additions. <br/> <br/>This endpoint only provides the latest incident for an object. It does not keep track of previous incidents.
+Get the latest updates and additions. <br/> <br/>This endpoint only provides the latest incident for an object. It does not keep track of previous incidents.
 
 - HTTP Method: `GET`
 - Endpoint: `/incidents`
@@ -216,7 +216,7 @@ import { Pandascore } from 'pandascore';
 | sort      | any[]                                                   | ❌       | Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).                                         |
 | page      | [Page](../models/Page.md)                               | ❌       | Pagination in the form of `page=2` or `page[size]=30&page[number]=2`                                                                                |
 | perPage   | number                                                  | ❌       | Equivalent to `page[size]`                                                                                                                          |
-| type\_    | any[]                                                   | ❌       | Filter by result type(s)                                                                                                                            |
+| type      | any[]                                                   | ❌       | Filter by result type(s)                                                                                                                            |
 | since     | string                                                  | ❌       | Filter out older results                                                                                                                            |
 | videogame | [VideogameIdOrSlug[]](../models/VideogameIdOrSlug.md)   | ❌       | Filter by videogame(s)                                                                                                                              |
 
@@ -227,39 +227,41 @@ import { Pandascore } from 'pandascore';
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 5;
+  const incidentId = 9;
 
   const filter: FilterOverIncidents = {
     id: [incidentId],
-    modifiedAt: ['nisi con'],
+    modifiedAt: ['eu'],
     opponentsFilled: true,
   };
-  const incidentId = 5;
+  const incidentId = 9;
 
   const range: RangeOverIncidents = {
     id: [incidentId],
-    modifiedAt: ['co'],
+    modifiedAt: ['id offici'],
   };
   const page = 1;
 
-  const { data } = await pandascore.incidents.getIncidents({
+  const { data } = await pandascoreClient.incidents.getIncidents({
     filter: filter,
     range: range,
     sort: [[]],
     page: page,
     perPage: 50,
-    type_: [[]],
-    since: 'cillum',
+    type: [[]],
+    since: 'dolore adip',
     videogame: [videogameIdOrSlug],
   });
 
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

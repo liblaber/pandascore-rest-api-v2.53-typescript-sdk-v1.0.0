@@ -30,14 +30,14 @@ Get a single League of Legends game by ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.loLGames.getLolGamesLolGameId(8);
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameId(8);
 
   console.log(data);
 })();
@@ -65,16 +65,16 @@ List events for a given League of Legends game
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.loLGames.getLolGamesLolGameIdEvents(7, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdEvents(2, {
     page: page,
     perPage: 50,
   });
@@ -105,16 +105,16 @@ List frames for a given League of Legends game
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.loLGames.getLolGamesLolGameIdFrames(4, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdFrames(5, {
     page: page,
     perPage: 50,
   });
@@ -149,28 +149,28 @@ List games for a given League of Legends match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;
 
 const filter: FilterOverLoLGames = {
-  beginAt: ["commodo magna "],
+  beginAt: ["eiusmod "],
   complete: true,
   detailedStats: true,
-  endAt: ["e"],
+  endAt: ["veniam"],
   finished: true,
   forfeit: true,
-  id: [8],
-  length: [123],
-  matchId: [8],
-  position: [8],
+  id: [5],
+  length: [4],
+  matchId: [7],
+  position: [6],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -179,16 +179,16 @@ const gameStatus = GameStatus.finished;
 const opponentType = OpponentType.Player;
 
 const range: RangeOverLoLGames = {
-  beginAt: ["cillum"],
+  beginAt: ["velit l"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["velit mollit"],
+  endAt: ["consequat sin"],
   finished: [true],
   forfeit: [true],
-  id: [3],
-  length: [8],
-  matchId: [1],
-  position: [3],
+  id: [5],
+  length: [3],
+  matchId: [7],
+  position: [2],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -202,7 +202,7 @@ const search: SearchOverLoLGames = {
 };
 const page = 1;
 
-  const { data } = await pandascore.loLGames.getLolMatchesMatchIdOrSlugGames(
+  const { data } = await pandascoreClient.loLGames.getLolMatchesMatchIdOrSlugGames(
   ,
   {
 		filter: filter,
@@ -244,28 +244,28 @@ List finished games for a given League of Legends team
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 3;
+  const teamIdOrSlug = 10;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;
 
 const filter: FilterOverLoLTeamLastGames = {
-  beginAt: ["non adi"],
+  beginAt: ["ut cillum Exc"],
   complete: true,
   detailedStats: true,
-  endAt: ["ex enim occ"],
+  endAt: ["cillum id nul"],
   finished: true,
   forfeit: true,
-  id: [2],
-  length: [6],
-  matchId: [7],
-  position: [2],
+  id: [6],
+  length: [7],
+  matchId: [1],
+  position: [8],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -274,16 +274,16 @@ const gameStatus = GameStatus.finished;
 const opponentType = OpponentType.Player;
 
 const range: RangeOverLoLTeamLastGames = {
-  beginAt: ["cupidatat labor"],
+  beginAt: ["el"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["tem"],
+  endAt: ["labor"],
   finished: [true],
   forfeit: [true],
   id: [6],
   length: [9],
-  matchId: [4],
-  position: [9],
+  matchId: [7],
+  position: [4],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -297,7 +297,7 @@ const search: SearchOverLoLTeamLastGames = {
 };
 const page = 1;
 
-  const { data } = await pandascore.loLGames.getLolTeamsTeamIdOrSlugGames(
+  const { data } = await pandascoreClient.loLGames.getLolTeamsTeamIdOrSlugGames(
   ,
   {
 		filter: filter,
@@ -312,3 +312,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

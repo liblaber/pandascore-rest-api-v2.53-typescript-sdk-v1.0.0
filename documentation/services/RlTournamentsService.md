@@ -34,10 +34,10 @@ List tournaments for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
@@ -45,22 +45,22 @@ import { Pandascore } from 'pandascore';
 
   const filterOverRlShortTournamentsVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlShortTournaments = {
-    beginAt: ['sed aliqu'],
+    beginAt: ['proi'],
     detailedStats: true,
-    endAt: ['proid'],
+    endAt: ['Duis c'],
     hasBracket: true,
-    id: [2],
+    id: [8],
     liveSupported: true,
-    modifiedAt: ['l'],
-    name: ['proide'],
-    prizepool: ['proiden'],
-    serieId: [7],
-    slug: ['q3r18me3'],
+    modifiedAt: ['ad a'],
+    name: ['et officia'],
+    prizepool: ['aliqua fugiat'],
+    serieId: [8],
+    slug: ['l0'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverRlShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -68,21 +68,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlShortTournaments = {
-    beginAt: ['ea'],
+    beginAt: ['ea in'],
     detailedStats: [true],
-    endAt: ['ut'],
+    endAt: ['eiusmod'],
     hasBracket: [true],
     id: [3],
-    modifiedAt: ['fugiat nulla e'],
-    name: ['culpa do'],
-    prizepool: ['culpa es'],
-    serieId: [5],
-    slug: ['8y'],
+    modifiedAt: ['fugiat la'],
+    name: ['quis sit '],
+    prizepool: ['autelaborum '],
+    serieId: [1],
+    slug: ['yozf-78_3ou'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -92,15 +92,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlShortTournaments = {
-    name: 'et velit id re',
-    prizepool: 'labore cupid',
-    slug: 'd',
+    name: 'eiusmod anim',
+    prizepool: 'culpa ani',
+    slug: 'q',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlTournaments.getRlTournaments({
+  const { data } = await pandascoreClient.rlTournaments.getRlTournaments({
     filter: filter,
     range: range,
     sort: [[]],
@@ -138,10 +138,10 @@ List past Rocket League tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
@@ -149,22 +149,22 @@ import { Pandascore } from 'pandascore';
 
   const filterOverRlShortTournamentsVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlShortTournaments = {
-    beginAt: ['sed aliqu'],
+    beginAt: ['proi'],
     detailedStats: true,
-    endAt: ['proid'],
+    endAt: ['Duis c'],
     hasBracket: true,
-    id: [2],
+    id: [8],
     liveSupported: true,
-    modifiedAt: ['l'],
-    name: ['proide'],
-    prizepool: ['proiden'],
-    serieId: [7],
-    slug: ['q3r18me3'],
+    modifiedAt: ['ad a'],
+    name: ['et officia'],
+    prizepool: ['aliqua fugiat'],
+    serieId: [8],
+    slug: ['l0'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverRlShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -172,21 +172,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlShortTournaments = {
-    beginAt: ['ea'],
+    beginAt: ['ea in'],
     detailedStats: [true],
-    endAt: ['ut'],
+    endAt: ['eiusmod'],
     hasBracket: [true],
     id: [3],
-    modifiedAt: ['fugiat nulla e'],
-    name: ['culpa do'],
-    prizepool: ['culpa es'],
-    serieId: [5],
-    slug: ['8y'],
+    modifiedAt: ['fugiat la'],
+    name: ['quis sit '],
+    prizepool: ['autelaborum '],
+    serieId: [1],
+    slug: ['yozf-78_3ou'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -196,15 +196,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlShortTournaments = {
-    name: 'et velit id re',
-    prizepool: 'labore cupid',
-    slug: 'd',
+    name: 'eiusmod anim',
+    prizepool: 'culpa ani',
+    slug: 'q',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlTournaments.getRlTournamentsPast({
+  const { data } = await pandascoreClient.rlTournaments.getRlTournamentsPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -242,10 +242,10 @@ List running Rocket League tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
@@ -253,22 +253,22 @@ import { Pandascore } from 'pandascore';
 
   const filterOverRlShortTournamentsVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlShortTournaments = {
-    beginAt: ['sed aliqu'],
+    beginAt: ['proi'],
     detailedStats: true,
-    endAt: ['proid'],
+    endAt: ['Duis c'],
     hasBracket: true,
-    id: [2],
+    id: [8],
     liveSupported: true,
-    modifiedAt: ['l'],
-    name: ['proide'],
-    prizepool: ['proiden'],
-    serieId: [7],
-    slug: ['q3r18me3'],
+    modifiedAt: ['ad a'],
+    name: ['et officia'],
+    prizepool: ['aliqua fugiat'],
+    serieId: [8],
+    slug: ['l0'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverRlShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -276,21 +276,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlShortTournaments = {
-    beginAt: ['ea'],
+    beginAt: ['ea in'],
     detailedStats: [true],
-    endAt: ['ut'],
+    endAt: ['eiusmod'],
     hasBracket: [true],
     id: [3],
-    modifiedAt: ['fugiat nulla e'],
-    name: ['culpa do'],
-    prizepool: ['culpa es'],
-    serieId: [5],
-    slug: ['8y'],
+    modifiedAt: ['fugiat la'],
+    name: ['quis sit '],
+    prizepool: ['autelaborum '],
+    serieId: [1],
+    slug: ['yozf-78_3ou'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -300,15 +300,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlShortTournaments = {
-    name: 'et velit id re',
-    prizepool: 'labore cupid',
-    slug: 'd',
+    name: 'eiusmod anim',
+    prizepool: 'culpa ani',
+    slug: 'q',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlTournaments.getRlTournamentsRunning({
+  const { data } = await pandascoreClient.rlTournaments.getRlTournamentsRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -346,10 +346,10 @@ List upcoming Rocket League tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
@@ -357,22 +357,22 @@ import { Pandascore } from 'pandascore';
 
   const filterOverRlShortTournamentsVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlShortTournaments = {
-    beginAt: ['sed aliqu'],
+    beginAt: ['proi'],
     detailedStats: true,
-    endAt: ['proid'],
+    endAt: ['Duis c'],
     hasBracket: true,
-    id: [2],
+    id: [8],
     liveSupported: true,
-    modifiedAt: ['l'],
-    name: ['proide'],
-    prizepool: ['proiden'],
-    serieId: [7],
-    slug: ['q3r18me3'],
+    modifiedAt: ['ad a'],
+    name: ['et officia'],
+    prizepool: ['aliqua fugiat'],
+    serieId: [8],
+    slug: ['l0'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverRlShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -380,21 +380,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlShortTournaments = {
-    beginAt: ['ea'],
+    beginAt: ['ea in'],
     detailedStats: [true],
-    endAt: ['ut'],
+    endAt: ['eiusmod'],
     hasBracket: [true],
     id: [3],
-    modifiedAt: ['fugiat nulla e'],
-    name: ['culpa do'],
-    prizepool: ['culpa es'],
-    serieId: [5],
-    slug: ['8y'],
+    modifiedAt: ['fugiat la'],
+    name: ['quis sit '],
+    prizepool: ['autelaborum '],
+    serieId: [1],
+    slug: ['yozf-78_3ou'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -404,15 +404,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlShortTournaments = {
-    name: 'et velit id re',
-    prizepool: 'labore cupid',
-    slug: 'd',
+    name: 'eiusmod anim',
+    prizepool: 'culpa ani',
+    slug: 'q',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlTournaments.getRlTournamentsUpcoming({
+  const { data } = await pandascoreClient.rlTournaments.getRlTournamentsUpcoming({
     filter: filter,
     range: range,
     sort: [[]],
@@ -424,3 +424,5 @@ import { Pandascore } from 'pandascore';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

@@ -34,46 +34,46 @@ List series for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverValorantSeriesVideogameTitle = 10;
+  const filterOverValorantSeriesVideogameTitle = 1;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantSeries = {
-    beginAt: ['magna'],
-    endAt: ['de'],
-    id: [7],
-    leagueId: [7],
-    modifiedAt: ['eiusmod U'],
-    name: ['consectetur '],
-    season: ['ut ex aliqua '],
-    slug: ['l5_ma9k'],
+    beginAt: ['vo'],
+    endAt: ['officia'],
+    id: [4],
+    leagueId: [4],
+    modifiedAt: ['Exce'],
+    name: ['veniam '],
+    season: ['qui est a'],
+    slug: ['a-__fpigd'],
     videogameTitle: [filterOverValorantSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantSeries = {
-    beginAt: ['enim Lor'],
-    endAt: ['reprehender'],
-    id: [4],
+    beginAt: ['nisi r'],
+    endAt: ['esse do'],
+    id: [2],
     leagueId: [2],
-    modifiedAt: ['pari'],
-    name: ['in ul'],
-    season: ['exercitati'],
-    slug: ['lqdqlaoeq'],
+    modifiedAt: ['sun'],
+    name: ['dolore in in'],
+    season: ['labore do dolo'],
+    slug: ['a046lpfr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantSeries = {
-    name: 'ex do',
-    season: 'ullamco exer',
-    slug: 'nowz',
+    name: 'doeiu',
+    season: 'veniam ',
+    slug: '1-0pexfqf',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantSeries.getValorantSeries({
+  const { data } = await pandascoreClient.valorantSeries.getValorantSeries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverValorantSeriesVideogameTitle = 10;
+  const filterOverValorantSeriesVideogameTitle = 1;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantSeries = {
-    beginAt: ['magna'],
-    endAt: ['de'],
-    id: [7],
-    leagueId: [7],
-    modifiedAt: ['eiusmod U'],
-    name: ['consectetur '],
-    season: ['ut ex aliqua '],
-    slug: ['l5_ma9k'],
+    beginAt: ['vo'],
+    endAt: ['officia'],
+    id: [4],
+    leagueId: [4],
+    modifiedAt: ['Exce'],
+    name: ['veniam '],
+    season: ['qui est a'],
+    slug: ['a-__fpigd'],
     videogameTitle: [filterOverValorantSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantSeries = {
-    beginAt: ['enim Lor'],
-    endAt: ['reprehender'],
-    id: [4],
+    beginAt: ['nisi r'],
+    endAt: ['esse do'],
+    id: [2],
     leagueId: [2],
-    modifiedAt: ['pari'],
-    name: ['in ul'],
-    season: ['exercitati'],
-    slug: ['lqdqlaoeq'],
+    modifiedAt: ['sun'],
+    name: ['dolore in in'],
+    season: ['labore do dolo'],
+    slug: ['a046lpfr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantSeries = {
-    name: 'ex do',
-    season: 'ullamco exer',
-    slug: 'nowz',
+    name: 'doeiu',
+    season: 'veniam ',
+    slug: '1-0pexfqf',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantSeries.getValorantSeriesPast({
+  const { data } = await pandascoreClient.valorantSeries.getValorantSeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverValorantSeriesVideogameTitle = 10;
+  const filterOverValorantSeriesVideogameTitle = 1;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantSeries = {
-    beginAt: ['magna'],
-    endAt: ['de'],
-    id: [7],
-    leagueId: [7],
-    modifiedAt: ['eiusmod U'],
-    name: ['consectetur '],
-    season: ['ut ex aliqua '],
-    slug: ['l5_ma9k'],
+    beginAt: ['vo'],
+    endAt: ['officia'],
+    id: [4],
+    leagueId: [4],
+    modifiedAt: ['Exce'],
+    name: ['veniam '],
+    season: ['qui est a'],
+    slug: ['a-__fpigd'],
     videogameTitle: [filterOverValorantSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantSeries = {
-    beginAt: ['enim Lor'],
-    endAt: ['reprehender'],
-    id: [4],
+    beginAt: ['nisi r'],
+    endAt: ['esse do'],
+    id: [2],
     leagueId: [2],
-    modifiedAt: ['pari'],
-    name: ['in ul'],
-    season: ['exercitati'],
-    slug: ['lqdqlaoeq'],
+    modifiedAt: ['sun'],
+    name: ['dolore in in'],
+    season: ['labore do dolo'],
+    slug: ['a046lpfr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantSeries = {
-    name: 'ex do',
-    season: 'ullamco exer',
-    slug: 'nowz',
+    name: 'doeiu',
+    season: 'veniam ',
+    slug: '1-0pexfqf',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantSeries.getValorantSeriesRunning({
+  const { data } = await pandascoreClient.valorantSeries.getValorantSeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverValorantSeriesVideogameTitle = 10;
+  const filterOverValorantSeriesVideogameTitle = 1;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantSeries = {
-    beginAt: ['magna'],
-    endAt: ['de'],
-    id: [7],
-    leagueId: [7],
-    modifiedAt: ['eiusmod U'],
-    name: ['consectetur '],
-    season: ['ut ex aliqua '],
-    slug: ['l5_ma9k'],
+    beginAt: ['vo'],
+    endAt: ['officia'],
+    id: [4],
+    leagueId: [4],
+    modifiedAt: ['Exce'],
+    name: ['veniam '],
+    season: ['qui est a'],
+    slug: ['a-__fpigd'],
     videogameTitle: [filterOverValorantSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantSeries = {
-    beginAt: ['enim Lor'],
-    endAt: ['reprehender'],
-    id: [4],
+    beginAt: ['nisi r'],
+    endAt: ['esse do'],
+    id: [2],
     leagueId: [2],
-    modifiedAt: ['pari'],
-    name: ['in ul'],
-    season: ['exercitati'],
-    slug: ['lqdqlaoeq'],
+    modifiedAt: ['sun'],
+    name: ['dolore in in'],
+    season: ['labore do dolo'],
+    slug: ['a046lpfr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantSeries = {
-    name: 'ex do',
-    season: 'ullamco exer',
-    slug: 'nowz',
+    name: 'doeiu',
+    season: 'veniam ',
+    slug: '1-0pexfqf',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantSeries.getValorantSeriesUpcoming({
+  const { data } = await pandascoreClient.valorantSeries.getValorantSeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],
@@ -376,3 +376,5 @@ import { Pandascore } from 'pandascore';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

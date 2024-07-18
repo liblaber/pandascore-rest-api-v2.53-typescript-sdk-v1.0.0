@@ -33,16 +33,16 @@ Get the aggregated statistics for all players in a Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.valorantStats.getValorantMatchesMatchIdOrSlugPlayersStats();
+  const { data } = await pandascoreClient.valorantStats.getValorantMatchesMatchIdOrSlugPlayersStats();
 
   console.log(data);
 })();
@@ -69,16 +69,16 @@ Get the aggregated team statistics for a Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
-const teamIdOrSlug = 3;
+  const matchIdOrSlug = 5;
+const teamIdOrSlug = 10;
 
-  const { data } = await pandascore.valorantStats.getValorantMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
   ,
 
 );
@@ -100,7 +100,7 @@ Get a Valorant player stats by ID or slug
 | :--------------- | :---------------------------------------------------------- | :------- | :--------------------- |
 | playerIdOrSlug   | [PlayerIdOrSlug](../models/PlayerIdOrSlug.md)               | ✅       | A player ID or slug    |
 | videogameVersion | [VideogameVersionOrAll](../models/VideogameVersionOrAll.md) | ❌       |                        |
-| from\_           | string                                                      | ❌       | Filter out 'from' date |
+| from             | string                                                      | ❌       | Filter out 'from' date |
 | to               | string                                                      | ❌       | Filter out 'to' date   |
 
 **Return Type**
@@ -110,20 +110,20 @@ Get a Valorant player stats by ID or slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 2;
-const videogameVersionOrAll = "2815.4.300196";
+  const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantPlayersPlayerIdOrSlugStats(
   ,
   {
 		videogameVersion: videogameVersion,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -154,17 +154,17 @@ Get the aggregated player statistics for a Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const playerIdOrSlug = 2;
-const videogameVersionOrAll = "2815.4.300196";
+const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
@@ -198,17 +198,17 @@ Get the aggregated team statistics for a Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const teamIdOrSlug = 3;
-const videogameVersionOrAll = "2815.4.300196";
+const teamIdOrSlug = 10;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
@@ -233,7 +233,7 @@ Get a Valorant team stats by ID or slug
 | :--------------- | :---------------------------------------------------------- | :------- | :--------------------- |
 | teamIdOrSlug     | [TeamIdOrSlug](../models/TeamIdOrSlug.md)                   | ✅       | A team ID or slug      |
 | videogameVersion | [VideogameVersionOrAll](../models/VideogameVersionOrAll.md) | ❌       |                        |
-| from\_           | string                                                      | ❌       | Filter out 'from' date |
+| from             | string                                                      | ❌       | Filter out 'from' date |
 | to               | string                                                      | ❌       | Filter out 'to' date   |
 
 **Return Type**
@@ -243,20 +243,20 @@ Get a Valorant team stats by ID or slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 3;
-const videogameVersionOrAll = "2815.4.300196";
+  const teamIdOrSlug = 10;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantTeamsTeamIdOrSlugStats(
   ,
   {
 		videogameVersion: videogameVersion,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -287,17 +287,17 @@ Get the aggregated player statistics for a Valorant tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const playerIdOrSlug = 2;
-const videogameVersionOrAll = "2815.4.300196";
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
@@ -331,17 +331,17 @@ Get the aggregated team statistics for a Valorant tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const teamIdOrSlug = 3;
-const videogameVersionOrAll = "2815.4.300196";
+  const tournamentIdOrSlug = 2;
+const teamIdOrSlug = 10;
+const videogameVersionOrAll = "5.4970743709";
 
-  const { data } = await pandascore.valorantStats.getValorantTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.valorantStats.getValorantTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
@@ -352,3 +352,5 @@ const videogameVersionOrAll = "2815.4.300196";
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

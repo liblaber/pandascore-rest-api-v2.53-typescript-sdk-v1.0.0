@@ -34,46 +34,46 @@ List series for the PUBG videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverPubgSeriesVideogameTitle = 7;
+  const filterOverPubgSeriesVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverPubgSeries = {
-    beginAt: ['mi'],
-    endAt: ['eu dolor i'],
-    id: [8],
-    leagueId: [8],
-    modifiedAt: ['aliqua in'],
-    name: ['do ex d'],
-    season: ['cillum ex s'],
-    slug: ['eyfqx_a'],
+    beginAt: ['ex'],
+    endAt: ['Lorem '],
+    id: [5],
+    leagueId: [5],
+    modifiedAt: ['do'],
+    name: ['nisi culpa'],
+    season: ['ut ea i'],
+    slug: ['ohs'],
     videogameTitle: [filterOverPubgSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverPubgSeries = {
-    beginAt: ['magna a'],
-    endAt: ['l'],
-    id: [8],
+    beginAt: ['c'],
+    endAt: ['amet elit et i'],
+    id: [2],
     leagueId: [4],
-    modifiedAt: ['paria'],
-    name: ['sitvoluptate '],
-    season: ['consec'],
-    slug: ['hzetjt0'],
+    modifiedAt: ['fugiat id'],
+    name: ['in enim '],
+    season: ['occaecat n'],
+    slug: ['z7v95uzd6'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverPubgSeries = {
-    name: 'ut incididun',
-    season: 'deserun',
-    slug: 'j',
+    name: 'nostrud ipsu',
+    season: 'velit',
+    slug: 'gu',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.pubgSeries.getPubgSeries({
+  const { data } = await pandascoreClient.pubgSeries.getPubgSeries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverPubgSeriesVideogameTitle = 7;
+  const filterOverPubgSeriesVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverPubgSeries = {
-    beginAt: ['mi'],
-    endAt: ['eu dolor i'],
-    id: [8],
-    leagueId: [8],
-    modifiedAt: ['aliqua in'],
-    name: ['do ex d'],
-    season: ['cillum ex s'],
-    slug: ['eyfqx_a'],
+    beginAt: ['ex'],
+    endAt: ['Lorem '],
+    id: [5],
+    leagueId: [5],
+    modifiedAt: ['do'],
+    name: ['nisi culpa'],
+    season: ['ut ea i'],
+    slug: ['ohs'],
     videogameTitle: [filterOverPubgSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverPubgSeries = {
-    beginAt: ['magna a'],
-    endAt: ['l'],
-    id: [8],
+    beginAt: ['c'],
+    endAt: ['amet elit et i'],
+    id: [2],
     leagueId: [4],
-    modifiedAt: ['paria'],
-    name: ['sitvoluptate '],
-    season: ['consec'],
-    slug: ['hzetjt0'],
+    modifiedAt: ['fugiat id'],
+    name: ['in enim '],
+    season: ['occaecat n'],
+    slug: ['z7v95uzd6'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverPubgSeries = {
-    name: 'ut incididun',
-    season: 'deserun',
-    slug: 'j',
+    name: 'nostrud ipsu',
+    season: 'velit',
+    slug: 'gu',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.pubgSeries.getPubgSeriesPast({
+  const { data } = await pandascoreClient.pubgSeries.getPubgSeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverPubgSeriesVideogameTitle = 7;
+  const filterOverPubgSeriesVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverPubgSeries = {
-    beginAt: ['mi'],
-    endAt: ['eu dolor i'],
-    id: [8],
-    leagueId: [8],
-    modifiedAt: ['aliqua in'],
-    name: ['do ex d'],
-    season: ['cillum ex s'],
-    slug: ['eyfqx_a'],
+    beginAt: ['ex'],
+    endAt: ['Lorem '],
+    id: [5],
+    leagueId: [5],
+    modifiedAt: ['do'],
+    name: ['nisi culpa'],
+    season: ['ut ea i'],
+    slug: ['ohs'],
     videogameTitle: [filterOverPubgSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverPubgSeries = {
-    beginAt: ['magna a'],
-    endAt: ['l'],
-    id: [8],
+    beginAt: ['c'],
+    endAt: ['amet elit et i'],
+    id: [2],
     leagueId: [4],
-    modifiedAt: ['paria'],
-    name: ['sitvoluptate '],
-    season: ['consec'],
-    slug: ['hzetjt0'],
+    modifiedAt: ['fugiat id'],
+    name: ['in enim '],
+    season: ['occaecat n'],
+    slug: ['z7v95uzd6'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverPubgSeries = {
-    name: 'ut incididun',
-    season: 'deserun',
-    slug: 'j',
+    name: 'nostrud ipsu',
+    season: 'velit',
+    slug: 'gu',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.pubgSeries.getPubgSeriesRunning({
+  const { data } = await pandascoreClient.pubgSeries.getPubgSeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverPubgSeriesVideogameTitle = 7;
+  const filterOverPubgSeriesVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverPubgSeries = {
-    beginAt: ['mi'],
-    endAt: ['eu dolor i'],
-    id: [8],
-    leagueId: [8],
-    modifiedAt: ['aliqua in'],
-    name: ['do ex d'],
-    season: ['cillum ex s'],
-    slug: ['eyfqx_a'],
+    beginAt: ['ex'],
+    endAt: ['Lorem '],
+    id: [5],
+    leagueId: [5],
+    modifiedAt: ['do'],
+    name: ['nisi culpa'],
+    season: ['ut ea i'],
+    slug: ['ohs'],
     videogameTitle: [filterOverPubgSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverPubgSeries = {
-    beginAt: ['magna a'],
-    endAt: ['l'],
-    id: [8],
+    beginAt: ['c'],
+    endAt: ['amet elit et i'],
+    id: [2],
     leagueId: [4],
-    modifiedAt: ['paria'],
-    name: ['sitvoluptate '],
-    season: ['consec'],
-    slug: ['hzetjt0'],
+    modifiedAt: ['fugiat id'],
+    name: ['in enim '],
+    season: ['occaecat n'],
+    slug: ['z7v95uzd6'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverPubgSeries = {
-    name: 'ut incididun',
-    season: 'deserun',
-    slug: 'j',
+    name: 'nostrud ipsu',
+    season: 'velit',
+    slug: 'gu',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.pubgSeries.getPubgSeriesUpcoming({
+  const { data } = await pandascoreClient.pubgSeries.getPubgSeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],
@@ -376,3 +376,5 @@ import { Pandascore } from 'pandascore';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

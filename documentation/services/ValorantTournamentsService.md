@@ -34,33 +34,33 @@ List tournaments for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverValorantShortTournamentsVideogameTitle = 9;
+  const filterOverValorantShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantShortTournaments = {
-    beginAt: ['irure'],
+    beginAt: ['officia in'],
     detailedStats: true,
-    endAt: ['esse'],
+    endAt: ['mollit e'],
     hasBracket: true,
-    id: [6],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['minim proident'],
-    name: ['non occaeca'],
-    prizepool: ['aliquip'],
-    serieId: [7],
-    slug: ['c_ac'],
+    modifiedAt: ['a'],
+    name: ['ullamco '],
+    prizepool: ['ex cul'],
+    serieId: [9],
+    slug: ['e2vhv2hg3i'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverValorantShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -68,21 +68,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantShortTournaments = {
-    beginAt: ['mollit'],
+    beginAt: ['deser'],
     detailedStats: [true],
-    endAt: ['pariatur'],
+    endAt: ['do pro'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['sit'],
-    name: ['labore'],
-    prizepool: ['irure in d'],
-    serieId: [4],
-    slug: ['o55i-cc_5fi'],
+    id: [6],
+    modifiedAt: ['i'],
+    name: ['veniam '],
+    prizepool: ['tempor Except'],
+    serieId: [2],
+    slug: ['m2czt'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -92,15 +92,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantShortTournaments = {
-    name: 'laboris',
-    prizepool: 'Duis en',
-    slug: '4a53vbi',
+    name: 'nisi es',
+    prizepool: 'Duis eiusmod ',
+    slug: 'roj8g5wbb',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantTournaments.getValorantTournaments({
+  const { data } = await pandascoreClient.valorantTournaments.getValorantTournaments({
     filter: filter,
     range: range,
     sort: [[]],
@@ -138,33 +138,33 @@ List past Valorant tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverValorantShortTournamentsVideogameTitle = 9;
+  const filterOverValorantShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantShortTournaments = {
-    beginAt: ['irure'],
+    beginAt: ['officia in'],
     detailedStats: true,
-    endAt: ['esse'],
+    endAt: ['mollit e'],
     hasBracket: true,
-    id: [6],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['minim proident'],
-    name: ['non occaeca'],
-    prizepool: ['aliquip'],
-    serieId: [7],
-    slug: ['c_ac'],
+    modifiedAt: ['a'],
+    name: ['ullamco '],
+    prizepool: ['ex cul'],
+    serieId: [9],
+    slug: ['e2vhv2hg3i'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverValorantShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -172,21 +172,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantShortTournaments = {
-    beginAt: ['mollit'],
+    beginAt: ['deser'],
     detailedStats: [true],
-    endAt: ['pariatur'],
+    endAt: ['do pro'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['sit'],
-    name: ['labore'],
-    prizepool: ['irure in d'],
-    serieId: [4],
-    slug: ['o55i-cc_5fi'],
+    id: [6],
+    modifiedAt: ['i'],
+    name: ['veniam '],
+    prizepool: ['tempor Except'],
+    serieId: [2],
+    slug: ['m2czt'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -196,15 +196,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantShortTournaments = {
-    name: 'laboris',
-    prizepool: 'Duis en',
-    slug: '4a53vbi',
+    name: 'nisi es',
+    prizepool: 'Duis eiusmod ',
+    slug: 'roj8g5wbb',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantTournaments.getValorantTournamentsPast({
+  const { data } = await pandascoreClient.valorantTournaments.getValorantTournamentsPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -242,33 +242,33 @@ List running Valorant tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverValorantShortTournamentsVideogameTitle = 9;
+  const filterOverValorantShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantShortTournaments = {
-    beginAt: ['irure'],
+    beginAt: ['officia in'],
     detailedStats: true,
-    endAt: ['esse'],
+    endAt: ['mollit e'],
     hasBracket: true,
-    id: [6],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['minim proident'],
-    name: ['non occaeca'],
-    prizepool: ['aliquip'],
-    serieId: [7],
-    slug: ['c_ac'],
+    modifiedAt: ['a'],
+    name: ['ullamco '],
+    prizepool: ['ex cul'],
+    serieId: [9],
+    slug: ['e2vhv2hg3i'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverValorantShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -276,21 +276,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantShortTournaments = {
-    beginAt: ['mollit'],
+    beginAt: ['deser'],
     detailedStats: [true],
-    endAt: ['pariatur'],
+    endAt: ['do pro'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['sit'],
-    name: ['labore'],
-    prizepool: ['irure in d'],
-    serieId: [4],
-    slug: ['o55i-cc_5fi'],
+    id: [6],
+    modifiedAt: ['i'],
+    name: ['veniam '],
+    prizepool: ['tempor Except'],
+    serieId: [2],
+    slug: ['m2czt'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -300,15 +300,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantShortTournaments = {
-    name: 'laboris',
-    prizepool: 'Duis en',
-    slug: '4a53vbi',
+    name: 'nisi es',
+    prizepool: 'Duis eiusmod ',
+    slug: 'roj8g5wbb',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantTournaments.getValorantTournamentsRunning({
+  const { data } = await pandascoreClient.valorantTournaments.getValorantTournamentsRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -346,33 +346,33 @@ List upcoming Valorant tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverValorantShortTournamentsVideogameTitle = 9;
+  const filterOverValorantShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverValorantShortTournaments = {
-    beginAt: ['irure'],
+    beginAt: ['officia in'],
     detailedStats: true,
-    endAt: ['esse'],
+    endAt: ['mollit e'],
     hasBracket: true,
-    id: [6],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['minim proident'],
-    name: ['non occaeca'],
-    prizepool: ['aliquip'],
-    serieId: [7],
-    slug: ['c_ac'],
+    modifiedAt: ['a'],
+    name: ['ullamco '],
+    prizepool: ['ex cul'],
+    serieId: [9],
+    slug: ['e2vhv2hg3i'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverValorantShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -380,21 +380,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverValorantShortTournaments = {
-    beginAt: ['mollit'],
+    beginAt: ['deser'],
     detailedStats: [true],
-    endAt: ['pariatur'],
+    endAt: ['do pro'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['sit'],
-    name: ['labore'],
-    prizepool: ['irure in d'],
-    serieId: [4],
-    slug: ['o55i-cc_5fi'],
+    id: [6],
+    modifiedAt: ['i'],
+    name: ['veniam '],
+    prizepool: ['tempor Except'],
+    serieId: [2],
+    slug: ['m2czt'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -404,15 +404,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverValorantShortTournaments = {
-    name: 'laboris',
-    prizepool: 'Duis en',
-    slug: '4a53vbi',
+    name: 'nisi es',
+    prizepool: 'Duis eiusmod ',
+    slug: 'roj8g5wbb',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantTournaments.getValorantTournamentsUpcoming({
+  const { data } = await pandascoreClient.valorantTournaments.getValorantTournamentsUpcoming({
     filter: filter,
     range: range,
     sort: [[]],
@@ -424,3 +424,5 @@ import { Pandascore } from 'pandascore';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

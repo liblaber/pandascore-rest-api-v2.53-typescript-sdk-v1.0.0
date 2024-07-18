@@ -34,52 +34,52 @@ List matches for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverR6SiegeMatchesVideogameTitle = 5;
+const filterOverR6SiegeMatchesVideogameTitle = 4;
 
-const filterOverR6SiegeMatchesVideogameVersion = "78534.258211612";
+const filterOverR6SiegeMatchesVideogameVersion = "266391336.84111";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverR6SiegeMatches = {
-  beginAt: ["n"],
+  beginAt: ["ut proident"],
   detailedStats: true,
   draw: true,
-  endAt: ["aute"],
+  endAt: ["magn"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [6],
+  id: [3],
+  leagueId: [3],
   matchType: [matchType],
-  modifiedAt: ["fugiat adipis"],
-  name: ["suntnisi"],
+  modifiedAt: ["ani"],
+  name: ["aliquip culpa"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [9],
   opponentId: [filterOverR6SiegeMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor anim Lo"],
-  serieId: [3],
-  slug: ["ddW"],
+  scheduledAt: ["ad eu consec"],
+  serieId: [1],
+  slug: ["6A0c8"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverR6SiegeMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverR6SiegeMatches = {
-  beginAt: ["sint ame"],
+  beginAt: ["t"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["ut deser"],
+  endAt: ["dolor"],
   forfeit: [true],
-  id: [8],
+  id: [4],
   matchType: [matchType],
-  modifiedAt: ["sit ali"],
-  name: ["Duis ut"],
-  numberOfGames: [9],
-  scheduledAt: ["nostrud mag"],
-  slug: ["6glhN"],
+  modifiedAt: ["mo"],
+  name: ["commodo"],
+  numberOfGames: [1],
+  scheduledAt: ["sed"],
+  slug: ["SXr_"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverR6SiegeMatches = {
   matchType: matchType,
-  name: "esse proident",
-  slug: "SvLq1mxn",
+  name: "culpa deserun",
+  slug: "rYbtGes",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.r6SiegeMatches.getR6siegeMatches(
+  const { data } = await pandascoreClient.r6SiegeMatches.getR6siegeMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,52 +168,52 @@ List past Rainbow Six Siege matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverR6SiegeMatchesVideogameTitle = 5;
+const filterOverR6SiegeMatchesVideogameTitle = 4;
 
-const filterOverR6SiegeMatchesVideogameVersion = "78534.258211612";
+const filterOverR6SiegeMatchesVideogameVersion = "266391336.84111";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverR6SiegeMatches = {
-  beginAt: ["n"],
+  beginAt: ["ut proident"],
   detailedStats: true,
   draw: true,
-  endAt: ["aute"],
+  endAt: ["magn"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [6],
+  id: [3],
+  leagueId: [3],
   matchType: [matchType],
-  modifiedAt: ["fugiat adipis"],
-  name: ["suntnisi"],
+  modifiedAt: ["ani"],
+  name: ["aliquip culpa"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [9],
   opponentId: [filterOverR6SiegeMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor anim Lo"],
-  serieId: [3],
-  slug: ["ddW"],
+  scheduledAt: ["ad eu consec"],
+  serieId: [1],
+  slug: ["6A0c8"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverR6SiegeMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverR6SiegeMatches = {
-  beginAt: ["sint ame"],
+  beginAt: ["t"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["ut deser"],
+  endAt: ["dolor"],
   forfeit: [true],
-  id: [8],
+  id: [4],
   matchType: [matchType],
-  modifiedAt: ["sit ali"],
-  name: ["Duis ut"],
-  numberOfGames: [9],
-  scheduledAt: ["nostrud mag"],
-  slug: ["6glhN"],
+  modifiedAt: ["mo"],
+  name: ["commodo"],
+  numberOfGames: [1],
+  scheduledAt: ["sed"],
+  slug: ["SXr_"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverR6SiegeMatches = {
   matchType: matchType,
-  name: "esse proident",
-  slug: "SvLq1mxn",
+  name: "culpa deserun",
+  slug: "rYbtGes",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.r6SiegeMatches.getR6siegeMatchesPast(
+  const { data } = await pandascoreClient.r6SiegeMatches.getR6siegeMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,52 +302,52 @@ List running Rainbow Six Siege matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverR6SiegeMatchesVideogameTitle = 5;
+const filterOverR6SiegeMatchesVideogameTitle = 4;
 
-const filterOverR6SiegeMatchesVideogameVersion = "78534.258211612";
+const filterOverR6SiegeMatchesVideogameVersion = "266391336.84111";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverR6SiegeMatches = {
-  beginAt: ["n"],
+  beginAt: ["ut proident"],
   detailedStats: true,
   draw: true,
-  endAt: ["aute"],
+  endAt: ["magn"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [6],
+  id: [3],
+  leagueId: [3],
   matchType: [matchType],
-  modifiedAt: ["fugiat adipis"],
-  name: ["suntnisi"],
+  modifiedAt: ["ani"],
+  name: ["aliquip culpa"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [9],
   opponentId: [filterOverR6SiegeMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor anim Lo"],
-  serieId: [3],
-  slug: ["ddW"],
+  scheduledAt: ["ad eu consec"],
+  serieId: [1],
+  slug: ["6A0c8"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverR6SiegeMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverR6SiegeMatches = {
-  beginAt: ["sint ame"],
+  beginAt: ["t"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["ut deser"],
+  endAt: ["dolor"],
   forfeit: [true],
-  id: [8],
+  id: [4],
   matchType: [matchType],
-  modifiedAt: ["sit ali"],
-  name: ["Duis ut"],
-  numberOfGames: [9],
-  scheduledAt: ["nostrud mag"],
-  slug: ["6glhN"],
+  modifiedAt: ["mo"],
+  name: ["commodo"],
+  numberOfGames: [1],
+  scheduledAt: ["sed"],
+  slug: ["SXr_"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverR6SiegeMatches = {
   matchType: matchType,
-  name: "esse proident",
-  slug: "SvLq1mxn",
+  name: "culpa deserun",
+  slug: "rYbtGes",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.r6SiegeMatches.getR6siegeMatchesRunning(
+  const { data } = await pandascoreClient.r6SiegeMatches.getR6siegeMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,52 +436,52 @@ List upcoming Rainbow Six Siege matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverR6SiegeMatchesVideogameTitle = 5;
+const filterOverR6SiegeMatchesVideogameTitle = 4;
 
-const filterOverR6SiegeMatchesVideogameVersion = "78534.258211612";
+const filterOverR6SiegeMatchesVideogameVersion = "266391336.84111";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverR6SiegeMatches = {
-  beginAt: ["n"],
+  beginAt: ["ut proident"],
   detailedStats: true,
   draw: true,
-  endAt: ["aute"],
+  endAt: ["magn"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [6],
+  id: [3],
+  leagueId: [3],
   matchType: [matchType],
-  modifiedAt: ["fugiat adipis"],
-  name: ["suntnisi"],
+  modifiedAt: ["ani"],
+  name: ["aliquip culpa"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [9],
   opponentId: [filterOverR6SiegeMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor anim Lo"],
-  serieId: [3],
-  slug: ["ddW"],
+  scheduledAt: ["ad eu consec"],
+  serieId: [1],
+  slug: ["6A0c8"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverR6SiegeMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverR6SiegeMatches = {
-  beginAt: ["sint ame"],
+  beginAt: ["t"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["ut deser"],
+  endAt: ["dolor"],
   forfeit: [true],
-  id: [8],
+  id: [4],
   matchType: [matchType],
-  modifiedAt: ["sit ali"],
-  name: ["Duis ut"],
-  numberOfGames: [9],
-  scheduledAt: ["nostrud mag"],
-  slug: ["6glhN"],
+  modifiedAt: ["mo"],
+  name: ["commodo"],
+  numberOfGames: [1],
+  scheduledAt: ["sed"],
+  slug: ["SXr_"],
   status: [matchStatus],
-  tournamentId: [3],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverR6SiegeMatches = {
   matchType: matchType,
-  name: "esse proident",
-  slug: "SvLq1mxn",
+  name: "culpa deserun",
+  slug: "rYbtGes",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.r6SiegeMatches.getR6siegeMatchesUpcoming(
+  const { data } = await pandascoreClient.r6SiegeMatches.getR6siegeMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -544,3 +544,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

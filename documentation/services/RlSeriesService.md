@@ -34,46 +34,46 @@ List series for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverRlSeriesVideogameTitle = 3;
+  const filterOverRlSeriesVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlSeries = {
-    beginAt: ['incididu'],
-    endAt: ['nostr'],
-    id: [5],
-    leagueId: [8],
-    modifiedAt: ['laboris '],
-    name: ['adipisic'],
-    season: ['id dolor lab'],
-    slug: ['ip-g_'],
+    beginAt: ['Du'],
+    endAt: ['p'],
+    id: [2],
+    leagueId: [3],
+    modifiedAt: ['anim nisi n'],
+    name: ['aliquip'],
+    season: ['voluptate'],
+    slug: ['ap-k3fd'],
     videogameTitle: [filterOverRlSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlSeries = {
-    beginAt: ['ex'],
-    endAt: ['adi'],
-    id: [4],
-    leagueId: [7],
-    modifiedAt: ['occaecat'],
-    name: ['anim mollit u'],
-    season: ['proident do'],
-    slug: ['7b-tpj-1'],
+    beginAt: ['cul'],
+    endAt: ['adipisicing nos'],
+    id: [1],
+    leagueId: [10],
+    modifiedAt: ['Duis ex fugiat'],
+    name: ['aliquip occaeca'],
+    season: ['aute '],
+    slug: ['bcurr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlSeries = {
-    name: 'nisi u',
-    season: 'anim al',
-    slug: '0sj',
+    name: 'nulla lab',
+    season: 'elit ci',
+    slug: '81xnq-',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlSeries.getRlSeries({
+  const { data } = await pandascoreClient.rlSeries.getRlSeries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past Rocket League series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverRlSeriesVideogameTitle = 3;
+  const filterOverRlSeriesVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlSeries = {
-    beginAt: ['incididu'],
-    endAt: ['nostr'],
-    id: [5],
-    leagueId: [8],
-    modifiedAt: ['laboris '],
-    name: ['adipisic'],
-    season: ['id dolor lab'],
-    slug: ['ip-g_'],
+    beginAt: ['Du'],
+    endAt: ['p'],
+    id: [2],
+    leagueId: [3],
+    modifiedAt: ['anim nisi n'],
+    name: ['aliquip'],
+    season: ['voluptate'],
+    slug: ['ap-k3fd'],
     videogameTitle: [filterOverRlSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlSeries = {
-    beginAt: ['ex'],
-    endAt: ['adi'],
-    id: [4],
-    leagueId: [7],
-    modifiedAt: ['occaecat'],
-    name: ['anim mollit u'],
-    season: ['proident do'],
-    slug: ['7b-tpj-1'],
+    beginAt: ['cul'],
+    endAt: ['adipisicing nos'],
+    id: [1],
+    leagueId: [10],
+    modifiedAt: ['Duis ex fugiat'],
+    name: ['aliquip occaeca'],
+    season: ['aute '],
+    slug: ['bcurr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlSeries = {
-    name: 'nisi u',
-    season: 'anim al',
-    slug: '0sj',
+    name: 'nulla lab',
+    season: 'elit ci',
+    slug: '81xnq-',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlSeries.getRlSeriesPast({
+  const { data } = await pandascoreClient.rlSeries.getRlSeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running Rocket League series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverRlSeriesVideogameTitle = 3;
+  const filterOverRlSeriesVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlSeries = {
-    beginAt: ['incididu'],
-    endAt: ['nostr'],
-    id: [5],
-    leagueId: [8],
-    modifiedAt: ['laboris '],
-    name: ['adipisic'],
-    season: ['id dolor lab'],
-    slug: ['ip-g_'],
+    beginAt: ['Du'],
+    endAt: ['p'],
+    id: [2],
+    leagueId: [3],
+    modifiedAt: ['anim nisi n'],
+    name: ['aliquip'],
+    season: ['voluptate'],
+    slug: ['ap-k3fd'],
     videogameTitle: [filterOverRlSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlSeries = {
-    beginAt: ['ex'],
-    endAt: ['adi'],
-    id: [4],
-    leagueId: [7],
-    modifiedAt: ['occaecat'],
-    name: ['anim mollit u'],
-    season: ['proident do'],
-    slug: ['7b-tpj-1'],
+    beginAt: ['cul'],
+    endAt: ['adipisicing nos'],
+    id: [1],
+    leagueId: [10],
+    modifiedAt: ['Duis ex fugiat'],
+    name: ['aliquip occaeca'],
+    season: ['aute '],
+    slug: ['bcurr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlSeries = {
-    name: 'nisi u',
-    season: 'anim al',
-    slug: '0sj',
+    name: 'nulla lab',
+    season: 'elit ci',
+    slug: '81xnq-',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlSeries.getRlSeriesRunning({
+  const { data } = await pandascoreClient.rlSeries.getRlSeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming Rocket League series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverRlSeriesVideogameTitle = 3;
+  const filterOverRlSeriesVideogameTitle = 6;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverRlSeries = {
-    beginAt: ['incididu'],
-    endAt: ['nostr'],
-    id: [5],
-    leagueId: [8],
-    modifiedAt: ['laboris '],
-    name: ['adipisic'],
-    season: ['id dolor lab'],
-    slug: ['ip-g_'],
+    beginAt: ['Du'],
+    endAt: ['p'],
+    id: [2],
+    leagueId: [3],
+    modifiedAt: ['anim nisi n'],
+    name: ['aliquip'],
+    season: ['voluptate'],
+    slug: ['ap-k3fd'],
     videogameTitle: [filterOverRlSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverRlSeries = {
-    beginAt: ['ex'],
-    endAt: ['adi'],
-    id: [4],
-    leagueId: [7],
-    modifiedAt: ['occaecat'],
-    name: ['anim mollit u'],
-    season: ['proident do'],
-    slug: ['7b-tpj-1'],
+    beginAt: ['cul'],
+    endAt: ['adipisicing nos'],
+    id: [1],
+    leagueId: [10],
+    modifiedAt: ['Duis ex fugiat'],
+    name: ['aliquip occaeca'],
+    season: ['aute '],
+    slug: ['bcurr'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverRlSeries = {
-    name: 'nisi u',
-    season: 'anim al',
-    slug: '0sj',
+    name: 'nulla lab',
+    season: 'elit ci',
+    slug: '81xnq-',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.rlSeries.getRlSeriesUpcoming({
+  const { data } = await pandascoreClient.rlSeries.getRlSeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],
@@ -376,3 +376,5 @@ import { Pandascore } from 'pandascore';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

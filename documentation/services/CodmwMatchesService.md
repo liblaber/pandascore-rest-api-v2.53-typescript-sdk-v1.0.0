@@ -34,52 +34,52 @@ List matches for the COD MW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverCodmwMatchesVideogameTitle = 1;
+const filterOverCodmwMatchesVideogameTitle = 9;
 
-const filterOverCodmwMatchesVideogameVersion = "1579119740.7";
+const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverCodmwMatches = {
-  beginAt: ["anim "],
+  beginAt: ["min"],
   detailedStats: true,
   draw: true,
-  endAt: ["mi"],
+  endAt: ["re"],
   finished: true,
   forfeit: true,
   future: true,
   id: [3],
-  leagueId: [3],
+  leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["Excepteur paria"],
-  name: ["in aute mi"],
+  modifiedAt: ["dolore Excepte"],
+  name: ["ut laborum labo"],
   notStarted: true,
-  numberOfGames: [5],
+  numberOfGames: [1],
   opponentId: [filterOverCodmwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["es"],
-  serieId: [1],
-  slug: ["AcbgzN3"],
+  scheduledAt: ["in eiu"],
+  serieId: [9],
+  slug: ["FyZHzUQlMqf"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverCodmwMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverCodmwMatches = {
-  beginAt: ["aliqua commod"],
+  beginAt: ["sunt pari"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["l"],
+  endAt: ["et mollit"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["ut"],
-  name: ["cupidatat ul"],
-  numberOfGames: [8],
-  scheduledAt: ["labore minim"],
-  slug: ["FckrBjhV"],
+  modifiedAt: ["consequat au"],
+  name: ["animirure c"],
+  numberOfGames: [7],
+  scheduledAt: ["exercitation U"],
+  slug: ["b"],
   status: [matchStatus],
-  tournamentId: [4],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverCodmwMatches = {
   matchType: matchType,
-  name: "nostrud Ut adi",
-  slug: "5Z ZeD",
+  name: "culpa ad do Du",
+  slug: "QnETMGeSVO4",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwMatches.getCodmwMatches(
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,52 +168,52 @@ List past CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverCodmwMatchesVideogameTitle = 1;
+const filterOverCodmwMatchesVideogameTitle = 9;
 
-const filterOverCodmwMatchesVideogameVersion = "1579119740.7";
+const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverCodmwMatches = {
-  beginAt: ["anim "],
+  beginAt: ["min"],
   detailedStats: true,
   draw: true,
-  endAt: ["mi"],
+  endAt: ["re"],
   finished: true,
   forfeit: true,
   future: true,
   id: [3],
-  leagueId: [3],
+  leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["Excepteur paria"],
-  name: ["in aute mi"],
+  modifiedAt: ["dolore Excepte"],
+  name: ["ut laborum labo"],
   notStarted: true,
-  numberOfGames: [5],
+  numberOfGames: [1],
   opponentId: [filterOverCodmwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["es"],
-  serieId: [1],
-  slug: ["AcbgzN3"],
+  scheduledAt: ["in eiu"],
+  serieId: [9],
+  slug: ["FyZHzUQlMqf"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverCodmwMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverCodmwMatches = {
-  beginAt: ["aliqua commod"],
+  beginAt: ["sunt pari"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["l"],
+  endAt: ["et mollit"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["ut"],
-  name: ["cupidatat ul"],
-  numberOfGames: [8],
-  scheduledAt: ["labore minim"],
-  slug: ["FckrBjhV"],
+  modifiedAt: ["consequat au"],
+  name: ["animirure c"],
+  numberOfGames: [7],
+  scheduledAt: ["exercitation U"],
+  slug: ["b"],
   status: [matchStatus],
-  tournamentId: [4],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverCodmwMatches = {
   matchType: matchType,
-  name: "nostrud Ut adi",
-  slug: "5Z ZeD",
+  name: "culpa ad do Du",
+  slug: "QnETMGeSVO4",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwMatches.getCodmwMatchesPast(
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,52 +302,52 @@ List running CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverCodmwMatchesVideogameTitle = 1;
+const filterOverCodmwMatchesVideogameTitle = 9;
 
-const filterOverCodmwMatchesVideogameVersion = "1579119740.7";
+const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverCodmwMatches = {
-  beginAt: ["anim "],
+  beginAt: ["min"],
   detailedStats: true,
   draw: true,
-  endAt: ["mi"],
+  endAt: ["re"],
   finished: true,
   forfeit: true,
   future: true,
   id: [3],
-  leagueId: [3],
+  leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["Excepteur paria"],
-  name: ["in aute mi"],
+  modifiedAt: ["dolore Excepte"],
+  name: ["ut laborum labo"],
   notStarted: true,
-  numberOfGames: [5],
+  numberOfGames: [1],
   opponentId: [filterOverCodmwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["es"],
-  serieId: [1],
-  slug: ["AcbgzN3"],
+  scheduledAt: ["in eiu"],
+  serieId: [9],
+  slug: ["FyZHzUQlMqf"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverCodmwMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverCodmwMatches = {
-  beginAt: ["aliqua commod"],
+  beginAt: ["sunt pari"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["l"],
+  endAt: ["et mollit"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["ut"],
-  name: ["cupidatat ul"],
-  numberOfGames: [8],
-  scheduledAt: ["labore minim"],
-  slug: ["FckrBjhV"],
+  modifiedAt: ["consequat au"],
+  name: ["animirure c"],
+  numberOfGames: [7],
+  scheduledAt: ["exercitation U"],
+  slug: ["b"],
   status: [matchStatus],
-  tournamentId: [4],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverCodmwMatches = {
   matchType: matchType,
-  name: "nostrud Ut adi",
-  slug: "5Z ZeD",
+  name: "culpa ad do Du",
+  slug: "QnETMGeSVO4",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwMatches.getCodmwMatchesRunning(
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,52 +436,52 @@ List upcoming CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverCodmwMatchesVideogameTitle = 1;
+const filterOverCodmwMatchesVideogameTitle = 9;
 
-const filterOverCodmwMatchesVideogameVersion = "1579119740.7";
+const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverCodmwMatches = {
-  beginAt: ["anim "],
+  beginAt: ["min"],
   detailedStats: true,
   draw: true,
-  endAt: ["mi"],
+  endAt: ["re"],
   finished: true,
   forfeit: true,
   future: true,
   id: [3],
-  leagueId: [3],
+  leagueId: [5],
   matchType: [matchType],
-  modifiedAt: ["Excepteur paria"],
-  name: ["in aute mi"],
+  modifiedAt: ["dolore Excepte"],
+  name: ["ut laborum labo"],
   notStarted: true,
-  numberOfGames: [5],
+  numberOfGames: [1],
   opponentId: [filterOverCodmwMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["es"],
-  serieId: [1],
-  slug: ["AcbgzN3"],
+  scheduledAt: ["in eiu"],
+  serieId: [9],
+  slug: ["FyZHzUQlMqf"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverCodmwMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverCodmwMatches = {
-  beginAt: ["aliqua commod"],
+  beginAt: ["sunt pari"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["l"],
+  endAt: ["et mollit"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["ut"],
-  name: ["cupidatat ul"],
-  numberOfGames: [8],
-  scheduledAt: ["labore minim"],
-  slug: ["FckrBjhV"],
+  modifiedAt: ["consequat au"],
+  name: ["animirure c"],
+  numberOfGames: [7],
+  scheduledAt: ["exercitation U"],
+  slug: ["b"],
   status: [matchStatus],
-  tournamentId: [4],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverCodmwMatches = {
   matchType: matchType,
-  name: "nostrud Ut adi",
-  slug: "5Z ZeD",
+  name: "culpa ad do Du",
+  slug: "QnETMGeSVO4",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwMatches.getCodmwMatchesUpcoming(
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -544,3 +544,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

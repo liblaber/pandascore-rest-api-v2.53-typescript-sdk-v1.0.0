@@ -34,52 +34,52 @@ List matches for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverKogMatchesVideogameTitle = 1;
+const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "013161325.6426517472.7246702907";
+const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverKogMatches = {
-  beginAt: ["dolor incididu"],
+  beginAt: ["Du"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut in"],
+  endAt: ["voluptate"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [1],
-  leagueId: [9],
+  id: [6],
+  leagueId: [6],
   matchType: [matchType],
-  modifiedAt: ["occa"],
-  name: ["est inci"],
+  modifiedAt: ["labore id fugi"],
+  name: ["nostrud veniam"],
   notStarted: true,
-  numberOfGames: [8],
+  numberOfGames: [7],
   opponentId: [filterOverKogMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["ven"],
-  serieId: [1],
-  slug: ["564n"],
+  scheduledAt: ["sed Du"],
+  serieId: [10],
+  slug: ["GJ7GWuEfy"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverKogMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverKogMatches = {
-  beginAt: ["proide"],
+  beginAt: ["Lo"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["Ut laborum "],
+  endAt: ["eu minim par"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["c"],
-  name: ["irure nulla"],
-  numberOfGames: [5],
-  scheduledAt: ["eu in"],
-  slug: ["Tuy_2"],
+  modifiedAt: ["est"],
+  name: ["Lorem "],
+  numberOfGames: [2],
+  scheduledAt: ["et"],
+  slug: ["vBKKlSKdbR"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverKogMatches = {
   matchType: matchType,
-  name: "dolor sunt",
-  slug: "rWSAO",
+  name: "cillum v",
+  slug: "Vy-2dZKJxf",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.kogMatches.getKogMatches(
+  const { data } = await pandascoreClient.kogMatches.getKogMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,52 +168,52 @@ List past King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverKogMatchesVideogameTitle = 1;
+const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "013161325.6426517472.7246702907";
+const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverKogMatches = {
-  beginAt: ["dolor incididu"],
+  beginAt: ["Du"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut in"],
+  endAt: ["voluptate"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [1],
-  leagueId: [9],
+  id: [6],
+  leagueId: [6],
   matchType: [matchType],
-  modifiedAt: ["occa"],
-  name: ["est inci"],
+  modifiedAt: ["labore id fugi"],
+  name: ["nostrud veniam"],
   notStarted: true,
-  numberOfGames: [8],
+  numberOfGames: [7],
   opponentId: [filterOverKogMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["ven"],
-  serieId: [1],
-  slug: ["564n"],
+  scheduledAt: ["sed Du"],
+  serieId: [10],
+  slug: ["GJ7GWuEfy"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverKogMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverKogMatches = {
-  beginAt: ["proide"],
+  beginAt: ["Lo"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["Ut laborum "],
+  endAt: ["eu minim par"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["c"],
-  name: ["irure nulla"],
-  numberOfGames: [5],
-  scheduledAt: ["eu in"],
-  slug: ["Tuy_2"],
+  modifiedAt: ["est"],
+  name: ["Lorem "],
+  numberOfGames: [2],
+  scheduledAt: ["et"],
+  slug: ["vBKKlSKdbR"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverKogMatches = {
   matchType: matchType,
-  name: "dolor sunt",
-  slug: "rWSAO",
+  name: "cillum v",
+  slug: "Vy-2dZKJxf",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.kogMatches.getKogMatchesPast(
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,52 +302,52 @@ List running King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverKogMatchesVideogameTitle = 1;
+const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "013161325.6426517472.7246702907";
+const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverKogMatches = {
-  beginAt: ["dolor incididu"],
+  beginAt: ["Du"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut in"],
+  endAt: ["voluptate"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [1],
-  leagueId: [9],
+  id: [6],
+  leagueId: [6],
   matchType: [matchType],
-  modifiedAt: ["occa"],
-  name: ["est inci"],
+  modifiedAt: ["labore id fugi"],
+  name: ["nostrud veniam"],
   notStarted: true,
-  numberOfGames: [8],
+  numberOfGames: [7],
   opponentId: [filterOverKogMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["ven"],
-  serieId: [1],
-  slug: ["564n"],
+  scheduledAt: ["sed Du"],
+  serieId: [10],
+  slug: ["GJ7GWuEfy"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverKogMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverKogMatches = {
-  beginAt: ["proide"],
+  beginAt: ["Lo"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["Ut laborum "],
+  endAt: ["eu minim par"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["c"],
-  name: ["irure nulla"],
-  numberOfGames: [5],
-  scheduledAt: ["eu in"],
-  slug: ["Tuy_2"],
+  modifiedAt: ["est"],
+  name: ["Lorem "],
+  numberOfGames: [2],
+  scheduledAt: ["et"],
+  slug: ["vBKKlSKdbR"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverKogMatches = {
   matchType: matchType,
-  name: "dolor sunt",
-  slug: "rWSAO",
+  name: "cillum v",
+  slug: "Vy-2dZKJxf",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.kogMatches.getKogMatchesRunning(
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,52 +436,52 @@ List upcoming King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverKogMatchesVideogameTitle = 1;
+const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "013161325.6426517472.7246702907";
+const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverKogMatches = {
-  beginAt: ["dolor incididu"],
+  beginAt: ["Du"],
   detailedStats: true,
   draw: true,
-  endAt: ["Ut in"],
+  endAt: ["voluptate"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [1],
-  leagueId: [9],
+  id: [6],
+  leagueId: [6],
   matchType: [matchType],
-  modifiedAt: ["occa"],
-  name: ["est inci"],
+  modifiedAt: ["labore id fugi"],
+  name: ["nostrud veniam"],
   notStarted: true,
-  numberOfGames: [8],
+  numberOfGames: [7],
   opponentId: [filterOverKogMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["ven"],
-  serieId: [1],
-  slug: ["564n"],
+  scheduledAt: ["sed Du"],
+  serieId: [10],
+  slug: ["GJ7GWuEfy"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [1],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverKogMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverKogMatches = {
-  beginAt: ["proide"],
+  beginAt: ["Lo"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["Ut laborum "],
+  endAt: ["eu minim par"],
   forfeit: [true],
-  id: [2],
+  id: [6],
   matchType: [matchType],
-  modifiedAt: ["c"],
-  name: ["irure nulla"],
-  numberOfGames: [5],
-  scheduledAt: ["eu in"],
-  slug: ["Tuy_2"],
+  modifiedAt: ["est"],
+  name: ["Lorem "],
+  numberOfGames: [2],
+  scheduledAt: ["et"],
+  slug: ["vBKKlSKdbR"],
   status: [matchStatus],
-  tournamentId: [2],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverKogMatches = {
   matchType: matchType,
-  name: "dolor sunt",
-  slug: "rWSAO",
+  name: "cillum v",
+  slug: "Vy-2dZKJxf",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.kogMatches.getKogMatchesUpcoming(
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -544,3 +544,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

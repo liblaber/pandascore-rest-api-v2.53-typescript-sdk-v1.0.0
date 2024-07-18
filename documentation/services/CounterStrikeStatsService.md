@@ -34,16 +34,16 @@ Get detailed statistics of Counter-Strike players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersStats();
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersStats();
 
   console.log(data);
 })();
@@ -70,16 +70,16 @@ Get detailed statistics of a given Counter-Strike player for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
-const playerIdOrSlug = 2;
+  const matchIdOrSlug = 5;
+const playerIdOrSlug = 9;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
 
 );
@@ -109,16 +109,16 @@ Get detailed statistics of a given Counter-Strike team for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
-const teamIdOrSlug = 3;
+  const matchIdOrSlug = 5;
+const teamIdOrSlug = 10;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
   ,
 
 );
@@ -140,7 +140,7 @@ Get detailed statistics of a given Counter-Strike player
 | :------------- | :------------------------------------------------------------ | :------- | :--------------------- |
 | playerIdOrSlug | [PlayerIdOrSlug](../models/PlayerIdOrSlug.md)                 | ✅       | A player ID or slug    |
 | videogameTitle | [VideogameTitleIdOrSlug](../models/VideogameTitleIdOrSlug.md) | ❌       |                        |
-| from\_         | string                                                        | ❌       | Filter out 'from' date |
+| from           | string                                                        | ❌       | Filter out 'from' date |
 | to             | string                                                        | ❌       | Filter out 'to' date   |
 
 **Return Type**
@@ -150,20 +150,20 @@ Get detailed statistics of a given Counter-Strike player
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 2;
-const videogameTitleIdOrSlug = 2;
+  const playerIdOrSlug = 9;
+const videogameTitleIdOrSlug = 10;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoPlayersPlayerIdOrSlugStats(
   ,
   {
 		videogameTitle: videogameTitle,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -193,16 +193,16 @@ Get detailed statistics of a given Counter-Strike player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const playerIdOrSlug = 2;
+const playerIdOrSlug = 9;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
 
 );
@@ -232,16 +232,16 @@ Get detailed statistics of a given Counter-Strike team for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const teamIdOrSlug = 3;
+const teamIdOrSlug = 10;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
 
 );
@@ -263,7 +263,7 @@ Get detailed statistics of a given Counter-Strike team
 | :------------- | :------------------------------------------------------------ | :------- | :--------------------- |
 | teamIdOrSlug   | [TeamIdOrSlug](../models/TeamIdOrSlug.md)                     | ✅       | A team ID or slug      |
 | videogameTitle | [VideogameTitleIdOrSlug](../models/VideogameTitleIdOrSlug.md) | ❌       |                        |
-| from\_         | string                                                        | ❌       | Filter out 'from' date |
+| from           | string                                                        | ❌       | Filter out 'from' date |
 | to             | string                                                        | ❌       | Filter out 'to' date   |
 
 **Return Type**
@@ -273,20 +273,20 @@ Get detailed statistics of a given Counter-Strike team
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 3;
-const videogameTitleIdOrSlug = 2;
+  const teamIdOrSlug = 10;
+const videogameTitleIdOrSlug = 10;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoTeamsTeamIdOrSlugStats(
   ,
   {
 		videogameTitle: videogameTitle,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -316,16 +316,16 @@ Get detailed statistics of a given Counter-Strike player for the given tournamen
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const playerIdOrSlug = 2;
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
 
 );
@@ -355,16 +355,16 @@ Get detailed statistics of a given Counter-Strike team for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const teamIdOrSlug = 3;
+  const tournamentIdOrSlug = 2;
+const teamIdOrSlug = 10;
 
-  const { data } = await pandascore.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
 
 );
@@ -372,3 +372,5 @@ const teamIdOrSlug = 3;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
