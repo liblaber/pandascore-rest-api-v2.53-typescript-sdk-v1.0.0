@@ -19,12 +19,14 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantGameRound = z.object({
-  attackers: valorantGameRoundAttacker,
-  defenders: valorantGameRoundDefender,
-  number_: z.number().gte(0),
-  outcome: valorantGameRoundOutcome,
-  winnerTeam: valorantGameRoundWinner,
+export const valorantGameRound: any = z.lazy(() => {
+  return z.object({
+    attackers: valorantGameRoundAttacker,
+    defenders: valorantGameRoundDefender,
+    number: z.number().gte(0),
+    outcome: valorantGameRoundOutcome,
+    winnerTeam: valorantGameRoundWinner,
+  });
 });
 
 /**
@@ -42,38 +44,42 @@ export type ValorantGameRound = z.infer<typeof valorantGameRound>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameRoundResponse = z
-  .object({
-    attackers: valorantGameRoundAttackerResponse,
-    defenders: valorantGameRoundDefenderResponse,
-    number: z.number().gte(0),
-    outcome: valorantGameRoundOutcome,
-    winner_team: valorantGameRoundWinnerResponse,
-  })
-  .transform((data) => ({
-    attackers: data['attackers'],
-    defenders: data['defenders'],
-    number_: data['number'],
-    outcome: data['outcome'],
-    winnerTeam: data['winner_team'],
-  }));
+export const valorantGameRoundResponse: any = z.lazy(() => {
+  return z
+    .object({
+      attackers: valorantGameRoundAttackerResponse,
+      defenders: valorantGameRoundDefenderResponse,
+      number: z.number().gte(0),
+      outcome: valorantGameRoundOutcome,
+      winner_team: valorantGameRoundWinnerResponse,
+    })
+    .transform((data) => ({
+      attackers: data['attackers'],
+      defenders: data['defenders'],
+      number: data['number'],
+      outcome: data['outcome'],
+      winnerTeam: data['winner_team'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameRoundRequest = z
-  .object({
-    attackers: valorantGameRoundAttackerRequest.nullish(),
-    defenders: valorantGameRoundDefenderRequest.nullish(),
-    number_: z.number().nullish(),
-    outcome: valorantGameRoundOutcome.nullish(),
-    winnerTeam: valorantGameRoundWinnerRequest.nullish(),
-  })
-  .transform((data) => ({
-    attackers: data['attackers'],
-    defenders: data['defenders'],
-    number: data['number_'],
-    outcome: data['outcome'],
-    winner_team: data['winnerTeam'],
-  }));
+export const valorantGameRoundRequest: any = z.lazy(() => {
+  return z
+    .object({
+      attackers: valorantGameRoundAttackerRequest.nullish(),
+      defenders: valorantGameRoundDefenderRequest.nullish(),
+      number: z.number().nullish(),
+      outcome: valorantGameRoundOutcome.nullish(),
+      winnerTeam: valorantGameRoundWinnerRequest.nullish(),
+    })
+    .transform((data) => ({
+      attackers: data['attackers'],
+      defenders: data['defenders'],
+      number: data['number'],
+      outcome: data['outcome'],
+      winner_team: data['winnerTeam'],
+    }));
+});

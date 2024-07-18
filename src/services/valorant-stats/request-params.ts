@@ -1,8 +1,8 @@
-import { VideogameVersionOrAll, videogameVersionOrAll } from '../common';
+import { VideogameVersionOrAll, videogameVersionOrAll } from '../common/videogame-version-or-all';
 
 export interface GetValorantPlayersPlayerIdOrSlugStatsParams {
   videogameVersion?: VideogameVersionOrAll;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 
@@ -16,7 +16,7 @@ export interface GetValorantSeriesSerieIdOrSlugTeamsTeamIdOrSlugStatsParams {
 
 export interface GetValorantTeamsTeamIdOrSlugStatsParams {
   videogameVersion?: VideogameVersionOrAll;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 

@@ -1,24 +1,22 @@
 import { z } from 'zod';
-import {
-  dota2PlayerAverages,
-  dota2PlayerAveragesRequest,
-  dota2PlayerAveragesResponse,
-} from '../../common/dota2-player-averages';
+import { dota2PlayerAverages, dota2PlayerAveragesRequest, dota2PlayerAveragesResponse } from './dota2-player-averages';
 import {
   dota2PlayerStatsTotals,
   dota2PlayerStatsTotalsRequest,
   dota2PlayerStatsTotalsResponse,
-} from '../../common/dota2-player-stats-totals';
+} from './dota2-player-stats-totals';
 import { tournament, tournamentRequest, tournamentResponse } from '../../common/tournament';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2PlayerByTournamentStat = z.object({
-  averages: dota2PlayerAverages,
-  gamesCount: z.number().gte(0),
-  totals: dota2PlayerStatsTotals,
-  tournament: tournament,
+export const dota2PlayerByTournamentStat: any = z.lazy(() => {
+  return z.object({
+    averages: dota2PlayerAverages,
+    gamesCount: z.number().gte(0).nullable(),
+    totals: dota2PlayerStatsTotals,
+    tournament: tournament,
+  });
 });
 
 /**
@@ -35,34 +33,38 @@ export type Dota2PlayerByTournamentStat = z.infer<typeof dota2PlayerByTournament
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2PlayerByTournamentStatResponse = z
-  .object({
-    averages: dota2PlayerAveragesResponse,
-    games_count: z.number().gte(0),
-    totals: dota2PlayerStatsTotalsResponse,
-    tournament: tournamentResponse,
-  })
-  .transform((data) => ({
-    averages: data['averages'],
-    gamesCount: data['games_count'],
-    totals: data['totals'],
-    tournament: data['tournament'],
-  }));
+export const dota2PlayerByTournamentStatResponse: any = z.lazy(() => {
+  return z
+    .object({
+      averages: dota2PlayerAveragesResponse,
+      games_count: z.number().gte(0).nullable(),
+      totals: dota2PlayerStatsTotalsResponse,
+      tournament: tournamentResponse,
+    })
+    .transform((data) => ({
+      averages: data['averages'],
+      gamesCount: data['games_count'],
+      totals: data['totals'],
+      tournament: data['tournament'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2PlayerByTournamentStatRequest = z
-  .object({
-    averages: dota2PlayerAveragesRequest.nullish(),
-    gamesCount: z.number().nullish(),
-    totals: dota2PlayerStatsTotalsRequest.nullish(),
-    tournament: tournamentRequest.nullish(),
-  })
-  .transform((data) => ({
-    averages: data['averages'],
-    games_count: data['gamesCount'],
-    totals: data['totals'],
-    tournament: data['tournament'],
-  }));
+export const dota2PlayerByTournamentStatRequest: any = z.lazy(() => {
+  return z
+    .object({
+      averages: dota2PlayerAveragesRequest.nullish(),
+      gamesCount: z.number().nullish(),
+      totals: dota2PlayerStatsTotalsRequest.nullish(),
+      tournament: tournamentRequest.nullish(),
+    })
+    .transform((data) => ({
+      averages: data['averages'],
+      games_count: data['gamesCount'],
+      totals: data['totals'],
+      tournament: data['tournament'],
+    }));
+});

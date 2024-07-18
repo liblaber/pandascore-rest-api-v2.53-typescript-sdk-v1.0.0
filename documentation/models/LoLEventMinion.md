@@ -5,7 +5,7 @@
 | Name   | Type                 | Required | Description |
 | :----- | :------------------- | :------- | :---------- |
 | object | LoLEventMinionObject | ✅       |             |
-| type\_ | LoLEventMinionType   | ✅       |             |
+| type   | LoLEventMinionType   | ✅       |             |
 
 # LoLEventMinionType
 

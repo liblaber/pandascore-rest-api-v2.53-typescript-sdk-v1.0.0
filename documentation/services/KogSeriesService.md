@@ -34,46 +34,46 @@ List series for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filterOverKogSeriesVideogameTitle = 7;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverKogSeries = {
-    beginAt: ['in ea'],
-    endAt: ['anim ni'],
+    beginAt: ['ex'],
+    endAt: ['in sit no'],
     id: [8],
-    leagueId: [7],
-    modifiedAt: ['ex si'],
-    name: ['occaecat '],
-    season: ['exercitati'],
-    slug: ['tv1m2z7x'],
+    leagueId: [9],
+    modifiedAt: ['veniam'],
+    name: ['aliquip eiu'],
+    season: ['nulla'],
+    slug: ['_p3_cuw5'],
     videogameTitle: [filterOverKogSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverKogSeries = {
-    beginAt: ['id quis d'],
-    endAt: ['eiusmod '],
+    beginAt: ['i'],
+    endAt: ['ut'],
     id: [2],
-    leagueId: [7],
-    modifiedAt: ['in pa'],
-    name: ['eiusm'],
-    season: ['minim ven'],
-    slug: ['d'],
+    leagueId: [4],
+    modifiedAt: ['minim id p'],
+    name: ['volupta'],
+    season: ['officia'],
+    slug: ['nl'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverKogSeries = {
-    name: 'do es',
-    season: 'reprehe',
-    slug: '-r_n0xviux',
+    name: 'aliqu',
+    season: 'dolor ipsum ',
+    slug: '-n',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.kogSeries.getKogSeries({
+  const { data } = await pandascoreClient.kogSeries.getKogSeries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filterOverKogSeriesVideogameTitle = 7;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverKogSeries = {
-    beginAt: ['in ea'],
-    endAt: ['anim ni'],
+    beginAt: ['ex'],
+    endAt: ['in sit no'],
     id: [8],
-    leagueId: [7],
-    modifiedAt: ['ex si'],
-    name: ['occaecat '],
-    season: ['exercitati'],
-    slug: ['tv1m2z7x'],
+    leagueId: [9],
+    modifiedAt: ['veniam'],
+    name: ['aliquip eiu'],
+    season: ['nulla'],
+    slug: ['_p3_cuw5'],
     videogameTitle: [filterOverKogSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverKogSeries = {
-    beginAt: ['id quis d'],
-    endAt: ['eiusmod '],
+    beginAt: ['i'],
+    endAt: ['ut'],
     id: [2],
-    leagueId: [7],
-    modifiedAt: ['in pa'],
-    name: ['eiusm'],
-    season: ['minim ven'],
-    slug: ['d'],
+    leagueId: [4],
+    modifiedAt: ['minim id p'],
+    name: ['volupta'],
+    season: ['officia'],
+    slug: ['nl'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverKogSeries = {
-    name: 'do es',
-    season: 'reprehe',
-    slug: '-r_n0xviux',
+    name: 'aliqu',
+    season: 'dolor ipsum ',
+    slug: '-n',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.kogSeries.getKogSeriesPast({
+  const { data } = await pandascoreClient.kogSeries.getKogSeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filterOverKogSeriesVideogameTitle = 7;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverKogSeries = {
-    beginAt: ['in ea'],
-    endAt: ['anim ni'],
+    beginAt: ['ex'],
+    endAt: ['in sit no'],
     id: [8],
-    leagueId: [7],
-    modifiedAt: ['ex si'],
-    name: ['occaecat '],
-    season: ['exercitati'],
-    slug: ['tv1m2z7x'],
+    leagueId: [9],
+    modifiedAt: ['veniam'],
+    name: ['aliquip eiu'],
+    season: ['nulla'],
+    slug: ['_p3_cuw5'],
     videogameTitle: [filterOverKogSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverKogSeries = {
-    beginAt: ['id quis d'],
-    endAt: ['eiusmod '],
+    beginAt: ['i'],
+    endAt: ['ut'],
     id: [2],
-    leagueId: [7],
-    modifiedAt: ['in pa'],
-    name: ['eiusm'],
-    season: ['minim ven'],
-    slug: ['d'],
+    leagueId: [4],
+    modifiedAt: ['minim id p'],
+    name: ['volupta'],
+    season: ['officia'],
+    slug: ['nl'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverKogSeries = {
-    name: 'do es',
-    season: 'reprehe',
-    slug: '-r_n0xviux',
+    name: 'aliqu',
+    season: 'dolor ipsum ',
+    slug: '-n',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.kogSeries.getKogSeriesRunning({
+  const { data } = await pandascoreClient.kogSeries.getKogSeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filterOverKogSeriesVideogameTitle = 7;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverKogSeries = {
-    beginAt: ['in ea'],
-    endAt: ['anim ni'],
+    beginAt: ['ex'],
+    endAt: ['in sit no'],
     id: [8],
-    leagueId: [7],
-    modifiedAt: ['ex si'],
-    name: ['occaecat '],
-    season: ['exercitati'],
-    slug: ['tv1m2z7x'],
+    leagueId: [9],
+    modifiedAt: ['veniam'],
+    name: ['aliquip eiu'],
+    season: ['nulla'],
+    slug: ['_p3_cuw5'],
     videogameTitle: [filterOverKogSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverKogSeries = {
-    beginAt: ['id quis d'],
-    endAt: ['eiusmod '],
+    beginAt: ['i'],
+    endAt: ['ut'],
     id: [2],
-    leagueId: [7],
-    modifiedAt: ['in pa'],
-    name: ['eiusm'],
-    season: ['minim ven'],
-    slug: ['d'],
+    leagueId: [4],
+    modifiedAt: ['minim id p'],
+    name: ['volupta'],
+    season: ['officia'],
+    slug: ['nl'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverKogSeries = {
-    name: 'do es',
-    season: 'reprehe',
-    slug: '-r_n0xviux',
+    name: 'aliqu',
+    season: 'dolor ipsum ',
+    slug: '-n',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.kogSeries.getKogSeriesUpcoming({
+  const { data } = await pandascoreClient.kogSeries.getKogSeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],

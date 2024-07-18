@@ -1,13 +1,7 @@
-import {
-  FilterOverOwShortTournaments,
-  Page,
-  RangeOverOwShortTournaments,
-  SearchOverOwShortTournaments,
-  filterOverOwShortTournaments,
-  page,
-  rangeOverOwShortTournaments,
-  searchOverOwShortTournaments,
-} from '../common';
+import { FilterOverOwShortTournaments, filterOverOwShortTournaments } from './models/filter-over-ow-short-tournaments';
+import { RangeOverOwShortTournaments, rangeOverOwShortTournaments } from './models/range-over-ow-short-tournaments';
+import { SearchOverOwShortTournaments, searchOverOwShortTournaments } from './models/search-over-ow-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetOwTournamentsParams {
   filter?: FilterOverOwShortTournaments;

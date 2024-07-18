@@ -5,7 +5,9 @@ import { opponent2_3, opponent2_3Request, opponent2_3Response } from './opponent
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLGamePlayerOpponent = z.union([opponent1_3, opponent2_3]);
+export const loLGamePlayerOpponent: any = z.lazy(() => {
+  return z.union([opponent1_3, opponent2_3]);
+});
 
 /**
  *
@@ -19,10 +21,14 @@ export type LoLGamePlayerOpponent = z.infer<typeof loLGamePlayerOpponent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerOpponentResponse = z.union([opponent1_3Response, opponent2_3Response]);
+export const loLGamePlayerOpponentResponse: any = z.lazy(() => {
+  return z.union([opponent1_3Response, opponent2_3Response]);
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerOpponentRequest = z.union([opponent1_3Request, opponent2_3Request]);
+export const loLGamePlayerOpponentRequest: any = z.lazy(() => {
+  return z.union([opponent1_3Request, opponent2_3Request]);
+});

@@ -1,12 +1,7 @@
-import { Page, page } from '../common';
-import {
-  FilterOverValorantGames,
-  RangeOverValorantGames,
-  SearchOverValorantGames,
-  filterOverValorantGames,
-  rangeOverValorantGames,
-  searchOverValorantGames,
-} from './models';
+import { Page, page } from '../common/page';
+import { FilterOverValorantGames, filterOverValorantGames } from './models/filter-over-valorant-games';
+import { RangeOverValorantGames, rangeOverValorantGames } from './models/range-over-valorant-games';
+import { SearchOverValorantGames, searchOverValorantGames } from './models/search-over-valorant-games';
 
 export interface GetValorantGamesValorantGameIdEventsParams {
   page?: Page;

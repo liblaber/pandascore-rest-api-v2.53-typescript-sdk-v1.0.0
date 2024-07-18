@@ -5,7 +5,7 @@
 | Name   | Type                | Required | Description |
 | :----- | :------------------ | :------- | :---------- |
 | object | LoLEventDrakeObject | ✅       |             |
-| type\_ | LoLEventDrakeType   | ✅       |             |
+| type   | LoLEventDrakeType   | ✅       |             |
 
 # LoLEventDrakeType
 

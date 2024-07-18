@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { CsgoMap, csgoMapResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { CsgoMap, csgoMapResponse } from './models/csgo-map';
 import { GetCsgoMapsParams } from './request-params';
 
 export class CounterStrikeMapsService extends BaseService {
@@ -16,40 +17,24 @@ export class CounterStrikeMapsService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<CsgoMap[]>>} A list of Counter-Strike maps
    */
-  async getCsgoMaps(
-    params?: GetCsgoMapsParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<CsgoMap[]>> {
-    const path = '/csgo/maps';
-    const options: any = {
+  async getCsgoMaps(params?: GetCsgoMapsParams, requestConfig?: RequestConfig): Promise<HttpResponse<CsgoMap[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/maps',
+      config: this.config,
       responseSchema: z.array(csgoMapResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -57,20 +42,18 @@ export class CounterStrikeMapsService extends BaseService {
    * @param {number} csgoMapId - A map ID
    * @returns {Promise<HttpResponse<CsgoMap>>} A Counter-Strike map
    */
-  async getCsgoMapsCsgoMapId(
-    csgoMapId: number,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<CsgoMap>> {
-    const path = this.client.buildPath('/csgo/maps/{csgo_map_id}', { csgo_map_id: csgoMapId });
-    const options: any = {
+  async getCsgoMapsCsgoMapId(csgoMapId: number, requestConfig?: RequestConfig): Promise<HttpResponse<CsgoMap>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/maps/{csgo_map_id}',
+      config: this.config,
       responseSchema: csgoMapResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('csgo_map_id', csgoMapId);
+    return this.client.call(request);
   }
 }

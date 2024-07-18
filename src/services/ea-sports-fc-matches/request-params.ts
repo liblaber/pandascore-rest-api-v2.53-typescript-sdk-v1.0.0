@@ -1,13 +1,7 @@
-import {
-  FilterOverFifaMatches,
-  Page,
-  RangeOverFifaMatches,
-  SearchOverFifaMatches,
-  filterOverFifaMatches,
-  page,
-  rangeOverFifaMatches,
-  searchOverFifaMatches,
-} from '../common';
+import { FilterOverFifaMatches, filterOverFifaMatches } from './models/filter-over-fifa-matches';
+import { RangeOverFifaMatches, rangeOverFifaMatches } from './models/range-over-fifa-matches';
+import { SearchOverFifaMatches, searchOverFifaMatches } from './models/search-over-fifa-matches';
+import { Page, page } from '../common/page';
 
 export interface GetFifaMatchesParams {
   filter?: FilterOverFifaMatches;

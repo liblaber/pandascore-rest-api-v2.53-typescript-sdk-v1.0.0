@@ -5,7 +5,7 @@
 | Name   | Type                    | Required | Description |
 | :----- | :---------------------- | :------- | :---------- |
 | object | LoLEventInhibitorObject | ✅       |             |
-| type\_ | LoLEventInhibitorType   | ✅       |             |
+| type   | LoLEventInhibitorType   | ✅       |             |
 
 # LoLEventInhibitorType
 

@@ -31,53 +31,53 @@ List players for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverCsgoPlayers = {
   active: true,
-  birthday: ["cupidatat ve"],
-  firstName: ["paria"],
-  id: [6],
-  lastName: ["amet quis"],
-  modifiedAt: ["et sed "],
-  name: ["Ut aute Lor"],
-  nationality: ["nisialiqua "],
-  role: ["voluptat"],
-  slug: ["kwy-n"],
-  teamId: [5],
+  birthday: ["ipsum est"],
+  firstName: ["commodo elit"],
+  id: [2],
+  lastName: ["sitesse aut"],
+  modifiedAt: ["exercit"],
+  name: ["dolore Excepte"],
+  nationality: ["exercitat"],
+  role: ["quis consectet"],
+  slug: ["hqupp"],
+  teamId: [4],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCsgoPlayers = {
-  birthday: ["enim aut"],
-  firstName: ["mollit elit in "],
-  id: [4],
-  lastName: ["laborum magn"],
-  modifiedAt: ["non dolore"],
-  name: ["in qui"],
-  nationality: ["commodo ipsum"],
-  role: ["ad velit elit e"],
-  slug: ["kh66y7gml"]
+  birthday: ["nostrud "],
+  firstName: ["inaut"],
+  id: [2],
+  lastName: ["magna m"],
+  modifiedAt: ["nostrud inc"],
+  name: ["non qui sun"],
+  nationality: ["amet "],
+  role: ["non co"],
+  slug: ["srxr1-zb2sn"]
 };
 
 const search: SearchOverCsgoPlayers = {
-  birthday: "consectetu",
-  firstName: "exet molli",
-  lastName: "enim velit",
-  name: "qui conseq",
-  nationality: "aute eiusmod",
-  role: "mollit ",
-  slug: "-ea_h77b0"
+  birthday: "nostrud ad in ",
+  firstName: "consequa",
+  lastName: "laborum ",
+  name: "ut Excepteur n",
+  nationality: "proident mini",
+  role: "aliquip ",
+  slug: "9y"
 };
 const page = 1;
 
-  const { data } = await pandascore.counterStrikePlayers.getCsgoPlayers(
+  const { data } = await pandascoreClient.counterStrikePlayers.getCsgoPlayers(
   {
 		filter: filter,
 		range: range,

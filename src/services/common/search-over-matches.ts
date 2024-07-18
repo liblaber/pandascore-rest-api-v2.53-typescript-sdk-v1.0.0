@@ -6,16 +6,18 @@ import { matchWinnerType } from './match-winner-type';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const searchOverMatches = z.object({
-  matchType: matchType.optional(),
-  name: z.string().optional(),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[ a-zA-Z0-9_-]+$/)
-    .optional(),
-  status: matchStatus.optional(),
-  winnerType: matchWinnerType.optional(),
+export const searchOverMatches: any = z.lazy(() => {
+  return z.object({
+    matchType: matchType.optional(),
+    name: z.string().optional(),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[ a-zA-Z0-9_-]+$/)
+      .optional(),
+    status: matchStatus.optional(),
+    winnerType: matchWinnerType.optional(),
+  });
 });
 
 /**
@@ -33,42 +35,46 @@ export type SearchOverMatches = z.infer<typeof searchOverMatches>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverMatchesResponse = z
-  .object({
-    match_type: matchType.optional(),
-    name: z.string().optional(),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[ a-zA-Z0-9_-]+$/)
-      .optional(),
-    status: matchStatus.optional(),
-    winner_type: matchWinnerType.optional(),
-  })
-  .transform((data) => ({
-    matchType: data['match_type'],
-    name: data['name'],
-    slug: data['slug'],
-    status: data['status'],
-    winnerType: data['winner_type'],
-  }));
+export const searchOverMatchesResponse: any = z.lazy(() => {
+  return z
+    .object({
+      match_type: matchType.optional(),
+      name: z.string().optional(),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[ a-zA-Z0-9_-]+$/)
+        .optional(),
+      status: matchStatus.optional(),
+      winner_type: matchWinnerType.optional(),
+    })
+    .transform((data) => ({
+      matchType: data['match_type'],
+      name: data['name'],
+      slug: data['slug'],
+      status: data['status'],
+      winnerType: data['winner_type'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverMatchesRequest = z
-  .object({
-    matchType: matchType.nullish(),
-    name: z.string().nullish(),
-    slug: z.string().nullish(),
-    status: matchStatus.nullish(),
-    winnerType: matchWinnerType.nullish(),
-  })
-  .transform((data) => ({
-    match_type: data['matchType'],
-    name: data['name'],
-    slug: data['slug'],
-    status: data['status'],
-    winner_type: data['winnerType'],
-  }));
+export const searchOverMatchesRequest: any = z.lazy(() => {
+  return z
+    .object({
+      matchType: matchType.nullish(),
+      name: z.string().nullish(),
+      slug: z.string().nullish(),
+      status: matchStatus.nullish(),
+      winnerType: matchWinnerType.nullish(),
+    })
+    .transform((data) => ({
+      match_type: data['matchType'],
+      name: data['name'],
+      slug: data['slug'],
+      status: data['status'],
+      winner_type: data['winnerType'],
+    }));
+});

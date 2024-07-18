@@ -8,12 +8,14 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2PlayerForAllStatsPlayers = z.object({
-  firstName: z.string(),
-  id: z.number().gte(1),
-  lastName: z.string(),
-  name: z.string(),
-  stats: dota2PlayerStatsForAllPlayersByMatch,
+export const dota2PlayerForAllStatsPlayers: any = z.lazy(() => {
+  return z.object({
+    firstName: z.string().nullable(),
+    id: z.number().gte(1),
+    lastName: z.string().nullable(),
+    name: z.string(),
+    stats: dota2PlayerStatsForAllPlayersByMatch,
+  });
 });
 
 /**
@@ -31,38 +33,42 @@ export type Dota2PlayerForAllStatsPlayers = z.infer<typeof dota2PlayerForAllStat
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2PlayerForAllStatsPlayersResponse = z
-  .object({
-    first_name: z.string(),
-    id: z.number().gte(1),
-    last_name: z.string(),
-    name: z.string(),
-    stats: dota2PlayerStatsForAllPlayersByMatchResponse,
-  })
-  .transform((data) => ({
-    firstName: data['first_name'],
-    id: data['id'],
-    lastName: data['last_name'],
-    name: data['name'],
-    stats: data['stats'],
-  }));
+export const dota2PlayerForAllStatsPlayersResponse: any = z.lazy(() => {
+  return z
+    .object({
+      first_name: z.string().nullable(),
+      id: z.number().gte(1),
+      last_name: z.string().nullable(),
+      name: z.string(),
+      stats: dota2PlayerStatsForAllPlayersByMatchResponse,
+    })
+    .transform((data) => ({
+      firstName: data['first_name'],
+      id: data['id'],
+      lastName: data['last_name'],
+      name: data['name'],
+      stats: data['stats'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2PlayerForAllStatsPlayersRequest = z
-  .object({
-    firstName: z.string().nullish(),
-    id: z.number().nullish(),
-    lastName: z.string().nullish(),
-    name: z.string().nullish(),
-    stats: dota2PlayerStatsForAllPlayersByMatchRequest.nullish(),
-  })
-  .transform((data) => ({
-    first_name: data['firstName'],
-    id: data['id'],
-    last_name: data['lastName'],
-    name: data['name'],
-    stats: data['stats'],
-  }));
+export const dota2PlayerForAllStatsPlayersRequest: any = z.lazy(() => {
+  return z
+    .object({
+      firstName: z.string().nullish(),
+      id: z.number().nullish(),
+      lastName: z.string().nullish(),
+      name: z.string().nullish(),
+      stats: dota2PlayerStatsForAllPlayersByMatchRequest.nullish(),
+    })
+    .transform((data) => ({
+      first_name: data['firstName'],
+      id: data['id'],
+      last_name: data['lastName'],
+      name: data['name'],
+      stats: data['stats'],
+    }));
+});

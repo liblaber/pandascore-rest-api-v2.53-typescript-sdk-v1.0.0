@@ -1,13 +1,7 @@
-import {
-  FilterOverR6SiegeMatches,
-  Page,
-  RangeOverR6SiegeMatches,
-  SearchOverR6SiegeMatches,
-  filterOverR6SiegeMatches,
-  page,
-  rangeOverR6SiegeMatches,
-  searchOverR6SiegeMatches,
-} from '../common';
+import { FilterOverR6SiegeMatches, filterOverR6SiegeMatches } from './models/filter-over-r6-siege-matches';
+import { RangeOverR6SiegeMatches, rangeOverR6SiegeMatches } from './models/range-over-r6-siege-matches';
+import { SearchOverR6SiegeMatches, searchOverR6SiegeMatches } from './models/search-over-r6-siege-matches';
+import { Page, page } from '../common/page';
 
 export interface GetR6siegeMatchesParams {
   filter?: FilterOverR6SiegeMatches;

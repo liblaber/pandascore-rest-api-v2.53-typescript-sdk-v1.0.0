@@ -1,4 +1,4 @@
-import { Page, page } from '../common';
+import { Page, page } from '../common/page';
 
 export interface GetLivesParams {
   page?: Page;

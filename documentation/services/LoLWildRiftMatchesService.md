@@ -34,50 +34,50 @@ List matches for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLolWildRiftMatchesVideogameTitle = 4;
+const filterOverLolWildRiftMatchesVideogameTitle = 8;
 
-const filterOverLolWildRiftMatchesVideogameVersion = "076816.5291";
+const filterOverLolWildRiftMatchesVideogameVersion = "156.75188480.912455326";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLolWildRiftMatches = {
-  beginAt: ["ad"],
+  beginAt: ["velit irure"],
   detailedStats: true,
   draw: true,
-  endAt: ["dolor id volup"],
+  endAt: ["ani"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [2],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["non fugi"],
-  name: ["proident ven"],
+  modifiedAt: ["aliquip"],
+  name: ["velit Except"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [2],
   opponentId: [filterOverLolWildRiftMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["tempor"],
-  serieId: [2],
-  slug: ["Q1_xMzJ"],
+  scheduledAt: ["aliqua ulla"],
+  serieId: [5],
+  slug: ["REqPO"],
   status: [matchStatus],
   tournamentId: [4],
   unscheduled: true,
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLolWildRiftMatches = {
-  beginAt: ["eu tempor "],
+  beginAt: ["qui laboris"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["e"],
+  endAt: ["occaecat commo"],
   forfeit: [true],
-  id: [5],
+  id: [1],
   matchType: [matchType],
-  modifiedAt: ["cupidatat si"],
-  name: ["consec"],
-  numberOfGames: [10],
-  scheduledAt: ["nulla "],
-  slug: ["os"],
+  modifiedAt: ["ullamco ex do"],
+  name: ["dolore "],
+  numberOfGames: [6],
+  scheduledAt: ["amet "],
+  slug: ["SWMMt"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLolWildRiftMatches = {
   matchType: matchType,
-  name: "veniam l",
-  slug: "OgK5gY",
+  name: "nostrud",
+  slug: "P-",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLWildRiftMatches.getLolWildRiftMatches(
+  const { data } = await pandascoreClient.loLWildRiftMatches.getLolWildRiftMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,50 +168,50 @@ List past LoL Wild Rift matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLolWildRiftMatchesVideogameTitle = 4;
+const filterOverLolWildRiftMatchesVideogameTitle = 8;
 
-const filterOverLolWildRiftMatchesVideogameVersion = "076816.5291";
+const filterOverLolWildRiftMatchesVideogameVersion = "156.75188480.912455326";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLolWildRiftMatches = {
-  beginAt: ["ad"],
+  beginAt: ["velit irure"],
   detailedStats: true,
   draw: true,
-  endAt: ["dolor id volup"],
+  endAt: ["ani"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [2],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["non fugi"],
-  name: ["proident ven"],
+  modifiedAt: ["aliquip"],
+  name: ["velit Except"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [2],
   opponentId: [filterOverLolWildRiftMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["tempor"],
-  serieId: [2],
-  slug: ["Q1_xMzJ"],
+  scheduledAt: ["aliqua ulla"],
+  serieId: [5],
+  slug: ["REqPO"],
   status: [matchStatus],
   tournamentId: [4],
   unscheduled: true,
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLolWildRiftMatches = {
-  beginAt: ["eu tempor "],
+  beginAt: ["qui laboris"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["e"],
+  endAt: ["occaecat commo"],
   forfeit: [true],
-  id: [5],
+  id: [1],
   matchType: [matchType],
-  modifiedAt: ["cupidatat si"],
-  name: ["consec"],
-  numberOfGames: [10],
-  scheduledAt: ["nulla "],
-  slug: ["os"],
+  modifiedAt: ["ullamco ex do"],
+  name: ["dolore "],
+  numberOfGames: [6],
+  scheduledAt: ["amet "],
+  slug: ["SWMMt"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLolWildRiftMatches = {
   matchType: matchType,
-  name: "veniam l",
-  slug: "OgK5gY",
+  name: "nostrud",
+  slug: "P-",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLWildRiftMatches.getLolWildRiftMatchesPast(
+  const { data } = await pandascoreClient.loLWildRiftMatches.getLolWildRiftMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,50 +302,50 @@ List running LoL Wild Rift matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLolWildRiftMatchesVideogameTitle = 4;
+const filterOverLolWildRiftMatchesVideogameTitle = 8;
 
-const filterOverLolWildRiftMatchesVideogameVersion = "076816.5291";
+const filterOverLolWildRiftMatchesVideogameVersion = "156.75188480.912455326";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLolWildRiftMatches = {
-  beginAt: ["ad"],
+  beginAt: ["velit irure"],
   detailedStats: true,
   draw: true,
-  endAt: ["dolor id volup"],
+  endAt: ["ani"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [2],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["non fugi"],
-  name: ["proident ven"],
+  modifiedAt: ["aliquip"],
+  name: ["velit Except"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [2],
   opponentId: [filterOverLolWildRiftMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["tempor"],
-  serieId: [2],
-  slug: ["Q1_xMzJ"],
+  scheduledAt: ["aliqua ulla"],
+  serieId: [5],
+  slug: ["REqPO"],
   status: [matchStatus],
   tournamentId: [4],
   unscheduled: true,
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLolWildRiftMatches = {
-  beginAt: ["eu tempor "],
+  beginAt: ["qui laboris"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["e"],
+  endAt: ["occaecat commo"],
   forfeit: [true],
-  id: [5],
+  id: [1],
   matchType: [matchType],
-  modifiedAt: ["cupidatat si"],
-  name: ["consec"],
-  numberOfGames: [10],
-  scheduledAt: ["nulla "],
-  slug: ["os"],
+  modifiedAt: ["ullamco ex do"],
+  name: ["dolore "],
+  numberOfGames: [6],
+  scheduledAt: ["amet "],
+  slug: ["SWMMt"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLolWildRiftMatches = {
   matchType: matchType,
-  name: "veniam l",
-  slug: "OgK5gY",
+  name: "nostrud",
+  slug: "P-",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLWildRiftMatches.getLolWildRiftMatchesRunning(
+  const { data } = await pandascoreClient.loLWildRiftMatches.getLolWildRiftMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,50 +436,50 @@ List upcoming LoL Wild Rift matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLolWildRiftMatchesVideogameTitle = 4;
+const filterOverLolWildRiftMatchesVideogameTitle = 8;
 
-const filterOverLolWildRiftMatchesVideogameVersion = "076816.5291";
+const filterOverLolWildRiftMatchesVideogameVersion = "156.75188480.912455326";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLolWildRiftMatches = {
-  beginAt: ["ad"],
+  beginAt: ["velit irure"],
   detailedStats: true,
   draw: true,
-  endAt: ["dolor id volup"],
+  endAt: ["ani"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [4],
-  leagueId: [2],
+  id: [10],
+  leagueId: [4],
   matchType: [matchType],
-  modifiedAt: ["non fugi"],
-  name: ["proident ven"],
+  modifiedAt: ["aliquip"],
+  name: ["velit Except"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [2],
   opponentId: [filterOverLolWildRiftMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["tempor"],
-  serieId: [2],
-  slug: ["Q1_xMzJ"],
+  scheduledAt: ["aliqua ulla"],
+  serieId: [5],
+  slug: ["REqPO"],
   status: [matchStatus],
   tournamentId: [4],
   unscheduled: true,
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLolWildRiftMatches = {
-  beginAt: ["eu tempor "],
+  beginAt: ["qui laboris"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["e"],
+  endAt: ["occaecat commo"],
   forfeit: [true],
-  id: [5],
+  id: [1],
   matchType: [matchType],
-  modifiedAt: ["cupidatat si"],
-  name: ["consec"],
-  numberOfGames: [10],
-  scheduledAt: ["nulla "],
-  slug: ["os"],
+  modifiedAt: ["ullamco ex do"],
+  name: ["dolore "],
+  numberOfGames: [6],
+  scheduledAt: ["amet "],
+  slug: ["SWMMt"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [8],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLolWildRiftMatches = {
   matchType: matchType,
-  name: "veniam l",
-  slug: "OgK5gY",
+  name: "nostrud",
+  slug: "P-",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLWildRiftMatches.getLolWildRiftMatchesUpcoming(
+  const { data } = await pandascoreClient.loLWildRiftMatches.getLolWildRiftMatchesUpcoming(
   {
 		filter: filter,
 		range: range,

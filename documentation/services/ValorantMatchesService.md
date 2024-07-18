@@ -34,52 +34,52 @@ List matches for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverValorantMatchesVideogameTitle = 6;
+const filterOverValorantMatchesVideogameTitle = 5;
 
-const filterOverValorantMatchesVideogameVersion = "0.69543.5343125";
+const filterOverValorantMatchesVideogameVersion = "848.5017114648.16441010106";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverValorantMatches = {
-  beginAt: ["sint par"],
+  beginAt: ["dolor"],
   detailedStats: true,
   draw: true,
-  endAt: ["veniam "],
+  endAt: ["ex"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [4],
+  id: [9],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["a"],
-  name: ["nisi exe"],
+  modifiedAt: ["dolor velit"],
+  name: ["minim"],
   notStarted: true,
-  numberOfGames: [6],
+  numberOfGames: [8],
   opponentId: [filterOverValorantMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nisi s"],
-  serieId: [3],
-  slug: ["ya_zwp_i"],
+  scheduledAt: ["repre"],
+  serieId: [1],
+  slug: ["P"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -91,23 +91,23 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverValorantMatches = {
-  beginAt: ["par"],
+  beginAt: ["off"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["cillum et "],
+  endAt: ["f"],
   forfeit: [true],
-  id: [5],
+  id: [8],
   matchType: [matchType],
-  modifiedAt: ["ex"],
-  name: ["eain e"],
-  numberOfGames: [5],
-  scheduledAt: ["u"],
-  slug: ["P8"],
+  modifiedAt: ["adipisicin"],
+  name: ["elit dolore in"],
+  numberOfGames: [4],
+  scheduledAt: ["sunt s"],
+  slug: ["PUIjB6P_Y"],
   status: [matchStatus],
   tournamentId: [3],
   winnerId: [opponentId],
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverValorantMatches = {
   matchType: matchType,
-  name: "sed cons",
-  slug: "9y-",
+  name: "laboris ",
+  slug: "vBwZ20H7NVH",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantMatches.getValorantMatches(
+  const { data } = await pandascoreClient.valorantMatches.getValorantMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,52 +168,52 @@ List past Valorant matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverValorantMatchesVideogameTitle = 6;
+const filterOverValorantMatchesVideogameTitle = 5;
 
-const filterOverValorantMatchesVideogameVersion = "0.69543.5343125";
+const filterOverValorantMatchesVideogameVersion = "848.5017114648.16441010106";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverValorantMatches = {
-  beginAt: ["sint par"],
+  beginAt: ["dolor"],
   detailedStats: true,
   draw: true,
-  endAt: ["veniam "],
+  endAt: ["ex"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [4],
+  id: [9],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["a"],
-  name: ["nisi exe"],
+  modifiedAt: ["dolor velit"],
+  name: ["minim"],
   notStarted: true,
-  numberOfGames: [6],
+  numberOfGames: [8],
   opponentId: [filterOverValorantMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nisi s"],
-  serieId: [3],
-  slug: ["ya_zwp_i"],
+  scheduledAt: ["repre"],
+  serieId: [1],
+  slug: ["P"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -225,23 +225,23 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverValorantMatches = {
-  beginAt: ["par"],
+  beginAt: ["off"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["cillum et "],
+  endAt: ["f"],
   forfeit: [true],
-  id: [5],
+  id: [8],
   matchType: [matchType],
-  modifiedAt: ["ex"],
-  name: ["eain e"],
-  numberOfGames: [5],
-  scheduledAt: ["u"],
-  slug: ["P8"],
+  modifiedAt: ["adipisicin"],
+  name: ["elit dolore in"],
+  numberOfGames: [4],
+  scheduledAt: ["sunt s"],
+  slug: ["PUIjB6P_Y"],
   status: [matchStatus],
   tournamentId: [3],
   winnerId: [opponentId],
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverValorantMatches = {
   matchType: matchType,
-  name: "sed cons",
-  slug: "9y-",
+  name: "laboris ",
+  slug: "vBwZ20H7NVH",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantMatches.getValorantMatchesPast(
+  const { data } = await pandascoreClient.valorantMatches.getValorantMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,52 +302,52 @@ List running Valorant matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverValorantMatchesVideogameTitle = 6;
+const filterOverValorantMatchesVideogameTitle = 5;
 
-const filterOverValorantMatchesVideogameVersion = "0.69543.5343125";
+const filterOverValorantMatchesVideogameVersion = "848.5017114648.16441010106";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverValorantMatches = {
-  beginAt: ["sint par"],
+  beginAt: ["dolor"],
   detailedStats: true,
   draw: true,
-  endAt: ["veniam "],
+  endAt: ["ex"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [4],
+  id: [9],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["a"],
-  name: ["nisi exe"],
+  modifiedAt: ["dolor velit"],
+  name: ["minim"],
   notStarted: true,
-  numberOfGames: [6],
+  numberOfGames: [8],
   opponentId: [filterOverValorantMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nisi s"],
-  serieId: [3],
-  slug: ["ya_zwp_i"],
+  scheduledAt: ["repre"],
+  serieId: [1],
+  slug: ["P"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -359,23 +359,23 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverValorantMatches = {
-  beginAt: ["par"],
+  beginAt: ["off"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["cillum et "],
+  endAt: ["f"],
   forfeit: [true],
-  id: [5],
+  id: [8],
   matchType: [matchType],
-  modifiedAt: ["ex"],
-  name: ["eain e"],
-  numberOfGames: [5],
-  scheduledAt: ["u"],
-  slug: ["P8"],
+  modifiedAt: ["adipisicin"],
+  name: ["elit dolore in"],
+  numberOfGames: [4],
+  scheduledAt: ["sunt s"],
+  slug: ["PUIjB6P_Y"],
   status: [matchStatus],
   tournamentId: [3],
   winnerId: [opponentId],
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverValorantMatches = {
   matchType: matchType,
-  name: "sed cons",
-  slug: "9y-",
+  name: "laboris ",
+  slug: "vBwZ20H7NVH",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantMatches.getValorantMatchesRunning(
+  const { data } = await pandascoreClient.valorantMatches.getValorantMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,52 +436,52 @@ List upcoming Valorant matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverValorantMatchesVideogameTitle = 6;
+const filterOverValorantMatchesVideogameTitle = 5;
 
-const filterOverValorantMatchesVideogameVersion = "0.69543.5343125";
+const filterOverValorantMatchesVideogameVersion = "848.5017114648.16441010106";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverValorantMatches = {
-  beginAt: ["sint par"],
+  beginAt: ["dolor"],
   detailedStats: true,
   draw: true,
-  endAt: ["veniam "],
+  endAt: ["ex"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [3],
-  leagueId: [4],
+  id: [9],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["a"],
-  name: ["nisi exe"],
+  modifiedAt: ["dolor velit"],
+  name: ["minim"],
   notStarted: true,
-  numberOfGames: [6],
+  numberOfGames: [8],
   opponentId: [filterOverValorantMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["nisi s"],
-  serieId: [3],
-  slug: ["ya_zwp_i"],
+  scheduledAt: ["repre"],
+  serieId: [1],
+  slug: ["P"],
   status: [matchStatus],
-  tournamentId: [1],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -493,23 +493,23 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverValorantMatches = {
-  beginAt: ["par"],
+  beginAt: ["off"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["cillum et "],
+  endAt: ["f"],
   forfeit: [true],
-  id: [5],
+  id: [8],
   matchType: [matchType],
-  modifiedAt: ["ex"],
-  name: ["eain e"],
-  numberOfGames: [5],
-  scheduledAt: ["u"],
-  slug: ["P8"],
+  modifiedAt: ["adipisicin"],
+  name: ["elit dolore in"],
+  numberOfGames: [4],
+  scheduledAt: ["sunt s"],
+  slug: ["PUIjB6P_Y"],
   status: [matchStatus],
   tournamentId: [3],
   winnerId: [opponentId],
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverValorantMatches = {
   matchType: matchType,
-  name: "sed cons",
-  slug: "9y-",
+  name: "laboris ",
+  slug: "vBwZ20H7NVH",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantMatches.getValorantMatchesUpcoming(
+  const { data } = await pandascoreClient.valorantMatches.getValorantMatchesUpcoming(
   {
 		filter: filter,
 		range: range,

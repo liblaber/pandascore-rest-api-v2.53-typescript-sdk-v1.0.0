@@ -32,33 +32,33 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverValorantMaps = {
-    id: [6],
-    name: ['deserunt culp'],
-    slug: ['wlhqoayuz'],
+    id: [7],
+    name: ['ex eu in amet m'],
+    slug: ['gp'],
     videogameVersion: [],
   };
 
   const range: RangeOverValorantMaps = {
-    id: [3],
-    name: ['dolore'],
-    slug: ['j5q8'],
+    id: [9],
+    name: ['in eiusmod'],
+    slug: ['poql9y'],
   };
 
   const search: SearchOverValorantMaps = {
-    name: 'in elit',
-    slug: 'o6-aq',
+    name: 'ullamco conse',
+    slug: 'duug0',
   };
   const page = 1;
 
-  const { data } = await pandascore.valorantMaps.getValorantMaps({
+  const { data } = await pandascoreClient.valorantMaps.getValorantMaps({
     filter: filter,
     range: range,
     sort: [[]],
@@ -91,14 +91,14 @@ Get a Valorant map by its ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.valorantMaps.getValorantMapsValorantMapId(6);
+  const { data } = await pandascoreClient.valorantMaps.getValorantMapsValorantMapId(5);
 
   console.log(data);
 })();

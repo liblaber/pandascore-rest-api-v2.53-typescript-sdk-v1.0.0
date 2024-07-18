@@ -2,14 +2,16 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { Match, MatchIdOrSlug, matchResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { Match, matchResponse } from '../common/match';
 import {
   GetLolMatchesParams,
   GetLolMatchesPastParams,
   GetLolMatchesRunningParams,
   GetLolMatchesUpcomingParams,
 } from './request-params';
-import { LoLMatch, loLMatchResponse } from './models';
+import { LoLMatch, loLMatchResponse } from './models/lo-l-match';
+import { MatchIdOrSlug } from '../common';
 
 export class LoLMatchesService extends BaseService {
   /**
@@ -22,40 +24,24 @@ export class LoLMatchesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Match[]>>} A list of League-of-Legends matches
    */
-  async getLolMatches(
-    params?: GetLolMatchesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Match[]>> {
-    const path = '/lol/matches';
-    const options: any = {
+  async getLolMatches(params?: GetLolMatchesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Match[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/matches',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -72,36 +58,23 @@ export class LoLMatchesService extends BaseService {
     params?: GetLolMatchesPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/lol/matches/past';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/matches/past',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -118,36 +91,23 @@ export class LoLMatchesService extends BaseService {
     params?: GetLolMatchesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/lol/matches/running';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/matches/running',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -164,36 +124,23 @@ export class LoLMatchesService extends BaseService {
     params?: GetLolMatchesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/lol/matches/upcoming';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/matches/upcoming',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -205,18 +152,17 @@ export class LoLMatchesService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLMatch>> {
-    const path = this.client.buildPath('/lol/matches/{match_id_or_slug}', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/matches/{match_id_or_slug}',
+      config: this.config,
       responseSchema: loLMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    return this.client.call(request);
   }
 }

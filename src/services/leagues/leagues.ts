@@ -2,17 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import {
-  League,
-  LeagueIdOrSlug,
-  Match,
-  Serie,
-  ShortTournament,
-  leagueResponse,
-  matchResponse,
-  serieResponse,
-  shortTournamentResponse,
-} from '../common';
+import { Request } from '../../http/transport/request';
+import { League, leagueResponse } from '../common/league';
 import {
   GetLeaguesLeagueIdOrSlugMatchesParams,
   GetLeaguesLeagueIdOrSlugMatchesPastParams,
@@ -22,6 +13,10 @@ import {
   GetLeaguesLeagueIdOrSlugTournamentsParams,
   GetLeaguesParams,
 } from './request-params';
+import { LeagueIdOrSlug } from './models';
+import { Match, matchResponse } from '../common/match';
+import { Serie, serieResponse } from '../common/serie';
+import { ShortTournament, shortTournamentResponse } from '../common/short-tournament';
 
 export class LeaguesService extends BaseService {
   /**
@@ -34,40 +29,24 @@ export class LeaguesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<League[]>>} A list of leagues
    */
-  async getLeagues(
-    params?: GetLeaguesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<League[]>> {
-    const path = '/leagues';
-    const options: any = {
+  async getLeagues(params?: GetLeaguesParams, requestConfig?: RequestConfig): Promise<HttpResponse<League[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues',
+      config: this.config,
       responseSchema: z.array(leagueResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -79,19 +58,18 @@ export class LeaguesService extends BaseService {
     leagueIdOrSlug: LeagueIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<League>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}',
+      config: this.config,
       responseSchema: leagueResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -110,38 +88,24 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugMatchesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/matches', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/matches',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -160,38 +124,24 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugMatchesPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/matches/past', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/matches/past',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -210,38 +160,24 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugMatchesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/matches/running', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/matches/running',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -260,38 +196,24 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugMatchesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/matches/upcoming', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/matches/upcoming',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -310,38 +232,24 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugSeriesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Serie[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/series', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/series',
+      config: this.config,
       responseSchema: z.array(serieResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -360,37 +268,23 @@ export class LeaguesService extends BaseService {
     params?: GetLeaguesLeagueIdOrSlugTournamentsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = this.client.buildPath('/leagues/{league_id_or_slug}/tournaments', {
-      league_id_or_slug: leagueIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/leagues/{league_id_or_slug}/tournaments',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('league_id_or_slug', leagueIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

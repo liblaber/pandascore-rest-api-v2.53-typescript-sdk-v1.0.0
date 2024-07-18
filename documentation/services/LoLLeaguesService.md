@@ -31,37 +31,37 @@ List League of Legends leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverLoLLeagues = {
-    id: [10],
-    modifiedAt: ['ul'],
-    name: ['et elit '],
-    slug: ['uld589je'],
-    url: ['consequat a'],
+    id: [3],
+    modifiedAt: ['dol'],
+    name: ['mollit occa'],
+    slug: ['evf'],
+    url: ['magna dolor ali'],
   };
 
   const range: RangeOverLoLLeagues = {
-    id: [4],
-    modifiedAt: ['nostr'],
-    name: ['occae'],
-    slug: ['2'],
-    url: ['non a'],
+    id: [7],
+    modifiedAt: ['quis'],
+    name: ['adipisicing'],
+    slug: ['_l-t'],
+    url: ['cillum esse al'],
   };
 
   const search: SearchOverLoLLeagues = {
-    name: 'mollit e',
-    slug: 'i-fa',
-    url: 'culpa elit',
+    name: 'Lorem de',
+    slug: ':1pcxkfbh7q',
+    url: 'labore',
   };
   const page = 1;
 
-  const { data } = await pandascore.loLLeagues.getLolLeagues({
+  const { data } = await pandascoreClient.loLLeagues.getLolLeagues({
     filter: filter,
     range: range,
     sort: [[]],

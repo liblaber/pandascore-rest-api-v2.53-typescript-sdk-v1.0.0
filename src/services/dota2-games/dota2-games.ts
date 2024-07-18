@@ -2,20 +2,16 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import {
-  BaseDota2Game,
-  Dota2Game,
-  MatchIdOrSlug,
-  TeamIdOrSlug,
-  baseDota2GameResponse,
-  dota2GameResponse,
-} from '../common';
-import { Dota2Frame, dota2FrameResponse } from './models';
+import { Request } from '../../http/transport/request';
+import { Dota2Game, dota2GameResponse } from './models/dota2-game';
+import { Dota2Frame, dota2FrameResponse } from './models/dota2-frame';
 import {
   GetDota2GamesDota2GameIdFramesParams,
   GetDota2MatchesMatchIdOrSlugGamesParams,
   GetDota2TeamsTeamIdOrSlugGamesParams,
 } from './request-params';
+import { MatchIdOrSlug, TeamIdOrSlug } from '../common';
+import { BaseDota2Game, baseDota2GameResponse } from '../common/base-dota2-game';
 
 export class Dota2GamesService extends BaseService {
   /**
@@ -23,23 +19,19 @@ export class Dota2GamesService extends BaseService {
    * @param {number} dota2GameId - A game ID
    * @returns {Promise<HttpResponse<Dota2Game>>} A Dota2 game
    */
-  async getDota2GamesDota2GameId(
-    dota2GameId: number,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Dota2Game>> {
-    const path = this.client.buildPath('/dota2/games/{dota2_game_id}', {
-      dota2_game_id: dota2GameId,
-    });
-    const options: any = {
+  async getDota2GamesDota2GameId(dota2GameId: number, requestConfig?: RequestConfig): Promise<HttpResponse<Dota2Game>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/dota2/games/{dota2_game_id}',
+      config: this.config,
       responseSchema: dota2GameResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('dota2_game_id', dota2GameId);
+    return this.client.call(request);
   }
 
   /**
@@ -54,26 +46,20 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2GamesDota2GameIdFramesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Frame[]>> {
-    const path = this.client.buildPath('/dota2/games/{dota2_game_id}/frames', {
-      dota2_game_id: dota2GameId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/dota2/games/{dota2_game_id}/frames',
+      config: this.config,
       responseSchema: z.array(dota2FrameResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('dota2_game_id', dota2GameId);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -92,38 +78,24 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2MatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Game[]>> {
-    const path = this.client.buildPath('/dota2/matches/{match_id_or_slug}/games', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/dota2/matches/{match_id_or_slug}/games',
+      config: this.config,
       responseSchema: z.array(dota2GameResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -138,25 +110,19 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2TeamsTeamIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<BaseDota2Game[]>> {
-    const path = this.client.buildPath('/dota2/teams/{team_id_or_slug}/games', {
-      team_id_or_slug: teamIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/dota2/teams/{team_id_or_slug}/games',
+      config: this.config,
       responseSchema: z.array(baseDota2GameResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('team_id_or_slug', teamIdOrSlug);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

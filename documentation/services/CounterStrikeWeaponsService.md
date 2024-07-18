@@ -32,47 +32,47 @@ List weapons
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const filter: FilterOverCsgoWeapons = {
-    ammoClipMax: [3],
-    ammoMax: [5],
-    cost: [3],
-    id: [10],
-    killReward: [2],
+    ammoClipMax: [4],
+    ammoMax: [7],
+    cost: [1],
+    id: [5],
+    killReward: [1],
     kind: [csgoWeaponKind],
-    name: ['labore'],
-    slug: ['t17509_h'],
+    name: ['minim u'],
+    slug: ['_lrp8s5nb'],
   };
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const range: RangeOverCsgoWeapons = {
-    ammoClipMax: [2],
+    ammoClipMax: [7],
     ammoMax: [2],
-    cost: [1],
-    id: [8],
-    killReward: [2],
+    cost: [9],
+    id: [10],
+    killReward: [8],
     kind: [csgoWeaponKind],
-    name: ['Lorem ma'],
-    slug: ['5fo8zgst4js'],
+    name: ['sed proident'],
+    slug: ['3'],
   };
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const search: SearchOverCsgoWeapons = {
     kind: csgoWeaponKind,
-    name: 'Excepteur e',
-    slug: 'c',
+    name: 'minim Excepteu',
+    slug: 'nq41ksr4c',
   };
   const page = 1;
 
-  const { data } = await pandascore.counterStrikeWeapons.getCsgoWeapons({
+  const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeapons({
     filter: filter,
     range: range,
     sort: [[]],
@@ -105,16 +105,16 @@ Get a single weapon by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponIdOrSlug = 5;
+  const csgoWeaponIdOrSlug = 4;
 
-  const { data } = await pandascore.counterStrikeWeapons.getCsgoWeaponsCsgoWeaponIdOrSlug();
+  const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeaponsCsgoWeaponIdOrSlug();
 
   console.log(data);
 })();

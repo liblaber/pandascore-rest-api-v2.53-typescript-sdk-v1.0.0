@@ -6,7 +6,7 @@
 | :---------------- | :------------------ | :------- | :------------------------------------------------------------------ |
 | counterTerrorists | CsgoFullRoundTeam   | ✅       |                                                                     |
 | map               | CsgoFullRoundMap    | ✅       | The location selected during the picks and bans phase for the game. |
-| number\_          | number              | ✅       |                                                                     |
+| number            | number              | ✅       |                                                                     |
 | outcome           | CsgoOutcome         | ✅       |                                                                     |
 | terrorists        | CsgoFullRoundTeam   | ✅       |                                                                     |
 | winnerTeam        | CsgoFullRoundWinner | ✅       |                                                                     |

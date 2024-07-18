@@ -3,7 +3,9 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLMatchWinnerId = z.union([z.number(), z.number()]);
+export const loLMatchWinnerId: any = z.lazy(() => {
+  return z.union([z.number(), z.number()]);
+});
 
 /**
  *
@@ -17,10 +19,14 @@ export type LoLMatchWinnerId = z.infer<typeof loLMatchWinnerId>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLMatchWinnerIdResponse = z.union([z.number(), z.number()]);
+export const loLMatchWinnerIdResponse: any = z.lazy(() => {
+  return z.union([z.number(), z.number()]);
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLMatchWinnerIdRequest = z.union([z.number(), z.number()]);
+export const loLMatchWinnerIdRequest: any = z.lazy(() => {
+  return z.union([z.number(), z.number()]);
+});

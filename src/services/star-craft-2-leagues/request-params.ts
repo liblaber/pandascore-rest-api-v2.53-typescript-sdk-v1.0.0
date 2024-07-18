@@ -1,12 +1,7 @@
-import {
-  FilterOverStarcraft2Leagues,
-  RangeOverStarcraft2Leagues,
-  SearchOverStarcraft2Leagues,
-  filterOverStarcraft2Leagues,
-  rangeOverStarcraft2Leagues,
-  searchOverStarcraft2Leagues,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverStarcraft2Leagues, filterOverStarcraft2Leagues } from './models/filter-over-starcraft2-leagues';
+import { RangeOverStarcraft2Leagues, rangeOverStarcraft2Leagues } from './models/range-over-starcraft2-leagues';
+import { SearchOverStarcraft2Leagues, searchOverStarcraft2Leagues } from './models/search-over-starcraft2-leagues';
+import { Page, page } from '../common/page';
 
 export interface GetStarcraft2LeaguesParams {
   filter?: FilterOverStarcraft2Leagues;

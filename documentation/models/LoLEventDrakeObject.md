@@ -2,7 +2,7 @@
 
 **Properties**
 
-| Name   | Type         | Required | Description |
-| :----- | :----------- | :------- | :---------- |
-| name   | LoLDrakeName | ✅       |             |
-| type\_ | LoLDrakeType | ✅       |             |
+| Name | Type         | Required | Description |
+| :--- | :----------- | :------- | :---------- |
+| name | LoLDrakeName | ✅       |             |
+| type | LoLDrakeType | ✅       |             |

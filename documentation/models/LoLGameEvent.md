@@ -10,4 +10,4 @@
 | matchId         | number          | ✅       |                                              |
 | payload         | LoLEventPayload | ✅       |                                              |
 | tournamentId    | number          | ✅       |                                              |
-| type\_          | LoLEventType    | ✅       |                                              |
+| type            | LoLEventType    | ✅       |                                              |

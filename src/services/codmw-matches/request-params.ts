@@ -1,13 +1,7 @@
-import {
-  FilterOverCodmwMatches,
-  Page,
-  RangeOverCodmwMatches,
-  SearchOverCodmwMatches,
-  filterOverCodmwMatches,
-  page,
-  rangeOverCodmwMatches,
-  searchOverCodmwMatches,
-} from '../common';
+import { FilterOverCodmwMatches, filterOverCodmwMatches } from './models/filter-over-codmw-matches';
+import { RangeOverCodmwMatches, rangeOverCodmwMatches } from './models/range-over-codmw-matches';
+import { SearchOverCodmwMatches, searchOverCodmwMatches } from './models/search-over-codmw-matches';
+import { Page, page } from '../common/page';
 
 export interface GetCodmwMatchesParams {
   filter?: FilterOverCodmwMatches;

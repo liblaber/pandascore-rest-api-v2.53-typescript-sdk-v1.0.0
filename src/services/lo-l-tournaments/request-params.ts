@@ -1,13 +1,13 @@
 import {
   FilterOverLoLShortTournaments,
-  Page,
-  RangeOverLoLShortTournaments,
-  SearchOverLoLShortTournaments,
   filterOverLoLShortTournaments,
-  page,
-  rangeOverLoLShortTournaments,
+} from './models/filter-over-lo-l-short-tournaments';
+import { RangeOverLoLShortTournaments, rangeOverLoLShortTournaments } from './models/range-over-lo-l-short-tournaments';
+import {
+  SearchOverLoLShortTournaments,
   searchOverLoLShortTournaments,
-} from '../common';
+} from './models/search-over-lo-l-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetLolTournamentsParams {
   filter?: FilterOverLoLShortTournaments;

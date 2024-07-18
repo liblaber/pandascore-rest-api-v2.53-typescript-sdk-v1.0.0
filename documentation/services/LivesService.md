@@ -27,16 +27,16 @@ List currently running live matches, available from pandascore with live websock
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.lives.getLives({
+  const { data } = await pandascoreClient.lives.getLives({
     page: page,
     perPage: 50,
   });

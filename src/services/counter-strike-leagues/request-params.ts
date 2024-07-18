@@ -1,12 +1,7 @@
-import {
-  FilterOverCsgoLeagues,
-  RangeOverCsgoLeagues,
-  SearchOverCsgoLeagues,
-  filterOverCsgoLeagues,
-  rangeOverCsgoLeagues,
-  searchOverCsgoLeagues,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverCsgoLeagues, filterOverCsgoLeagues } from './models/filter-over-csgo-leagues';
+import { RangeOverCsgoLeagues, rangeOverCsgoLeagues } from './models/range-over-csgo-leagues';
+import { SearchOverCsgoLeagues, searchOverCsgoLeagues } from './models/search-over-csgo-leagues';
+import { Page, page } from '../common/page';
 
 export interface GetCsgoLeaguesParams {
   filter?: FilterOverCsgoLeagues;

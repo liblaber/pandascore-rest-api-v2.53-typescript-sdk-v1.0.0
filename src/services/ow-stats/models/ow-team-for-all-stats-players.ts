@@ -8,14 +8,16 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owTeamForAllStatsPlayers = z.object({
-  id: z.number().gte(1),
-  name: z.string(),
-  players: z.array(owPlayerForAllStatsPlayers),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/),
+export const owTeamForAllStatsPlayers: any = z.lazy(() => {
+  return z.object({
+    id: z.number().gte(1),
+    name: z.string(),
+    players: z.array(owPlayerForAllStatsPlayers),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/),
+  });
 });
 
 /**
@@ -32,37 +34,41 @@ export type OwTeamForAllStatsPlayers = z.infer<typeof owTeamForAllStatsPlayers>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owTeamForAllStatsPlayersResponse = z
-  .object({
-    id: z.number().gte(1),
-    name: z.string(),
-    players: z.array(owPlayerForAllStatsPlayersResponse),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/),
-  })
-  .transform((data) => ({
-    id: data['id'],
-    name: data['name'],
-    players: data['players'],
-    slug: data['slug'],
-  }));
+export const owTeamForAllStatsPlayersResponse: any = z.lazy(() => {
+  return z
+    .object({
+      id: z.number().gte(1),
+      name: z.string(),
+      players: z.array(owPlayerForAllStatsPlayersResponse),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/),
+    })
+    .transform((data) => ({
+      id: data['id'],
+      name: data['name'],
+      players: data['players'],
+      slug: data['slug'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owTeamForAllStatsPlayersRequest = z
-  .object({
-    id: z.number().nullish(),
-    name: z.string().nullish(),
-    players: z.array(owPlayerForAllStatsPlayersRequest).nullish(),
-    slug: z.string().nullish(),
-  })
-  .transform((data) => ({
-    id: data['id'],
-    name: data['name'],
-    players: data['players'],
-    slug: data['slug'],
-  }));
+export const owTeamForAllStatsPlayersRequest: any = z.lazy(() => {
+  return z
+    .object({
+      id: z.number().nullish(),
+      name: z.string().nullish(),
+      players: z.array(owPlayerForAllStatsPlayersRequest).nullish(),
+      slug: z.string().nullish(),
+    })
+    .transform((data) => ({
+      id: data['id'],
+      name: data['name'],
+      players: data['players'],
+      slug: data['slug'],
+    }));
+});

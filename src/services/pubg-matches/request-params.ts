@@ -1,13 +1,7 @@
-import {
-  FilterOverPubgMatches,
-  Page,
-  RangeOverPubgMatches,
-  SearchOverPubgMatches,
-  filterOverPubgMatches,
-  page,
-  rangeOverPubgMatches,
-  searchOverPubgMatches,
-} from '../common';
+import { FilterOverPubgMatches, filterOverPubgMatches } from './models/filter-over-pubg-matches';
+import { RangeOverPubgMatches, rangeOverPubgMatches } from './models/range-over-pubg-matches';
+import { SearchOverPubgMatches, searchOverPubgMatches } from './models/search-over-pubg-matches';
+import { Page, page } from '../common/page';
 
 export interface GetPubgMatchesParams {
   filter?: FilterOverPubgMatches;

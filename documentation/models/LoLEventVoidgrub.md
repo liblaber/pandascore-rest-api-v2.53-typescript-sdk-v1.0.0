@@ -5,7 +5,7 @@
 | Name   | Type                   | Required | Description |
 | :----- | :--------------------- | :------- | :---------- |
 | object | LoLEventVoidgrubObject | ✅       |             |
-| type\_ | LoLEventVoidgrubType   | ✅       |             |
+| type   | LoLEventVoidgrubType   | ✅       |             |
 
 # LoLEventVoidgrubType
 

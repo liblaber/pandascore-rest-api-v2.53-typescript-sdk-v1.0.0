@@ -31,42 +31,42 @@ List teams for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverStarcraftBroodWarTeams = {
-  acronym: ["occaecat proide"],
+  acronym: ["sint co"],
   id: [8],
-  location: ["culpa mollit n"],
-  modifiedAt: ["fugiat"],
-  name: ["sint d"],
-  slug: ["kv7fvl"],
+  location: ["ut dolo"],
+  modifiedAt: ["iru"],
+  name: ["cillum e"],
+  slug: ["m"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverStarcraftBroodWarTeams = {
-  acronym: ["eiusm"],
-  id: [4],
-  location: ["ametaliquip a"],
-  modifiedAt: ["esse"],
-  name: ["sit minim t"],
-  slug: ["hk7-jj"]
+  acronym: ["deserunt a"],
+  id: [3],
+  location: ["sunt aut"],
+  modifiedAt: ["deserunt aute"],
+  name: ["labor"],
+  slug: ["qt3q1roio"]
 };
 
 const search: SearchOverStarcraftBroodWarTeams = {
-  acronym: "Lorem",
-  location: "conseq",
-  name: "pariatur ve",
-  slug: "1h71"
+  acronym: "dolore fugia",
+  location: "dolore cillum",
+  name: "irure ven",
+  slug: "j"
 };
 const page = 1;
 
-  const { data } = await pandascore.starCraftBroodWarTeams.getStarcraftBroodWarTeams(
+  const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams(
   {
 		filter: filter,
 		range: range,

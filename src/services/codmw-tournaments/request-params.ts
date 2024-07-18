@@ -1,13 +1,16 @@
 import {
   FilterOverCodmwShortTournaments,
-  Page,
-  RangeOverCodmwShortTournaments,
-  SearchOverCodmwShortTournaments,
   filterOverCodmwShortTournaments,
-  page,
+} from './models/filter-over-codmw-short-tournaments';
+import {
+  RangeOverCodmwShortTournaments,
   rangeOverCodmwShortTournaments,
+} from './models/range-over-codmw-short-tournaments';
+import {
+  SearchOverCodmwShortTournaments,
   searchOverCodmwShortTournaments,
-} from '../common';
+} from './models/search-over-codmw-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetCodmwTournamentsParams {
   filter?: FilterOverCodmwShortTournaments;

@@ -31,53 +31,53 @@ List players for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverKogPlayers = {
   active: true,
-  birthday: ["sed aliqua "],
-  firstName: ["Lorem Excep"],
-  id: [7],
-  lastName: ["fugia"],
-  modifiedAt: ["cupidatat offic"],
-  name: ["sint sed s"],
-  nationality: ["do cup"],
-  role: ["ut sin"],
-  slug: ["3hqz8v1dpq"],
-  teamId: [9],
+  birthday: ["Duis aute sit"],
+  firstName: ["occaec"],
+  id: [6],
+  lastName: ["mollit"],
+  modifiedAt: ["in"],
+  name: ["laboris aliqua "],
+  nationality: ["proident i"],
+  role: ["venia"],
+  slug: ["pdt-82"],
+  teamId: [7],
   videogameId: [videogameId]
 };
 
 const range: RangeOverKogPlayers = {
-  birthday: ["ipsum"],
-  firstName: ["minim"],
-  id: [7],
-  lastName: ["Lorem cupidat"],
-  modifiedAt: ["aliqu"],
-  name: ["commodo"],
-  nationality: ["voluptat"],
-  role: ["mollit"],
-  slug: ["iilng2yd0lq"]
+  birthday: ["ad elit "],
+  firstName: ["tempor"],
+  id: [6],
+  lastName: ["aute ali"],
+  modifiedAt: ["consectetu"],
+  name: ["sintin"],
+  nationality: ["elit occaeca"],
+  role: ["minim "],
+  slug: ["_qmb96lw89"]
 };
 
 const search: SearchOverKogPlayers = {
-  birthday: "deserunt ea i",
-  firstName: "Duisdolore te",
-  lastName: "ut labori",
-  name: "nulla qu",
-  nationality: "doquis",
-  role: "deserunt dol",
-  slug: "a4ic2-y4z9"
+  birthday: "nisi sed deseru",
+  firstName: "cupid",
+  lastName: "aliqua magna no",
+  name: "in dolore ",
+  nationality: "proident",
+  role: "magna cu",
+  slug: "wiv"
 };
 const page = 1;
 
-  const { data } = await pandascore.kogPlayers.getKogPlayers(
+  const { data } = await pandascoreClient.kogPlayers.getKogPlayers(
   {
 		filter: filter,
 		range: range,

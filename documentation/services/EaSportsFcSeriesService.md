@@ -34,46 +34,46 @@ List series for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 10;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['in velit'],
-    endAt: ['ea '],
+    beginAt: ['pariat'],
+    endAt: ['n'],
     id: [7],
-    leagueId: [8],
-    modifiedAt: ['laborum'],
-    name: ['ut incid'],
-    season: ['aute qui'],
-    slug: ['z57q3bycg8r'],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['n'],
-    endAt: ['non ex quis d'],
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
     id: [6],
     leagueId: [8],
-    modifiedAt: ['culpa '],
-    name: ['culpa pariatu'],
-    season: ['Lorem nisi '],
-    slug: ['qmjfjn'],
+    modifiedAt: ['qui consequat'],
+    name: ['nulla'],
+    season: ['occaecat enim'],
+    slug: ['dw'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'exerc',
-    season: 'ipsum commodo',
-    slug: 'u',
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcSeries.getFifaSeries({
+  const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 10;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['in velit'],
-    endAt: ['ea '],
+    beginAt: ['pariat'],
+    endAt: ['n'],
     id: [7],
-    leagueId: [8],
-    modifiedAt: ['laborum'],
-    name: ['ut incid'],
-    season: ['aute qui'],
-    slug: ['z57q3bycg8r'],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['n'],
-    endAt: ['non ex quis d'],
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
     id: [6],
     leagueId: [8],
-    modifiedAt: ['culpa '],
-    name: ['culpa pariatu'],
-    season: ['Lorem nisi '],
-    slug: ['qmjfjn'],
+    modifiedAt: ['qui consequat'],
+    name: ['nulla'],
+    season: ['occaecat enim'],
+    slug: ['dw'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'exerc',
-    season: 'ipsum commodo',
-    slug: 'u',
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcSeries.getFifaSeriesPast({
+  const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 10;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['in velit'],
-    endAt: ['ea '],
+    beginAt: ['pariat'],
+    endAt: ['n'],
     id: [7],
-    leagueId: [8],
-    modifiedAt: ['laborum'],
-    name: ['ut incid'],
-    season: ['aute qui'],
-    slug: ['z57q3bycg8r'],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['n'],
-    endAt: ['non ex quis d'],
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
     id: [6],
     leagueId: [8],
-    modifiedAt: ['culpa '],
-    name: ['culpa pariatu'],
-    season: ['Lorem nisi '],
-    slug: ['qmjfjn'],
+    modifiedAt: ['qui consequat'],
+    name: ['nulla'],
+    season: ['occaecat enim'],
+    slug: ['dw'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'exerc',
-    season: 'ipsum commodo',
-    slug: 'u',
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcSeries.getFifaSeriesRunning({
+  const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 10;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['in velit'],
-    endAt: ['ea '],
+    beginAt: ['pariat'],
+    endAt: ['n'],
     id: [7],
-    leagueId: [8],
-    modifiedAt: ['laborum'],
-    name: ['ut incid'],
-    season: ['aute qui'],
-    slug: ['z57q3bycg8r'],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['n'],
-    endAt: ['non ex quis d'],
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
     id: [6],
     leagueId: [8],
-    modifiedAt: ['culpa '],
-    name: ['culpa pariatu'],
-    season: ['Lorem nisi '],
-    slug: ['qmjfjn'],
+    modifiedAt: ['qui consequat'],
+    name: ['nulla'],
+    season: ['occaecat enim'],
+    slug: ['dw'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'exerc',
-    season: 'ipsum commodo',
-    slug: 'u',
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcSeries.getFifaSeriesUpcoming({
+  const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],

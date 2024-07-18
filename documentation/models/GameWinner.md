@@ -2,10 +2,10 @@
 
 **Properties**
 
-| Name   | Type            | Required | Description |
-| :----- | :-------------- | :------- | :---------- |
-| id     | Id              | ✅       |             |
-| type\_ | GameWinnerType2 | ✅       |             |
+| Name | Type            | Required | Description |
+| :--- | :-------------- | :------- | :---------- |
+| id   | Id              | ✅       |             |
+| type | GameWinnerType2 | ✅       |             |
 
 # Id
 

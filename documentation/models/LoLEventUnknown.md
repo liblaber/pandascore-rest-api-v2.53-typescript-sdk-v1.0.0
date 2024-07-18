@@ -4,7 +4,7 @@
 
 | Name   | Type                | Required | Description |
 | :----- | :------------------ | :------- | :---------- |
-| type\_ | LoLEventUnknownType | ✅       |             |
+| type   | LoLEventUnknownType | ✅       |             |
 | object | any                 | ❌       |             |
 
 # LoLEventUnknownType

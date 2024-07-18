@@ -1,13 +1,7 @@
-import {
-  FilterOverValorantMatches,
-  Page,
-  RangeOverValorantMatches,
-  SearchOverValorantMatches,
-  filterOverValorantMatches,
-  page,
-  rangeOverValorantMatches,
-  searchOverValorantMatches,
-} from '../common';
+import { FilterOverValorantMatches, filterOverValorantMatches } from './models/filter-over-valorant-matches';
+import { RangeOverValorantMatches, rangeOverValorantMatches } from './models/range-over-valorant-matches';
+import { SearchOverValorantMatches, searchOverValorantMatches } from './models/search-over-valorant-matches';
+import { Page, page } from '../common/page';
 
 export interface GetValorantMatchesParams {
   filter?: FilterOverValorantMatches;

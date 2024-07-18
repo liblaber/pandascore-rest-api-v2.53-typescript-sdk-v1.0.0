@@ -1,13 +1,7 @@
-import {
-  FilterOverMatches,
-  Page,
-  RangeOverMatches,
-  SearchOverMatches,
-  filterOverMatches,
-  page,
-  rangeOverMatches,
-  searchOverMatches,
-} from '../common';
+import { FilterOverMatches, filterOverMatches } from '../common/filter-over-matches';
+import { RangeOverMatches, rangeOverMatches } from '../common/range-over-matches';
+import { SearchOverMatches, searchOverMatches } from '../common/search-over-matches';
+import { Page, page } from '../common/page';
 
 export interface GetMatchesParams {
   filter?: FilterOverMatches;

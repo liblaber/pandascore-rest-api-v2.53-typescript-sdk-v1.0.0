@@ -5,4 +5,4 @@
 | Name    | Type              | Required | Description |
 | :------ | :---------------- | :------- | :---------- |
 | matchId | number            | ✅       |             |
-| type\_  | PreviousMatchType | ✅       |             |
+| type    | PreviousMatchType | ✅       |             |

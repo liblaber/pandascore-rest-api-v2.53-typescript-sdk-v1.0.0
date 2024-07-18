@@ -5,7 +5,9 @@ import { playerRosters, playerRostersRequest, playerRostersResponse } from './pl
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const tournamentRosters = z.union([teamRosters, playerRosters]);
+export const tournamentRosters: any = z.lazy(() => {
+  return z.union([teamRosters, playerRosters]);
+});
 
 /**
  *
@@ -19,10 +21,14 @@ export type TournamentRosters = z.infer<typeof tournamentRosters>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const tournamentRostersResponse = z.union([teamRostersResponse, playerRostersResponse]);
+export const tournamentRostersResponse: any = z.lazy(() => {
+  return z.union([teamRostersResponse, playerRostersResponse]);
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const tournamentRostersRequest = z.union([teamRostersRequest, playerRostersRequest]);
+export const tournamentRostersRequest: any = z.lazy(() => {
+  return z.union([teamRostersRequest, playerRostersRequest]);
+});

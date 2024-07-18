@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { LoLChampion, loLChampionResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { LoLChampion, loLChampionResponse } from '../common/lo-l-champion';
 import {
   GetLolChampionsParams,
   GetLolVersionsAllChampionsParams,
@@ -24,36 +25,23 @@ export class LoLChampionsService extends BaseService {
     params?: GetLolChampionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLChampion[]>> {
-    const path = '/lol/champions';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/champions',
+      config: this.config,
       responseSchema: z.array(loLChampionResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -65,19 +53,18 @@ export class LoLChampionsService extends BaseService {
     lolChampionId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLChampion>> {
-    const path = this.client.buildPath('/lol/champions/{lol_champion_id}', {
-      lol_champion_id: lolChampionId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/champions/{lol_champion_id}',
+      config: this.config,
       responseSchema: loLChampionResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('lol_champion_id', lolChampionId);
+    return this.client.call(request);
   }
 
   /**
@@ -94,36 +81,23 @@ export class LoLChampionsService extends BaseService {
     params?: GetLolVersionsAllChampionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLChampion[]>> {
-    const path = '/lol/versions/all/champions';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/versions/all/champions',
+      config: this.config,
       responseSchema: z.array(loLChampionResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -142,37 +116,23 @@ export class LoLChampionsService extends BaseService {
     params?: GetLolVersionsLolVersionNameChampionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLChampion[]>> {
-    const path = this.client.buildPath('/lol/versions/{lol_version_name}/champions', {
-      lol_version_name: lolVersionName,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/lol/versions/{lol_version_name}/champions',
+      config: this.config,
       responseSchema: z.array(loLChampionResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('lol_version_name', lolVersionName);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

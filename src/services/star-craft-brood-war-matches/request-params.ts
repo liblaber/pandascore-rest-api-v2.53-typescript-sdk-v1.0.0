@@ -1,13 +1,16 @@
 import {
   FilterOverStarcraftBroodWarMatches,
-  Page,
-  RangeOverStarcraftBroodWarMatches,
-  SearchOverStarcraftBroodWarMatches,
   filterOverStarcraftBroodWarMatches,
-  page,
+} from './models/filter-over-starcraft-brood-war-matches';
+import {
+  RangeOverStarcraftBroodWarMatches,
   rangeOverStarcraftBroodWarMatches,
+} from './models/range-over-starcraft-brood-war-matches';
+import {
+  SearchOverStarcraftBroodWarMatches,
   searchOverStarcraftBroodWarMatches,
-} from '../common';
+} from './models/search-over-starcraft-brood-war-matches';
+import { Page, page } from '../common/page';
 
 export interface GetStarcraftBroodWarMatchesParams {
   filter?: FilterOverStarcraftBroodWarMatches;

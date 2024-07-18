@@ -31,42 +31,42 @@ List teams for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverValorantTeams = {
-  acronym: ["eu dolor mini"],
-  id: [10],
-  location: ["mollit velit "],
-  modifiedAt: ["aute e"],
-  name: ["sint reprehen"],
-  slug: ["9qf848"],
+  acronym: ["laborum sit"],
+  id: [7],
+  location: ["ipsum"],
+  modifiedAt: ["cupidatat"],
+  name: ["proident in c"],
+  slug: ["hk-_38"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverValorantTeams = {
-  acronym: ["magna cillu"],
-  id: [1],
-  location: ["reprehender"],
-  modifiedAt: ["con"],
-  name: ["minim "],
-  slug: ["l45n"]
+  acronym: ["aute "],
+  id: [4],
+  location: ["elit sed"],
+  modifiedAt: ["mollit aliqua s"],
+  name: ["cillum eius"],
+  slug: ["3js6_bh"]
 };
 
 const search: SearchOverValorantTeams = {
-  acronym: "sunt et min",
-  location: "Lorem",
-  name: "conse",
-  slug: "0ymcr"
+  acronym: "sunt do",
+  location: "Excepteur",
+  name: "irure do id",
+  slug: "z"
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantTeams.getValorantTeams(
+  const { data } = await pandascoreClient.valorantTeams.getValorantTeams(
   {
 		filter: filter,
 		range: range,

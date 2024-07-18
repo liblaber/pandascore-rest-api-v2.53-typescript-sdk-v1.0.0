@@ -2,37 +2,27 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
+import { Request } from '../../http/transport/request';
 import {
   CsgoStatsForAllPlayersByMatch,
-  CsgoStatsForPlayer,
-  CsgoStatsForPlayerByMatch,
-  CsgoStatsForPlayerBySerie,
-  CsgoStatsForPlayerByTournament,
-  CsgoStatsForTeam,
-  CsgoStatsForTeamByMatch,
-  CsgoStatsForTeamBySerie,
-  CsgoStatsForTeamByTournament,
   csgoStatsForAllPlayersByMatchResponse,
-  csgoStatsForPlayerByMatchResponse,
-  csgoStatsForPlayerBySerieResponse,
+} from './models/csgo-stats-for-all-players-by-match';
+import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TeamIdOrSlug, TournamentIdOrSlug } from '../common';
+import { CsgoStatsForPlayerByMatch, csgoStatsForPlayerByMatchResponse } from './models/csgo-stats-for-player-by-match';
+import { CsgoStatsForTeamByMatch, csgoStatsForTeamByMatchResponse } from './models/csgo-stats-for-team-by-match';
+import { CsgoStatsForPlayer, csgoStatsForPlayerResponse } from './models/csgo-stats-for-player';
+import { GetCsgoPlayersPlayerIdOrSlugStatsParams, GetCsgoTeamsTeamIdOrSlugStatsParams } from './request-params';
+import { CsgoStatsForPlayerBySerie, csgoStatsForPlayerBySerieResponse } from './models/csgo-stats-for-player-by-serie';
+import { CsgoStatsForTeamBySerie, csgoStatsForTeamBySerieResponse } from './models/csgo-stats-for-team-by-serie';
+import { CsgoStatsForTeam, csgoStatsForTeamResponse } from './models/csgo-stats-for-team';
+import {
+  CsgoStatsForPlayerByTournament,
   csgoStatsForPlayerByTournamentResponse,
-  csgoStatsForPlayerResponse,
-  csgoStatsForTeamByMatchResponse,
-  csgoStatsForTeamBySerieResponse,
+} from './models/csgo-stats-for-player-by-tournament';
+import {
+  CsgoStatsForTeamByTournament,
   csgoStatsForTeamByTournamentResponse,
-  csgoStatsForTeamResponse,
-} from './models';
-import {
-  MatchIdOrSlug,
-  PlayerIdOrSlug,
-  SerieIdOrSlug,
-  TeamIdOrSlug,
-  TournamentIdOrSlug,
-} from '../common';
-import {
-  GetCsgoPlayersPlayerIdOrSlugStatsParams,
-  GetCsgoTeamsTeamIdOrSlugStatsParams,
-} from './request-params';
+} from './models/csgo-stats-for-team-by-tournament';
 
 export class CounterStrikeStatsService extends BaseService {
   /**
@@ -44,19 +34,18 @@ export class CounterStrikeStatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForAllPlayersByMatch>> {
-    const path = this.client.buildPath('/csgo/matches/{match_id_or_slug}/players/stats', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/matches/{match_id_or_slug}/players/stats',
+      config: this.config,
       responseSchema: csgoStatsForAllPlayersByMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -70,20 +59,19 @@ export class CounterStrikeStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForPlayerByMatch>> {
-    const path = this.client.buildPath(
-      '/csgo/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats',
-      { match_id_or_slug: matchIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForPlayerByMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -97,27 +85,26 @@ export class CounterStrikeStatsService extends BaseService {
     teamIdOrSlug: TeamIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForTeamByMatch>> {
-    const path = this.client.buildPath(
-      '/csgo/matches/{match_id_or_slug}/teams/{team_id_or_slug}/stats',
-      { match_id_or_slug: matchIdOrSlug, team_id_or_slug: teamIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/matches/{match_id_or_slug}/teams/{team_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForTeamByMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addPathParam('team_id_or_slug', teamIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
    * Get detailed statistics of a given Counter-Strike player
    * @param {PlayerIdOrSlug} playerIdOrSlug - A player ID or slug
    * @param {VideogameTitleIdOrSlug} [videogameTitle] -
-   * @param {string} [from_] - Filter out 'from' date
+   * @param {string} [from] - Filter out 'from' date
    * @param {string} [to] - Filter out 'to' date
    * @returns {Promise<HttpResponse<CsgoStatsForPlayer>>} Statistics of a Counter-Strike player
    */
@@ -126,29 +113,21 @@ export class CounterStrikeStatsService extends BaseService {
     params?: GetCsgoPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForPlayer>> {
-    const path = this.client.buildPath('/csgo/players/{player_id_or_slug}/stats', {
-      player_id_or_slug: playerIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForPlayerResponse,
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.videogameTitle) {
-      options.queryParams['videogame_title'] = params?.videogameTitle;
-    }
-    if (params?.from_) {
-      options.queryParams['from'] = params?.from_;
-    }
-    if (params?.to) {
-      options.queryParams['to'] = params?.to;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    request.addQueryParam('videogame_title', params?.videogameTitle);
+    request.addQueryParam('from', params?.from);
+    request.addQueryParam('to', params?.to);
+    return this.client.call(request);
   }
 
   /**
@@ -162,20 +141,19 @@ export class CounterStrikeStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForPlayerBySerie>> {
-    const path = this.client.buildPath(
-      '/csgo/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      { serie_id_or_slug: serieIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForPlayerBySerieResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -189,27 +167,26 @@ export class CounterStrikeStatsService extends BaseService {
     teamIdOrSlug: TeamIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForTeamBySerie>> {
-    const path = this.client.buildPath(
-      '/csgo/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats',
-      { serie_id_or_slug: serieIdOrSlug, team_id_or_slug: teamIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForTeamBySerieResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addPathParam('team_id_or_slug', teamIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
    * Get detailed statistics of a given Counter-Strike team
    * @param {TeamIdOrSlug} teamIdOrSlug - A team ID or slug
    * @param {VideogameTitleIdOrSlug} [videogameTitle] -
-   * @param {string} [from_] - Filter out 'from' date
+   * @param {string} [from] - Filter out 'from' date
    * @param {string} [to] - Filter out 'to' date
    * @returns {Promise<HttpResponse<CsgoStatsForTeam>>} Statistics of a Counter-Strike team
    */
@@ -218,29 +195,21 @@ export class CounterStrikeStatsService extends BaseService {
     params?: GetCsgoTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForTeam>> {
-    const path = this.client.buildPath('/csgo/teams/{team_id_or_slug}/stats', {
-      team_id_or_slug: teamIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/teams/{team_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForTeamResponse,
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.videogameTitle) {
-      options.queryParams['videogame_title'] = params?.videogameTitle;
-    }
-    if (params?.from_) {
-      options.queryParams['from'] = params?.from_;
-    }
-    if (params?.to) {
-      options.queryParams['to'] = params?.to;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('team_id_or_slug', teamIdOrSlug);
+    request.addQueryParam('videogame_title', params?.videogameTitle);
+    request.addQueryParam('from', params?.from);
+    request.addQueryParam('to', params?.to);
+    return this.client.call(request);
   }
 
   /**
@@ -254,20 +223,19 @@ export class CounterStrikeStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForPlayerByTournament>> {
-    const path = this.client.buildPath(
-      '/csgo/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      { tournament_id_or_slug: tournamentIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForPlayerByTournamentResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -281,19 +249,18 @@ export class CounterStrikeStatsService extends BaseService {
     teamIdOrSlug: TeamIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoStatsForTeamByTournament>> {
-    const path = this.client.buildPath(
-      '/csgo/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats',
-      { tournament_id_or_slug: tournamentIdOrSlug, team_id_or_slug: teamIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/csgo/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats',
+      config: this.config,
       responseSchema: csgoStatsForTeamByTournamentResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
+    request.addPathParam('team_id_or_slug', teamIdOrSlug);
+    return this.client.call(request);
   }
 }

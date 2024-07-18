@@ -1,12 +1,7 @@
-import {
-  FilterOverKogPlayers,
-  RangeOverKogPlayers,
-  SearchOverKogPlayers,
-  filterOverKogPlayers,
-  rangeOverKogPlayers,
-  searchOverKogPlayers,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverKogPlayers, filterOverKogPlayers } from './models/filter-over-kog-players';
+import { RangeOverKogPlayers, rangeOverKogPlayers } from './models/range-over-kog-players';
+import { SearchOverKogPlayers, searchOverKogPlayers } from './models/search-over-kog-players';
+import { Page, page } from '../common/page';
 
 export interface GetKogPlayersParams {
   filter?: FilterOverKogPlayers;

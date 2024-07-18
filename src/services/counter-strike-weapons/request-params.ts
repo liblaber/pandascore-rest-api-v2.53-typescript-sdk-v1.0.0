@@ -1,12 +1,7 @@
-import {
-  FilterOverCsgoWeapons,
-  RangeOverCsgoWeapons,
-  SearchOverCsgoWeapons,
-  filterOverCsgoWeapons,
-  rangeOverCsgoWeapons,
-  searchOverCsgoWeapons,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverCsgoWeapons, filterOverCsgoWeapons } from './models/filter-over-csgo-weapons';
+import { RangeOverCsgoWeapons, rangeOverCsgoWeapons } from './models/range-over-csgo-weapons';
+import { SearchOverCsgoWeapons, searchOverCsgoWeapons } from './models/search-over-csgo-weapons';
+import { Page, page } from '../common/page';
 
 export interface GetCsgoWeaponsParams {
   filter?: FilterOverCsgoWeapons;

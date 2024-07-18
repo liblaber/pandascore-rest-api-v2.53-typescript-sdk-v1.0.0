@@ -1,13 +1,16 @@
 import {
   FilterOverLolWildRiftShortTournaments,
-  Page,
-  RangeOverLolWildRiftShortTournaments,
-  SearchOverLolWildRiftShortTournaments,
   filterOverLolWildRiftShortTournaments,
-  page,
+} from './models/filter-over-lol-wild-rift-short-tournaments';
+import {
+  RangeOverLolWildRiftShortTournaments,
   rangeOverLolWildRiftShortTournaments,
+} from './models/range-over-lol-wild-rift-short-tournaments';
+import {
+  SearchOverLolWildRiftShortTournaments,
   searchOverLolWildRiftShortTournaments,
-} from '../common';
+} from './models/search-over-lol-wild-rift-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetLolWildRiftTournamentsParams {
   filter?: FilterOverLolWildRiftShortTournaments;

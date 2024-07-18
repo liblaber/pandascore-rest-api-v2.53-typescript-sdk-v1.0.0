@@ -1,9 +1,5 @@
 import { z } from 'zod';
-import {
-  valorantKillEvent,
-  valorantKillEventRequest,
-  valorantKillEventResponse,
-} from './valorant-kill-event';
+import { valorantKillEvent, valorantKillEventRequest, valorantKillEventResponse } from './valorant-kill-event';
 import {
   valorantSpikePlantedEvent,
   valorantSpikePlantedEventRequest,
@@ -18,11 +14,9 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantGameEvent = z.union([
-  valorantKillEvent,
-  valorantSpikePlantedEvent,
-  valorantSpikeDefusedEvent,
-]);
+export const valorantGameEvent: any = z.lazy(() => {
+  return z.union([valorantKillEvent, valorantSpikePlantedEvent, valorantSpikeDefusedEvent]);
+});
 
 /**
  *
@@ -37,18 +31,14 @@ export type ValorantGameEvent = z.infer<typeof valorantGameEvent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameEventResponse = z.union([
-  valorantKillEventResponse,
-  valorantSpikePlantedEventResponse,
-  valorantSpikeDefusedEventResponse,
-]);
+export const valorantGameEventResponse: any = z.lazy(() => {
+  return z.union([valorantKillEventResponse, valorantSpikePlantedEventResponse, valorantSpikeDefusedEventResponse]);
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameEventRequest = z.union([
-  valorantKillEventRequest,
-  valorantSpikePlantedEventRequest,
-  valorantSpikeDefusedEventRequest,
-]);
+export const valorantGameEventRequest: any = z.lazy(() => {
+  return z.union([valorantKillEventRequest, valorantSpikePlantedEventRequest, valorantSpikeDefusedEventRequest]);
+});

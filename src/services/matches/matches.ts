@@ -2,14 +2,16 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { Match, MatchIdOrSlug, matchResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { Match, matchResponse } from '../common/match';
 import {
   GetMatchesParams,
   GetMatchesPastParams,
   GetMatchesRunningParams,
   GetMatchesUpcomingParams,
 } from './request-params';
-import { MatchOpponentsObject, matchOpponentsObjectResponse } from './models';
+import { MatchIdOrSlug } from '../common';
+import { MatchOpponentsObject, matchOpponentsObjectResponse } from './models/match-opponents-object';
 
 export class MatchesService extends BaseService {
   /**
@@ -22,40 +24,24 @@ export class MatchesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Match[]>>} A list of matches of any e-sport
    */
-  async getMatches(
-    params?: GetMatchesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Match[]>> {
-    const path = '/matches';
-    const options: any = {
+  async getMatches(params?: GetMatchesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Match[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -68,40 +54,24 @@ export class MatchesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Match[]>>} A list of matches of any e-sport
    */
-  async getMatchesPast(
-    params?: GetMatchesPastParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Match[]>> {
-    const path = '/matches/past';
-    const options: any = {
+  async getMatchesPast(params?: GetMatchesPastParams, requestConfig?: RequestConfig): Promise<HttpResponse<Match[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches/past',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -118,36 +88,23 @@ export class MatchesService extends BaseService {
     params?: GetMatchesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/matches/running';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches/running',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -164,36 +121,23 @@ export class MatchesService extends BaseService {
     params?: GetMatchesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/matches/upcoming';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches/upcoming',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -205,19 +149,18 @@ export class MatchesService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match>> {
-    const path = this.client.buildPath('/matches/{match_id_or_slug}', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches/{match_id_or_slug}',
+      config: this.config,
       responseSchema: matchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -229,18 +172,17 @@ export class MatchesService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<MatchOpponentsObject>> {
-    const path = this.client.buildPath('/matches/{match_id_or_slug}/opponents', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/matches/{match_id_or_slug}/opponents',
+      config: this.config,
       responseSchema: matchOpponentsObjectResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    return this.client.call(request);
   }
 }

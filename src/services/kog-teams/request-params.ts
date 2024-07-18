@@ -1,12 +1,7 @@
-import {
-  FilterOverKogTeams,
-  RangeOverKogTeams,
-  SearchOverKogTeams,
-  filterOverKogTeams,
-  rangeOverKogTeams,
-  searchOverKogTeams,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverKogTeams, filterOverKogTeams } from './models/filter-over-kog-teams';
+import { RangeOverKogTeams, rangeOverKogTeams } from './models/range-over-kog-teams';
+import { SearchOverKogTeams, searchOverKogTeams } from './models/search-over-kog-teams';
+import { Page, page } from '../common/page';
 
 export interface GetKogTeamsParams {
   filter?: FilterOverKogTeams;

@@ -1,12 +1,7 @@
-import {
-  FilterOverFifaTeams,
-  RangeOverFifaTeams,
-  SearchOverFifaTeams,
-  filterOverFifaTeams,
-  rangeOverFifaTeams,
-  searchOverFifaTeams,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverFifaTeams, filterOverFifaTeams } from './models/filter-over-fifa-teams';
+import { RangeOverFifaTeams, rangeOverFifaTeams } from './models/range-over-fifa-teams';
+import { SearchOverFifaTeams, searchOverFifaTeams } from './models/search-over-fifa-teams';
+import { Page, page } from '../common/page';
 
 export interface GetFifaTeamsParams {
   filter?: FilterOverFifaTeams;

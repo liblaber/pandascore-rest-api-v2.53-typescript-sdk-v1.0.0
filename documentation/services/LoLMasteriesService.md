@@ -32,29 +32,29 @@ List masteries
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverLoLMasteries = {
-    id: [5],
-    name: ['mollit temp'],
+    id: [4],
+    name: ['sunt velit'],
   };
 
   const range: RangeOverLoLMasteries = {
-    id: [7],
-    name: ['reprehende'],
+    id: [3],
+    name: ['mollit pa'],
   };
 
   const search: SearchOverLoLMasteries = {
-    name: 'consequ',
+    name: 'eiusmod',
   };
   const page = 1;
 
-  const { data } = await pandascore.loLMasteries.getLolMasteries({
+  const { data } = await pandascoreClient.loLMasteries.getLolMasteries({
     filter: filter,
     range: range,
     sort: [[]],
@@ -87,14 +87,14 @@ Get a single mastery by ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.loLMasteries.getLolMasteriesLolMasteryId(8);
+  const { data } = await pandascoreClient.loLMasteries.getLolMasteriesLolMasteryId(10);
 
   console.log(data);
 })();

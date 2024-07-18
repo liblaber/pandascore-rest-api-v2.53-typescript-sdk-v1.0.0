@@ -13,25 +13,28 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owStatsForPlayerByGame = z.object({
-  active: z.boolean(),
-  age: z.number().gte(0),
-  birthday: z.string(),
-  currentTeam: owStatsForPlayerByGameCurrentTeam,
-  currentVideogame: z.any(),
-  firstName: z.string(),
-  id: z.number().gte(1),
-  imageUrl: z.string(),
-  lastName: z.string(),
-  modifiedAt: z.string().min(1),
-  name: z.string(),
-  nationality: z.string(),
-  role: z.string(),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/),
-  stats: owPlayerStatsByGame,
+export const owStatsForPlayerByGame: any = z.lazy(() => {
+  return z.object({
+    active: z.boolean(),
+    age: z.number().gte(0).nullable(),
+    birthday: z.string().nullable(),
+    currentTeam: owStatsForPlayerByGameCurrentTeam.nullable(),
+    currentVideogame: z.any().nullable(),
+    firstName: z.string().nullable(),
+    id: z.number().gte(1),
+    imageUrl: z.string().nullable(),
+    lastName: z.string().nullable(),
+    modifiedAt: z.string().min(1),
+    name: z.string(),
+    nationality: z.string().nullable(),
+    role: z.string().nullable(),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/)
+      .nullable(),
+    stats: owPlayerStatsByGame,
+  });
 });
 
 /**
@@ -59,81 +62,86 @@ export type OwStatsForPlayerByGame = z.infer<typeof owStatsForPlayerByGame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owStatsForPlayerByGameResponse = z
-  .object({
-    active: z.boolean(),
-    age: z.number().gte(0),
-    birthday: z.string(),
-    current_team: owStatsForPlayerByGameCurrentTeamResponse,
-    current_videogame: z.any(),
-    first_name: z.string(),
-    id: z.number().gte(1),
-    image_url: z.string(),
-    last_name: z.string(),
-    modified_at: z.string().min(1),
-    name: z.string(),
-    nationality: z.string(),
-    role: z.string(),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/),
-    stats: owPlayerStatsByGameResponse,
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    currentTeam: data['current_team'],
-    currentVideogame: data['current_videogame'],
-    firstName: data['first_name'],
-    id: data['id'],
-    imageUrl: data['image_url'],
-    lastName: data['last_name'],
-    modifiedAt: data['modified_at'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-    stats: data['stats'],
-  }));
+export const owStatsForPlayerByGameResponse: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean(),
+      age: z.number().gte(0).nullable(),
+      birthday: z.string().nullable(),
+      current_team: owStatsForPlayerByGameCurrentTeamResponse.nullable(),
+      current_videogame: z.any().nullable(),
+      first_name: z.string().nullable(),
+      id: z.number().gte(1),
+      image_url: z.string().nullable(),
+      last_name: z.string().nullable(),
+      modified_at: z.string().min(1),
+      name: z.string(),
+      nationality: z.string().nullable(),
+      role: z.string().nullable(),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/)
+        .nullable(),
+      stats: owPlayerStatsByGameResponse,
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      currentTeam: data['current_team'],
+      currentVideogame: data['current_videogame'],
+      firstName: data['first_name'],
+      id: data['id'],
+      imageUrl: data['image_url'],
+      lastName: data['last_name'],
+      modifiedAt: data['modified_at'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+      stats: data['stats'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owStatsForPlayerByGameRequest = z
-  .object({
-    active: z.boolean().nullish(),
-    age: z.number().nullish(),
-    birthday: z.string().nullish(),
-    currentTeam: owStatsForPlayerByGameCurrentTeamRequest.nullish(),
-    currentVideogame: z.any().nullish(),
-    firstName: z.string().nullish(),
-    id: z.number().nullish(),
-    imageUrl: z.string().nullish(),
-    lastName: z.string().nullish(),
-    modifiedAt: z.string().nullish(),
-    name: z.string().nullish(),
-    nationality: z.string().nullish(),
-    role: z.string().nullish(),
-    slug: z.string().nullish(),
-    stats: owPlayerStatsByGameRequest.nullish(),
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    current_team: data['currentTeam'],
-    current_videogame: data['currentVideogame'],
-    first_name: data['firstName'],
-    id: data['id'],
-    image_url: data['imageUrl'],
-    last_name: data['lastName'],
-    modified_at: data['modifiedAt'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-    stats: data['stats'],
-  }));
+export const owStatsForPlayerByGameRequest: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean().nullish(),
+      age: z.number().nullish(),
+      birthday: z.string().nullish(),
+      currentTeam: owStatsForPlayerByGameCurrentTeamRequest.nullish(),
+      currentVideogame: z.any().nullish(),
+      firstName: z.string().nullish(),
+      id: z.number().nullish(),
+      imageUrl: z.string().nullish(),
+      lastName: z.string().nullish(),
+      modifiedAt: z.string().nullish(),
+      name: z.string().nullish(),
+      nationality: z.string().nullish(),
+      role: z.string().nullish(),
+      slug: z.string().nullish(),
+      stats: owPlayerStatsByGameRequest.nullish(),
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      current_team: data['currentTeam'],
+      current_videogame: data['currentVideogame'],
+      first_name: data['firstName'],
+      id: data['id'],
+      image_url: data['imageUrl'],
+      last_name: data['lastName'],
+      modified_at: data['modifiedAt'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+      stats: data['stats'],
+    }));
+});

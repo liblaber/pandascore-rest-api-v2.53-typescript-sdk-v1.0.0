@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { Match, matchResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { Match, matchResponse } from '../common/match';
 import {
   GetFifaMatchesParams,
   GetFifaMatchesPastParams,
@@ -21,40 +22,24 @@ export class EaSportsFcMatchesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Match[]>>} A list of EA Sports FC matches
    */
-  async getFifaMatches(
-    params?: GetFifaMatchesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Match[]>> {
-    const path = '/fifa/matches';
-    const options: any = {
+  async getFifaMatches(params?: GetFifaMatchesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Match[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/fifa/matches',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -71,36 +56,23 @@ export class EaSportsFcMatchesService extends BaseService {
     params?: GetFifaMatchesPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/fifa/matches/past';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/fifa/matches/past',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -117,36 +89,23 @@ export class EaSportsFcMatchesService extends BaseService {
     params?: GetFifaMatchesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/fifa/matches/running';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/fifa/matches/running',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -163,35 +122,22 @@ export class EaSportsFcMatchesService extends BaseService {
     params?: GetFifaMatchesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = '/fifa/matches/upcoming';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/fifa/matches/upcoming',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

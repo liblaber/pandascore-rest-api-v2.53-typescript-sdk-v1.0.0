@@ -1,12 +1,7 @@
-import {
-  FilterOverValorantWeapons,
-  RangeOverValorantWeapons,
-  SearchOverValorantWeapons,
-  filterOverValorantWeapons,
-  rangeOverValorantWeapons,
-  searchOverValorantWeapons,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverValorantWeapons, filterOverValorantWeapons } from './models/filter-over-valorant-weapons';
+import { RangeOverValorantWeapons, rangeOverValorantWeapons } from './models/range-over-valorant-weapons';
+import { SearchOverValorantWeapons, searchOverValorantWeapons } from './models/search-over-valorant-weapons';
+import { Page, page } from '../common/page';
 
 export interface GetValorantWeaponsParams {
   filter?: FilterOverValorantWeapons;

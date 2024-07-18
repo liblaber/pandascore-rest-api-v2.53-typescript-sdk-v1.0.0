@@ -31,53 +31,53 @@ List players for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverStarcraftBroodWarPlayers = {
   active: true,
-  birthday: ["adipi"],
-  firstName: ["do proid"],
-  id: [6],
-  lastName: ["sit quis"],
-  modifiedAt: ["aute dol"],
-  name: ["velit do"],
-  nationality: ["elitad occaec"],
-  role: ["aliqu"],
-  slug: ["9"],
-  teamId: [7],
+  birthday: ["consequat "],
+  firstName: ["dolore"],
+  id: [9],
+  lastName: ["adipi"],
+  modifiedAt: ["id no"],
+  name: ["ex dolor"],
+  nationality: ["ad tempor m"],
+  role: ["reprehende"],
+  slug: ["fx5dlw"],
+  teamId: [5],
   videogameId: [videogameId]
 };
 
 const range: RangeOverStarcraftBroodWarPlayers = {
-  birthday: ["ut nulla ea"],
-  firstName: ["offici"],
-  id: [6],
-  lastName: ["enim anim sit "],
-  modifiedAt: ["Excepteur e"],
-  name: ["amet sint"],
-  nationality: ["dolore laborum "],
-  role: ["consequa"],
-  slug: ["sneuh"]
+  birthday: ["nisi adipisicin"],
+  firstName: ["voluptat"],
+  id: [7],
+  lastName: ["proident"],
+  modifiedAt: ["officia id"],
+  name: ["adipisici"],
+  nationality: ["qui Ut"],
+  role: ["exercitatio"],
+  slug: ["65"]
 };
 
 const search: SearchOverStarcraftBroodWarPlayers = {
-  birthday: "dolor",
-  firstName: "elit ",
-  lastName: "estqui",
-  name: "et officia aute",
-  nationality: "ut Exc",
-  role: "in aute",
-  slug: "f5vm4iqe"
+  birthday: "qui enim",
+  firstName: "cillum ut temp",
+  lastName: "pariatur fugia",
+  name: "ullamco ",
+  nationality: "proiden",
+  role: "officia",
+  slug: "fepvp"
 };
 const page = 1;
 
-  const { data } = await pandascore.starCraftBroodWarPlayers.getStarcraftBroodWarPlayers(
+  const { data } = await pandascoreClient.starCraftBroodWarPlayers.getStarcraftBroodWarPlayers(
   {
 		filter: filter,
 		range: range,

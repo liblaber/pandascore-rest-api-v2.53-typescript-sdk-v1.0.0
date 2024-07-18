@@ -8,4 +8,4 @@
 | id         | IncidentId         | ✅       | An incident ID |
 | modifiedAt | string             | ✅       |                |
 | object     | IncidentObject     | ✅       |                |
-| type\_     | IncidentType       | ✅       |                |
+| type       | IncidentType       | ✅       |                |

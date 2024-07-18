@@ -2,20 +2,11 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import {
-  DeletionIncident,
-  Incident,
-  NonDeletionIncident,
-  deletionIncidentResponse,
-  incidentResponse,
-  nonDeletionIncidentResponse,
-} from '../common';
-import {
-  GetAdditionsParams,
-  GetChangesParams,
-  GetDeletionsParams,
-  GetIncidentsParams,
-} from './request-params';
+import { Request } from '../../http/transport/request';
+import { NonDeletionIncident, nonDeletionIncidentResponse } from './models/non-deletion-incident';
+import { GetAdditionsParams, GetChangesParams, GetDeletionsParams, GetIncidentsParams } from './request-params';
+import { Incident, incidentResponse } from './models/incident';
+import { DeletionIncident, deletionIncidentResponse } from './models/deletion-incident';
 
 export class IncidentsService extends BaseService {
   /**
@@ -25,7 +16,7 @@ export class IncidentsService extends BaseService {
    * @param {any[]} [sort] - Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).
    * @param {Page} [page] - Pagination in the form of `page=2` or `page[size]=30&page[number]=2`
    * @param {number} [perPage] - Equivalent to `page[size]`
-   * @param {any[]} [type_] - Filter by result type(s)
+   * @param {any[]} [type] - Filter by result type(s)
    * @param {string} [since] - Filter out older results
    * @param {VideogameIdOrSlug[]} [videogame] - Filter by videogame(s)
    * @returns {Promise<HttpResponse<NonDeletionIncident[]>>} A list of created entities
@@ -34,42 +25,25 @@ export class IncidentsService extends BaseService {
     params?: GetAdditionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<NonDeletionIncident[]>> {
-    const path = '/additions';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/additions',
+      config: this.config,
       responseSchema: z.array(nonDeletionIncidentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    if (params?.type_) {
-      options.queryParams['type'] = params?.type_;
-    }
-    if (params?.since) {
-      options.queryParams['since'] = params?.since;
-    }
-    if (params?.videogame) {
-      options.queryParams['videogame'] = params?.videogame;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    request.addQueryParam('type', params?.type);
+    request.addQueryParam('since', params?.since);
+    request.addQueryParam('videogame', params?.videogame);
+    return this.client.call(request);
   }
 
   /**
@@ -79,51 +53,31 @@ export class IncidentsService extends BaseService {
    * @param {any[]} [sort] - Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).
    * @param {Page} [page] - Pagination in the form of `page=2` or `page[size]=30&page[number]=2`
    * @param {number} [perPage] - Equivalent to `page[size]`
-   * @param {any[]} [type_] - Filter by result type(s)
+   * @param {any[]} [type] - Filter by result type(s)
    * @param {string} [since] - Filter out older results
    * @param {VideogameIdOrSlug[]} [videogame] - Filter by videogame(s)
    * @returns {Promise<HttpResponse<Incident[]>>} A list of changed entities
    */
-  async getChanges(
-    params?: GetChangesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Incident[]>> {
-    const path = '/changes';
-    const options: any = {
+  async getChanges(params?: GetChangesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Incident[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/changes',
+      config: this.config,
       responseSchema: z.array(incidentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    if (params?.type_) {
-      options.queryParams['type'] = params?.type_;
-    }
-    if (params?.since) {
-      options.queryParams['since'] = params?.since;
-    }
-    if (params?.videogame) {
-      options.queryParams['videogame'] = params?.videogame;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    request.addQueryParam('type', params?.type);
+    request.addQueryParam('since', params?.since);
+    request.addQueryParam('videogame', params?.videogame);
+    return this.client.call(request);
   }
 
   /**
@@ -133,7 +87,7 @@ export class IncidentsService extends BaseService {
    * @param {any[]} [sort] - Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).
    * @param {Page} [page] - Pagination in the form of `page=2` or `page[size]=30&page[number]=2`
    * @param {number} [perPage] - Equivalent to `page[size]`
-   * @param {any[]} [type_] - Filter by result type(s)
+   * @param {any[]} [type] - Filter by result type(s)
    * @param {string} [since] - Filter out older results
    * @param {VideogameIdOrSlug[]} [videogame] - Filter by videogame(s)
    * @returns {Promise<HttpResponse<DeletionIncident[]>>} A list of deleted entities
@@ -142,42 +96,25 @@ export class IncidentsService extends BaseService {
     params?: GetDeletionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<DeletionIncident[]>> {
-    const path = '/deletions';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/deletions',
+      config: this.config,
       responseSchema: z.array(deletionIncidentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    if (params?.type_) {
-      options.queryParams['type'] = params?.type_;
-    }
-    if (params?.since) {
-      options.queryParams['since'] = params?.since;
-    }
-    if (params?.videogame) {
-      options.queryParams['videogame'] = params?.videogame;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    request.addQueryParam('type', params?.type);
+    request.addQueryParam('since', params?.since);
+    request.addQueryParam('videogame', params?.videogame);
+    return this.client.call(request);
   }
 
   /**
@@ -187,50 +124,30 @@ export class IncidentsService extends BaseService {
    * @param {any[]} [sort] - Options to sort results <br/>For more information on sorting, see [docs](/docs/filtering-and-sorting#sort).
    * @param {Page} [page] - Pagination in the form of `page=2` or `page[size]=30&page[number]=2`
    * @param {number} [perPage] - Equivalent to `page[size]`
-   * @param {any[]} [type_] - Filter by result type(s)
+   * @param {any[]} [type] - Filter by result type(s)
    * @param {string} [since] - Filter out older results
    * @param {VideogameIdOrSlug[]} [videogame] - Filter by videogame(s)
    * @returns {Promise<HttpResponse<Incident[]>>} A list of created or updated entities
    */
-  async getIncidents(
-    params?: GetIncidentsParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Incident[]>> {
-    const path = '/incidents';
-    const options: any = {
+  async getIncidents(params?: GetIncidentsParams, requestConfig?: RequestConfig): Promise<HttpResponse<Incident[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/incidents',
+      config: this.config,
       responseSchema: z.array(incidentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    if (params?.type_) {
-      options.queryParams['type'] = params?.type_;
-    }
-    if (params?.since) {
-      options.queryParams['since'] = params?.since;
-    }
-    if (params?.videogame) {
-      options.queryParams['videogame'] = params?.videogame;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    request.addQueryParam('type', params?.type);
+    request.addQueryParam('since', params?.since);
+    request.addQueryParam('videogame', params?.videogame);
+    return this.client.call(request);
   }
 }

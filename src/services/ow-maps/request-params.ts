@@ -1,12 +1,7 @@
-import {
-  FilterOverOwMaps,
-  RangeOverOwMaps,
-  SearchOverOwMaps,
-  filterOverOwMaps,
-  rangeOverOwMaps,
-  searchOverOwMaps,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverOwMaps, filterOverOwMaps } from './models/filter-over-ow-maps';
+import { RangeOverOwMaps, rangeOverOwMaps } from './models/range-over-ow-maps';
+import { SearchOverOwMaps, searchOverOwMaps } from './models/search-over-ow-maps';
+import { Page, page } from '../common/page';
 
 export interface GetOwMapsParams {
   filter?: FilterOverOwMaps;

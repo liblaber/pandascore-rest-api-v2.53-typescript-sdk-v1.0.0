@@ -1,13 +1,7 @@
-import {
-  FilterOverLoLSeries,
-  Page,
-  RangeOverLoLSeries,
-  SearchOverLoLSeries,
-  filterOverLoLSeries,
-  page,
-  rangeOverLoLSeries,
-  searchOverLoLSeries,
-} from '../common';
+import { FilterOverLoLSeries, filterOverLoLSeries } from './models/filter-over-lo-l-series';
+import { RangeOverLoLSeries, rangeOverLoLSeries } from './models/range-over-lo-l-series';
+import { SearchOverLoLSeries, searchOverLoLSeries } from './models/search-over-lo-l-series';
+import { Page, page } from '../common/page';
 
 export interface GetLolSeriesParams {
   filter?: FilterOverLoLSeries;

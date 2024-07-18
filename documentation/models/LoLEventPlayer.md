@@ -5,7 +5,7 @@
 | Name   | Type                 | Required | Description |
 | :----- | :------------------- | :------- | :---------- |
 | object | LoLEventPlayerObject | ✅       |             |
-| type\_ | LoLEventPlayerType   | ✅       |             |
+| type   | LoLEventPlayerType   | ✅       |             |
 
 # LoLEventPlayerType
 

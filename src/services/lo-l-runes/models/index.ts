@@ -4,6 +4,8 @@ export * from './search-over-lo-l-runes';
 export * from './filter-over-lo-l-runes-reforged';
 export * from './range-over-lo-l-runes-reforged';
 export * from './search-over-lo-l-runes-reforged';
+export * from './lo-l-rune-path';
 export * from './filter-over-lo-l-rune-paths';
 export * from './range-over-lo-l-rune-paths';
 export * from './search-over-lo-l-rune-paths';
+export * from './lo-l-rune-path-runes-object';

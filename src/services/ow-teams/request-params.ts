@@ -1,12 +1,7 @@
-import {
-  FilterOverOwTeams,
-  RangeOverOwTeams,
-  SearchOverOwTeams,
-  filterOverOwTeams,
-  rangeOverOwTeams,
-  searchOverOwTeams,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverOwTeams, filterOverOwTeams } from './models/filter-over-ow-teams';
+import { RangeOverOwTeams, rangeOverOwTeams } from './models/range-over-ow-teams';
+import { SearchOverOwTeams, searchOverOwTeams } from './models/search-over-ow-teams';
+import { Page, page } from '../common/page';
 
 export interface GetOwTeamsParams {
   filter?: FilterOverOwTeams;

@@ -2,7 +2,9 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { MatchIdOrSlug, OwGame, owGameResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { OwGame, owGameResponse } from './models/ow-game';
+import { MatchIdOrSlug } from '../common';
 import { GetOwMatchesMatchIdOrSlugGamesParams } from './request-params';
 
 export class OwGamesService extends BaseService {
@@ -11,21 +13,19 @@ export class OwGamesService extends BaseService {
    * @param {number} owGameId - An Overwatch game ID
    * @returns {Promise<HttpResponse<OwGame>>} An Overwatch game
    */
-  async getOwGamesOwGameId(
-    owGameId: number,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<OwGame>> {
-    const path = this.client.buildPath('/ow/games/{ow_game_id}', { ow_game_id: owGameId });
-    const options: any = {
+  async getOwGamesOwGameId(owGameId: number, requestConfig?: RequestConfig): Promise<HttpResponse<OwGame>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/games/{ow_game_id}',
+      config: this.config,
       responseSchema: owGameResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('ow_game_id', owGameId);
+    return this.client.call(request);
   }
 
   /**
@@ -44,37 +44,23 @@ export class OwGamesService extends BaseService {
     params?: GetOwMatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwGame[]>> {
-    const path = this.client.buildPath('/ow/matches/{match_id_or_slug}/games', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/matches/{match_id_or_slug}/games',
+      config: this.config,
       responseSchema: z.array(owGameResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

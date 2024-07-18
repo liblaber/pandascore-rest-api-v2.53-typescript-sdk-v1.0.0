@@ -31,53 +31,53 @@ List players for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverR6SiegePlayers = {
   active: true,
-  birthday: ["elit "],
-  firstName: ["non aliqua do"],
-  id: [9],
-  lastName: ["estdol"],
-  modifiedAt: ["d"],
-  name: ["aliqua"],
-  nationality: ["fugia"],
-  role: ["aliquip m"],
-  slug: ["hmb8ea9"],
-  teamId: [4],
+  birthday: ["nostrud"],
+  firstName: ["esse enim"],
+  id: [10],
+  lastName: ["anim reprehen"],
+  modifiedAt: ["fugiat"],
+  name: ["ullamco"],
+  nationality: ["sed Duis"],
+  role: ["fugiat amet co"],
+  slug: ["47sl99p_"],
+  teamId: [7],
   videogameId: [videogameId]
 };
 
 const range: RangeOverR6SiegePlayers = {
-  birthday: ["nisi "],
-  firstName: ["Excepteu"],
-  id: [3],
-  lastName: ["exercitat"],
-  modifiedAt: ["r"],
-  name: ["laborum"],
-  nationality: ["eiusmod ipsum "],
-  role: ["conseq"],
-  slug: ["0x8u_0"]
+  birthday: ["dolor"],
+  firstName: ["tempor la"],
+  id: [1],
+  lastName: ["eudese"],
+  modifiedAt: ["laborum "],
+  name: ["labore"],
+  nationality: ["eiusmo"],
+  role: ["non minim"],
+  slug: ["2ezwy23"]
 };
 
 const search: SearchOverR6SiegePlayers = {
-  birthday: "ex elit",
-  firstName: "magna ex ",
-  lastName: "labore ",
-  name: "cillum ut",
-  nationality: "aliquip aliq",
-  role: "deserunt sed",
-  slug: "t99reui"
+  birthday: "minim dolore ea",
+  firstName: "amet commodo ",
+  lastName: "commod",
+  name: "labori",
+  nationality: "aliqua pr",
+  role: "culpa ",
+  slug: "i982ykf2nq"
 };
 const page = 1;
 
-  const { data } = await pandascore.r6SiegePlayers.getR6siegePlayers(
+  const { data } = await pandascoreClient.r6SiegePlayers.getR6siegePlayers(
   {
 		filter: filter,
 		range: range,

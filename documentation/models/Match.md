@@ -11,11 +11,11 @@
 | forfeit             | boolean               | ✅       | Whether match was forfeited                                                                                                                                                                                                                                                     |
 | gameAdvantage       | number                | ✅       | ID of the opponent with a game advantage                                                                                                                                                                                                                                        |
 | games               | Game[]                | ✅       |                                                                                                                                                                                                                                                                                 |
-| id1                 | number                | ✅       |                                                                                                                                                                                                                                                                                 |
-| league1             | BaseLeague            | ✅       |                                                                                                                                                                                                                                                                                 |
+| id                  | number                | ✅       |                                                                                                                                                                                                                                                                                 |
+| league              | BaseLeague            | ✅       |                                                                                                                                                                                                                                                                                 |
 | leagueId            | number                | ✅       |                                                                                                                                                                                                                                                                                 |
 | live                | MatchLive             | ✅       |                                                                                                                                                                                                                                                                                 |
-| matchType1          | MatchType             | ✅       |                                                                                                                                                                                                                                                                                 |
+| matchType           | MatchType             | ✅       |                                                                                                                                                                                                                                                                                 |
 | modifiedAt          | string                | ✅       |                                                                                                                                                                                                                                                                                 |
 | name                | string                | ✅       |                                                                                                                                                                                                                                                                                 |
 | numberOfGames       | number                | ✅       | Number of games                                                                                                                                                                                                                                                                 |
@@ -24,12 +24,12 @@
 | rescheduled         | boolean               | ✅       | Whether match has been rescheduled                                                                                                                                                                                                                                              |
 | results             | MatchResult[]         | ✅       |                                                                                                                                                                                                                                                                                 |
 | scheduledAt         | string                | ✅       |                                                                                                                                                                                                                                                                                 |
-| serie1              | BaseSerie             | ✅       |                                                                                                                                                                                                                                                                                 |
+| serie               | BaseSerie             | ✅       |                                                                                                                                                                                                                                                                                 |
 | serieId             | number                | ✅       |                                                                                                                                                                                                                                                                                 |
 | slug                | string                | ✅       |                                                                                                                                                                                                                                                                                 |
 | status              | MatchStatus           | ✅       |                                                                                                                                                                                                                                                                                 |
 | streamsList         | Stream[]              | ✅       |                                                                                                                                                                                                                                                                                 |
-| tournament1         | BaseTournament        | ✅       |                                                                                                                                                                                                                                                                                 |
+| tournament          | BaseTournament        | ✅       |                                                                                                                                                                                                                                                                                 |
 | tournamentId        | number                | ✅       |                                                                                                                                                                                                                                                                                 |
 | videogame           | any                   | ✅       |                                                                                                                                                                                                                                                                                 |
 | videogameTitle      | MatchVideogameTitle   | ✅       |                                                                                                                                                                                                                                                                                 |
@@ -43,12 +43,12 @@
 
 **Properties**
 
-| Name         | Type        | Required | Description    |
-| :----------- | :---------- | :------- | :------------- |
-| id1          | number      | ✅       |                |
-| name         | string      | ✅       |                |
-| slug         | string      | ✅       |                |
-| videogameId1 | VideogameId | ✅       | A videogame ID |
+| Name        | Type        | Required | Description    |
+| :---------- | :---------- | :------- | :------------- |
+| id          | number      | ✅       |                |
+| name        | string      | ✅       |                |
+| slug        | string      | ✅       |                |
+| videogameId | VideogameId | ✅       | A videogame ID |
 
 # MatchVideogameVersion
 
@@ -71,7 +71,7 @@
 | age         | number  | ✅       | Age of the player, `null` if unknown. When `birthday` is `null`, `age` is an approxiamation. Read more about [players' age](/docs/about-players-age) <br/>**Note**: This field is only present for users running the Historical plan or above. |
 | birthday    | string  | ✅       | Birth day of the player, `YYYY-MM-DD` format. `null` if unknown. <br/>**Note**: This field is only present for users running the Historical plan or above.                                                                                     |
 | firstName   | string  | ✅       | First name of the player. `null` if unknown                                                                                                                                                                                                    |
-| id1         | number  | ✅       | ID of the player                                                                                                                                                                                                                               |
+| id          | number  | ✅       | ID of the player                                                                                                                                                                                                                               |
 | imageUrl    | string  | ✅       | URL to the photo of the player. `null` if not available.                                                                                                                                                                                       |
 | lastName    | string  | ✅       | Last name of the player. `null` if unknown                                                                                                                                                                                                     |
 | modifiedAt  | string  | ✅       |                                                                                                                                                                                                                                                |
@@ -87,7 +87,7 @@
 | Name       | Type   | Required | Description                      |
 | :--------- | :----- | :------- | :------------------------------- |
 | acronym    | string | ✅       |                                  |
-| id1        | number | ✅       |                                  |
+| id         | number | ✅       |                                  |
 | imageUrl   | string | ✅       | URL of the team logo             |
 | location   | string | ✅       | The team's organization location |
 | modifiedAt | string | ✅       |                                  |

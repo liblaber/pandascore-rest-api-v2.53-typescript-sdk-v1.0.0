@@ -2,15 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import {
-  Match,
-  Serie,
-  SerieIdOrSlug,
-  ShortTournament,
-  matchResponse,
-  serieResponse,
-  shortTournamentResponse,
-} from '../common';
+import { Request } from '../../http/transport/request';
+import { Serie, serieResponse } from '../common/serie';
 import {
   GetSeriesParams,
   GetSeriesPastParams,
@@ -22,6 +15,9 @@ import {
   GetSeriesSerieIdOrSlugTournamentsParams,
   GetSeriesUpcomingParams,
 } from './request-params';
+import { SerieIdOrSlug } from '../common';
+import { Match, matchResponse } from '../common/match';
+import { ShortTournament, shortTournamentResponse } from '../common/short-tournament';
 
 export class SeriesService extends BaseService {
   /**
@@ -34,40 +30,24 @@ export class SeriesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Serie[]>>} A list of series
    */
-  async getSeries(
-    params?: GetSeriesParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Serie[]>> {
-    const path = '/series';
-    const options: any = {
+  async getSeries(params?: GetSeriesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Serie[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/series',
+      config: this.config,
       responseSchema: z.array(serieResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -80,40 +60,24 @@ export class SeriesService extends BaseService {
    * @param {number} [perPage] - Equivalent to `page[size]`
    * @returns {Promise<HttpResponse<Serie[]>>} A list of series
    */
-  async getSeriesPast(
-    params?: GetSeriesPastParams,
-    requestConfig?: RequestConfig,
-  ): Promise<HttpResponse<Serie[]>> {
-    const path = '/series/past';
-    const options: any = {
+  async getSeriesPast(params?: GetSeriesPastParams, requestConfig?: RequestConfig): Promise<HttpResponse<Serie[]>> {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/past',
+      config: this.config,
       responseSchema: z.array(serieResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -130,36 +94,23 @@ export class SeriesService extends BaseService {
     params?: GetSeriesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Serie[]>> {
-    const path = '/series/running';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/running',
+      config: this.config,
       responseSchema: z.array(serieResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -176,36 +127,23 @@ export class SeriesService extends BaseService {
     params?: GetSeriesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Serie[]>> {
-    const path = '/series/upcoming';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/upcoming',
+      config: this.config,
       responseSchema: z.array(serieResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -217,19 +155,18 @@ export class SeriesService extends BaseService {
     serieIdOrSlug: SerieIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Serie>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}',
+      config: this.config,
       responseSchema: serieResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -248,38 +185,24 @@ export class SeriesService extends BaseService {
     params?: GetSeriesSerieIdOrSlugMatchesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}/matches', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}/matches',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -298,38 +221,24 @@ export class SeriesService extends BaseService {
     params?: GetSeriesSerieIdOrSlugMatchesPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}/matches/past', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}/matches/past',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -348,38 +257,24 @@ export class SeriesService extends BaseService {
     params?: GetSeriesSerieIdOrSlugMatchesRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}/matches/running', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}/matches/running',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -398,38 +293,24 @@ export class SeriesService extends BaseService {
     params?: GetSeriesSerieIdOrSlugMatchesUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}/matches/upcoming', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}/matches/upcoming',
+      config: this.config,
       responseSchema: z.array(matchResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -448,37 +329,23 @@ export class SeriesService extends BaseService {
     params?: GetSeriesSerieIdOrSlugTournamentsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = this.client.buildPath('/series/{serie_id_or_slug}/tournaments', {
-      serie_id_or_slug: serieIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/series/{serie_id_or_slug}/tournaments',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

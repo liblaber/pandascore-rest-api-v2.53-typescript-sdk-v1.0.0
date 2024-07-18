@@ -31,53 +31,53 @@ List players for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverCodmwPlayers = {
   active: true,
-  birthday: ["ut dolore in"],
-  firstName: ["ipsum eu"],
-  id: [8],
-  lastName: ["non qui la"],
-  modifiedAt: ["i"],
-  name: ["mollit pariatur"],
-  nationality: ["elit quis ut"],
-  role: ["sed deserun"],
-  slug: ["mjcw7hpma"],
-  teamId: [3],
+  birthday: ["laboris s"],
+  firstName: ["ea su"],
+  id: [4],
+  lastName: ["nisi "],
+  modifiedAt: ["sit sed non al"],
+  name: ["ea occaecat "],
+  nationality: ["velit i"],
+  role: ["ut ven"],
+  slug: ["0x"],
+  teamId: [2],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCodmwPlayers = {
-  birthday: ["fugiat"],
-  firstName: ["dolor ul"],
-  id: [1],
-  lastName: ["esse Duis do c"],
-  modifiedAt: ["velit m"],
-  name: ["cillum labor"],
-  nationality: ["sit cupida"],
-  role: ["elit vo"],
-  slug: ["-0cah-72ky"]
+  birthday: ["exdo aute"],
+  firstName: ["fugiat D"],
+  id: [3],
+  lastName: ["anim e"],
+  modifiedAt: ["la"],
+  name: ["ipsum veniam"],
+  nationality: ["nisi min"],
+  role: ["anim aliqua"],
+  slug: ["tdx6k-"]
 };
 
 const search: SearchOverCodmwPlayers = {
-  birthday: "esse nulla L",
-  firstName: "ea quis nulla",
-  lastName: "ipsum",
-  name: "auteeiu",
-  nationality: "labore r",
-  role: "adanim do",
-  slug: "_jq82"
+  birthday: "Ut non amet ",
+  firstName: "dolore comm",
+  lastName: "minim ",
+  name: "amet d",
+  nationality: "ut minim",
+  role: "enimut ex si",
+  slug: "mpp4jva"
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwPlayers.getCodmwPlayers(
+  const { data } = await pandascoreClient.codmwPlayers.getCodmwPlayers(
   {
 		filter: filter,
 		range: range,

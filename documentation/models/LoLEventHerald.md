@@ -5,7 +5,7 @@
 | Name   | Type                 | Required | Description |
 | :----- | :------------------- | :------- | :---------- |
 | object | LoLEventHeraldObject | ✅       |             |
-| type\_ | LoLEventHeraldType   | ✅       |             |
+| type   | LoLEventHeraldType   | ✅       |             |
 
 # LoLEventHeraldType
 

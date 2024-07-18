@@ -3,18 +3,20 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const searchOverStarcraft2Players = z.object({
-  birthday: z.string().optional(),
-  firstName: z.string().optional(),
-  lastName: z.string().optional(),
-  name: z.string().optional(),
-  nationality: z.string().optional(),
-  role: z.string().optional(),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/)
-    .optional(),
+export const searchOverStarcraft2Players: any = z.lazy(() => {
+  return z.object({
+    birthday: z.string().optional(),
+    firstName: z.string().optional(),
+    lastName: z.string().optional(),
+    name: z.string().optional(),
+    nationality: z.string().optional(),
+    role: z.string().optional(),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/)
+      .optional(),
+  });
 });
 
 /**
@@ -34,50 +36,54 @@ export type SearchOverStarcraft2Players = z.infer<typeof searchOverStarcraft2Pla
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverStarcraft2PlayersResponse = z
-  .object({
-    birthday: z.string().optional(),
-    first_name: z.string().optional(),
-    last_name: z.string().optional(),
-    name: z.string().optional(),
-    nationality: z.string().optional(),
-    role: z.string().optional(),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/)
-      .optional(),
-  })
-  .transform((data) => ({
-    birthday: data['birthday'],
-    firstName: data['first_name'],
-    lastName: data['last_name'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-  }));
+export const searchOverStarcraft2PlayersResponse: any = z.lazy(() => {
+  return z
+    .object({
+      birthday: z.string().optional(),
+      first_name: z.string().optional(),
+      last_name: z.string().optional(),
+      name: z.string().optional(),
+      nationality: z.string().optional(),
+      role: z.string().optional(),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/)
+        .optional(),
+    })
+    .transform((data) => ({
+      birthday: data['birthday'],
+      firstName: data['first_name'],
+      lastName: data['last_name'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverStarcraft2PlayersRequest = z
-  .object({
-    birthday: z.string().nullish(),
-    firstName: z.string().nullish(),
-    lastName: z.string().nullish(),
-    name: z.string().nullish(),
-    nationality: z.string().nullish(),
-    role: z.string().nullish(),
-    slug: z.string().nullish(),
-  })
-  .transform((data) => ({
-    birthday: data['birthday'],
-    first_name: data['firstName'],
-    last_name: data['lastName'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-  }));
+export const searchOverStarcraft2PlayersRequest: any = z.lazy(() => {
+  return z
+    .object({
+      birthday: z.string().nullish(),
+      firstName: z.string().nullish(),
+      lastName: z.string().nullish(),
+      name: z.string().nullish(),
+      nationality: z.string().nullish(),
+      role: z.string().nullish(),
+      slug: z.string().nullish(),
+    })
+    .transform((data) => ({
+      birthday: data['birthday'],
+      first_name: data['firstName'],
+      last_name: data['lastName'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+    }));
+});

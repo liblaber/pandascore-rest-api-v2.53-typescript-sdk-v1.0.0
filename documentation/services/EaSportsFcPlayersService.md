@@ -31,53 +31,53 @@ List players for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverFifaPlayers = {
   active: true,
-  birthday: ["volup"],
-  firstName: ["laboris"],
-  id: [4],
-  lastName: ["esse irure"],
-  modifiedAt: ["proid"],
-  name: ["adipisicin"],
-  nationality: ["sed id "],
-  role: ["veniam aliquip"],
-  slug: ["xbh_wy"],
-  teamId: [5],
+  birthday: ["exercita"],
+  firstName: ["eu ex"],
+  id: [9],
+  lastName: ["adipisicing"],
+  modifiedAt: ["in"],
+  name: ["ullamco"],
+  nationality: ["minim c"],
+  role: ["dodolor"],
+  slug: ["8w"],
+  teamId: [6],
   videogameId: [videogameId]
 };
 
 const range: RangeOverFifaPlayers = {
-  birthday: ["exercitation ve"],
-  firstName: ["dolor"],
-  id: [4],
-  lastName: ["occae"],
-  modifiedAt: ["d"],
-  name: ["aliquip"],
-  nationality: ["pariatur mol"],
-  role: ["tempor "],
-  slug: ["1p7h8ie18"]
+  birthday: ["suntdolor "],
+  firstName: ["Ut lab"],
+  id: [5],
+  lastName: ["voluptate in qu"],
+  modifiedAt: ["a"],
+  name: ["inmagna dolore "],
+  nationality: ["veniam"],
+  role: ["cupidatat "],
+  slug: ["tcgk"]
 };
 
 const search: SearchOverFifaPlayers = {
-  birthday: "amet cillum",
-  firstName: "utsunt",
-  lastName: "tempor in do E",
-  name: "irure",
-  nationality: "nulla inci",
-  role: "Ut in ut do",
-  slug: "2dd9e"
+  birthday: "exercita",
+  firstName: "commodo in la",
+  lastName: "mollit adipisi",
+  name: "tempor magna",
+  nationality: "minim iru",
+  role: "aliquip",
+  slug: "dh5195t0x"
 };
 const page = 1;
 
-  const { data } = await pandascore.eaSportsFcPlayers.getFifaPlayers(
+  const { data } = await pandascoreClient.eaSportsFcPlayers.getFifaPlayers(
   {
 		filter: filter,
 		range: range,

@@ -32,30 +32,30 @@ List spells
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverLoLSpells = {
-    id: [7],
-    name: ['offici'],
+    id: [8],
+    name: ['laborum dolor'],
     videogameVersion: [],
   };
 
   const range: RangeOverLoLSpells = {
-    id: [5],
-    name: ['et esse qui '],
+    id: [2],
+    name: ['dolore com'],
   };
 
   const search: SearchOverLoLSpells = {
-    name: 'veniam',
+    name: 'veniam ea',
   };
   const page = 1;
 
-  const { data } = await pandascore.loLSpells.getLolSpells({
+  const { data } = await pandascoreClient.loLSpells.getLolSpells({
     filter: filter,
     range: range,
     sort: [[]],
@@ -88,14 +88,14 @@ Get a single spell by ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.loLSpells.getLolSpellsLolSpellId(4);
+  const { data } = await pandascoreClient.loLSpells.getLolSpellsLolSpellId(8);
 
   console.log(data);
 })();

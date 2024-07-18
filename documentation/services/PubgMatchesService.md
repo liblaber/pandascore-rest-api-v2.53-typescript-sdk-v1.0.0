@@ -34,15 +34,15 @@ List matches for the PUBG videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -50,36 +50,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverPubgMatchesVideogameTitle = 5;
 
-const filterOverPubgMatchesVideogameVersion = "75.81221866267";
+const filterOverPubgMatchesVideogameVersion = "036.43414";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverPubgMatches = {
-  beginAt: ["aliquip"],
+  beginAt: ["aute eiusmod "],
   detailedStats: true,
   draw: true,
-  endAt: ["ipsum "],
+  endAt: ["ullamco labor"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [10],
-  leagueId: [7],
+  id: [9],
+  leagueId: [2],
   matchType: [matchType],
-  modifiedAt: ["volu"],
-  name: ["sunt "],
+  modifiedAt: ["nisi irure culp"],
+  name: ["aute "],
   notStarted: true,
-  numberOfGames: [1],
+  numberOfGames: [10],
   opponentId: [filterOverPubgMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["cul"],
-  serieId: [2],
-  slug: ["hTN7dT-f"],
+  scheduledAt: ["null"],
+  serieId: [4],
+  slug: ["1wzZ5GZv"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [7],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverPubgMatchesVideogameTitle],
@@ -91,25 +91,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverPubgMatches = {
-  beginAt: ["do esse"],
+  beginAt: ["ut cillum in "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["qui do"],
+  endAt: ["anim"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["incididu"],
-  name: ["sint in aute "],
-  numberOfGames: [9],
-  scheduledAt: ["Lorem cupidatat"],
-  slug: ["-qt"],
+  modifiedAt: ["in ut min"],
+  name: ["eu in"],
+  numberOfGames: [10],
+  scheduledAt: ["in "],
+  slug: ["FDoevNsA"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -121,14 +121,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverPubgMatches = {
   matchType: matchType,
-  name: "esse ut sunt",
-  slug: "4e1hZ",
+  name: "adipisic",
+  slug: "H",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.pubgMatches.getPubgMatches(
+  const { data } = await pandascoreClient.pubgMatches.getPubgMatches(
   {
 		filter: filter,
 		range: range,
@@ -168,15 +168,15 @@ List past PUBG matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -184,36 +184,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverPubgMatchesVideogameTitle = 5;
 
-const filterOverPubgMatchesVideogameVersion = "75.81221866267";
+const filterOverPubgMatchesVideogameVersion = "036.43414";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverPubgMatches = {
-  beginAt: ["aliquip"],
+  beginAt: ["aute eiusmod "],
   detailedStats: true,
   draw: true,
-  endAt: ["ipsum "],
+  endAt: ["ullamco labor"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [10],
-  leagueId: [7],
+  id: [9],
+  leagueId: [2],
   matchType: [matchType],
-  modifiedAt: ["volu"],
-  name: ["sunt "],
+  modifiedAt: ["nisi irure culp"],
+  name: ["aute "],
   notStarted: true,
-  numberOfGames: [1],
+  numberOfGames: [10],
   opponentId: [filterOverPubgMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["cul"],
-  serieId: [2],
-  slug: ["hTN7dT-f"],
+  scheduledAt: ["null"],
+  serieId: [4],
+  slug: ["1wzZ5GZv"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [7],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverPubgMatchesVideogameTitle],
@@ -225,25 +225,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverPubgMatches = {
-  beginAt: ["do esse"],
+  beginAt: ["ut cillum in "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["qui do"],
+  endAt: ["anim"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["incididu"],
-  name: ["sint in aute "],
-  numberOfGames: [9],
-  scheduledAt: ["Lorem cupidatat"],
-  slug: ["-qt"],
+  modifiedAt: ["in ut min"],
+  name: ["eu in"],
+  numberOfGames: [10],
+  scheduledAt: ["in "],
+  slug: ["FDoevNsA"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -255,14 +255,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverPubgMatches = {
   matchType: matchType,
-  name: "esse ut sunt",
-  slug: "4e1hZ",
+  name: "adipisic",
+  slug: "H",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.pubgMatches.getPubgMatchesPast(
+  const { data } = await pandascoreClient.pubgMatches.getPubgMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -302,15 +302,15 @@ List running PUBG matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -318,36 +318,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverPubgMatchesVideogameTitle = 5;
 
-const filterOverPubgMatchesVideogameVersion = "75.81221866267";
+const filterOverPubgMatchesVideogameVersion = "036.43414";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverPubgMatches = {
-  beginAt: ["aliquip"],
+  beginAt: ["aute eiusmod "],
   detailedStats: true,
   draw: true,
-  endAt: ["ipsum "],
+  endAt: ["ullamco labor"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [10],
-  leagueId: [7],
+  id: [9],
+  leagueId: [2],
   matchType: [matchType],
-  modifiedAt: ["volu"],
-  name: ["sunt "],
+  modifiedAt: ["nisi irure culp"],
+  name: ["aute "],
   notStarted: true,
-  numberOfGames: [1],
+  numberOfGames: [10],
   opponentId: [filterOverPubgMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["cul"],
-  serieId: [2],
-  slug: ["hTN7dT-f"],
+  scheduledAt: ["null"],
+  serieId: [4],
+  slug: ["1wzZ5GZv"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [7],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverPubgMatchesVideogameTitle],
@@ -359,25 +359,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverPubgMatches = {
-  beginAt: ["do esse"],
+  beginAt: ["ut cillum in "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["qui do"],
+  endAt: ["anim"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["incididu"],
-  name: ["sint in aute "],
-  numberOfGames: [9],
-  scheduledAt: ["Lorem cupidatat"],
-  slug: ["-qt"],
+  modifiedAt: ["in ut min"],
+  name: ["eu in"],
+  numberOfGames: [10],
+  scheduledAt: ["in "],
+  slug: ["FDoevNsA"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -389,14 +389,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverPubgMatches = {
   matchType: matchType,
-  name: "esse ut sunt",
-  slug: "4e1hZ",
+  name: "adipisic",
+  slug: "H",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.pubgMatches.getPubgMatchesRunning(
+  const { data } = await pandascoreClient.pubgMatches.getPubgMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -436,15 +436,15 @@ List upcoming PUBG matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -452,36 +452,36 @@ const videogameIdOrSlug = VideogameId.1;;
 
 const filterOverPubgMatchesVideogameTitle = 5;
 
-const filterOverPubgMatchesVideogameVersion = "75.81221866267";
+const filterOverPubgMatchesVideogameVersion = "036.43414";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverPubgMatches = {
-  beginAt: ["aliquip"],
+  beginAt: ["aute eiusmod "],
   detailedStats: true,
   draw: true,
-  endAt: ["ipsum "],
+  endAt: ["ullamco labor"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [10],
-  leagueId: [7],
+  id: [9],
+  leagueId: [2],
   matchType: [matchType],
-  modifiedAt: ["volu"],
-  name: ["sunt "],
+  modifiedAt: ["nisi irure culp"],
+  name: ["aute "],
   notStarted: true,
-  numberOfGames: [1],
+  numberOfGames: [10],
   opponentId: [filterOverPubgMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["cul"],
-  serieId: [2],
-  slug: ["hTN7dT-f"],
+  scheduledAt: ["null"],
+  serieId: [4],
+  slug: ["1wzZ5GZv"],
   status: [matchStatus],
-  tournamentId: [5],
+  tournamentId: [7],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverPubgMatchesVideogameTitle],
@@ -493,25 +493,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverPubgMatches = {
-  beginAt: ["do esse"],
+  beginAt: ["ut cillum in "],
   detailedStats: [true],
   draw: [true],
-  endAt: ["qui do"],
+  endAt: ["anim"],
   forfeit: [true],
-  id: [3],
+  id: [2],
   matchType: [matchType],
-  modifiedAt: ["incididu"],
-  name: ["sint in aute "],
-  numberOfGames: [9],
-  scheduledAt: ["Lorem cupidatat"],
-  slug: ["-qt"],
+  modifiedAt: ["in ut min"],
+  name: ["eu in"],
+  numberOfGames: [10],
+  scheduledAt: ["in "],
+  slug: ["FDoevNsA"],
   status: [matchStatus],
-  tournamentId: [10],
+  tournamentId: [5],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -523,14 +523,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverPubgMatches = {
   matchType: matchType,
-  name: "esse ut sunt",
-  slug: "4e1hZ",
+  name: "adipisic",
+  slug: "H",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.pubgMatches.getPubgMatchesUpcoming(
+  const { data } = await pandascoreClient.pubgMatches.getPubgMatchesUpcoming(
   {
 		filter: filter,
 		range: range,

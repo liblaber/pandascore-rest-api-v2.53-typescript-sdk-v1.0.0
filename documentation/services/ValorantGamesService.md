@@ -29,14 +29,14 @@ Get a single Valorant game by ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.valorantGames.getValorantGamesValorantGameId(1);
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameId(1);
 
   console.log(data);
 })();
@@ -64,16 +64,16 @@ List events for a given Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.valorantGames.getValorantGamesValorantGameIdEvents(9, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdEvents(9, {
     page: page,
     perPage: 50,
   });
@@ -104,16 +104,16 @@ List rounds in a Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.valorantGames.getValorantGamesValorantGameIdRounds(6, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdRounds(2, {
     page: page,
     perPage: 50,
   });
@@ -148,39 +148,39 @@ List games for a given Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.finished;
 
 const filter: FilterOverValorantGames = {
-  beginAt: ["enim in"],
+  beginAt: ["in nisi"],
   complete: true,
   detailedStats: true,
-  endAt: ["velit "],
+  endAt: ["e"],
   finished: true,
   forfeit: true,
-  id: [1],
-  length: [2],
-  position: [8],
+  id: [6],
+  length: [7],
+  position: [2],
   status: [gameStatus]
 };
 const gameStatus = GameStatus.finished;
 
 const range: RangeOverValorantGames = {
-  beginAt: ["sint"],
+  beginAt: ["au"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["i"],
+  endAt: ["nulla"],
   finished: [true],
   forfeit: [true],
-  id: [9],
-  length: [3],
-  position: [3],
+  id: [5],
+  length: [10],
+  position: [10],
   status: [gameStatus]
 };
 const gameStatus = GameStatus.finished;
@@ -190,7 +190,7 @@ const search: SearchOverValorantGames = {
 };
 const page = 1;
 
-  const { data } = await pandascore.valorantGames.getValorantMatchesMatchIdOrSlugGames(
+  const { data } = await pandascoreClient.valorantGames.getValorantMatchesMatchIdOrSlugGames(
   ,
   {
 		filter: filter,

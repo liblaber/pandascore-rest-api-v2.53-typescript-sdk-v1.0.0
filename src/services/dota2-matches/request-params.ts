@@ -1,13 +1,7 @@
-import {
-  FilterOverDota2Matches,
-  Page,
-  RangeOverDota2Matches,
-  SearchOverDota2Matches,
-  filterOverDota2Matches,
-  page,
-  rangeOverDota2Matches,
-  searchOverDota2Matches,
-} from '../common';
+import { FilterOverDota2Matches, filterOverDota2Matches } from './models/filter-over-dota2-matches';
+import { RangeOverDota2Matches, rangeOverDota2Matches } from './models/range-over-dota2-matches';
+import { SearchOverDota2Matches, searchOverDota2Matches } from './models/search-over-dota2-matches';
+import { Page, page } from '../common/page';
 
 export interface GetDota2MatchesParams {
   filter?: FilterOverDota2Matches;

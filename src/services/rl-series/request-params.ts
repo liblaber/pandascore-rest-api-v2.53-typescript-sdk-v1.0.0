@@ -1,13 +1,7 @@
-import {
-  FilterOverRlSeries,
-  Page,
-  RangeOverRlSeries,
-  SearchOverRlSeries,
-  filterOverRlSeries,
-  page,
-  rangeOverRlSeries,
-  searchOverRlSeries,
-} from '../common';
+import { FilterOverRlSeries, filterOverRlSeries } from './models/filter-over-rl-series';
+import { RangeOverRlSeries, rangeOverRlSeries } from './models/range-over-rl-series';
+import { SearchOverRlSeries, searchOverRlSeries } from './models/search-over-rl-series';
+import { Page, page } from '../common/page';
 
 export interface GetRlSeriesParams {
   filter?: FilterOverRlSeries;

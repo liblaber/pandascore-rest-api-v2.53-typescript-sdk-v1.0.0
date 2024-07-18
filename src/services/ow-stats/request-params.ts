@@ -1,4 +1,4 @@
 export interface GetOwPlayersPlayerIdOrSlugStatsParams {
-  from_?: string;
+  from?: string;
   to?: string;
 }

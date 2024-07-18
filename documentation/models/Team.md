@@ -6,7 +6,7 @@
 | :--------------- | :----------- | :------- | :------------------------------- |
 | acronym          | string       | ✅       |                                  |
 | currentVideogame | any          | ✅       |                                  |
-| id1              | number       | ✅       |                                  |
+| id               | number       | ✅       |                                  |
 | imageUrl         | string       | ✅       | URL of the team logo             |
 | location         | string       | ✅       | The team's organization location |
 | modifiedAt       | string       | ✅       |                                  |

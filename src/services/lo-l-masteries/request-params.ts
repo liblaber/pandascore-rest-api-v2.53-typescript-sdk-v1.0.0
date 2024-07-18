@@ -1,12 +1,7 @@
-import {
-  FilterOverLoLMasteries,
-  RangeOverLoLMasteries,
-  SearchOverLoLMasteries,
-  filterOverLoLMasteries,
-  rangeOverLoLMasteries,
-  searchOverLoLMasteries,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverLoLMasteries, filterOverLoLMasteries } from './models/filter-over-lo-l-masteries';
+import { RangeOverLoLMasteries, rangeOverLoLMasteries } from './models/range-over-lo-l-masteries';
+import { SearchOverLoLMasteries, searchOverLoLMasteries } from './models/search-over-lo-l-masteries';
+import { Page, page } from '../common/page';
 
 export interface GetLolMasteriesParams {
   filter?: FilterOverLoLMasteries;

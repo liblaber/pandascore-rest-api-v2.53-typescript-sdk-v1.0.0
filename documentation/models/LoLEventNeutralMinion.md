@@ -5,7 +5,7 @@
 | Name   | Type                        | Required | Description |
 | :----- | :-------------------------- | :------- | :---------- |
 | object | LoLEventNeutralMinionObject | ✅       |             |
-| type\_ | LoLEventNeutralMinionType   | ✅       |             |
+| type   | LoLEventNeutralMinionType   | ✅       |             |
 
 # LoLEventNeutralMinionType
 

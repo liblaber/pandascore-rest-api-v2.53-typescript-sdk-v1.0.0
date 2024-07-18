@@ -1,29 +1,27 @@
 import { z } from 'zod';
-import {
-  csgoStatsCounts,
-  csgoStatsCountsRequest,
-  csgoStatsCountsResponse,
-} from '../../common/csgo-stats-counts';
+import { csgoStatsCounts, csgoStatsCountsRequest, csgoStatsCountsResponse } from './csgo-stats-counts';
 import {
   csgoPlayerStatsGameAverages,
   csgoPlayerStatsGameAveragesRequest,
   csgoPlayerStatsGameAveragesResponse,
-} from '../../common/csgo-player-stats-game-averages';
+} from './csgo-player-stats-game-averages';
 import {
   csgoStatsRoundAverages,
   csgoStatsRoundAveragesRequest,
   csgoStatsRoundAveragesResponse,
-} from '../../common/csgo-stats-round-averages';
+} from './csgo-stats-round-averages';
 import { tournament, tournamentRequest, tournamentResponse } from '../../common/tournament';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoPlayerStatsByTournament = z.object({
-  counts: csgoStatsCounts,
-  perGameAverages: csgoPlayerStatsGameAverages,
-  perRoundAverages: csgoStatsRoundAverages,
-  tournament: tournament,
+export const csgoPlayerStatsByTournament: any = z.lazy(() => {
+  return z.object({
+    counts: csgoStatsCounts,
+    perGameAverages: csgoPlayerStatsGameAverages,
+    perRoundAverages: csgoStatsRoundAverages,
+    tournament: tournament,
+  });
 });
 
 /**
@@ -40,34 +38,38 @@ export type CsgoPlayerStatsByTournament = z.infer<typeof csgoPlayerStatsByTourna
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoPlayerStatsByTournamentResponse = z
-  .object({
-    counts: csgoStatsCountsResponse,
-    per_game_averages: csgoPlayerStatsGameAveragesResponse,
-    per_round_averages: csgoStatsRoundAveragesResponse,
-    tournament: tournamentResponse,
-  })
-  .transform((data) => ({
-    counts: data['counts'],
-    perGameAverages: data['per_game_averages'],
-    perRoundAverages: data['per_round_averages'],
-    tournament: data['tournament'],
-  }));
+export const csgoPlayerStatsByTournamentResponse: any = z.lazy(() => {
+  return z
+    .object({
+      counts: csgoStatsCountsResponse,
+      per_game_averages: csgoPlayerStatsGameAveragesResponse,
+      per_round_averages: csgoStatsRoundAveragesResponse,
+      tournament: tournamentResponse,
+    })
+    .transform((data) => ({
+      counts: data['counts'],
+      perGameAverages: data['per_game_averages'],
+      perRoundAverages: data['per_round_averages'],
+      tournament: data['tournament'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoPlayerStatsByTournamentRequest = z
-  .object({
-    counts: csgoStatsCountsRequest.nullish(),
-    perGameAverages: csgoPlayerStatsGameAveragesRequest.nullish(),
-    perRoundAverages: csgoStatsRoundAveragesRequest.nullish(),
-    tournament: tournamentRequest.nullish(),
-  })
-  .transform((data) => ({
-    counts: data['counts'],
-    per_game_averages: data['perGameAverages'],
-    per_round_averages: data['perRoundAverages'],
-    tournament: data['tournament'],
-  }));
+export const csgoPlayerStatsByTournamentRequest: any = z.lazy(() => {
+  return z
+    .object({
+      counts: csgoStatsCountsRequest.nullish(),
+      perGameAverages: csgoPlayerStatsGameAveragesRequest.nullish(),
+      perRoundAverages: csgoStatsRoundAveragesRequest.nullish(),
+      tournament: tournamentRequest.nullish(),
+    })
+    .transform((data) => ({
+      counts: data['counts'],
+      per_game_averages: data['perGameAverages'],
+      per_round_averages: data['perRoundAverages'],
+      tournament: data['tournament'],
+    }));
+});

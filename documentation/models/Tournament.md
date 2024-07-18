@@ -10,14 +10,14 @@
 | expectedRoster | TournamentRosterItem[]   | ✅       |                                                                                                              |
 | hasBracket     | boolean                  | ✅       | Whether the tournament has a bracket                                                                         |
 | id             | number                   | ✅       |                                                                                                              |
-| league1        | BaseLeague               | ✅       |                                                                                                              |
+| league         | BaseLeague               | ✅       |                                                                                                              |
 | leagueId       | number                   | ✅       |                                                                                                              |
 | liveSupported  | boolean                  | ✅       | Whether live is supported                                                                                    |
 | matches        | BaseMatch[]              | ✅       |                                                                                                              |
 | modifiedAt     | string                   | ✅       |                                                                                                              |
 | name           | string                   | ✅       |                                                                                                              |
 | prizepool      | string                   | ✅       |                                                                                                              |
-| serie1         | BaseSerie                | ✅       |                                                                                                              |
+| serie          | BaseSerie                | ✅       |                                                                                                              |
 | serieId        | number                   | ✅       |                                                                                                              |
 | slug           | string                   | ✅       |                                                                                                              |
 | teams          | BaseTeam[]               | ✅       |                                                                                                              |
@@ -46,12 +46,12 @@ The tier of the tournament, ranging from 'S' to 'Unranked'. Ranking 'S' > 'A' > 
 
 **Properties**
 
-| Name         | Type        | Required | Description    |
-| :----------- | :---------- | :------- | :------------- |
-| id           | number      | ✅       |                |
-| name         | string      | ✅       |                |
-| slug         | string      | ✅       |                |
-| videogameId1 | VideogameId | ✅       | A videogame ID |
+| Name        | Type        | Required | Description    |
+| :---------- | :---------- | :------- | :------------- |
+| id          | number      | ✅       |                |
+| name        | string      | ✅       |                |
+| slug        | string      | ✅       |                |
+| videogameId | VideogameId | ✅       | A videogame ID |
 
 # TournamentWinnerId
 

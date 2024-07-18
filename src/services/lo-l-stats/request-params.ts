@@ -1,17 +1,15 @@
 import {
   GetLolPlayersPlayerIdOrSlugStatsSide,
-  Page,
-  VideogameVersionOrAll,
   getLolPlayersPlayerIdOrSlugStatsSide,
-  page,
-  videogameVersionOrAll,
-} from '../common';
+} from './models/get-lol-players-player-id-or-slug-stats-side';
+import { VideogameVersionOrAll, videogameVersionOrAll } from '../common/videogame-version-or-all';
+import { Page, page } from '../common/page';
 
 export interface GetLolPlayersPlayerIdOrSlugStatsParams {
   gamesCount?: number;
   side?: GetLolPlayersPlayerIdOrSlugStatsSide;
   videogameVersion?: VideogameVersionOrAll;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 
@@ -39,7 +37,7 @@ export interface GetLolTeamsTeamIdOrSlugStatsParams {
   gamesCount?: number;
   side?: GetLolPlayersPlayerIdOrSlugStatsSide;
   videogameVersion?: VideogameVersionOrAll;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 

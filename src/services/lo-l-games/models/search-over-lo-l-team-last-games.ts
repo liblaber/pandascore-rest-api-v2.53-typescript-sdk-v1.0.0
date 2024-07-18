@@ -5,9 +5,11 @@ import { opponentType } from '../../common/opponent-type';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const searchOverLoLTeamLastGames = z.object({
-  status: gameStatus.optional(),
-  winnerType: opponentType.optional(),
+export const searchOverLoLTeamLastGames: any = z.lazy(() => {
+  return z.object({
+    status: gameStatus.optional(),
+    winnerType: opponentType.optional(),
+  });
 });
 
 /**
@@ -22,23 +24,25 @@ export type SearchOverLoLTeamLastGames = z.infer<typeof searchOverLoLTeamLastGam
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverLoLTeamLastGamesResponse = z
-  .object({
-    status: gameStatus.optional(),
-    winner_type: opponentType.optional(),
-  })
-  .transform((data) => ({
-    status: data['status'],
-    winnerType: data['winner_type'],
-  }));
+export const searchOverLoLTeamLastGamesResponse: any = z.lazy(() => {
+  return z
+    .object({
+      status: gameStatus.optional(),
+      winner_type: opponentType.optional(),
+    })
+    .transform((data) => ({
+      status: data['status'],
+      winnerType: data['winner_type'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverLoLTeamLastGamesRequest = z
-  .object({ status: gameStatus.nullish(), winnerType: opponentType.nullish() })
-  .transform((data) => ({
+export const searchOverLoLTeamLastGamesRequest: any = z.lazy(() => {
+  return z.object({ status: gameStatus.nullish(), winnerType: opponentType.nullish() }).transform((data) => ({
     status: data['status'],
     winner_type: data['winnerType'],
   }));
+});

@@ -1,13 +1,13 @@
 import {
   FilterOverKogShortTournaments,
-  Page,
-  RangeOverKogShortTournaments,
-  SearchOverKogShortTournaments,
   filterOverKogShortTournaments,
-  page,
-  rangeOverKogShortTournaments,
+} from './models/filter-over-kog-short-tournaments';
+import { RangeOverKogShortTournaments, rangeOverKogShortTournaments } from './models/range-over-kog-short-tournaments';
+import {
+  SearchOverKogShortTournaments,
   searchOverKogShortTournaments,
-} from '../common';
+} from './models/search-over-kog-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetKogTournamentsParams {
   filter?: FilterOverKogShortTournaments;

@@ -31,42 +31,42 @@ List teams for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverCodmwTeams = {
-  acronym: ["eiusmod offi"],
-  id: [9],
-  location: ["culpa "],
-  modifiedAt: ["proident repreh"],
-  name: ["officia"],
-  slug: ["ypcnpac"],
+  acronym: ["tempo"],
+  id: [7],
+  location: ["nisi Excepteur"],
+  modifiedAt: ["veniam est"],
+  name: ["proiden"],
+  slug: ["ffzyrcp"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCodmwTeams = {
-  acronym: ["addolor "],
-  id: [1],
-  location: ["adipisicin"],
-  modifiedAt: ["r"],
-  name: ["exercitation d"],
-  slug: ["6mgpdh"]
+  acronym: ["fugiat "],
+  id: [2],
+  location: ["consectetur i"],
+  modifiedAt: ["ullam"],
+  name: ["ut anim n"],
+  slug: ["ak"]
 };
 
 const search: SearchOverCodmwTeams = {
-  acronym: "eu in veniam ",
-  location: "dolor cupida",
-  name: "nisiipsum ",
-  slug: "a4u9"
+  acronym: "proident",
+  location: "non ess",
+  name: "in ut con",
+  slug: "ap_"
 };
 const page = 1;
 
-  const { data } = await pandascore.codmwTeams.getCodmwTeams(
+  const { data } = await pandascoreClient.codmwTeams.getCodmwTeams(
   {
 		filter: filter,
 		range: range,

@@ -7,4 +7,4 @@ Rosters for a a series or a tournament with team participants
 | Name    | Type             | Required | Description     |
 | :------ | :--------------- | :------- | :-------------- |
 | rosters | Team[]           | ✅       | A list of teams |
-| type\_  | OpponentTypeTeam | ✅       |                 |
+| type    | OpponentTypeTeam | ✅       |                 |

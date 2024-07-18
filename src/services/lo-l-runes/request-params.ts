@@ -1,24 +1,13 @@
-import {
-  FilterOverLoLRunePaths,
-  FilterOverLoLRunes,
-  FilterOverLoLRunesReforged,
-  RangeOverLoLRunePaths,
-  RangeOverLoLRunes,
-  RangeOverLoLRunesReforged,
-  SearchOverLoLRunePaths,
-  SearchOverLoLRunes,
-  SearchOverLoLRunesReforged,
-  filterOverLoLRunePaths,
-  filterOverLoLRunes,
-  filterOverLoLRunesReforged,
-  rangeOverLoLRunePaths,
-  rangeOverLoLRunes,
-  rangeOverLoLRunesReforged,
-  searchOverLoLRunePaths,
-  searchOverLoLRunes,
-  searchOverLoLRunesReforged,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverLoLRunes, filterOverLoLRunes } from './models/filter-over-lo-l-runes';
+import { RangeOverLoLRunes, rangeOverLoLRunes } from './models/range-over-lo-l-runes';
+import { SearchOverLoLRunes, searchOverLoLRunes } from './models/search-over-lo-l-runes';
+import { Page, page } from '../common/page';
+import { FilterOverLoLRunesReforged, filterOverLoLRunesReforged } from './models/filter-over-lo-l-runes-reforged';
+import { RangeOverLoLRunesReforged, rangeOverLoLRunesReforged } from './models/range-over-lo-l-runes-reforged';
+import { SearchOverLoLRunesReforged, searchOverLoLRunesReforged } from './models/search-over-lo-l-runes-reforged';
+import { FilterOverLoLRunePaths, filterOverLoLRunePaths } from './models/filter-over-lo-l-rune-paths';
+import { RangeOverLoLRunePaths, rangeOverLoLRunePaths } from './models/range-over-lo-l-rune-paths';
+import { SearchOverLoLRunePaths, searchOverLoLRunePaths } from './models/search-over-lo-l-rune-paths';
 
 export interface GetLolRunesParams {
   filter?: FilterOverLoLRunes;

@@ -2,22 +2,21 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
+import { Request } from '../../http/transport/request';
+import { OwStatsForPlayerByGame, owStatsForPlayerByGameResponse } from './models/ow-stats-for-player-by-game';
+import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TournamentIdOrSlug } from '../common';
 import {
   OwStatsForAllPlayersByMatch,
-  OwStatsForPlayer,
-  OwStatsForPlayerByGame,
-  OwStatsForPlayerByMatch,
-  OwStatsForPlayerBySerie,
-  OwStatsForPlayerByTournament,
   owStatsForAllPlayersByMatchResponse,
-  owStatsForPlayerByGameResponse,
-  owStatsForPlayerByMatchResponse,
-  owStatsForPlayerBySerieResponse,
-  owStatsForPlayerByTournamentResponse,
-  owStatsForPlayerResponse,
-} from './models';
-import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TournamentIdOrSlug } from '../common';
+} from './models/ow-stats-for-all-players-by-match';
+import { OwStatsForPlayerByMatch, owStatsForPlayerByMatchResponse } from './models/ow-stats-for-player-by-match';
+import { OwStatsForPlayer, owStatsForPlayerResponse } from './models/ow-stats-for-player';
 import { GetOwPlayersPlayerIdOrSlugStatsParams } from './request-params';
+import { OwStatsForPlayerBySerie, owStatsForPlayerBySerieResponse } from './models/ow-stats-for-player-by-serie';
+import {
+  OwStatsForPlayerByTournament,
+  owStatsForPlayerByTournamentResponse,
+} from './models/ow-stats-for-player-by-tournament';
 
 export class OwStatsService extends BaseService {
   /**
@@ -31,20 +30,19 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByGame>> {
-    const path = this.client.buildPath('/ow/games/{ow_game_id}/players/{player_id_or_slug}/stats', {
-      ow_game_id: owGameId,
-      player_id_or_slug: playerIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/games/{ow_game_id}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: owStatsForPlayerByGameResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('ow_game_id', owGameId);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -56,19 +54,18 @@ export class OwStatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForAllPlayersByMatch>> {
-    const path = this.client.buildPath('/ow/matches/{match_id_or_slug}/players/stats', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/matches/{match_id_or_slug}/players/stats',
+      config: this.config,
       responseSchema: owStatsForAllPlayersByMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -82,26 +79,25 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByMatch>> {
-    const path = this.client.buildPath(
-      '/ow/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats',
-      { match_id_or_slug: matchIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: owStatsForPlayerByMatchResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
    * Get detailed statistics of a given Overwatch player
    * @param {PlayerIdOrSlug} playerIdOrSlug - A player ID or slug
-   * @param {string} [from_] - Filter out 'from' date
+   * @param {string} [from] - Filter out 'from' date
    * @param {string} [to] - Filter out 'to' date
    * @returns {Promise<HttpResponse<OwStatsForPlayer>>} Statistics of an Overwatch player
    */
@@ -110,26 +106,20 @@ export class OwStatsService extends BaseService {
     params?: GetOwPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayer>> {
-    const path = this.client.buildPath('/ow/players/{player_id_or_slug}/stats', {
-      player_id_or_slug: playerIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: owStatsForPlayerResponse,
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.from_) {
-      options.queryParams['from'] = params?.from_;
-    }
-    if (params?.to) {
-      options.queryParams['to'] = params?.to;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    request.addQueryParam('from', params?.from);
+    request.addQueryParam('to', params?.to);
+    return this.client.call(request);
   }
 
   /**
@@ -143,20 +133,19 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerBySerie>> {
-    const path = this.client.buildPath(
-      '/ow/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      { serie_id_or_slug: serieIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: owStatsForPlayerBySerieResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 
   /**
@@ -170,19 +159,18 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByTournament>> {
-    const path = this.client.buildPath(
-      '/ow/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      { tournament_id_or_slug: tournamentIdOrSlug, player_id_or_slug: playerIdOrSlug },
-    );
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/ow/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
+      config: this.config,
       responseSchema: owStatsForPlayerByTournamentResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
+    request.addPathParam('player_id_or_slug', playerIdOrSlug);
+    return this.client.call(request);
   }
 }

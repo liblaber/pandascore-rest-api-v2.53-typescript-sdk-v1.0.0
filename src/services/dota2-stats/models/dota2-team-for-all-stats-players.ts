@@ -8,14 +8,16 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2TeamForAllStatsPlayers = z.object({
-  id: z.number().gte(1),
-  name: z.string(),
-  players: z.array(dota2PlayerForAllStatsPlayers),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/),
+export const dota2TeamForAllStatsPlayers: any = z.lazy(() => {
+  return z.object({
+    id: z.number().gte(1),
+    name: z.string(),
+    players: z.array(dota2PlayerForAllStatsPlayers),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/),
+  });
 });
 
 /**
@@ -32,37 +34,41 @@ export type Dota2TeamForAllStatsPlayers = z.infer<typeof dota2TeamForAllStatsPla
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2TeamForAllStatsPlayersResponse = z
-  .object({
-    id: z.number().gte(1),
-    name: z.string(),
-    players: z.array(dota2PlayerForAllStatsPlayersResponse),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/),
-  })
-  .transform((data) => ({
-    id: data['id'],
-    name: data['name'],
-    players: data['players'],
-    slug: data['slug'],
-  }));
+export const dota2TeamForAllStatsPlayersResponse: any = z.lazy(() => {
+  return z
+    .object({
+      id: z.number().gte(1),
+      name: z.string(),
+      players: z.array(dota2PlayerForAllStatsPlayersResponse),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/),
+    })
+    .transform((data) => ({
+      id: data['id'],
+      name: data['name'],
+      players: data['players'],
+      slug: data['slug'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2TeamForAllStatsPlayersRequest = z
-  .object({
-    id: z.number().nullish(),
-    name: z.string().nullish(),
-    players: z.array(dota2PlayerForAllStatsPlayersRequest).nullish(),
-    slug: z.string().nullish(),
-  })
-  .transform((data) => ({
-    id: data['id'],
-    name: data['name'],
-    players: data['players'],
-    slug: data['slug'],
-  }));
+export const dota2TeamForAllStatsPlayersRequest: any = z.lazy(() => {
+  return z
+    .object({
+      id: z.number().nullish(),
+      name: z.string().nullish(),
+      players: z.array(dota2PlayerForAllStatsPlayersRequest).nullish(),
+      slug: z.string().nullish(),
+    })
+    .transform((data) => ({
+      id: data['id'],
+      name: data['name'],
+      players: data['players'],
+      slug: data['slug'],
+    }));
+});

@@ -1,13 +1,7 @@
-import {
-  FilterOverOwMatches,
-  Page,
-  RangeOverOwMatches,
-  SearchOverOwMatches,
-  filterOverOwMatches,
-  page,
-  rangeOverOwMatches,
-  searchOverOwMatches,
-} from '../common';
+import { FilterOverOwMatches, filterOverOwMatches } from './models/filter-over-ow-matches';
+import { RangeOverOwMatches, rangeOverOwMatches } from './models/range-over-ow-matches';
+import { SearchOverOwMatches, searchOverOwMatches } from './models/search-over-ow-matches';
+import { Page, page } from '../common/page';
 
 export interface GetOwMatchesParams {
   filter?: FilterOverOwMatches;

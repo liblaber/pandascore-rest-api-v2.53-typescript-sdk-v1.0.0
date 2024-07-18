@@ -1,13 +1,7 @@
-import {
-  FilterOverStarcraft2Matches,
-  Page,
-  RangeOverStarcraft2Matches,
-  SearchOverStarcraft2Matches,
-  filterOverStarcraft2Matches,
-  page,
-  rangeOverStarcraft2Matches,
-  searchOverStarcraft2Matches,
-} from '../common';
+import { FilterOverStarcraft2Matches, filterOverStarcraft2Matches } from './models/filter-over-starcraft2-matches';
+import { RangeOverStarcraft2Matches, rangeOverStarcraft2Matches } from './models/range-over-starcraft2-matches';
+import { SearchOverStarcraft2Matches, searchOverStarcraft2Matches } from './models/search-over-starcraft2-matches';
+import { Page, page } from '../common/page';
 
 export interface GetStarcraft2MatchesParams {
   filter?: FilterOverStarcraft2Matches;

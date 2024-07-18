@@ -1,25 +1,13 @@
-import {
-  FilterOverLeagues,
-  FilterOverSeries,
-  FilterOverShortTournaments,
-  Page,
-  RangeOverLeagues,
-  RangeOverSeries,
-  RangeOverShortTournaments,
-  SearchOverLeagues,
-  SearchOverSeries,
-  SearchOverShortTournaments,
-  filterOverLeagues,
-  filterOverSeries,
-  filterOverShortTournaments,
-  page,
-  rangeOverLeagues,
-  rangeOverSeries,
-  rangeOverShortTournaments,
-  searchOverLeagues,
-  searchOverSeries,
-  searchOverShortTournaments,
-} from '../common';
+import { Page, page } from '../common/page';
+import { FilterOverLeagues, filterOverLeagues } from '../common/filter-over-leagues';
+import { RangeOverLeagues, rangeOverLeagues } from '../common/range-over-leagues';
+import { SearchOverLeagues, searchOverLeagues } from '../common/search-over-leagues';
+import { FilterOverSeries, filterOverSeries } from '../common/filter-over-series';
+import { RangeOverSeries, rangeOverSeries } from '../common/range-over-series';
+import { SearchOverSeries, searchOverSeries } from '../common/search-over-series';
+import { FilterOverShortTournaments, filterOverShortTournaments } from '../common/filter-over-short-tournaments';
+import { RangeOverShortTournaments, rangeOverShortTournaments } from '../common/range-over-short-tournaments';
+import { SearchOverShortTournaments, searchOverShortTournaments } from '../common/search-over-short-tournaments';
 
 export interface GetVideogamesParams {
   page?: Page;

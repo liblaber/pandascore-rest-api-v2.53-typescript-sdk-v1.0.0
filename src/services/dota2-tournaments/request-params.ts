@@ -1,13 +1,16 @@
 import {
   FilterOverDota2ShortTournaments,
-  Page,
-  RangeOverDota2ShortTournaments,
-  SearchOverDota2ShortTournaments,
   filterOverDota2ShortTournaments,
-  page,
+} from './models/filter-over-dota2-short-tournaments';
+import {
+  RangeOverDota2ShortTournaments,
   rangeOverDota2ShortTournaments,
+} from './models/range-over-dota2-short-tournaments';
+import {
+  SearchOverDota2ShortTournaments,
   searchOverDota2ShortTournaments,
-} from '../common';
+} from './models/search-over-dota2-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetDota2TournamentsParams {
   filter?: FilterOverDota2ShortTournaments;

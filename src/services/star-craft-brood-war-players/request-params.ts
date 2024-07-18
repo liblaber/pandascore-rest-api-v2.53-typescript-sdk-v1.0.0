@@ -1,12 +1,16 @@
 import {
   FilterOverStarcraftBroodWarPlayers,
-  RangeOverStarcraftBroodWarPlayers,
-  SearchOverStarcraftBroodWarPlayers,
   filterOverStarcraftBroodWarPlayers,
+} from './models/filter-over-starcraft-brood-war-players';
+import {
+  RangeOverStarcraftBroodWarPlayers,
   rangeOverStarcraftBroodWarPlayers,
+} from './models/range-over-starcraft-brood-war-players';
+import {
+  SearchOverStarcraftBroodWarPlayers,
   searchOverStarcraftBroodWarPlayers,
-} from './models';
-import { Page, page } from '../common';
+} from './models/search-over-starcraft-brood-war-players';
+import { Page, page } from '../common/page';
 
 export interface GetStarcraftBroodWarPlayersParams {
   filter?: FilterOverStarcraftBroodWarPlayers;

@@ -35,52 +35,52 @@ List matches for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLoLMatchesVideogameTitle = 1;
+const filterOverLoLMatchesVideogameTitle = 9;
 
-const filterOverLoLMatchesVideogameVersion = "936417967.301.42";
+const filterOverLoLMatchesVideogameVersion = "076677.94865001934.580355685";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLoLMatches = {
-  beginAt: ["Ut"],
+  beginAt: ["nisi e"],
   detailedStats: true,
   draw: true,
-  endAt: ["aliq"],
+  endAt: ["deserun"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [5],
+  id: [6],
+  leagueId: [10],
   matchType: [matchType],
-  modifiedAt: ["dolor iru"],
-  name: ["ut in repreh"],
+  modifiedAt: ["laborum "],
+  name: ["sint velit"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [123],
   opponentId: [filterOverLoLMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor sunt"],
-  serieId: [5],
-  slug: ["lk"],
+  scheduledAt: ["Duis Lorem"],
+  serieId: [1],
+  slug: ["rki"],
   status: [matchStatus],
-  tournamentId: [9],
+  tournamentId: [6],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverLoLMatchesVideogameTitle],
@@ -92,25 +92,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLoLMatches = {
-  beginAt: ["ullamco ea"],
+  beginAt: ["occaecat"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["pariat"],
+  endAt: ["velit est"],
   forfeit: [true],
-  id: [8],
+  id: [3],
   matchType: [matchType],
-  modifiedAt: ["sint anim "],
-  name: ["Duis in et"],
-  numberOfGames: [123],
-  scheduledAt: ["magna a"],
-  slug: ["l5R6YvV2PWZ"],
+  modifiedAt: ["labori"],
+  name: ["cillum"],
+  numberOfGames: [6],
+  scheduledAt: ["ad dolor qu"],
+  slug: ["XMb"],
   status: [matchStatus],
-  tournamentId: [6],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -122,14 +122,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLoLMatches = {
   matchType: matchType,
-  name: "velit",
-  slug: "az",
+  name: "etocc",
+  slug: "WYcNZudjm l",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLMatches.getLolMatches(
+  const { data } = await pandascoreClient.loLMatches.getLolMatches(
   {
 		filter: filter,
 		range: range,
@@ -169,52 +169,52 @@ List past League of Legends matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLoLMatchesVideogameTitle = 1;
+const filterOverLoLMatchesVideogameTitle = 9;
 
-const filterOverLoLMatchesVideogameVersion = "936417967.301.42";
+const filterOverLoLMatchesVideogameVersion = "076677.94865001934.580355685";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLoLMatches = {
-  beginAt: ["Ut"],
+  beginAt: ["nisi e"],
   detailedStats: true,
   draw: true,
-  endAt: ["aliq"],
+  endAt: ["deserun"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [5],
+  id: [6],
+  leagueId: [10],
   matchType: [matchType],
-  modifiedAt: ["dolor iru"],
-  name: ["ut in repreh"],
+  modifiedAt: ["laborum "],
+  name: ["sint velit"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [123],
   opponentId: [filterOverLoLMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor sunt"],
-  serieId: [5],
-  slug: ["lk"],
+  scheduledAt: ["Duis Lorem"],
+  serieId: [1],
+  slug: ["rki"],
   status: [matchStatus],
-  tournamentId: [9],
+  tournamentId: [6],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverLoLMatchesVideogameTitle],
@@ -226,25 +226,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLoLMatches = {
-  beginAt: ["ullamco ea"],
+  beginAt: ["occaecat"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["pariat"],
+  endAt: ["velit est"],
   forfeit: [true],
-  id: [8],
+  id: [3],
   matchType: [matchType],
-  modifiedAt: ["sint anim "],
-  name: ["Duis in et"],
-  numberOfGames: [123],
-  scheduledAt: ["magna a"],
-  slug: ["l5R6YvV2PWZ"],
+  modifiedAt: ["labori"],
+  name: ["cillum"],
+  numberOfGames: [6],
+  scheduledAt: ["ad dolor qu"],
+  slug: ["XMb"],
   status: [matchStatus],
-  tournamentId: [6],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -256,14 +256,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLoLMatches = {
   matchType: matchType,
-  name: "velit",
-  slug: "az",
+  name: "etocc",
+  slug: "WYcNZudjm l",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLMatches.getLolMatchesPast(
+  const { data } = await pandascoreClient.loLMatches.getLolMatchesPast(
   {
 		filter: filter,
 		range: range,
@@ -303,52 +303,52 @@ List running League of Legends matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLoLMatchesVideogameTitle = 1;
+const filterOverLoLMatchesVideogameTitle = 9;
 
-const filterOverLoLMatchesVideogameVersion = "936417967.301.42";
+const filterOverLoLMatchesVideogameVersion = "076677.94865001934.580355685";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLoLMatches = {
-  beginAt: ["Ut"],
+  beginAt: ["nisi e"],
   detailedStats: true,
   draw: true,
-  endAt: ["aliq"],
+  endAt: ["deserun"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [5],
+  id: [6],
+  leagueId: [10],
   matchType: [matchType],
-  modifiedAt: ["dolor iru"],
-  name: ["ut in repreh"],
+  modifiedAt: ["laborum "],
+  name: ["sint velit"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [123],
   opponentId: [filterOverLoLMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor sunt"],
-  serieId: [5],
-  slug: ["lk"],
+  scheduledAt: ["Duis Lorem"],
+  serieId: [1],
+  slug: ["rki"],
   status: [matchStatus],
-  tournamentId: [9],
+  tournamentId: [6],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverLoLMatchesVideogameTitle],
@@ -360,25 +360,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLoLMatches = {
-  beginAt: ["ullamco ea"],
+  beginAt: ["occaecat"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["pariat"],
+  endAt: ["velit est"],
   forfeit: [true],
-  id: [8],
+  id: [3],
   matchType: [matchType],
-  modifiedAt: ["sint anim "],
-  name: ["Duis in et"],
-  numberOfGames: [123],
-  scheduledAt: ["magna a"],
-  slug: ["l5R6YvV2PWZ"],
+  modifiedAt: ["labori"],
+  name: ["cillum"],
+  numberOfGames: [6],
+  scheduledAt: ["ad dolor qu"],
+  slug: ["XMb"],
   status: [matchStatus],
-  tournamentId: [6],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -390,14 +390,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLoLMatches = {
   matchType: matchType,
-  name: "velit",
-  slug: "az",
+  name: "etocc",
+  slug: "WYcNZudjm l",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLMatches.getLolMatchesRunning(
+  const { data } = await pandascoreClient.loLMatches.getLolMatchesRunning(
   {
 		filter: filter,
 		range: range,
@@ -437,52 +437,52 @@ List upcoming League of Legends matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 3;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
 const videogameIdOrSlug = VideogameId.1;;
 
-const filterOverLoLMatchesVideogameTitle = 1;
+const filterOverLoLMatchesVideogameTitle = 9;
 
-const filterOverLoLMatchesVideogameVersion = "936417967.301.42";
+const filterOverLoLMatchesVideogameVersion = "076677.94865001934.580355685";
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const filter: FilterOverLoLMatches = {
-  beginAt: ["Ut"],
+  beginAt: ["nisi e"],
   detailedStats: true,
   draw: true,
-  endAt: ["aliq"],
+  endAt: ["deserun"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [7],
-  leagueId: [5],
+  id: [6],
+  leagueId: [10],
   matchType: [matchType],
-  modifiedAt: ["dolor iru"],
-  name: ["ut in repreh"],
+  modifiedAt: ["laborum "],
+  name: ["sint velit"],
   notStarted: true,
-  numberOfGames: [7],
+  numberOfGames: [123],
   opponentId: [filterOverLoLMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["dolor sunt"],
-  serieId: [5],
-  slug: ["lk"],
+  scheduledAt: ["Duis Lorem"],
+  serieId: [1],
+  slug: ["rki"],
   status: [matchStatus],
-  tournamentId: [9],
+  tournamentId: [6],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverLoLMatchesVideogameTitle],
@@ -494,25 +494,25 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 1;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
 const range: RangeOverLoLMatches = {
-  beginAt: ["ullamco ea"],
+  beginAt: ["occaecat"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["pariat"],
+  endAt: ["velit est"],
   forfeit: [true],
-  id: [8],
+  id: [3],
   matchType: [matchType],
-  modifiedAt: ["sint anim "],
-  name: ["Duis in et"],
-  numberOfGames: [123],
-  scheduledAt: ["magna a"],
-  slug: ["l5R6YvV2PWZ"],
+  modifiedAt: ["labori"],
+  name: ["cillum"],
+  numberOfGames: [6],
+  scheduledAt: ["ad dolor qu"],
+  slug: ["XMb"],
   status: [matchStatus],
-  tournamentId: [6],
+  tournamentId: [2],
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
@@ -524,14 +524,14 @@ const matchWinnerType = MatchWinnerType.Player;
 
 const search: SearchOverLoLMatches = {
   matchType: matchType,
-  name: "velit",
-  slug: "az",
+  name: "etocc",
+  slug: "WYcNZudjm l",
   status: matchStatus,
   winnerType: matchWinnerType
 };
 const page = 1;
 
-  const { data } = await pandascore.loLMatches.getLolMatchesUpcoming(
+  const { data } = await pandascoreClient.loLMatches.getLolMatchesUpcoming(
   {
 		filter: filter,
 		range: range,
@@ -566,16 +566,16 @@ Get a single League of Legends match by ID or slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.loLMatches.getLolMatchesMatchIdOrSlug();
+  const { data } = await pandascoreClient.loLMatches.getLolMatchesMatchIdOrSlug();
 
   console.log(data);
 })();

@@ -33,43 +33,43 @@ List teams for the Dota 2 videogame for a given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
 const videogameId = VideogameId.1;
 
 const filter: FilterOverDota2Teams = {
-  acronym: ["culpa adip"],
-  id: [9],
-  location: ["elit laboris "],
-  modifiedAt: ["deserunt paria"],
-  name: ["fugiat dolor "],
-  slug: ["kquum"],
+  acronym: ["molli"],
+  id: [3],
+  location: ["qui dolore"],
+  modifiedAt: ["id"],
+  name: ["commodo ex"],
+  slug: ["8h6y1-yo"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverDota2Teams = {
-  acronym: ["nostr"],
-  id: [6],
-  location: ["eiusmod "],
-  modifiedAt: ["dolor do"],
-  name: ["voluptate nisi"],
-  slug: ["2"]
+  acronym: ["ut vel"],
+  id: [10],
+  location: ["ut minim"],
+  modifiedAt: ["veniam mo"],
+  name: ["idelit exercita"],
+  slug: ["psh"]
 };
 
 const search: SearchOverDota2Teams = {
-  acronym: "ut non cup",
-  location: "culpa",
-  name: "fugiat",
-  slug: "33cksm"
+  acronym: "ullamco",
+  location: "in ex",
+  name: "mollit co",
+  slug: "7oiow"
 };
 const page = 1;
 
-  const { data } = await pandascore.dota2Teams.getDota2SeriesSerieIdOrSlugTeams(
+  const { data } = await pandascoreClient.dota2Teams.getDota2SeriesSerieIdOrSlugTeams(
   ,
   {
 		filter: filter,
@@ -110,42 +110,42 @@ List teams for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverDota2Teams = {
-  acronym: ["culpa adip"],
-  id: [9],
-  location: ["elit laboris "],
-  modifiedAt: ["deserunt paria"],
-  name: ["fugiat dolor "],
-  slug: ["kquum"],
+  acronym: ["molli"],
+  id: [3],
+  location: ["qui dolore"],
+  modifiedAt: ["id"],
+  name: ["commodo ex"],
+  slug: ["8h6y1-yo"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverDota2Teams = {
-  acronym: ["nostr"],
-  id: [6],
-  location: ["eiusmod "],
-  modifiedAt: ["dolor do"],
-  name: ["voluptate nisi"],
-  slug: ["2"]
+  acronym: ["ut vel"],
+  id: [10],
+  location: ["ut minim"],
+  modifiedAt: ["veniam mo"],
+  name: ["idelit exercita"],
+  slug: ["psh"]
 };
 
 const search: SearchOverDota2Teams = {
-  acronym: "ut non cup",
-  location: "culpa",
-  name: "fugiat",
-  slug: "33cksm"
+  acronym: "ullamco",
+  location: "in ex",
+  name: "mollit co",
+  slug: "7oiow"
 };
 const page = 1;
 
-  const { data } = await pandascore.dota2Teams.getDota2Teams(
+  const { data } = await pandascoreClient.dota2Teams.getDota2Teams(
   {
 		filter: filter,
 		range: range,

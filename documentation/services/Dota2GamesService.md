@@ -29,14 +29,14 @@ Get a single Dota 2 game by ID
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.dota2Games.getDota2GamesDota2GameId(1);
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameId(7);
 
   console.log(data);
 })();
@@ -64,16 +64,16 @@ List frames for a given Dota 2 game
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const page = 1;
 
-  const { data } = await pandascore.dota2Games.getDota2GamesDota2GameIdFrames(10, {
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameIdFrames(5, {
     page: page,
     perPage: 50,
   });
@@ -108,29 +108,29 @@ List games for a given Dota 2 match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;
 
 const filter: FilterOverDota2Games = {
-  beginAt: ["et ad L"],
+  beginAt: ["ad"],
   complete: true,
   detailedStats: true,
-  endAt: ["eiusmod"],
+  endAt: ["laboris "],
   finished: true,
   firstBlood: [7],
   forfeit: true,
   id: [5],
-  length: [123],
-  matchId: [6],
-  position: [7],
+  length: [2],
+  matchId: [10],
+  position: [2],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -139,16 +139,16 @@ const gameStatus = GameStatus.finished;
 const opponentType = OpponentType.Player;
 
 const range: RangeOverDota2Games = {
-  beginAt: ["sed non proiden"],
+  beginAt: ["Ut"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["anim dolor con"],
+  endAt: ["cillum"],
   finished: [true],
-  firstBlood: [2],
+  firstBlood: [6],
   forfeit: [true],
-  id: [7],
-  length: [5],
-  matchId: [10],
+  id: [4],
+  length: [9],
+  matchId: [2],
   position: [1],
   status: [gameStatus],
   winnerType: [opponentType]
@@ -163,7 +163,7 @@ const search: SearchOverDota2Games = {
 };
 const page = 1;
 
-  const { data } = await pandascore.dota2Games.getDota2MatchesMatchIdOrSlugGames(
+  const { data } = await pandascoreClient.dota2Games.getDota2MatchesMatchIdOrSlugGames(
   ,
   {
 		filter: filter,
@@ -201,16 +201,16 @@ List finished games for a given Dota 2 team
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 3;
+  const teamIdOrSlug = 10;
 const page = 1;
 
-  const { data } = await pandascore.dota2Games.getDota2TeamsTeamIdOrSlugGames(
+  const { data } = await pandascoreClient.dota2Games.getDota2TeamsTeamIdOrSlugGames(
   ,
   {
 		page: page,

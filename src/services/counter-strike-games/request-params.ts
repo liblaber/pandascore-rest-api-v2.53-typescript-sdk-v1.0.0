@@ -1,12 +1,7 @@
-import { Page, page } from '../common';
-import {
-  FilterOverCsgoGames,
-  RangeOverCsgoGames,
-  SearchOverCsgoGames,
-  filterOverCsgoGames,
-  rangeOverCsgoGames,
-  searchOverCsgoGames,
-} from './models';
+import { Page, page } from '../common/page';
+import { FilterOverCsgoGames, filterOverCsgoGames } from './models/filter-over-csgo-games';
+import { RangeOverCsgoGames, rangeOverCsgoGames } from './models/range-over-csgo-games';
+import { SearchOverCsgoGames, searchOverCsgoGames } from './models/search-over-csgo-games';
 
 export interface GetCsgoGamesCsgoGameIdEventsParams {
   page?: Page;

@@ -3,22 +3,25 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const opponent1_5 = z.object({
-  active: z.boolean(),
-  age: z.number().gte(0),
-  birthday: z.string(),
-  firstName: z.string(),
-  id: z.number().gte(1),
-  imageUrl: z.string(),
-  lastName: z.string(),
-  modifiedAt: z.string().min(1),
-  name: z.string(),
-  nationality: z.string(),
-  role: z.string(),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/),
+export const opponent1_5: any = z.lazy(() => {
+  return z.object({
+    active: z.boolean(),
+    age: z.number().gte(0).nullable(),
+    birthday: z.string().nullable(),
+    firstName: z.string().nullable(),
+    id: z.number().gte(1),
+    imageUrl: z.string().nullable(),
+    lastName: z.string().nullable(),
+    modifiedAt: z.string().min(1),
+    name: z.string(),
+    nationality: z.string().nullable(),
+    role: z.string().nullable(),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/)
+      .nullable(),
+  });
 });
 
 /**
@@ -43,69 +46,74 @@ export type Opponent1_5 = z.infer<typeof opponent1_5>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponent1_5Response = z
-  .object({
-    active: z.boolean(),
-    age: z.number().gte(0),
-    birthday: z.string(),
-    first_name: z.string(),
-    id: z.number().gte(1),
-    image_url: z.string(),
-    last_name: z.string(),
-    modified_at: z.string().min(1),
-    name: z.string(),
-    nationality: z.string(),
-    role: z.string(),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/),
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    firstName: data['first_name'],
-    id: data['id'],
-    imageUrl: data['image_url'],
-    lastName: data['last_name'],
-    modifiedAt: data['modified_at'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-  }));
+export const opponent1_5Response: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean(),
+      age: z.number().gte(0).nullable(),
+      birthday: z.string().nullable(),
+      first_name: z.string().nullable(),
+      id: z.number().gte(1),
+      image_url: z.string().nullable(),
+      last_name: z.string().nullable(),
+      modified_at: z.string().min(1),
+      name: z.string(),
+      nationality: z.string().nullable(),
+      role: z.string().nullable(),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/)
+        .nullable(),
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      firstName: data['first_name'],
+      id: data['id'],
+      imageUrl: data['image_url'],
+      lastName: data['last_name'],
+      modifiedAt: data['modified_at'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponent1_5Request = z
-  .object({
-    active: z.boolean().nullish(),
-    age: z.number().nullish(),
-    birthday: z.string().nullish(),
-    firstName: z.string().nullish(),
-    id: z.number().nullish(),
-    imageUrl: z.string().nullish(),
-    lastName: z.string().nullish(),
-    modifiedAt: z.string().nullish(),
-    name: z.string().nullish(),
-    nationality: z.string().nullish(),
-    role: z.string().nullish(),
-    slug: z.string().nullish(),
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    first_name: data['firstName'],
-    id: data['id'],
-    image_url: data['imageUrl'],
-    last_name: data['lastName'],
-    modified_at: data['modifiedAt'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-  }));
+export const opponent1_5Request: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean().nullish(),
+      age: z.number().nullish(),
+      birthday: z.string().nullish(),
+      firstName: z.string().nullish(),
+      id: z.number().nullish(),
+      imageUrl: z.string().nullish(),
+      lastName: z.string().nullish(),
+      modifiedAt: z.string().nullish(),
+      name: z.string().nullish(),
+      nationality: z.string().nullish(),
+      role: z.string().nullish(),
+      slug: z.string().nullish(),
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      first_name: data['firstName'],
+      id: data['id'],
+      image_url: data['imageUrl'],
+      last_name: data['lastName'],
+      modified_at: data['modifiedAt'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+    }));
+});

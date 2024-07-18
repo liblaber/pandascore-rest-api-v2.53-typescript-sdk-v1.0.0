@@ -34,46 +34,46 @@ List series for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['cillu'],
-    endAt: ['ea'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['do non exerc'],
-    name: ['exaute occ'],
-    season: ['occae'],
-    slug: ['sad-g4d'],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
+    leagueId: [3],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['nisi anim sunt'],
-    endAt: ['qui eius'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['dolor do labore'],
-    name: ['minim'],
-    season: ['in ut e'],
-    slug: ['tw0i'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,14 +81,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'veniam labori',
-    season: 'irure occaec',
-    slug: 'ha3nt3',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.dota2Series.getDota2Series({
+  const { data } = await pandascoreClient.dota2Series.getDota2Series({
     filter: filter,
     range: range,
     sort: [[]],
@@ -126,46 +126,46 @@ List past Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['cillu'],
-    endAt: ['ea'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['do non exerc'],
-    name: ['exaute occ'],
-    season: ['occae'],
-    slug: ['sad-g4d'],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
+    leagueId: [3],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['nisi anim sunt'],
-    endAt: ['qui eius'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['dolor do labore'],
-    name: ['minim'],
-    season: ['in ut e'],
-    slug: ['tw0i'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,14 +173,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'veniam labori',
-    season: 'irure occaec',
-    slug: 'ha3nt3',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.dota2Series.getDota2SeriesPast({
+  const { data } = await pandascoreClient.dota2Series.getDota2SeriesPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -218,46 +218,46 @@ List running Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['cillu'],
-    endAt: ['ea'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['do non exerc'],
-    name: ['exaute occ'],
-    season: ['occae'],
-    slug: ['sad-g4d'],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
+    leagueId: [3],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['nisi anim sunt'],
-    endAt: ['qui eius'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['dolor do labore'],
-    name: ['minim'],
-    season: ['in ut e'],
-    slug: ['tw0i'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,14 +265,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'veniam labori',
-    season: 'irure occaec',
-    slug: 'ha3nt3',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.dota2Series.getDota2SeriesRunning({
+  const { data } = await pandascoreClient.dota2Series.getDota2SeriesRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -310,46 +310,46 @@ List upcoming Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['cillu'],
-    endAt: ['ea'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['do non exerc'],
-    name: ['exaute occ'],
-    season: ['occae'],
-    slug: ['sad-g4d'],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
+    leagueId: [3],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['nisi anim sunt'],
-    endAt: ['qui eius'],
-    id: [8],
-    leagueId: [9],
-    modifiedAt: ['dolor do labore'],
-    name: ['minim'],
-    season: ['in ut e'],
-    slug: ['tw0i'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,14 +357,14 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'veniam labori',
-    season: 'irure occaec',
-    slug: 'ha3nt3',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.dota2Series.getDota2SeriesUpcoming({
+  const { data } = await pandascoreClient.dota2Series.getDota2SeriesUpcoming({
     filter: filter,
     range: range,
     sort: [[]],

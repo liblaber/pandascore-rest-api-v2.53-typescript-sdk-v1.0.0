@@ -1,12 +1,7 @@
-import {
-  FilterOverCodmwPlayers,
-  RangeOverCodmwPlayers,
-  SearchOverCodmwPlayers,
-  filterOverCodmwPlayers,
-  rangeOverCodmwPlayers,
-  searchOverCodmwPlayers,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverCodmwPlayers, filterOverCodmwPlayers } from './models/filter-over-codmw-players';
+import { RangeOverCodmwPlayers, rangeOverCodmwPlayers } from './models/range-over-codmw-players';
+import { SearchOverCodmwPlayers, searchOverCodmwPlayers } from './models/search-over-codmw-players';
+import { Page, page } from '../common/page';
 
 export interface GetCodmwPlayersParams {
   filter?: FilterOverCodmwPlayers;

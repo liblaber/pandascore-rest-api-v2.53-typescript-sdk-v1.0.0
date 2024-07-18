@@ -1,13 +1,16 @@
 import {
   FilterOverPubgShortTournaments,
-  Page,
-  RangeOverPubgShortTournaments,
-  SearchOverPubgShortTournaments,
   filterOverPubgShortTournaments,
-  page,
+} from './models/filter-over-pubg-short-tournaments';
+import {
+  RangeOverPubgShortTournaments,
   rangeOverPubgShortTournaments,
+} from './models/range-over-pubg-short-tournaments';
+import {
+  SearchOverPubgShortTournaments,
   searchOverPubgShortTournaments,
-} from '../common';
+} from './models/search-over-pubg-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetPubgTournamentsParams {
   filter?: FilterOverPubgShortTournaments;

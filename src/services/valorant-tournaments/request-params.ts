@@ -1,13 +1,16 @@
 import {
   FilterOverValorantShortTournaments,
-  Page,
-  RangeOverValorantShortTournaments,
-  SearchOverValorantShortTournaments,
   filterOverValorantShortTournaments,
-  page,
+} from './models/filter-over-valorant-short-tournaments';
+import {
+  RangeOverValorantShortTournaments,
   rangeOverValorantShortTournaments,
+} from './models/range-over-valorant-short-tournaments';
+import {
+  SearchOverValorantShortTournaments,
   searchOverValorantShortTournaments,
-} from '../common';
+} from './models/search-over-valorant-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetValorantTournamentsParams {
   filter?: FilterOverValorantShortTournaments;

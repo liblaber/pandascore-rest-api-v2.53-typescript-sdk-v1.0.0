@@ -1,13 +1,16 @@
 import {
   FilterOverR6SiegeShortTournaments,
-  Page,
-  RangeOverR6SiegeShortTournaments,
-  SearchOverR6SiegeShortTournaments,
   filterOverR6SiegeShortTournaments,
-  page,
+} from './models/filter-over-r6-siege-short-tournaments';
+import {
+  RangeOverR6SiegeShortTournaments,
   rangeOverR6SiegeShortTournaments,
+} from './models/range-over-r6-siege-short-tournaments';
+import {
+  SearchOverR6SiegeShortTournaments,
   searchOverR6SiegeShortTournaments,
-} from '../common';
+} from './models/search-over-r6-siege-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetR6siegeTournamentsParams {
   filter?: FilterOverR6SiegeShortTournaments;

@@ -1,12 +1,7 @@
-import { Page, page } from '../common';
-import {
-  FilterOverDota2Games,
-  RangeOverDota2Games,
-  SearchOverDota2Games,
-  filterOverDota2Games,
-  rangeOverDota2Games,
-  searchOverDota2Games,
-} from './models';
+import { Page, page } from '../common/page';
+import { FilterOverDota2Games, filterOverDota2Games } from './models/filter-over-dota2-games';
+import { RangeOverDota2Games, rangeOverDota2Games } from './models/range-over-dota2-games';
+import { SearchOverDota2Games, searchOverDota2Games } from './models/search-over-dota2-games';
 
 export interface GetDota2GamesDota2GameIdFramesParams {
   page?: Page;

@@ -1,12 +1,7 @@
-import {
-  FilterOverLolWildRiftLeagues,
-  RangeOverLolWildRiftLeagues,
-  SearchOverLolWildRiftLeagues,
-  filterOverLolWildRiftLeagues,
-  rangeOverLolWildRiftLeagues,
-  searchOverLolWildRiftLeagues,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverLolWildRiftLeagues, filterOverLolWildRiftLeagues } from './models/filter-over-lol-wild-rift-leagues';
+import { RangeOverLolWildRiftLeagues, rangeOverLolWildRiftLeagues } from './models/range-over-lol-wild-rift-leagues';
+import { SearchOverLolWildRiftLeagues, searchOverLolWildRiftLeagues } from './models/search-over-lol-wild-rift-leagues';
+import { Page, page } from '../common/page';
 
 export interface GetLolWildRiftLeaguesParams {
   filter?: FilterOverLolWildRiftLeagues;

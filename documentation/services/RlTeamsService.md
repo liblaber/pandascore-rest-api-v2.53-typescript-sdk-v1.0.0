@@ -31,42 +31,42 @@ List teams for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverRlTeams = {
-  acronym: ["pariatu"],
-  id: [5],
-  location: ["non velit"],
-  modifiedAt: ["cup"],
-  name: ["occaecat "],
-  slug: ["vue5ew"],
+  acronym: ["culpa "],
+  id: [8],
+  location: ["Lorem "],
+  modifiedAt: ["elit"],
+  name: ["mollit sit"],
+  slug: ["zze1ryc3"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverRlTeams = {
-  acronym: ["dolore dolor"],
-  id: [4],
-  location: ["dolor ea mag"],
-  modifiedAt: ["non"],
-  name: ["fugiat"],
-  slug: ["g0u"]
+  acronym: ["dolor"],
+  id: [2],
+  location: ["ut labor"],
+  modifiedAt: ["occaecat aute"],
+  name: ["exerc"],
+  slug: ["rok58e"]
 };
 
 const search: SearchOverRlTeams = {
-  acronym: "minim",
-  location: "tempor",
-  name: "consectetur te",
-  slug: "e0vqg4v"
+  acronym: "sunt laborum p",
+  location: "cupidatat ",
+  name: "minim des",
+  slug: "rig8"
 };
 const page = 1;
 
-  const { data } = await pandascore.rlTeams.getRlTeams(
+  const { data } = await pandascoreClient.rlTeams.getRlTeams(
   {
 		filter: filter,
 		range: range,

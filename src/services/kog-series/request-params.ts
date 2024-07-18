@@ -1,13 +1,7 @@
-import {
-  FilterOverKogSeries,
-  Page,
-  RangeOverKogSeries,
-  SearchOverKogSeries,
-  filterOverKogSeries,
-  page,
-  rangeOverKogSeries,
-  searchOverKogSeries,
-} from '../common';
+import { FilterOverKogSeries, filterOverKogSeries } from './models/filter-over-kog-series';
+import { RangeOverKogSeries, rangeOverKogSeries } from './models/range-over-kog-series';
+import { SearchOverKogSeries, searchOverKogSeries } from './models/search-over-kog-series';
+import { Page, page } from '../common/page';
 
 export interface GetKogSeriesParams {
   filter?: FilterOverKogSeries;

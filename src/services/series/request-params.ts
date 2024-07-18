@@ -1,25 +1,13 @@
-import {
-  FilterOverMatches,
-  FilterOverSeries,
-  FilterOverShortTournaments,
-  Page,
-  RangeOverMatches,
-  RangeOverSeries,
-  RangeOverShortTournaments,
-  SearchOverMatches,
-  SearchOverSeries,
-  SearchOverShortTournaments,
-  filterOverMatches,
-  filterOverSeries,
-  filterOverShortTournaments,
-  page,
-  rangeOverMatches,
-  rangeOverSeries,
-  rangeOverShortTournaments,
-  searchOverMatches,
-  searchOverSeries,
-  searchOverShortTournaments,
-} from '../common';
+import { FilterOverSeries, filterOverSeries } from '../common/filter-over-series';
+import { RangeOverSeries, rangeOverSeries } from '../common/range-over-series';
+import { SearchOverSeries, searchOverSeries } from '../common/search-over-series';
+import { Page, page } from '../common/page';
+import { FilterOverMatches, filterOverMatches } from '../common/filter-over-matches';
+import { RangeOverMatches, rangeOverMatches } from '../common/range-over-matches';
+import { SearchOverMatches, searchOverMatches } from '../common/search-over-matches';
+import { FilterOverShortTournaments, filterOverShortTournaments } from '../common/filter-over-short-tournaments';
+import { RangeOverShortTournaments, rangeOverShortTournaments } from '../common/range-over-short-tournaments';
+import { SearchOverShortTournaments, searchOverShortTournaments } from '../common/search-over-short-tournaments';
 
 export interface GetSeriesParams {
   filter?: FilterOverSeries;

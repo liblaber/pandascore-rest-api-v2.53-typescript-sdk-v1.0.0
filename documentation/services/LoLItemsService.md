@@ -32,65 +32,65 @@ List items
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverLoLItems = {
     flatArmorMod: [5],
-    flatCritChanceMod: [123],
-    flatHpPoolMod: [7],
-    flatHpRegenMod: [123],
-    flatMagicDamageMod: [4],
-    flatMovementSpeedMod: [1],
-    flatMpPoolMod: [2],
-    flatMpRegenMod: [2],
-    flatPhysicalDamageMod: [3],
+    flatCritChanceMod: [1],
+    flatHpPoolMod: [1],
+    flatHpRegenMod: [7],
+    flatMagicDamageMod: [8],
+    flatMovementSpeedMod: [2],
+    flatMpPoolMod: [6],
+    flatMpRegenMod: [8],
+    flatPhysicalDamageMod: [6],
     flatSpellBlockMod: [3],
-    goldBase: [10],
+    goldBase: [5],
     goldPurchasable: true,
-    goldSell: [6],
-    goldTotal: [7],
-    id: [8],
-    name: ['dolor'],
-    percentAttackSpeedMod: [8],
-    percentLifeStealMod: [8],
-    percentMovementSpeedMod: [3],
+    goldSell: [7],
+    goldTotal: [4],
+    id: [4],
+    name: ['eiusmod'],
+    percentAttackSpeedMod: [2],
+    percentLifeStealMod: [9],
+    percentMovementSpeedMod: [10],
     trinket: true,
     videogameVersion: [],
   };
 
   const range: RangeOverLoLItems = {
-    flatArmorMod: [6],
-    flatCritChanceMod: [123],
-    flatHpPoolMod: [9],
-    flatHpRegenMod: [123],
-    flatMagicDamageMod: [8],
-    flatMovementSpeedMod: [5],
-    flatMpPoolMod: [123],
-    flatMpRegenMod: [4],
-    flatPhysicalDamageMod: [3],
-    flatSpellBlockMod: [9],
-    goldBase: [4],
+    flatArmorMod: [8],
+    flatCritChanceMod: [10],
+    flatHpPoolMod: [10],
+    flatHpRegenMod: [8],
+    flatMagicDamageMod: [10],
+    flatMovementSpeedMod: [3],
+    flatMpPoolMod: [9],
+    flatMpRegenMod: [2],
+    flatPhysicalDamageMod: [10],
+    flatSpellBlockMod: [6],
+    goldBase: [10],
     goldPurchasable: [true],
-    goldSell: [1],
-    goldTotal: [4],
-    id: [2],
-    name: ['veniam nulla a'],
-    percentAttackSpeedMod: [10],
-    percentLifeStealMod: [123],
-    percentMovementSpeedMod: [8],
+    goldSell: [3],
+    goldTotal: [6],
+    id: [5],
+    name: ['in aliquip'],
+    percentAttackSpeedMod: [8],
+    percentLifeStealMod: [8],
+    percentMovementSpeedMod: [1],
   };
 
   const search: SearchOverLoLItems = {
-    name: 'do ame',
+    name: 'adipis',
   };
   const page = 1;
 
-  const { data } = await pandascore.loLItems.getLolItems({
+  const { data } = await pandascoreClient.loLItems.getLolItems({
     filter: filter,
     range: range,
     sort: [[]],
@@ -123,14 +123,14 @@ Get a single item by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascore.loLItems.getLolItemsLolItemId(6);
+  const { data } = await pandascoreClient.loLItems.getLolItemsLolItemId(3);
 
   console.log(data);
 })();

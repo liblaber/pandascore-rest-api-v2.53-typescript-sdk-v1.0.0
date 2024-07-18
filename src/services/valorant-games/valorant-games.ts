@@ -2,18 +2,16 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { MatchIdOrSlug, ValorantGame, valorantGameResponse } from '../common';
-import {
-  ValorantFullRound,
-  ValorantGameEvent,
-  valorantFullRoundResponse,
-  valorantGameEventResponse,
-} from './models';
+import { Request } from '../../http/transport/request';
+import { ValorantGame, valorantGameResponse } from './models/valorant-game';
+import { ValorantGameEvent, valorantGameEventResponse } from './models/valorant-game-event';
 import {
   GetValorantGamesValorantGameIdEventsParams,
   GetValorantGamesValorantGameIdRoundsParams,
   GetValorantMatchesMatchIdOrSlugGamesParams,
 } from './request-params';
+import { ValorantFullRound, valorantFullRoundResponse } from './models/valorant-full-round';
+import { MatchIdOrSlug } from '../common';
 
 export class ValorantGamesService extends BaseService {
   /**
@@ -25,19 +23,18 @@ export class ValorantGamesService extends BaseService {
     valorantGameId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantGame>> {
-    const path = this.client.buildPath('/valorant/games/{valorant_game_id}', {
-      valorant_game_id: valorantGameId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/games/{valorant_game_id}',
+      config: this.config,
       responseSchema: valorantGameResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_game_id', valorantGameId);
+    return this.client.call(request);
   }
 
   /**
@@ -52,26 +49,20 @@ export class ValorantGamesService extends BaseService {
     params?: GetValorantGamesValorantGameIdEventsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantGameEvent[]>> {
-    const path = this.client.buildPath('/valorant/games/{valorant_game_id}/events', {
-      valorant_game_id: valorantGameId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/games/{valorant_game_id}/events',
+      config: this.config,
       responseSchema: z.array(valorantGameEventResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_game_id', valorantGameId);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -86,26 +77,20 @@ export class ValorantGamesService extends BaseService {
     params?: GetValorantGamesValorantGameIdRoundsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantFullRound[]>> {
-    const path = this.client.buildPath('/valorant/games/{valorant_game_id}/rounds', {
-      valorant_game_id: valorantGameId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/games/{valorant_game_id}/rounds',
+      config: this.config,
       responseSchema: z.array(valorantFullRoundResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_game_id', valorantGameId);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -124,37 +109,23 @@ export class ValorantGamesService extends BaseService {
     params?: GetValorantMatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantGame[]>> {
-    const path = this.client.buildPath('/valorant/matches/{match_id_or_slug}/games', {
-      match_id_or_slug: matchIdOrSlug,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/matches/{match_id_or_slug}/games',
+      config: this.config,
       responseSchema: z.array(valorantGameResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('match_id_or_slug', matchIdOrSlug);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

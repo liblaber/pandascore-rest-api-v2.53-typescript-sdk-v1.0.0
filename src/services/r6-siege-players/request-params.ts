@@ -1,12 +1,7 @@
-import {
-  FilterOverR6SiegePlayers,
-  RangeOverR6SiegePlayers,
-  SearchOverR6SiegePlayers,
-  filterOverR6SiegePlayers,
-  rangeOverR6SiegePlayers,
-  searchOverR6SiegePlayers,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverR6SiegePlayers, filterOverR6SiegePlayers } from './models/filter-over-r6-siege-players';
+import { RangeOverR6SiegePlayers, rangeOverR6SiegePlayers } from './models/range-over-r6-siege-players';
+import { SearchOverR6SiegePlayers, searchOverR6SiegePlayers } from './models/search-over-r6-siege-players';
+import { Page, page } from '../common/page';
 
 export interface GetR6siegePlayersParams {
   filter?: FilterOverR6SiegePlayers;

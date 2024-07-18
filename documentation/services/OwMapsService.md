@@ -32,10 +32,10 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
@@ -43,28 +43,28 @@ import { Pandascore } from 'pandascore';
 
   const filter: FilterOverOwMaps = {
     gameMode: [owMapGameMode],
-    id: [10],
-    name: ['in cupidatat '],
-    slug: ['nmjxuipz'],
+    id: [8],
+    name: ['fugiat'],
+    slug: ['uai7oxrjj5c'],
   };
   const owMapGameMode = OwMapGameMode.Assault;
 
   const range: RangeOverOwMaps = {
     gameMode: [owMapGameMode],
     id: [6],
-    name: ['inaliquip'],
-    slug: ['e_5n5q'],
+    name: ['magna ess'],
+    slug: ['2'],
   };
   const owMapGameMode = OwMapGameMode.Assault;
 
   const search: SearchOverOwMaps = {
     gameMode: owMapGameMode,
-    name: 'et deser',
-    slug: 'r',
+    name: 'id fugiat t',
+    slug: '7jd1r8oey',
   };
   const page = 1;
 
-  const { data } = await pandascore.owMaps.getOwMaps({
+  const { data } = await pandascoreClient.owMaps.getOwMaps({
     filter: filter,
     range: range,
     sort: [[]],
@@ -97,16 +97,16 @@ Get a single map by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const owMapIdOrSlug = 4;
 
-  const { data } = await pandascore.owMaps.getOwMapsOwMapIdOrSlug();
+  const { data } = await pandascoreClient.owMaps.getOwMapsOwMapIdOrSlug();
 
   console.log(data);
 })();

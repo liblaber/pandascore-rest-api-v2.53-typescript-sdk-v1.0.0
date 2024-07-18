@@ -1,12 +1,7 @@
-import {
-  FilterOverOwHeroes,
-  RangeOverOwHeroes,
-  SearchOverOwHeroes,
-  filterOverOwHeroes,
-  rangeOverOwHeroes,
-  searchOverOwHeroes,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverOwHeroes, filterOverOwHeroes } from './models/filter-over-ow-heroes';
+import { RangeOverOwHeroes, rangeOverOwHeroes } from './models/range-over-ow-heroes';
+import { SearchOverOwHeroes, searchOverOwHeroes } from './models/search-over-ow-heroes';
+import { Page, page } from '../common/page';
 
 export interface GetOwHeroesParams {
   filter?: FilterOverOwHeroes;

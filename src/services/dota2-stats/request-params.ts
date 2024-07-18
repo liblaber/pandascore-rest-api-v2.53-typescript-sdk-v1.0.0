@@ -1,12 +1,12 @@
 import {
   GetDota2PlayersPlayerIdOrSlugStatsSide,
   getDota2PlayersPlayerIdOrSlugStatsSide,
-} from '../common';
+} from './models/get-dota2-players-player-id-or-slug-stats-side';
 
 export interface GetDota2PlayersPlayerIdOrSlugStatsParams {
   gamesCount?: number;
   side?: GetDota2PlayersPlayerIdOrSlugStatsSide;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 
@@ -23,7 +23,7 @@ export interface GetDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStatsParams {
 export interface GetDota2TeamsTeamIdOrSlugStatsParams {
   gamesCount?: number;
   side?: GetDota2PlayersPlayerIdOrSlugStatsSide;
-  from_?: string;
+  from?: string;
   to?: string;
 }
 

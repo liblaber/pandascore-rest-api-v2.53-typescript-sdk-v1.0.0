@@ -4,16 +4,8 @@ import {
   dota2StatsForPlayerByTournamentCurrentTeamRequest,
   dota2StatsForPlayerByTournamentCurrentTeamResponse,
 } from './dota2-stats-for-player-by-tournament-current-team';
-import {
-  dota2FavoriteHero,
-  dota2FavoriteHeroRequest,
-  dota2FavoriteHeroResponse,
-} from '../../common/dota2-favorite-hero';
-import {
-  dota2GamePlayer,
-  dota2GamePlayerRequest,
-  dota2GamePlayerResponse,
-} from '../../common/dota2-game-player';
+import { dota2FavoriteHero, dota2FavoriteHeroRequest, dota2FavoriteHeroResponse } from './dota2-favorite-hero';
+import { dota2GamePlayer, dota2GamePlayerRequest, dota2GamePlayerResponse } from './dota2-game-player';
 import {
   dota2PlayerByTournamentStat,
   dota2PlayerByTournamentStatRequest,
@@ -24,28 +16,31 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2StatsForPlayerByTournament = z.object({
-  active: z.boolean(),
-  age: z.number().gte(0),
-  birthday: z.string(),
-  currentTeam: dota2StatsForPlayerByTournamentCurrentTeam,
-  currentVideogame: z.any(),
-  favoriteHeroes: z.array(dota2FavoriteHero),
-  firstName: z.string(),
-  id: z.number().gte(1),
-  imageUrl: z.string(),
-  lastGames: z.array(dota2GamePlayer),
-  lastName: z.string(),
-  modifiedAt: z.string().min(1),
-  name: z.string(),
-  nationality: z.string(),
-  role: z.string(),
-  slug: z
-    .string()
-    .min(1)
-    .regex(/^[a-z0-9_-]+$/),
-  stats: dota2PlayerByTournamentStat,
-  teams: z.array(baseTeam),
+export const dota2StatsForPlayerByTournament: any = z.lazy(() => {
+  return z.object({
+    active: z.boolean(),
+    age: z.number().gte(0).nullable(),
+    birthday: z.string().nullable(),
+    currentTeam: dota2StatsForPlayerByTournamentCurrentTeam.nullable(),
+    currentVideogame: z.any().nullable(),
+    favoriteHeroes: z.array(dota2FavoriteHero),
+    firstName: z.string().nullable(),
+    id: z.number().gte(1),
+    imageUrl: z.string().nullable(),
+    lastGames: z.array(dota2GamePlayer),
+    lastName: z.string().nullable(),
+    modifiedAt: z.string().min(1),
+    name: z.string(),
+    nationality: z.string().nullable(),
+    role: z.string().nullable(),
+    slug: z
+      .string()
+      .min(1)
+      .regex(/^[a-z0-9_-]+$/)
+      .nullable(),
+    stats: dota2PlayerByTournamentStat,
+    teams: z.array(baseTeam),
+  });
 });
 
 /**
@@ -76,93 +71,98 @@ export type Dota2StatsForPlayerByTournament = z.infer<typeof dota2StatsForPlayer
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForPlayerByTournamentResponse = z
-  .object({
-    active: z.boolean(),
-    age: z.number().gte(0),
-    birthday: z.string(),
-    current_team: dota2StatsForPlayerByTournamentCurrentTeamResponse,
-    current_videogame: z.any(),
-    favorite_heroes: z.array(dota2FavoriteHeroResponse),
-    first_name: z.string(),
-    id: z.number().gte(1),
-    image_url: z.string(),
-    last_games: z.array(dota2GamePlayerResponse),
-    last_name: z.string(),
-    modified_at: z.string().min(1),
-    name: z.string(),
-    nationality: z.string(),
-    role: z.string(),
-    slug: z
-      .string()
-      .min(1)
-      .regex(/^[a-z0-9_-]+$/),
-    stats: dota2PlayerByTournamentStatResponse,
-    teams: z.array(baseTeamResponse),
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    currentTeam: data['current_team'],
-    currentVideogame: data['current_videogame'],
-    favoriteHeroes: data['favorite_heroes'],
-    firstName: data['first_name'],
-    id: data['id'],
-    imageUrl: data['image_url'],
-    lastGames: data['last_games'],
-    lastName: data['last_name'],
-    modifiedAt: data['modified_at'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-    stats: data['stats'],
-    teams: data['teams'],
-  }));
+export const dota2StatsForPlayerByTournamentResponse: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean(),
+      age: z.number().gte(0).nullable(),
+      birthday: z.string().nullable(),
+      current_team: dota2StatsForPlayerByTournamentCurrentTeamResponse.nullable(),
+      current_videogame: z.any().nullable(),
+      favorite_heroes: z.array(dota2FavoriteHeroResponse),
+      first_name: z.string().nullable(),
+      id: z.number().gte(1),
+      image_url: z.string().nullable(),
+      last_games: z.array(dota2GamePlayerResponse),
+      last_name: z.string().nullable(),
+      modified_at: z.string().min(1),
+      name: z.string(),
+      nationality: z.string().nullable(),
+      role: z.string().nullable(),
+      slug: z
+        .string()
+        .min(1)
+        .regex(/^[a-z0-9_-]+$/)
+        .nullable(),
+      stats: dota2PlayerByTournamentStatResponse,
+      teams: z.array(baseTeamResponse),
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      currentTeam: data['current_team'],
+      currentVideogame: data['current_videogame'],
+      favoriteHeroes: data['favorite_heroes'],
+      firstName: data['first_name'],
+      id: data['id'],
+      imageUrl: data['image_url'],
+      lastGames: data['last_games'],
+      lastName: data['last_name'],
+      modifiedAt: data['modified_at'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+      stats: data['stats'],
+      teams: data['teams'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForPlayerByTournamentRequest = z
-  .object({
-    active: z.boolean().nullish(),
-    age: z.number().nullish(),
-    birthday: z.string().nullish(),
-    currentTeam: dota2StatsForPlayerByTournamentCurrentTeamRequest.nullish(),
-    currentVideogame: z.any().nullish(),
-    favoriteHeroes: z.array(dota2FavoriteHeroRequest).nullish(),
-    firstName: z.string().nullish(),
-    id: z.number().nullish(),
-    imageUrl: z.string().nullish(),
-    lastGames: z.array(dota2GamePlayerRequest).nullish(),
-    lastName: z.string().nullish(),
-    modifiedAt: z.string().nullish(),
-    name: z.string().nullish(),
-    nationality: z.string().nullish(),
-    role: z.string().nullish(),
-    slug: z.string().nullish(),
-    stats: dota2PlayerByTournamentStatRequest.nullish(),
-    teams: z.array(baseTeamRequest).nullish(),
-  })
-  .transform((data) => ({
-    active: data['active'],
-    age: data['age'],
-    birthday: data['birthday'],
-    current_team: data['currentTeam'],
-    current_videogame: data['currentVideogame'],
-    favorite_heroes: data['favoriteHeroes'],
-    first_name: data['firstName'],
-    id: data['id'],
-    image_url: data['imageUrl'],
-    last_games: data['lastGames'],
-    last_name: data['lastName'],
-    modified_at: data['modifiedAt'],
-    name: data['name'],
-    nationality: data['nationality'],
-    role: data['role'],
-    slug: data['slug'],
-    stats: data['stats'],
-    teams: data['teams'],
-  }));
+export const dota2StatsForPlayerByTournamentRequest: any = z.lazy(() => {
+  return z
+    .object({
+      active: z.boolean().nullish(),
+      age: z.number().nullish(),
+      birthday: z.string().nullish(),
+      currentTeam: dota2StatsForPlayerByTournamentCurrentTeamRequest.nullish(),
+      currentVideogame: z.any().nullish(),
+      favoriteHeroes: z.array(dota2FavoriteHeroRequest).nullish(),
+      firstName: z.string().nullish(),
+      id: z.number().nullish(),
+      imageUrl: z.string().nullish(),
+      lastGames: z.array(dota2GamePlayerRequest).nullish(),
+      lastName: z.string().nullish(),
+      modifiedAt: z.string().nullish(),
+      name: z.string().nullish(),
+      nationality: z.string().nullish(),
+      role: z.string().nullish(),
+      slug: z.string().nullish(),
+      stats: dota2PlayerByTournamentStatRequest.nullish(),
+      teams: z.array(baseTeamRequest).nullish(),
+    })
+    .transform((data) => ({
+      active: data['active'],
+      age: data['age'],
+      birthday: data['birthday'],
+      current_team: data['currentTeam'],
+      current_videogame: data['currentVideogame'],
+      favorite_heroes: data['favoriteHeroes'],
+      first_name: data['firstName'],
+      id: data['id'],
+      image_url: data['imageUrl'],
+      last_games: data['lastGames'],
+      last_name: data['lastName'],
+      modified_at: data['modifiedAt'],
+      name: data['name'],
+      nationality: data['nationality'],
+      role: data['role'],
+      slug: data['slug'],
+      stats: data['stats'],
+      teams: data['teams'],
+    }));
+});

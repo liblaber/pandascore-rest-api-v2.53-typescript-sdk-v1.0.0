@@ -1,13 +1,7 @@
-import {
-  FilterOverOwSeries,
-  Page,
-  RangeOverOwSeries,
-  SearchOverOwSeries,
-  filterOverOwSeries,
-  page,
-  rangeOverOwSeries,
-  searchOverOwSeries,
-} from '../common';
+import { FilterOverOwSeries, filterOverOwSeries } from './models/filter-over-ow-series';
+import { RangeOverOwSeries, rangeOverOwSeries } from './models/range-over-ow-series';
+import { SearchOverOwSeries, searchOverOwSeries } from './models/search-over-ow-series';
+import { Page, page } from '../common/page';
 
 export interface GetOwSeriesParams {
   filter?: FilterOverOwSeries;

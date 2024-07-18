@@ -31,42 +31,42 @@ List teams for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const videogameId = VideogameId.1;
 
 const filter: FilterOverLolWildRiftTeams = {
-  acronym: ["in veniam"],
-  id: [9],
-  location: ["ullamco i"],
-  modifiedAt: ["ut"],
-  name: ["tempor"],
-  slug: ["vndlst8"],
+  acronym: ["nulla"],
+  id: [4],
+  location: ["ut cul"],
+  modifiedAt: ["Lorem"],
+  name: ["eu anim"],
+  slug: ["smkajitdf56"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverLolWildRiftTeams = {
-  acronym: ["laborum"],
-  id: [3],
-  location: ["laboris"],
-  modifiedAt: ["Lore"],
-  name: ["ullamco ve"],
-  slug: ["ca3c9lsb0"]
+  acronym: ["dolore aute "],
+  id: [4],
+  location: ["mollit"],
+  modifiedAt: ["proident sun"],
+  name: ["tempor labore e"],
+  slug: ["qwl4m2"]
 };
 
 const search: SearchOverLolWildRiftTeams = {
-  acronym: "laborum ",
-  location: "pariatur adi",
-  name: "suntame",
-  slug: "-v_7h0cqh5-"
+  acronym: "et commodo a",
+  location: "minim",
+  name: "labore",
+  slug: "jlv"
 };
 const page = 1;
 
-  const { data } = await pandascore.loLWildRiftTeams.getLolWildRiftTeams(
+  const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams(
   {
 		filter: filter,
 		range: range,

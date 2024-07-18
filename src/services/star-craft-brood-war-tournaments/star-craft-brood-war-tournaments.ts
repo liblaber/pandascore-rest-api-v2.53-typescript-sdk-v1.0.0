@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { ShortTournament, shortTournamentResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { ShortTournament, shortTournamentResponse } from '../common/short-tournament';
 import {
   GetStarcraftBroodWarTournamentsParams,
   GetStarcraftBroodWarTournamentsPastParams,
@@ -25,36 +26,23 @@ export class StarCraftBroodWarTournamentsService extends BaseService {
     params?: GetStarcraftBroodWarTournamentsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = '/starcraft-brood-war/tournaments';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/starcraft-brood-war/tournaments',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -71,36 +59,23 @@ export class StarCraftBroodWarTournamentsService extends BaseService {
     params?: GetStarcraftBroodWarTournamentsPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = '/starcraft-brood-war/tournaments/past';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/starcraft-brood-war/tournaments/past',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -117,36 +92,23 @@ export class StarCraftBroodWarTournamentsService extends BaseService {
     params?: GetStarcraftBroodWarTournamentsRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = '/starcraft-brood-war/tournaments/running';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/starcraft-brood-war/tournaments/running',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -163,35 +125,22 @@ export class StarCraftBroodWarTournamentsService extends BaseService {
     params?: GetStarcraftBroodWarTournamentsUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const path = '/starcraft-brood-war/tournaments/upcoming';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/starcraft-brood-war/tournaments/upcoming',
+      config: this.config,
       responseSchema: z.array(shortTournamentResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

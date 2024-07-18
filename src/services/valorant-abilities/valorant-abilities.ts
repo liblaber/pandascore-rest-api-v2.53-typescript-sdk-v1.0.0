@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { ValorantAbility, valorantAbilityResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { ValorantAbility, valorantAbilityResponse } from './models/valorant-ability';
 import { GetValorantAbilitiesParams } from './request-params';
 
 export class ValorantAbilitiesService extends BaseService {
@@ -20,36 +21,23 @@ export class ValorantAbilitiesService extends BaseService {
     params?: GetValorantAbilitiesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantAbility[]>> {
-    const path = '/valorant/abilities';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/abilities',
+      config: this.config,
       responseSchema: z.array(valorantAbilityResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -61,18 +49,17 @@ export class ValorantAbilitiesService extends BaseService {
     valorantAbilityId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantAbility>> {
-    const path = this.client.buildPath('/valorant/abilities/{valorant_ability_id}', {
-      valorant_ability_id: valorantAbilityId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/abilities/{valorant_ability_id}',
+      config: this.config,
       responseSchema: valorantAbilityResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_ability_id', valorantAbilityId);
+    return this.client.call(request);
   }
 }

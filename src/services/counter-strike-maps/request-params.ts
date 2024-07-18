@@ -1,12 +1,7 @@
-import {
-  FilterOverCsgoMaps,
-  RangeOverCsgoMaps,
-  SearchOverCsgoMaps,
-  filterOverCsgoMaps,
-  rangeOverCsgoMaps,
-  searchOverCsgoMaps,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverCsgoMaps, filterOverCsgoMaps } from './models/filter-over-csgo-maps';
+import { RangeOverCsgoMaps, rangeOverCsgoMaps } from './models/range-over-csgo-maps';
+import { SearchOverCsgoMaps, searchOverCsgoMaps } from './models/search-over-csgo-maps';
+import { Page, page } from '../common/page';
 
 export interface GetCsgoMapsParams {
   filter?: FilterOverCsgoMaps;

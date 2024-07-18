@@ -1,12 +1,7 @@
-import {
-  FilterOverLoLSpells,
-  RangeOverLoLSpells,
-  SearchOverLoLSpells,
-  filterOverLoLSpells,
-  rangeOverLoLSpells,
-  searchOverLoLSpells,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverLoLSpells, filterOverLoLSpells } from './models/filter-over-lo-l-spells';
+import { RangeOverLoLSpells, rangeOverLoLSpells } from './models/range-over-lo-l-spells';
+import { SearchOverLoLSpells, searchOverLoLSpells } from './models/search-over-lo-l-spells';
+import { Page, page } from '../common/page';
 
 export interface GetLolSpellsParams {
   filter?: FilterOverLoLSpells;

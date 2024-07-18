@@ -1,13 +1,16 @@
 import {
   FilterOverStarcraft2ShortTournaments,
-  Page,
-  RangeOverStarcraft2ShortTournaments,
-  SearchOverStarcraft2ShortTournaments,
   filterOverStarcraft2ShortTournaments,
-  page,
+} from './models/filter-over-starcraft2-short-tournaments';
+import {
+  RangeOverStarcraft2ShortTournaments,
   rangeOverStarcraft2ShortTournaments,
+} from './models/range-over-starcraft2-short-tournaments';
+import {
+  SearchOverStarcraft2ShortTournaments,
   searchOverStarcraft2ShortTournaments,
-} from '../common';
+} from './models/search-over-starcraft2-short-tournaments';
+import { Page, page } from '../common/page';
 
 export interface GetStarcraft2TournamentsParams {
   filter?: FilterOverStarcraft2ShortTournaments;

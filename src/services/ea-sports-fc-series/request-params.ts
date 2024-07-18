@@ -1,13 +1,7 @@
-import {
-  FilterOverFifaSeries,
-  Page,
-  RangeOverFifaSeries,
-  SearchOverFifaSeries,
-  filterOverFifaSeries,
-  page,
-  rangeOverFifaSeries,
-  searchOverFifaSeries,
-} from '../common';
+import { FilterOverFifaSeries, filterOverFifaSeries } from './models/filter-over-fifa-series';
+import { RangeOverFifaSeries, rangeOverFifaSeries } from './models/range-over-fifa-series';
+import { SearchOverFifaSeries, searchOverFifaSeries } from './models/search-over-fifa-series';
+import { Page, page } from '../common/page';
 
 export interface GetFifaSeriesParams {
   filter?: FilterOverFifaSeries;

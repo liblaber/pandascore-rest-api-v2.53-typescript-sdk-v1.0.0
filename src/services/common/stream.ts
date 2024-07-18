@@ -4,12 +4,14 @@ import { streamLanguage } from './stream-language';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const stream = z.object({
-  embedUrl: z.string(),
-  language: streamLanguage,
-  main: z.boolean(),
-  official: z.boolean(),
-  rawUrl: z.string(),
+export const stream: any = z.lazy(() => {
+  return z.object({
+    embedUrl: z.string().nullable(),
+    language: streamLanguage,
+    main: z.boolean(),
+    official: z.boolean(),
+    rawUrl: z.string(),
+  });
 });
 
 /**
@@ -27,38 +29,42 @@ export type Stream = z.infer<typeof stream>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const streamResponse = z
-  .object({
-    embed_url: z.string(),
-    language: streamLanguage,
-    main: z.boolean(),
-    official: z.boolean(),
-    raw_url: z.string(),
-  })
-  .transform((data) => ({
-    embedUrl: data['embed_url'],
-    language: data['language'],
-    main: data['main'],
-    official: data['official'],
-    rawUrl: data['raw_url'],
-  }));
+export const streamResponse: any = z.lazy(() => {
+  return z
+    .object({
+      embed_url: z.string().nullable(),
+      language: streamLanguage,
+      main: z.boolean(),
+      official: z.boolean(),
+      raw_url: z.string(),
+    })
+    .transform((data) => ({
+      embedUrl: data['embed_url'],
+      language: data['language'],
+      main: data['main'],
+      official: data['official'],
+      rawUrl: data['raw_url'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const streamRequest = z
-  .object({
-    embedUrl: z.string().nullish(),
-    language: streamLanguage.nullish(),
-    main: z.boolean().nullish(),
-    official: z.boolean().nullish(),
-    rawUrl: z.string().nullish(),
-  })
-  .transform((data) => ({
-    embed_url: data['embedUrl'],
-    language: data['language'],
-    main: data['main'],
-    official: data['official'],
-    raw_url: data['rawUrl'],
-  }));
+export const streamRequest: any = z.lazy(() => {
+  return z
+    .object({
+      embedUrl: z.string().nullish(),
+      language: streamLanguage.nullish(),
+      main: z.boolean().nullish(),
+      official: z.boolean().nullish(),
+      rawUrl: z.string().nullish(),
+    })
+    .transform((data) => ({
+      embed_url: data['embedUrl'],
+      language: data['language'],
+      main: data['main'],
+      official: data['official'],
+      raw_url: data['rawUrl'],
+    }));
+});

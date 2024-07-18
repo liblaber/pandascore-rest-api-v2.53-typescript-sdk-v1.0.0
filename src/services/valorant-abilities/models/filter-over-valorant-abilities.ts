@@ -1,15 +1,17 @@
 import { z } from 'zod';
-import { valorantAbilityType } from '../../common/valorant-ability-type';
+import { valorantAbilityType } from './valorant-ability-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverValorantAbilities = z.object({
-  abilityType: z.array(valorantAbilityType).min(1).optional(),
-  creds: z.array(z.number()).min(1).optional(),
-  id: z.array(z.number()).min(1).optional(),
-  name: z.array(z.string()).min(1).optional(),
-  videogameVersion: z.any().optional(),
+export const filterOverValorantAbilities: any = z.lazy(() => {
+  return z.object({
+    abilityType: z.array(valorantAbilityType).min(1).optional(),
+    creds: z.array(z.number()).min(1).optional(),
+    id: z.array(z.number()).min(1).optional(),
+    name: z.array(z.string()).min(1).optional(),
+    videogameVersion: z.any().optional(),
+  });
 });
 
 /**
@@ -27,38 +29,42 @@ export type FilterOverValorantAbilities = z.infer<typeof filterOverValorantAbili
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverValorantAbilitiesResponse = z
-  .object({
-    ability_type: z.array(valorantAbilityType).min(1).optional(),
-    creds: z.array(z.number()).min(1).optional(),
-    id: z.array(z.number()).min(1).optional(),
-    name: z.array(z.string()).min(1).optional(),
-    videogame_version: z.any().optional(),
-  })
-  .transform((data) => ({
-    abilityType: data['ability_type'],
-    creds: data['creds'],
-    id: data['id'],
-    name: data['name'],
-    videogameVersion: data['videogame_version'],
-  }));
+export const filterOverValorantAbilitiesResponse: any = z.lazy(() => {
+  return z
+    .object({
+      ability_type: z.array(valorantAbilityType).min(1).optional(),
+      creds: z.array(z.number()).min(1).optional(),
+      id: z.array(z.number()).min(1).optional(),
+      name: z.array(z.string()).min(1).optional(),
+      videogame_version: z.any().optional(),
+    })
+    .transform((data) => ({
+      abilityType: data['ability_type'],
+      creds: data['creds'],
+      id: data['id'],
+      name: data['name'],
+      videogameVersion: data['videogame_version'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverValorantAbilitiesRequest = z
-  .object({
-    abilityType: z.array(valorantAbilityType).nullish(),
-    creds: z.array(z.number()).nullish(),
-    id: z.array(z.number()).nullish(),
-    name: z.array(z.string()).nullish(),
-    videogameVersion: z.any().nullish(),
-  })
-  .transform((data) => ({
-    ability_type: data['abilityType'],
-    creds: data['creds'],
-    id: data['id'],
-    name: data['name'],
-    videogame_version: data['videogameVersion'],
-  }));
+export const filterOverValorantAbilitiesRequest: any = z.lazy(() => {
+  return z
+    .object({
+      abilityType: z.array(valorantAbilityType).nullish(),
+      creds: z.array(z.number()).nullish(),
+      id: z.array(z.number()).nullish(),
+      name: z.array(z.string()).nullish(),
+      videogameVersion: z.any().nullish(),
+    })
+    .transform((data) => ({
+      ability_type: data['abilityType'],
+      creds: data['creds'],
+      id: data['id'],
+      name: data['name'],
+      videogame_version: data['videogameVersion'],
+    }));
+});

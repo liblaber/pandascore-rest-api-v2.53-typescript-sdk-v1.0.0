@@ -1,7 +1,7 @@
 {
-  "name": "pandascore",
+  "name": "pandascore_client",
   "version": "1.0.0",
-  "description": "",
+  "description": "The PandaScore API offers real-time data, statistics, and odds for esports competitions, providing comprehensive information for developers building esports-related applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,8 +13,7 @@
     "api",
     "client"
   ],
-  "author": "",
-  "license": "",
+  "author": "LibLab",
   "devDependencies": {
     "typescript": "5.3.3"
   },

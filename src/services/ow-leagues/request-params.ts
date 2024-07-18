@@ -1,12 +1,7 @@
-import {
-  FilterOverOwLeagues,
-  RangeOverOwLeagues,
-  SearchOverOwLeagues,
-  filterOverOwLeagues,
-  rangeOverOwLeagues,
-  searchOverOwLeagues,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverOwLeagues, filterOverOwLeagues } from './models/filter-over-ow-leagues';
+import { RangeOverOwLeagues, rangeOverOwLeagues } from './models/range-over-ow-leagues';
+import { SearchOverOwLeagues, searchOverOwLeagues } from './models/search-over-ow-leagues';
+import { Page, page } from '../common/page';
 
 export interface GetOwLeaguesParams {
   filter?: FilterOverOwLeagues;

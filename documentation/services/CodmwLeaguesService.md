@@ -31,37 +31,37 @@ List CODMW leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const filter: FilterOverCodmwLeagues = {
-    id: [10],
-    modifiedAt: ['non laborum ad'],
-    name: ['et offici'],
-    slug: ['oqvvsigbts3'],
-    url: ['tempor '],
+    id: [4],
+    modifiedAt: ['sunt magna'],
+    name: ['eu inc'],
+    slug: ['7pqnq'],
+    url: ['tempor sint Exc'],
   };
 
   const range: RangeOverCodmwLeagues = {
-    id: [2],
-    modifiedAt: ['mol'],
-    name: ['consectetu'],
-    slug: ['bjts3073qsc'],
-    url: ['amet in do'],
+    id: [9],
+    modifiedAt: ['ex laboru'],
+    name: ['et consectetur '],
+    slug: ['gprmck'],
+    url: ['laboris moll'],
   };
 
   const search: SearchOverCodmwLeagues = {
-    name: 'ad si',
-    slug: 'suctm',
-    url: 'essein',
+    name: 'Ut mollit',
+    slug: 'su',
+    url: 'cillum',
   };
   const page = 1;
 
-  const { data } = await pandascore.codmwLeagues.getCodmwLeagues({
+  const { data } = await pandascoreClient.codmwLeagues.getCodmwLeagues({
     filter: filter,
     range: range,
     sort: [[]],

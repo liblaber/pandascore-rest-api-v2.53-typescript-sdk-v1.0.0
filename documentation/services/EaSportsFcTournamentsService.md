@@ -34,33 +34,33 @@ List tournaments for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 10;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['in'],
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['non elit et'],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['culpa labo'],
-    name: ['mollit dolor'],
-    prizepool: ['sitoccaeca'],
-    serieId: [9],
-    slug: ['_vg7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -68,21 +68,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaShortTournaments = {
-    beginAt: ['esse non'],
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['c'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['est '],
-    name: ['dolore dolor'],
-    prizepool: ['et in'],
-    serieId: [5],
-    slug: ['an596w6jsxw'],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -92,15 +92,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaShortTournaments = {
-    name: 'id in',
-    prizepool: 'ex fugiat eu in',
-    slug: 't2exc',
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcTournaments.getFifaTournaments({
+  const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournaments({
     filter: filter,
     range: range,
     sort: [[]],
@@ -138,33 +138,33 @@ List past EA Sports FC tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 10;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['in'],
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['non elit et'],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['culpa labo'],
-    name: ['mollit dolor'],
-    prizepool: ['sitoccaeca'],
-    serieId: [9],
-    slug: ['_vg7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -172,21 +172,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaShortTournaments = {
-    beginAt: ['esse non'],
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['c'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['est '],
-    name: ['dolore dolor'],
-    prizepool: ['et in'],
-    serieId: [5],
-    slug: ['an596w6jsxw'],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -196,15 +196,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaShortTournaments = {
-    name: 'id in',
-    prizepool: 'ex fugiat eu in',
-    slug: 't2exc',
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcTournaments.getFifaTournamentsPast({
+  const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsPast({
     filter: filter,
     range: range,
     sort: [[]],
@@ -242,33 +242,33 @@ List running EA Sports FC tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 10;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['in'],
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['non elit et'],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['culpa labo'],
-    name: ['mollit dolor'],
-    prizepool: ['sitoccaeca'],
-    serieId: [9],
-    slug: ['_vg7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -276,21 +276,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaShortTournaments = {
-    beginAt: ['esse non'],
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['c'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['est '],
-    name: ['dolore dolor'],
-    prizepool: ['et in'],
-    serieId: [5],
-    slug: ['an596w6jsxw'],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -300,15 +300,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaShortTournaments = {
-    name: 'id in',
-    prizepool: 'ex fugiat eu in',
-    slug: 't2exc',
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcTournaments.getFifaTournamentsRunning({
+  const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsRunning({
     filter: filter,
     range: range,
     sort: [[]],
@@ -346,33 +346,33 @@ List upcoming EA Sports FC tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 10;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['in'],
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['non elit et'],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['culpa labo'],
-    name: ['mollit dolor'],
-    prizepool: ['sitoccaeca'],
-    serieId: [9],
-    slug: ['_vg7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -380,21 +380,21 @@ import { Pandascore } from 'pandascore';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 1;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaShortTournaments = {
-    beginAt: ['esse non'],
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['c'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['est '],
-    name: ['dolore dolor'],
-    prizepool: ['et in'],
-    serieId: [5],
-    slug: ['an596w6jsxw'],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -404,15 +404,15 @@ import { Pandascore } from 'pandascore';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaShortTournaments = {
-    name: 'id in',
-    prizepool: 'ex fugiat eu in',
-    slug: 't2exc',
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
   const page = 1;
 
-  const { data } = await pandascore.eaSportsFcTournaments.getFifaTournamentsUpcoming({
+  const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsUpcoming({
     filter: filter,
     range: range,
     sort: [[]],

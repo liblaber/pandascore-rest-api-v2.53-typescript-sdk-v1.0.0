@@ -5,7 +5,7 @@
 | Name   | Type                | Required | Description |
 | :----- | :------------------ | :------- | :---------- |
 | object | LoLEventTowerObject | ✅       |             |
-| type\_ | LoLEventTowerType   | ✅       |             |
+| type   | LoLEventTowerType   | ✅       |             |
 
 # LoLEventTowerType
 

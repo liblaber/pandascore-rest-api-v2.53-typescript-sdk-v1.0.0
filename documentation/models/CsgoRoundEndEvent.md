@@ -7,4 +7,4 @@
 | ingameTimestamp | number                   | ✅       | Time elapsed since the beginning of the game, in milliseconds |
 | roundEnd        | CsgoRoundEndEventDetails | ✅       |                                                               |
 | roundNumber     | number                   | ✅       |                                                               |
-| type\_          | CsgoEventType            | ✅       |                                                               |
+| type            | CsgoEventType            | ✅       |                                                               |

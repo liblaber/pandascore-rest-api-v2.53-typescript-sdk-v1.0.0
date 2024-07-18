@@ -5,7 +5,7 @@
 | Name   | Type                 | Required | Description |
 | :----- | :------------------- | :------- | :---------- |
 | object | LoLEventNashorObject | ✅       |             |
-| type\_ | LoLEventNashorType   | ✅       |             |
+| type   | LoLEventNashorType   | ✅       |             |
 
 # LoLEventNashorType
 

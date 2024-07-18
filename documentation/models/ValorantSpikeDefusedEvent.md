@@ -4,7 +4,7 @@
 
 | Name         | Type                     | Required | Description                                           |
 | :----------- | :----------------------- | :------- | :---------------------------------------------------- |
-| number\_     | number                   | ✅       |                                                       |
+| number       | number                   | ✅       |                                                       |
 | spikeDefused | ValorantSpikeEventPlayer | ✅       |                                                       |
 | timestamp    | number                   | ✅       | Time elapsed since the beginning of round, in seconds |
-| type\_       | ValorantEventType        | ✅       |                                                       |
+| type         | ValorantEventType        | ✅       |                                                       |

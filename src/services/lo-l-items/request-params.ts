@@ -1,13 +1,7 @@
-import {
-  FilterOverLoLItems,
-  Page,
-  RangeOverLoLItems,
-  SearchOverLoLItems,
-  filterOverLoLItems,
-  page,
-  rangeOverLoLItems,
-  searchOverLoLItems,
-} from '../common';
+import { FilterOverLoLItems, filterOverLoLItems } from './models/filter-over-lo-l-items';
+import { RangeOverLoLItems, rangeOverLoLItems } from './models/range-over-lo-l-items';
+import { SearchOverLoLItems, searchOverLoLItems } from './models/search-over-lo-l-items';
+import { Page, page } from '../common/page';
 
 export interface GetLolItemsParams {
   filter?: FilterOverLoLItems;

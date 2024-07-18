@@ -1,12 +1,7 @@
-import {
-  FilterOverFifaLeagues,
-  RangeOverFifaLeagues,
-  SearchOverFifaLeagues,
-  filterOverFifaLeagues,
-  rangeOverFifaLeagues,
-  searchOverFifaLeagues,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverFifaLeagues, filterOverFifaLeagues } from './models/filter-over-fifa-leagues';
+import { RangeOverFifaLeagues, rangeOverFifaLeagues } from './models/range-over-fifa-leagues';
+import { SearchOverFifaLeagues, searchOverFifaLeagues } from './models/search-over-fifa-leagues';
+import { Page, page } from '../common/page';
 
 export interface GetFifaLeaguesParams {
   filter?: FilterOverFifaLeagues;

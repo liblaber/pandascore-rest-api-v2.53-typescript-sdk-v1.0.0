@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { ValorantMap, valorantMapResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { ValorantMap, valorantMapResponse } from './models/valorant-map';
 import {
   GetValorantMapsParams,
   GetValorantVersionsAllMapsParams,
@@ -24,36 +25,23 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const path = '/valorant/maps';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/maps',
+      config: this.config,
       responseSchema: z.array(valorantMapResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -65,19 +53,18 @@ export class ValorantMapsService extends BaseService {
     valorantMapId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap>> {
-    const path = this.client.buildPath('/valorant/maps/{valorant_map_id}', {
-      valorant_map_id: valorantMapId,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/maps/{valorant_map_id}',
+      config: this.config,
       responseSchema: valorantMapResponse,
       requestSchema: z.any(),
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_map_id', valorantMapId);
+    return this.client.call(request);
   }
 
   /**
@@ -94,36 +81,23 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantVersionsAllMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const path = '/valorant/versions/all/maps';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/versions/all/maps',
+      config: this.config,
       responseSchema: z.array(valorantMapResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 
   /**
@@ -142,37 +116,23 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantVersionsValorantVersionNameMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const path = this.client.buildPath('/valorant/versions/{valorant_version_name}/maps', {
-      valorant_version_name: valorantVersionName,
-    });
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/valorant/versions/{valorant_version_name}/maps',
+      config: this.config,
       responseSchema: z.array(valorantMapResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addPathParam('valorant_version_name', valorantVersionName);
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

@@ -1,12 +1,7 @@
-import {
-  FilterOverValorantPlayers,
-  RangeOverValorantPlayers,
-  SearchOverValorantPlayers,
-  filterOverValorantPlayers,
-  rangeOverValorantPlayers,
-  searchOverValorantPlayers,
-} from './models';
-import { Page, page } from '../common';
+import { FilterOverValorantPlayers, filterOverValorantPlayers } from './models/filter-over-valorant-players';
+import { RangeOverValorantPlayers, rangeOverValorantPlayers } from './models/range-over-valorant-players';
+import { SearchOverValorantPlayers, searchOverValorantPlayers } from './models/search-over-valorant-players';
+import { Page, page } from '../common/page';
 
 export interface GetValorantPlayersParams {
   filter?: FilterOverValorantPlayers;

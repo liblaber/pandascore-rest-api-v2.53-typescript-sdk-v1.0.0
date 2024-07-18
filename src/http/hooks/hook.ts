@@ -2,11 +2,11 @@ type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface HttpRequest {
   method: HttpMethod;
-  url: string;
-  headers?: Record<string, string>;
+  path: string;
+  headers?: Map<string, unknown>;
   body?: BodyInit;
   abortSignal?: AbortSignal;
-  queryParams?: Record<string, unknown>;
+  queryParams?: Map<string, unknown>;
 }
 
 interface HttpMetadata {
@@ -29,15 +29,7 @@ export interface HttpError {
 export interface Hook {
   beforeRequest(request: HttpRequest, params: Map<string, string>): HttpRequest;
 
-  afterResponse(
-    request: HttpRequest,
-    response: HttpResponse<any>,
-    params: Map<string, string>,
-  ): HttpResponse<any>;
+  afterResponse(request: HttpRequest, response: HttpResponse<any>, params: Map<string, string>): HttpResponse<any>;
 
-  onError(
-    request: HttpRequest,
-    response: HttpResponse<any>,
-    params: Map<string, string>,
-  ): HttpError;
+  onError(request: HttpRequest, response: HttpResponse<any>, params: Map<string, string>): HttpError;
 }

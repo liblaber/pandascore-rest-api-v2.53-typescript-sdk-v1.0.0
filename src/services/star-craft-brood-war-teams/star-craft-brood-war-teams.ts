@@ -2,7 +2,8 @@ import { z } from 'zod';
 import { BaseService } from '../base-service';
 import { ContentType, HttpResponse } from '../../http';
 import { RequestConfig } from '../../http/types';
-import { Team, teamResponse } from '../common';
+import { Request } from '../../http/transport/request';
+import { Team, teamResponse } from '../common/team';
 import { GetStarcraftBroodWarTeamsParams } from './request-params';
 
 export class StarCraftBroodWarTeamsService extends BaseService {
@@ -20,35 +21,22 @@ export class StarCraftBroodWarTeamsService extends BaseService {
     params?: GetStarcraftBroodWarTeamsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Team[]>> {
-    const path = '/starcraft-brood-war/teams';
-    const options: any = {
+    const request = new Request({
+      method: 'GET',
+      path: '/starcraft-brood-war/teams',
+      config: this.config,
       responseSchema: z.array(teamResponse),
       requestSchema: z.any(),
-      queryParams: {},
-      headers: {},
       requestContentType: ContentType.Json,
       responseContentType: ContentType.Json,
-      retry: requestConfig?.retry,
-      config: this.config,
-    };
-    if (params?.filter) {
-      options.queryParams['filter'] = params?.filter;
-    }
-    if (params?.range) {
-      options.queryParams['range'] = params?.range;
-    }
-    if (params?.sort) {
-      options.queryParams['sort'] = params?.sort;
-    }
-    if (params?.search) {
-      options.queryParams['search'] = params?.search;
-    }
-    if (params?.page) {
-      options.queryParams['page'] = params?.page;
-    }
-    if (params?.perPage) {
-      options.queryParams['per_page'] = params?.perPage;
-    }
-    return this.client.get(path, options);
+      requestConfig,
+    });
+    request.addQueryParam('filter', params?.filter);
+    request.addQueryParam('range', params?.range);
+    request.addQueryParam('sort', params?.sort);
+    request.addQueryParam('search', params?.search);
+    request.addQueryParam('page', params?.page);
+    request.addQueryParam('per_page', params?.perPage);
+    return this.client.call(request);
   }
 }

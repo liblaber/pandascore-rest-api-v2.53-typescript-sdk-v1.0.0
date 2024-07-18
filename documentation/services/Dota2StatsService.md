@@ -32,16 +32,16 @@ Get detailed statistics of Dota2 players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 6;
+  const matchIdOrSlug = 5;
 
-  const { data } = await pandascore.dota2Stats.getDota2MatchesMatchIdOrSlugPlayersStats();
+  const { data } = await pandascoreClient.dota2Stats.getDota2MatchesMatchIdOrSlugPlayersStats();
 
   console.log(data);
 })();
@@ -61,7 +61,7 @@ Get detailed statistics of a given Dota2 player
 | playerIdOrSlug | [PlayerIdOrSlug](../models/PlayerIdOrSlug.md)                                                 | ✅       | A player ID or slug                                                                                                                                            |
 | gamesCount     | number                                                                                        | ❌       | The amount of games used for the statistics. <br/> <br/>For example if `?games_count=5`, it would show the statistics for the most recent 5 games played <br/> |
 | side           | [GetDota2PlayersPlayerIdOrSlugStatsSide](../models/GetDota2PlayersPlayerIdOrSlugStatsSide.md) | ❌       |                                                                                                                                                                |
-| from\_         | string                                                                                        | ❌       | Filter out 'from' date                                                                                                                                         |
+| from           | string                                                                                        | ❌       | Filter out 'from' date                                                                                                                                         |
 | to             | string                                                                                        | ❌       | Filter out 'to' date                                                                                                                                           |
 
 **Return Type**
@@ -71,21 +71,21 @@ Get detailed statistics of a given Dota2 player
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 2;
+  const playerIdOrSlug = 9;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2PlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2PlayersPlayerIdOrSlugStats(
   ,
   {
-    gamesCount: 2,
+    gamesCount: 4,
 		side: side,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -117,21 +117,21 @@ Get detailed statistics of a given Dota2 player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const playerIdOrSlug = 2;
+const playerIdOrSlug = 9;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 10,
+    gamesCount: 6,
 		side: side,
   }
 );
@@ -163,21 +163,21 @@ Get detailed statistics of a given Dota2 team for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const serieIdOrSlug = 10;
-const teamIdOrSlug = 3;
+const teamIdOrSlug = 10;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 5,
+    gamesCount: 9,
 		side: side,
   }
 );
@@ -200,7 +200,7 @@ Get detailed statistics of a given Dota2 team
 | teamIdOrSlug | [TeamIdOrSlug](../models/TeamIdOrSlug.md)                                                     | ✅       | A team ID or slug                                                                                                                                              |
 | gamesCount   | number                                                                                        | ❌       | The amount of games used for the statistics. <br/> <br/>For example if `?games_count=5`, it would show the statistics for the most recent 5 games played <br/> |
 | side         | [GetDota2PlayersPlayerIdOrSlugStatsSide](../models/GetDota2PlayersPlayerIdOrSlugStatsSide.md) | ❌       |                                                                                                                                                                |
-| from\_       | string                                                                                        | ❌       | Filter out 'from' date                                                                                                                                         |
+| from         | string                                                                                        | ❌       | Filter out 'from' date                                                                                                                                         |
 | to           | string                                                                                        | ❌       | Filter out 'to' date                                                                                                                                           |
 
 **Return Type**
@@ -210,21 +210,21 @@ Get detailed statistics of a given Dota2 team
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 3;
+  const teamIdOrSlug = 10;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2TeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2TeamsTeamIdOrSlugStats(
   ,
   {
-    gamesCount: 7,
+    gamesCount: 4,
 		side: side,
-    from_: "2017-07-21",
+    from: "2017-07-21",
     to: "2017-07-21",
   }
 );
@@ -256,21 +256,21 @@ Get detailed statistics of a given Dota2 player for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const playerIdOrSlug = 2;
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 3,
+    gamesCount: 7,
 		side: side,
   }
 );
@@ -302,21 +302,21 @@ Get detailed statistics of a given Dota2 team for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { Pandascore } from 'pandascore';
+import { PandascoreClient } from 'pandascore_client';
 
 (async () => {
-  const pandascore = new Pandascore({
+  const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 10;
-const teamIdOrSlug = 3;
+  const tournamentIdOrSlug = 2;
+const teamIdOrSlug = 10;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
-  const { data } = await pandascore.dota2Stats.getDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
+  const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 10,
+    gamesCount: 3,
 		side: side,
   }
 );

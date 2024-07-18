@@ -8,8 +8,10 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2StatsForAllPlayersByMatch = z.object({
-  teams: z.array(dota2TeamForAllStatsPlayers),
+export const dota2StatsForAllPlayersByMatch: any = z.lazy(() => {
+  return z.object({
+    teams: z.array(dota2TeamForAllStatsPlayers),
+  });
 });
 
 /**
@@ -23,20 +25,22 @@ export type Dota2StatsForAllPlayersByMatch = z.infer<typeof dota2StatsForAllPlay
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForAllPlayersByMatchResponse = z
-  .object({
-    teams: z.array(dota2TeamForAllStatsPlayersResponse),
-  })
-  .transform((data) => ({
-    teams: data['teams'],
-  }));
+export const dota2StatsForAllPlayersByMatchResponse: any = z.lazy(() => {
+  return z
+    .object({
+      teams: z.array(dota2TeamForAllStatsPlayersResponse),
+    })
+    .transform((data) => ({
+      teams: data['teams'],
+    }));
+});
 
 /**
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForAllPlayersByMatchRequest = z
-  .object({ teams: z.array(dota2TeamForAllStatsPlayersRequest).nullish() })
-  .transform((data) => ({
+export const dota2StatsForAllPlayersByMatchRequest: any = z.lazy(() => {
+  return z.object({ teams: z.array(dota2TeamForAllStatsPlayersRequest).nullish() }).transform((data) => ({
     teams: data['teams'],
   }));
+});
