@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 10;
+  const filterOverCodmwSeriesVideogameTitle = 1;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['cupidatat'],
-    endAt: ['anim fugi'],
-    id: [4],
-    leagueId: [1],
-    modifiedAt: ['e'],
-    name: ['quis sit sunt '],
-    season: ['nisi ve'],
-    slug: ['em'],
+    beginAt: ['aliquip minim d'],
+    endAt: ['aute ad ea'],
+    id: [3],
+    leagueId: [6],
+    modifiedAt: ['quis offi'],
+    name: ['labor'],
+    season: ['veniam qui cons'],
+    slug: ['hizoyph83_0'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['est'],
-    endAt: ['ma'],
-    id: [9],
-    leagueId: [8],
-    modifiedAt: ['eu consequa'],
-    name: ['consequat'],
-    season: ['dolore dolore '],
-    slug: ['e'],
+    beginAt: ['aliq'],
+    endAt: ['est dolore eu'],
+    id: [10],
+    leagueId: [7],
+    modifiedAt: ['dolor pro'],
+    name: ['anim ex eli'],
+    season: ['pariatur '],
+    slug: ['ic16v7gnnll'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,9 +81,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCodmwSeries = {
-    name: 'Lorem',
-    season: 'ut volu',
-    slug: 'w7',
+    name: 'qui ul',
+    season: 'esse ullam',
+    slug: 'c7',
     winnerType: opponentType,
   };
   const page = 1;
@@ -133,39 +133,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 10;
+  const filterOverCodmwSeriesVideogameTitle = 1;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['cupidatat'],
-    endAt: ['anim fugi'],
-    id: [4],
-    leagueId: [1],
-    modifiedAt: ['e'],
-    name: ['quis sit sunt '],
-    season: ['nisi ve'],
-    slug: ['em'],
+    beginAt: ['aliquip minim d'],
+    endAt: ['aute ad ea'],
+    id: [3],
+    leagueId: [6],
+    modifiedAt: ['quis offi'],
+    name: ['labor'],
+    season: ['veniam qui cons'],
+    slug: ['hizoyph83_0'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['est'],
-    endAt: ['ma'],
-    id: [9],
-    leagueId: [8],
-    modifiedAt: ['eu consequa'],
-    name: ['consequat'],
-    season: ['dolore dolore '],
-    slug: ['e'],
+    beginAt: ['aliq'],
+    endAt: ['est dolore eu'],
+    id: [10],
+    leagueId: [7],
+    modifiedAt: ['dolor pro'],
+    name: ['anim ex eli'],
+    season: ['pariatur '],
+    slug: ['ic16v7gnnll'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,9 +173,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCodmwSeries = {
-    name: 'Lorem',
-    season: 'ut volu',
-    slug: 'w7',
+    name: 'qui ul',
+    season: 'esse ullam',
+    slug: 'c7',
     winnerType: opponentType,
   };
   const page = 1;
@@ -225,39 +225,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 10;
+  const filterOverCodmwSeriesVideogameTitle = 1;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['cupidatat'],
-    endAt: ['anim fugi'],
-    id: [4],
-    leagueId: [1],
-    modifiedAt: ['e'],
-    name: ['quis sit sunt '],
-    season: ['nisi ve'],
-    slug: ['em'],
+    beginAt: ['aliquip minim d'],
+    endAt: ['aute ad ea'],
+    id: [3],
+    leagueId: [6],
+    modifiedAt: ['quis offi'],
+    name: ['labor'],
+    season: ['veniam qui cons'],
+    slug: ['hizoyph83_0'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['est'],
-    endAt: ['ma'],
-    id: [9],
-    leagueId: [8],
-    modifiedAt: ['eu consequa'],
-    name: ['consequat'],
-    season: ['dolore dolore '],
-    slug: ['e'],
+    beginAt: ['aliq'],
+    endAt: ['est dolore eu'],
+    id: [10],
+    leagueId: [7],
+    modifiedAt: ['dolor pro'],
+    name: ['anim ex eli'],
+    season: ['pariatur '],
+    slug: ['ic16v7gnnll'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,9 +265,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCodmwSeries = {
-    name: 'Lorem',
-    season: 'ut volu',
-    slug: 'w7',
+    name: 'qui ul',
+    season: 'esse ullam',
+    slug: 'c7',
     winnerType: opponentType,
   };
   const page = 1;
@@ -317,39 +317,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 10;
+  const filterOverCodmwSeriesVideogameTitle = 1;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['cupidatat'],
-    endAt: ['anim fugi'],
-    id: [4],
-    leagueId: [1],
-    modifiedAt: ['e'],
-    name: ['quis sit sunt '],
-    season: ['nisi ve'],
-    slug: ['em'],
+    beginAt: ['aliquip minim d'],
+    endAt: ['aute ad ea'],
+    id: [3],
+    leagueId: [6],
+    modifiedAt: ['quis offi'],
+    name: ['labor'],
+    season: ['veniam qui cons'],
+    slug: ['hizoyph83_0'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['est'],
-    endAt: ['ma'],
-    id: [9],
-    leagueId: [8],
-    modifiedAt: ['eu consequa'],
-    name: ['consequat'],
-    season: ['dolore dolore '],
-    slug: ['e'],
+    beginAt: ['aliq'],
+    endAt: ['est dolore eu'],
+    id: [10],
+    leagueId: [7],
+    modifiedAt: ['dolor pro'],
+    name: ['anim ex eli'],
+    season: ['pariatur '],
+    slug: ['ic16v7gnnll'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,9 +357,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCodmwSeries = {
-    name: 'Lorem',
-    season: 'ut volu',
-    slug: 'w7',
+    name: 'qui ul',
+    season: 'esse ullam',
+    slug: 'c7',
     winnerType: opponentType,
   };
   const page = 1;
@@ -376,3 +376,5 @@ import { PandascoreClient } from 'pandascore_client';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

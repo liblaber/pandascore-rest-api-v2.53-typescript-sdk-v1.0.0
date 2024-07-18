@@ -43,24 +43,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverDota2ShortTournamentsVideogameTitle = 7;
+  const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2ShortTournaments = {
-    beginAt: ['Excepteur ut'],
+    beginAt: ['elit laboris'],
     detailedStats: true,
-    endAt: ['laboris lab'],
+    endAt: ['anim sunt'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['proident ull'],
-    name: ['eiusmod nos'],
-    prizepool: ['laboris esse '],
+    modifiedAt: ['lab'],
+    name: ['ea sunt pro'],
+    prizepool: ['incidid'],
     serieId: [10],
-    slug: ['_4g-zqvx7oj'],
+    slug: ['sh2x1_ti7'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverDota2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -68,21 +68,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2ShortTournaments = {
-    beginAt: ['amet cil'],
+    beginAt: ['dolor en'],
     detailedStats: [true],
-    endAt: ['in '],
+    endAt: ['quis amet an'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['eu dolor'],
-    name: ['quis id'],
-    prizepool: ['dolore '],
-    serieId: [9],
-    slug: ['4xkvb_s'],
+    id: [4],
+    modifiedAt: ['in '],
+    name: ['aute qui'],
+    prizepool: ['mollit et'],
+    serieId: [8],
+    slug: ['i6'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -92,9 +92,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2ShortTournaments = {
-    name: 'ex in do',
-    prizepool: 'elit e',
-    slug: 'n_7k',
+    name: 'minim tempor de',
+    prizepool: 'Duis laborum ',
+    slug: '8xfo7sds7',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -147,24 +147,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverDota2ShortTournamentsVideogameTitle = 7;
+  const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2ShortTournaments = {
-    beginAt: ['Excepteur ut'],
+    beginAt: ['elit laboris'],
     detailedStats: true,
-    endAt: ['laboris lab'],
+    endAt: ['anim sunt'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['proident ull'],
-    name: ['eiusmod nos'],
-    prizepool: ['laboris esse '],
+    modifiedAt: ['lab'],
+    name: ['ea sunt pro'],
+    prizepool: ['incidid'],
     serieId: [10],
-    slug: ['_4g-zqvx7oj'],
+    slug: ['sh2x1_ti7'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverDota2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -172,21 +172,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2ShortTournaments = {
-    beginAt: ['amet cil'],
+    beginAt: ['dolor en'],
     detailedStats: [true],
-    endAt: ['in '],
+    endAt: ['quis amet an'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['eu dolor'],
-    name: ['quis id'],
-    prizepool: ['dolore '],
-    serieId: [9],
-    slug: ['4xkvb_s'],
+    id: [4],
+    modifiedAt: ['in '],
+    name: ['aute qui'],
+    prizepool: ['mollit et'],
+    serieId: [8],
+    slug: ['i6'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -196,9 +196,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2ShortTournaments = {
-    name: 'ex in do',
-    prizepool: 'elit e',
-    slug: 'n_7k',
+    name: 'minim tempor de',
+    prizepool: 'Duis laborum ',
+    slug: '8xfo7sds7',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -251,24 +251,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverDota2ShortTournamentsVideogameTitle = 7;
+  const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2ShortTournaments = {
-    beginAt: ['Excepteur ut'],
+    beginAt: ['elit laboris'],
     detailedStats: true,
-    endAt: ['laboris lab'],
+    endAt: ['anim sunt'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['proident ull'],
-    name: ['eiusmod nos'],
-    prizepool: ['laboris esse '],
+    modifiedAt: ['lab'],
+    name: ['ea sunt pro'],
+    prizepool: ['incidid'],
     serieId: [10],
-    slug: ['_4g-zqvx7oj'],
+    slug: ['sh2x1_ti7'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverDota2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -276,21 +276,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2ShortTournaments = {
-    beginAt: ['amet cil'],
+    beginAt: ['dolor en'],
     detailedStats: [true],
-    endAt: ['in '],
+    endAt: ['quis amet an'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['eu dolor'],
-    name: ['quis id'],
-    prizepool: ['dolore '],
-    serieId: [9],
-    slug: ['4xkvb_s'],
+    id: [4],
+    modifiedAt: ['in '],
+    name: ['aute qui'],
+    prizepool: ['mollit et'],
+    serieId: [8],
+    slug: ['i6'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -300,9 +300,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2ShortTournaments = {
-    name: 'ex in do',
-    prizepool: 'elit e',
-    slug: 'n_7k',
+    name: 'minim tempor de',
+    prizepool: 'Duis laborum ',
+    slug: '8xfo7sds7',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -355,24 +355,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverDota2ShortTournamentsVideogameTitle = 7;
+  const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2ShortTournaments = {
-    beginAt: ['Excepteur ut'],
+    beginAt: ['elit laboris'],
     detailedStats: true,
-    endAt: ['laboris lab'],
+    endAt: ['anim sunt'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['proident ull'],
-    name: ['eiusmod nos'],
-    prizepool: ['laboris esse '],
+    modifiedAt: ['lab'],
+    name: ['ea sunt pro'],
+    prizepool: ['incidid'],
     serieId: [10],
-    slug: ['_4g-zqvx7oj'],
+    slug: ['sh2x1_ti7'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverDota2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -380,21 +380,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2ShortTournaments = {
-    beginAt: ['amet cil'],
+    beginAt: ['dolor en'],
     detailedStats: [true],
-    endAt: ['in '],
+    endAt: ['quis amet an'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['eu dolor'],
-    name: ['quis id'],
-    prizepool: ['dolore '],
-    serieId: [9],
-    slug: ['4xkvb_s'],
+    id: [4],
+    modifiedAt: ['in '],
+    name: ['aute qui'],
+    prizepool: ['mollit et'],
+    serieId: [8],
+    slug: ['i6'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -404,9 +404,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2ShortTournaments = {
-    name: 'ex in do',
-    prizepool: 'elit e',
-    slug: 'n_7k',
+    name: 'minim tempor de',
+    prizepool: 'Duis laborum ',
+    slug: '8xfo7sds7',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -424,3 +424,5 @@ import { PandascoreClient } from 'pandascore_client';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

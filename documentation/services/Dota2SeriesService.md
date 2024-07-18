@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['dol'],
-    endAt: ['conse'],
-    id: [1],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
     leagueId: [3],
-    modifiedAt: ['dolor do m'],
-    name: ['qui eiusmod'],
-    season: ['Duisnulla'],
-    slug: ['hk'],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['al'],
-    endAt: ['reprehenderit'],
-    id: [1],
-    leagueId: [3],
-    modifiedAt: ['laboris'],
-    name: ['id et'],
-    season: ['non c'],
-    slug: ['wvyl2'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,9 +81,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'deser',
-    season: 'Lorem quis in',
-    slug: 'ya-9_g6ka6i',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
@@ -133,39 +133,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['dol'],
-    endAt: ['conse'],
-    id: [1],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
     leagueId: [3],
-    modifiedAt: ['dolor do m'],
-    name: ['qui eiusmod'],
-    season: ['Duisnulla'],
-    slug: ['hk'],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['al'],
-    endAt: ['reprehenderit'],
-    id: [1],
-    leagueId: [3],
-    modifiedAt: ['laboris'],
-    name: ['id et'],
-    season: ['non c'],
-    slug: ['wvyl2'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,9 +173,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'deser',
-    season: 'Lorem quis in',
-    slug: 'ya-9_g6ka6i',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
@@ -225,39 +225,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['dol'],
-    endAt: ['conse'],
-    id: [1],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
     leagueId: [3],
-    modifiedAt: ['dolor do m'],
-    name: ['qui eiusmod'],
-    season: ['Duisnulla'],
-    slug: ['hk'],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['al'],
-    endAt: ['reprehenderit'],
-    id: [1],
-    leagueId: [3],
-    modifiedAt: ['laboris'],
-    name: ['id et'],
-    season: ['non c'],
-    slug: ['wvyl2'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,9 +265,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'deser',
-    season: 'Lorem quis in',
-    slug: 'ya-9_g6ka6i',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
@@ -317,39 +317,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverDota2SeriesVideogameTitle = 7;
+  const filterOverDota2SeriesVideogameTitle = 9;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverDota2Series = {
-    beginAt: ['dol'],
-    endAt: ['conse'],
-    id: [1],
+    beginAt: ['cillum d'],
+    endAt: ['laboris'],
+    id: [5],
     leagueId: [3],
-    modifiedAt: ['dolor do m'],
-    name: ['qui eiusmod'],
-    season: ['Duisnulla'],
-    slug: ['hk'],
+    modifiedAt: ['null'],
+    name: ['dolore'],
+    season: ['ut qui '],
+    slug: ['e7cx9f3y'],
     videogameTitle: [filterOverDota2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverDota2Series = {
-    beginAt: ['al'],
-    endAt: ['reprehenderit'],
-    id: [1],
-    leagueId: [3],
-    modifiedAt: ['laboris'],
-    name: ['id et'],
-    season: ['non c'],
-    slug: ['wvyl2'],
+    beginAt: ['exercitation'],
+    endAt: ['ex'],
+    id: [4],
+    leagueId: [10],
+    modifiedAt: ['incididunt '],
+    name: ['dolor elit co'],
+    season: ['exercitat'],
+    slug: ['6wkd46'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,9 +357,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverDota2Series = {
-    name: 'deser',
-    season: 'Lorem quis in',
-    slug: 'ya-9_g6ka6i',
+    name: 'dolore ut en',
+    season: 'autesed',
+    slug: '1jo-8',
     winnerType: opponentType,
   };
   const page = 1;
@@ -376,3 +376,5 @@ import { PandascoreClient } from 'pandascore_client';
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->

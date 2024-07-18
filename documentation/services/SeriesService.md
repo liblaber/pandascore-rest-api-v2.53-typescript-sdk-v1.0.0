@@ -49,7 +49,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -67,7 +67,7 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -141,7 +141,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -159,7 +159,7 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -233,7 +233,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -251,7 +251,7 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -325,7 +325,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -343,7 +343,7 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 5;
+  const opponentId = 7;
 
   const opponentType = OpponentType.Player;
 
@@ -410,7 +410,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlug();
 
@@ -450,10 +450,10 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 2;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -463,7 +463,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -502,7 +502,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -587,10 +587,10 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 2;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -600,7 +600,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -639,7 +639,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -724,10 +724,10 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 2;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -737,7 +737,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -776,7 +776,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -861,10 +861,10 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 2;;
+const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -874,7 +874,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -913,7 +913,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -998,12 +998,12 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 1;
+  const serieIdOrSlug = 10;
 const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
 const filterOverShortTournamentsVideogameTitle = 5;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const opponentType = OpponentType.Player;
 
@@ -1026,7 +1026,7 @@ const filter: FilterOverShortTournaments = {
 };
 const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-const opponentId = 5;
+const opponentId = 7;
 
 const opponentType = OpponentType.Player;
 
@@ -1073,3 +1073,5 @@ const page = 1;
   console.log(data);
 })();
 ```
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
