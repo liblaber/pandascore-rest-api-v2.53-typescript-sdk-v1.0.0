@@ -39,33 +39,33 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
+  const serieIdOrSlug = 1;
 const videogameId = VideogameId.1;
 
 const filter: FilterOverDota2Teams = {
-  acronym: ["molli"],
-  id: [3],
-  location: ["qui dolore"],
-  modifiedAt: ["id"],
-  name: ["commodo ex"],
-  slug: ["8h6y1-yo"],
+  acronym: ["qui ani"],
+  id: [6],
+  location: ["occaecat ut rep"],
+  modifiedAt: ["enim cu"],
+  name: ["velit occ"],
+  slug: ["vbtl2ssp"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverDota2Teams = {
-  acronym: ["ut vel"],
-  id: [10],
-  location: ["ut minim"],
-  modifiedAt: ["veniam mo"],
-  name: ["idelit exercita"],
-  slug: ["psh"]
+  acronym: ["ipsum ut"],
+  id: [8],
+  location: ["ad quis labore "],
+  modifiedAt: ["ipsum ulla"],
+  name: ["irure mollit "],
+  slug: ["wufkd66y"]
 };
 
 const search: SearchOverDota2Teams = {
-  acronym: "ullamco",
-  location: "in ex",
-  name: "mollit co",
-  slug: "7oiow"
+  acronym: "ametpa",
+  location: "enimes",
+  name: "eiusmod deser",
+  slug: "2gmyb_ly"
 };
 const page = 1;
 
@@ -119,29 +119,29 @@ import { PandascoreClient } from 'pandascore_client';
   const videogameId = VideogameId.1;
 
 const filter: FilterOverDota2Teams = {
-  acronym: ["molli"],
-  id: [3],
-  location: ["qui dolore"],
-  modifiedAt: ["id"],
-  name: ["commodo ex"],
-  slug: ["8h6y1-yo"],
+  acronym: ["qui ani"],
+  id: [6],
+  location: ["occaecat ut rep"],
+  modifiedAt: ["enim cu"],
+  name: ["velit occ"],
+  slug: ["vbtl2ssp"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverDota2Teams = {
-  acronym: ["ut vel"],
-  id: [10],
-  location: ["ut minim"],
-  modifiedAt: ["veniam mo"],
-  name: ["idelit exercita"],
-  slug: ["psh"]
+  acronym: ["ipsum ut"],
+  id: [8],
+  location: ["ad quis labore "],
+  modifiedAt: ["ipsum ulla"],
+  name: ["irure mollit "],
+  slug: ["wufkd66y"]
 };
 
 const search: SearchOverDota2Teams = {
-  acronym: "ullamco",
-  location: "in ex",
-  name: "mollit co",
-  slug: "7oiow"
+  acronym: "ametpa",
+  location: "enimes",
+  name: "eiusmod deser",
+  slug: "2gmyb_ly"
 };
 const page = 1;
 

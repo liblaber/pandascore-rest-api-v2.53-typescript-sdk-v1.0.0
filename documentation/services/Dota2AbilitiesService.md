@@ -40,17 +40,17 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Abilities = {
-    id: [10],
-    name: ['mv8o1gq'],
+    id: [6],
+    name: ['ru53'],
   };
 
   const range: RangeOverDota2Abilities = {
-    id: [10],
-    name: ['g6tgc'],
+    id: [7],
+    name: ['-rri-r_w'],
   };
 
   const search: SearchOverDota2Abilities = {
-    name: 'a78ls0h8h80',
+    name: '1',
   };
   const page = 1;
 
@@ -94,7 +94,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const dota2AbilityIdOrSlug = 2;
+  const dota2AbilityIdOrSlug = 9;
 
   const { data } = await pandascoreClient.dota2Abilities.getDota2AbilitiesDota2AbilityIdOrSlug();
 

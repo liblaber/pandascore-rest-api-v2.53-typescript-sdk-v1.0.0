@@ -154,7 +154,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 const gameStatus = GameStatus.finished;
 
 const filter: FilterOverValorantGames = {

@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
 
 const filter: FilterOverCsgoPlayers = {
   active: true,
-  birthday: ["ipsum est"],
-  firstName: ["commodo elit"],
-  id: [2],
-  lastName: ["sitesse aut"],
-  modifiedAt: ["exercit"],
-  name: ["dolore Excepte"],
-  nationality: ["exercitat"],
-  role: ["quis consectet"],
-  slug: ["hqupp"],
-  teamId: [4],
+  birthday: ["nostrud "],
+  firstName: ["eu anim exe"],
+  id: [6],
+  lastName: ["in amet"],
+  modifiedAt: ["labore enim"],
+  name: ["laborum "],
+  nationality: ["magna "],
+  role: ["tempor veniam"],
+  slug: ["i"],
+  teamId: [2],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCsgoPlayers = {
-  birthday: ["nostrud "],
-  firstName: ["inaut"],
-  id: [2],
-  lastName: ["magna m"],
-  modifiedAt: ["nostrud inc"],
-  name: ["non qui sun"],
-  nationality: ["amet "],
-  role: ["non co"],
-  slug: ["srxr1-zb2sn"]
+  birthday: ["dosit"],
+  firstName: ["irure pariat"],
+  id: [5],
+  lastName: ["aliqua pariatur"],
+  modifiedAt: ["dolore do Lo"],
+  name: ["deserunt"],
+  nationality: ["ut in sunt"],
+  role: ["quis ea lab"],
+  slug: ["7"]
 };
 
 const search: SearchOverCsgoPlayers = {
-  birthday: "nostrud ad in ",
-  firstName: "consequa",
-  lastName: "laborum ",
-  name: "ut Excepteur n",
-  nationality: "proident mini",
-  role: "aliquip ",
-  slug: "9y"
+  birthday: "qui ut cill",
+  firstName: "dolore",
+  lastName: "labore et",
+  name: "voluptate",
+  nationality: "adipisicing ",
+  role: "adculpa e",
+  slug: "v"
 };
 const page = 1;
 

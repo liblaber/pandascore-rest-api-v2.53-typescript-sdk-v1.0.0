@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 8;
+  const filterOverFifaSeriesVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['pariat'],
-    endAt: ['n'],
-    id: [7],
-    leagueId: [3],
-    modifiedAt: ['elit '],
-    name: ['commo'],
-    season: ['cillum a'],
-    slug: ['mj-4az6h8u'],
+    beginAt: ['mi'],
+    endAt: ['ut'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['ess'],
+    name: ['nulla'],
+    season: ['commodo dolor'],
+    slug: ['fj-s'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['qui nu'],
-    endAt: ['nulla elit '],
-    id: [6],
-    leagueId: [8],
-    modifiedAt: ['qui consequat'],
-    name: ['nulla'],
-    season: ['occaecat enim'],
-    slug: ['dw'],
+    beginAt: ['deserunt commod'],
+    endAt: ['ad irure '],
+    id: [8],
+    leagueId: [7],
+    modifiedAt: ['fugiat co'],
+    name: ['est des'],
+    season: ['labore ali'],
+    slug: ['2df02rm'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,9 +81,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'sed do',
-    season: 'cillum d',
-    slug: 'ou',
+    name: 'reprehenderit',
+    season: 'in non',
+    slug: 't',
     winnerType: opponentType,
   };
   const page = 1;
@@ -133,39 +133,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 8;
+  const filterOverFifaSeriesVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['pariat'],
-    endAt: ['n'],
-    id: [7],
-    leagueId: [3],
-    modifiedAt: ['elit '],
-    name: ['commo'],
-    season: ['cillum a'],
-    slug: ['mj-4az6h8u'],
+    beginAt: ['mi'],
+    endAt: ['ut'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['ess'],
+    name: ['nulla'],
+    season: ['commodo dolor'],
+    slug: ['fj-s'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['qui nu'],
-    endAt: ['nulla elit '],
-    id: [6],
-    leagueId: [8],
-    modifiedAt: ['qui consequat'],
-    name: ['nulla'],
-    season: ['occaecat enim'],
-    slug: ['dw'],
+    beginAt: ['deserunt commod'],
+    endAt: ['ad irure '],
+    id: [8],
+    leagueId: [7],
+    modifiedAt: ['fugiat co'],
+    name: ['est des'],
+    season: ['labore ali'],
+    slug: ['2df02rm'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,9 +173,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'sed do',
-    season: 'cillum d',
-    slug: 'ou',
+    name: 'reprehenderit',
+    season: 'in non',
+    slug: 't',
     winnerType: opponentType,
   };
   const page = 1;
@@ -225,39 +225,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 8;
+  const filterOverFifaSeriesVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['pariat'],
-    endAt: ['n'],
-    id: [7],
-    leagueId: [3],
-    modifiedAt: ['elit '],
-    name: ['commo'],
-    season: ['cillum a'],
-    slug: ['mj-4az6h8u'],
+    beginAt: ['mi'],
+    endAt: ['ut'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['ess'],
+    name: ['nulla'],
+    season: ['commodo dolor'],
+    slug: ['fj-s'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['qui nu'],
-    endAt: ['nulla elit '],
-    id: [6],
-    leagueId: [8],
-    modifiedAt: ['qui consequat'],
-    name: ['nulla'],
-    season: ['occaecat enim'],
-    slug: ['dw'],
+    beginAt: ['deserunt commod'],
+    endAt: ['ad irure '],
+    id: [8],
+    leagueId: [7],
+    modifiedAt: ['fugiat co'],
+    name: ['est des'],
+    season: ['labore ali'],
+    slug: ['2df02rm'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,9 +265,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'sed do',
-    season: 'cillum d',
-    slug: 'ou',
+    name: 'reprehenderit',
+    season: 'in non',
+    slug: 't',
     winnerType: opponentType,
   };
   const page = 1;
@@ -317,39 +317,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 8;
+  const filterOverFifaSeriesVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverFifaSeries = {
-    beginAt: ['pariat'],
-    endAt: ['n'],
-    id: [7],
-    leagueId: [3],
-    modifiedAt: ['elit '],
-    name: ['commo'],
-    season: ['cillum a'],
-    slug: ['mj-4az6h8u'],
+    beginAt: ['mi'],
+    endAt: ['ut'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['ess'],
+    name: ['nulla'],
+    season: ['commodo dolor'],
+    slug: ['fj-s'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverFifaSeries = {
-    beginAt: ['qui nu'],
-    endAt: ['nulla elit '],
-    id: [6],
-    leagueId: [8],
-    modifiedAt: ['qui consequat'],
-    name: ['nulla'],
-    season: ['occaecat enim'],
-    slug: ['dw'],
+    beginAt: ['deserunt commod'],
+    endAt: ['ad irure '],
+    id: [8],
+    leagueId: [7],
+    modifiedAt: ['fugiat co'],
+    name: ['est des'],
+    season: ['labore ali'],
+    slug: ['2df02rm'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,9 +357,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverFifaSeries = {
-    name: 'sed do',
-    season: 'cillum d',
-    slug: 'ou',
+    name: 'reprehenderit',
+    season: 'in non',
+    slug: 't',
     winnerType: opponentType,
   };
   const page = 1;

@@ -44,7 +44,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -54,7 +54,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -93,7 +93,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -178,7 +178,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -188,7 +188,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -227,7 +227,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -312,7 +312,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -322,7 +322,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -361,7 +361,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -446,7 +446,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -456,7 +456,7 @@ const filterOverMatchesVideogameTitle = 6;
 
 const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -495,7 +495,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -574,7 +574,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.matches.getMatchesMatchIdOrSlug();
 
@@ -609,7 +609,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.matches.getMatchesMatchIdOrSlugOpponents();
 

@@ -39,7 +39,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owStats.getOwGamesOwGameIdPlayersPlayerIdOrSlugStats(3);
 
@@ -74,7 +74,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersStats();
 
@@ -109,8 +109,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const playerIdOrSlug = 9;
+  const matchIdOrSlug = 2;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -149,7 +149,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owStats.getOwPlayersPlayerIdOrSlugStats(
   ,
@@ -190,8 +190,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 1;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owStats.getOwSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -229,8 +229,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 10;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owStats.getOwTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,

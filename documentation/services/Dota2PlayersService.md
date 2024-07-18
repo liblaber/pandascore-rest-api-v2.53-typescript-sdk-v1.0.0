@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
 
 const filter: FilterOverDota2Players = {
   active: true,
-  birthday: ["nulla ad "],
-  firstName: ["nostrud"],
-  id: [6],
-  lastName: ["fugiat sit ve"],
-  modifiedAt: ["Lorem ex amet "],
-  name: ["nisi labore s"],
-  nationality: ["dolor"],
-  role: ["pariatur l"],
-  slug: ["m8l"],
-  teamId: [7],
+  birthday: ["Duis ma"],
+  firstName: ["minim"],
+  id: [7],
+  lastName: ["eiusmod in"],
+  modifiedAt: ["cupidatat"],
+  name: ["do Duis pro"],
+  nationality: ["ullamco Ut"],
+  role: ["dolore t"],
+  slug: ["hu5v0"],
+  teamId: [6],
   videogameId: [videogameId]
 };
 
 const range: RangeOverDota2Players = {
-  birthday: ["qui esse"],
-  firstName: ["eiusmod repreh"],
-  id: [2],
-  lastName: ["in sunt pariat"],
-  modifiedAt: ["anim magna "],
-  name: ["dolor"],
-  nationality: ["quidolore repre"],
-  role: ["cupida"],
-  slug: ["-f5-23-"]
+  birthday: ["ex tempor"],
+  firstName: ["elit dolor qu"],
+  id: [4],
+  lastName: ["incididu"],
+  modifiedAt: ["eu ea"],
+  name: ["eanisi "],
+  nationality: ["veniam"],
+  role: ["ipsum"],
+  slug: ["i57jy1"]
 };
 
 const search: SearchOverDota2Players = {
-  birthday: "anim qu",
-  firstName: "Lorem ",
-  lastName: "cillum ipsum",
-  name: "est enim mi",
-  nationality: "id in mollit",
-  role: "fugiat in",
-  slug: "apl"
+  birthday: "et incid",
+  firstName: "deseru",
+  lastName: "conse",
+  name: "culpa",
+  nationality: "dolor velit v",
+  role: "velit",
+  slug: "scuq9k0o"
 };
 const page = 1;
 

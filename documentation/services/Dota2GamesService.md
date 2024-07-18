@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameId(7);
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameId(8);
 
   console.log(data);
 })();
@@ -73,7 +73,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameIdFrames(5, {
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameIdFrames(8, {
     page: page,
     perPage: 50,
   });
@@ -114,23 +114,23 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;
 
 const filter: FilterOverDota2Games = {
-  beginAt: ["ad"],
+  beginAt: ["enim"],
   complete: true,
   detailedStats: true,
-  endAt: ["laboris "],
+  endAt: ["consequat "],
   finished: true,
-  firstBlood: [7],
+  firstBlood: [10],
   forfeit: true,
-  id: [5],
-  length: [2],
-  matchId: [10],
-  position: [2],
+  id: [7],
+  length: [6],
+  matchId: [1],
+  position: [4],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -139,17 +139,17 @@ const gameStatus = GameStatus.finished;
 const opponentType = OpponentType.Player;
 
 const range: RangeOverDota2Games = {
-  beginAt: ["Ut"],
+  beginAt: ["elit in eiusmo"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["cillum"],
+  endAt: ["au"],
   finished: [true],
   firstBlood: [6],
   forfeit: [true],
-  id: [4],
-  length: [9],
-  matchId: [2],
-  position: [1],
+  id: [2],
+  length: [1],
+  matchId: [4],
+  position: [3],
   status: [gameStatus],
   winnerType: [opponentType]
 };
@@ -207,7 +207,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 10;
+  const teamIdOrSlug = 2;
 const page = 1;
 
   const { data } = await pandascoreClient.dota2Games.getDota2TeamsTeamIdOrSlugGames(

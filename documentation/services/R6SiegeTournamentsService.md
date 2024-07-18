@@ -45,7 +45,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -68,7 +68,7 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -149,7 +149,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -172,7 +172,7 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -253,7 +253,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -276,7 +276,7 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -357,7 +357,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
@@ -380,7 +380,7 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 

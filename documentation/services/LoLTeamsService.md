@@ -39,7 +39,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
+  const serieIdOrSlug = 1;
 const videogameId = VideogameId.1;
 
 const filter: FilterOverLoLTeams = {

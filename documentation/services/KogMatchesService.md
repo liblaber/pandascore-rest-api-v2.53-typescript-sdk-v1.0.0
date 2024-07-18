@@ -42,7 +42,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -52,7 +52,7 @@ const filterOverKogMatchesVideogameTitle = 6;
 
 const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -91,7 +91,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -176,7 +176,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -186,7 +186,7 @@ const filterOverKogMatchesVideogameTitle = 6;
 
 const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -225,7 +225,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -310,7 +310,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -320,7 +320,7 @@ const filterOverKogMatchesVideogameTitle = 6;
 
 const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -359,7 +359,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -444,7 +444,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const matchType = MatchType.all_games_played;
 
-const teamIdOrSlug = 10;;
+const teamIdOrSlug = 2;;
 
 const matchStatus = MatchStatus.canceled;
 
@@ -454,7 +454,7 @@ const filterOverKogMatchesVideogameTitle = 6;
 
 const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 
@@ -493,7 +493,7 @@ const matchType = MatchType.all_games_played;
 
 const matchStatus = MatchStatus.canceled;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const matchWinnerType = MatchWinnerType.Player;
 

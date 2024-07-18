@@ -39,25 +39,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Leagues = {
-    id: [3],
-    modifiedAt: ['proident labo'],
-    name: ['dolor proid'],
-    slug: ['_lxx'],
-    url: ['anim ea est U'],
+    id: [6],
+    modifiedAt: ['a'],
+    name: ['laboris dolore '],
+    slug: ['9'],
+    url: ['inmollit in ame'],
   };
 
   const range: RangeOverDota2Leagues = {
-    id: [8],
-    modifiedAt: ['aliqua aute'],
-    name: ['aliqua ea '],
-    slug: ['uic'],
-    url: ['in aute elit'],
+    id: [1],
+    modifiedAt: ['in de'],
+    name: ['dolore'],
+    slug: ['6yucmwj2'],
+    url: ['fugiat'],
   };
 
   const search: SearchOverDota2Leagues = {
-    name: 'Excepteur ip',
-    slug: 'pu97glcez',
-    url: 'dolore ipsum d',
+    name: 'eiusmod',
+    slug: 'effrqdpp3',
+    url: 'qui in ullam',
   };
   const page = 1;
 

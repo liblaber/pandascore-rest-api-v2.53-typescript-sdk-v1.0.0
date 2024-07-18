@@ -40,20 +40,20 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Heroes = {
-    id: [2],
-    localizedName: ['et do'],
-    name: ['-rmn'],
+    id: [9],
+    localizedName: ['Excepteur a'],
+    name: ['961kxe'],
   };
 
   const range: RangeOverDota2Heroes = {
-    id: [6],
-    localizedName: ['id pariatu'],
-    name: ['5'],
+    id: [4],
+    localizedName: ['ullamco aliqua'],
+    name: ['g5qegwrn'],
   };
 
   const search: SearchOverDota2Heroes = {
-    localizedName: 'consectetur',
-    name: '4mqbolw_x',
+    localizedName: 'anim aliqua',
+    name: '0ip',
   };
   const page = 1;
 
@@ -97,7 +97,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const dota2HeroIdOrSlug = 9;
+  const dota2HeroIdOrSlug = 5;
 
   const { data } = await pandascoreClient.dota2Heroes.getDota2HeroesDota2HeroIdOrSlug();
 

@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 1;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
+    beginAt: ['qui ut non'],
+    endAt: ['id nulla'],
+    id: [2],
     leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    modifiedAt: ['Lorem Ut '],
+    name: ['est Duis qui ip'],
+    season: ['ad et'],
+    slug: ['ifahqslh'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
+    beginAt: ['con'],
+    endAt: ['con'],
     id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    leagueId: [3],
+    modifiedAt: ['ad'],
+    name: ['in an'],
+    season: ['aliqua sit'],
+    slug: ['4w4'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -81,9 +81,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'fugiat o',
+    season: 'labore in ',
+    slug: '7lfo_8w',
     winnerType: opponentType,
   };
   const page = 1;
@@ -133,39 +133,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 1;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
+    beginAt: ['qui ut non'],
+    endAt: ['id nulla'],
+    id: [2],
     leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    modifiedAt: ['Lorem Ut '],
+    name: ['est Duis qui ip'],
+    season: ['ad et'],
+    slug: ['ifahqslh'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
+    beginAt: ['con'],
+    endAt: ['con'],
     id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    leagueId: [3],
+    modifiedAt: ['ad'],
+    name: ['in an'],
+    season: ['aliqua sit'],
+    slug: ['4w4'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -173,9 +173,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'fugiat o',
+    season: 'labore in ',
+    slug: '7lfo_8w',
     winnerType: opponentType,
   };
   const page = 1;
@@ -225,39 +225,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 1;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
+    beginAt: ['qui ut non'],
+    endAt: ['id nulla'],
+    id: [2],
     leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    modifiedAt: ['Lorem Ut '],
+    name: ['est Duis qui ip'],
+    season: ['ad et'],
+    slug: ['ifahqslh'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
+    beginAt: ['con'],
+    endAt: ['con'],
     id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    leagueId: [3],
+    modifiedAt: ['ad'],
+    name: ['in an'],
+    season: ['aliqua sit'],
+    slug: ['4w4'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -265,9 +265,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'fugiat o',
+    season: 'labore in ',
+    slug: '7lfo_8w',
     winnerType: opponentType,
   };
   const page = 1;
@@ -317,39 +317,39 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 1;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
+    beginAt: ['qui ut non'],
+    endAt: ['id nulla'],
+    id: [2],
     leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    modifiedAt: ['Lorem Ut '],
+    name: ['est Duis qui ip'],
+    season: ['ad et'],
+    slug: ['ifahqslh'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
+    beginAt: ['con'],
+    endAt: ['con'],
     id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    leagueId: [3],
+    modifiedAt: ['ad'],
+    name: ['in an'],
+    season: ['aliqua sit'],
+    slug: ['4w4'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
@@ -357,9 +357,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'fugiat o',
+    season: 'labore in ',
+    slug: '7lfo_8w',
     winnerType: opponentType,
   };
   const page = 1;

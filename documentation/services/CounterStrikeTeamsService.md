@@ -40,29 +40,29 @@ import { PandascoreClient } from 'pandascore_client';
   const videogameId = VideogameId.1;
 
 const filter: FilterOverCsgoTeams = {
-  acronym: ["cupidatat v"],
+  acronym: ["aute deseru"],
   id: [10],
-  location: ["proide"],
-  modifiedAt: ["n"],
-  name: ["exmoll"],
-  slug: ["388tc6im"],
+  location: ["inlabore ea"],
+  modifiedAt: ["qui do"],
+  name: ["do fugia"],
+  slug: ["hr7lzy"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCsgoTeams = {
-  acronym: ["cupida"],
-  id: [4],
-  location: ["officia ani"],
-  modifiedAt: ["pariatur"],
-  name: ["nostrud qui "],
-  slug: ["k0k91e"]
+  acronym: ["nonirure nisi c"],
+  id: [1],
+  location: ["sunt aliquip "],
+  modifiedAt: ["ullamc"],
+  name: ["sunt Lorem "],
+  slug: ["f9m7owe8"]
 };
 
 const search: SearchOverCsgoTeams = {
-  acronym: "culpa labor",
-  location: "aute mollit i",
-  name: "sunt ad",
-  slug: "wnj8e"
+  acronym: "nulla",
+  location: "laborum cons",
+  name: "labor",
+  slug: "a8yt30_f-"
 };
 const page = 1;
 

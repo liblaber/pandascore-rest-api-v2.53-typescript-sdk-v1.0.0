@@ -1,6 +1,6 @@
 {
   "liblabVersion": "2.1.19",
-  "date": "2024-07-18T11:03:27.785Z",
+  "date": "2024-07-18T16:16:11.861Z",
   "config": {
     "apiId": 392,
     "baseUrl": "https://api.pandascore.co",
@@ -50,7 +50,7 @@
       "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE"]
     },
     "multiTenant": true,
-    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/392/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240718%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240718T110315Z&X-Amz-Expires=43200&X-Amz-Signature=534bebdbac88e47438b7a17922079f61da9a09ca2e61b7fbbd1dd97bc3e01865&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "specUrl": "https://dev-liblab-api-stack-specs.s3.us-east-1.amazonaws.com/392/open-api-spec.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA3C2RXH7MWUCMN7ON%2F20240718%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240718T161604Z&X-Amz-Expires=43200&X-Amz-Signature=0037e93f8c8d6861bfce1f32db13dce9557e926d291b4ca4fbbe1e8d62d98c9f&X-Amz-SignedHeaders=host&x-id=GetObject",
     "includeWatermark": false,
     "language": "typescript",
     "deliveryMethod": "zip",

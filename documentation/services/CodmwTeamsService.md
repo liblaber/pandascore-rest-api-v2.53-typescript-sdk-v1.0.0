@@ -40,29 +40,29 @@ import { PandascoreClient } from 'pandascore_client';
   const videogameId = VideogameId.1;
 
 const filter: FilterOverCodmwTeams = {
-  acronym: ["tempo"],
-  id: [7],
-  location: ["nisi Excepteur"],
-  modifiedAt: ["veniam est"],
-  name: ["proiden"],
-  slug: ["ffzyrcp"],
+  acronym: ["Ut in"],
+  id: [8],
+  location: ["ullamco pariatu"],
+  modifiedAt: ["ali"],
+  name: ["laboris "],
+  slug: ["9_rp6e2ln"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCodmwTeams = {
-  acronym: ["fugiat "],
-  id: [2],
-  location: ["consectetur i"],
-  modifiedAt: ["ullam"],
-  name: ["ut anim n"],
-  slug: ["ak"]
+  acronym: ["nulla Ut eli"],
+  id: [3],
+  location: ["adnisi Duis iru"],
+  modifiedAt: ["te"],
+  name: ["id Excepte"],
+  slug: ["yl6q4"]
 };
 
 const search: SearchOverCodmwTeams = {
-  acronym: "proident",
-  location: "non ess",
-  name: "in ut con",
-  slug: "ap_"
+  acronym: "incididunt",
+  location: "esse et est am",
+  name: "irure ",
+  slug: "n-cfb"
 };
 const page = 1;
 

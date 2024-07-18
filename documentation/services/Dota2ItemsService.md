@@ -40,17 +40,17 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Items = {
-    id: [3],
-    name: ['8cd5x'],
+    id: [7],
+    name: ['r'],
   };
 
   const range: RangeOverDota2Items = {
-    id: [4],
-    name: ['mmypoz-ntw9'],
+    id: [6],
+    name: ['31eyl0fte'],
   };
 
   const search: SearchOverDota2Items = {
-    name: 'grbfwr',
+    name: 'yqe14',
   };
   const page = 1;
 
@@ -94,7 +94,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const dota2ItemIdOrSlug = 6;
+  const dota2ItemIdOrSlug = 9;
 
   const { data } = await pandascoreClient.dota2Items.getDota2ItemsDota2ItemIdOrSlug();
 

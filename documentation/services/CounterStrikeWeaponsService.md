@@ -42,33 +42,33 @@ import { PandascoreClient } from 'pandascore_client';
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const filter: FilterOverCsgoWeapons = {
-    ammoClipMax: [4],
-    ammoMax: [7],
-    cost: [1],
-    id: [5],
-    killReward: [1],
+    ammoClipMax: [3],
+    ammoMax: [8],
+    cost: [8],
+    id: [9],
+    killReward: [123],
     kind: [csgoWeaponKind],
-    name: ['minim u'],
-    slug: ['_lrp8s5nb'],
+    name: ['inofficia Duis '],
+    slug: ['lafwnap8fs'],
   };
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const range: RangeOverCsgoWeapons = {
-    ammoClipMax: [7],
-    ammoMax: [2],
-    cost: [9],
-    id: [10],
-    killReward: [8],
+    ammoClipMax: [9],
+    ammoMax: [3],
+    cost: [3],
+    id: [5],
+    killReward: [4],
     kind: [csgoWeaponKind],
-    name: ['sed proident'],
-    slug: ['3'],
+    name: ['in labori'],
+    slug: ['_dy0z'],
   };
   const csgoWeaponKind = CsgoWeaponKind.grenade;
 
   const search: SearchOverCsgoWeapons = {
     kind: csgoWeaponKind,
-    name: 'minim Excepteu',
-    slug: 'nq41ksr4c',
+    name: 'voluptate',
+    slug: '8_u',
   };
   const page = 1;
 
@@ -112,7 +112,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponIdOrSlug = 4;
+  const csgoWeaponIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeaponsCsgoWeaponIdOrSlug();
 

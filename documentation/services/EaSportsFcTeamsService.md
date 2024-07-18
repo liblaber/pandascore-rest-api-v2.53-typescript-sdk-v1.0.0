@@ -40,22 +40,22 @@ import { PandascoreClient } from 'pandascore_client';
   const videogameId = VideogameId.1;
 
 const filter: FilterOverFifaTeams = {
-  acronym: ["nostrud in vel"],
-  id: [10],
-  location: ["reprehenderit t"],
-  modifiedAt: ["consectetur cil"],
-  name: ["quis Lor"],
-  slug: ["d3c"],
+  acronym: ["sed amet temp"],
+  id: [7],
+  location: ["cupidata"],
+  modifiedAt: ["in"],
+  name: ["deserunt"],
+  slug: ["0p6uwpdk"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverFifaTeams = {
-  acronym: ["minim "],
+  acronym: ["irure"],
   id: [6],
-  location: ["Duis in"],
-  modifiedAt: ["ut cu"],
-  name: ["consectetur "],
-  slug: ["o4l8d"]
+  location: ["pariatur in"],
+  modifiedAt: ["est sunt id "],
+  name: ["minim"],
+  slug: ["0ooo4l8d"]
 };
 
 const search: SearchOverFifaTeams = {

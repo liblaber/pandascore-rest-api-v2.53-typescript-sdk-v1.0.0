@@ -39,7 +39,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2MatchesMatchIdOrSlugPlayersStats();
 
@@ -77,13 +77,13 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 7;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2PlayersPlayerIdOrSlugStats(
   ,
   {
-    gamesCount: 4,
+    gamesCount: 123,
 		side: side,
     from: "2017-07-21",
     to: "2017-07-21",
@@ -123,15 +123,15 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 1;
+const playerIdOrSlug = 7;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 6,
+    gamesCount: 10,
 		side: side,
   }
 );
@@ -169,15 +169,15 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const teamIdOrSlug = 10;
+  const serieIdOrSlug = 1;
+const teamIdOrSlug = 2;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 9,
+    gamesCount: 4,
 		side: side,
   }
 );
@@ -216,13 +216,13 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 10;
+  const teamIdOrSlug = 2;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TeamsTeamIdOrSlugStats(
   ,
   {
-    gamesCount: 4,
+    gamesCount: 3,
 		side: side,
     from: "2017-07-21",
     to: "2017-07-21",
@@ -262,15 +262,15 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 10;
+const playerIdOrSlug = 7;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 7,
+    gamesCount: 4,
 		side: side,
   }
 );
@@ -308,15 +308,15 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const teamIdOrSlug = 10;
+  const tournamentIdOrSlug = 10;
+const teamIdOrSlug = 2;
 const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 3,
+    gamesCount: 10,
 		side: side,
   }
 );

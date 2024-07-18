@@ -40,7 +40,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.loLStats.getLolMatchesMatchIdOrSlugPlayersStats();
 
@@ -79,7 +79,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 7;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 
@@ -128,8 +128,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 1;
+const playerIdOrSlug = 7;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 
@@ -178,7 +178,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
+  const serieIdOrSlug = 1;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 const page = 1;
@@ -228,8 +228,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const teamIdOrSlug = 10;
+  const serieIdOrSlug = 1;
+const teamIdOrSlug = 2;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 
@@ -278,7 +278,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 10;
+  const teamIdOrSlug = 2;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 
@@ -327,8 +327,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 10;
+const playerIdOrSlug = 7;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 
@@ -376,8 +376,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const teamIdOrSlug = 10;
+  const tournamentIdOrSlug = 10;
+const teamIdOrSlug = 2;
 const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
 const videogameVersionOrAll = "5.4970743709";
 

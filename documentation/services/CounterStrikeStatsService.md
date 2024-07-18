@@ -41,7 +41,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersStats();
 
@@ -76,8 +76,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const playerIdOrSlug = 9;
+  const matchIdOrSlug = 2;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -115,8 +115,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const teamIdOrSlug = 10;
+  const matchIdOrSlug = 2;
+const teamIdOrSlug = 2;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
   ,
@@ -156,8 +156,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
-const videogameTitleIdOrSlug = 10;
+  const playerIdOrSlug = 7;
+const videogameTitleIdOrSlug = 8;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoPlayersPlayerIdOrSlugStats(
   ,
@@ -199,8 +199,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 1;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -238,8 +238,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const teamIdOrSlug = 10;
+  const serieIdOrSlug = 1;
+const teamIdOrSlug = 2;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
@@ -279,8 +279,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 10;
-const videogameTitleIdOrSlug = 10;
+  const teamIdOrSlug = 2;
+const videogameTitleIdOrSlug = 8;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTeamsTeamIdOrSlugStats(
   ,
@@ -322,8 +322,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 10;
+const playerIdOrSlug = 7;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -361,8 +361,8 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const teamIdOrSlug = 10;
+  const tournamentIdOrSlug = 10;
+const teamIdOrSlug = 2;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,

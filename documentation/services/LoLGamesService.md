@@ -155,7 +155,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;
@@ -250,7 +250,7 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const teamIdOrSlug = 10;
+  const teamIdOrSlug = 2;
 const gameStatus = GameStatus.finished;
 
 const opponentType = OpponentType.Player;

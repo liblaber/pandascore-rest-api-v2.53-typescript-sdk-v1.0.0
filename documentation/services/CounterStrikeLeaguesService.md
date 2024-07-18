@@ -39,25 +39,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCsgoLeagues = {
-    id: [5],
-    modifiedAt: ['l'],
-    name: ['nulla enim '],
-    slug: ['z072ishd'],
-    url: ['in veniam Ut'],
+    id: [7],
+    modifiedAt: ['en'],
+    name: ['nisi proident c'],
+    slug: [':vmdx-'],
+    url: ['consect'],
   };
 
   const range: RangeOverCsgoLeagues = {
-    id: [4],
-    modifiedAt: ['su'],
-    name: ['ametnostrud n'],
-    slug: ['eufc_4tt'],
-    url: ['inea exercit'],
+    id: [8],
+    modifiedAt: ['u'],
+    name: ['ad Duis'],
+    slug: ['9'],
+    url: ['in cupida'],
   };
 
   const search: SearchOverCsgoLeagues = {
-    name: 'exercitation a',
-    slug: 'i9kf',
-    url: 'irure do labor',
+    name: 'sint in Du',
+    slug: '1uyz',
+    url: 'nostrud',
   };
   const page = 1;
 

@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(5);
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(2);
 
   console.log(data);
 })();
@@ -73,7 +73,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(10, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(1, {
     page: page,
     perPage: 50,
   });
@@ -113,7 +113,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(3, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(1, {
     page: page,
     perPage: 50,
   });
@@ -154,35 +154,35 @@ import { PandascoreClient } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 2;
 const gameStatus = GameStatus.finished;
 
 const filter: FilterOverCsgoGames = {
-  beginAt: ["ad anim ut i"],
+  beginAt: ["aliquip Lorem "],
   complete: true,
   detailedStats: true,
-  endAt: ["reprehende"],
+  endAt: ["adipisic"],
   finished: true,
   forfeit: true,
-  id: [6],
-  length: [7],
-  matchId: [1],
-  position: [9],
+  id: [1],
+  length: [9],
+  matchId: [2],
+  position: [6],
   status: [gameStatus]
 };
 const gameStatus = GameStatus.finished;
 
 const range: RangeOverCsgoGames = {
-  beginAt: ["i"],
+  beginAt: ["Duis"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["en"],
+  endAt: ["ven"],
   finished: [true],
   forfeit: [true],
-  id: [1],
-  length: [7],
-  matchId: [8],
-  position: [9],
+  id: [3],
+  length: [1],
+  matchId: [9],
+  position: [4],
   status: [gameStatus]
 };
 const gameStatus = GameStatus.finished;

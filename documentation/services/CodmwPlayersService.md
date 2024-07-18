@@ -41,39 +41,39 @@ import { PandascoreClient } from 'pandascore_client';
 
 const filter: FilterOverCodmwPlayers = {
   active: true,
-  birthday: ["laboris s"],
-  firstName: ["ea su"],
-  id: [4],
-  lastName: ["nisi "],
-  modifiedAt: ["sit sed non al"],
-  name: ["ea occaecat "],
-  nationality: ["velit i"],
-  role: ["ut ven"],
-  slug: ["0x"],
-  teamId: [2],
+  birthday: ["esseaute"],
+  firstName: ["magna Duis "],
+  id: [10],
+  lastName: ["ea occaecat "],
+  modifiedAt: ["veli"],
+  name: ["ut ven"],
+  nationality: ["et lab"],
+  role: ["et consequat"],
+  slug: ["vgm1yct"],
+  teamId: [8],
   videogameId: [videogameId]
 };
 
 const range: RangeOverCodmwPlayers = {
-  birthday: ["exdo aute"],
-  firstName: ["fugiat D"],
-  id: [3],
-  lastName: ["anim e"],
-  modifiedAt: ["la"],
-  name: ["ipsum veniam"],
-  nationality: ["nisi min"],
-  role: ["anim aliqua"],
-  slug: ["tdx6k-"]
+  birthday: ["auteoff"],
+  firstName: ["Excepteur eni"],
+  id: [5],
+  lastName: ["exerc"],
+  modifiedAt: ["in"],
+  name: ["minim sint sed"],
+  nationality: ["exercit"],
+  role: ["mollit et dolo"],
+  slug: ["ig_"]
 };
 
 const search: SearchOverCodmwPlayers = {
-  birthday: "Ut non amet ",
-  firstName: "dolore comm",
-  lastName: "minim ",
-  name: "amet d",
-  nationality: "ut minim",
-  role: "enimut ex si",
-  slug: "mpp4jva"
+  birthday: "aliquip sit",
+  firstName: "occaecat ul",
+  lastName: "sit eu mo",
+  name: "est deserunt mi",
+  nationality: "occaecat ni",
+  role: "pariatur ",
+  slug: "g5u1-"
 };
 const page = 1;
 

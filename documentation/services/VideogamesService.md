@@ -195,7 +195,7 @@ import { PandascoreClient } from 'pandascore_client';
   const videogameIdOrSlug = VideogameId.1;;
 const filterOverSeriesVideogameTitle = 7;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const opponentType = OpponentType.Player;
 
@@ -213,7 +213,7 @@ const filter: FilterOverSeries = {
   winnerType: [opponentType],
   year: [123]
 };
-const opponentId = 7;
+const opponentId = 5;
 
 const opponentType = OpponentType.Player;
 
@@ -336,7 +336,7 @@ const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamen
 
 const filterOverShortTournamentsVideogameTitle = 5;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const opponentType = OpponentType.Player;
 
@@ -359,7 +359,7 @@ const filter: FilterOverShortTournaments = {
 };
 const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-const opponentId = 7;
+const opponentId = 5;
 
 const opponentType = OpponentType.Player;
 

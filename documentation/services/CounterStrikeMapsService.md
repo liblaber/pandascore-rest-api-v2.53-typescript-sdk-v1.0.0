@@ -40,20 +40,20 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCsgoMaps = {
-    id: [1],
-    name: ['quiminim in de'],
-    slug: ['l27p'],
+    id: [4],
+    name: ['dosit null'],
+    slug: ['1ubjbso5gzm'],
   };
 
   const range: RangeOverCsgoMaps = {
-    id: [9],
-    name: ['cupida'],
-    slug: ['k-4qt'],
+    id: [2],
+    name: ['veniam ipsu'],
+    slug: ['pnl2'],
   };
 
   const search: SearchOverCsgoMaps = {
-    name: 'fugiat culpa',
-    slug: 'sw_b',
+    name: 'Lorem enim lab',
+    slug: 'p2',
   };
   const page = 1;
 
@@ -97,7 +97,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(2);
+  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(5);
 
   console.log(data);
 })();

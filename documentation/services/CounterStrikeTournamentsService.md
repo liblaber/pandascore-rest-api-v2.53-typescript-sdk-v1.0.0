@@ -43,24 +43,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 2;
+  const filterOverCsgoShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ad'],
+    beginAt: ['co'],
     detailedStats: true,
-    endAt: ['do cupidatat a'],
+    endAt: ['volu'],
     hasBracket: true,
-    id: [10],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['fugiat aliqua t'],
-    name: ['nisioccaecat'],
-    prizepool: ['et la'],
-    serieId: [1],
-    slug: ['by'],
+    modifiedAt: ['magna'],
+    name: ['mollit'],
+    prizepool: ['sint veniam'],
+    serieId: [3],
+    slug: ['7n7n'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -68,21 +68,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['ma'],
+    beginAt: ['nisi'],
     detailedStats: [true],
-    endAt: ['n'],
+    endAt: ['commodo tempor '],
     hasBracket: [true],
     id: [6],
-    modifiedAt: ['ad exe'],
-    name: ['ullamco a'],
-    prizepool: ['qui pr'],
-    serieId: [2],
-    slug: ['yst'],
+    modifiedAt: ['ex'],
+    name: ['sint et rep'],
+    prizepool: ['exerc'],
+    serieId: [10],
+    slug: ['t_qpc3'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -92,9 +92,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoShortTournaments = {
-    name: 'tempor repr',
-    prizepool: 'nostrud ullamc',
-    slug: '5hi',
+    name: 'culpa ',
+    prizepool: 'venia',
+    slug: 'ccfeq09-c',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -147,24 +147,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 2;
+  const filterOverCsgoShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ad'],
+    beginAt: ['co'],
     detailedStats: true,
-    endAt: ['do cupidatat a'],
+    endAt: ['volu'],
     hasBracket: true,
-    id: [10],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['fugiat aliqua t'],
-    name: ['nisioccaecat'],
-    prizepool: ['et la'],
-    serieId: [1],
-    slug: ['by'],
+    modifiedAt: ['magna'],
+    name: ['mollit'],
+    prizepool: ['sint veniam'],
+    serieId: [3],
+    slug: ['7n7n'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -172,21 +172,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['ma'],
+    beginAt: ['nisi'],
     detailedStats: [true],
-    endAt: ['n'],
+    endAt: ['commodo tempor '],
     hasBracket: [true],
     id: [6],
-    modifiedAt: ['ad exe'],
-    name: ['ullamco a'],
-    prizepool: ['qui pr'],
-    serieId: [2],
-    slug: ['yst'],
+    modifiedAt: ['ex'],
+    name: ['sint et rep'],
+    prizepool: ['exerc'],
+    serieId: [10],
+    slug: ['t_qpc3'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -196,9 +196,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoShortTournaments = {
-    name: 'tempor repr',
-    prizepool: 'nostrud ullamc',
-    slug: '5hi',
+    name: 'culpa ',
+    prizepool: 'venia',
+    slug: 'ccfeq09-c',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -251,24 +251,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 2;
+  const filterOverCsgoShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ad'],
+    beginAt: ['co'],
     detailedStats: true,
-    endAt: ['do cupidatat a'],
+    endAt: ['volu'],
     hasBracket: true,
-    id: [10],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['fugiat aliqua t'],
-    name: ['nisioccaecat'],
-    prizepool: ['et la'],
-    serieId: [1],
-    slug: ['by'],
+    modifiedAt: ['magna'],
+    name: ['mollit'],
+    prizepool: ['sint veniam'],
+    serieId: [3],
+    slug: ['7n7n'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -276,21 +276,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['ma'],
+    beginAt: ['nisi'],
     detailedStats: [true],
-    endAt: ['n'],
+    endAt: ['commodo tempor '],
     hasBracket: [true],
     id: [6],
-    modifiedAt: ['ad exe'],
-    name: ['ullamco a'],
-    prizepool: ['qui pr'],
-    serieId: [2],
-    slug: ['yst'],
+    modifiedAt: ['ex'],
+    name: ['sint et rep'],
+    prizepool: ['exerc'],
+    serieId: [10],
+    slug: ['t_qpc3'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -300,9 +300,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoShortTournaments = {
-    name: 'tempor repr',
-    prizepool: 'nostrud ullamc',
-    slug: '5hi',
+    name: 'culpa ',
+    prizepool: 'venia',
+    slug: 'ccfeq09-c',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -355,24 +355,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 2;
+  const filterOverCsgoShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ad'],
+    beginAt: ['co'],
     detailedStats: true,
-    endAt: ['do cupidatat a'],
+    endAt: ['volu'],
     hasBracket: true,
-    id: [10],
+    id: [7],
     liveSupported: true,
-    modifiedAt: ['fugiat aliqua t'],
-    name: ['nisioccaecat'],
-    prizepool: ['et la'],
-    serieId: [1],
-    slug: ['by'],
+    modifiedAt: ['magna'],
+    name: ['mollit'],
+    prizepool: ['sint veniam'],
+    serieId: [3],
+    slug: ['7n7n'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
@@ -380,21 +380,21 @@ import { PandascoreClient } from 'pandascore_client';
   };
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
 
-  const opponentId = 7;
+  const opponentId = 5;
 
   const opponentType = OpponentType.Player;
 
   const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['ma'],
+    beginAt: ['nisi'],
     detailedStats: [true],
-    endAt: ['n'],
+    endAt: ['commodo tempor '],
     hasBracket: [true],
     id: [6],
-    modifiedAt: ['ad exe'],
-    name: ['ullamco a'],
-    prizepool: ['qui pr'],
-    serieId: [2],
-    slug: ['yst'],
+    modifiedAt: ['ex'],
+    name: ['sint et rep'],
+    prizepool: ['exerc'],
+    serieId: [10],
+    slug: ['t_qpc3'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
@@ -404,9 +404,9 @@ import { PandascoreClient } from 'pandascore_client';
   const opponentType = OpponentType.Player;
 
   const search: SearchOverCsgoShortTournaments = {
-    name: 'tempor repr',
-    prizepool: 'nostrud ullamc',
-    slug: '5hi',
+    name: 'culpa ',
+    prizepool: 'venia',
+    slug: 'ccfeq09-c',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };

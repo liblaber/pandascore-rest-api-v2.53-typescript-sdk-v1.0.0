@@ -39,25 +39,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCodmwLeagues = {
-    id: [4],
-    modifiedAt: ['sunt magna'],
-    name: ['eu inc'],
-    slug: ['7pqnq'],
-    url: ['tempor sint Exc'],
+    id: [7],
+    modifiedAt: ['eu'],
+    name: ['enim labo'],
+    slug: ['u-tgc5v8-d'],
+    url: ['elit Ex'],
   };
 
   const range: RangeOverCodmwLeagues = {
-    id: [9],
-    modifiedAt: ['ex laboru'],
-    name: ['et consectetur '],
-    slug: ['gprmck'],
-    url: ['laboris moll'],
+    id: [6],
+    modifiedAt: ['elit'],
+    name: ['deser'],
+    slug: ['x9omj2bi'],
+    url: ['fugiat'],
   };
 
   const search: SearchOverCodmwLeagues = {
-    name: 'Ut mollit',
-    slug: 'su',
-    url: 'cillum',
+    name: 'extempor',
+    slug: 'y',
+    url: 'Excepteur',
   };
   const page = 1;
 
