@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoMatchGamePlayer: any = z.lazy(() => {
+export const csgoMatchGamePlayer = z.lazy(() => {
   return z.object({
     adr: z.number().gte(0).nullable(),
     assists: z.number().gte(0).nullable(),
@@ -38,7 +38,7 @@ export type CsgoMatchGamePlayer = z.infer<typeof csgoMatchGamePlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoMatchGamePlayerResponse: any = z.lazy(() => {
+export const csgoMatchGamePlayerResponse = z.lazy(() => {
   return z
     .object({
       adr: z.number().gte(0).nullable(),
@@ -68,7 +68,7 @@ export const csgoMatchGamePlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoMatchGamePlayerRequest: any = z.lazy(() => {
+export const csgoMatchGamePlayerRequest = z.lazy(() => {
   return z
     .object({
       adr: z.number().nullish(),

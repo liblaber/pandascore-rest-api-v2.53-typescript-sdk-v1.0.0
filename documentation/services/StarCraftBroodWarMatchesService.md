@@ -34,110 +34,122 @@ List matches for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverStarcraftBroodWarMatches,
+  SearchOverStarcraftBroodWarMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
 
-const filterOverStarcraftBroodWarMatchesVideogameVersion = "36795.89.22961879";
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverStarcraftBroodWarMatches = {
-  beginAt: ["eu exe"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["irure lab"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [7],
-  leagueId: [1],
-  matchType: [matchType],
-  modifiedAt: ["exercita"],
-  name: ["Lorem "],
-  notStarted: true,
-  numberOfGames: [123],
-  opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed culpa la"],
-  serieId: [3],
-  slug: ["UDtH"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
-  videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis irure con'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['in '],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [1],
+    leagueId: [2],
+    matchType: [matchType],
+    modifiedAt: ['sint e'],
+    name: ['sintdolo'],
+    notStarted: true,
+    numberOfGames: [3],
+    opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['la'],
+    serieId: [8],
+    slug: ['JE_'],
+    status: [matchStatus],
+    tournamentId: [3],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
+    videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverStarcraftBroodWarMatches = {
-  beginAt: ["Duis incididu"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["ex do cupi"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["aliqu"],
-  name: ["in no"],
-  numberOfGames: [123],
-  scheduledAt: ["elit nisi"],
-  slug: ["EZr49Ap-"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['ex magna ipsu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['est'],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType],
+    modifiedAt: ['elit nostrud u'],
+    name: ['incididunt q'],
+    numberOfGames: [9],
+    scheduledAt: ['Lor'],
+    slug: ['S'],
+    status: [matchStatus],
+    tournamentId: [5],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverStarcraftBroodWarMatches = {
-  matchType: matchType,
-  name: "dolor ut enim",
-  slug: "KpN_Jh",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType,
+    name: 'sedirure',
+    slug: 'kcOA z',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatches({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +180,122 @@ List past StarCraft Brood War matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverStarcraftBroodWarMatches,
+  SearchOverStarcraftBroodWarMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
 
-const filterOverStarcraftBroodWarMatchesVideogameVersion = "36795.89.22961879";
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverStarcraftBroodWarMatches = {
-  beginAt: ["eu exe"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["irure lab"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [7],
-  leagueId: [1],
-  matchType: [matchType],
-  modifiedAt: ["exercita"],
-  name: ["Lorem "],
-  notStarted: true,
-  numberOfGames: [123],
-  opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed culpa la"],
-  serieId: [3],
-  slug: ["UDtH"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
-  videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis irure con'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['in '],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [1],
+    leagueId: [2],
+    matchType: [matchType],
+    modifiedAt: ['sint e'],
+    name: ['sintdolo'],
+    notStarted: true,
+    numberOfGames: [3],
+    opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['la'],
+    serieId: [8],
+    slug: ['JE_'],
+    status: [matchStatus],
+    tournamentId: [3],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
+    videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverStarcraftBroodWarMatches = {
-  beginAt: ["Duis incididu"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["ex do cupi"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["aliqu"],
-  name: ["in no"],
-  numberOfGames: [123],
-  scheduledAt: ["elit nisi"],
-  slug: ["EZr49Ap-"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['ex magna ipsu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['est'],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType],
+    modifiedAt: ['elit nostrud u'],
+    name: ['incididunt q'],
+    numberOfGames: [9],
+    scheduledAt: ['Lor'],
+    slug: ['S'],
+    status: [matchStatus],
+    tournamentId: [5],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverStarcraftBroodWarMatches = {
-  matchType: matchType,
-  name: "dolor ut enim",
-  slug: "KpN_Jh",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType,
+    name: 'sedirure',
+    slug: 'kcOA z',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesPast({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +326,122 @@ List running StarCraft Brood War matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverStarcraftBroodWarMatches,
+  SearchOverStarcraftBroodWarMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
 
-const filterOverStarcraftBroodWarMatchesVideogameVersion = "36795.89.22961879";
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverStarcraftBroodWarMatches = {
-  beginAt: ["eu exe"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["irure lab"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [7],
-  leagueId: [1],
-  matchType: [matchType],
-  modifiedAt: ["exercita"],
-  name: ["Lorem "],
-  notStarted: true,
-  numberOfGames: [123],
-  opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed culpa la"],
-  serieId: [3],
-  slug: ["UDtH"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
-  videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis irure con'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['in '],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [1],
+    leagueId: [2],
+    matchType: [matchType],
+    modifiedAt: ['sint e'],
+    name: ['sintdolo'],
+    notStarted: true,
+    numberOfGames: [3],
+    opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['la'],
+    serieId: [8],
+    slug: ['JE_'],
+    status: [matchStatus],
+    tournamentId: [3],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
+    videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverStarcraftBroodWarMatches = {
-  beginAt: ["Duis incididu"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["ex do cupi"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["aliqu"],
-  name: ["in no"],
-  numberOfGames: [123],
-  scheduledAt: ["elit nisi"],
-  slug: ["EZr49Ap-"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['ex magna ipsu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['est'],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType],
+    modifiedAt: ['elit nostrud u'],
+    name: ['incididunt q'],
+    numberOfGames: [9],
+    scheduledAt: ['Lor'],
+    slug: ['S'],
+    status: [matchStatus],
+    tournamentId: [5],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverStarcraftBroodWarMatches = {
-  matchType: matchType,
-  name: "dolor ut enim",
-  slug: "KpN_Jh",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType,
+    name: 'sedirure',
+    slug: 'kcOA z',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesRunning({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +472,122 @@ List upcoming StarCraft Brood War matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverStarcraftBroodWarMatches,
+  SearchOverStarcraftBroodWarMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
 
-const filterOverStarcraftBroodWarMatchesVideogameVersion = "36795.89.22961879";
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverStarcraftBroodWarMatches = {
-  beginAt: ["eu exe"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["irure lab"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [7],
-  leagueId: [1],
-  matchType: [matchType],
-  modifiedAt: ["exercita"],
-  name: ["Lorem "],
-  notStarted: true,
-  numberOfGames: [123],
-  opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed culpa la"],
-  serieId: [3],
-  slug: ["UDtH"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
-  videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis irure con'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['in '],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [1],
+    leagueId: [2],
+    matchType: [matchType],
+    modifiedAt: ['sint e'],
+    name: ['sintdolo'],
+    notStarted: true,
+    numberOfGames: [3],
+    opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['la'],
+    serieId: [8],
+    slug: ['JE_'],
+    status: [matchStatus],
+    tournamentId: [3],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
+    videogameVersion: [filterOverStarcraftBroodWarMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverStarcraftBroodWarMatches = {
-  beginAt: ["Duis incididu"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["ex do cupi"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["aliqu"],
-  name: ["in no"],
-  numberOfGames: [123],
-  scheduledAt: ["elit nisi"],
-  slug: ["EZr49Ap-"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['ex magna ipsu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['est'],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType],
+    modifiedAt: ['elit nostrud u'],
+    name: ['incididunt q'],
+    numberOfGames: [9],
+    scheduledAt: ['Lor'],
+    slug: ['S'],
+    status: [matchStatus],
+    tournamentId: [5],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverStarcraftBroodWarMatches = {
-  matchType: matchType,
-  name: "dolor ut enim",
-  slug: "KpN_Jh",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType,
+    name: 'sedirure',
+    slug: 'kcOA z',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesUpcoming({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

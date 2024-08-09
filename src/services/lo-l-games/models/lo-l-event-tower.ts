@@ -6,15 +6,14 @@ import {
   loLEventTowerObjectRequest,
   loLEventTowerObjectResponse,
 } from './lo-l-event-tower-object';
-import { loLEventTowerType } from './lo-l-event-tower-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventTower: any = z.lazy(() => {
+export const loLEventTower = z.lazy(() => {
   return z.object({
     object: loLEventTowerObject,
-    type: loLEventTowerType,
+    type: z.string(),
   });
 });
 
@@ -30,11 +29,11 @@ export type LoLEventTower = z.infer<typeof loLEventTower>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventTowerResponse: any = z.lazy(() => {
+export const loLEventTowerResponse = z.lazy(() => {
   return z
     .object({
       object: loLEventTowerObjectResponse,
-      type: loLEventTowerType,
+      type: z.string(),
     })
     .transform((data) => ({
       object: data['object'],
@@ -46,11 +45,9 @@ export const loLEventTowerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventTowerRequest: any = z.lazy(() => {
-  return z
-    .object({ object: loLEventTowerObjectRequest.nullish(), type: loLEventTowerType.nullish() })
-    .transform((data) => ({
-      object: data['object'],
-      type: data['type'],
-    }));
+export const loLEventTowerRequest = z.lazy(() => {
+  return z.object({ object: loLEventTowerObjectRequest.nullish(), type: z.string().nullish() }).transform((data) => ({
+    object: data['object'],
+    type: data['type'],
+  }));
 });

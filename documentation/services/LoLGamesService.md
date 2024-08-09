@@ -37,7 +37,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameId(8);
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameId(9);
 
   console.log(data);
 })();
@@ -65,7 +65,7 @@ List events for a given League of Legends game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -74,7 +74,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdEvents(2, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdEvents(8, {
     page: page,
     perPage: 50,
   });
@@ -105,7 +105,7 @@ List frames for a given League of Legends game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -114,7 +114,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdFrames(5, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdFrames(9, {
     page: page,
     perPage: 50,
   });
@@ -149,52 +149,52 @@ List games for a given League of Legends match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLoLGames, GameStatus, MatchIdOrSlug, OpponentType, Page, PandascoreClient, RangeOverLoLGames, SearchOverLoLGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+  const matchIdOrSlug = 4;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const filter: FilterOverLoLGames = {
-  beginAt: ["eiusmod "],
+  beginAt: ["consectetur la"],
   complete: true,
   detailedStats: true,
-  endAt: ["veniam"],
+  endAt: ["temp"],
   finished: true,
   forfeit: true,
-  id: [5],
-  length: [4],
-  matchId: [7],
+  id: [3],
+  length: [3],
+  matchId: [8],
+  position: [9],
+  status: [gameStatus],
+  winnerType: [opponentType]
+};
+const gameStatus = GameStatus.FINISHED;
+
+const opponentType = OpponentType.PLAYER;
+
+const range: RangeOverLoLGames = {
+  beginAt: ["voluptate"],
+  complete: [true],
+  detailedStats: [true],
+  endAt: ["ut"],
+  finished: [true],
+  forfeit: [true],
+  id: [10],
+  length: [6],
+  matchId: [2],
   position: [6],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
-
-const range: RangeOverLoLGames = {
-  beginAt: ["velit l"],
-  complete: [true],
-  detailedStats: [true],
-  endAt: ["consequat sin"],
-  finished: [true],
-  forfeit: [true],
-  id: [5],
-  length: [3],
-  matchId: [7],
-  position: [2],
-  status: [gameStatus],
-  winnerType: [opponentType]
-};
-const gameStatus = GameStatus.finished;
-
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const search: SearchOverLoLGames = {
   status: gameStatus,
@@ -244,52 +244,52 @@ List finished games for a given League of Legends team
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLoLTeamLastGames, GameStatus, OpponentType, Page, PandascoreClient, RangeOverLoLTeamLastGames, SearchOverLoLTeamLastGames, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const filter: FilterOverLoLTeamLastGames = {
-  beginAt: ["ut cillum Exc"],
+  beginAt: ["commodo co"],
   complete: true,
   detailedStats: true,
-  endAt: ["cillum id nul"],
+  endAt: ["velit commodo"],
   finished: true,
   forfeit: true,
-  id: [6],
-  length: [7],
+  id: [1],
+  length: [4],
   matchId: [1],
-  position: [8],
+  position: [3],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const range: RangeOverLoLTeamLastGames = {
-  beginAt: ["el"],
+  beginAt: ["non enim"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["labor"],
+  endAt: ["quis amet in "],
   finished: [true],
   forfeit: [true],
-  id: [6],
-  length: [9],
-  matchId: [7],
-  position: [4],
+  id: [2],
+  length: [8],
+  matchId: [4],
+  position: [7],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const search: SearchOverLoLTeamLastGames = {
   status: gameStatus,

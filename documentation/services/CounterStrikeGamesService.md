@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(5);
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(7);
 
   console.log(data);
 })();
@@ -64,7 +64,7 @@ List events for a given Counter-Strike game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -73,7 +73,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(10, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(9, {
     page: page,
     perPage: 50,
   });
@@ -104,7 +104,7 @@ List rounds in a Counter-Strike game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -113,7 +113,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(3, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(10, {
     page: page,
     perPage: 50,
   });
@@ -148,44 +148,44 @@ List games for a given Counter-Strike match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverCsgoGames, GameStatus, MatchIdOrSlug, Page, PandascoreClient, RangeOverCsgoGames, SearchOverCsgoGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+  const matchIdOrSlug = 4;
+const gameStatus = GameStatus.FINISHED;
 
 const filter: FilterOverCsgoGames = {
-  beginAt: ["ad anim ut i"],
+  beginAt: ["quis"],
   complete: true,
   detailedStats: true,
-  endAt: ["reprehende"],
+  endAt: ["si"],
   finished: true,
   forfeit: true,
-  id: [6],
-  length: [7],
-  matchId: [1],
-  position: [9],
+  id: [2],
+  length: [9],
+  matchId: [4],
+  position: [6],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
 const range: RangeOverCsgoGames = {
-  beginAt: ["i"],
+  beginAt: ["in ex"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["en"],
+  endAt: ["id m"],
   finished: [true],
   forfeit: [true],
-  id: [1],
-  length: [7],
-  matchId: [8],
-  position: [9],
+  id: [10],
+  length: [6],
+  matchId: [3],
+  position: [10],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
 const search: SearchOverCsgoGames = {
   status: gameStatus

@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const towerStatus: any = z.lazy(() => {
+export const towerStatus = z.lazy(() => {
   return z.object({
     ancientBottom: z.boolean(),
     ancientTop: z.boolean(),
@@ -42,7 +42,7 @@ export type TowerStatus = z.infer<typeof towerStatus>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const towerStatusResponse: any = z.lazy(() => {
+export const towerStatusResponse = z.lazy(() => {
   return z
     .object({
       ancient_bottom: z.boolean(),
@@ -76,7 +76,7 @@ export const towerStatusResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const towerStatusRequest: any = z.lazy(() => {
+export const towerStatusRequest = z.lazy(() => {
   return z
     .object({
       ancientBottom: z.boolean().nullish(),

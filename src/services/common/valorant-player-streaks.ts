@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantPlayerStreaks: any = z.lazy(() => {
+export const valorantPlayerStreaks = z.lazy(() => {
   return z.object({
     _2Kills: z.number().gte(0).nullable(),
     _3Kills: z.number().gte(0).nullable(),
@@ -28,7 +28,7 @@ export type ValorantPlayerStreaks = z.infer<typeof valorantPlayerStreaks>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantPlayerStreaksResponse: any = z.lazy(() => {
+export const valorantPlayerStreaksResponse = z.lazy(() => {
   return z
     .object({
       '2_kills': z.number().gte(0).nullable(),
@@ -48,7 +48,7 @@ export const valorantPlayerStreaksResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantPlayerStreaksRequest: any = z.lazy(() => {
+export const valorantPlayerStreaksRequest = z.lazy(() => {
   return z
     .object({
       _2Kills: z.number().nullish(),

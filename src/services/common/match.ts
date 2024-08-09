@@ -5,11 +5,9 @@ import { game, gameRequest, gameResponse } from './game';
 import { baseLeague, baseLeagueRequest, baseLeagueResponse } from './base-league';
 import { matchLive, matchLiveRequest, matchLiveResponse } from './match-live';
 import { valorantMapPick, valorantMapPickRequest, valorantMapPickResponse } from './valorant-map-pick';
-import { matchType } from './match-type';
 import { opponent, opponentRequest, opponentResponse } from './opponent';
 import { matchResult, matchResultRequest, matchResultResponse } from './match-result';
 import { baseSerie, baseSerieRequest, baseSerieResponse } from './base-serie';
-import { matchStatus } from './match-status';
 import { stream, streamRequest, streamResponse } from './stream';
 import { baseTournament, baseTournamentRequest, baseTournamentResponse } from './base-tournament';
 import { matchVideogameTitle, matchVideogameTitleRequest, matchVideogameTitleResponse } from './match-videogame-title';
@@ -20,12 +18,11 @@ import {
 } from './match-videogame-version';
 import { matchWinner, matchWinnerRequest, matchWinnerResponse } from './match-winner';
 import { matchWinnerId, matchWinnerIdRequest, matchWinnerIdResponse } from './match-winner-id';
-import { matchWinnerType } from './match-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const match: any = z.lazy(() => {
+export const match = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     detailedStats: z.boolean(),
@@ -39,7 +36,7 @@ export const match: any = z.lazy(() => {
     leagueId: z.number().gte(1),
     live: matchLive,
     mapPicks: z.array(valorantMapPick).optional().nullable(),
-    matchType: matchType,
+    matchType: z.string(),
     modifiedAt: z.string().min(1),
     name: z.string(),
     numberOfGames: z.number().gte(0),
@@ -55,7 +52,7 @@ export const match: any = z.lazy(() => {
       .min(1)
       .regex(/^[ a-zA-Z0-9_-]+$/)
       .nullable(),
-    status: matchStatus,
+    status: z.string(),
     streamsList: z.array(stream),
     tournament: baseTournament,
     tournamentId: z.number().gte(1),
@@ -64,7 +61,7 @@ export const match: any = z.lazy(() => {
     videogameVersion: matchVideogameVersion.nullable(),
     winner: matchWinner,
     winnerId: matchWinnerId,
-    winnerType: matchWinnerType,
+    winnerType: z.string(),
   });
 });
 
@@ -112,7 +109,7 @@ export type Match = z.infer<typeof match>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const matchResponse: any = z.lazy(() => {
+export const matchResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -127,7 +124,7 @@ export const matchResponse: any = z.lazy(() => {
       league_id: z.number().gte(1),
       live: matchLiveResponse,
       map_picks: z.array(valorantMapPickResponse).optional().nullable(),
-      match_type: matchType,
+      match_type: z.string(),
       modified_at: z.string().min(1),
       name: z.string(),
       number_of_games: z.number().gte(0),
@@ -143,7 +140,7 @@ export const matchResponse: any = z.lazy(() => {
         .min(1)
         .regex(/^[ a-zA-Z0-9_-]+$/)
         .nullable(),
-      status: matchStatus,
+      status: z.string(),
       streams_list: z.array(streamResponse),
       tournament: baseTournamentResponse,
       tournament_id: z.number().gte(1),
@@ -152,7 +149,7 @@ export const matchResponse: any = z.lazy(() => {
       videogame_version: matchVideogameVersionResponse.nullable(),
       winner: matchWinnerResponse,
       winner_id: matchWinnerIdResponse,
-      winner_type: matchWinnerType,
+      winner_type: z.string(),
     })
     .transform((data) => ({
       beginAt: data['begin_at'],
@@ -196,7 +193,7 @@ export const matchResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const matchRequest: any = z.lazy(() => {
+export const matchRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -211,7 +208,7 @@ export const matchRequest: any = z.lazy(() => {
       leagueId: z.number().nullish(),
       live: matchLiveRequest.nullish(),
       mapPicks: z.array(valorantMapPickRequest).nullish(),
-      matchType: matchType.nullish(),
+      matchType: z.string().nullish(),
       modifiedAt: z.string().nullish(),
       name: z.string().nullish(),
       numberOfGames: z.number().nullish(),
@@ -223,7 +220,7 @@ export const matchRequest: any = z.lazy(() => {
       serie: baseSerieRequest.nullish(),
       serieId: z.number().nullish(),
       slug: z.string().nullish(),
-      status: matchStatus.nullish(),
+      status: z.string().nullish(),
       streamsList: z.array(streamRequest).nullish(),
       tournament: baseTournamentRequest.nullish(),
       tournamentId: z.number().nullish(),
@@ -232,7 +229,7 @@ export const matchRequest: any = z.lazy(() => {
       videogameVersion: matchVideogameVersionRequest.nullish(),
       winner: matchWinnerRequest.nullish(),
       winnerId: matchWinnerIdRequest.nullish(),
-      winnerType: matchWinnerType.nullish(),
+      winnerType: z.string().nullish(),
     })
     .transform((data) => ({
       begin_at: data['beginAt'],

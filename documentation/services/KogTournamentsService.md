@@ -34,67 +34,76 @@ List tournaments for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverKogShortTournamentsVideogameTitle = 4;
+  const filterOverKogShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverKogShortTournaments = {
-    beginAt: ['voluptate i'],
+    beginAt: ['volupt'],
     detailedStats: true,
-    endAt: ['Lo'],
+    endAt: ['fugiat'],
     hasBracket: true,
-    id: [8],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['adipisici'],
-    name: ['deserunt '],
-    prizepool: ['incidi'],
-    serieId: [8],
-    slug: ['jb0'],
+    modifiedAt: ['cupidatat Lorem'],
+    name: ['dolore est dese'],
+    prizepool: ['reprehe'],
+    serieId: [2],
+    slug: ['-s34rbc8a54'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverKogShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverKogShortTournaments = {
-    beginAt: ['do des'],
+    beginAt: ['non fugiat u'],
     detailedStats: [true],
-    endAt: ['a'],
+    endAt: ['te'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['ut D'],
-    name: ['et ea '],
-    prizepool: ['ex et Lo'],
+    id: [6],
+    modifiedAt: ['id Excepteur'],
+    name: ['voluptate'],
+    prizepool: ['et la'],
     serieId: [3],
-    slug: ['hpq1rop'],
+    slug: ['4-a5a4va7'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverKogShortTournaments = {
-    name: 'amet ut ',
-    prizepool: 'laborum in v',
-    slug: 'csu',
+    name: 'reprehenderi',
+    prizepool: 'aliquip offi',
+    slug: '6e5nwqm35w',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -138,67 +147,76 @@ List past King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverKogShortTournamentsVideogameTitle = 4;
+  const filterOverKogShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverKogShortTournaments = {
-    beginAt: ['voluptate i'],
+    beginAt: ['volupt'],
     detailedStats: true,
-    endAt: ['Lo'],
+    endAt: ['fugiat'],
     hasBracket: true,
-    id: [8],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['adipisici'],
-    name: ['deserunt '],
-    prizepool: ['incidi'],
-    serieId: [8],
-    slug: ['jb0'],
+    modifiedAt: ['cupidatat Lorem'],
+    name: ['dolore est dese'],
+    prizepool: ['reprehe'],
+    serieId: [2],
+    slug: ['-s34rbc8a54'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverKogShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverKogShortTournaments = {
-    beginAt: ['do des'],
+    beginAt: ['non fugiat u'],
     detailedStats: [true],
-    endAt: ['a'],
+    endAt: ['te'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['ut D'],
-    name: ['et ea '],
-    prizepool: ['ex et Lo'],
+    id: [6],
+    modifiedAt: ['id Excepteur'],
+    name: ['voluptate'],
+    prizepool: ['et la'],
     serieId: [3],
-    slug: ['hpq1rop'],
+    slug: ['4-a5a4va7'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverKogShortTournaments = {
-    name: 'amet ut ',
-    prizepool: 'laborum in v',
-    slug: 'csu',
+    name: 'reprehenderi',
+    prizepool: 'aliquip offi',
+    slug: '6e5nwqm35w',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -242,67 +260,76 @@ List running King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverKogShortTournamentsVideogameTitle = 4;
+  const filterOverKogShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverKogShortTournaments = {
-    beginAt: ['voluptate i'],
+    beginAt: ['volupt'],
     detailedStats: true,
-    endAt: ['Lo'],
+    endAt: ['fugiat'],
     hasBracket: true,
-    id: [8],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['adipisici'],
-    name: ['deserunt '],
-    prizepool: ['incidi'],
-    serieId: [8],
-    slug: ['jb0'],
+    modifiedAt: ['cupidatat Lorem'],
+    name: ['dolore est dese'],
+    prizepool: ['reprehe'],
+    serieId: [2],
+    slug: ['-s34rbc8a54'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverKogShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverKogShortTournaments = {
-    beginAt: ['do des'],
+    beginAt: ['non fugiat u'],
     detailedStats: [true],
-    endAt: ['a'],
+    endAt: ['te'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['ut D'],
-    name: ['et ea '],
-    prizepool: ['ex et Lo'],
+    id: [6],
+    modifiedAt: ['id Excepteur'],
+    name: ['voluptate'],
+    prizepool: ['et la'],
     serieId: [3],
-    slug: ['hpq1rop'],
+    slug: ['4-a5a4va7'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverKogShortTournaments = {
-    name: 'amet ut ',
-    prizepool: 'laborum in v',
-    slug: 'csu',
+    name: 'reprehenderi',
+    prizepool: 'aliquip offi',
+    slug: '6e5nwqm35w',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -346,67 +373,76 @@ List upcoming King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverKogShortTournamentsVideogameTitle = 4;
+  const filterOverKogShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverKogShortTournaments = {
-    beginAt: ['voluptate i'],
+    beginAt: ['volupt'],
     detailedStats: true,
-    endAt: ['Lo'],
+    endAt: ['fugiat'],
     hasBracket: true,
-    id: [8],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['adipisici'],
-    name: ['deserunt '],
-    prizepool: ['incidi'],
-    serieId: [8],
-    slug: ['jb0'],
+    modifiedAt: ['cupidatat Lorem'],
+    name: ['dolore est dese'],
+    prizepool: ['reprehe'],
+    serieId: [2],
+    slug: ['-s34rbc8a54'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverKogShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverKogShortTournaments = {
-    beginAt: ['do des'],
+    beginAt: ['non fugiat u'],
     detailedStats: [true],
-    endAt: ['a'],
+    endAt: ['te'],
     hasBracket: [true],
-    id: [3],
-    modifiedAt: ['ut D'],
-    name: ['et ea '],
-    prizepool: ['ex et Lo'],
+    id: [6],
+    modifiedAt: ['id Excepteur'],
+    name: ['voluptate'],
+    prizepool: ['et la'],
     serieId: [3],
-    slug: ['hpq1rop'],
+    slug: ['4-a5a4va7'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverKogShortTournaments = {
-    name: 'amet ut ',
-    prizepool: 'laborum in v',
-    slug: 'csu',
+    name: 'reprehenderi',
+    prizepool: 'aliquip offi',
+    slug: '6e5nwqm35w',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };

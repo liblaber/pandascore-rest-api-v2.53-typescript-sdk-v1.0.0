@@ -31,7 +31,13 @@ List Counter-Strike leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoLeagues,
+  SearchOverCsgoLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCsgoLeagues = {
-    id: [5],
-    modifiedAt: ['l'],
-    name: ['nulla enim '],
-    slug: ['z072ishd'],
-    url: ['in veniam Ut'],
+    id: [9],
+    modifiedAt: ['Duis sunt es'],
+    name: ['consect'],
+    slug: ['qpngvc'],
+    url: ['mollit'],
   };
 
   const range: RangeOverCsgoLeagues = {
     id: [4],
-    modifiedAt: ['su'],
-    name: ['ametnostrud n'],
-    slug: ['eufc_4tt'],
-    url: ['inea exercit'],
+    modifiedAt: ['sit fugiat'],
+    name: ['occae'],
+    slug: ['4o'],
+    url: ['ametqu'],
   };
 
   const search: SearchOverCsgoLeagues = {
-    name: 'exercitation a',
-    slug: 'i9kf',
-    url: 'irure do labor',
+    name: 'sunt tempo',
+    slug: 'rl',
+    url: 'nulla c',
   };
   const page = 1;
 

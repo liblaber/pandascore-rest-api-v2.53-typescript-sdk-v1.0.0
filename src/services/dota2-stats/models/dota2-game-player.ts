@@ -6,7 +6,6 @@ import {
   dota2PerHeroAbilityRequest,
   dota2PerHeroAbilityResponse,
 } from '../../common/dota2-per-hero-ability';
-import { dota2GamePlayerFaction } from './dota2-game-player-faction';
 import { dota2GamePlayerHero, dota2GamePlayerHeroRequest, dota2GamePlayerHeroResponse } from './dota2-game-player-hero';
 import { dota2Item, dota2ItemRequest, dota2ItemResponse } from '../../common/dota2-item';
 import {
@@ -19,7 +18,7 @@ import { basePlayer, basePlayerRequest, basePlayerResponse } from '../../common/
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2GamePlayer: any = z.lazy(() => {
+export const dota2GamePlayer = z.lazy(() => {
   return z.object({
     abilities: z.array(dota2PerHeroAbility),
     assists: z.number().gte(0).nullable(),
@@ -28,7 +27,7 @@ export const dota2GamePlayer: any = z.lazy(() => {
     damageTaken: z.number().gte(0).nullable(),
     deaths: z.number().gte(0).nullable(),
     denies: z.number().gte(0).nullable(),
-    faction: dota2GamePlayerFaction.nullable(),
+    faction: z.string().nullable(),
     gameId: z.number().gte(1),
     goldPerMin: z.number().gte(0).nullable(),
     goldRemaining: z.number().gte(0).nullable(),
@@ -104,7 +103,7 @@ export type Dota2GamePlayer = z.infer<typeof dota2GamePlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GamePlayerResponse: any = z.lazy(() => {
+export const dota2GamePlayerResponse = z.lazy(() => {
   return z
     .object({
       abilities: z.array(dota2PerHeroAbilityResponse),
@@ -114,7 +113,7 @@ export const dota2GamePlayerResponse: any = z.lazy(() => {
       damage_taken: z.number().gte(0).nullable(),
       deaths: z.number().gte(0).nullable(),
       denies: z.number().gte(0).nullable(),
-      faction: dota2GamePlayerFaction.nullable(),
+      faction: z.string().nullable(),
       game_id: z.number().gte(1),
       gold_per_min: z.number().gte(0).nullable(),
       gold_remaining: z.number().gte(0).nullable(),
@@ -186,7 +185,7 @@ export const dota2GamePlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GamePlayerRequest: any = z.lazy(() => {
+export const dota2GamePlayerRequest = z.lazy(() => {
   return z
     .object({
       abilities: z.array(dota2PerHeroAbilityRequest).nullish(),
@@ -196,7 +195,7 @@ export const dota2GamePlayerRequest: any = z.lazy(() => {
       damageTaken: z.number().nullish(),
       deaths: z.number().nullish(),
       denies: z.number().nullish(),
-      faction: dota2GamePlayerFaction.nullish(),
+      faction: z.string().nullish(),
       gameId: z.number().nullish(),
       goldPerMin: z.number().nullish(),
       goldRemaining: z.number().nullish(),

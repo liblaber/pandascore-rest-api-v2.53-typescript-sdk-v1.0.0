@@ -13,7 +13,7 @@ import { loLEventUnknown, loLEventUnknownRequest, loLEventUnknownResponse } from
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventVictim: any = z.lazy(() => {
+export const loLEventVictim = z.lazy(() => {
   return z.union([
     loLEventDrake,
     loLEventHerald,
@@ -44,7 +44,7 @@ export type LoLEventVictim = z.infer<typeof loLEventVictim>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventVictimResponse: any = z.lazy(() => {
+export const loLEventVictimResponse = z.lazy(() => {
   return z.union([
     loLEventDrakeResponse,
     loLEventHeraldResponse,
@@ -61,7 +61,7 @@ export const loLEventVictimResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventVictimRequest: any = z.lazy(() => {
+export const loLEventVictimRequest = z.lazy(() => {
   return z.union([
     loLEventDrakeRequest,
     loLEventHeraldRequest,

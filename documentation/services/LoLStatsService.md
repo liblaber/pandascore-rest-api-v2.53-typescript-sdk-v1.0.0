@@ -33,14 +33,14 @@ Get detailed statistics of League-of-Legends players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 4;
 
   const { data } = await pandascoreClient.loLStats.getLolMatchesMatchIdOrSlugPlayersStats();
 
@@ -73,20 +73,20 @@ Get detailed statistics of a given League-of-Legends player
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+  const playerIdOrSlug = 3;
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolPlayersPlayerIdOrSlugStats(
   ,
   {
-    gamesCount: 4,
+    gamesCount: 3,
 		side: side,
 		videogameVersion: videogameVersion,
     from: "2017-07-21",
@@ -122,22 +122,22 @@ Get detailed statistics of a given League-of-Legends player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+  const serieIdOrSlug = 8;
+const playerIdOrSlug = 3;
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 2,
+    gamesCount: 6,
 		side: side,
 		videogameVersion: videogameVersion,
   }
@@ -172,21 +172,21 @@ Get detailed statistics of the LoL teams for the given series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient, SerieIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+  const serieIdOrSlug = 8;
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 const page = 1;
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugTeamsStats(
   ,
   {
-    gamesCount: 3,
+    gamesCount: 2,
 		side: side,
 		videogameVersion: videogameVersion,
 		page: page,
@@ -222,22 +222,22 @@ Get detailed statistics of a given League-of-Legends team for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
+  const serieIdOrSlug = 8;
 const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 7,
+    gamesCount: 2,
 		side: side,
 		videogameVersion: videogameVersion,
   }
@@ -272,20 +272,20 @@ Get detailed statistics of a given League-of-Legends team
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolTeamsTeamIdOrSlugStats(
   ,
   {
-    gamesCount: 8,
+    gamesCount: 4,
 		side: side,
 		videogameVersion: videogameVersion,
     from: "2017-07-21",
@@ -321,22 +321,22 @@ Get detailed statistics of a given League-of-Legends player for the given tourna
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+  const tournamentIdOrSlug = 4;
+const playerIdOrSlug = 3;
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 8,
+    gamesCount: 4,
 		side: side,
 		videogameVersion: videogameVersion,
   }
@@ -370,22 +370,22 @@ Get detailed statistics of a given League-of-Legends team for the given tourname
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
+  const tournamentIdOrSlug = 4;
 const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.blue;
-const videogameVersionOrAll = "5.4970743709";
+const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "61.9603071094";
 
   const { data } = await pandascoreClient.loLStats.getLolTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 9,
+    gamesCount: 5,
 		side: side,
 		videogameVersion: videogameVersion,
   }

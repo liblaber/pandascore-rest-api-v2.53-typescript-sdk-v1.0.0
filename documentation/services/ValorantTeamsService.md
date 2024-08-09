@@ -31,51 +31,57 @@ List teams for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantTeams,
+  Page,
+  PandascoreClient,
+  RangeOverValorantTeams,
+  SearchOverValorantTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverValorantTeams = {
-  acronym: ["laborum sit"],
-  id: [7],
-  location: ["ipsum"],
-  modifiedAt: ["cupidatat"],
-  name: ["proident in c"],
-  slug: ["hk-_38"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverValorantTeams = {
+    acronym: ['Lorem '],
+    id: [8],
+    location: ['aliqua labo'],
+    modifiedAt: ['cupi'],
+    name: ['ea ex'],
+    slug: ['le1_0m9'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverValorantTeams = {
-  acronym: ["aute "],
-  id: [4],
-  location: ["elit sed"],
-  modifiedAt: ["mollit aliqua s"],
-  name: ["cillum eius"],
-  slug: ["3js6_bh"]
-};
+  const range: RangeOverValorantTeams = {
+    acronym: ['deserunt dolo'],
+    id: [9],
+    location: ['reprehender'],
+    modifiedAt: ['ea sunt'],
+    name: ['pariatur exe'],
+    slug: ['bjvs'],
+  };
 
-const search: SearchOverValorantTeams = {
-  acronym: "sunt do",
-  location: "Excepteur",
-  name: "irure do id",
-  slug: "z"
-};
-const page = 1;
+  const search: SearchOverValorantTeams = {
+    acronym: 'dolor an',
+    location: 'laboris',
+    name: 'innon eu',
+    slug: '8e',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.valorantTeams.getValorantTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.valorantTeams.getValorantTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

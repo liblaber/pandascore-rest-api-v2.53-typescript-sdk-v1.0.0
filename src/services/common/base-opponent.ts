@@ -7,7 +7,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from './base-team';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const baseOpponent: any = z.lazy(() => {
+export const baseOpponent = z.lazy(() => {
   return z.union([basePlayer, baseTeam]);
 });
 
@@ -23,7 +23,7 @@ export type BaseOpponent = z.infer<typeof baseOpponent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseOpponentResponse: any = z.lazy(() => {
+export const baseOpponentResponse = z.lazy(() => {
   return z.union([basePlayerResponse, baseTeamResponse]);
 });
 
@@ -31,6 +31,6 @@ export const baseOpponentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseOpponentRequest: any = z.lazy(() => {
+export const baseOpponentRequest = z.lazy(() => {
   return z.union([basePlayerRequest, baseTeamRequest]);
 });

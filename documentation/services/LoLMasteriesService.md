@@ -32,7 +32,13 @@ List masteries
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLMasteries,
+  Page,
+  PandascoreClient,
+  RangeOverLoLMasteries,
+  SearchOverLoLMasteries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,17 +46,17 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLoLMasteries = {
-    id: [4],
-    name: ['sunt velit'],
+    id: [1],
+    name: ['incid'],
   };
 
   const range: RangeOverLoLMasteries = {
-    id: [3],
-    name: ['mollit pa'],
+    id: [2],
+    name: ['sintaut'],
   };
 
   const search: SearchOverLoLMasteries = {
-    name: 'eiusmod',
+    name: 'occaecat vo',
   };
   const page = 1;
 
@@ -94,7 +100,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLMasteries.getLolMasteriesLolMasteryId(10);
+  const { data } = await pandascoreClient.loLMasteries.getLolMasteriesLolMasteryId(3);
 
   console.log(data);
 })();

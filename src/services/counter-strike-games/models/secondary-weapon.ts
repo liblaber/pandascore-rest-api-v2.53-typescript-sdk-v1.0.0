@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const secondaryWeapon: any = z.lazy(() => {
+export const secondaryWeapon = z.lazy(() => {
   return z.object({
     id: z.number().gte(1),
     imageUrl: z.string().nullable(),
@@ -31,7 +31,7 @@ export type SecondaryWeapon = z.infer<typeof secondaryWeapon>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const secondaryWeaponResponse: any = z.lazy(() => {
+export const secondaryWeaponResponse = z.lazy(() => {
   return z
     .object({
       id: z.number().gte(1),
@@ -54,7 +54,7 @@ export const secondaryWeaponResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const secondaryWeaponRequest: any = z.lazy(() => {
+export const secondaryWeaponRequest = z.lazy(() => {
   return z
     .object({
       id: z.number().nullish(),

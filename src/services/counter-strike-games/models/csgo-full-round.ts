@@ -3,18 +3,17 @@
 import { z } from 'zod';
 import { csgoFullRoundTeam, csgoFullRoundTeamRequest, csgoFullRoundTeamResponse } from './csgo-full-round-team';
 import { csgoFullRoundMap, csgoFullRoundMapRequest, csgoFullRoundMapResponse } from './csgo-full-round-map';
-import { csgoOutcome } from '../../common/csgo-outcome';
 import { csgoFullRoundWinner, csgoFullRoundWinnerRequest, csgoFullRoundWinnerResponse } from './csgo-full-round-winner';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoFullRound: any = z.lazy(() => {
+export const csgoFullRound = z.lazy(() => {
   return z.object({
     counterTerrorists: csgoFullRoundTeam,
     map: csgoFullRoundMap,
     number: z.number().gte(1),
-    outcome: csgoOutcome,
+    outcome: z.string(),
     terrorists: csgoFullRoundTeam,
     winnerTeam: csgoFullRoundWinner,
   });
@@ -36,13 +35,13 @@ export type CsgoFullRound = z.infer<typeof csgoFullRound>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoFullRoundResponse: any = z.lazy(() => {
+export const csgoFullRoundResponse = z.lazy(() => {
   return z
     .object({
       counter_terrorists: csgoFullRoundTeamResponse,
       map: csgoFullRoundMapResponse,
       number: z.number().gte(1),
-      outcome: csgoOutcome,
+      outcome: z.string(),
       terrorists: csgoFullRoundTeamResponse,
       winner_team: csgoFullRoundWinnerResponse,
     })
@@ -60,13 +59,13 @@ export const csgoFullRoundResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoFullRoundRequest: any = z.lazy(() => {
+export const csgoFullRoundRequest = z.lazy(() => {
   return z
     .object({
       counterTerrorists: csgoFullRoundTeamRequest.nullish(),
       map: csgoFullRoundMapRequest.nullish(),
       number: z.number().nullish(),
-      outcome: csgoOutcome.nullish(),
+      outcome: z.string().nullish(),
       terrorists: csgoFullRoundTeamRequest.nullish(),
       winnerTeam: csgoFullRoundWinnerRequest.nullish(),
     })

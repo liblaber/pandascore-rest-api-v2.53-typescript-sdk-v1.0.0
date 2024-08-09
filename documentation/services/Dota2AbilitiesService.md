@@ -32,7 +32,13 @@ List abilities
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Abilities,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Abilities,
+  SearchOverDota2Abilities,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,17 +46,17 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Abilities = {
-    id: [10],
-    name: ['mv8o1gq'],
+    id: [8],
+    name: ['vt'],
   };
 
   const range: RangeOverDota2Abilities = {
-    id: [10],
-    name: ['g6tgc'],
+    id: [5],
+    name: ['1f2lgben6'],
   };
 
   const search: SearchOverDota2Abilities = {
-    name: 'a78ls0h8h80',
+    name: 'x',
   };
   const page = 1;
 
@@ -87,7 +93,7 @@ Get a single ability by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Dota2AbilityIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({

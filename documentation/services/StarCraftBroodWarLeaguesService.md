@@ -31,7 +31,13 @@ List StarCraft Brood War leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraftBroodWarLeagues,
+  SearchOverStarcraftBroodWarLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,24 +46,24 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filter: FilterOverStarcraftBroodWarLeagues = {
     id: [7],
-    modifiedAt: ['magna '],
-    name: ['ea cu'],
-    slug: ['zf_27'],
-    url: ['cillum labore '],
+    modifiedAt: ['enim quis i'],
+    name: ['ullamc'],
+    slug: ['mm'],
+    url: ['aliqua '],
   };
 
   const range: RangeOverStarcraftBroodWarLeagues = {
-    id: [6],
-    modifiedAt: ['reprehender'],
-    name: ['sintelit'],
-    slug: ['xa9vcblu'],
-    url: ['dolore non'],
+    id: [4],
+    modifiedAt: ['sunt nisi esse'],
+    name: ['Utdoelit adi'],
+    slug: ['50'],
+    url: ['nisielit'],
   };
 
   const search: SearchOverStarcraftBroodWarLeagues = {
-    name: 'ex dolore do',
-    slug: '4-9',
-    url: 'nulla ',
+    name: 'aliqu',
+    slug: 'l_lsj7qb',
+    url: 'ex exercitatio',
   };
   const page = 1;
 

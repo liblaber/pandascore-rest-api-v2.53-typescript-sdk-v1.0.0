@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 
-export const csgoSide = z.enum(['ct', 'terrorists']);
-
-export type CsgoSide = z.infer<typeof csgoSide>;
+export enum CsgoSide {
+  CT = 'ct',
+  TERRORISTS = 'terrorists',
+}

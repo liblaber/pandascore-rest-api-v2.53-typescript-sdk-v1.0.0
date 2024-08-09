@@ -33,39 +33,39 @@ List teams for the League of Legends videogame for a given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLoLTeams, Page, PandascoreClient, RangeOverLoLTeams, SearchOverLoLTeams, SerieIdOrSlug, VideogameId } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const videogameId = VideogameId.1;
+  const serieIdOrSlug = 8;
+const videogameId = VideogameId._1;
 
 const filter: FilterOverLoLTeams = {
-  acronym: ["cupidatat"],
-  id: [10],
-  location: ["eu commodo magn"],
-  modifiedAt: ["velit sed cons"],
-  name: ["aliqua ei"],
-  slug: ["4b"],
+  acronym: ["ut pro"],
+  id: [5],
+  location: ["et cupida"],
+  modifiedAt: ["pariatur"],
+  name: ["voluptate e"],
+  slug: ["msbsixv7jy"],
   videogameId: [videogameId]
 };
 
 const range: RangeOverLoLTeams = {
-  acronym: ["in ut sunt"],
+  acronym: ["in dolore nisi"],
   id: [1],
-  location: ["dolor"],
-  modifiedAt: ["labor"],
-  name: ["veniam sed inci"],
-  slug: ["pibzwr_n1xc"]
+  location: ["aliqua ei"],
+  modifiedAt: ["es"],
+  name: ["tempor sun"],
+  slug: ["c5"]
 };
 
 const search: SearchOverLoLTeams = {
-  acronym: "elit id nisi",
-  location: "incididunt",
-  name: "sit non ",
-  slug: "6k_6"
+  acronym: "sed est",
+  location: "minim sit t",
+  name: "commodo ",
+  slug: "3x"
 };
 const page = 1;
 
@@ -110,51 +110,57 @@ List teams for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLTeams,
+  Page,
+  PandascoreClient,
+  RangeOverLoLTeams,
+  SearchOverLoLTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLoLTeams = {
-  acronym: ["cupidatat"],
-  id: [10],
-  location: ["eu commodo magn"],
-  modifiedAt: ["velit sed cons"],
-  name: ["aliqua ei"],
-  slug: ["4b"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverLoLTeams = {
+    acronym: ['ut pro'],
+    id: [5],
+    location: ['et cupida'],
+    modifiedAt: ['pariatur'],
+    name: ['voluptate e'],
+    slug: ['msbsixv7jy'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLoLTeams = {
-  acronym: ["in ut sunt"],
-  id: [1],
-  location: ["dolor"],
-  modifiedAt: ["labor"],
-  name: ["veniam sed inci"],
-  slug: ["pibzwr_n1xc"]
-};
+  const range: RangeOverLoLTeams = {
+    acronym: ['in dolore nisi'],
+    id: [1],
+    location: ['aliqua ei'],
+    modifiedAt: ['es'],
+    name: ['tempor sun'],
+    slug: ['c5'],
+  };
 
-const search: SearchOverLoLTeams = {
-  acronym: "elit id nisi",
-  location: "incididunt",
-  name: "sit non ",
-  slug: "6k_6"
-};
-const page = 1;
+  const search: SearchOverLoLTeams = {
+    acronym: 'sed est',
+    location: 'minim sit t',
+    name: 'commodo ',
+    slug: '3x',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLTeams.getLolTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLTeams.getLolTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

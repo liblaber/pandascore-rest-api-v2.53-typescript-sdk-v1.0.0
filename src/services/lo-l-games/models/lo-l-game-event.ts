@@ -2,12 +2,11 @@
 
 import { z } from 'zod';
 import { loLEventPayload, loLEventPayloadRequest, loLEventPayloadResponse } from './lo-l-event-payload';
-import { loLEventType } from './lo-l-event-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLGameEvent: any = z.lazy(() => {
+export const loLGameEvent = z.lazy(() => {
   return z.object({
     gameId: z.number().gte(1),
     ingameTimestamp: z.number().gte(0),
@@ -15,7 +14,7 @@ export const loLGameEvent: any = z.lazy(() => {
     matchId: z.number().gte(1),
     payload: loLEventPayload,
     tournamentId: z.number().gte(1),
-    type: loLEventType,
+    type: z.string(),
   });
 });
 
@@ -36,7 +35,7 @@ export type LoLGameEvent = z.infer<typeof loLGameEvent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGameEventResponse: any = z.lazy(() => {
+export const loLGameEventResponse = z.lazy(() => {
   return z
     .object({
       game_id: z.number().gte(1),
@@ -45,7 +44,7 @@ export const loLGameEventResponse: any = z.lazy(() => {
       match_id: z.number().gte(1),
       payload: loLEventPayloadResponse,
       tournament_id: z.number().gte(1),
-      type: loLEventType,
+      type: z.string(),
     })
     .transform((data) => ({
       gameId: data['game_id'],
@@ -62,7 +61,7 @@ export const loLGameEventResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGameEventRequest: any = z.lazy(() => {
+export const loLGameEventRequest = z.lazy(() => {
   return z
     .object({
       gameId: z.number().nullish(),
@@ -71,7 +70,7 @@ export const loLGameEventRequest: any = z.lazy(() => {
       matchId: z.number().nullish(),
       payload: loLEventPayloadRequest.nullish(),
       tournamentId: z.number().nullish(),
-      type: loLEventType.nullish(),
+      type: z.string().nullish(),
     })
     .transform((data) => ({
       game_id: data['gameId'],

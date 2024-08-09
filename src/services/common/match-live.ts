@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const matchLive: any = z.lazy(() => {
+export const matchLive = z.lazy(() => {
   return z.object({
     opensAt: z.string().min(1).nullable(),
     supported: z.boolean(),
@@ -26,7 +26,7 @@ export type MatchLive = z.infer<typeof matchLive>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const matchLiveResponse: any = z.lazy(() => {
+export const matchLiveResponse = z.lazy(() => {
   return z
     .object({
       opens_at: z.string().min(1).nullable(),
@@ -44,7 +44,7 @@ export const matchLiveResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const matchLiveRequest: any = z.lazy(() => {
+export const matchLiveRequest = z.lazy(() => {
   return z
     .object({ opensAt: z.string().nullish(), supported: z.boolean().nullish(), url: z.string().nullish() })
     .transform((data) => ({

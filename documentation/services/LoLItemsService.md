@@ -32,7 +32,7 @@ List items
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLoLItems, Page, PandascoreClient, RangeOverLoLItems, SearchOverLoLItems } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,53 +40,53 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLoLItems = {
-    flatArmorMod: [5],
+    flatArmorMod: [3],
     flatCritChanceMod: [1],
     flatHpPoolMod: [1],
     flatHpRegenMod: [7],
-    flatMagicDamageMod: [8],
-    flatMovementSpeedMod: [2],
-    flatMpPoolMod: [6],
-    flatMpRegenMod: [8],
-    flatPhysicalDamageMod: [6],
-    flatSpellBlockMod: [3],
-    goldBase: [5],
+    flatMagicDamageMod: [4],
+    flatMovementSpeedMod: [3],
+    flatMpPoolMod: [8],
+    flatMpRegenMod: [7],
+    flatPhysicalDamageMod: [1],
+    flatSpellBlockMod: [9],
+    goldBase: [10],
     goldPurchasable: true,
-    goldSell: [7],
-    goldTotal: [4],
-    id: [4],
-    name: ['eiusmod'],
-    percentAttackSpeedMod: [2],
-    percentLifeStealMod: [9],
-    percentMovementSpeedMod: [10],
+    goldSell: [2],
+    goldTotal: [3],
+    id: [6],
+    name: ['veniam volu'],
+    percentAttackSpeedMod: [9],
+    percentLifeStealMod: [123],
+    percentMovementSpeedMod: [1],
     trinket: true,
     videogameVersion: [],
   };
 
   const range: RangeOverLoLItems = {
-    flatArmorMod: [8],
-    flatCritChanceMod: [10],
-    flatHpPoolMod: [10],
-    flatHpRegenMod: [8],
-    flatMagicDamageMod: [10],
-    flatMovementSpeedMod: [3],
-    flatMpPoolMod: [9],
-    flatMpRegenMod: [2],
-    flatPhysicalDamageMod: [10],
-    flatSpellBlockMod: [6],
-    goldBase: [10],
+    flatArmorMod: [6],
+    flatCritChanceMod: [5],
+    flatHpPoolMod: [7],
+    flatHpRegenMod: [10],
+    flatMagicDamageMod: [9],
+    flatMovementSpeedMod: [4],
+    flatMpPoolMod: [1],
+    flatMpRegenMod: [6],
+    flatPhysicalDamageMod: [1],
+    flatSpellBlockMod: [1],
+    goldBase: [6],
     goldPurchasable: [true],
-    goldSell: [3],
-    goldTotal: [6],
-    id: [5],
-    name: ['in aliquip'],
-    percentAttackSpeedMod: [8],
-    percentLifeStealMod: [8],
+    goldSell: [5],
+    goldTotal: [3],
+    id: [9],
+    name: ['eiusm'],
+    percentAttackSpeedMod: [7],
+    percentLifeStealMod: [7],
     percentMovementSpeedMod: [1],
   };
 
   const search: SearchOverLoLItems = {
-    name: 'adipis',
+    name: 'ullam',
   };
   const page = 1;
 
@@ -130,7 +130,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLItems.getLolItemsLolItemId(3);
+  const { data } = await pandascoreClient.loLItems.getLolItemsLolItemId(4);
 
   console.log(data);
 })();

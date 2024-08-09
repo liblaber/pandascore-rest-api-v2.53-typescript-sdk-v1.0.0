@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLFlags: any = z.lazy(() => {
+export const loLFlags = z.lazy(() => {
   return z.object({
     firstBloodAssist: z.boolean().nullable(),
     firstBloodKill: z.boolean().nullable(),
@@ -32,7 +32,7 @@ export type LoLFlags = z.infer<typeof loLFlags>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFlagsResponse: any = z.lazy(() => {
+export const loLFlagsResponse = z.lazy(() => {
   return z
     .object({
       first_blood_assist: z.boolean().nullable(),
@@ -56,7 +56,7 @@ export const loLFlagsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFlagsRequest: any = z.lazy(() => {
+export const loLFlagsRequest = z.lazy(() => {
   return z
     .object({
       firstBloodAssist: z.boolean().nullish(),

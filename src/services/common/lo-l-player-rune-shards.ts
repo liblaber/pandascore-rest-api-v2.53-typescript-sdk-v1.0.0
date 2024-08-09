@@ -8,7 +8,7 @@ import { offense, offenseRequest, offenseResponse } from './offense';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPlayerRuneShards: any = z.lazy(() => {
+export const loLPlayerRuneShards = z.lazy(() => {
   return z.object({
     defense: defense.nullable(),
     flex: flex.nullable(),
@@ -29,7 +29,7 @@ export type LoLPlayerRuneShards = z.infer<typeof loLPlayerRuneShards>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerRuneShardsResponse: any = z.lazy(() => {
+export const loLPlayerRuneShardsResponse = z.lazy(() => {
   return z
     .object({
       defense: defenseResponse.nullable(),
@@ -47,7 +47,7 @@ export const loLPlayerRuneShardsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerRuneShardsRequest: any = z.lazy(() => {
+export const loLPlayerRuneShardsRequest = z.lazy(() => {
   return z
     .object({ defense: defenseRequest.nullish(), flex: flexRequest.nullish(), offense: offenseRequest.nullish() })
     .transform((data) => ({

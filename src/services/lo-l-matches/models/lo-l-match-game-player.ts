@@ -4,12 +4,11 @@ import { z } from 'zod';
 import { loLFlags, loLFlagsRequest, loLFlagsResponse } from '../../common/lo-l-flags';
 import { loLKillCounters, loLKillCountersRequest, loLKillCountersResponse } from '../../common/lo-l-kill-counters';
 import { loLKillsSeries, loLKillsSeriesRequest, loLKillsSeriesResponse } from '../../common/lo-l-kills-series';
-import { loLMatchGamePlayerRole } from './lo-l-match-game-player-role';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLMatchGamePlayer: any = z.lazy(() => {
+export const loLMatchGamePlayer = z.lazy(() => {
   return z.object({
     assists: z.number().gte(0).nullable(),
     deaths: z.number().gte(0).nullable(),
@@ -21,7 +20,7 @@ export const loLMatchGamePlayer: any = z.lazy(() => {
     largestKillingSpree: z.number().gte(0).nullable(),
     largestMultiKill: z.number().gte(0).nullable(),
     playerId: z.number().gte(1),
-    role: loLMatchGamePlayerRole.nullable(),
+    role: z.string().nullable(),
   });
 });
 
@@ -46,7 +45,7 @@ export type LoLMatchGamePlayer = z.infer<typeof loLMatchGamePlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLMatchGamePlayerResponse: any = z.lazy(() => {
+export const loLMatchGamePlayerResponse = z.lazy(() => {
   return z
     .object({
       assists: z.number().gte(0).nullable(),
@@ -59,7 +58,7 @@ export const loLMatchGamePlayerResponse: any = z.lazy(() => {
       largest_killing_spree: z.number().gte(0).nullable(),
       largest_multi_kill: z.number().gte(0).nullable(),
       player_id: z.number().gte(1),
-      role: loLMatchGamePlayerRole.nullable(),
+      role: z.string().nullable(),
     })
     .transform((data) => ({
       assists: data['assists'],
@@ -80,7 +79,7 @@ export const loLMatchGamePlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLMatchGamePlayerRequest: any = z.lazy(() => {
+export const loLMatchGamePlayerRequest = z.lazy(() => {
   return z
     .object({
       assists: z.number().nullish(),
@@ -93,7 +92,7 @@ export const loLMatchGamePlayerRequest: any = z.lazy(() => {
       largestKillingSpree: z.number().nullish(),
       largestMultiKill: z.number().nullish(),
       playerId: z.number().nullish(),
-      role: loLMatchGamePlayerRole.nullish(),
+      role: z.string().nullish(),
     })
     .transform((data) => ({
       assists: data['assists'],

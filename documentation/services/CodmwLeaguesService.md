@@ -31,7 +31,13 @@ List CODMW leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwLeagues,
+  SearchOverCodmwLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCodmwLeagues = {
-    id: [4],
-    modifiedAt: ['sunt magna'],
-    name: ['eu inc'],
-    slug: ['7pqnq'],
-    url: ['tempor sint Exc'],
+    id: [5],
+    modifiedAt: ['elit '],
+    name: ['Lorem '],
+    slug: ['sdh7'],
+    url: ['ut aliq'],
   };
 
   const range: RangeOverCodmwLeagues = {
-    id: [9],
-    modifiedAt: ['ex laboru'],
-    name: ['et consectetur '],
-    slug: ['gprmck'],
-    url: ['laboris moll'],
+    id: [10],
+    modifiedAt: ['deserunt am'],
+    name: ['id deseru'],
+    slug: ['7fjol2o5-'],
+    url: ['et amet in'],
   };
 
   const search: SearchOverCodmwLeagues = {
-    name: 'Ut mollit',
-    slug: 'su',
-    url: 'cillum',
+    name: 'enim mo',
+    slug: 'wpi9qf',
+    url: 'non dolor con',
   };
   const page = 1;
 

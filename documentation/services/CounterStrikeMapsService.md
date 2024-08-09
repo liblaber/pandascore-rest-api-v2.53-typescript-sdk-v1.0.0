@@ -32,7 +32,7 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverCsgoMaps, Page, PandascoreClient, RangeOverCsgoMaps, SearchOverCsgoMaps } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,20 +40,20 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverCsgoMaps = {
-    id: [1],
-    name: ['quiminim in de'],
-    slug: ['l27p'],
+    id: [2],
+    name: ['cillum ut'],
+    slug: ['70'],
   };
 
   const range: RangeOverCsgoMaps = {
-    id: [9],
-    name: ['cupida'],
-    slug: ['k-4qt'],
+    id: [4],
+    name: ['dolor e'],
+    slug: ['uhd'],
   };
 
   const search: SearchOverCsgoMaps = {
-    name: 'fugiat culpa',
-    slug: 'sw_b',
+    name: 'in veli',
+    slug: 'l7kkh',
   };
   const page = 1;
 
@@ -97,7 +97,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(2);
+  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(1);
 
   console.log(data);
 })();

@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantMap: any = z.lazy(() => {
+export const valorantMap = z.lazy(() => {
   return z.object({
     id: z.number().gte(1),
     imageUrl: z.string(),
@@ -33,7 +33,7 @@ export type ValorantMap = z.infer<typeof valorantMap>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantMapResponse: any = z.lazy(() => {
+export const valorantMapResponse = z.lazy(() => {
   return z
     .object({
       id: z.number().gte(1),
@@ -58,7 +58,7 @@ export const valorantMapResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantMapRequest: any = z.lazy(() => {
+export const valorantMapRequest = z.lazy(() => {
   return z
     .object({
       id: z.number().nullish(),

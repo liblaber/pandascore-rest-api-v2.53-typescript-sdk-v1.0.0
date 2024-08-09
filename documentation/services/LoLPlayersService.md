@@ -31,62 +31,68 @@ List players for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverLoLPlayers,
+  SearchOverLoLPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLoLPlayers = {
-  active: true,
-  birthday: ["quis exercita"],
-  firstName: ["enimconsec"],
-  id: [7],
-  lastName: ["Excepte"],
-  modifiedAt: ["culpa"],
-  name: ["sit commodo a"],
-  nationality: ["sed aliquip ut"],
-  role: ["enim nulla"],
-  slug: ["4"],
-  teamId: [9],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverLoLPlayers = {
+    active: true,
+    birthday: ['quis volupta'],
+    firstName: ['cupidatat'],
+    id: [6],
+    lastName: ['ameta'],
+    modifiedAt: ['dolore ea do'],
+    name: ['ut consequat '],
+    nationality: ['mollit'],
+    role: ['eu Ut anim'],
+    slug: ['2vjfwg'],
+    teamId: [2],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLoLPlayers = {
-  birthday: ["proiden"],
-  firstName: ["esse officia m"],
-  id: [2],
-  lastName: ["Ut lab"],
-  modifiedAt: ["aute do volup"],
-  name: ["nostrud"],
-  nationality: ["velit pari"],
-  role: ["exercit"],
-  slug: ["bs51gp"]
-};
+  const range: RangeOverLoLPlayers = {
+    birthday: ['sit aute eli'],
+    firstName: ['volupta'],
+    id: [4],
+    lastName: ['magna est Ut ad'],
+    modifiedAt: ['ipsum c'],
+    name: ['et esse in '],
+    nationality: ['mollit vo'],
+    role: ['volup'],
+    slug: ['rsseidj_wrc'],
+  };
 
-const search: SearchOverLoLPlayers = {
-  birthday: "dolore",
-  firstName: "adipi",
-  lastName: "conse",
-  name: "dolore",
-  nationality: "sunt Duis",
-  role: "animno",
-  slug: "d-"
-};
-const page = 1;
+  const search: SearchOverLoLPlayers = {
+    birthday: 'eu proident o',
+    firstName: 'pariatu',
+    lastName: 'dolor eiusm',
+    name: 'esse ',
+    nationality: 'dolore',
+    role: 'ea volu',
+    slug: 'pplse90v',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLPlayers.getLolPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLPlayers.getLolPlayers({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

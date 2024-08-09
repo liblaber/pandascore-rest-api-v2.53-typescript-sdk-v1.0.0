@@ -31,7 +31,13 @@ List EA Sports FC leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverFifaLeagues,
+  SearchOverFifaLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverFifaLeagues = {
-    id: [9],
-    modifiedAt: ['adipisicing'],
-    name: ['aliqua non'],
-    slug: ['uawy_:e'],
-    url: ['labor'],
+    id: [4],
+    modifiedAt: ['ullamco ipsum '],
+    name: ['culpa exercita'],
+    slug: ['hdti'],
+    url: ['laboris elit '],
   };
 
   const range: RangeOverFifaLeagues = {
     id: [4],
-    modifiedAt: ['mini'],
-    name: ['ex Excep'],
-    slug: ['6'],
-    url: ['sint eu '],
+    modifiedAt: ['anim v'],
+    name: ['quis in cil'],
+    slug: ['wa-'],
+    url: ['esse '],
   };
 
   const search: SearchOverFifaLeagues = {
-    name: 'cillum',
-    slug: '6d',
-    url: 'non ullamco ',
+    name: 'culpa',
+    slug: ':ocr',
+    url: 'ex dolore sed ',
   };
   const page = 1;
 

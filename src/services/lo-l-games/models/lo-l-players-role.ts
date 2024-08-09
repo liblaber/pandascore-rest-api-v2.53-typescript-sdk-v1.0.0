@@ -10,7 +10,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPlayersRole: any = z.lazy(() => {
+export const loLPlayersRole = z.lazy(() => {
   return z.object({
     adc: loLPlayersRoleDetail,
     jun: loLPlayersRoleDetail,
@@ -35,7 +35,7 @@ export type LoLPlayersRole = z.infer<typeof loLPlayersRole>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayersRoleResponse: any = z.lazy(() => {
+export const loLPlayersRoleResponse = z.lazy(() => {
   return z
     .object({
       adc: loLPlayersRoleDetailResponse,
@@ -57,7 +57,7 @@ export const loLPlayersRoleResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayersRoleRequest: any = z.lazy(() => {
+export const loLPlayersRoleRequest = z.lazy(() => {
   return z
     .object({
       adc: loLPlayersRoleDetailRequest.nullish(),

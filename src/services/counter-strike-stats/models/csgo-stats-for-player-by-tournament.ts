@@ -17,7 +17,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoStatsForPlayerByTournament: any = z.lazy(() => {
+export const csgoStatsForPlayerByTournament = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -70,7 +70,7 @@ export type CsgoStatsForPlayerByTournament = z.infer<typeof csgoStatsForPlayerBy
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoStatsForPlayerByTournamentResponse: any = z.lazy(() => {
+export const csgoStatsForPlayerByTournamentResponse = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -120,7 +120,7 @@ export const csgoStatsForPlayerByTournamentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoStatsForPlayerByTournamentRequest: any = z.lazy(() => {
+export const csgoStatsForPlayerByTournamentRequest = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

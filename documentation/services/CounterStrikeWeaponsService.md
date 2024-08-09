@@ -32,43 +32,50 @@ List weapons
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  CsgoWeaponKind,
+  FilterOverCsgoWeapons,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoWeapons,
+  SearchOverCsgoWeapons,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
+  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
 
   const filter: FilterOverCsgoWeapons = {
-    ammoClipMax: [4],
-    ammoMax: [7],
+    ammoClipMax: [2],
+    ammoMax: [9],
     cost: [1],
-    id: [5],
-    killReward: [1],
-    kind: [csgoWeaponKind],
-    name: ['minim u'],
-    slug: ['_lrp8s5nb'],
-  };
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
-
-  const range: RangeOverCsgoWeapons = {
-    ammoClipMax: [7],
-    ammoMax: [2],
-    cost: [9],
-    id: [10],
+    id: [8],
     killReward: [8],
     kind: [csgoWeaponKind],
-    name: ['sed proident'],
-    slug: ['3'],
+    name: ['mollit aute '],
+    slug: ['k3'],
   };
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
+  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
+
+  const range: RangeOverCsgoWeapons = {
+    ammoClipMax: [10],
+    ammoMax: [7],
+    cost: [6],
+    id: [2],
+    killReward: [10],
+    kind: [csgoWeaponKind],
+    name: ['consect'],
+    slug: ['gcl-aqn'],
+  };
+  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
 
   const search: SearchOverCsgoWeapons = {
     kind: csgoWeaponKind,
-    name: 'minim Excepteu',
-    slug: 'nq41ksr4c',
+    name: 'elit q',
+    slug: 'h6_0ihg7pdd',
   };
   const page = 1;
 
@@ -105,14 +112,14 @@ Get a single weapon by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { CsgoWeaponIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponIdOrSlug = 4;
+  const csgoWeaponIdOrSlug = 9;
 
   const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeaponsCsgoWeaponIdOrSlug();
 

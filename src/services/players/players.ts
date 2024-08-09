@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { Player, playerResponse } from '../common/player';
 import {
   GetPlayersParams,
@@ -13,7 +13,7 @@ import {
   GetPlayersPlayerIdOrSlugSeriesParams,
   GetPlayersPlayerIdOrSlugTournamentsParams,
 } from './request-params';
-import { PlayerIdOrSlug } from '../common';
+import { PlayerIdOrSlug } from '../common/player-id-or-slug';
 import { League, leagueResponse } from '../common/league';
 import { Match, matchResponse } from '../common/match';
 import { Serie, serieResponse } from '../common/serie';
@@ -31,23 +31,47 @@ export class PlayersService extends BaseService {
    * @returns {Promise<HttpResponse<Player[]>>} A list of players
    */
   async getPlayers(params?: GetPlayersParams, requestConfig?: RequestConfig): Promise<HttpResponse<Player[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players',
-      config: this.config,
-      responseSchema: z.array(playerResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Player[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(playerResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Player[]>(request);
   }
 
   /**
@@ -59,18 +83,24 @@ export class PlayersService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Player>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players/{player_id_or_slug}',
-      config: this.config,
-      responseSchema: playerResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<Player>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players/{player_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(playerResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .build();
+    return this.client.call<Player>(request);
   }
 
   /**
@@ -89,24 +119,51 @@ export class PlayersService extends BaseService {
     params?: GetPlayersPlayerIdOrSlugLeaguesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<League[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players/{player_id_or_slug}/leagues',
-      config: this.config,
-      responseSchema: z.array(leagueResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<League[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players/{player_id_or_slug}/leagues')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(leagueResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<League[]>(request);
   }
 
   /**
@@ -125,24 +182,51 @@ export class PlayersService extends BaseService {
     params?: GetPlayersPlayerIdOrSlugMatchesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players/{player_id_or_slug}/matches',
-      config: this.config,
-      responseSchema: z.array(matchResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Match[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players/{player_id_or_slug}/matches')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(matchResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Match[]>(request);
   }
 
   /**
@@ -161,24 +245,51 @@ export class PlayersService extends BaseService {
     params?: GetPlayersPlayerIdOrSlugSeriesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Serie[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players/{player_id_or_slug}/series',
-      config: this.config,
-      responseSchema: z.array(serieResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Serie[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players/{player_id_or_slug}/series')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(serieResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Serie[]>(request);
   }
 
   /**
@@ -197,23 +308,50 @@ export class PlayersService extends BaseService {
     params?: GetPlayersPlayerIdOrSlugTournamentsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/players/{player_id_or_slug}/tournaments',
-      config: this.config,
-      responseSchema: z.array(shortTournamentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ShortTournament[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/players/{player_id_or_slug}/tournaments')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(shortTournamentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ShortTournament[]>(request);
   }
 }

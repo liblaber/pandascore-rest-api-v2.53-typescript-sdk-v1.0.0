@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { Dota2Game, dota2GameResponse } from './models/dota2-game';
 import { Dota2Frame, dota2FrameResponse } from './models/dota2-frame';
 import {
@@ -12,8 +12,9 @@ import {
   GetDota2MatchesMatchIdOrSlugGamesParams,
   GetDota2TeamsTeamIdOrSlugGamesParams,
 } from './request-params';
-import { MatchIdOrSlug, TeamIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { BaseDota2Game, baseDota2GameResponse } from '../common/base-dota2-game';
+import { TeamIdOrSlug } from '../common/team-id-or-slug';
 
 export class Dota2GamesService extends BaseService {
   /**
@@ -22,18 +23,24 @@ export class Dota2GamesService extends BaseService {
    * @returns {Promise<HttpResponse<Dota2Game>>} A Dota2 game
    */
   async getDota2GamesDota2GameId(dota2GameId: number, requestConfig?: RequestConfig): Promise<HttpResponse<Dota2Game>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/games/{dota2_game_id}',
-      config: this.config,
-      responseSchema: dota2GameResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('dota2_game_id', dota2GameId);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Game>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/games/{dota2_game_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2GameResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'dota2_game_id',
+        value: dota2GameId,
+      })
+      .build();
+    return this.client.call<Dota2Game>(request);
   }
 
   /**
@@ -48,20 +55,32 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2GamesDota2GameIdFramesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Frame[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/games/{dota2_game_id}/frames',
-      config: this.config,
-      responseSchema: z.array(dota2FrameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('dota2_game_id', dota2GameId);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Frame[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/games/{dota2_game_id}/frames')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(dota2FrameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'dota2_game_id',
+        value: dota2GameId,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Dota2Frame[]>(request);
   }
 
   /**
@@ -80,24 +99,51 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2MatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Game[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/matches/{match_id_or_slug}/games',
-      config: this.config,
-      responseSchema: z.array(dota2GameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Game[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/matches/{match_id_or_slug}/games')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(dota2GameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Dota2Game[]>(request);
   }
 
   /**
@@ -112,19 +158,31 @@ export class Dota2GamesService extends BaseService {
     params?: GetDota2TeamsTeamIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<BaseDota2Game[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/teams/{team_id_or_slug}/games',
-      config: this.config,
-      responseSchema: z.array(baseDota2GameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<BaseDota2Game[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/teams/{team_id_or_slug}/games')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(baseDota2GameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<BaseDota2Game[]>(request);
   }
 }

@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoMatchVideogameVersion: any = z.lazy(() => {
+export const csgoMatchVideogameVersion = z.lazy(() => {
   return z.object({
     current: z.boolean(),
     name: z.string().regex(/^[0-9]+\.[0-9]+(\.[0-9]+)?$/),
@@ -24,7 +24,7 @@ export type CsgoMatchVideogameVersion = z.infer<typeof csgoMatchVideogameVersion
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoMatchVideogameVersionResponse: any = z.lazy(() => {
+export const csgoMatchVideogameVersionResponse = z.lazy(() => {
   return z
     .object({
       current: z.boolean(),
@@ -40,7 +40,7 @@ export const csgoMatchVideogameVersionResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoMatchVideogameVersionRequest: any = z.lazy(() => {
+export const csgoMatchVideogameVersionRequest = z.lazy(() => {
   return z.object({ current: z.boolean().nullish(), name: z.string().nullish() }).transform((data) => ({
     current: data['current'],
     name: data['name'],

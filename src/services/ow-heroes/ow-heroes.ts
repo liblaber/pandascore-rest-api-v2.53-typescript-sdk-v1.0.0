@@ -2,12 +2,12 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { OwHero, owHeroResponse } from '../common/ow-hero';
 import { GetOwHeroesParams } from './request-params';
-import { OwHeroIdOrSlug } from './models';
+import { OwHeroIdOrSlug } from './models/ow-hero-id-or-slug';
 
 export class OwHeroesService extends BaseService {
   /**
@@ -21,23 +21,47 @@ export class OwHeroesService extends BaseService {
    * @returns {Promise<HttpResponse<OwHero[]>>} A list of Overwatch heroes
    */
   async getOwHeroes(params?: GetOwHeroesParams, requestConfig?: RequestConfig): Promise<HttpResponse<OwHero[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/heroes',
-      config: this.config,
-      responseSchema: z.array(owHeroResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwHero[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/heroes')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(owHeroResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<OwHero[]>(request);
   }
 
   /**
@@ -49,17 +73,23 @@ export class OwHeroesService extends BaseService {
     owHeroIdOrSlug: OwHeroIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwHero>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/heroes/{ow_hero_id_or_slug}',
-      config: this.config,
-      responseSchema: owHeroResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('ow_hero_id_or_slug', owHeroIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwHero>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/heroes/{ow_hero_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owHeroResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'ow_hero_id_or_slug',
+        value: owHeroIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwHero>(request);
   }
 }

@@ -32,7 +32,13 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantMaps,
+  Page,
+  PandascoreClient,
+  RangeOverValorantMaps,
+  SearchOverValorantMaps,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,21 +46,21 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverValorantMaps = {
-    id: [7],
-    name: ['ex eu in amet m'],
-    slug: ['gp'],
+    id: [10],
+    name: ['veniam cup'],
+    slug: ['dees'],
     videogameVersion: [],
   };
 
   const range: RangeOverValorantMaps = {
-    id: [9],
-    name: ['in eiusmod'],
-    slug: ['poql9y'],
+    id: [1],
+    name: ['qui sunt cu'],
+    slug: ['so48j96l6'],
   };
 
   const search: SearchOverValorantMaps = {
-    name: 'ullamco conse',
-    slug: 'duug0',
+    name: 'proident',
+    slug: 'n9clrui8u',
   };
   const page = 1;
 
@@ -98,7 +104,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantMaps.getValorantMapsValorantMapId(5);
+  const { data } = await pandascoreClient.valorantMaps.getValorantMapsValorantMapId(2);
 
   console.log(data);
 })();

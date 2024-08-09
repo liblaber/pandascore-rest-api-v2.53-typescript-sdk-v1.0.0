@@ -32,7 +32,13 @@ List items
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Items,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Items,
+  SearchOverDota2Items,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,17 +46,17 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Items = {
-    id: [3],
-    name: ['8cd5x'],
+    id: [2],
+    name: ['wr'],
   };
 
   const range: RangeOverDota2Items = {
     id: [4],
-    name: ['mmypoz-ntw9'],
+    name: ['wx3uq27'],
   };
 
   const search: SearchOverDota2Items = {
-    name: 'grbfwr',
+    name: '3',
   };
   const page = 1;
 
@@ -87,14 +93,14 @@ Get a single item by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Dota2ItemIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const dota2ItemIdOrSlug = 6;
+  const dota2ItemIdOrSlug = 5;
 
   const { data } = await pandascoreClient.dota2Items.getDota2ItemsDota2ItemIdOrSlug();
 

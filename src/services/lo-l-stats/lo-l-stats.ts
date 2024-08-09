@@ -2,15 +2,16 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import {
   LoLStatsForAllPlayersByMatch,
   loLStatsForAllPlayersByMatchResponse,
 } from './models/lo-l-stats-for-all-players-by-match';
-import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TeamIdOrSlug, TournamentIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { LoLStatsForPlayer, loLStatsForPlayerResponse } from './models/lo-l-stats-for-player';
+import { PlayerIdOrSlug } from '../common/player-id-or-slug';
 import {
   GetLolPlayersPlayerIdOrSlugStatsParams,
   GetLolSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
@@ -21,12 +22,15 @@ import {
   GetLolTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStatsParams,
 } from './request-params';
 import { LoLStatsForPlayerBySerie, loLStatsForPlayerBySerieResponse } from './models/lo-l-stats-for-player-by-serie';
+import { SerieIdOrSlug } from '../common/serie-id-or-slug';
 import { LoLStatsForTeamBySerie, loLStatsForTeamBySerieResponse } from './models/lo-l-stats-for-team-by-serie';
+import { TeamIdOrSlug } from '../common/team-id-or-slug';
 import { LoLStatsForTeam, loLStatsForTeamResponse } from './models/lo-l-stats-for-team';
 import {
   LoLStatsForPlayerByTournament,
   loLStatsForPlayerByTournamentResponse,
 } from './models/lo-l-stats-for-player-by-tournament';
+import { TournamentIdOrSlug } from '../common/tournament-id-or-slug';
 import {
   LoLStatsForTeamByTournament,
   loLStatsForTeamByTournamentResponse,
@@ -42,18 +46,24 @@ export class LoLStatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForAllPlayersByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/matches/{match_id_or_slug}/players/stats',
-      config: this.config,
-      responseSchema: loLStatsForAllPlayersByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForAllPlayersByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/matches/{match_id_or_slug}/players/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForAllPlayersByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .build();
+    return this.client.call<LoLStatsForAllPlayersByMatch>(request);
   }
 
   /**
@@ -71,23 +81,44 @@ export class LoLStatsService extends BaseService {
     params?: GetLolPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForPlayer>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForPlayerResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForPlayer>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForPlayerResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<LoLStatsForPlayer>(request);
   }
 
   /**
@@ -105,22 +136,40 @@ export class LoLStatsService extends BaseService {
     params?: GetLolSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForPlayerBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForPlayerBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForPlayerBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForPlayerBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<LoLStatsForPlayerBySerie>(request);
   }
 
   /**
@@ -138,23 +187,44 @@ export class LoLStatsService extends BaseService {
     params?: GetLolSeriesSerieIdOrSlugTeamsStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForTeamBySerie[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/series/{serie_id_or_slug}/teams/stats',
-      config: this.config,
-      responseSchema: z.array(loLStatsForTeamBySerieResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForTeamBySerie[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/series/{serie_id_or_slug}/teams/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLStatsForTeamBySerieResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLStatsForTeamBySerie[]>(request);
   }
 
   /**
@@ -172,22 +242,40 @@ export class LoLStatsService extends BaseService {
     params?: GetLolSeriesSerieIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForTeamBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForTeamBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForTeamBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForTeamBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<LoLStatsForTeamBySerie>(request);
   }
 
   /**
@@ -205,23 +293,44 @@ export class LoLStatsService extends BaseService {
     params?: GetLolTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForTeam>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForTeamResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForTeam>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForTeamResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<LoLStatsForTeam>(request);
   }
 
   /**
@@ -239,22 +348,40 @@ export class LoLStatsService extends BaseService {
     params?: GetLolTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForPlayerByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForPlayerByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForPlayerByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForPlayerByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<LoLStatsForPlayerByTournament>(request);
   }
 
   /**
@@ -272,21 +399,39 @@ export class LoLStatsService extends BaseService {
     params?: GetLolTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLStatsForTeamByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: loLStatsForTeamByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLStatsForTeamByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLStatsForTeamByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<LoLStatsForTeamByTournament>(request);
   }
 }

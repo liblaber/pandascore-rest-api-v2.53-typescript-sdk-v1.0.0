@@ -2,6 +2,11 @@
 
 import { z } from 'zod';
 
-export const baseTournamentTier = z.enum(['a', 'b', 'c', 'd', 's', 'unranked']);
-
-export type BaseTournamentTier = z.infer<typeof baseTournamentTier>;
+export enum BaseTournamentTier {
+  A = 'a',
+  B = 'b',
+  C = 'c',
+  D = 'd',
+  S = 's',
+  UNRANKED = 'unranked',
+}

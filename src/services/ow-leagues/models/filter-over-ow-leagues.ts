@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverOwLeagues: any = z.lazy(() => {
+export const filterOverOwLeagues = z.lazy(() => {
   return z.object({
     id: z.array(z.number()).min(1).optional(),
     modifiedAt: z.array(z.string()).min(1).optional(),
@@ -30,7 +30,7 @@ export type FilterOverOwLeagues = z.infer<typeof filterOverOwLeagues>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverOwLeaguesResponse: any = z.lazy(() => {
+export const filterOverOwLeaguesResponse = z.lazy(() => {
   return z
     .object({
       id: z.array(z.number()).min(1).optional(),
@@ -52,7 +52,7 @@ export const filterOverOwLeaguesResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverOwLeaguesRequest: any = z.lazy(() => {
+export const filterOverOwLeaguesRequest = z.lazy(() => {
   return z
     .object({
       id: z.array(z.number()).nullish(),

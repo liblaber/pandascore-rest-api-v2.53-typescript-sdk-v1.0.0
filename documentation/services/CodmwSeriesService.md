@@ -34,56 +34,64 @@ List series for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 1;
+  const filterOverCodmwSeriesVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['aliquip minim d'],
-    endAt: ['aute ad ea'],
+    beginAt: ['repre'],
+    endAt: ['amet ip'],
     id: [3],
-    leagueId: [6],
-    modifiedAt: ['quis offi'],
-    name: ['labor'],
-    season: ['veniam qui cons'],
-    slug: ['hizoyph83_0'],
+    leagueId: [7],
+    modifiedAt: ['ad'],
+    name: ['elit tempor no'],
+    season: ['dolor i'],
+    slug: ['-ym3'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['aliq'],
-    endAt: ['est dolore eu'],
-    id: [10],
-    leagueId: [7],
-    modifiedAt: ['dolor pro'],
-    name: ['anim ex eli'],
-    season: ['pariatur '],
-    slug: ['ic16v7gnnll'],
+    beginAt: ['officia a'],
+    endAt: ['proide'],
+    id: [9],
+    leagueId: [8],
+    modifiedAt: ['mi'],
+    name: ['ea Ut esse'],
+    season: ['ipsum'],
+    slug: ['lx64'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCodmwSeries = {
-    name: 'qui ul',
-    season: 'esse ullam',
-    slug: 'c7',
+    name: 'sedreprehend',
+    season: 'officia paria',
+    slug: '_u2',
     winnerType: opponentType,
   };
   const page = 1;
@@ -126,56 +134,64 @@ List past CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 1;
+  const filterOverCodmwSeriesVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['aliquip minim d'],
-    endAt: ['aute ad ea'],
+    beginAt: ['repre'],
+    endAt: ['amet ip'],
     id: [3],
-    leagueId: [6],
-    modifiedAt: ['quis offi'],
-    name: ['labor'],
-    season: ['veniam qui cons'],
-    slug: ['hizoyph83_0'],
+    leagueId: [7],
+    modifiedAt: ['ad'],
+    name: ['elit tempor no'],
+    season: ['dolor i'],
+    slug: ['-ym3'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['aliq'],
-    endAt: ['est dolore eu'],
-    id: [10],
-    leagueId: [7],
-    modifiedAt: ['dolor pro'],
-    name: ['anim ex eli'],
-    season: ['pariatur '],
-    slug: ['ic16v7gnnll'],
+    beginAt: ['officia a'],
+    endAt: ['proide'],
+    id: [9],
+    leagueId: [8],
+    modifiedAt: ['mi'],
+    name: ['ea Ut esse'],
+    season: ['ipsum'],
+    slug: ['lx64'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCodmwSeries = {
-    name: 'qui ul',
-    season: 'esse ullam',
-    slug: 'c7',
+    name: 'sedreprehend',
+    season: 'officia paria',
+    slug: '_u2',
     winnerType: opponentType,
   };
   const page = 1;
@@ -218,56 +234,64 @@ List running CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 1;
+  const filterOverCodmwSeriesVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['aliquip minim d'],
-    endAt: ['aute ad ea'],
+    beginAt: ['repre'],
+    endAt: ['amet ip'],
     id: [3],
-    leagueId: [6],
-    modifiedAt: ['quis offi'],
-    name: ['labor'],
-    season: ['veniam qui cons'],
-    slug: ['hizoyph83_0'],
+    leagueId: [7],
+    modifiedAt: ['ad'],
+    name: ['elit tempor no'],
+    season: ['dolor i'],
+    slug: ['-ym3'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['aliq'],
-    endAt: ['est dolore eu'],
-    id: [10],
-    leagueId: [7],
-    modifiedAt: ['dolor pro'],
-    name: ['anim ex eli'],
-    season: ['pariatur '],
-    slug: ['ic16v7gnnll'],
+    beginAt: ['officia a'],
+    endAt: ['proide'],
+    id: [9],
+    leagueId: [8],
+    modifiedAt: ['mi'],
+    name: ['ea Ut esse'],
+    season: ['ipsum'],
+    slug: ['lx64'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCodmwSeries = {
-    name: 'qui ul',
-    season: 'esse ullam',
-    slug: 'c7',
+    name: 'sedreprehend',
+    season: 'officia paria',
+    slug: '_u2',
     winnerType: opponentType,
   };
   const page = 1;
@@ -310,56 +334,64 @@ List upcoming CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCodmwSeriesVideogameTitle = 1;
+  const filterOverCodmwSeriesVideogameTitle = 2;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCodmwSeries = {
-    beginAt: ['aliquip minim d'],
-    endAt: ['aute ad ea'],
+    beginAt: ['repre'],
+    endAt: ['amet ip'],
     id: [3],
-    leagueId: [6],
-    modifiedAt: ['quis offi'],
-    name: ['labor'],
-    season: ['veniam qui cons'],
-    slug: ['hizoyph83_0'],
+    leagueId: [7],
+    modifiedAt: ['ad'],
+    name: ['elit tempor no'],
+    season: ['dolor i'],
+    slug: ['-ym3'],
     videogameTitle: [filterOverCodmwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCodmwSeries = {
-    beginAt: ['aliq'],
-    endAt: ['est dolore eu'],
-    id: [10],
-    leagueId: [7],
-    modifiedAt: ['dolor pro'],
-    name: ['anim ex eli'],
-    season: ['pariatur '],
-    slug: ['ic16v7gnnll'],
+    beginAt: ['officia a'],
+    endAt: ['proide'],
+    id: [9],
+    leagueId: [8],
+    modifiedAt: ['mi'],
+    name: ['ea Ut esse'],
+    season: ['ipsum'],
+    slug: ['lx64'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCodmwSeries = {
-    name: 'qui ul',
-    season: 'esse ullam',
-    slug: 'c7',
+    name: 'sedreprehend',
+    season: 'officia paria',
+    slug: '_u2',
     winnerType: opponentType,
   };
   const page = 1;

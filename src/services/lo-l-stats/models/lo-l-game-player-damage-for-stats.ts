@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLGamePlayerDamageForStats: any = z.lazy(() => {
+export const loLGamePlayerDamageForStats = z.lazy(() => {
   return z.object({
     dealt: z.number().gte(0).nullable(),
     dealtToChampions: z.number().gte(0).nullable(),
@@ -26,7 +26,7 @@ export type LoLGamePlayerDamageForStats = z.infer<typeof loLGamePlayerDamageForS
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerDamageForStatsResponse: any = z.lazy(() => {
+export const loLGamePlayerDamageForStatsResponse = z.lazy(() => {
   return z
     .object({
       dealt: z.number().gte(0).nullable(),
@@ -44,7 +44,7 @@ export const loLGamePlayerDamageForStatsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerDamageForStatsRequest: any = z.lazy(() => {
+export const loLGamePlayerDamageForStatsRequest = z.lazy(() => {
   return z
     .object({ dealt: z.number().nullish(), dealtToChampions: z.number().nullish(), taken: z.number().nullish() })
     .transform((data) => ({

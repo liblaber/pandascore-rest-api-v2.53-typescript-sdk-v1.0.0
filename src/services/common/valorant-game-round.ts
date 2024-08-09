@@ -11,7 +11,6 @@ import {
   valorantGameRoundDefenderRequest,
   valorantGameRoundDefenderResponse,
 } from './valorant-game-round-defender';
-import { valorantGameRoundOutcome } from './valorant-game-round-outcome';
 import {
   valorantGameRoundWinner,
   valorantGameRoundWinnerRequest,
@@ -21,12 +20,12 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantGameRound: any = z.lazy(() => {
+export const valorantGameRound = z.lazy(() => {
   return z.object({
     attackers: valorantGameRoundAttacker,
     defenders: valorantGameRoundDefender,
     number: z.number().gte(0),
-    outcome: valorantGameRoundOutcome,
+    outcome: z.string(),
     winnerTeam: valorantGameRoundWinner,
   });
 });
@@ -46,13 +45,13 @@ export type ValorantGameRound = z.infer<typeof valorantGameRound>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameRoundResponse: any = z.lazy(() => {
+export const valorantGameRoundResponse = z.lazy(() => {
   return z
     .object({
       attackers: valorantGameRoundAttackerResponse,
       defenders: valorantGameRoundDefenderResponse,
       number: z.number().gte(0),
-      outcome: valorantGameRoundOutcome,
+      outcome: z.string(),
       winner_team: valorantGameRoundWinnerResponse,
     })
     .transform((data) => ({
@@ -68,13 +67,13 @@ export const valorantGameRoundResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGameRoundRequest: any = z.lazy(() => {
+export const valorantGameRoundRequest = z.lazy(() => {
   return z
     .object({
       attackers: valorantGameRoundAttackerRequest.nullish(),
       defenders: valorantGameRoundDefenderRequest.nullish(),
       number: z.number().nullish(),
-      outcome: valorantGameRoundOutcome.nullish(),
+      outcome: z.string().nullish(),
       winnerTeam: valorantGameRoundWinnerRequest.nullish(),
     })
     .transform((data) => ({

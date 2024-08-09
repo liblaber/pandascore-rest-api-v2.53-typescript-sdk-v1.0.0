@@ -34,110 +34,122 @@ List matches for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverOwMatches,
+  SearchOverOwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverOwMatchesVideogameTitle = 6;
+  const filterOverOwMatchesVideogameTitle = 3;
 
-const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
+  const filterOverOwMatchesVideogameVersion = '18.28195562';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverOwMatches = {
-  beginAt: ["Dui"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["d"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [10],
-  leagueId: [4],
-  matchType: [matchType],
-  modifiedAt: ["voluptate dol"],
-  name: ["veniam"],
-  notStarted: true,
-  numberOfGames: [6],
-  opponentId: [filterOverOwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["laboru"],
-  serieId: [8],
-  slug: ["Bbdi W6S"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverOwMatchesVideogameTitle],
-  videogameVersion: [filterOverOwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverOwMatches = {
+    beginAt: ['irure'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['exercitation'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [7],
+    matchType: [matchType],
+    modifiedAt: ['minim i'],
+    name: ['do tempor cupid'],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverOwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['i'],
+    serieId: [1],
+    slug: ['Gr'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverOwMatchesVideogameTitle],
+    videogameVersion: [filterOverOwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverOwMatches = {
-  beginAt: ["r"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["incididunt"],
-  forfeit: [true],
-  id: [1],
-  matchType: [matchType],
-  modifiedAt: ["ipsum labo"],
-  name: ["inetea "],
-  numberOfGames: [1],
-  scheduledAt: ["consequat"],
-  slug: ["epM"],
-  status: [matchStatus],
-  tournamentId: [3],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverOwMatches = {
+    beginAt: ['pariatu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['aut'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['venia'],
+    name: ['incidid'],
+    numberOfGames: [123],
+    scheduledAt: ['consectetur'],
+    slug: ['yYatbFrSyos'],
+    status: [matchStatus],
+    tournamentId: [6],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverOwMatches = {
-  matchType: matchType,
-  name: "ex Duis magn",
-  slug: "B",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverOwMatches = {
+    matchType: matchType,
+    name: 'velit eu qui',
+    slug: 'J8CP',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owMatches.getOwMatches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owMatches.getOwMatches({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +180,122 @@ List past Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverOwMatches,
+  SearchOverOwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverOwMatchesVideogameTitle = 6;
+  const filterOverOwMatchesVideogameTitle = 3;
 
-const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
+  const filterOverOwMatchesVideogameVersion = '18.28195562';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverOwMatches = {
-  beginAt: ["Dui"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["d"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [10],
-  leagueId: [4],
-  matchType: [matchType],
-  modifiedAt: ["voluptate dol"],
-  name: ["veniam"],
-  notStarted: true,
-  numberOfGames: [6],
-  opponentId: [filterOverOwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["laboru"],
-  serieId: [8],
-  slug: ["Bbdi W6S"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverOwMatchesVideogameTitle],
-  videogameVersion: [filterOverOwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverOwMatches = {
+    beginAt: ['irure'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['exercitation'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [7],
+    matchType: [matchType],
+    modifiedAt: ['minim i'],
+    name: ['do tempor cupid'],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverOwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['i'],
+    serieId: [1],
+    slug: ['Gr'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverOwMatchesVideogameTitle],
+    videogameVersion: [filterOverOwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverOwMatches = {
-  beginAt: ["r"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["incididunt"],
-  forfeit: [true],
-  id: [1],
-  matchType: [matchType],
-  modifiedAt: ["ipsum labo"],
-  name: ["inetea "],
-  numberOfGames: [1],
-  scheduledAt: ["consequat"],
-  slug: ["epM"],
-  status: [matchStatus],
-  tournamentId: [3],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverOwMatches = {
+    beginAt: ['pariatu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['aut'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['venia'],
+    name: ['incidid'],
+    numberOfGames: [123],
+    scheduledAt: ['consectetur'],
+    slug: ['yYatbFrSyos'],
+    status: [matchStatus],
+    tournamentId: [6],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverOwMatches = {
-  matchType: matchType,
-  name: "ex Duis magn",
-  slug: "B",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverOwMatches = {
+    matchType: matchType,
+    name: 'velit eu qui',
+    slug: 'J8CP',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owMatches.getOwMatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owMatches.getOwMatchesPast({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +326,122 @@ List running Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverOwMatches,
+  SearchOverOwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverOwMatchesVideogameTitle = 6;
+  const filterOverOwMatchesVideogameTitle = 3;
 
-const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
+  const filterOverOwMatchesVideogameVersion = '18.28195562';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverOwMatches = {
-  beginAt: ["Dui"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["d"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [10],
-  leagueId: [4],
-  matchType: [matchType],
-  modifiedAt: ["voluptate dol"],
-  name: ["veniam"],
-  notStarted: true,
-  numberOfGames: [6],
-  opponentId: [filterOverOwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["laboru"],
-  serieId: [8],
-  slug: ["Bbdi W6S"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverOwMatchesVideogameTitle],
-  videogameVersion: [filterOverOwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverOwMatches = {
+    beginAt: ['irure'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['exercitation'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [7],
+    matchType: [matchType],
+    modifiedAt: ['minim i'],
+    name: ['do tempor cupid'],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverOwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['i'],
+    serieId: [1],
+    slug: ['Gr'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverOwMatchesVideogameTitle],
+    videogameVersion: [filterOverOwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverOwMatches = {
-  beginAt: ["r"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["incididunt"],
-  forfeit: [true],
-  id: [1],
-  matchType: [matchType],
-  modifiedAt: ["ipsum labo"],
-  name: ["inetea "],
-  numberOfGames: [1],
-  scheduledAt: ["consequat"],
-  slug: ["epM"],
-  status: [matchStatus],
-  tournamentId: [3],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverOwMatches = {
+    beginAt: ['pariatu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['aut'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['venia'],
+    name: ['incidid'],
+    numberOfGames: [123],
+    scheduledAt: ['consectetur'],
+    slug: ['yYatbFrSyos'],
+    status: [matchStatus],
+    tournamentId: [6],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverOwMatches = {
-  matchType: matchType,
-  name: "ex Duis magn",
-  slug: "B",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverOwMatches = {
+    matchType: matchType,
+    name: 'velit eu qui',
+    slug: 'J8CP',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owMatches.getOwMatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owMatches.getOwMatchesRunning({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +472,122 @@ List upcoming Overwatch matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverOwMatches,
+  SearchOverOwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverOwMatchesVideogameTitle = 6;
+  const filterOverOwMatchesVideogameTitle = 3;
 
-const filterOverOwMatchesVideogameVersion = "50504779.61189519999";
+  const filterOverOwMatchesVideogameVersion = '18.28195562';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverOwMatches = {
-  beginAt: ["Dui"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["d"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [10],
-  leagueId: [4],
-  matchType: [matchType],
-  modifiedAt: ["voluptate dol"],
-  name: ["veniam"],
-  notStarted: true,
-  numberOfGames: [6],
-  opponentId: [filterOverOwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["laboru"],
-  serieId: [8],
-  slug: ["Bbdi W6S"],
-  status: [matchStatus],
-  tournamentId: [9],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverOwMatchesVideogameTitle],
-  videogameVersion: [filterOverOwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverOwMatches = {
+    beginAt: ['irure'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['exercitation'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [7],
+    matchType: [matchType],
+    modifiedAt: ['minim i'],
+    name: ['do tempor cupid'],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverOwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['i'],
+    serieId: [1],
+    slug: ['Gr'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverOwMatchesVideogameTitle],
+    videogameVersion: [filterOverOwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverOwMatches = {
-  beginAt: ["r"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["incididunt"],
-  forfeit: [true],
-  id: [1],
-  matchType: [matchType],
-  modifiedAt: ["ipsum labo"],
-  name: ["inetea "],
-  numberOfGames: [1],
-  scheduledAt: ["consequat"],
-  slug: ["epM"],
-  status: [matchStatus],
-  tournamentId: [3],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverOwMatches = {
+    beginAt: ['pariatu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['aut'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['venia'],
+    name: ['incidid'],
+    numberOfGames: [123],
+    scheduledAt: ['consectetur'],
+    slug: ['yYatbFrSyos'],
+    status: [matchStatus],
+    tournamentId: [6],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverOwMatches = {
-  matchType: matchType,
-  name: "ex Duis magn",
-  slug: "B",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverOwMatches = {
+    matchType: matchType,
+    name: 'velit eu qui',
+    slug: 'J8CP',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owMatches.getOwMatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owMatches.getOwMatchesUpcoming({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

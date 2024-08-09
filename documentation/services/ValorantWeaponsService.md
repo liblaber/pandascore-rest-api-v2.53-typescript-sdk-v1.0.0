@@ -32,7 +32,13 @@ List weapons
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantWeapons,
+  Page,
+  PandascoreClient,
+  RangeOverValorantWeapons,
+  SearchOverValorantWeapons,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,20 +46,20 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverValorantWeapons = {
-    creds: [8.36],
-    id: [9],
-    name: ['consectetu'],
+    creds: [3.74],
+    id: [7],
+    name: ['dolore anim vo'],
     videogameVersion: [],
   };
 
   const range: RangeOverValorantWeapons = {
-    creds: [5.67],
-    id: [4],
-    name: ['amet pariatur s'],
+    creds: [4.26],
+    id: [10],
+    name: ['Duis m'],
   };
 
   const search: SearchOverValorantWeapons = {
-    name: 'Duis do',
+    name: 'id do',
   };
   const page = 1;
 
@@ -97,7 +103,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantWeapons.getValorantWeaponsValorantWeaponId(10);
+  const { data } = await pandascoreClient.valorantWeapons.getValorantWeaponsValorantWeaponId(5);
 
   console.log(data);
 })();

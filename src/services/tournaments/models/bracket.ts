@@ -3,19 +3,16 @@
 import { z } from 'zod';
 import { game, gameRequest, gameResponse } from '../../common/game';
 import { matchLive, matchLiveRequest, matchLiveResponse } from '../../common/match-live';
-import { matchType } from '../../common/match-type';
 import { opponent, opponentRequest, opponentResponse } from '../../common/opponent';
 import { previousMatch, previousMatchRequest, previousMatchResponse } from './previous-match';
 import { matchResult, matchResultRequest, matchResultResponse } from '../../common/match-result';
-import { matchStatus } from '../../common/match-status';
 import { stream, streamRequest, streamResponse } from '../../common/stream';
 import { bracketWinnerId, bracketWinnerIdRequest, bracketWinnerIdResponse } from './bracket-winner-id';
-import { matchWinnerType } from '../../common/match-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const bracket: any = z.lazy(() => {
+export const bracket = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     detailedStats: z.boolean(),
@@ -26,7 +23,7 @@ export const bracket: any = z.lazy(() => {
     games: z.array(game),
     id: z.number().gte(1),
     live: matchLive,
-    matchType: matchType,
+    matchType: z.string(),
     modifiedAt: z.string().min(1),
     name: z.string(),
     numberOfGames: z.number().gte(0),
@@ -40,11 +37,11 @@ export const bracket: any = z.lazy(() => {
       .min(1)
       .regex(/^[ a-zA-Z0-9_-]+$/)
       .nullable(),
-    status: matchStatus,
+    status: z.string(),
     streamsList: z.array(stream),
     tournamentId: z.number().gte(1),
     winnerId: bracketWinnerId,
-    winnerType: matchWinnerType,
+    winnerType: z.string(),
   });
 });
 
@@ -82,7 +79,7 @@ export type Bracket = z.infer<typeof bracket>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const bracketResponse: any = z.lazy(() => {
+export const bracketResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -94,7 +91,7 @@ export const bracketResponse: any = z.lazy(() => {
       games: z.array(gameResponse),
       id: z.number().gte(1),
       live: matchLiveResponse,
-      match_type: matchType,
+      match_type: z.string(),
       modified_at: z.string().min(1),
       name: z.string(),
       number_of_games: z.number().gte(0),
@@ -108,11 +105,11 @@ export const bracketResponse: any = z.lazy(() => {
         .min(1)
         .regex(/^[ a-zA-Z0-9_-]+$/)
         .nullable(),
-      status: matchStatus,
+      status: z.string(),
       streams_list: z.array(streamResponse),
       tournament_id: z.number().gte(1),
       winner_id: bracketWinnerIdResponse,
-      winner_type: matchWinnerType,
+      winner_type: z.string(),
     })
     .transform((data) => ({
       beginAt: data['begin_at'],
@@ -146,7 +143,7 @@ export const bracketResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const bracketRequest: any = z.lazy(() => {
+export const bracketRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -158,7 +155,7 @@ export const bracketRequest: any = z.lazy(() => {
       games: z.array(gameRequest).nullish(),
       id: z.number().nullish(),
       live: matchLiveRequest.nullish(),
-      matchType: matchType.nullish(),
+      matchType: z.string().nullish(),
       modifiedAt: z.string().nullish(),
       name: z.string().nullish(),
       numberOfGames: z.number().nullish(),
@@ -168,11 +165,11 @@ export const bracketRequest: any = z.lazy(() => {
       results: z.array(matchResultRequest).nullish(),
       scheduledAt: z.string().nullish(),
       slug: z.string().nullish(),
-      status: matchStatus.nullish(),
+      status: z.string().nullish(),
       streamsList: z.array(streamRequest).nullish(),
       tournamentId: z.number().nullish(),
       winnerId: bracketWinnerIdRequest.nullish(),
-      winnerType: matchWinnerType.nullish(),
+      winnerType: z.string().nullish(),
     })
     .transform((data) => ({
       begin_at: data['beginAt'],

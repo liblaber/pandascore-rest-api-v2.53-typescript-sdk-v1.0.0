@@ -6,15 +6,14 @@ import {
   loLEventVoidgrubObjectRequest,
   loLEventVoidgrubObjectResponse,
 } from './lo-l-event-voidgrub-object';
-import { loLEventVoidgrubType } from './lo-l-event-voidgrub-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventVoidgrub: any = z.lazy(() => {
+export const loLEventVoidgrub = z.lazy(() => {
   return z.object({
     object: loLEventVoidgrubObject,
-    type: loLEventVoidgrubType,
+    type: z.string(),
   });
 });
 
@@ -30,11 +29,11 @@ export type LoLEventVoidgrub = z.infer<typeof loLEventVoidgrub>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventVoidgrubResponse: any = z.lazy(() => {
+export const loLEventVoidgrubResponse = z.lazy(() => {
   return z
     .object({
       object: loLEventVoidgrubObjectResponse,
-      type: loLEventVoidgrubType,
+      type: z.string(),
     })
     .transform((data) => ({
       object: data['object'],
@@ -46,9 +45,9 @@ export const loLEventVoidgrubResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventVoidgrubRequest: any = z.lazy(() => {
+export const loLEventVoidgrubRequest = z.lazy(() => {
   return z
-    .object({ object: loLEventVoidgrubObjectRequest.nullish(), type: loLEventVoidgrubType.nullish() })
+    .object({ object: loLEventVoidgrubObjectRequest.nullish(), type: z.string().nullish() })
     .transform((data) => ({
       object: data['object'],
       type: data['type'],

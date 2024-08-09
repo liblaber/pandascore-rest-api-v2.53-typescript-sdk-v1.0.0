@@ -36,25 +36,31 @@ Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverAdditionIncidents,
+  IncidentId,
+  Page,
+  PandascoreClient,
+  RangeOverAdditionIncidents,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 9;
+  const incidentId = 3;
 
   const filter: FilterOverAdditionIncidents = {
     id: [incidentId],
-    modifiedAt: ['labore nul'],
+    modifiedAt: ['in'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId = 3;
 
   const range: RangeOverAdditionIncidents = {
     id: [incidentId],
-    modifiedAt: ['id a'],
+    modifiedAt: ['dolore ex'],
   };
   const page = 1;
 
@@ -65,7 +71,7 @@ import { PandascoreClient } from 'pandascore_client';
     page: page,
     perPage: 50,
     type: [[]],
-    since: 'mollit magna no',
+    since: 'irure nulla',
     videogame: [videogameIdOrSlug],
   });
 
@@ -100,25 +106,31 @@ Get the latest updates. <br/> <br/>This endpoint only provides the latest change
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverChangeIncidents,
+  IncidentId,
+  Page,
+  PandascoreClient,
+  RangeOverChangeIncidents,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 9;
+  const incidentId = 3;
 
   const filter: FilterOverChangeIncidents = {
     id: [incidentId],
-    modifiedAt: ['id eiusmod'],
+    modifiedAt: ['aliquip dolo'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId = 3;
 
   const range: RangeOverChangeIncidents = {
     id: [incidentId],
-    modifiedAt: ['adipisici'],
+    modifiedAt: ['labo'],
   };
   const page = 1;
 
@@ -129,7 +141,7 @@ import { PandascoreClient } from 'pandascore_client';
     page: page,
     perPage: 50,
     type: [[]],
-    since: 'labori',
+    since: 'exercitatio',
     videogame: [videogameIdOrSlug],
   });
 
@@ -164,24 +176,30 @@ Get the latest deleted documents
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDeletionIncidents,
+  IncidentId,
+  Page,
+  PandascoreClient,
+  RangeOverDeletionIncidents,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 9;
+  const incidentId = 3;
 
   const filter: FilterOverDeletionIncidents = {
     id: [incidentId],
-    modifiedAt: ['voluptate cu'],
+    modifiedAt: ['ad qui'],
   };
-  const incidentId = 9;
+  const incidentId = 3;
 
   const range: RangeOverDeletionIncidents = {
     id: [incidentId],
-    modifiedAt: ['reprehenderit o'],
+    modifiedAt: ['enim f'],
   };
   const page = 1;
 
@@ -192,7 +210,7 @@ import { PandascoreClient } from 'pandascore_client';
     page: page,
     perPage: 50,
     type: [[]],
-    since: 'voluptat',
+    since: 'occaecat ad',
     videogame: [videogameIdOrSlug],
   });
 
@@ -227,25 +245,25 @@ Get the latest updates and additions. <br/> <br/>This endpoint only provides the
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverIncidents, IncidentId, Page, PandascoreClient, RangeOverIncidents } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const incidentId = 9;
+  const incidentId = 3;
 
   const filter: FilterOverIncidents = {
     id: [incidentId],
-    modifiedAt: ['eu'],
+    modifiedAt: ['Duis quis irure'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId = 3;
 
   const range: RangeOverIncidents = {
     id: [incidentId],
-    modifiedAt: ['id offici'],
+    modifiedAt: ['non ip'],
   };
   const page = 1;
 
@@ -256,7 +274,7 @@ import { PandascoreClient } from 'pandascore_client';
     page: page,
     perPage: 50,
     type: [[]],
-    since: 'dolore adip',
+    since: 'dolor cupidata',
     videogame: [videogameIdOrSlug],
   });
 

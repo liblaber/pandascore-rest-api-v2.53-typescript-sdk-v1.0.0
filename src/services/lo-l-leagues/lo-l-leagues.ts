@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { League, leagueResponse } from '../common/league';
 import { GetLolLeaguesParams } from './request-params';
 
@@ -20,22 +20,46 @@ export class LoLLeaguesService extends BaseService {
    * @returns {Promise<HttpResponse<League[]>>} A list of League-of-Legends leagues
    */
   async getLolLeagues(params?: GetLolLeaguesParams, requestConfig?: RequestConfig): Promise<HttpResponse<League[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/leagues',
-      config: this.config,
-      responseSchema: z.array(leagueResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<League[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/leagues')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(leagueResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<League[]>(request);
   }
 }

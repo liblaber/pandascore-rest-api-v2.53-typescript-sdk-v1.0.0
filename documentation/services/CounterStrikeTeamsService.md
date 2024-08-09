@@ -31,51 +31,57 @@ List teams for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoTeams,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoTeams,
+  SearchOverCsgoTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverCsgoTeams = {
-  acronym: ["cupidatat v"],
-  id: [10],
-  location: ["proide"],
-  modifiedAt: ["n"],
-  name: ["exmoll"],
-  slug: ["388tc6im"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverCsgoTeams = {
+    acronym: ['utinci'],
+    id: [8],
+    location: ['pariatur'],
+    modifiedAt: ['es'],
+    name: ['consectetur et '],
+    slug: ['_j'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverCsgoTeams = {
-  acronym: ["cupida"],
-  id: [4],
-  location: ["officia ani"],
-  modifiedAt: ["pariatur"],
-  name: ["nostrud qui "],
-  slug: ["k0k91e"]
-};
+  const range: RangeOverCsgoTeams = {
+    acronym: ['veniam'],
+    id: [6],
+    location: ['dolore ut dolo'],
+    modifiedAt: ['vel'],
+    name: ['qui elit aliqua'],
+    slug: ['x5z388t'],
+  };
 
-const search: SearchOverCsgoTeams = {
-  acronym: "culpa labor",
-  location: "aute mollit i",
-  name: "sunt ad",
-  slug: "wnj8e"
-};
-const page = 1;
+  const search: SearchOverCsgoTeams = {
+    acronym: 'anim ',
+    location: 'esse dolor ma',
+    name: 'voluptate lab',
+    slug: '3sr',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeTeams.getCsgoTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.counterStrikeTeams.getCsgoTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

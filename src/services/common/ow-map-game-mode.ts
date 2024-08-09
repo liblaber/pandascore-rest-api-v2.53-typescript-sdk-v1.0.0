@@ -2,6 +2,10 @@
 
 import { z } from 'zod';
 
-export const owMapGameMode = z.enum(['Assault', 'Control', 'Escort', 'Hybrid', 'Push']);
-
-export type OwMapGameMode = z.infer<typeof owMapGameMode>;
+export enum OwMapGameMode {
+  ASSAULT = 'Assault',
+  CONTROL = 'Control',
+  ESCORT = 'Escort',
+  HYBRID = 'Hybrid',
+  PUSH = 'Push',
+}

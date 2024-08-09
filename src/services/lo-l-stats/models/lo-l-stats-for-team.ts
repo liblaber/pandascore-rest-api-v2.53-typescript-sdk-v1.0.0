@@ -11,7 +11,7 @@ import { loLTotalTeamStat, loLTotalTeamStatRequest, loLTotalTeamStatResponse } f
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLStatsForTeam: any = z.lazy(() => {
+export const loLStatsForTeam = z.lazy(() => {
   return z.object({
     acronym: z.string().nullable(),
     id: z.number().gte(1),
@@ -58,7 +58,7 @@ export type LoLStatsForTeam = z.infer<typeof loLStatsForTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLStatsForTeamResponse: any = z.lazy(() => {
+export const loLStatsForTeamResponse = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullable(),
@@ -102,7 +102,7 @@ export const loLStatsForTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLStatsForTeamRequest: any = z.lazy(() => {
+export const loLStatsForTeamRequest = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullish(),

@@ -32,7 +32,13 @@ List spells
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSpells,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSpells,
+  SearchOverLoLSpells,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,18 +46,18 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLoLSpells = {
-    id: [8],
-    name: ['laborum dolor'],
+    id: [10],
+    name: ['consequa'],
     videogameVersion: [],
   };
 
   const range: RangeOverLoLSpells = {
-    id: [2],
-    name: ['dolore com'],
+    id: [9],
+    name: ['minim'],
   };
 
   const search: SearchOverLoLSpells = {
-    name: 'veniam ea',
+    name: 'Lorem ea eiusmo',
   };
   const page = 1;
 
@@ -95,7 +101,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLSpells.getLolSpellsLolSpellId(8);
+  const { data } = await pandascoreClient.loLSpells.getLolSpellsLolSpellId(9);
 
   console.log(data);
 })();

@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPickedChampion: any = z.lazy(() => {
+export const loLPickedChampion = z.lazy(() => {
   return z.object({
     count: z.number().gte(0),
     gamesLost: z.number(),
@@ -28,7 +28,7 @@ export type LoLPickedChampion = z.infer<typeof loLPickedChampion>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPickedChampionResponse: any = z.lazy(() => {
+export const loLPickedChampionResponse = z.lazy(() => {
   return z
     .object({
       count: z.number().gte(0),
@@ -48,7 +48,7 @@ export const loLPickedChampionResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPickedChampionRequest: any = z.lazy(() => {
+export const loLPickedChampionRequest = z.lazy(() => {
   return z
     .object({
       count: z.number().nullish(),

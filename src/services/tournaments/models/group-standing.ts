@@ -6,7 +6,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const groupStanding: any = z.lazy(() => {
+export const groupStanding = z.lazy(() => {
   return z.object({
     losses: z.number().gte(0),
     rank: z.number().gte(0),
@@ -33,7 +33,7 @@ export type GroupStanding = z.infer<typeof groupStanding>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const groupStandingResponse: any = z.lazy(() => {
+export const groupStandingResponse = z.lazy(() => {
   return z
     .object({
       losses: z.number().gte(0),
@@ -57,7 +57,7 @@ export const groupStandingResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const groupStandingRequest: any = z.lazy(() => {
+export const groupStandingRequest = z.lazy(() => {
   return z
     .object({
       losses: z.number().nullish(),

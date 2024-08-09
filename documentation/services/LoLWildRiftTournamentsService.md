@@ -34,67 +34,76 @@ List tournaments for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftShortTournaments,
+  SearchOverLolWildRiftShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverLolWildRiftShortTournamentsVideogameTitle = 10;
+  const filterOverLolWildRiftShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftShortTournaments = {
-    beginAt: ['ex'],
+    beginAt: ['id ea'],
     detailedStats: true,
-    endAt: ['ipsu'],
+    endAt: ['laboris'],
     hasBracket: true,
-    id: [2],
+    id: [5],
     liveSupported: true,
-    modifiedAt: ['aliqua dol'],
-    name: ['fugiat de'],
-    prizepool: ['ipsum'],
-    serieId: [6],
-    slug: ['_5i7'],
+    modifiedAt: ['ex sit ali'],
+    name: ['reprehen'],
+    prizepool: ['consectet'],
+    serieId: [10],
+    slug: ['pzqd3tmee_'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverLolWildRiftShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftShortTournaments = {
-    beginAt: ['culpa vol'],
+    beginAt: ['ad sint'],
     detailedStats: [true],
-    endAt: ['sit'],
+    endAt: ['ut si'],
     hasBracket: [true],
     id: [1],
-    modifiedAt: ['s'],
-    name: ['ullamco magna '],
-    prizepool: ['dolor in'],
+    modifiedAt: ['esse aliqua'],
+    name: ['nostrud'],
+    prizepool: ['dolor cupidatat'],
     serieId: [4],
-    slug: ['_acxcod3epr'],
+    slug: ['v16'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftShortTournaments = {
-    name: 'cillum',
-    prizepool: 'cillum aliqu',
-    slug: 'omd-',
+    name: 'in voluptate u',
+    prizepool: 'nostru',
+    slug: 'clwi',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -138,67 +147,76 @@ List past LoL Wild Rift tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftShortTournaments,
+  SearchOverLolWildRiftShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverLolWildRiftShortTournamentsVideogameTitle = 10;
+  const filterOverLolWildRiftShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftShortTournaments = {
-    beginAt: ['ex'],
+    beginAt: ['id ea'],
     detailedStats: true,
-    endAt: ['ipsu'],
+    endAt: ['laboris'],
     hasBracket: true,
-    id: [2],
+    id: [5],
     liveSupported: true,
-    modifiedAt: ['aliqua dol'],
-    name: ['fugiat de'],
-    prizepool: ['ipsum'],
-    serieId: [6],
-    slug: ['_5i7'],
+    modifiedAt: ['ex sit ali'],
+    name: ['reprehen'],
+    prizepool: ['consectet'],
+    serieId: [10],
+    slug: ['pzqd3tmee_'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverLolWildRiftShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftShortTournaments = {
-    beginAt: ['culpa vol'],
+    beginAt: ['ad sint'],
     detailedStats: [true],
-    endAt: ['sit'],
+    endAt: ['ut si'],
     hasBracket: [true],
     id: [1],
-    modifiedAt: ['s'],
-    name: ['ullamco magna '],
-    prizepool: ['dolor in'],
+    modifiedAt: ['esse aliqua'],
+    name: ['nostrud'],
+    prizepool: ['dolor cupidatat'],
     serieId: [4],
-    slug: ['_acxcod3epr'],
+    slug: ['v16'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftShortTournaments = {
-    name: 'cillum',
-    prizepool: 'cillum aliqu',
-    slug: 'omd-',
+    name: 'in voluptate u',
+    prizepool: 'nostru',
+    slug: 'clwi',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -242,67 +260,76 @@ List running LoL Wild Rift tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftShortTournaments,
+  SearchOverLolWildRiftShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverLolWildRiftShortTournamentsVideogameTitle = 10;
+  const filterOverLolWildRiftShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftShortTournaments = {
-    beginAt: ['ex'],
+    beginAt: ['id ea'],
     detailedStats: true,
-    endAt: ['ipsu'],
+    endAt: ['laboris'],
     hasBracket: true,
-    id: [2],
+    id: [5],
     liveSupported: true,
-    modifiedAt: ['aliqua dol'],
-    name: ['fugiat de'],
-    prizepool: ['ipsum'],
-    serieId: [6],
-    slug: ['_5i7'],
+    modifiedAt: ['ex sit ali'],
+    name: ['reprehen'],
+    prizepool: ['consectet'],
+    serieId: [10],
+    slug: ['pzqd3tmee_'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverLolWildRiftShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftShortTournaments = {
-    beginAt: ['culpa vol'],
+    beginAt: ['ad sint'],
     detailedStats: [true],
-    endAt: ['sit'],
+    endAt: ['ut si'],
     hasBracket: [true],
     id: [1],
-    modifiedAt: ['s'],
-    name: ['ullamco magna '],
-    prizepool: ['dolor in'],
+    modifiedAt: ['esse aliqua'],
+    name: ['nostrud'],
+    prizepool: ['dolor cupidatat'],
     serieId: [4],
-    slug: ['_acxcod3epr'],
+    slug: ['v16'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftShortTournaments = {
-    name: 'cillum',
-    prizepool: 'cillum aliqu',
-    slug: 'omd-',
+    name: 'in voluptate u',
+    prizepool: 'nostru',
+    slug: 'clwi',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -346,67 +373,76 @@ List upcoming LoL Wild Rift tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftShortTournaments,
+  SearchOverLolWildRiftShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverLolWildRiftShortTournamentsVideogameTitle = 10;
+  const filterOverLolWildRiftShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftShortTournaments = {
-    beginAt: ['ex'],
+    beginAt: ['id ea'],
     detailedStats: true,
-    endAt: ['ipsu'],
+    endAt: ['laboris'],
     hasBracket: true,
-    id: [2],
+    id: [5],
     liveSupported: true,
-    modifiedAt: ['aliqua dol'],
-    name: ['fugiat de'],
-    prizepool: ['ipsum'],
-    serieId: [6],
-    slug: ['_5i7'],
+    modifiedAt: ['ex sit ali'],
+    name: ['reprehen'],
+    prizepool: ['consectet'],
+    serieId: [10],
+    slug: ['pzqd3tmee_'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverLolWildRiftShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftShortTournaments = {
-    beginAt: ['culpa vol'],
+    beginAt: ['ad sint'],
     detailedStats: [true],
-    endAt: ['sit'],
+    endAt: ['ut si'],
     hasBracket: [true],
     id: [1],
-    modifiedAt: ['s'],
-    name: ['ullamco magna '],
-    prizepool: ['dolor in'],
+    modifiedAt: ['esse aliqua'],
+    name: ['nostrud'],
+    prizepool: ['dolor cupidatat'],
     serieId: [4],
-    slug: ['_acxcod3epr'],
+    slug: ['v16'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftShortTournaments = {
-    name: 'cillum',
-    prizepool: 'cillum aliqu',
-    slug: 'omd-',
+    name: 'in voluptate u',
+    prizepool: 'nostru',
+    slug: 'clwi',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };

@@ -31,51 +31,57 @@ List teams for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwTeams,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwTeams,
+  SearchOverCodmwTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverCodmwTeams = {
-  acronym: ["tempo"],
-  id: [7],
-  location: ["nisi Excepteur"],
-  modifiedAt: ["veniam est"],
-  name: ["proiden"],
-  slug: ["ffzyrcp"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverCodmwTeams = {
+    acronym: ['dolore'],
+    id: [7],
+    location: ['exercitat'],
+    modifiedAt: ['cupidatat ut c'],
+    name: ['deserunt qui'],
+    slug: ['a'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverCodmwTeams = {
-  acronym: ["fugiat "],
-  id: [2],
-  location: ["consectetur i"],
-  modifiedAt: ["ullam"],
-  name: ["ut anim n"],
-  slug: ["ak"]
-};
+  const range: RangeOverCodmwTeams = {
+    acronym: ['minim co'],
+    id: [6],
+    location: ['aliqua non'],
+    modifiedAt: ['commodo'],
+    name: ['cupidatat'],
+    slug: ['m'],
+  };
 
-const search: SearchOverCodmwTeams = {
-  acronym: "proident",
-  location: "non ess",
-  name: "in ut con",
-  slug: "ap_"
-};
-const page = 1;
+  const search: SearchOverCodmwTeams = {
+    acronym: 'laboris ull',
+    location: 'cupidatat',
+    name: 'irure e',
+    slug: 'y5z-vd_',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwTeams.getCodmwTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwTeams.getCodmwTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

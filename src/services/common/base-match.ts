@@ -2,16 +2,13 @@
 
 import { z } from 'zod';
 import { matchLive, matchLiveRequest, matchLiveResponse } from './match-live';
-import { matchType } from './match-type';
-import { matchStatus } from './match-status';
 import { stream, streamRequest, streamResponse } from './stream';
 import { baseMatchWinnerId, baseMatchWinnerIdRequest, baseMatchWinnerIdResponse } from './base-match-winner-id';
-import { matchWinnerType } from './match-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const baseMatch: any = z.lazy(() => {
+export const baseMatch = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     detailedStats: z.boolean(),
@@ -21,7 +18,7 @@ export const baseMatch: any = z.lazy(() => {
     gameAdvantage: z.number().gte(1).nullable(),
     id: z.number().gte(1),
     live: matchLive,
-    matchType: matchType,
+    matchType: z.string(),
     modifiedAt: z.string().min(1),
     name: z.string(),
     numberOfGames: z.number().gte(0),
@@ -33,11 +30,11 @@ export const baseMatch: any = z.lazy(() => {
       .min(1)
       .regex(/^[ a-zA-Z0-9_-]+$/)
       .nullable(),
-    status: matchStatus,
+    status: z.string(),
     streamsList: z.array(stream),
     tournamentId: z.number().gte(1),
     winnerId: baseMatchWinnerId,
-    winnerType: matchWinnerType,
+    winnerType: z.string(),
   });
 });
 
@@ -72,7 +69,7 @@ export type BaseMatch = z.infer<typeof baseMatch>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseMatchResponse: any = z.lazy(() => {
+export const baseMatchResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -83,7 +80,7 @@ export const baseMatchResponse: any = z.lazy(() => {
       game_advantage: z.number().gte(1).nullable(),
       id: z.number().gte(1),
       live: matchLiveResponse,
-      match_type: matchType,
+      match_type: z.string(),
       modified_at: z.string().min(1),
       name: z.string(),
       number_of_games: z.number().gte(0),
@@ -95,11 +92,11 @@ export const baseMatchResponse: any = z.lazy(() => {
         .min(1)
         .regex(/^[ a-zA-Z0-9_-]+$/)
         .nullable(),
-      status: matchStatus,
+      status: z.string(),
       streams_list: z.array(streamResponse),
       tournament_id: z.number().gte(1),
       winner_id: baseMatchWinnerIdResponse,
-      winner_type: matchWinnerType,
+      winner_type: z.string(),
     })
     .transform((data) => ({
       beginAt: data['begin_at'],
@@ -130,7 +127,7 @@ export const baseMatchResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseMatchRequest: any = z.lazy(() => {
+export const baseMatchRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -141,7 +138,7 @@ export const baseMatchRequest: any = z.lazy(() => {
       gameAdvantage: z.number().nullish(),
       id: z.number().nullish(),
       live: matchLiveRequest.nullish(),
-      matchType: matchType.nullish(),
+      matchType: z.string().nullish(),
       modifiedAt: z.string().nullish(),
       name: z.string().nullish(),
       numberOfGames: z.number().nullish(),
@@ -149,11 +146,11 @@ export const baseMatchRequest: any = z.lazy(() => {
       rescheduled: z.boolean().nullish(),
       scheduledAt: z.string().nullish(),
       slug: z.string().nullish(),
-      status: matchStatus.nullish(),
+      status: z.string().nullish(),
       streamsList: z.array(streamRequest).nullish(),
       tournamentId: z.number().nullish(),
       winnerId: baseMatchWinnerIdRequest.nullish(),
-      winnerType: matchWinnerType.nullish(),
+      winnerType: z.string().nullish(),
     })
     .transform((data) => ({
       begin_at: data['beginAt'],

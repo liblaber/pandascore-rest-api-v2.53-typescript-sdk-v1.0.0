@@ -34,7 +34,13 @@ List the latest version of League of Legends (reforged) runes
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLRunesReforged,
+  Page,
+  PandascoreClient,
+  RangeOverLoLRunesReforged,
+  SearchOverLoLRunesReforged,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -43,16 +49,16 @@ import { PandascoreClient } from 'pandascore_client';
 
   const filter: FilterOverLoLRunesReforged = {
     id: [9],
-    name: ['cillum sint'],
+    name: ['labore '],
   };
 
   const range: RangeOverLoLRunesReforged = {
-    id: [6],
-    name: ['cillum do'],
+    id: [9],
+    name: ['Lorem nulla'],
   };
 
   const search: SearchOverLoLRunesReforged = {
-    name: 'do irure ',
+    name: 'cillum sint',
   };
   const page = 1;
 
@@ -94,7 +100,13 @@ List the latest version of League of Legends (reforged) rune paths
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLRunePaths,
+  Page,
+  PandascoreClient,
+  RangeOverLoLRunePaths,
+  SearchOverLoLRunePaths,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -102,18 +114,18 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLoLRunePaths = {
-    id: [5],
-    name: ['occaecat esse'],
+    id: [6],
+    name: ['cillum do'],
     videogameVersion: [],
   };
 
   const range: RangeOverLoLRunePaths = {
-    id: [6],
-    name: ['ipsum nul'],
+    id: [4],
+    name: ['consequat co'],
   };
 
   const search: SearchOverLoLRunePaths = {
-    name: 'tempor eli',
+    name: 'occaecat esse',
   };
   const page = 1;
 
@@ -157,7 +169,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPathsLolRunePathId(5);
+  const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPathsLolRunePathId(3);
 
   console.log(data);
 })();

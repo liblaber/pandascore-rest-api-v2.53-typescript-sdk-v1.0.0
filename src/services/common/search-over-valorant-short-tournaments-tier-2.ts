@@ -2,6 +2,11 @@
 
 import { z } from 'zod';
 
-export const searchOverValorantShortTournamentsTier2 = z.enum(['a', 'b', 'c', 'd', 's', 'unranked']);
-
-export type SearchOverValorantShortTournamentsTier2 = z.infer<typeof searchOverValorantShortTournamentsTier2>;
+export enum SearchOverValorantShortTournamentsTier2 {
+  A = 'a',
+  B = 'b',
+  C = 'c',
+  D = 'd',
+  S = 's',
+  UNRANKED = 'unranked',
+}

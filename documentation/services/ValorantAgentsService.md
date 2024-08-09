@@ -32,7 +32,13 @@ List agents
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantAgents,
+  Page,
+  PandascoreClient,
+  RangeOverValorantAgents,
+  SearchOverValorantAgents,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,18 +46,18 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverValorantAgents = {
-    id: [4],
-    name: ['quiame'],
+    id: [5],
+    name: ['et quis'],
     videogameVersion: [],
   };
 
   const range: RangeOverValorantAgents = {
-    id: [8],
-    name: ['voluptate '],
+    id: [1],
+    name: ['id elit non ad'],
   };
 
   const search: SearchOverValorantAgents = {
-    name: 'nisiexerc',
+    name: 'ad qui',
   };
   const page = 1;
 
@@ -95,7 +101,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantAgents.getValorantAgentsValorantAgentId(8);
+  const { data } = await pandascoreClient.valorantAgents.getValorantAgentsValorantAgentId(4);
 
   console.log(data);
 })();

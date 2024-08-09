@@ -34,56 +34,64 @@ List series for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftSeries,
+  SearchOverLolWildRiftSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLolWildRiftSeriesVideogameTitle = 3;
+  const filterOverLolWildRiftSeriesVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftSeries = {
-    beginAt: ['labo'],
-    endAt: ['co'],
-    id: [5],
-    leagueId: [2],
-    modifiedAt: ['in labor'],
-    name: ['velit'],
-    season: ['fugiat '],
-    slug: ['hph-bv'],
+    beginAt: ['s'],
+    endAt: ['do fugia'],
+    id: [9],
+    leagueId: [1],
+    modifiedAt: ['nulla cu'],
+    name: ['sed Ut proiden'],
+    season: ['sint ir'],
+    slug: ['yugzjq'],
     videogameTitle: [filterOverLolWildRiftSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftSeries = {
-    beginAt: ['ex'],
-    endAt: ['ad qui aut'],
-    id: [3],
-    leagueId: [5],
-    modifiedAt: ['ma'],
-    name: ['ut de'],
-    season: ['nostr'],
-    slug: ['6os7g3o0bh7'],
+    beginAt: ['nisi ea '],
+    endAt: ['in labor'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['ullamc'],
+    name: ['fugiat '],
+    season: ['sedenim i'],
+    slug: ['f6e9ww8ig'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftSeries = {
-    name: 'ea nulla proi',
-    season: 'culpa pariat',
-    slug: '_tw34do',
+    name: 'in es',
+    season: 'laboris laboru',
+    slug: 'lb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -126,56 +134,64 @@ List past LoL Wild Rift series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftSeries,
+  SearchOverLolWildRiftSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLolWildRiftSeriesVideogameTitle = 3;
+  const filterOverLolWildRiftSeriesVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftSeries = {
-    beginAt: ['labo'],
-    endAt: ['co'],
-    id: [5],
-    leagueId: [2],
-    modifiedAt: ['in labor'],
-    name: ['velit'],
-    season: ['fugiat '],
-    slug: ['hph-bv'],
+    beginAt: ['s'],
+    endAt: ['do fugia'],
+    id: [9],
+    leagueId: [1],
+    modifiedAt: ['nulla cu'],
+    name: ['sed Ut proiden'],
+    season: ['sint ir'],
+    slug: ['yugzjq'],
     videogameTitle: [filterOverLolWildRiftSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftSeries = {
-    beginAt: ['ex'],
-    endAt: ['ad qui aut'],
-    id: [3],
-    leagueId: [5],
-    modifiedAt: ['ma'],
-    name: ['ut de'],
-    season: ['nostr'],
-    slug: ['6os7g3o0bh7'],
+    beginAt: ['nisi ea '],
+    endAt: ['in labor'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['ullamc'],
+    name: ['fugiat '],
+    season: ['sedenim i'],
+    slug: ['f6e9ww8ig'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftSeries = {
-    name: 'ea nulla proi',
-    season: 'culpa pariat',
-    slug: '_tw34do',
+    name: 'in es',
+    season: 'laboris laboru',
+    slug: 'lb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -218,56 +234,64 @@ List running LoL Wild Rift series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftSeries,
+  SearchOverLolWildRiftSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLolWildRiftSeriesVideogameTitle = 3;
+  const filterOverLolWildRiftSeriesVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftSeries = {
-    beginAt: ['labo'],
-    endAt: ['co'],
-    id: [5],
-    leagueId: [2],
-    modifiedAt: ['in labor'],
-    name: ['velit'],
-    season: ['fugiat '],
-    slug: ['hph-bv'],
+    beginAt: ['s'],
+    endAt: ['do fugia'],
+    id: [9],
+    leagueId: [1],
+    modifiedAt: ['nulla cu'],
+    name: ['sed Ut proiden'],
+    season: ['sint ir'],
+    slug: ['yugzjq'],
     videogameTitle: [filterOverLolWildRiftSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftSeries = {
-    beginAt: ['ex'],
-    endAt: ['ad qui aut'],
-    id: [3],
-    leagueId: [5],
-    modifiedAt: ['ma'],
-    name: ['ut de'],
-    season: ['nostr'],
-    slug: ['6os7g3o0bh7'],
+    beginAt: ['nisi ea '],
+    endAt: ['in labor'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['ullamc'],
+    name: ['fugiat '],
+    season: ['sedenim i'],
+    slug: ['f6e9ww8ig'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftSeries = {
-    name: 'ea nulla proi',
-    season: 'culpa pariat',
-    slug: '_tw34do',
+    name: 'in es',
+    season: 'laboris laboru',
+    slug: 'lb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -310,56 +334,64 @@ List upcoming LoL Wild Rift series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftSeries,
+  SearchOverLolWildRiftSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLolWildRiftSeriesVideogameTitle = 3;
+  const filterOverLolWildRiftSeriesVideogameTitle = 5;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverLolWildRiftSeries = {
-    beginAt: ['labo'],
-    endAt: ['co'],
-    id: [5],
-    leagueId: [2],
-    modifiedAt: ['in labor'],
-    name: ['velit'],
-    season: ['fugiat '],
-    slug: ['hph-bv'],
+    beginAt: ['s'],
+    endAt: ['do fugia'],
+    id: [9],
+    leagueId: [1],
+    modifiedAt: ['nulla cu'],
+    name: ['sed Ut proiden'],
+    season: ['sint ir'],
+    slug: ['yugzjq'],
     videogameTitle: [filterOverLolWildRiftSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverLolWildRiftSeries = {
-    beginAt: ['ex'],
-    endAt: ['ad qui aut'],
-    id: [3],
-    leagueId: [5],
-    modifiedAt: ['ma'],
-    name: ['ut de'],
-    season: ['nostr'],
-    slug: ['6os7g3o0bh7'],
+    beginAt: ['nisi ea '],
+    endAt: ['in labor'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['ullamc'],
+    name: ['fugiat '],
+    season: ['sedenim i'],
+    slug: ['f6e9ww8ig'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverLolWildRiftSeries = {
-    name: 'ea nulla proi',
-    season: 'culpa pariat',
-    slug: '_tw34do',
+    name: 'in es',
+    season: 'laboris laboru',
+    slug: 'lb',
     winnerType: opponentType,
   };
   const page = 1;

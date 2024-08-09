@@ -31,62 +31,68 @@ List players for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Players,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Players,
+  SearchOverDota2Players,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverDota2Players = {
-  active: true,
-  birthday: ["nulla ad "],
-  firstName: ["nostrud"],
-  id: [6],
-  lastName: ["fugiat sit ve"],
-  modifiedAt: ["Lorem ex amet "],
-  name: ["nisi labore s"],
-  nationality: ["dolor"],
-  role: ["pariatur l"],
-  slug: ["m8l"],
-  teamId: [7],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverDota2Players = {
+    active: true,
+    birthday: ['ipsum qui'],
+    firstName: ['sunt magna dolo'],
+    id: [7],
+    lastName: ['quiselit'],
+    modifiedAt: ['c'],
+    name: ['anim ea q'],
+    nationality: ['ad repr'],
+    role: ['eu amet'],
+    slug: ['q-m4p0zmd8'],
+    teamId: [10],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverDota2Players = {
-  birthday: ["qui esse"],
-  firstName: ["eiusmod repreh"],
-  id: [2],
-  lastName: ["in sunt pariat"],
-  modifiedAt: ["anim magna "],
-  name: ["dolor"],
-  nationality: ["quidolore repre"],
-  role: ["cupida"],
-  slug: ["-f5-23-"]
-};
+  const range: RangeOverDota2Players = {
+    birthday: ['occaecat dol'],
+    firstName: ['occaecat co'],
+    id: [1],
+    lastName: ['estExcep'],
+    modifiedAt: ['ex amet'],
+    name: ['est exercitat'],
+    nationality: ['ad ex'],
+    role: ['cillum'],
+    slug: ['zhluxcxiv5w'],
+  };
 
-const search: SearchOverDota2Players = {
-  birthday: "anim qu",
-  firstName: "Lorem ",
-  lastName: "cillum ipsum",
-  name: "est enim mi",
-  nationality: "id in mollit",
-  role: "fugiat in",
-  slug: "apl"
-};
-const page = 1;
+  const search: SearchOverDota2Players = {
+    birthday: 'deserunt lab',
+    firstName: 'ut Lor',
+    lastName: 'minim nisi ',
+    name: 'Ut oc',
+    nationality: 'Lorem E',
+    role: 'anim l',
+    slug: '_p',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.dota2Players.getDota2Players(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.dota2Players.getDota2Players({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

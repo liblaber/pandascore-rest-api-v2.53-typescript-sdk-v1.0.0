@@ -34,56 +34,64 @@ List series for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoSeries,
+  SearchOverCsgoSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 3;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
-    leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    beginAt: ['u'],
+    endAt: ['fugiat exercita'],
+    id: [3],
+    leagueId: [9],
+    modifiedAt: ['sed in ci'],
+    name: ['labori'],
+    season: ['consequat u'],
+    slug: ['_tuq'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
-    id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    beginAt: ['paria'],
+    endAt: ['cu'],
+    id: [4],
+    leagueId: [3],
+    modifiedAt: ['eiusmod'],
+    name: ['consequat '],
+    season: ['mollit ad'],
+    slug: ['p'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'dolore et ad s',
+    season: 'ut velit eiu',
+    slug: '2ezw7r3',
     winnerType: opponentType,
   };
   const page = 1;
@@ -126,56 +134,64 @@ List past Counter-Strike series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoSeries,
+  SearchOverCsgoSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 3;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
-    leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    beginAt: ['u'],
+    endAt: ['fugiat exercita'],
+    id: [3],
+    leagueId: [9],
+    modifiedAt: ['sed in ci'],
+    name: ['labori'],
+    season: ['consequat u'],
+    slug: ['_tuq'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
-    id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    beginAt: ['paria'],
+    endAt: ['cu'],
+    id: [4],
+    leagueId: [3],
+    modifiedAt: ['eiusmod'],
+    name: ['consequat '],
+    season: ['mollit ad'],
+    slug: ['p'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'dolore et ad s',
+    season: 'ut velit eiu',
+    slug: '2ezw7r3',
     winnerType: opponentType,
   };
   const page = 1;
@@ -218,56 +234,64 @@ List running Counter-Strike series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoSeries,
+  SearchOverCsgoSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 3;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
-    leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    beginAt: ['u'],
+    endAt: ['fugiat exercita'],
+    id: [3],
+    leagueId: [9],
+    modifiedAt: ['sed in ci'],
+    name: ['labori'],
+    season: ['consequat u'],
+    slug: ['_tuq'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
-    id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    beginAt: ['paria'],
+    endAt: ['cu'],
+    id: [4],
+    leagueId: [3],
+    modifiedAt: ['eiusmod'],
+    name: ['consequat '],
+    season: ['mollit ad'],
+    slug: ['p'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'dolore et ad s',
+    season: 'ut velit eiu',
+    slug: '2ezw7r3',
     winnerType: opponentType,
   };
   const page = 1;
@@ -310,56 +334,64 @@ List upcoming Counter-Strike series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoSeries,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoSeries,
+  SearchOverCsgoSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverCsgoSeriesVideogameTitle = 8;
+  const filterOverCsgoSeriesVideogameTitle = 3;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverCsgoSeries = {
-    beginAt: ['consectet'],
-    endAt: ['ut Ut dolo'],
-    id: [10],
-    leagueId: [3],
-    modifiedAt: ['do commodo in '],
-    name: ['ut sed mag'],
-    season: ['deserunt no'],
-    slug: ['xn5ho'],
+    beginAt: ['u'],
+    endAt: ['fugiat exercita'],
+    id: [3],
+    leagueId: [9],
+    modifiedAt: ['sed in ci'],
+    name: ['labori'],
+    season: ['consequat u'],
+    slug: ['_tuq'],
     videogameTitle: [filterOverCsgoSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverCsgoSeries = {
-    beginAt: ['ipsum tempo'],
-    endAt: ['ad '],
-    id: [9],
-    leagueId: [10],
-    modifiedAt: ['mini'],
-    name: ['quis '],
-    season: ['est ea aliqu'],
-    slug: ['v9v6xpow'],
+    beginAt: ['paria'],
+    endAt: ['cu'],
+    id: [4],
+    leagueId: [3],
+    modifiedAt: ['eiusmod'],
+    name: ['consequat '],
+    season: ['mollit ad'],
+    slug: ['p'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverCsgoSeries = {
-    name: 'in mollit offic',
-    season: 'nostrud elit',
-    slug: 'n-l-8j',
+    name: 'dolore et ad s',
+    season: 'ut velit eiu',
+    slug: '2ezw7r3',
     winnerType: opponentType,
   };
   const page = 1;

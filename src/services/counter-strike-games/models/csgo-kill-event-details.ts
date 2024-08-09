@@ -7,7 +7,7 @@ import { csgoRoundPlayer, csgoRoundPlayerRequest, csgoRoundPlayerResponse } from
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoKillEventDetails: any = z.lazy(() => {
+export const csgoKillEventDetails = z.lazy(() => {
   return z.object({
     killer: killer.nullable(),
     victim: csgoRoundPlayer,
@@ -26,7 +26,7 @@ export type CsgoKillEventDetails = z.infer<typeof csgoKillEventDetails>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoKillEventDetailsResponse: any = z.lazy(() => {
+export const csgoKillEventDetailsResponse = z.lazy(() => {
   return z
     .object({
       killer: killerResponse.nullable(),
@@ -42,7 +42,7 @@ export const csgoKillEventDetailsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoKillEventDetailsRequest: any = z.lazy(() => {
+export const csgoKillEventDetailsRequest = z.lazy(() => {
   return z.object({ killer: killerRequest.nullish(), victim: csgoRoundPlayerRequest.nullish() }).transform((data) => ({
     killer: data['killer'],
     victim: data['victim'],

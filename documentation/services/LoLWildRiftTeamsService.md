@@ -31,51 +31,57 @@ List teams for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftTeams,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftTeams,
+  SearchOverLolWildRiftTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLolWildRiftTeams = {
-  acronym: ["nulla"],
-  id: [4],
-  location: ["ut cul"],
-  modifiedAt: ["Lorem"],
-  name: ["eu anim"],
-  slug: ["smkajitdf56"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverLolWildRiftTeams = {
+    acronym: ['consequa'],
+    id: [10],
+    location: ['in dolor lab'],
+    modifiedAt: ['a'],
+    name: ['anim adipisi'],
+    slug: ['8t5k3j'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLolWildRiftTeams = {
-  acronym: ["dolore aute "],
-  id: [4],
-  location: ["mollit"],
-  modifiedAt: ["proident sun"],
-  name: ["tempor labore e"],
-  slug: ["qwl4m2"]
-};
+  const range: RangeOverLolWildRiftTeams = {
+    acronym: ['est nisi'],
+    id: [8],
+    location: ['adveniam comm'],
+    modifiedAt: ['velit dolor'],
+    name: ['offici'],
+    slug: ['vz5cmwedp'],
+  };
 
-const search: SearchOverLolWildRiftTeams = {
-  acronym: "et commodo a",
-  location: "minim",
-  name: "labore",
-  slug: "jlv"
-};
-const page = 1;
+  const search: SearchOverLolWildRiftTeams = {
+    acronym: 'incidi',
+    location: 'dolore qui',
+    name: 'Ut sunt',
+    slug: 'c3tvwcn',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

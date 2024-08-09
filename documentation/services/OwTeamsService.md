@@ -31,51 +31,57 @@ List teams for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwTeams,
+  Page,
+  PandascoreClient,
+  RangeOverOwTeams,
+  SearchOverOwTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverOwTeams = {
-  acronym: ["cupid"],
-  id: [1],
-  location: ["cupidat"],
-  modifiedAt: ["esse nostrud i"],
-  name: ["dolore rep"],
-  slug: ["q"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverOwTeams = {
+    acronym: ['voluptate E'],
+    id: [9],
+    location: ['Duis occa'],
+    modifiedAt: ['eiu'],
+    name: ['incididun'],
+    slug: ['0-lgzjvz0i'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverOwTeams = {
-  acronym: ["nulla c"],
-  id: [8],
-  location: ["quis magn"],
-  modifiedAt: ["fu"],
-  name: ["cillum"],
-  slug: ["t2t8"]
-};
+  const range: RangeOverOwTeams = {
+    acronym: ['aliquip'],
+    id: [2],
+    location: ['voluptate cul'],
+    modifiedAt: ['do'],
+    name: ['etsed Ut pro'],
+    slug: ['lt0l_rsiu6p'],
+  };
 
-const search: SearchOverOwTeams = {
-  acronym: "aliquip",
-  location: "veniam non i",
-  name: "Lorem",
-  slug: "8kr9"
-};
-const page = 1;
+  const search: SearchOverOwTeams = {
+    acronym: 'Utnon',
+    location: 'magna',
+    name: 'elit q',
+    slug: 'y-',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owTeams.getOwTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owTeams.getOwTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

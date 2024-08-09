@@ -6,15 +6,14 @@ import {
   loLEventMinionObjectRequest,
   loLEventMinionObjectResponse,
 } from './lo-l-event-minion-object';
-import { loLEventMinionType } from './lo-l-event-minion-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventMinion: any = z.lazy(() => {
+export const loLEventMinion = z.lazy(() => {
   return z.object({
     object: loLEventMinionObject,
-    type: loLEventMinionType,
+    type: z.string(),
   });
 });
 
@@ -30,11 +29,11 @@ export type LoLEventMinion = z.infer<typeof loLEventMinion>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventMinionResponse: any = z.lazy(() => {
+export const loLEventMinionResponse = z.lazy(() => {
   return z
     .object({
       object: loLEventMinionObjectResponse,
-      type: loLEventMinionType,
+      type: z.string(),
     })
     .transform((data) => ({
       object: data['object'],
@@ -46,11 +45,9 @@ export const loLEventMinionResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventMinionRequest: any = z.lazy(() => {
-  return z
-    .object({ object: loLEventMinionObjectRequest.nullish(), type: loLEventMinionType.nullish() })
-    .transform((data) => ({
-      object: data['object'],
-      type: data['type'],
-    }));
+export const loLEventMinionRequest = z.lazy(() => {
+  return z.object({ object: loLEventMinionObjectRequest.nullish(), type: z.string().nullish() }).transform((data) => ({
+    object: data['object'],
+    type: data['type'],
+  }));
 });

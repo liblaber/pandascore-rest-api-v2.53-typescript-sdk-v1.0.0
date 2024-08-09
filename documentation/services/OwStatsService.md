@@ -32,16 +32,16 @@ Get detailed statistics of a given Overwatch given player for the given game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 3;
 
-  const { data } = await pandascoreClient.owStats.getOwGamesOwGameIdPlayersPlayerIdOrSlugStats(3);
+  const { data } = await pandascoreClient.owStats.getOwGamesOwGameIdPlayersPlayerIdOrSlugStats(8);
 
   console.log(data);
 })();
@@ -67,14 +67,14 @@ Get detailed statistics of Overwatch players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 4;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersStats();
 
@@ -103,14 +103,14 @@ Get detailed statistics of a given Overwatch given player for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const playerIdOrSlug = 9;
+  const matchIdOrSlug = 4;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -143,13 +143,13 @@ Get detailed statistics of a given Overwatch player
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
+  const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.owStats.getOwPlayersPlayerIdOrSlugStats(
   ,
@@ -184,14 +184,14 @@ Get detailed statistics of a given Overwatch given player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 8;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.owStats.getOwSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -223,14 +223,14 @@ Get detailed statistics of a given Overwatch player for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 4;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.owStats.getOwTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,

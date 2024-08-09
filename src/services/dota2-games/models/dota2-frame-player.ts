@@ -6,7 +6,7 @@ import { dota2FrameHero, dota2FrameHeroRequest, dota2FrameHeroResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2FramePlayer: any = z.lazy(() => {
+export const dota2FramePlayer = z.lazy(() => {
   return z.object({
     gold: z.number().gte(0),
     hero: dota2FrameHero,
@@ -31,7 +31,7 @@ export type Dota2FramePlayer = z.infer<typeof dota2FramePlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FramePlayerResponse: any = z.lazy(() => {
+export const dota2FramePlayerResponse = z.lazy(() => {
   return z
     .object({
       gold: z.number().gte(0),
@@ -53,7 +53,7 @@ export const dota2FramePlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FramePlayerRequest: any = z.lazy(() => {
+export const dota2FramePlayerRequest = z.lazy(() => {
   return z
     .object({
       gold: z.number().nullish(),

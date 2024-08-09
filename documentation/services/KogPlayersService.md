@@ -31,62 +31,68 @@ List players for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverKogPlayers,
+  SearchOverKogPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverKogPlayers = {
-  active: true,
-  birthday: ["Duis aute sit"],
-  firstName: ["occaec"],
-  id: [6],
-  lastName: ["mollit"],
-  modifiedAt: ["in"],
-  name: ["laboris aliqua "],
-  nationality: ["proident i"],
-  role: ["venia"],
-  slug: ["pdt-82"],
-  teamId: [7],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverKogPlayers = {
+    active: true,
+    birthday: ['Lorem'],
+    firstName: ['nostru'],
+    id: [1],
+    lastName: ['pariatur mollit'],
+    modifiedAt: ['qui '],
+    name: ['culpa incid'],
+    nationality: ['eu ut esse'],
+    role: ['in sunt'],
+    slug: ['202j4i'],
+    teamId: [6],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverKogPlayers = {
-  birthday: ["ad elit "],
-  firstName: ["tempor"],
-  id: [6],
-  lastName: ["aute ali"],
-  modifiedAt: ["consectetu"],
-  name: ["sintin"],
-  nationality: ["elit occaeca"],
-  role: ["minim "],
-  slug: ["_qmb96lw89"]
-};
+  const range: RangeOverKogPlayers = {
+    birthday: ['adipi'],
+    firstName: ['Excepteur in ea'],
+    id: [3],
+    lastName: ['repreh'],
+    modifiedAt: ['ex anim E'],
+    name: ['etdese'],
+    nationality: ['adipisicing ips'],
+    role: ['nulla eu'],
+    slug: ['l14dfqw-'],
+  };
 
-const search: SearchOverKogPlayers = {
-  birthday: "nisi sed deseru",
-  firstName: "cupid",
-  lastName: "aliqua magna no",
-  name: "in dolore ",
-  nationality: "proident",
-  role: "magna cu",
-  slug: "wiv"
-};
-const page = 1;
+  const search: SearchOverKogPlayers = {
+    birthday: 'eiusmod',
+    firstName: 'cillu',
+    lastName: 'nisi ',
+    name: 'ex in ',
+    nationality: 'mollit la',
+    role: 'ut quis tempor',
+    slug: 'kc',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogPlayers.getKogPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogPlayers.getKogPlayers({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

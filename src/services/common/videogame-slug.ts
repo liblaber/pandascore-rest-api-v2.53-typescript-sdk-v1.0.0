@@ -2,24 +2,22 @@
 
 import { z } from 'zod';
 
-export const videogameSlug = z.enum([
-  'cod-mw',
-  'cs-go',
-  'dota-2',
-  'e-basketball',
-  'e-cricket',
-  'e-soccer',
-  'fifa',
-  'kog',
-  'league-of-legends',
-  'lol-wild-rift',
-  'ow',
-  'pubg',
-  'r6-siege',
-  'rl',
-  'starcraft-2',
-  'starcraft-brood-war',
-  'valorant',
-]);
-
-export type VideogameSlug = z.infer<typeof videogameSlug>;
+export enum VideogameSlug {
+  CODMW = 'cod-mw',
+  CSGO = 'cs-go',
+  DOTA2 = 'dota-2',
+  EBASKETBALL = 'e-basketball',
+  ECRICKET = 'e-cricket',
+  ESOCCER = 'e-soccer',
+  FIFA = 'fifa',
+  KOG = 'kog',
+  LEAGUEOFLEGENDS = 'league-of-legends',
+  LOLWILDRIFT = 'lol-wild-rift',
+  OW = 'ow',
+  PUBG = 'pubg',
+  R6SIEGE = 'r6-siege',
+  RL = 'rl',
+  STARCRAFT2 = 'starcraft-2',
+  STARCRAFTBROODWAR = 'starcraft-brood-war',
+  VALORANT = 'valorant',
+}

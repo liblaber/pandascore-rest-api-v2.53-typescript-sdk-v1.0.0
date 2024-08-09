@@ -7,7 +7,7 @@ import { valorantEventVictim, valorantEventVictimRequest, valorantEventVictimRes
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantKillEventDetails: any = z.lazy(() => {
+export const valorantKillEventDetails = z.lazy(() => {
   return z.object({
     bombKill: z.boolean(),
     killer: valorantEventKiller,
@@ -28,7 +28,7 @@ export type ValorantKillEventDetails = z.infer<typeof valorantKillEventDetails>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantKillEventDetailsResponse: any = z.lazy(() => {
+export const valorantKillEventDetailsResponse = z.lazy(() => {
   return z
     .object({
       bomb_kill: z.boolean(),
@@ -46,7 +46,7 @@ export const valorantKillEventDetailsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantKillEventDetailsRequest: any = z.lazy(() => {
+export const valorantKillEventDetailsRequest = z.lazy(() => {
   return z
     .object({
       bombKill: z.boolean().nullish(),

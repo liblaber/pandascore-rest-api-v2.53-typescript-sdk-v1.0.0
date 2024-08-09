@@ -2,19 +2,18 @@
 
 import { z } from 'zod';
 import { loLRuneReforged, loLRuneReforgedRequest, loLRuneReforgedResponse } from './lo-l-rune-reforged';
-import { loLRuneReforgedType } from './lo-l-rune-reforged-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const primaryPath: any = z.lazy(() => {
+export const primaryPath = z.lazy(() => {
   return z.object({
     id: z.number().gte(1),
     imageUrl: z.string(),
     keystone: loLRuneReforged,
     lesserRunes: z.array(loLRuneReforged),
     name: z.string(),
-    type: loLRuneReforgedType,
+    type: z.string(),
   });
 });
 
@@ -34,7 +33,7 @@ export type PrimaryPath = z.infer<typeof primaryPath>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const primaryPathResponse: any = z.lazy(() => {
+export const primaryPathResponse = z.lazy(() => {
   return z
     .object({
       id: z.number().gte(1),
@@ -42,7 +41,7 @@ export const primaryPathResponse: any = z.lazy(() => {
       keystone: loLRuneReforgedResponse,
       lesser_runes: z.array(loLRuneReforgedResponse),
       name: z.string(),
-      type: loLRuneReforgedType,
+      type: z.string(),
     })
     .transform((data) => ({
       id: data['id'],
@@ -58,7 +57,7 @@ export const primaryPathResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const primaryPathRequest: any = z.lazy(() => {
+export const primaryPathRequest = z.lazy(() => {
   return z
     .object({
       id: z.number().nullish(),
@@ -66,7 +65,7 @@ export const primaryPathRequest: any = z.lazy(() => {
       keystone: loLRuneReforgedRequest.nullish(),
       lesserRunes: z.array(loLRuneReforgedRequest).nullish(),
       name: z.string().nullish(),
-      type: loLRuneReforgedType.nullish(),
+      type: z.string().nullish(),
     })
     .transform((data) => ({
       id: data['id'],

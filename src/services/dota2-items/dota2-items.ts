@@ -2,12 +2,12 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { Dota2Item, dota2ItemResponse } from '../common/dota2-item';
 import { GetDota2ItemsParams } from './request-params';
-import { Dota2ItemIdOrSlug } from './models';
+import { Dota2ItemIdOrSlug } from './models/dota2-item-id-or-slug';
 
 export class Dota2ItemsService extends BaseService {
   /**
@@ -21,23 +21,47 @@ export class Dota2ItemsService extends BaseService {
    * @returns {Promise<HttpResponse<Dota2Item[]>>} A list of Dota2 items
    */
   async getDota2Items(params?: GetDota2ItemsParams, requestConfig?: RequestConfig): Promise<HttpResponse<Dota2Item[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/items',
-      config: this.config,
-      responseSchema: z.array(dota2ItemResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Item[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/items')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(dota2ItemResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Dota2Item[]>(request);
   }
 
   /**
@@ -49,17 +73,23 @@ export class Dota2ItemsService extends BaseService {
     dota2ItemIdOrSlug: Dota2ItemIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Item>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/items/{dota2_item_id_or_slug}',
-      config: this.config,
-      responseSchema: dota2ItemResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('dota2_item_id_or_slug', dota2ItemIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Item>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/items/{dota2_item_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2ItemResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'dota2_item_id_or_slug',
+        value: dota2ItemIdOrSlug,
+      })
+      .build();
+    return this.client.call<Dota2Item>(request);
   }
 }

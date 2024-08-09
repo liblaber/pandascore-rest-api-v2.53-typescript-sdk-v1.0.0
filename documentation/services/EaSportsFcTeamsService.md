@@ -31,51 +31,57 @@ List teams for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaTeams,
+  Page,
+  PandascoreClient,
+  RangeOverFifaTeams,
+  SearchOverFifaTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverFifaTeams = {
-  acronym: ["nostrud in vel"],
-  id: [10],
-  location: ["reprehenderit t"],
-  modifiedAt: ["consectetur cil"],
-  name: ["quis Lor"],
-  slug: ["d3c"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverFifaTeams = {
+    acronym: ['eiusmod nos'],
+    id: [6],
+    location: ['dolor'],
+    modifiedAt: ['commo'],
+    name: ['Excepteu'],
+    slug: ['3po9l'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverFifaTeams = {
-  acronym: ["minim "],
-  id: [6],
-  location: ["Duis in"],
-  modifiedAt: ["ut cu"],
-  name: ["consectetur "],
-  slug: ["o4l8d"]
-};
+  const range: RangeOverFifaTeams = {
+    acronym: ['nostrud laborum'],
+    id: [9],
+    location: ['culpa sit et do'],
+    modifiedAt: ['et reprehend'],
+    name: ['laborum aliqui'],
+    slug: ['ev'],
+  };
 
-const search: SearchOverFifaTeams = {
-  acronym: "labore",
-  location: "minim ullamco c",
-  name: "quilaboris",
-  slug: "9ch1_rro"
-};
-const page = 1;
+  const search: SearchOverFifaTeams = {
+    acronym: 'Lorem nisi v',
+    location: 'pariatur dolo',
+    name: 'incidid',
+    slug: 'm3zn',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcTeams.getFifaTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcTeams.getFifaTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

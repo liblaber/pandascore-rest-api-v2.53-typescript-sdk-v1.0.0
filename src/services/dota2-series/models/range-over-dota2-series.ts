@@ -2,12 +2,11 @@
 
 import { z } from 'zod';
 import { opponentId, opponentIdRequest, opponentIdResponse } from '../../common/opponent-id';
-import { opponentType } from '../../common/opponent-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const rangeOverDota2Series: any = z.lazy(() => {
+export const rangeOverDota2Series = z.lazy(() => {
   return z.object({
     beginAt: z.array(z.string()).min(2).max(2).optional(),
     endAt: z.array(z.string()).min(2).max(2).optional(),
@@ -18,7 +17,7 @@ export const rangeOverDota2Series: any = z.lazy(() => {
     season: z.array(z.string()).min(2).max(2).optional(),
     slug: z.array(z.string()).min(2).max(2).optional(),
     winnerId: z.array(opponentId).min(2).max(2).optional(),
-    winnerType: z.array(opponentType).min(2).max(2).optional(),
+    winnerType: z.array(z.string()).min(2).max(2).optional(),
     year: z.array(z.number()).min(2).max(2).optional(),
   });
 });
@@ -44,7 +43,7 @@ export type RangeOverDota2Series = z.infer<typeof rangeOverDota2Series>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverDota2SeriesResponse: any = z.lazy(() => {
+export const rangeOverDota2SeriesResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.array(z.string()).min(2).max(2).optional(),
@@ -56,7 +55,7 @@ export const rangeOverDota2SeriesResponse: any = z.lazy(() => {
       season: z.array(z.string()).min(2).max(2).optional(),
       slug: z.array(z.string()).min(2).max(2).optional(),
       winner_id: z.array(opponentIdResponse).min(2).max(2).optional(),
-      winner_type: z.array(opponentType).min(2).max(2).optional(),
+      winner_type: z.array(z.string()).min(2).max(2).optional(),
       year: z.array(z.number()).min(2).max(2).optional(),
     })
     .transform((data) => ({
@@ -78,7 +77,7 @@ export const rangeOverDota2SeriesResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverDota2SeriesRequest: any = z.lazy(() => {
+export const rangeOverDota2SeriesRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.array(z.string()).nullish(),
@@ -90,7 +89,7 @@ export const rangeOverDota2SeriesRequest: any = z.lazy(() => {
       season: z.array(z.string()).nullish(),
       slug: z.array(z.string()).nullish(),
       winnerId: z.array(opponentIdRequest).nullish(),
-      winnerType: z.array(opponentType).nullish(),
+      winnerType: z.array(z.string()).nullish(),
       year: z.array(z.number()).nullish(),
     })
     .transform((data) => ({

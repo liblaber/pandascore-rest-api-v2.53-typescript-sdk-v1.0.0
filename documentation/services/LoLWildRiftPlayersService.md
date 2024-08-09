@@ -31,62 +31,68 @@ List players for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftPlayers,
+  SearchOverLolWildRiftPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLolWildRiftPlayers = {
-  active: true,
-  birthday: ["pariatur"],
-  firstName: ["dolor tem"],
-  id: [2],
-  lastName: ["commodo elit "],
-  modifiedAt: ["quis ea la"],
-  name: ["nostrud ullamc"],
-  nationality: ["deser"],
-  role: ["amet ipsum"],
-  slug: ["6"],
-  teamId: [2],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverLolWildRiftPlayers = {
+    active: true,
+    birthday: ['officia '],
+    firstName: ['sitquis si'],
+    id: [10],
+    lastName: ['estin'],
+    modifiedAt: ['ea '],
+    name: ['veniam'],
+    nationality: ['aliqua lab'],
+    role: ['magna culpa '],
+    slug: ['bmw74a'],
+    teamId: [10],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLolWildRiftPlayers = {
-  birthday: ["dolore cup"],
-  firstName: ["in quis"],
-  id: [7],
-  lastName: ["esteu"],
-  modifiedAt: ["et culpa"],
-  name: ["minim"],
-  nationality: ["tempor a"],
-  role: ["sint ni"],
-  slug: ["rvnd_hqn"]
-};
+  const range: RangeOverLolWildRiftPlayers = {
+    birthday: ['ullamco la'],
+    firstName: ['elit Excepte'],
+    id: [5],
+    lastName: ['Duisamet'],
+    modifiedAt: ['in incidid'],
+    name: ['labore dol'],
+    nationality: ['veniam do'],
+    role: ['esse consectet'],
+    slug: ['j31uujo2q'],
+  };
 
-const search: SearchOverLolWildRiftPlayers = {
-  birthday: "paria",
-  firstName: "ullamco",
-  lastName: "sunt si",
-  name: "ullamc",
-  nationality: "irure m",
-  role: "repre",
-  slug: "0nw"
-};
-const page = 1;
+  const search: SearchOverLolWildRiftPlayers = {
+    birthday: 'irure cons',
+    firstName: 'commodo tem',
+    lastName: 'voluptate ',
+    name: 'Lorem ',
+    nationality: 'commo',
+    role: 'minim cillu',
+    slug: 'y9cnlq3',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLWildRiftPlayers.getLolWildRiftPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLWildRiftPlayers.getLolWildRiftPlayers({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

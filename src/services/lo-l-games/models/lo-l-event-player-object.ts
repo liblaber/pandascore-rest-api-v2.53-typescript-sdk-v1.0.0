@@ -2,17 +2,16 @@
 
 import { z } from 'zod';
 import { loLEventChampion, loLEventChampionRequest, loLEventChampionResponse } from './lo-l-event-champion';
-import { loLTeamColor } from '../../common/lo-l-team-color';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventPlayerObject: any = z.lazy(() => {
+export const loLEventPlayerObject = z.lazy(() => {
   return z.object({
     champion: loLEventChampion,
     playerId: z.number().gte(1),
     playerName: z.string(),
-    side: loLTeamColor,
+    side: z.string(),
   });
 });
 
@@ -30,13 +29,13 @@ export type LoLEventPlayerObject = z.infer<typeof loLEventPlayerObject>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventPlayerObjectResponse: any = z.lazy(() => {
+export const loLEventPlayerObjectResponse = z.lazy(() => {
   return z
     .object({
       champion: loLEventChampionResponse,
       player_id: z.number().gte(1),
       player_name: z.string(),
-      side: loLTeamColor,
+      side: z.string(),
     })
     .transform((data) => ({
       champion: data['champion'],
@@ -50,13 +49,13 @@ export const loLEventPlayerObjectResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventPlayerObjectRequest: any = z.lazy(() => {
+export const loLEventPlayerObjectRequest = z.lazy(() => {
   return z
     .object({
       champion: loLEventChampionRequest.nullish(),
       playerId: z.number().nullish(),
       playerName: z.string().nullish(),
-      side: loLTeamColor.nullish(),
+      side: z.string().nullish(),
     })
     .transform((data) => ({
       champion: data['champion'],

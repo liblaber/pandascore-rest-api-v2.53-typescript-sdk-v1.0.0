@@ -2,15 +2,16 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import {
   Dota2StatsForAllPlayersByMatch,
   dota2StatsForAllPlayersByMatchResponse,
 } from './models/dota2-stats-for-all-players-by-match';
-import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TeamIdOrSlug, TournamentIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { Dota2StatsForPlayer, dota2StatsForPlayerResponse } from './models/dota2-stats-for-player';
+import { PlayerIdOrSlug } from '../common/player-id-or-slug';
 import {
   GetDota2PlayersPlayerIdOrSlugStatsParams,
   GetDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
@@ -23,12 +24,15 @@ import {
   Dota2StatsForPlayerBySerie,
   dota2StatsForPlayerBySerieResponse,
 } from './models/dota2-stats-for-player-by-serie';
+import { SerieIdOrSlug } from '../common/serie-id-or-slug';
 import { Dota2StatsForTeamBySerie, dota2StatsForTeamBySerieResponse } from './models/dota2-stats-for-team-by-serie';
+import { TeamIdOrSlug } from '../common/team-id-or-slug';
 import { Dota2StatsForTeam, dota2StatsForTeamResponse } from './models/dota2-stats-for-team';
 import {
   Dota2StatsForPlayerByTournament,
   dota2StatsForPlayerByTournamentResponse,
 } from './models/dota2-stats-for-player-by-tournament';
+import { TournamentIdOrSlug } from '../common/tournament-id-or-slug';
 import {
   Dota2StatsForTeamByTournament,
   dota2StatsForTeamByTournamentResponse,
@@ -44,18 +48,24 @@ export class Dota2StatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForAllPlayersByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/matches/{match_id_or_slug}/players/stats',
-      config: this.config,
-      responseSchema: dota2StatsForAllPlayersByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForAllPlayersByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/matches/{match_id_or_slug}/players/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForAllPlayersByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .build();
+    return this.client.call<Dota2StatsForAllPlayersByMatch>(request);
   }
 
   /**
@@ -72,22 +82,40 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2PlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForPlayer>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForPlayerResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForPlayer>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForPlayerResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<Dota2StatsForPlayer>(request);
   }
 
   /**
@@ -104,21 +132,36 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForPlayerBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForPlayerBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForPlayerBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForPlayerBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .build();
+    return this.client.call<Dota2StatsForPlayerBySerie>(request);
   }
 
   /**
@@ -135,21 +178,36 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForTeamBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForTeamBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForTeamBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForTeamBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .build();
+    return this.client.call<Dota2StatsForTeamBySerie>(request);
   }
 
   /**
@@ -166,22 +224,40 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2TeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForTeam>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForTeamResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForTeam>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForTeamResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<Dota2StatsForTeam>(request);
   }
 
   /**
@@ -198,21 +274,36 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForPlayerByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForPlayerByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForPlayerByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForPlayerByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .build();
+    return this.client.call<Dota2StatsForPlayerByTournament>(request);
   }
 
   /**
@@ -229,20 +320,35 @@ export class Dota2StatsService extends BaseService {
     params?: GetDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2StatsForTeamByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: dota2StatsForTeamByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('games_count', params?.gamesCount);
-    request.addQueryParam('side', params?.side);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2StatsForTeamByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2StatsForTeamByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'games_count',
+        value: params?.gamesCount,
+      })
+      .addQueryParam({
+        key: 'side',
+        value: params?.side,
+      })
+      .build();
+    return this.client.call<Dota2StatsForTeamByTournament>(request);
   }
 }

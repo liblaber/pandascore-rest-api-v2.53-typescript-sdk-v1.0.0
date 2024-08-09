@@ -6,7 +6,7 @@ import { loLPlayersRole, loLPlayersRoleRequest, loLPlayersRoleResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLFrameTeam: any = z.lazy(() => {
+export const loLFrameTeam = z.lazy(() => {
   return z.object({
     acronym: z.string(),
     drakes: z.number().gte(0),
@@ -45,7 +45,7 @@ export type LoLFrameTeam = z.infer<typeof loLFrameTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFrameTeamResponse: any = z.lazy(() => {
+export const loLFrameTeamResponse = z.lazy(() => {
   return z
     .object({
       acronym: z.string(),
@@ -81,7 +81,7 @@ export const loLFrameTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFrameTeamRequest: any = z.lazy(() => {
+export const loLFrameTeamRequest = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullish(),

@@ -10,7 +10,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLRunePath: any = z.lazy(() => {
+export const loLRunePath = z.lazy(() => {
   return z.object({
     id: z.number().gte(1),
     imageUrl: z.string(),
@@ -35,7 +35,7 @@ export type LoLRunePath = z.infer<typeof loLRunePath>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLRunePathResponse: any = z.lazy(() => {
+export const loLRunePathResponse = z.lazy(() => {
   return z
     .object({
       id: z.number().gte(1),
@@ -57,7 +57,7 @@ export const loLRunePathResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLRunePathRequest: any = z.lazy(() => {
+export const loLRunePathRequest = z.lazy(() => {
   return z
     .object({
       id: z.number().nullish(),

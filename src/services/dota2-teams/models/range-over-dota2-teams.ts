@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const rangeOverDota2Teams: any = z.lazy(() => {
+export const rangeOverDota2Teams = z.lazy(() => {
   return z.object({
     acronym: z.array(z.string()).min(2).max(2).optional(),
     id: z.array(z.number()).min(2).max(2).optional(),
@@ -32,7 +32,7 @@ export type RangeOverDota2Teams = z.infer<typeof rangeOverDota2Teams>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverDota2TeamsResponse: any = z.lazy(() => {
+export const rangeOverDota2TeamsResponse = z.lazy(() => {
   return z
     .object({
       acronym: z.array(z.string()).min(2).max(2).optional(),
@@ -56,7 +56,7 @@ export const rangeOverDota2TeamsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverDota2TeamsRequest: any = z.lazy(() => {
+export const rangeOverDota2TeamsRequest = z.lazy(() => {
   return z
     .object({
       acronym: z.array(z.string()).nullish(),

@@ -32,40 +32,47 @@ List heroes
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwHeroes,
+  OwHeroRole,
+  Page,
+  PandascoreClient,
+  RangeOverOwHeroes,
+  SearchOverOwHeroes,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const owHeroRole = OwHeroRole.damage;
+  const owHeroRole = OwHeroRole.DAMAGE;
 
   const filter: FilterOverOwHeroes = {
-    difficulty: [9],
-    id: [9],
-    name: ['deserunt ex '],
-    realName: ['cupidat'],
+    difficulty: [5],
+    id: [1],
+    name: ['voluptate labo'],
+    realName: ['incididu'],
     role: [owHeroRole],
-    slug: ['zv5jss750'],
+    slug: ['6c8'],
   };
-  const owHeroRole = OwHeroRole.damage;
+  const owHeroRole = OwHeroRole.DAMAGE;
 
   const range: RangeOverOwHeroes = {
     difficulty: [3],
-    id: [2],
-    name: ['minim sunt e'],
-    realName: ['sit e'],
+    id: [9],
+    name: ['est ipsum'],
+    realName: ['amet Duis mini'],
     role: [owHeroRole],
-    slug: ['78i6qbl8zdp'],
+    slug: ['0jglsiw4s'],
   };
-  const owHeroRole = OwHeroRole.damage;
+  const owHeroRole = OwHeroRole.DAMAGE;
 
   const search: SearchOverOwHeroes = {
-    name: 'officia',
-    realName: 'fugiat in off',
+    name: 'in ad E',
+    realName: 'ipsum ullam',
     role: owHeroRole,
-    slug: '1xp0s5w9_jk',
+    slug: '9gt0-gkh',
   };
   const page = 1;
 
@@ -102,14 +109,14 @@ Get a single hero by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { OwHeroIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const owHeroIdOrSlug = 2;
+  const owHeroIdOrSlug = 7;
 
   const { data } = await pandascoreClient.owHeroes.getOwHeroesOwHeroIdOrSlug();
 

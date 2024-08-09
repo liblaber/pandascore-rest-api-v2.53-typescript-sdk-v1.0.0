@@ -2,6 +2,11 @@
 
 import { z } from 'zod';
 
-export const incidentType = z.enum(['league', 'match', 'player', 'serie', 'team', 'tournament']);
-
-export type IncidentType = z.infer<typeof incidentType>;
+export enum IncidentType {
+  LEAGUE = 'league',
+  MATCH = 'match',
+  PLAYER = 'player',
+  SERIE = 'serie',
+  TEAM = 'team',
+  TOURNAMENT = 'tournament',
+}

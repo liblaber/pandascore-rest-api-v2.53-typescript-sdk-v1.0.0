@@ -16,7 +16,7 @@ import { basePlayer, basePlayerRequest, basePlayerResponse } from './base-player
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owGameRoundPlayer: any = z.lazy(() => {
+export const owGameRoundPlayer = z.lazy(() => {
   return z.object({
     deaths: z.number().gte(0).nullable(),
     destructions: z.number().gte(0).nullable(),
@@ -49,7 +49,7 @@ export type OwGameRoundPlayer = z.infer<typeof owGameRoundPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owGameRoundPlayerResponse: any = z.lazy(() => {
+export const owGameRoundPlayerResponse = z.lazy(() => {
   return z
     .object({
       deaths: z.number().gte(0).nullable(),
@@ -79,7 +79,7 @@ export const owGameRoundPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owGameRoundPlayerRequest: any = z.lazy(() => {
+export const owGameRoundPlayerRequest = z.lazy(() => {
   return z
     .object({
       deaths: z.number().nullish(),

@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { LoLItem, loLItemResponse } from './models/lo-l-item';
 import {
   GetLolItemsParams,
@@ -24,23 +24,47 @@ export class LoLItemsService extends BaseService {
    * @returns {Promise<HttpResponse<LoLItem[]>>} A list of League-of-Legends items
    */
   async getLolItems(params?: GetLolItemsParams, requestConfig?: RequestConfig): Promise<HttpResponse<LoLItem[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/items',
-      config: this.config,
-      responseSchema: z.array(loLItemResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLItem[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/items')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLItemResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLItem[]>(request);
   }
 
   /**
@@ -49,18 +73,24 @@ export class LoLItemsService extends BaseService {
    * @returns {Promise<HttpResponse<LoLItem>>} A League-of-Legends item
    */
   async getLolItemsLolItemId(lolItemId: number, requestConfig?: RequestConfig): Promise<HttpResponse<LoLItem>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/items/{lol_item_id}',
-      config: this.config,
-      responseSchema: loLItemResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_item_id', lolItemId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLItem>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/items/{lol_item_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLItemResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_item_id',
+        value: lolItemId,
+      })
+      .build();
+    return this.client.call<LoLItem>(request);
   }
 
   /**
@@ -77,23 +107,47 @@ export class LoLItemsService extends BaseService {
     params?: GetLolVersionsAllItemsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLItem[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/versions/all/items',
-      config: this.config,
-      responseSchema: z.array(loLItemResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLItem[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/versions/all/items')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLItemResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLItem[]>(request);
   }
 
   /**
@@ -112,23 +166,50 @@ export class LoLItemsService extends BaseService {
     params?: GetLolVersionsLolVersionNameItemsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLItem[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/versions/{lol_version_name}/items',
-      config: this.config,
-      responseSchema: z.array(loLItemResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_version_name', lolVersionName);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLItem[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/versions/{lol_version_name}/items')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLItemResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_version_name',
+        value: lolVersionName,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLItem[]>(request);
   }
 }

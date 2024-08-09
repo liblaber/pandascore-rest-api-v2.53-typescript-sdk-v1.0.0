@@ -2,12 +2,12 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { Dota2Hero, dota2HeroResponse } from '../common/dota2-hero';
 import { GetDota2HeroesParams } from './request-params';
-import { Dota2HeroIdOrSlug } from './models';
+import { Dota2HeroIdOrSlug } from './models/dota2-hero-id-or-slug';
 
 export class Dota2HeroesService extends BaseService {
   /**
@@ -24,23 +24,47 @@ export class Dota2HeroesService extends BaseService {
     params?: GetDota2HeroesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Hero[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/heroes',
-      config: this.config,
-      responseSchema: z.array(dota2HeroResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Hero[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/heroes')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(dota2HeroResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Dota2Hero[]>(request);
   }
 
   /**
@@ -52,17 +76,23 @@ export class Dota2HeroesService extends BaseService {
     dota2HeroIdOrSlug: Dota2HeroIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Dota2Hero>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/dota2/heroes/{dota2_hero_id_or_slug}',
-      config: this.config,
-      responseSchema: dota2HeroResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('dota2_hero_id_or_slug', dota2HeroIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<Dota2Hero>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/dota2/heroes/{dota2_hero_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(dota2HeroResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'dota2_hero_id_or_slug',
+        value: dota2HeroIdOrSlug,
+      })
+      .build();
+    return this.client.call<Dota2Hero>(request);
   }
 }

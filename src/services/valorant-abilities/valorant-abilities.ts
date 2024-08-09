@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { ValorantAbility, valorantAbilityResponse } from './models/valorant-ability';
 import { GetValorantAbilitiesParams } from './request-params';
 
@@ -23,23 +23,47 @@ export class ValorantAbilitiesService extends BaseService {
     params?: GetValorantAbilitiesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantAbility[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/abilities',
-      config: this.config,
-      responseSchema: z.array(valorantAbilityResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantAbility[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/abilities')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(valorantAbilityResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ValorantAbility[]>(request);
   }
 
   /**
@@ -51,17 +75,23 @@ export class ValorantAbilitiesService extends BaseService {
     valorantAbilityId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantAbility>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/abilities/{valorant_ability_id}',
-      config: this.config,
-      responseSchema: valorantAbilityResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('valorant_ability_id', valorantAbilityId);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantAbility>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/abilities/{valorant_ability_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantAbilityResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'valorant_ability_id',
+        value: valorantAbilityId,
+      })
+      .build();
+    return this.client.call<ValorantAbility>(request);
   }
 }

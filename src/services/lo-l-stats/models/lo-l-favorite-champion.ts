@@ -7,7 +7,7 @@ import { loLUsedItem, loLUsedItemRequest, loLUsedItemResponse } from './lo-l-use
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLFavoriteChampion: any = z.lazy(() => {
+export const loLFavoriteChampion = z.lazy(() => {
   return z.object({
     champion: loLChampion,
     gamesCount: z.number().gte(0),
@@ -32,7 +32,7 @@ export type LoLFavoriteChampion = z.infer<typeof loLFavoriteChampion>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFavoriteChampionResponse: any = z.lazy(() => {
+export const loLFavoriteChampionResponse = z.lazy(() => {
   return z
     .object({
       champion: loLChampionResponse,
@@ -54,7 +54,7 @@ export const loLFavoriteChampionResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLFavoriteChampionRequest: any = z.lazy(() => {
+export const loLFavoriteChampionRequest = z.lazy(() => {
   return z
     .object({
       champion: loLChampionRequest.nullish(),

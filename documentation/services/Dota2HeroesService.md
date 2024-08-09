@@ -32,7 +32,13 @@ List heroes
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Heroes,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Heroes,
+  SearchOverDota2Heroes,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,20 +46,20 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Heroes = {
-    id: [2],
-    localizedName: ['et do'],
-    name: ['-rmn'],
-  };
-
-  const range: RangeOverDota2Heroes = {
-    id: [6],
-    localizedName: ['id pariatu'],
+    id: [9],
+    localizedName: ['dolore ad'],
     name: ['5'],
   };
 
+  const range: RangeOverDota2Heroes = {
+    id: [5],
+    localizedName: ['ad iru'],
+    name: ['op'],
+  };
+
   const search: SearchOverDota2Heroes = {
-    localizedName: 'consectetur',
-    name: '4mqbolw_x',
+    localizedName: 'esse ',
+    name: 'l5',
   };
   const page = 1;
 
@@ -90,14 +96,14 @@ Get a single hero by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Dota2HeroIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const dota2HeroIdOrSlug = 9;
+  const dota2HeroIdOrSlug = 7;
 
   const { data } = await pandascoreClient.dota2Heroes.getDota2HeroesDota2HeroIdOrSlug();
 

@@ -32,35 +32,42 @@ List abilities
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantAbilities,
+  Page,
+  PandascoreClient,
+  RangeOverValorantAbilities,
+  SearchOverValorantAbilities,
+  ValorantAbilityType,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const valorantAbilityType = ValorantAbilityType.ability_one;
+  const valorantAbilityType = ValorantAbilityType.ABILITYONE;
 
   const filter: FilterOverValorantAbilities = {
     abilityType: [valorantAbilityType],
-    creds: [2.61],
-    id: [8],
-    name: ['sit dolore'],
+    creds: [2.45],
+    id: [7],
+    name: ['sunt '],
     videogameVersion: [],
   };
-  const valorantAbilityType = ValorantAbilityType.ability_one;
+  const valorantAbilityType = ValorantAbilityType.ABILITYONE;
 
   const range: RangeOverValorantAbilities = {
     abilityType: [valorantAbilityType],
-    creds: [8.01],
+    creds: [2.01],
     id: [3],
-    name: ['sitminim '],
+    name: ['non ipsum'],
   };
-  const valorantAbilityType = ValorantAbilityType.ability_one;
+  const valorantAbilityType = ValorantAbilityType.ABILITYONE;
 
   const search: SearchOverValorantAbilities = {
     abilityType: valorantAbilityType,
-    name: 'et magna',
+    name: 'etetExcepte',
   };
   const page = 1;
 
@@ -104,7 +111,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantAbilities.getValorantAbilitiesValorantAbilityId(7);
+  const { data } = await pandascoreClient.valorantAbilities.getValorantAbilitiesValorantAbilityId(4);
 
   console.log(data);
 })();

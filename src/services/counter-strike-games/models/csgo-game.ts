@@ -6,15 +6,13 @@ import { fullGameMatch, fullGameMatchRequest, fullGameMatchResponse } from '../.
 import { csgoGamePlayer, csgoGamePlayerRequest, csgoGamePlayerResponse } from '../../common/csgo-game-player';
 import { csgoRound, csgoRoundRequest, csgoRoundResponse } from '../../common/csgo-round';
 import { csgoRoundsScore, csgoRoundsScoreRequest, csgoRoundsScoreResponse } from '../../common/csgo-rounds-score';
-import { gameStatus } from '../../common/game-status';
 import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-team';
 import { gameWinner, gameWinnerRequest, gameWinnerResponse } from '../../common/game-winner';
-import { csgoGameWinnerType } from './csgo-game-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoGame: any = z.lazy(() => {
+export const csgoGame = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     complete: z.boolean(),
@@ -31,10 +29,10 @@ export const csgoGame: any = z.lazy(() => {
     position: z.number().gte(1),
     rounds: z.array(csgoRound).nullable(),
     roundsScore: z.array(csgoRoundsScore),
-    status: gameStatus,
+    status: z.string(),
     teams: z.array(baseTeam).nullable(),
     winner: gameWinner,
-    winnerType: csgoGameWinnerType.nullable(),
+    winnerType: z.string().nullable(),
   });
 });
 
@@ -67,7 +65,7 @@ export type CsgoGame = z.infer<typeof csgoGame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoGameResponse: any = z.lazy(() => {
+export const csgoGameResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -85,10 +83,10 @@ export const csgoGameResponse: any = z.lazy(() => {
       position: z.number().gte(1),
       rounds: z.array(csgoRoundResponse).nullable(),
       rounds_score: z.array(csgoRoundsScoreResponse),
-      status: gameStatus,
+      status: z.string(),
       teams: z.array(baseTeamResponse).nullable(),
       winner: gameWinnerResponse,
-      winner_type: csgoGameWinnerType.nullable(),
+      winner_type: z.string().nullable(),
     })
     .transform((data) => ({
       beginAt: data['begin_at'],
@@ -117,7 +115,7 @@ export const csgoGameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoGameRequest: any = z.lazy(() => {
+export const csgoGameRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -135,10 +133,10 @@ export const csgoGameRequest: any = z.lazy(() => {
       position: z.number().nullish(),
       rounds: z.array(csgoRoundRequest).nullish(),
       roundsScore: z.array(csgoRoundsScoreRequest).nullish(),
-      status: gameStatus.nullish(),
+      status: z.string().nullish(),
       teams: z.array(baseTeamRequest).nullish(),
       winner: gameWinnerRequest.nullish(),
-      winnerType: csgoGameWinnerType.nullish(),
+      winnerType: z.string().nullish(),
     })
     .transform((data) => ({
       begin_at: data['beginAt'],

@@ -3,19 +3,18 @@
 import { z } from 'zod';
 import { ability, abilityRequest, abilityResponse } from './ability';
 import { baseValorantAgent, baseValorantAgentRequest, baseValorantAgentResponse } from './base-valorant-agent';
-import { valorantTeamSide } from '../../common/valorant-team-side';
 import { weapon, weaponRequest, weaponResponse } from './weapon';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantEventKiller: any = z.lazy(() => {
+export const valorantEventKiller = z.lazy(() => {
   return z.object({
     ability: ability.nullable(),
     agent: baseValorantAgent,
     id: z.number().gte(1),
     name: z.string(),
-    teamSide: valorantTeamSide,
+    teamSide: z.string(),
     weapon: weapon.nullable(),
   });
 });
@@ -36,14 +35,14 @@ export type ValorantEventKiller = z.infer<typeof valorantEventKiller>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventKillerResponse: any = z.lazy(() => {
+export const valorantEventKillerResponse = z.lazy(() => {
   return z
     .object({
       ability: abilityResponse.nullable(),
       agent: baseValorantAgentResponse,
       id: z.number().gte(1),
       name: z.string(),
-      team_side: valorantTeamSide,
+      team_side: z.string(),
       weapon: weaponResponse.nullable(),
     })
     .transform((data) => ({
@@ -60,14 +59,14 @@ export const valorantEventKillerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventKillerRequest: any = z.lazy(() => {
+export const valorantEventKillerRequest = z.lazy(() => {
   return z
     .object({
       ability: abilityRequest.nullish(),
       agent: baseValorantAgentRequest.nullish(),
       id: z.number().nullish(),
       name: z.string().nullish(),
-      teamSide: valorantTeamSide.nullish(),
+      teamSide: z.string().nullish(),
       weapon: weaponRequest.nullish(),
     })
     .transform((data) => ({

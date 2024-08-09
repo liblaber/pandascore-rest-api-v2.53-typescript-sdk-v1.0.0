@@ -34,56 +34,64 @@ List series for the StarCraft 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Series,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Series,
+  SearchOverStarcraft2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraft2SeriesVideogameTitle = 8;
+  const filterOverStarcraft2SeriesVideogameTitle = 6;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverStarcraft2Series = {
-    beginAt: ['id commodo dolo'],
-    endAt: ['id labore'],
-    id: [5],
-    leagueId: [1],
-    modifiedAt: ['laboris Exce'],
-    name: ['utdeserunt c'],
-    season: ['labore'],
-    slug: ['ci'],
+    beginAt: ['fugiat'],
+    endAt: ['aute'],
+    id: [1],
+    leagueId: [7],
+    modifiedAt: ['quis aut'],
+    name: ['cupidatat'],
+    season: ['aute Lorem ut'],
+    slug: ['txrjjfci1u'],
     videogameTitle: [filterOverStarcraft2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverStarcraft2Series = {
-    beginAt: ['in des'],
-    endAt: ['cup'],
-    id: [5],
-    leagueId: [10],
-    modifiedAt: ['nostru'],
-    name: ['aliquip'],
-    season: ['do consecte'],
-    slug: ['4nb7'],
+    beginAt: ['in null'],
+    endAt: ['ut irure'],
+    id: [3],
+    leagueId: [2],
+    modifiedAt: ['pariatur '],
+    name: ['amete'],
+    season: ['proident'],
+    slug: ['q'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverStarcraft2Series = {
-    name: 'occae',
-    season: 'esse id rep',
-    slug: 'l3b',
+    name: 'anim pa',
+    season: 'quis sit',
+    slug: 'toalhb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -126,56 +134,64 @@ List past StarCraft 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Series,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Series,
+  SearchOverStarcraft2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraft2SeriesVideogameTitle = 8;
+  const filterOverStarcraft2SeriesVideogameTitle = 6;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverStarcraft2Series = {
-    beginAt: ['id commodo dolo'],
-    endAt: ['id labore'],
-    id: [5],
-    leagueId: [1],
-    modifiedAt: ['laboris Exce'],
-    name: ['utdeserunt c'],
-    season: ['labore'],
-    slug: ['ci'],
+    beginAt: ['fugiat'],
+    endAt: ['aute'],
+    id: [1],
+    leagueId: [7],
+    modifiedAt: ['quis aut'],
+    name: ['cupidatat'],
+    season: ['aute Lorem ut'],
+    slug: ['txrjjfci1u'],
     videogameTitle: [filterOverStarcraft2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverStarcraft2Series = {
-    beginAt: ['in des'],
-    endAt: ['cup'],
-    id: [5],
-    leagueId: [10],
-    modifiedAt: ['nostru'],
-    name: ['aliquip'],
-    season: ['do consecte'],
-    slug: ['4nb7'],
+    beginAt: ['in null'],
+    endAt: ['ut irure'],
+    id: [3],
+    leagueId: [2],
+    modifiedAt: ['pariatur '],
+    name: ['amete'],
+    season: ['proident'],
+    slug: ['q'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverStarcraft2Series = {
-    name: 'occae',
-    season: 'esse id rep',
-    slug: 'l3b',
+    name: 'anim pa',
+    season: 'quis sit',
+    slug: 'toalhb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -218,56 +234,64 @@ List running StarCraft 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Series,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Series,
+  SearchOverStarcraft2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraft2SeriesVideogameTitle = 8;
+  const filterOverStarcraft2SeriesVideogameTitle = 6;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverStarcraft2Series = {
-    beginAt: ['id commodo dolo'],
-    endAt: ['id labore'],
-    id: [5],
-    leagueId: [1],
-    modifiedAt: ['laboris Exce'],
-    name: ['utdeserunt c'],
-    season: ['labore'],
-    slug: ['ci'],
+    beginAt: ['fugiat'],
+    endAt: ['aute'],
+    id: [1],
+    leagueId: [7],
+    modifiedAt: ['quis aut'],
+    name: ['cupidatat'],
+    season: ['aute Lorem ut'],
+    slug: ['txrjjfci1u'],
     videogameTitle: [filterOverStarcraft2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverStarcraft2Series = {
-    beginAt: ['in des'],
-    endAt: ['cup'],
-    id: [5],
-    leagueId: [10],
-    modifiedAt: ['nostru'],
-    name: ['aliquip'],
-    season: ['do consecte'],
-    slug: ['4nb7'],
+    beginAt: ['in null'],
+    endAt: ['ut irure'],
+    id: [3],
+    leagueId: [2],
+    modifiedAt: ['pariatur '],
+    name: ['amete'],
+    season: ['proident'],
+    slug: ['q'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverStarcraft2Series = {
-    name: 'occae',
-    season: 'esse id rep',
-    slug: 'l3b',
+    name: 'anim pa',
+    season: 'quis sit',
+    slug: 'toalhb',
     winnerType: opponentType,
   };
   const page = 1;
@@ -310,56 +334,64 @@ List upcoming StarCraft 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Series,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Series,
+  SearchOverStarcraft2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraft2SeriesVideogameTitle = 8;
+  const filterOverStarcraft2SeriesVideogameTitle = 6;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverStarcraft2Series = {
-    beginAt: ['id commodo dolo'],
-    endAt: ['id labore'],
-    id: [5],
-    leagueId: [1],
-    modifiedAt: ['laboris Exce'],
-    name: ['utdeserunt c'],
-    season: ['labore'],
-    slug: ['ci'],
+    beginAt: ['fugiat'],
+    endAt: ['aute'],
+    id: [1],
+    leagueId: [7],
+    modifiedAt: ['quis aut'],
+    name: ['cupidatat'],
+    season: ['aute Lorem ut'],
+    slug: ['txrjjfci1u'],
     videogameTitle: [filterOverStarcraft2SeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverStarcraft2Series = {
-    beginAt: ['in des'],
-    endAt: ['cup'],
-    id: [5],
-    leagueId: [10],
-    modifiedAt: ['nostru'],
-    name: ['aliquip'],
-    season: ['do consecte'],
-    slug: ['4nb7'],
+    beginAt: ['in null'],
+    endAt: ['ut irure'],
+    id: [3],
+    leagueId: [2],
+    modifiedAt: ['pariatur '],
+    name: ['amete'],
+    season: ['proident'],
+    slug: ['q'],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverStarcraft2Series = {
-    name: 'occae',
-    season: 'esse id rep',
-    slug: 'l3b',
+    name: 'anim pa',
+    season: 'quis sit',
+    slug: 'toalhb',
     winnerType: opponentType,
   };
   const page = 1;

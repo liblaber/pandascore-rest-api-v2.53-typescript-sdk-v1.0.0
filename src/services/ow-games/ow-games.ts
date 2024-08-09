@@ -2,11 +2,11 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { OwGame, owGameResponse } from './models/ow-game';
-import { MatchIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { GetOwMatchesMatchIdOrSlugGamesParams } from './request-params';
 
 export class OwGamesService extends BaseService {
@@ -16,18 +16,24 @@ export class OwGamesService extends BaseService {
    * @returns {Promise<HttpResponse<OwGame>>} An Overwatch game
    */
   async getOwGamesOwGameId(owGameId: number, requestConfig?: RequestConfig): Promise<HttpResponse<OwGame>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/games/{ow_game_id}',
-      config: this.config,
-      responseSchema: owGameResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('ow_game_id', owGameId);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwGame>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/games/{ow_game_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owGameResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'ow_game_id',
+        value: owGameId,
+      })
+      .build();
+    return this.client.call<OwGame>(request);
   }
 
   /**
@@ -46,23 +52,50 @@ export class OwGamesService extends BaseService {
     params?: GetOwMatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwGame[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/matches/{match_id_or_slug}/games',
-      config: this.config,
-      responseSchema: z.array(owGameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwGame[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/matches/{match_id_or_slug}/games')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(owGameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<OwGame[]>(request);
   }
 }

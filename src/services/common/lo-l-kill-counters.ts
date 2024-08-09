@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLKillCounters: any = z.lazy(() => {
+export const loLKillCounters = z.lazy(() => {
   return z.object({
     inhibitors: z.number().gte(0).nullable(),
     neutralMinions: z.number().gte(0).nullable(),
@@ -34,7 +34,7 @@ export type LoLKillCounters = z.infer<typeof loLKillCounters>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLKillCountersResponse: any = z.lazy(() => {
+export const loLKillCountersResponse = z.lazy(() => {
   return z
     .object({
       inhibitors: z.number().gte(0).nullable(),
@@ -60,7 +60,7 @@ export const loLKillCountersResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLKillCountersRequest: any = z.lazy(() => {
+export const loLKillCountersRequest = z.lazy(() => {
   return z
     .object({
       inhibitors: z.number().nullish(),

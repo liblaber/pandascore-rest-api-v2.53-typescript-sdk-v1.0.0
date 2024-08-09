@@ -10,7 +10,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoFullRoundTeam: any = z.lazy(() => {
+export const csgoFullRoundTeam = z.lazy(() => {
   return z.object({
     players: z.array(csgoFullRoundTeamPlayer),
     roundScore: z.number().gte(0),
@@ -33,7 +33,7 @@ export type CsgoFullRoundTeam = z.infer<typeof csgoFullRoundTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoFullRoundTeamResponse: any = z.lazy(() => {
+export const csgoFullRoundTeamResponse = z.lazy(() => {
   return z
     .object({
       players: z.array(csgoFullRoundTeamPlayerResponse),
@@ -53,7 +53,7 @@ export const csgoFullRoundTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoFullRoundTeamRequest: any = z.lazy(() => {
+export const csgoFullRoundTeamRequest = z.lazy(() => {
   return z
     .object({
       players: z.array(csgoFullRoundTeamPlayerRequest).nullish(),

@@ -6,7 +6,7 @@ import { videogameLeague, videogameLeagueRequest, videogameLeagueResponse } from
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const videogameEBasketball: any = z.lazy(() => {
+export const videogameEBasketball = z.lazy(() => {
   return z.object({
     currentVersion: z
       .string()
@@ -34,7 +34,7 @@ export type VideogameEBasketball = z.infer<typeof videogameEBasketball>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const videogameEBasketballResponse: any = z.lazy(() => {
+export const videogameEBasketballResponse = z.lazy(() => {
   return z
     .object({
       current_version: z
@@ -59,7 +59,7 @@ export const videogameEBasketballResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const videogameEBasketballRequest: any = z.lazy(() => {
+export const videogameEBasketballRequest = z.lazy(() => {
   return z
     .object({
       currentVersion: z.string().nullish(),

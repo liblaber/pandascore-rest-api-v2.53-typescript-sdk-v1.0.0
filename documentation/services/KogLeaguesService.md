@@ -31,7 +31,13 @@ List King of Glory leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverKogLeagues,
+  SearchOverKogLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverKogLeagues = {
-    id: [2],
-    modifiedAt: ['dolor dolore et'],
-    name: ['quis aliquip '],
-    slug: ['8vznaumh'],
-    url: ['ullamco adipi'],
+    id: [6],
+    modifiedAt: ['ad'],
+    name: ['volupt'],
+    slug: ['sl'],
+    url: ['aliqu'],
   };
 
   const range: RangeOverKogLeagues = {
-    id: [9],
-    modifiedAt: ['qui Duis'],
-    name: ['sunt c'],
-    slug: ['t'],
-    url: ['ea fug'],
+    id: [4],
+    modifiedAt: ['i'],
+    name: ['minim ni'],
+    slug: ['2c2uy'],
+    url: ['non veniam'],
   };
 
   const search: SearchOverKogLeagues = {
-    name: 'ut id',
-    slug: '6nz1_90t',
-    url: 'do ullamco labo',
+    name: 'dolor dolore et',
+    slug: '6tnd3eibb',
+    url: 'dolore ',
   };
   const page = 1;
 

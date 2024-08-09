@@ -31,7 +31,13 @@ List LoL Wild Rift leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftLeagues,
+  SearchOverLolWildRiftLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLolWildRiftLeagues = {
-    id: [7],
-    modifiedAt: ['laborum commo'],
-    name: ['offici'],
-    slug: ['aua2'],
-    url: ['ut tempor ipsu'],
+    id: [5],
+    modifiedAt: ['dolor esse'],
+    name: ['cillum a'],
+    slug: ['gc2'],
+    url: ['fugiat minim la'],
   };
 
   const range: RangeOverLolWildRiftLeagues = {
-    id: [1],
-    modifiedAt: ['aliquip'],
-    name: ['Excepte'],
-    slug: ['3-_m-u2zm7'],
-    url: ['ea Duis'],
+    id: [3],
+    modifiedAt: ['in nulla'],
+    name: ['incididunt '],
+    slug: ['k_b'],
+    url: ['Lorem quis'],
   };
 
   const search: SearchOverLolWildRiftLeagues = {
-    name: 'sit officia ',
-    slug: 'vmrxzc',
-    url: 'cillum E',
+    name: 'conseq',
+    slug: '558j5-0u',
+    url: 'sunt non mag',
   };
   const page = 1;
 

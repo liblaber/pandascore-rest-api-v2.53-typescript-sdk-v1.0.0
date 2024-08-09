@@ -31,7 +31,13 @@ List StarCraft 2 leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Leagues,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Leagues,
+  SearchOverStarcraft2Leagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverStarcraft2Leagues = {
-    id: [4],
-    modifiedAt: ['ad'],
-    name: ['utex est'],
-    slug: ['luoez'],
-    url: ['consequat '],
+    id: [10],
+    modifiedAt: ['consectetur nis'],
+    name: ['laborum eiusmod'],
+    slug: ['69n7ht1w'],
+    url: ['Excepteur fugi'],
   };
 
   const range: RangeOverStarcraft2Leagues = {
-    id: [7],
-    modifiedAt: ['et ex in'],
-    name: ['consectetur e'],
-    slug: ['q'],
-    url: ['veniam ut c'],
+    id: [2],
+    modifiedAt: ['irure no'],
+    name: ['adipisicing '],
+    slug: ['hylnx'],
+    url: ['quis sit'],
   };
 
   const search: SearchOverStarcraft2Leagues = {
-    name: 'in ei',
-    slug: 'kb1dlt',
-    url: 'aute ',
+    name: 'incididunt',
+    slug: '-z5:lwi',
+    url: 'mollit',
   };
   const page = 1;
 

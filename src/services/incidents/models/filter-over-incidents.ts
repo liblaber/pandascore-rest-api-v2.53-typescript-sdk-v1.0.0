@@ -6,7 +6,7 @@ import { incidentId, incidentIdRequest, incidentIdResponse } from './incident-id
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverIncidents: any = z.lazy(() => {
+export const filterOverIncidents = z.lazy(() => {
   return z.object({
     id: z.array(incidentId).min(1).optional(),
     modifiedAt: z.array(z.string()).min(1).optional(),
@@ -27,7 +27,7 @@ export type FilterOverIncidents = z.infer<typeof filterOverIncidents>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverIncidentsResponse: any = z.lazy(() => {
+export const filterOverIncidentsResponse = z.lazy(() => {
   return z
     .object({
       id: z.array(incidentIdResponse).min(1).optional(),
@@ -45,7 +45,7 @@ export const filterOverIncidentsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverIncidentsRequest: any = z.lazy(() => {
+export const filterOverIncidentsRequest = z.lazy(() => {
   return z
     .object({
       id: z.array(incidentIdRequest).nullish(),

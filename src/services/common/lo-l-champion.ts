@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLChampion: any = z.lazy(() => {
+export const loLChampion = z.lazy(() => {
   return z.object({
     armor: z.number().gte(0),
     armorperlevel: z.number().gte(0),
@@ -70,7 +70,7 @@ export type LoLChampion = z.infer<typeof loLChampion>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLChampionResponse: any = z.lazy(() => {
+export const loLChampionResponse = z.lazy(() => {
   return z
     .object({
       armor: z.number().gte(0),
@@ -132,7 +132,7 @@ export const loLChampionResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLChampionRequest: any = z.lazy(() => {
+export const loLChampionRequest = z.lazy(() => {
   return z
     .object({
       armor: z.number().nullish(),

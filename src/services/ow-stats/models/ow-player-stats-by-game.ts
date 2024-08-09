@@ -22,7 +22,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owPlayerStatsByGame: any = z.lazy(() => {
+export const owPlayerStatsByGame = z.lazy(() => {
   return z.object({
     averages: owPlayerAverages,
     game: owGameStatsGame,
@@ -51,7 +51,7 @@ export type OwPlayerStatsByGame = z.infer<typeof owPlayerStatsByGame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerStatsByGameResponse: any = z.lazy(() => {
+export const owPlayerStatsByGameResponse = z.lazy(() => {
   return z
     .object({
       averages: owPlayerAveragesResponse,
@@ -77,7 +77,7 @@ export const owPlayerStatsByGameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerStatsByGameRequest: any = z.lazy(() => {
+export const owPlayerStatsByGameRequest = z.lazy(() => {
   return z
     .object({
       averages: owPlayerAveragesRequest.nullish(),

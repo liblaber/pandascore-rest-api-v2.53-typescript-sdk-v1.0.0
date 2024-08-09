@@ -8,7 +8,7 @@ import { csgoKillEvent, csgoKillEventRequest, csgoKillEventResponse } from './cs
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoEvent: any = z.lazy(() => {
+export const csgoEvent = z.lazy(() => {
   return z.union([csgoRoundStartEvent, csgoRoundEndEvent, csgoKillEvent]);
 });
 
@@ -25,7 +25,7 @@ export type CsgoEvent = z.infer<typeof csgoEvent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoEventResponse: any = z.lazy(() => {
+export const csgoEventResponse = z.lazy(() => {
   return z.union([csgoRoundStartEventResponse, csgoRoundEndEventResponse, csgoKillEventResponse]);
 });
 
@@ -33,6 +33,6 @@ export const csgoEventResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoEventRequest: any = z.lazy(() => {
+export const csgoEventRequest = z.lazy(() => {
   return z.union([csgoRoundStartEventRequest, csgoRoundEndEventRequest, csgoKillEventRequest]);
 });

@@ -2,13 +2,12 @@
 
 import { z } from 'zod';
 import { baseValorantAgent, baseValorantAgentRequest, baseValorantAgentResponse } from './base-valorant-agent';
-import { valorantPlayerShield } from './valorant-player-shield';
 import { baseValorantWeapon, baseValorantWeaponRequest, baseValorantWeaponResponse } from './base-valorant-weapon';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantFullRoundPlayer: any = z.lazy(() => {
+export const valorantFullRoundPlayer = z.lazy(() => {
   return z.object({
     agent: baseValorantAgent,
     assists: z.number().gte(0),
@@ -18,7 +17,7 @@ export const valorantFullRoundPlayer: any = z.lazy(() => {
     id: z.number().gte(1),
     kills: z.number().gte(0),
     name: z.string(),
-    shieldType: valorantPlayerShield,
+    shieldType: z.string(),
     weapon: baseValorantWeapon,
   });
 });
@@ -43,7 +42,7 @@ export type ValorantFullRoundPlayer = z.infer<typeof valorantFullRoundPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantFullRoundPlayerResponse: any = z.lazy(() => {
+export const valorantFullRoundPlayerResponse = z.lazy(() => {
   return z
     .object({
       agent: baseValorantAgentResponse,
@@ -54,7 +53,7 @@ export const valorantFullRoundPlayerResponse: any = z.lazy(() => {
       id: z.number().gte(1),
       kills: z.number().gte(0),
       name: z.string(),
-      shield_type: valorantPlayerShield,
+      shield_type: z.string(),
       weapon: baseValorantWeaponResponse,
     })
     .transform((data) => ({
@@ -75,7 +74,7 @@ export const valorantFullRoundPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantFullRoundPlayerRequest: any = z.lazy(() => {
+export const valorantFullRoundPlayerRequest = z.lazy(() => {
   return z
     .object({
       agent: baseValorantAgentRequest.nullish(),
@@ -86,7 +85,7 @@ export const valorantFullRoundPlayerRequest: any = z.lazy(() => {
       id: z.number().nullish(),
       kills: z.number().nullish(),
       name: z.string().nullish(),
-      shieldType: valorantPlayerShield.nullish(),
+      shieldType: z.string().nullish(),
       weapon: baseValorantWeaponRequest.nullish(),
     })
     .transform((data) => ({

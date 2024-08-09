@@ -31,51 +31,57 @@ List teams for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogTeams,
+  Page,
+  PandascoreClient,
+  RangeOverKogTeams,
+  SearchOverKogTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverKogTeams = {
-  acronym: ["ea ut"],
-  id: [8],
-  location: ["ea Duis s"],
-  modifiedAt: ["labore"],
-  name: ["dolor vo"],
-  slug: ["cur_6z"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverKogTeams = {
+    acronym: ['repreh'],
+    id: [6],
+    location: ['consectetur l'],
+    modifiedAt: ['adipisici'],
+    name: ['tempor '],
+    slug: ['dkfwxe0h'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverKogTeams = {
-  acronym: ["do adipis"],
-  id: [5],
-  location: ["Duis "],
-  modifiedAt: ["dolore"],
-  name: ["sunt dolore"],
-  slug: ["qwvw"]
-};
+  const range: RangeOverKogTeams = {
+    acronym: ['anim cillum'],
+    id: [9],
+    location: ['deserunt E'],
+    modifiedAt: ['dolor'],
+    name: ['inid mini'],
+    slug: ['4f'],
+  };
 
-const search: SearchOverKogTeams = {
-  acronym: "paria",
-  location: "sint anim sed",
-  name: "reprehenderit ",
-  slug: "nsoq"
-};
-const page = 1;
+  const search: SearchOverKogTeams = {
+    acronym: 'amet eiusmod ',
+    location: 'ad ut eius',
+    name: 'veniam Lore',
+    slug: '3cy',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogTeams.getKogTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogTeams.getKogTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

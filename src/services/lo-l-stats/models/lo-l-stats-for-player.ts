@@ -23,7 +23,7 @@ import { loLTotalPlayerStat, loLTotalPlayerStatRequest, loLTotalPlayerStatRespon
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLStatsForPlayer: any = z.lazy(() => {
+export const loLStatsForPlayer = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -80,7 +80,7 @@ export type LoLStatsForPlayer = z.infer<typeof loLStatsForPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLStatsForPlayerResponse: any = z.lazy(() => {
+export const loLStatsForPlayerResponse = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -134,7 +134,7 @@ export const loLStatsForPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLStatsForPlayerRequest: any = z.lazy(() => {
+export const loLStatsForPlayerRequest = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

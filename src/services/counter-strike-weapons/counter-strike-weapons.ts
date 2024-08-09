@@ -2,12 +2,12 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { CsgoWeapon, csgoWeaponResponse } from './models/csgo-weapon';
 import { GetCsgoWeaponsParams } from './request-params';
-import { CsgoWeaponIdOrSlug } from './models';
+import { CsgoWeaponIdOrSlug } from './models/csgo-weapon-id-or-slug';
 
 export class CounterStrikeWeaponsService extends BaseService {
   /**
@@ -24,23 +24,47 @@ export class CounterStrikeWeaponsService extends BaseService {
     params?: GetCsgoWeaponsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoWeapon[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/csgo/weapons',
-      config: this.config,
-      responseSchema: z.array(csgoWeaponResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<CsgoWeapon[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/csgo/weapons')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(csgoWeaponResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<CsgoWeapon[]>(request);
   }
 
   /**
@@ -52,17 +76,23 @@ export class CounterStrikeWeaponsService extends BaseService {
     csgoWeaponIdOrSlug: CsgoWeaponIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<CsgoWeapon>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/csgo/weapons/{csgo_weapon_id_or_slug}',
-      config: this.config,
-      responseSchema: csgoWeaponResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('csgo_weapon_id_or_slug', csgoWeaponIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<CsgoWeapon>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/csgo/weapons/{csgo_weapon_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(csgoWeaponResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'csgo_weapon_id_or_slug',
+        value: csgoWeaponIdOrSlug,
+      })
+      .build();
+    return this.client.call<CsgoWeapon>(request);
   }
 }

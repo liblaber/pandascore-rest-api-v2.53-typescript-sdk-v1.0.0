@@ -22,7 +22,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoTeamStatsByMatch: any = z.lazy(() => {
+export const csgoTeamStatsByMatch = z.lazy(() => {
   return z.object({
     counts: csgoStatsCountsForMatch,
     maps: z.array(csgoTeamMapStats),
@@ -47,7 +47,7 @@ export type CsgoTeamStatsByMatch = z.infer<typeof csgoTeamStatsByMatch>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoTeamStatsByMatchResponse: any = z.lazy(() => {
+export const csgoTeamStatsByMatchResponse = z.lazy(() => {
   return z
     .object({
       counts: csgoStatsCountsForMatchResponse,
@@ -69,7 +69,7 @@ export const csgoTeamStatsByMatchResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoTeamStatsByMatchRequest: any = z.lazy(() => {
+export const csgoTeamStatsByMatchRequest = z.lazy(() => {
   return z
     .object({
       counts: csgoStatsCountsForMatchRequest.nullish(),

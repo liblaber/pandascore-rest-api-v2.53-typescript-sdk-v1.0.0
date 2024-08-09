@@ -8,7 +8,7 @@ import { loLEventVictim, loLEventVictimRequest, loLEventVictimResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventPayload: any = z.lazy(() => {
+export const loLEventPayload = z.lazy(() => {
   return z.object({
     assists: z.array(loLEventPlayer),
     killer: loLEventKiller,
@@ -29,7 +29,7 @@ export type LoLEventPayload = z.infer<typeof loLEventPayload>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventPayloadResponse: any = z.lazy(() => {
+export const loLEventPayloadResponse = z.lazy(() => {
   return z
     .object({
       assists: z.array(loLEventPlayerResponse),
@@ -47,7 +47,7 @@ export const loLEventPayloadResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventPayloadRequest: any = z.lazy(() => {
+export const loLEventPayloadRequest = z.lazy(() => {
   return z
     .object({
       assists: z.array(loLEventPlayerRequest).nullish(),

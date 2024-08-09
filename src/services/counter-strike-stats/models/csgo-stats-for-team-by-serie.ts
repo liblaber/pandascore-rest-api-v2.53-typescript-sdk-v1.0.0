@@ -12,7 +12,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoStatsForTeamBySerie: any = z.lazy(() => {
+export const csgoStatsForTeamBySerie = z.lazy(() => {
   return z.object({
     acronym: z.string().nullable(),
     currentVideogame: z.any().nullable(),
@@ -53,7 +53,7 @@ export type CsgoStatsForTeamBySerie = z.infer<typeof csgoStatsForTeamBySerie>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoStatsForTeamBySerieResponse: any = z.lazy(() => {
+export const csgoStatsForTeamBySerieResponse = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullable(),
@@ -91,7 +91,7 @@ export const csgoStatsForTeamBySerieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoStatsForTeamBySerieRequest: any = z.lazy(() => {
+export const csgoStatsForTeamBySerieRequest = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullish(),

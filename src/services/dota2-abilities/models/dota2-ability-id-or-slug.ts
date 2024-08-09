@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2AbilityIdOrSlug: any = z.lazy(() => {
+export const dota2AbilityIdOrSlug = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -21,7 +21,7 @@ export type Dota2AbilityIdOrSlug = z.infer<typeof dota2AbilityIdOrSlug>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2AbilityIdOrSlugResponse: any = z.lazy(() => {
+export const dota2AbilityIdOrSlugResponse = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -29,6 +29,6 @@ export const dota2AbilityIdOrSlugResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2AbilityIdOrSlugRequest: any = z.lazy(() => {
+export const dota2AbilityIdOrSlugRequest = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });

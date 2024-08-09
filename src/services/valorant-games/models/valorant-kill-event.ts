@@ -6,17 +6,16 @@ import {
   valorantKillEventDetailsRequest,
   valorantKillEventDetailsResponse,
 } from './valorant-kill-event-details';
-import { valorantEventType } from './valorant-event-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantKillEvent: any = z.lazy(() => {
+export const valorantKillEvent = z.lazy(() => {
   return z.object({
     kill: valorantKillEventDetails,
     number: z.number().gte(1),
     timestamp: z.number().gte(0),
-    type: valorantEventType,
+    type: z.string(),
   });
 });
 
@@ -34,13 +33,13 @@ export type ValorantKillEvent = z.infer<typeof valorantKillEvent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantKillEventResponse: any = z.lazy(() => {
+export const valorantKillEventResponse = z.lazy(() => {
   return z
     .object({
       kill: valorantKillEventDetailsResponse,
       number: z.number().gte(1),
       timestamp: z.number().gte(0),
-      type: valorantEventType,
+      type: z.string(),
     })
     .transform((data) => ({
       kill: data['kill'],
@@ -54,13 +53,13 @@ export const valorantKillEventResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantKillEventRequest: any = z.lazy(() => {
+export const valorantKillEventRequest = z.lazy(() => {
   return z
     .object({
       kill: valorantKillEventDetailsRequest.nullish(),
       number: z.number().nullish(),
       timestamp: z.number().nullish(),
-      type: valorantEventType.nullish(),
+      type: z.string().nullish(),
     })
     .transform((data) => ({
       kill: data['kill'],

@@ -22,7 +22,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owStatsForPlayerByTournament: any = z.lazy(() => {
+export const owStatsForPlayerByTournament = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -77,7 +77,7 @@ export type OwStatsForPlayerByTournament = z.infer<typeof owStatsForPlayerByTour
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owStatsForPlayerByTournamentResponse: any = z.lazy(() => {
+export const owStatsForPlayerByTournamentResponse = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -129,7 +129,7 @@ export const owStatsForPlayerByTournamentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owStatsForPlayerByTournamentRequest: any = z.lazy(() => {
+export const owStatsForPlayerByTournamentRequest = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

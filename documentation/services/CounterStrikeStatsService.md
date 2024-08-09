@@ -34,14 +34,14 @@ Get detailed statistics of Counter-Strike players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 4;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersStats();
 
@@ -70,14 +70,14 @@ Get detailed statistics of a given Counter-Strike player for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const playerIdOrSlug = 9;
+  const matchIdOrSlug = 4;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -109,13 +109,13 @@ Get detailed statistics of a given Counter-Strike team for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
+  const matchIdOrSlug = 4;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
@@ -150,14 +150,14 @@ Get detailed statistics of a given Counter-Strike player
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, VideogameTitleIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 9;
-const videogameTitleIdOrSlug = 10;
+  const playerIdOrSlug = 3;
+const videogameTitleIdOrSlug = 7;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoPlayersPlayerIdOrSlugStats(
   ,
@@ -193,14 +193,14 @@ Get detailed statistics of a given Counter-Strike player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
-const playerIdOrSlug = 9;
+  const serieIdOrSlug = 8;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -232,13 +232,13 @@ Get detailed statistics of a given Counter-Strike team for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 10;
+  const serieIdOrSlug = 8;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
@@ -273,14 +273,14 @@ Get detailed statistics of a given Counter-Strike team
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, VideogameTitleIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const videogameTitleIdOrSlug = 10;
+const videogameTitleIdOrSlug = 7;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTeamsTeamIdOrSlugStats(
   ,
@@ -316,14 +316,14 @@ Get detailed statistics of a given Counter-Strike player for the given tournamen
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
-const playerIdOrSlug = 9;
+  const tournamentIdOrSlug = 4;
+const playerIdOrSlug = 3;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -355,13 +355,13 @@ Get detailed statistics of a given Counter-Strike team for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 2;
+  const tournamentIdOrSlug = 4;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(

@@ -6,7 +6,7 @@ import { csgoRoundsScore, csgoRoundsScoreRequest, csgoRoundsScoreResponse } from
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoRoundStartEventDetails: any = z.lazy(() => {
+export const csgoRoundStartEventDetails = z.lazy(() => {
   return z.object({
     counterTerrorists: csgoRoundsScore,
     terrorists: csgoRoundsScore,
@@ -25,7 +25,7 @@ export type CsgoRoundStartEventDetails = z.infer<typeof csgoRoundStartEventDetai
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundStartEventDetailsResponse: any = z.lazy(() => {
+export const csgoRoundStartEventDetailsResponse = z.lazy(() => {
   return z
     .object({
       counter_terrorists: csgoRoundsScoreResponse,
@@ -41,7 +41,7 @@ export const csgoRoundStartEventDetailsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundStartEventDetailsRequest: any = z.lazy(() => {
+export const csgoRoundStartEventDetailsRequest = z.lazy(() => {
   return z
     .object({ counterTerrorists: csgoRoundsScoreRequest.nullish(), terrorists: csgoRoundsScoreRequest.nullish() })
     .transform((data) => ({

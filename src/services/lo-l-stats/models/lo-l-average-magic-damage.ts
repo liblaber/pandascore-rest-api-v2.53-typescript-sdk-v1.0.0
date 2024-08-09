@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLAverageMagicDamage: any = z.lazy(() => {
+export const loLAverageMagicDamage = z.lazy(() => {
   return z.object({
     dealt: z.number().gte(0).nullable(),
     dealtPercentage: z.number().gte(0).lte(100).nullable(),
@@ -30,7 +30,7 @@ export type LoLAverageMagicDamage = z.infer<typeof loLAverageMagicDamage>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLAverageMagicDamageResponse: any = z.lazy(() => {
+export const loLAverageMagicDamageResponse = z.lazy(() => {
   return z
     .object({
       dealt: z.number().gte(0).nullable(),
@@ -52,7 +52,7 @@ export const loLAverageMagicDamageResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLAverageMagicDamageRequest: any = z.lazy(() => {
+export const loLAverageMagicDamageRequest = z.lazy(() => {
   return z
     .object({
       dealt: z.number().nullish(),

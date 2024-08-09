@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { LoLMastery, loLMasteryResponse } from '../common/lo-l-mastery';
 import { GetLolMasteriesParams } from './request-params';
 
@@ -23,23 +23,47 @@ export class LoLMasteriesService extends BaseService {
     params?: GetLolMasteriesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLMastery[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/masteries',
-      config: this.config,
-      responseSchema: z.array(loLMasteryResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLMastery[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/masteries')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLMasteryResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLMastery[]>(request);
   }
 
   /**
@@ -51,17 +75,23 @@ export class LoLMasteriesService extends BaseService {
     lolMasteryId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLMastery>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/masteries/{lol_mastery_id}',
-      config: this.config,
-      responseSchema: loLMasteryResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_mastery_id', lolMasteryId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLMastery>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/masteries/{lol_mastery_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLMasteryResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_mastery_id',
+        value: lolMasteryId,
+      })
+      .build();
+    return this.client.call<LoLMastery>(request);
   }
 }

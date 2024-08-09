@@ -31,51 +31,57 @@ List teams for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarTeams,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraftBroodWarTeams,
+  SearchOverStarcraftBroodWarTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverStarcraftBroodWarTeams = {
-  acronym: ["sint co"],
-  id: [8],
-  location: ["ut dolo"],
-  modifiedAt: ["iru"],
-  name: ["cillum e"],
-  slug: ["m"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverStarcraftBroodWarTeams = {
+    acronym: ['estipsum'],
+    id: [7],
+    location: ['tempo'],
+    modifiedAt: ['est'],
+    name: ['adipisici'],
+    slug: ['3lhpb4'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverStarcraftBroodWarTeams = {
-  acronym: ["deserunt a"],
-  id: [3],
-  location: ["sunt aut"],
-  modifiedAt: ["deserunt aute"],
-  name: ["labor"],
-  slug: ["qt3q1roio"]
-};
+  const range: RangeOverStarcraftBroodWarTeams = {
+    acronym: ['elit eius'],
+    id: [9],
+    location: ['id pariat'],
+    modifiedAt: ['incidi'],
+    name: ['mollit cillum i'],
+    slug: ['6qw_5'],
+  };
 
-const search: SearchOverStarcraftBroodWarTeams = {
-  acronym: "dolore fugia",
-  location: "dolore cillum",
-  name: "irure ven",
-  slug: "j"
-};
-const page = 1;
+  const search: SearchOverStarcraftBroodWarTeams = {
+    acronym: 'velit do',
+    location: 'ipsum ',
+    name: 'minim occaecat',
+    slug: 'b',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

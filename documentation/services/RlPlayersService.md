@@ -31,62 +31,68 @@ List players for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverRlPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverRlPlayers,
+  SearchOverRlPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverRlPlayers = {
-  active: true,
-  birthday: ["fugia"],
-  firstName: ["ipsum"],
-  id: [5],
-  lastName: ["Utvoluptat"],
-  modifiedAt: ["in rep"],
-  name: ["adipi"],
-  nationality: ["sit sunt null"],
-  role: ["in ex"],
-  slug: ["a"],
-  teamId: [5],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverRlPlayers = {
+    active: true,
+    birthday: ['do lab'],
+    firstName: ['quiscupidat'],
+    id: [8],
+    lastName: ['irure'],
+    modifiedAt: ['sun'],
+    name: ['id pariatu'],
+    nationality: ['aute Ut cup'],
+    role: ['Lorem'],
+    slug: ['1gec_sj1s'],
+    teamId: [1],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverRlPlayers = {
-  birthday: ["ex voluptate d"],
-  firstName: ["reprehenderi"],
-  id: [2],
-  lastName: ["labore"],
-  modifiedAt: ["do aute adipi"],
-  name: ["nisicommodo"],
-  nationality: ["occaecat "],
-  role: ["minim"],
-  slug: ["htxdf2z4lk"]
-};
+  const range: RangeOverRlPlayers = {
+    birthday: ['sunt amet '],
+    firstName: ['Lorem'],
+    id: [5],
+    lastName: ['adinlaboru'],
+    modifiedAt: ['incidid'],
+    name: ['anim '],
+    nationality: ['proident '],
+    role: ['ullamco do'],
+    slug: ['7x7'],
+  };
 
-const search: SearchOverRlPlayers = {
-  birthday: "dolor",
-  firstName: "adconsequ",
-  lastName: "sint in lab",
-  name: "dolore ",
-  nationality: "culpa",
-  role: "esse qui ex ",
-  slug: "7cfncmu"
-};
-const page = 1;
+  const search: SearchOverRlPlayers = {
+    birthday: 'eu ul',
+    firstName: 'incidi',
+    lastName: 'sed esse commo',
+    name: 'est nostrud d',
+    nationality: 'eu mollit of',
+    role: 'sint nostr',
+    slug: '-aw4woc2v_2',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.rlPlayers.getRlPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.rlPlayers.getRlPlayers({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

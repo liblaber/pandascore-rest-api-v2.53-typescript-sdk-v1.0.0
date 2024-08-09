@@ -2,6 +2,11 @@
 
 import { z } from 'zod';
 
-export const loLRuneReforgedType = z.enum(['keystone', 'path', 'shard', 'slot1', 'slot2', 'slot3']);
-
-export type LoLRuneReforgedType = z.infer<typeof loLRuneReforgedType>;
+export enum LoLRuneReforgedType {
+  KEYSTONE = 'keystone',
+  PATH = 'path',
+  SHARD = 'shard',
+  SLOT1 = 'slot1',
+  SLOT2 = 'slot2',
+  SLOT3 = 'slot3',
+}

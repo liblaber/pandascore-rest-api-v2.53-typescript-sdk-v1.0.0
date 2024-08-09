@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { ShortTournament, shortTournamentResponse } from '../common/short-tournament';
 import {
   GetTournamentsParams,
@@ -17,7 +17,7 @@ import {
   GetTournamentsUpcomingParams,
 } from './request-params';
 import { Tournament, tournamentResponse } from '../common/tournament';
-import { TournamentIdOrSlug } from '../common';
+import { TournamentIdOrSlug } from '../common/tournament-id-or-slug';
 import { Bracket, bracketResponse } from './models/bracket';
 import { Match, matchResponse } from '../common/match';
 import { TournamentRosters, tournamentRostersResponse } from './models/tournament-rosters';
@@ -39,23 +39,47 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments',
-      config: this.config,
-      responseSchema: z.array(shortTournamentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ShortTournament[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(shortTournamentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ShortTournament[]>(request);
   }
 
   /**
@@ -72,23 +96,47 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsPastParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/past',
-      config: this.config,
-      responseSchema: z.array(shortTournamentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ShortTournament[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/past')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(shortTournamentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ShortTournament[]>(request);
   }
 
   /**
@@ -105,23 +153,47 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsRunningParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/running',
-      config: this.config,
-      responseSchema: z.array(shortTournamentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ShortTournament[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/running')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(shortTournamentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ShortTournament[]>(request);
   }
 
   /**
@@ -138,23 +210,47 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsUpcomingParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ShortTournament[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/upcoming',
-      config: this.config,
-      responseSchema: z.array(shortTournamentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ShortTournament[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/upcoming')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(shortTournamentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ShortTournament[]>(request);
   }
 
   /**
@@ -166,18 +262,24 @@ export class TournamentsService extends BaseService {
     tournamentIdOrSlug: TournamentIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Tournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}',
-      config: this.config,
-      responseSchema: tournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<Tournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(tournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .build();
+    return this.client.call<Tournament>(request);
   }
 
   /**
@@ -196,24 +298,51 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsTournamentIdOrSlugBracketsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Bracket[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}/brackets',
-      config: this.config,
-      responseSchema: z.array(bracketResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Bracket[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}/brackets')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(bracketResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Bracket[]>(request);
   }
 
   /**
@@ -232,24 +361,51 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsTournamentIdOrSlugMatchesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Match[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}/matches',
-      config: this.config,
-      responseSchema: z.array(matchResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Match[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}/matches')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(matchResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Match[]>(request);
   }
 
   /**
@@ -261,18 +417,24 @@ export class TournamentsService extends BaseService {
     tournamentIdOrSlug: TournamentIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<TournamentRosters>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}/rosters',
-      config: this.config,
-      responseSchema: tournamentRostersResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<TournamentRosters>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}/rosters')
+      .setRequestSchema(z.any())
+      .setResponseSchema(tournamentRostersResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .build();
+    return this.client.call<TournamentRosters>(request);
   }
 
   /**
@@ -287,20 +449,32 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsTournamentIdOrSlugStandingsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Standing[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}/standings',
-      config: this.config,
-      responseSchema: z.array(standingResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Standing[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}/standings')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(standingResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Standing[]>(request);
   }
 
   /**
@@ -319,23 +493,50 @@ export class TournamentsService extends BaseService {
     params?: GetTournamentsTournamentIdOrSlugTeamsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<Team[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/tournaments/{tournament_id_or_slug}/teams',
-      config: this.config,
-      responseSchema: z.array(teamResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Team[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/tournaments/{tournament_id_or_slug}/teams')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(teamResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Team[]>(request);
   }
 }

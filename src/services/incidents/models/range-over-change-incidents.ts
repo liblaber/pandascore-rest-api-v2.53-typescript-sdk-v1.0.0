@@ -6,7 +6,7 @@ import { incidentId, incidentIdRequest, incidentIdResponse } from './incident-id
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const rangeOverChangeIncidents: any = z.lazy(() => {
+export const rangeOverChangeIncidents = z.lazy(() => {
   return z.object({
     id: z.array(incidentId).min(2).max(2).optional(),
     modifiedAt: z.array(z.string()).min(2).max(2).optional(),
@@ -25,7 +25,7 @@ export type RangeOverChangeIncidents = z.infer<typeof rangeOverChangeIncidents>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverChangeIncidentsResponse: any = z.lazy(() => {
+export const rangeOverChangeIncidentsResponse = z.lazy(() => {
   return z
     .object({
       id: z.array(incidentIdResponse).min(2).max(2).optional(),
@@ -41,7 +41,7 @@ export const rangeOverChangeIncidentsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverChangeIncidentsRequest: any = z.lazy(() => {
+export const rangeOverChangeIncidentsRequest = z.lazy(() => {
   return z
     .object({ id: z.array(incidentIdRequest).nullish(), modifiedAt: z.array(z.string()).nullish() })
     .transform((data) => ({

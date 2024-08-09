@@ -31,7 +31,13 @@ List Valorant leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverValorantLeagues,
+  SearchOverValorantLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverValorantLeagues = {
-    id: [8],
-    modifiedAt: ['ipsum paria'],
-    name: ['Ut do'],
-    slug: ['fx45k:'],
-    url: ['Ut eni'],
+    id: [2],
+    modifiedAt: ['ipsum aliqua'],
+    name: ['quisad'],
+    slug: ['j54gb'],
+    url: ['nulla'],
   };
 
   const range: RangeOverValorantLeagues = {
     id: [8],
-    modifiedAt: ['sed sint nulla'],
-    name: ['proident '],
-    slug: ['4varbaoo0'],
-    url: ['ullamco'],
+    modifiedAt: ['ut'],
+    name: ['sintaliqu'],
+    slug: ['d6866ju4_'],
+    url: ['nulla occaecat'],
   };
 
   const search: SearchOverValorantLeagues = {
-    name: 'eiusmod',
-    slug: 'm55gkm',
-    url: 'non c',
+    name: 'ipsum in e',
+    slug: '66z3qxolzd',
+    url: 'adipisicing',
   };
   const page = 1;
 

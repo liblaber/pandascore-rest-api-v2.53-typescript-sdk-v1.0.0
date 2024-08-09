@@ -32,7 +32,13 @@ List champions
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLChampions,
+  Page,
+  PandascoreClient,
+  RangeOverLoLChampions,
+  SearchOverLoLChampions,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -40,58 +46,58 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverLoLChampions = {
-    armor: [5.35],
-    armorperlevel: [2.85],
-    attackdamage: [4.76],
-    attackdamageperlevel: [9.24],
-    attackrange: [3.35],
-    attackspeedoffset: [5.17],
-    attackspeedperlevel: [9.6],
-    crit: [6.73],
-    critperlevel: [3.81],
-    hp: [5.6],
-    hpperlevel: [7.71],
-    hpregen: [0.96],
-    hpregenperlevel: [6.1],
-    id: [8],
-    movespeed: [7.47],
-    mp: [5.77],
-    mpperlevel: [8.02],
-    mpregen: [9.83],
-    mpregenperlevel: [0.84],
-    name: ['et labore'],
-    spellblock: [1.91],
-    spellblockperlevel: [6.83],
+    armor: [9.27],
+    armorperlevel: [5.72],
+    attackdamage: [2.5],
+    attackdamageperlevel: [1.11],
+    attackrange: [9.19],
+    attackspeedoffset: [6.21],
+    attackspeedperlevel: [0.21],
+    crit: [4.78],
+    critperlevel: [0.07],
+    hp: [9.22],
+    hpperlevel: [3.5],
+    hpregen: [8.4],
+    hpregenperlevel: [0.17],
+    id: [5],
+    movespeed: [1.64],
+    mp: [6.47],
+    mpperlevel: [3.11],
+    mpregen: [9.09],
+    mpregenperlevel: [3.32],
+    name: ['ut non Ut sint '],
+    spellblock: [4.66],
+    spellblockperlevel: [6.52],
     videogameVersion: [],
   };
 
   const range: RangeOverLoLChampions = {
-    armor: [6.96],
-    armorperlevel: [9.76],
-    attackdamage: [7.04],
-    attackdamageperlevel: [1.33],
-    attackrange: [3.27],
-    attackspeedoffset: [2.7],
-    attackspeedperlevel: [6.48],
-    crit: [2.64],
-    critperlevel: [3.83],
-    hp: [2.77],
-    hpperlevel: [5.48],
-    hpregen: [2.16],
-    hpregenperlevel: [4.44],
-    id: [7],
-    movespeed: [9.89],
-    mp: [6.32],
-    mpperlevel: [0.37],
-    mpregen: [0.64],
-    mpregenperlevel: [2.8],
-    name: ['sit ipsum nostr'],
-    spellblock: [5.29],
-    spellblockperlevel: [4.75],
+    armor: [2.43],
+    armorperlevel: [9.24],
+    attackdamage: [9],
+    attackdamageperlevel: [3.94],
+    attackrange: [5.87],
+    attackspeedoffset: [8.54],
+    attackspeedperlevel: [9.67],
+    crit: [6.61],
+    critperlevel: [5.44],
+    hp: [3.71],
+    hpperlevel: [6.6],
+    hpregen: [8],
+    hpregenperlevel: [7.04],
+    id: [9],
+    movespeed: [4.7],
+    mp: [2.63],
+    mpperlevel: [9.97],
+    mpregen: [2.29],
+    mpregenperlevel: [0.49],
+    name: ['labore e'],
+    spellblock: [3.35],
+    spellblockperlevel: [5.17],
   };
 
   const search: SearchOverLoLChampions = {
-    name: 'eu ex',
+    name: 'dolor officia c',
   };
   const page = 1;
 
@@ -135,7 +141,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLChampions.getLolChampionsLolChampionId(5);
+  const { data } = await pandascoreClient.loLChampions.getLolChampionsLolChampionId(4);
 
   console.log(data);
 })();

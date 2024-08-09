@@ -2,13 +2,11 @@
 
 import { z } from 'zod';
 
-export const matchType = z.enum([
-  'all_games_played',
-  'best_of',
-  'custom',
-  'first_to',
-  'ow_best_of',
-  'red_bull_home_ground',
-]);
-
-export type MatchType = z.infer<typeof matchType>;
+export enum MatchType {
+  ALLGAMESPLAYED = 'all_games_played',
+  BESTOF = 'best_of',
+  CUSTOM = 'custom',
+  FIRSTTO = 'first_to',
+  OWBESTOF = 'ow_best_of',
+  REDBULLHOMEGROUND = 'red_bull_home_ground',
+}

@@ -2,18 +2,17 @@
 
 import { z } from 'zod';
 import { barracksStatus, barracksStatusRequest, barracksStatusResponse } from './barracks-status';
-import { dota2Faction } from './dota2-faction';
 import { baseTeam, baseTeamRequest, baseTeamResponse } from './base-team';
 import { towerStatus, towerStatusRequest, towerStatusResponse } from './tower-status';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2GameTeam: any = z.lazy(() => {
+export const dota2GameTeam = z.lazy(() => {
   return z.object({
     bans: z.array(z.number()),
     barracksStatus: barracksStatus.nullable(),
-    faction: dota2Faction,
+    faction: z.string(),
     firstBlood: z.boolean(),
     firstRoshan: z.boolean(),
     firstTower: z.boolean(),
@@ -48,12 +47,12 @@ export type Dota2GameTeam = z.infer<typeof dota2GameTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GameTeamResponse: any = z.lazy(() => {
+export const dota2GameTeamResponse = z.lazy(() => {
   return z
     .object({
       bans: z.array(z.number()),
       barracks_status: barracksStatusResponse.nullable(),
-      faction: dota2Faction,
+      faction: z.string(),
       first_blood: z.boolean(),
       first_roshan: z.boolean(),
       first_tower: z.boolean(),
@@ -84,12 +83,12 @@ export const dota2GameTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GameTeamRequest: any = z.lazy(() => {
+export const dota2GameTeamRequest = z.lazy(() => {
   return z
     .object({
       bans: z.array(z.number()).nullish(),
       barracksStatus: barracksStatusRequest.nullish(),
-      faction: dota2Faction.nullish(),
+      faction: z.string().nullish(),
       firstBlood: z.boolean().nullish(),
       firstRoshan: z.boolean().nullish(),
       firstTower: z.boolean().nullish(),

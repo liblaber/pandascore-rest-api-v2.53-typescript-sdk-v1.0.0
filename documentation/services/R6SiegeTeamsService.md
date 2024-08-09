@@ -31,51 +31,57 @@ List teams for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeTeams,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeTeams,
+  SearchOverR6SiegeTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverR6SiegeTeams = {
-  acronym: ["pariatur co"],
-  id: [8],
-  location: ["aute ex"],
-  modifiedAt: ["pariatur elit m"],
-  name: ["adin sed"],
-  slug: ["1va2v7dm-j"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverR6SiegeTeams = {
+    acronym: ['qui cillum nisi'],
+    id: [1],
+    location: ['labore occaecat'],
+    modifiedAt: ['Duis conse'],
+    name: ['officia proide'],
+    slug: ['fafii1hq'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverR6SiegeTeams = {
-  acronym: ["aliquip"],
-  id: [2],
-  location: ["commodo"],
-  modifiedAt: ["sed L"],
-  name: ["proid"],
-  slug: ["by-i4"]
-};
+  const range: RangeOverR6SiegeTeams = {
+    acronym: ['ea sunt'],
+    id: [9],
+    location: ['est aliqui'],
+    modifiedAt: ['laborum null'],
+    name: ['dolore'],
+    slug: ['znwtmgib'],
+  };
 
-const search: SearchOverR6SiegeTeams = {
-  acronym: "exercitati",
-  location: "occaecat l",
-  name: "ex incididunt",
-  slug: "yck1qqq"
-};
-const page = 1;
+  const search: SearchOverR6SiegeTeams = {
+    acronym: 'consec',
+    location: 'dolor minim ',
+    name: 'do labore Lore',
+    slug: 'zfshdk4rxr',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.r6SiegeTeams.getR6siegeTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.r6SiegeTeams.getR6siegeTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

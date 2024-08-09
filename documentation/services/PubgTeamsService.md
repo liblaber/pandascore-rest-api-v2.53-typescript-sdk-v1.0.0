@@ -31,51 +31,57 @@ List teams for the PUBG videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgTeams,
+  Page,
+  PandascoreClient,
+  RangeOverPubgTeams,
+  SearchOverPubgTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverPubgTeams = {
-  acronym: ["dolore cillum"],
-  id: [2],
-  location: ["nulla temp"],
-  modifiedAt: ["voluptate ven"],
-  name: ["irure"],
-  slug: ["1vxgxb"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverPubgTeams = {
+    acronym: ['volup'],
+    id: [2],
+    location: ['laborum t'],
+    modifiedAt: ['o'],
+    name: ['eiusmod adi'],
+    slug: ['0cypf61el32'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverPubgTeams = {
-  acronym: ["sit do"],
-  id: [10],
-  location: ["Lorem nos"],
-  modifiedAt: ["sed la"],
-  name: ["incididunt aute"],
-  slug: ["_py"]
-};
+  const range: RangeOverPubgTeams = {
+    acronym: ['laborum'],
+    id: [10],
+    location: ['adipi'],
+    modifiedAt: ['fugiat velit'],
+    name: ['labore id'],
+    slug: ['458y4s'],
+  };
 
-const search: SearchOverPubgTeams = {
-  acronym: "qui f",
-  location: "voluptate com",
-  name: "dolore incidid",
-  slug: "l5j_lafab"
-};
-const page = 1;
+  const search: SearchOverPubgTeams = {
+    acronym: 'ad commodo in',
+    location: 'sed id',
+    name: 'magna laboris ',
+    slug: '9685qic',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.pubgTeams.getPubgTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.pubgTeams.getPubgTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

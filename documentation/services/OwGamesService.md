@@ -34,7 +34,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.owGames.getOwGamesOwGameId(3);
+  const { data } = await pandascoreClient.owGames.getOwGamesOwGameId(1);
 
   console.log(data);
 })();
@@ -66,52 +66,52 @@ List games for a given Overwatch match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverOwGames, GameStatus, MatchIdOrSlug, OpponentType, Page, PandascoreClient, RangeOverOwGames, SearchOverOwGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+  const matchIdOrSlug = 4;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const filter: FilterOverOwGames = {
-  beginAt: ["e"],
+  beginAt: ["qu"],
   complete: true,
   detailedStats: true,
-  endAt: ["si"],
+  endAt: ["dolor nulla"],
   finished: true,
   forfeit: true,
-  id: [6],
-  length: [4],
-  matchId: [10],
-  position: [8],
+  id: [4],
+  length: [8],
+  matchId: [4],
+  position: [5],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const range: RangeOverOwGames = {
-  beginAt: ["cupidat"],
+  beginAt: ["incidid"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["conse"],
+  endAt: ["nostrud"],
   finished: [true],
   forfeit: [true],
-  id: [9],
+  id: [3],
   length: [2],
-  matchId: [2],
+  matchId: [3],
   position: [6],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
 const search: SearchOverOwGames = {
   status: gameStatus,

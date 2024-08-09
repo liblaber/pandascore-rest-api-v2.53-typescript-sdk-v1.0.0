@@ -34,67 +34,76 @@ List tournaments for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
+  const filterOverR6SiegeShortTournamentsVideogameTitle = 7;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverR6SiegeShortTournaments = {
-    beginAt: ['dolore esse'],
+    beginAt: ['enim sunt'],
     detailedStats: true,
-    endAt: ['aliquip'],
+    endAt: ['esse ut'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['aliqua fu'],
-    name: ['quisullamc'],
-    prizepool: ['nulla'],
-    serieId: [3],
-    slug: ['8'],
+    modifiedAt: ['proiden'],
+    name: ['elit ut ad of'],
+    prizepool: ['ullamco'],
+    serieId: [7],
+    slug: ['__q0y7_6p8'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverR6SiegeShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverR6SiegeShortTournaments = {
-    beginAt: ['veniam '],
+    beginAt: ['ea qu'],
     detailedStats: [true],
-    endAt: ['adipis'],
+    endAt: ['laborum in'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['dolore eli'],
-    name: ['exercitat'],
-    prizepool: ['indolor eiu'],
-    serieId: [9],
-    slug: ['owgd'],
+    id: [6],
+    modifiedAt: ['anim'],
+    name: ['dolor fu'],
+    prizepool: ['eiusmod enim '],
+    serieId: [6],
+    slug: ['sv5tro'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverR6SiegeShortTournaments = {
-    name: 'ullam',
-    prizepool: 'incididun',
-    slug: '6ix7vd2l-ow',
+    name: 'cupida',
+    prizepool: 'commodo cupid',
+    slug: '93',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -138,67 +147,76 @@ List past Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
+  const filterOverR6SiegeShortTournamentsVideogameTitle = 7;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverR6SiegeShortTournaments = {
-    beginAt: ['dolore esse'],
+    beginAt: ['enim sunt'],
     detailedStats: true,
-    endAt: ['aliquip'],
+    endAt: ['esse ut'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['aliqua fu'],
-    name: ['quisullamc'],
-    prizepool: ['nulla'],
-    serieId: [3],
-    slug: ['8'],
+    modifiedAt: ['proiden'],
+    name: ['elit ut ad of'],
+    prizepool: ['ullamco'],
+    serieId: [7],
+    slug: ['__q0y7_6p8'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverR6SiegeShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverR6SiegeShortTournaments = {
-    beginAt: ['veniam '],
+    beginAt: ['ea qu'],
     detailedStats: [true],
-    endAt: ['adipis'],
+    endAt: ['laborum in'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['dolore eli'],
-    name: ['exercitat'],
-    prizepool: ['indolor eiu'],
-    serieId: [9],
-    slug: ['owgd'],
+    id: [6],
+    modifiedAt: ['anim'],
+    name: ['dolor fu'],
+    prizepool: ['eiusmod enim '],
+    serieId: [6],
+    slug: ['sv5tro'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverR6SiegeShortTournaments = {
-    name: 'ullam',
-    prizepool: 'incididun',
-    slug: '6ix7vd2l-ow',
+    name: 'cupida',
+    prizepool: 'commodo cupid',
+    slug: '93',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -242,67 +260,76 @@ List running Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
+  const filterOverR6SiegeShortTournamentsVideogameTitle = 7;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverR6SiegeShortTournaments = {
-    beginAt: ['dolore esse'],
+    beginAt: ['enim sunt'],
     detailedStats: true,
-    endAt: ['aliquip'],
+    endAt: ['esse ut'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['aliqua fu'],
-    name: ['quisullamc'],
-    prizepool: ['nulla'],
-    serieId: [3],
-    slug: ['8'],
+    modifiedAt: ['proiden'],
+    name: ['elit ut ad of'],
+    prizepool: ['ullamco'],
+    serieId: [7],
+    slug: ['__q0y7_6p8'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverR6SiegeShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverR6SiegeShortTournaments = {
-    beginAt: ['veniam '],
+    beginAt: ['ea qu'],
     detailedStats: [true],
-    endAt: ['adipis'],
+    endAt: ['laborum in'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['dolore eli'],
-    name: ['exercitat'],
-    prizepool: ['indolor eiu'],
-    serieId: [9],
-    slug: ['owgd'],
+    id: [6],
+    modifiedAt: ['anim'],
+    name: ['dolor fu'],
+    prizepool: ['eiusmod enim '],
+    serieId: [6],
+    slug: ['sv5tro'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverR6SiegeShortTournaments = {
-    name: 'ullam',
-    prizepool: 'incididun',
-    slug: '6ix7vd2l-ow',
+    name: 'cupida',
+    prizepool: 'commodo cupid',
+    slug: '93',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };
@@ -346,67 +373,76 @@ List upcoming Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentId,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
+  const filterOverR6SiegeShortTournamentsVideogameTitle = 7;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const filter: FilterOverR6SiegeShortTournaments = {
-    beginAt: ['dolore esse'],
+    beginAt: ['enim sunt'],
     detailedStats: true,
-    endAt: ['aliquip'],
+    endAt: ['esse ut'],
     hasBracket: true,
     id: [10],
     liveSupported: true,
-    modifiedAt: ['aliqua fu'],
-    name: ['quisullamc'],
-    prizepool: ['nulla'],
-    serieId: [3],
-    slug: ['8'],
+    modifiedAt: ['proiden'],
+    name: ['elit ut ad of'],
+    prizepool: ['ullamco'],
+    serieId: [7],
+    slug: ['__q0y7_6p8'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverR6SiegeShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId = 8;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const range: RangeOverR6SiegeShortTournaments = {
-    beginAt: ['veniam '],
+    beginAt: ['ea qu'],
     detailedStats: [true],
-    endAt: ['adipis'],
+    endAt: ['laborum in'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['dolore eli'],
-    name: ['exercitat'],
-    prizepool: ['indolor eiu'],
-    serieId: [9],
-    slug: ['owgd'],
+    id: [6],
+    modifiedAt: ['anim'],
+    name: ['dolor fu'],
+    prizepool: ['eiusmod enim '],
+    serieId: [6],
+    slug: ['sv5tro'],
     tier: [searchOverValorantShortTournamentsTier2],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
   const search: SearchOverR6SiegeShortTournaments = {
-    name: 'ullam',
-    prizepool: 'incididun',
-    slug: '6ix7vd2l-ow',
+    name: 'cupida',
+    prizepool: 'commodo cupid',
+    slug: '93',
     tier: searchOverValorantShortTournamentsTier2,
     winnerType: opponentType,
   };

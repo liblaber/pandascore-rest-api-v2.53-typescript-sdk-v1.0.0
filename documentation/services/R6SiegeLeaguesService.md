@@ -31,7 +31,13 @@ List Rainbow Six Siege leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeLeagues,
+  SearchOverR6SiegeLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverR6SiegeLeagues = {
-    id: [2],
-    modifiedAt: ['in p'],
-    name: ['dolore'],
-    slug: ['0g'],
-    url: ['quis deserunt '],
+    id: [10],
+    modifiedAt: ['Ut dolore fugi'],
+    name: ['adipi'],
+    slug: ['i:'],
+    url: ['quis nulla u'],
   };
 
   const range: RangeOverR6SiegeLeagues = {
-    id: [4],
-    modifiedAt: ['non tem'],
-    name: ['Ut quis E'],
-    slug: ['sf43rbls-'],
-    url: ['Duis d'],
+    id: [7],
+    modifiedAt: ['officia de'],
+    name: ['enim ipsum inci'],
+    slug: ['l9950wriu'],
+    url: ['ea qui'],
   };
 
   const search: SearchOverR6SiegeLeagues = {
-    name: 'auteconsequat ',
-    slug: 'ess81c',
-    url: 'Lorem elit',
+    name: 'irure ipsum',
+    slug: 'ksmx1n',
+    url: 'ut anim sit',
   };
   const page = 1;
 

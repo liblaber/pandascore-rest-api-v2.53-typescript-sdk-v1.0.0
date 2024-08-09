@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverCsgoSeriesVideogameTitle: any = z.lazy(() => {
+export const filterOverCsgoSeriesVideogameTitle = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -21,7 +21,7 @@ export type FilterOverCsgoSeriesVideogameTitle = z.infer<typeof filterOverCsgoSe
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverCsgoSeriesVideogameTitleResponse: any = z.lazy(() => {
+export const filterOverCsgoSeriesVideogameTitleResponse = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -29,6 +29,6 @@ export const filterOverCsgoSeriesVideogameTitleResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverCsgoSeriesVideogameTitleRequest: any = z.lazy(() => {
+export const filterOverCsgoSeriesVideogameTitleRequest = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });

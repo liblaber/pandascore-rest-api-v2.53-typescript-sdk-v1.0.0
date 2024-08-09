@@ -31,7 +31,13 @@ List Dota2 leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Leagues,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Leagues,
+  SearchOverDota2Leagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -39,25 +45,25 @@ import { PandascoreClient } from 'pandascore_client';
   });
 
   const filter: FilterOverDota2Leagues = {
-    id: [3],
-    modifiedAt: ['proident labo'],
-    name: ['dolor proid'],
-    slug: ['_lxx'],
-    url: ['anim ea est U'],
+    id: [9],
+    modifiedAt: ['v'],
+    name: ['anim l'],
+    slug: ['csw342e'],
+    url: ['Ut ut'],
   };
 
   const range: RangeOverDota2Leagues = {
-    id: [8],
-    modifiedAt: ['aliqua aute'],
-    name: ['aliqua ea '],
-    slug: ['uic'],
-    url: ['in aute elit'],
+    id: [6],
+    modifiedAt: ['id '],
+    name: ['consectetu'],
+    slug: ['eiho2k6'],
+    url: ['nulla'],
   };
 
   const search: SearchOverDota2Leagues = {
-    name: 'Excepteur ip',
-    slug: 'pu97glcez',
-    url: 'dolore ipsum d',
+    name: 'consequat adip',
+    slug: '6smpmxi6',
+    url: 'reprehenderit',
   };
   const page = 1;
 

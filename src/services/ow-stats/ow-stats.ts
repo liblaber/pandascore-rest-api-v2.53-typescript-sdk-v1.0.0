@@ -2,23 +2,26 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { OwStatsForPlayerByGame, owStatsForPlayerByGameResponse } from './models/ow-stats-for-player-by-game';
-import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TournamentIdOrSlug } from '../common';
+import { PlayerIdOrSlug } from '../common/player-id-or-slug';
 import {
   OwStatsForAllPlayersByMatch,
   owStatsForAllPlayersByMatchResponse,
 } from './models/ow-stats-for-all-players-by-match';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { OwStatsForPlayerByMatch, owStatsForPlayerByMatchResponse } from './models/ow-stats-for-player-by-match';
 import { OwStatsForPlayer, owStatsForPlayerResponse } from './models/ow-stats-for-player';
 import { GetOwPlayersPlayerIdOrSlugStatsParams } from './request-params';
 import { OwStatsForPlayerBySerie, owStatsForPlayerBySerieResponse } from './models/ow-stats-for-player-by-serie';
+import { SerieIdOrSlug } from '../common/serie-id-or-slug';
 import {
   OwStatsForPlayerByTournament,
   owStatsForPlayerByTournamentResponse,
 } from './models/ow-stats-for-player-by-tournament';
+import { TournamentIdOrSlug } from '../common/tournament-id-or-slug';
 
 export class OwStatsService extends BaseService {
   /**
@@ -32,19 +35,28 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByGame>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/games/{ow_game_id}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: owStatsForPlayerByGameResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('ow_game_id', owGameId);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForPlayerByGame>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/games/{ow_game_id}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForPlayerByGameResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'ow_game_id',
+        value: owGameId,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwStatsForPlayerByGame>(request);
   }
 
   /**
@@ -56,18 +68,24 @@ export class OwStatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForAllPlayersByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/matches/{match_id_or_slug}/players/stats',
-      config: this.config,
-      responseSchema: owStatsForAllPlayersByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForAllPlayersByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/matches/{match_id_or_slug}/players/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForAllPlayersByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwStatsForAllPlayersByMatch>(request);
   }
 
   /**
@@ -81,19 +99,28 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: owStatsForPlayerByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForPlayerByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/matches/{match_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForPlayerByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwStatsForPlayerByMatch>(request);
   }
 
   /**
@@ -108,20 +135,32 @@ export class OwStatsService extends BaseService {
     params?: GetOwPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayer>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: owStatsForPlayerResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForPlayer>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForPlayerResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<OwStatsForPlayer>(request);
   }
 
   /**
@@ -135,19 +174,28 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: owStatsForPlayerBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForPlayerBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForPlayerBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwStatsForPlayerBySerie>(request);
   }
 
   /**
@@ -161,18 +209,27 @@ export class OwStatsService extends BaseService {
     playerIdOrSlug: PlayerIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<OwStatsForPlayerByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/ow/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: owStatsForPlayerByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<OwStatsForPlayerByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/ow/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(owStatsForPlayerByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .build();
+    return this.client.call<OwStatsForPlayerByTournament>(request);
   }
 }

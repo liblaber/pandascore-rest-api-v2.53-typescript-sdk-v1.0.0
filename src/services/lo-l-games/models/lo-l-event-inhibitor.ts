@@ -6,15 +6,14 @@ import {
   loLEventInhibitorObjectRequest,
   loLEventInhibitorObjectResponse,
 } from './lo-l-event-inhibitor-object';
-import { loLEventInhibitorType } from './lo-l-event-inhibitor-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLEventInhibitor: any = z.lazy(() => {
+export const loLEventInhibitor = z.lazy(() => {
   return z.object({
     object: loLEventInhibitorObject,
-    type: loLEventInhibitorType,
+    type: z.string(),
   });
 });
 
@@ -30,11 +29,11 @@ export type LoLEventInhibitor = z.infer<typeof loLEventInhibitor>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventInhibitorResponse: any = z.lazy(() => {
+export const loLEventInhibitorResponse = z.lazy(() => {
   return z
     .object({
       object: loLEventInhibitorObjectResponse,
-      type: loLEventInhibitorType,
+      type: z.string(),
     })
     .transform((data) => ({
       object: data['object'],
@@ -46,9 +45,9 @@ export const loLEventInhibitorResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLEventInhibitorRequest: any = z.lazy(() => {
+export const loLEventInhibitorRequest = z.lazy(() => {
   return z
-    .object({ object: loLEventInhibitorObjectRequest.nullish(), type: loLEventInhibitorType.nullish() })
+    .object({ object: loLEventInhibitorObjectRequest.nullish(), type: z.string().nullish() })
     .transform((data) => ({
       object: data['object'],
       type: data['type'],

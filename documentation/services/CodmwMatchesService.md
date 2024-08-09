@@ -34,110 +34,122 @@ List matches for the COD MW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverCodmwMatches,
+  SearchOverCodmwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverCodmwMatchesVideogameTitle = 9;
+  const filterOverCodmwMatchesVideogameTitle = 2;
 
-const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
+  const filterOverCodmwMatchesVideogameVersion = '4.384894385';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverCodmwMatches = {
-  beginAt: ["min"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["re"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [3],
-  leagueId: [5],
-  matchType: [matchType],
-  modifiedAt: ["dolore Excepte"],
-  name: ["ut laborum labo"],
-  notStarted: true,
-  numberOfGames: [1],
-  opponentId: [filterOverCodmwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["in eiu"],
-  serieId: [9],
-  slug: ["FyZHzUQlMqf"],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverCodmwMatchesVideogameTitle],
-  videogameVersion: [filterOverCodmwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverCodmwMatches = {
+    beginAt: ['aute Duis'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['cillum'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [4],
+    leagueId: [9],
+    matchType: [matchType],
+    modifiedAt: ['ea nulla '],
+    name: ['ex ut eius'],
+    notStarted: true,
+    numberOfGames: [2],
+    opponentId: [filterOverCodmwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['enim ei'],
+    serieId: [1],
+    slug: ['lutWjfmw'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverCodmwMatchesVideogameTitle],
+    videogameVersion: [filterOverCodmwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverCodmwMatches = {
-  beginAt: ["sunt pari"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et mollit"],
-  forfeit: [true],
-  id: [2],
-  matchType: [matchType],
-  modifiedAt: ["consequat au"],
-  name: ["animirure c"],
-  numberOfGames: [7],
-  scheduledAt: ["exercitation U"],
-  slug: ["b"],
-  status: [matchStatus],
-  tournamentId: [8],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverCodmwMatches = {
+    beginAt: ['eiu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['mo'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['ut'],
+    name: ['ea elit'],
+    numberOfGames: [6],
+    scheduledAt: ['labor'],
+    slug: ['l2XU3tFMNk'],
+    status: [matchStatus],
+    tournamentId: [2],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverCodmwMatches = {
-  matchType: matchType,
-  name: "culpa ad do Du",
-  slug: "QnETMGeSVO4",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverCodmwMatches = {
+    matchType: matchType,
+    name: 'dolor aliq',
+    slug: 'Jagwys6K',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwMatches.getCodmwMatches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatches({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +180,122 @@ List past CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverCodmwMatches,
+  SearchOverCodmwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverCodmwMatchesVideogameTitle = 9;
+  const filterOverCodmwMatchesVideogameTitle = 2;
 
-const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
+  const filterOverCodmwMatchesVideogameVersion = '4.384894385';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverCodmwMatches = {
-  beginAt: ["min"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["re"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [3],
-  leagueId: [5],
-  matchType: [matchType],
-  modifiedAt: ["dolore Excepte"],
-  name: ["ut laborum labo"],
-  notStarted: true,
-  numberOfGames: [1],
-  opponentId: [filterOverCodmwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["in eiu"],
-  serieId: [9],
-  slug: ["FyZHzUQlMqf"],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverCodmwMatchesVideogameTitle],
-  videogameVersion: [filterOverCodmwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverCodmwMatches = {
+    beginAt: ['aute Duis'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['cillum'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [4],
+    leagueId: [9],
+    matchType: [matchType],
+    modifiedAt: ['ea nulla '],
+    name: ['ex ut eius'],
+    notStarted: true,
+    numberOfGames: [2],
+    opponentId: [filterOverCodmwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['enim ei'],
+    serieId: [1],
+    slug: ['lutWjfmw'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverCodmwMatchesVideogameTitle],
+    videogameVersion: [filterOverCodmwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverCodmwMatches = {
-  beginAt: ["sunt pari"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et mollit"],
-  forfeit: [true],
-  id: [2],
-  matchType: [matchType],
-  modifiedAt: ["consequat au"],
-  name: ["animirure c"],
-  numberOfGames: [7],
-  scheduledAt: ["exercitation U"],
-  slug: ["b"],
-  status: [matchStatus],
-  tournamentId: [8],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverCodmwMatches = {
+    beginAt: ['eiu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['mo'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['ut'],
+    name: ['ea elit'],
+    numberOfGames: [6],
+    scheduledAt: ['labor'],
+    slug: ['l2XU3tFMNk'],
+    status: [matchStatus],
+    tournamentId: [2],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverCodmwMatches = {
-  matchType: matchType,
-  name: "culpa ad do Du",
-  slug: "QnETMGeSVO4",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverCodmwMatches = {
+    matchType: matchType,
+    name: 'dolor aliq',
+    slug: 'Jagwys6K',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesPast({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +326,122 @@ List running CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverCodmwMatches,
+  SearchOverCodmwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverCodmwMatchesVideogameTitle = 9;
+  const filterOverCodmwMatchesVideogameTitle = 2;
 
-const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
+  const filterOverCodmwMatchesVideogameVersion = '4.384894385';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverCodmwMatches = {
-  beginAt: ["min"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["re"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [3],
-  leagueId: [5],
-  matchType: [matchType],
-  modifiedAt: ["dolore Excepte"],
-  name: ["ut laborum labo"],
-  notStarted: true,
-  numberOfGames: [1],
-  opponentId: [filterOverCodmwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["in eiu"],
-  serieId: [9],
-  slug: ["FyZHzUQlMqf"],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverCodmwMatchesVideogameTitle],
-  videogameVersion: [filterOverCodmwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverCodmwMatches = {
+    beginAt: ['aute Duis'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['cillum'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [4],
+    leagueId: [9],
+    matchType: [matchType],
+    modifiedAt: ['ea nulla '],
+    name: ['ex ut eius'],
+    notStarted: true,
+    numberOfGames: [2],
+    opponentId: [filterOverCodmwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['enim ei'],
+    serieId: [1],
+    slug: ['lutWjfmw'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverCodmwMatchesVideogameTitle],
+    videogameVersion: [filterOverCodmwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverCodmwMatches = {
-  beginAt: ["sunt pari"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et mollit"],
-  forfeit: [true],
-  id: [2],
-  matchType: [matchType],
-  modifiedAt: ["consequat au"],
-  name: ["animirure c"],
-  numberOfGames: [7],
-  scheduledAt: ["exercitation U"],
-  slug: ["b"],
-  status: [matchStatus],
-  tournamentId: [8],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverCodmwMatches = {
+    beginAt: ['eiu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['mo'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['ut'],
+    name: ['ea elit'],
+    numberOfGames: [6],
+    scheduledAt: ['labor'],
+    slug: ['l2XU3tFMNk'],
+    status: [matchStatus],
+    tournamentId: [2],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverCodmwMatches = {
-  matchType: matchType,
-  name: "culpa ad do Du",
-  slug: "QnETMGeSVO4",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverCodmwMatches = {
+    matchType: matchType,
+    name: 'dolor aliq',
+    slug: 'Jagwys6K',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesRunning({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +472,122 @@ List upcoming CODMW matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  OpponentId,
+  Page,
+  PandascoreClient,
+  PlayerIdOrSlug,
+  RangeOverCodmwMatches,
+  SearchOverCodmwMatches,
+  TeamIdOrSlug,
+  VideogameIdOrSlug,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameIdOrSlug = VideogameId._1;
 
-const filterOverCodmwMatchesVideogameTitle = 9;
+  const filterOverCodmwMatchesVideogameTitle = 2;
 
-const filterOverCodmwMatchesVideogameVersion = "49265.58843243.7069641";
+  const filterOverCodmwMatchesVideogameVersion = '4.384894385';
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverCodmwMatches = {
-  beginAt: ["min"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["re"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [3],
-  leagueId: [5],
-  matchType: [matchType],
-  modifiedAt: ["dolore Excepte"],
-  name: ["ut laborum labo"],
-  notStarted: true,
-  numberOfGames: [1],
-  opponentId: [filterOverCodmwMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["in eiu"],
-  serieId: [9],
-  slug: ["FyZHzUQlMqf"],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverCodmwMatchesVideogameTitle],
-  videogameVersion: [filterOverCodmwMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filter: FilterOverCodmwMatches = {
+    beginAt: ['aute Duis'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['cillum'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [4],
+    leagueId: [9],
+    matchType: [matchType],
+    modifiedAt: ['ea nulla '],
+    name: ['ex ut eius'],
+    notStarted: true,
+    numberOfGames: [2],
+    opponentId: [filterOverCodmwMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['enim ei'],
+    serieId: [1],
+    slug: ['lutWjfmw'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverCodmwMatchesVideogameTitle],
+    videogameVersion: [filterOverCodmwMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId = 8;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const range: RangeOverCodmwMatches = {
-  beginAt: ["sunt pari"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et mollit"],
-  forfeit: [true],
-  id: [2],
-  matchType: [matchType],
-  modifiedAt: ["consequat au"],
-  name: ["animirure c"],
-  numberOfGames: [7],
-  scheduledAt: ["exercitation U"],
-  slug: ["b"],
-  status: [matchStatus],
-  tournamentId: [8],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const range: RangeOverCodmwMatches = {
+    beginAt: ['eiu'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['mo'],
+    forfeit: [true],
+    id: [1],
+    matchType: [matchType],
+    modifiedAt: ['ut'],
+    name: ['ea elit'],
+    numberOfGames: [6],
+    scheduledAt: ['labor'],
+    slug: ['l2XU3tFMNk'],
+    status: [matchStatus],
+    tournamentId: [2],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const search: SearchOverCodmwMatches = {
-  matchType: matchType,
-  name: "culpa ad do Du",
-  slug: "QnETMGeSVO4",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const search: SearchOverCodmwMatches = {
+    matchType: matchType,
+    name: 'dolor aliq',
+    slug: 'Jagwys6K',
+    status: matchStatus,
+    winnerType: matchWinnerType,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwMatches.getCodmwMatchesUpcoming({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

@@ -31,51 +31,57 @@ List teams for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverRlTeams,
+  Page,
+  PandascoreClient,
+  RangeOverRlTeams,
+  SearchOverRlTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverRlTeams = {
-  acronym: ["culpa "],
-  id: [8],
-  location: ["Lorem "],
-  modifiedAt: ["elit"],
-  name: ["mollit sit"],
-  slug: ["zze1ryc3"],
-  videogameId: [videogameId]
-};
+  const filter: FilterOverRlTeams = {
+    acronym: ['laboris'],
+    id: [8],
+    location: ['elit Ut nostru'],
+    modifiedAt: ['cul'],
+    name: ['culpa conse'],
+    slug: ['e'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverRlTeams = {
-  acronym: ["dolor"],
-  id: [2],
-  location: ["ut labor"],
-  modifiedAt: ["occaecat aute"],
-  name: ["exerc"],
-  slug: ["rok58e"]
-};
+  const range: RangeOverRlTeams = {
+    acronym: ['reprehenderit '],
+    id: [7],
+    location: ['veniam irure '],
+    modifiedAt: ['t'],
+    name: ['autecupid'],
+    slug: ['3txp'],
+  };
 
-const search: SearchOverRlTeams = {
-  acronym: "sunt laborum p",
-  location: "cupidatat ",
-  name: "minim des",
-  slug: "rig8"
-};
-const page = 1;
+  const search: SearchOverRlTeams = {
+    acronym: 'tempor veli',
+    location: 'est l',
+    name: 'eiusmod ',
+    slug: 'rjxyb',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.rlTeams.getRlTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.rlTeams.getRlTeams({
+    filter: filter,
+    range: range,
     sort: [[]],
-		search: search,
-		page: page,
+    search: search,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

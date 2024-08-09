@@ -6,7 +6,7 @@ import { dota2FramePlayer, dota2FramePlayerRequest, dota2FramePlayerResponse } f
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2FrameTeam: any = z.lazy(() => {
+export const dota2FrameTeam = z.lazy(() => {
   return z.object({
     goldAdvantage: z.number(),
     id: z.number().gte(1),
@@ -31,7 +31,7 @@ export type Dota2FrameTeam = z.infer<typeof dota2FrameTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FrameTeamResponse: any = z.lazy(() => {
+export const dota2FrameTeamResponse = z.lazy(() => {
   return z
     .object({
       gold_advantage: z.number(),
@@ -53,7 +53,7 @@ export const dota2FrameTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FrameTeamRequest: any = z.lazy(() => {
+export const dota2FrameTeamRequest = z.lazy(() => {
   return z
     .object({
       goldAdvantage: z.number().nullish(),

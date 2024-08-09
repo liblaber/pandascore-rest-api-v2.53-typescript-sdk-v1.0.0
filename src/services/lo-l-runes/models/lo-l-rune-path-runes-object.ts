@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLRunePathRunesObject: any = z.lazy(() => {
+export const loLRunePathRunesObject = z.lazy(() => {
   return z.object({
     keystones: z.array(z.number()),
     slot1: z.array(z.number()).min(3).max(4),
@@ -28,7 +28,7 @@ export type LoLRunePathRunesObject = z.infer<typeof loLRunePathRunesObject>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLRunePathRunesObjectResponse: any = z.lazy(() => {
+export const loLRunePathRunesObjectResponse = z.lazy(() => {
   return z
     .object({
       keystones: z.array(z.number()),
@@ -48,7 +48,7 @@ export const loLRunePathRunesObjectResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLRunePathRunesObjectRequest: any = z.lazy(() => {
+export const loLRunePathRunesObjectRequest = z.lazy(() => {
   return z
     .object({
       keystones: z.array(z.number()).nullish(),

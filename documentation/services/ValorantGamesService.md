@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameId(1);
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameId(2);
 
   console.log(data);
 })();
@@ -64,7 +64,7 @@ List events for a given Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -73,7 +73,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdEvents(9, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdEvents(6, {
     page: page,
     perPage: 50,
   });
@@ -104,7 +104,7 @@ List rounds in a Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -113,7 +113,7 @@ import { PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdRounds(2, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdRounds(6, {
     page: page,
     perPage: 50,
   });
@@ -148,20 +148,20 @@ List games for a given Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverValorantGames, GameStatus, MatchIdOrSlug, Page, PandascoreClient, RangeOverValorantGames, SearchOverValorantGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+  const matchIdOrSlug = 4;
+const gameStatus = GameStatus.FINISHED;
 
 const filter: FilterOverValorantGames = {
-  beginAt: ["in nisi"],
+  beginAt: ["in anim o"],
   complete: true,
   detailedStats: true,
-  endAt: ["e"],
+  endAt: ["irure aliqu"],
   finished: true,
   forfeit: true,
   id: [6],
@@ -169,21 +169,21 @@ const filter: FilterOverValorantGames = {
   position: [2],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
 const range: RangeOverValorantGames = {
-  beginAt: ["au"],
+  beginAt: ["culpa eu p"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["nulla"],
+  endAt: ["D"],
   finished: [true],
   forfeit: [true],
-  id: [5],
-  length: [10],
-  position: [10],
+  id: [7],
+  length: [4],
+  position: [7],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
 const search: SearchOverValorantGames = {
   status: gameStatus

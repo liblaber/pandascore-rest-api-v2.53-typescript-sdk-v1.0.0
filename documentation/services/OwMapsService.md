@@ -32,35 +32,42 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwMaps,
+  OwMapGameMode,
+  Page,
+  PandascoreClient,
+  RangeOverOwMaps,
+  SearchOverOwMaps,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const owMapGameMode = OwMapGameMode.Assault;
+  const owMapGameMode = OwMapGameMode.ASSAULT;
 
   const filter: FilterOverOwMaps = {
     gameMode: [owMapGameMode],
-    id: [8],
-    name: ['fugiat'],
-    slug: ['uai7oxrjj5c'],
+    id: [9],
+    name: ['non ali'],
+    slug: ['_-ef'],
   };
-  const owMapGameMode = OwMapGameMode.Assault;
+  const owMapGameMode = OwMapGameMode.ASSAULT;
 
   const range: RangeOverOwMaps = {
     gameMode: [owMapGameMode],
-    id: [6],
-    name: ['magna ess'],
-    slug: ['2'],
+    id: [7],
+    name: ['velit dolore '],
+    slug: ['yt198m9'],
   };
-  const owMapGameMode = OwMapGameMode.Assault;
+  const owMapGameMode = OwMapGameMode.ASSAULT;
 
   const search: SearchOverOwMaps = {
     gameMode: owMapGameMode,
-    name: 'id fugiat t',
-    slug: '7jd1r8oey',
+    name: 'ex non',
+    slug: 'f0q7_cwqkau',
   };
   const page = 1;
 
@@ -97,14 +104,14 @@ Get a single map by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { OwMapIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const owMapIdOrSlug = 4;
+  const owMapIdOrSlug = 5;
 
   const { data } = await pandascoreClient.owMaps.getOwMapsOwMapIdOrSlug();
 
