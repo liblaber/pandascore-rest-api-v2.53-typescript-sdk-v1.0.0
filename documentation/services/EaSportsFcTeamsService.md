@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverFifaTeams = {
-    acronym: ['eiusmod nos'],
-    id: [6],
-    location: ['dolor'],
-    modifiedAt: ['commo'],
-    name: ['Excepteu'],
-    slug: ['3po9l'],
+  const filterOverFifaTeams: FilterOverFifaTeams = {
+    acronym: ['nostrud in vel'],
+    id: [10],
+    location: ['reprehenderit t'],
+    modifiedAt: ['consectetur cil'],
+    name: ['quis Lor'],
+    slug: ['d3c'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverFifaTeams = {
-    acronym: ['nostrud laborum'],
-    id: [9],
-    location: ['culpa sit et do'],
-    modifiedAt: ['et reprehend'],
-    name: ['laborum aliqui'],
-    slug: ['ev'],
+  const rangeOverFifaTeams: RangeOverFifaTeams = {
+    acronym: ['minim '],
+    id: [6],
+    location: ['Duis in'],
+    modifiedAt: ['ut cu'],
+    name: ['consectetur '],
+    slug: ['o4l8d'],
   };
 
-  const search: SearchOverFifaTeams = {
-    acronym: 'Lorem nisi v',
-    location: 'pariatur dolo',
-    name: 'incidid',
-    slug: 'm3zn',
+  const searchOverFifaTeams: SearchOverFifaTeams = {
+    acronym: 'labore',
+    location: 'minim ullamco c',
+    name: 'quilaboris',
+    slug: '9ch1_rro',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcTeams.getFifaTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaTeams,
+    range: rangeOverFifaTeams,
     sort: [[]],
-    search: search,
+    search: searchOverFifaTeams,
     page: page,
     perPage: 50,
   });

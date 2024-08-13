@@ -36,7 +36,6 @@ List tournaments for the PUBG videogame
 ```typescript
 import {
   FilterOverPubgShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverPubgShortTournamentsVideogameTitle = 6;
+  const filterOverPubgShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgShortTournaments = {
-    beginAt: ['volupt'],
+  const filterOverPubgShortTournaments: FilterOverPubgShortTournaments = {
+    beginAt: ['velit ad'],
     detailedStats: true,
-    endAt: ['qui'],
+    endAt: ['aute'],
     hasBracket: true,
     id: [2],
     liveSupported: true,
-    modifiedAt: ['dolor et nisi'],
-    name: ['nisi d'],
-    prizepool: ['ut in ex '],
-    serieId: [4],
-    slug: ['0dh6'],
+    modifiedAt: ['commodo Duis'],
+    name: ['ipsum in'],
+    prizepool: ['dolor'],
+    serieId: [2],
+    slug: ['3yb3sgap'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverPubgShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgShortTournaments = {
-    beginAt: ['aliqua magna i'],
+  const rangeOverPubgShortTournaments: RangeOverPubgShortTournaments = {
+    beginAt: ['exercitat'],
     detailedStats: [true],
-    endAt: ['qui magna o'],
+    endAt: ['eni'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['nisi deser'],
-    name: ['est n'],
-    prizepool: ['veniam eiusmod'],
-    serieId: [8],
-    slug: ['ix'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['mini'],
+    name: ['non cupidata'],
+    prizepool: ['voluptate'],
+    serieId: [10],
+    slug: ['3u'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgShortTournaments = {
-    name: 'nisiqui sit',
-    prizepool: 'dolor o',
-    slug: 'w3ghtl',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverPubgShortTournaments: SearchOverPubgShortTournaments = {
+    name: 'esseproiden',
+    prizepool: 'proident ',
+    slug: '9qflxpoj',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgTournaments.getPubgTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgShortTournaments,
+    range: rangeOverPubgShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverPubgShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past PUBG tournaments
 ```typescript
 import {
   FilterOverPubgShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverPubgShortTournamentsVideogameTitle = 6;
+  const filterOverPubgShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgShortTournaments = {
-    beginAt: ['volupt'],
+  const filterOverPubgShortTournaments: FilterOverPubgShortTournaments = {
+    beginAt: ['velit ad'],
     detailedStats: true,
-    endAt: ['qui'],
+    endAt: ['aute'],
     hasBracket: true,
     id: [2],
     liveSupported: true,
-    modifiedAt: ['dolor et nisi'],
-    name: ['nisi d'],
-    prizepool: ['ut in ex '],
-    serieId: [4],
-    slug: ['0dh6'],
+    modifiedAt: ['commodo Duis'],
+    name: ['ipsum in'],
+    prizepool: ['dolor'],
+    serieId: [2],
+    slug: ['3yb3sgap'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverPubgShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgShortTournaments = {
-    beginAt: ['aliqua magna i'],
+  const rangeOverPubgShortTournaments: RangeOverPubgShortTournaments = {
+    beginAt: ['exercitat'],
     detailedStats: [true],
-    endAt: ['qui magna o'],
+    endAt: ['eni'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['nisi deser'],
-    name: ['est n'],
-    prizepool: ['veniam eiusmod'],
-    serieId: [8],
-    slug: ['ix'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['mini'],
+    name: ['non cupidata'],
+    prizepool: ['voluptate'],
+    serieId: [10],
+    slug: ['3u'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgShortTournaments = {
-    name: 'nisiqui sit',
-    prizepool: 'dolor o',
-    slug: 'w3ghtl',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverPubgShortTournaments: SearchOverPubgShortTournaments = {
+    name: 'esseproiden',
+    prizepool: 'proident ',
+    slug: '9qflxpoj',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgTournaments.getPubgTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgShortTournaments,
+    range: rangeOverPubgShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverPubgShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running PUBG tournaments
 ```typescript
 import {
   FilterOverPubgShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverPubgShortTournamentsVideogameTitle = 6;
+  const filterOverPubgShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgShortTournaments = {
-    beginAt: ['volupt'],
+  const filterOverPubgShortTournaments: FilterOverPubgShortTournaments = {
+    beginAt: ['velit ad'],
     detailedStats: true,
-    endAt: ['qui'],
+    endAt: ['aute'],
     hasBracket: true,
     id: [2],
     liveSupported: true,
-    modifiedAt: ['dolor et nisi'],
-    name: ['nisi d'],
-    prizepool: ['ut in ex '],
-    serieId: [4],
-    slug: ['0dh6'],
+    modifiedAt: ['commodo Duis'],
+    name: ['ipsum in'],
+    prizepool: ['dolor'],
+    serieId: [2],
+    slug: ['3yb3sgap'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverPubgShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgShortTournaments = {
-    beginAt: ['aliqua magna i'],
+  const rangeOverPubgShortTournaments: RangeOverPubgShortTournaments = {
+    beginAt: ['exercitat'],
     detailedStats: [true],
-    endAt: ['qui magna o'],
+    endAt: ['eni'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['nisi deser'],
-    name: ['est n'],
-    prizepool: ['veniam eiusmod'],
-    serieId: [8],
-    slug: ['ix'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['mini'],
+    name: ['non cupidata'],
+    prizepool: ['voluptate'],
+    serieId: [10],
+    slug: ['3u'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgShortTournaments = {
-    name: 'nisiqui sit',
-    prizepool: 'dolor o',
-    slug: 'w3ghtl',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverPubgShortTournaments: SearchOverPubgShortTournaments = {
+    name: 'esseproiden',
+    prizepool: 'proident ',
+    slug: '9qflxpoj',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgTournaments.getPubgTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgShortTournaments,
+    range: rangeOverPubgShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverPubgShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming PUBG tournaments
 ```typescript
 import {
   FilterOverPubgShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverPubgShortTournamentsVideogameTitle = 6;
+  const filterOverPubgShortTournamentsVideogameTitle = 4;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgShortTournaments = {
-    beginAt: ['volupt'],
+  const filterOverPubgShortTournaments: FilterOverPubgShortTournaments = {
+    beginAt: ['velit ad'],
     detailedStats: true,
-    endAt: ['qui'],
+    endAt: ['aute'],
     hasBracket: true,
     id: [2],
     liveSupported: true,
-    modifiedAt: ['dolor et nisi'],
-    name: ['nisi d'],
-    prizepool: ['ut in ex '],
-    serieId: [4],
-    slug: ['0dh6'],
+    modifiedAt: ['commodo Duis'],
+    name: ['ipsum in'],
+    prizepool: ['dolor'],
+    serieId: [2],
+    slug: ['3yb3sgap'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverPubgShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgShortTournaments = {
-    beginAt: ['aliqua magna i'],
+  const rangeOverPubgShortTournaments: RangeOverPubgShortTournaments = {
+    beginAt: ['exercitat'],
     detailedStats: [true],
-    endAt: ['qui magna o'],
+    endAt: ['eni'],
     hasBracket: [true],
-    id: [4],
-    modifiedAt: ['nisi deser'],
-    name: ['est n'],
-    prizepool: ['veniam eiusmod'],
-    serieId: [8],
-    slug: ['ix'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['mini'],
+    name: ['non cupidata'],
+    prizepool: ['voluptate'],
+    serieId: [10],
+    slug: ['3u'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgShortTournaments = {
-    name: 'nisiqui sit',
-    prizepool: 'dolor o',
-    slug: 'w3ghtl',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverPubgShortTournaments: SearchOverPubgShortTournaments = {
+    name: 'esseproiden',
+    prizepool: 'proident ',
+    slug: '9qflxpoj',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgTournaments.getPubgTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgShortTournaments,
+    range: rangeOverPubgShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverPubgShortTournaments,
     page: page,
     perPage: 50,
   });

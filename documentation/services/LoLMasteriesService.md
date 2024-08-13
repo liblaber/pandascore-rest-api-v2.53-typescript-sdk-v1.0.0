@@ -45,26 +45,26 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLMasteries = {
-    id: [1],
-    name: ['incid'],
+  const filterOverLoLMasteries: FilterOverLoLMasteries = {
+    id: [4],
+    name: ['sunt velit'],
   };
 
-  const range: RangeOverLoLMasteries = {
-    id: [2],
-    name: ['sintaut'],
+  const rangeOverLoLMasteries: RangeOverLoLMasteries = {
+    id: [3],
+    name: ['mollit pa'],
   };
 
-  const search: SearchOverLoLMasteries = {
-    name: 'occaecat vo',
+  const searchOverLoLMasteries: SearchOverLoLMasteries = {
+    name: 'eiusmod',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLMasteries.getLolMasteries({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLMasteries,
+    range: rangeOverLoLMasteries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLMasteries,
     page: page,
     perPage: 50,
   });
@@ -100,7 +100,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLMasteries.getLolMasteriesLolMasteryId(3);
+  const { data } = await pandascoreClient.loLMasteries.getLolMasteriesLolMasteryId(10);
 
   console.log(data);
 })();

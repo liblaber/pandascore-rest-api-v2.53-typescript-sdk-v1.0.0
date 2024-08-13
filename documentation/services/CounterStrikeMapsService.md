@@ -39,29 +39,29 @@ import { FilterOverCsgoMaps, Page, PandascoreClient, RangeOverCsgoMaps, SearchOv
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCsgoMaps = {
-    id: [2],
-    name: ['cillum ut'],
-    slug: ['70'],
+  const filterOverCsgoMaps: FilterOverCsgoMaps = {
+    id: [1],
+    name: ['quiminim in de'],
+    slug: ['l27p'],
   };
 
-  const range: RangeOverCsgoMaps = {
-    id: [4],
-    name: ['dolor e'],
-    slug: ['uhd'],
+  const rangeOverCsgoMaps: RangeOverCsgoMaps = {
+    id: [9],
+    name: ['cupida'],
+    slug: ['k-4qt'],
   };
 
-  const search: SearchOverCsgoMaps = {
-    name: 'in veli',
-    slug: 'l7kkh',
+  const searchOverCsgoMaps: SearchOverCsgoMaps = {
+    name: 'fugiat culpa',
+    slug: 'sw_b',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMaps({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMaps,
+    range: rangeOverCsgoMaps,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMaps,
     page: page,
     perPage: 50,
   });
@@ -97,7 +97,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(1);
+  const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMapsCsgoMapId(2);
 
   console.log(data);
 })();

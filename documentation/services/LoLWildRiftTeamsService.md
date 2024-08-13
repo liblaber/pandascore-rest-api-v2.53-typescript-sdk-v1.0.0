@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverLolWildRiftTeams = {
-    acronym: ['consequa'],
-    id: [10],
-    location: ['in dolor lab'],
-    modifiedAt: ['a'],
-    name: ['anim adipisi'],
-    slug: ['8t5k3j'],
+  const filterOverLolWildRiftTeams: FilterOverLolWildRiftTeams = {
+    acronym: ['nulla'],
+    id: [4],
+    location: ['ut cul'],
+    modifiedAt: ['Lorem'],
+    name: ['eu anim'],
+    slug: ['smkajitdf56'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverLolWildRiftTeams = {
-    acronym: ['est nisi'],
-    id: [8],
-    location: ['adveniam comm'],
-    modifiedAt: ['velit dolor'],
-    name: ['offici'],
-    slug: ['vz5cmwedp'],
+  const rangeOverLolWildRiftTeams: RangeOverLolWildRiftTeams = {
+    acronym: ['dolore aute '],
+    id: [4],
+    location: ['mollit'],
+    modifiedAt: ['proident sun'],
+    name: ['tempor labore e'],
+    slug: ['qwl4m2'],
   };
 
-  const search: SearchOverLolWildRiftTeams = {
-    acronym: 'incidi',
-    location: 'dolore qui',
-    name: 'Ut sunt',
-    slug: 'c3tvwcn',
+  const searchOverLolWildRiftTeams: SearchOverLolWildRiftTeams = {
+    acronym: 'et commodo a',
+    location: 'minim',
+    name: 'labore',
+    slug: 'jlv',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverLolWildRiftTeams,
+    range: rangeOverLolWildRiftTeams,
     sort: [[]],
-    search: search,
+    search: searchOverLolWildRiftTeams,
     page: page,
     perPage: 50,
   });

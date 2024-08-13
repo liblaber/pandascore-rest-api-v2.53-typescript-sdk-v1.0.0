@@ -36,7 +36,6 @@ List series for the EA Sports FC videogame
 ```typescript
 import {
   FilterOverFifaSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -49,58 +48,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 1;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
-    beginAt: ['veniam mi'],
-    endAt: ['ut '],
-    id: [6],
-    leagueId: [10],
-    modifiedAt: ['ipsum rep'],
-    name: ['officia dese'],
-    season: ['laboris Ut dolo'],
-    slug: ['ipfkj'],
+  const filterOverFifaSeries: FilterOverFifaSeries = {
+    beginAt: ['pariat'],
+    endAt: ['n'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
-    beginAt: ['mi'],
-    endAt: ['ut'],
-    id: [9],
-    leagueId: [6],
-    modifiedAt: ['ess'],
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
+    id: [6],
+    leagueId: [8],
+    modifiedAt: ['qui consequat'],
     name: ['nulla'],
-    season: ['commodo dolor'],
-    slug: ['fj-s'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    season: ['occaecat enim'],
+    slug: ['dw'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
-    name: 'in eu',
-    season: 'dolor voluptat',
-    slug: 'em',
-    winnerType: opponentType,
+  const searchOverFifaSeries: SearchOverFifaSeries = {
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -136,7 +135,6 @@ List past EA Sports FC series
 ```typescript
 import {
   FilterOverFifaSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -149,58 +147,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 1;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
-    beginAt: ['veniam mi'],
-    endAt: ['ut '],
-    id: [6],
-    leagueId: [10],
-    modifiedAt: ['ipsum rep'],
-    name: ['officia dese'],
-    season: ['laboris Ut dolo'],
-    slug: ['ipfkj'],
+  const filterOverFifaSeries: FilterOverFifaSeries = {
+    beginAt: ['pariat'],
+    endAt: ['n'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
-    beginAt: ['mi'],
-    endAt: ['ut'],
-    id: [9],
-    leagueId: [6],
-    modifiedAt: ['ess'],
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
+    id: [6],
+    leagueId: [8],
+    modifiedAt: ['qui consequat'],
     name: ['nulla'],
-    season: ['commodo dolor'],
-    slug: ['fj-s'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    season: ['occaecat enim'],
+    slug: ['dw'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
-    name: 'in eu',
-    season: 'dolor voluptat',
-    slug: 'em',
-    winnerType: opponentType,
+  const searchOverFifaSeries: SearchOverFifaSeries = {
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -236,7 +234,6 @@ List running EA Sports FC series
 ```typescript
 import {
   FilterOverFifaSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -249,58 +246,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 1;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
-    beginAt: ['veniam mi'],
-    endAt: ['ut '],
-    id: [6],
-    leagueId: [10],
-    modifiedAt: ['ipsum rep'],
-    name: ['officia dese'],
-    season: ['laboris Ut dolo'],
-    slug: ['ipfkj'],
+  const filterOverFifaSeries: FilterOverFifaSeries = {
+    beginAt: ['pariat'],
+    endAt: ['n'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
-    beginAt: ['mi'],
-    endAt: ['ut'],
-    id: [9],
-    leagueId: [6],
-    modifiedAt: ['ess'],
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
+    id: [6],
+    leagueId: [8],
+    modifiedAt: ['qui consequat'],
     name: ['nulla'],
-    season: ['commodo dolor'],
-    slug: ['fj-s'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    season: ['occaecat enim'],
+    slug: ['dw'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
-    name: 'in eu',
-    season: 'dolor voluptat',
-    slug: 'em',
-    winnerType: opponentType,
+  const searchOverFifaSeries: SearchOverFifaSeries = {
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -336,7 +333,6 @@ List upcoming EA Sports FC series
 ```typescript
 import {
   FilterOverFifaSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -349,58 +345,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverFifaSeriesVideogameTitle = 1;
+  const filterOverFifaSeriesVideogameTitle = 8;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
-    beginAt: ['veniam mi'],
-    endAt: ['ut '],
-    id: [6],
-    leagueId: [10],
-    modifiedAt: ['ipsum rep'],
-    name: ['officia dese'],
-    season: ['laboris Ut dolo'],
-    slug: ['ipfkj'],
+  const filterOverFifaSeries: FilterOverFifaSeries = {
+    beginAt: ['pariat'],
+    endAt: ['n'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['elit '],
+    name: ['commo'],
+    season: ['cillum a'],
+    slug: ['mj-4az6h8u'],
     videogameTitle: [filterOverFifaSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
-    beginAt: ['mi'],
-    endAt: ['ut'],
-    id: [9],
-    leagueId: [6],
-    modifiedAt: ['ess'],
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
+    beginAt: ['qui nu'],
+    endAt: ['nulla elit '],
+    id: [6],
+    leagueId: [8],
+    modifiedAt: ['qui consequat'],
     name: ['nulla'],
-    season: ['commodo dolor'],
-    slug: ['fj-s'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    season: ['occaecat enim'],
+    slug: ['dw'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
-    name: 'in eu',
-    season: 'dolor voluptat',
-    slug: 'em',
-    winnerType: opponentType,
+  const searchOverFifaSeries: SearchOverFifaSeries = {
+    name: 'sed do',
+    season: 'cillum d',
+    slug: 'ou',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });

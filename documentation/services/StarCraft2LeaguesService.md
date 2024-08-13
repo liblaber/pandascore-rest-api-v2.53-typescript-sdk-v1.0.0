@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverStarcraft2Leagues = {
-    id: [10],
-    modifiedAt: ['consectetur nis'],
-    name: ['laborum eiusmod'],
-    slug: ['69n7ht1w'],
-    url: ['Excepteur fugi'],
+  const filterOverStarcraft2Leagues: FilterOverStarcraft2Leagues = {
+    id: [4],
+    modifiedAt: ['ad'],
+    name: ['utex est'],
+    slug: ['luoez'],
+    url: ['consequat '],
   };
 
-  const range: RangeOverStarcraft2Leagues = {
-    id: [2],
-    modifiedAt: ['irure no'],
-    name: ['adipisicing '],
-    slug: ['hylnx'],
-    url: ['quis sit'],
+  const rangeOverStarcraft2Leagues: RangeOverStarcraft2Leagues = {
+    id: [7],
+    modifiedAt: ['et ex in'],
+    name: ['consectetur e'],
+    slug: ['q'],
+    url: ['veniam ut c'],
   };
 
-  const search: SearchOverStarcraft2Leagues = {
-    name: 'incididunt',
-    slug: '-z5:lwi',
-    url: 'mollit',
+  const searchOverStarcraft2Leagues: SearchOverStarcraft2Leagues = {
+    name: 'in ei',
+    slug: 'kb1dlt',
+    url: 'aute ',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Leagues.getStarcraft2Leagues({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Leagues,
+    range: rangeOverStarcraft2Leagues,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Leagues,
     page: page,
     perPage: 50,
   });

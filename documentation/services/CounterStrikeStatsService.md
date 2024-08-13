@@ -41,7 +41,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersStats();
 
@@ -76,8 +76,8 @@ import { MatchIdOrSlug, PandascoreClient, PlayerIdOrSlug } from 'pandascore_clie
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
-const playerIdOrSlug = 3;
+  const matchIdOrSlug = 5;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -115,7 +115,7 @@ import { MatchIdOrSlug, PandascoreClient, TeamIdOrSlug } from 'pandascore_client
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
@@ -156,13 +156,13 @@ import { PandascoreClient, PlayerIdOrSlug, VideogameTitleIdOrSlug } from 'pandas
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 3;
-const videogameTitleIdOrSlug = 7;
+  const playerIdOrSlug = 9;
+const videogameTitleIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoPlayersPlayerIdOrSlugStats(
   ,
   {
-		videogameTitle: videogameTitle,
+		videogameTitle: videogameTitleIdOrSlug,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -199,8 +199,8 @@ import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_clie
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const playerIdOrSlug = 3;
+  const serieIdOrSlug = 10;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -238,7 +238,7 @@ import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug } from 'pandascore_client
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
@@ -280,12 +280,12 @@ import { PandascoreClient, TeamIdOrSlug, VideogameTitleIdOrSlug } from 'pandasco
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const videogameTitleIdOrSlug = 7;
+const videogameTitleIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTeamsTeamIdOrSlugStats(
   ,
   {
-		videogameTitle: videogameTitle,
+		videogameTitle: videogameTitleIdOrSlug,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -322,8 +322,8 @@ import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
-const playerIdOrSlug = 3;
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -361,7 +361,7 @@ import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug } from 'pandascore_c
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
+  const tournamentIdOrSlug = 2;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.counterStrikeStats.getCsgoTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(

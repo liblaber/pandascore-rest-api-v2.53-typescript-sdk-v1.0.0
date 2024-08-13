@@ -36,7 +36,6 @@ List series for the Rainbow Six Siege videogame
 ```typescript
 import {
   FilterOverR6SiegeSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -49,58 +48,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverR6SiegeSeriesVideogameTitle = 3;
+  const filterOverR6SiegeSeriesVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeSeries = {
-    beginAt: ['reprehende'],
-    endAt: ['dolore vol'],
-    id: [3],
-    leagueId: [9],
-    modifiedAt: ['velit'],
-    name: ['dolor sint'],
-    season: ['Lorem ut cul'],
-    slug: ['76vjcgm'],
+  const filterOverR6SiegeSeries: FilterOverR6SiegeSeries = {
+    beginAt: ['Ut'],
+    endAt: ['velit veniam'],
+    id: [10],
+    leagueId: [10],
+    modifiedAt: ['est minim eu Lo'],
+    name: ['sedut qui ma'],
+    season: ['ut sunt culpa'],
+    slug: ['bv9nvys'],
     videogameTitle: [filterOverR6SiegeSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeSeries = {
-    beginAt: ['dolor'],
-    endAt: ['re'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['i'],
-    name: ['sed sit f'],
-    season: ['in labo'],
-    slug: ['w'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverR6SiegeSeries: RangeOverR6SiegeSeries = {
+    beginAt: ['repreh'],
+    endAt: ['ex'],
+    id: [9],
+    leagueId: [4],
+    modifiedAt: ['elit et anim'],
+    name: ['culpa o'],
+    season: ['cillum aute ali'],
+    slug: ['sqp'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeSeries = {
-    name: 'fugiat dolor',
-    season: 'eiusmod e',
-    slug: 'bt',
-    winnerType: opponentType,
+  const searchOverR6SiegeSeries: SearchOverR6SiegeSeries = {
+    name: 'irure in',
+    season: 'ut pariatu',
+    slug: 'ey3',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeSeries.getR6siegeSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeSeries,
+    range: rangeOverR6SiegeSeries,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeSeries,
     page: page,
     perPage: 50,
   });
@@ -136,7 +135,6 @@ List past Rainbow Six Siege series
 ```typescript
 import {
   FilterOverR6SiegeSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -149,58 +147,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverR6SiegeSeriesVideogameTitle = 3;
+  const filterOverR6SiegeSeriesVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeSeries = {
-    beginAt: ['reprehende'],
-    endAt: ['dolore vol'],
-    id: [3],
-    leagueId: [9],
-    modifiedAt: ['velit'],
-    name: ['dolor sint'],
-    season: ['Lorem ut cul'],
-    slug: ['76vjcgm'],
+  const filterOverR6SiegeSeries: FilterOverR6SiegeSeries = {
+    beginAt: ['Ut'],
+    endAt: ['velit veniam'],
+    id: [10],
+    leagueId: [10],
+    modifiedAt: ['est minim eu Lo'],
+    name: ['sedut qui ma'],
+    season: ['ut sunt culpa'],
+    slug: ['bv9nvys'],
     videogameTitle: [filterOverR6SiegeSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeSeries = {
-    beginAt: ['dolor'],
-    endAt: ['re'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['i'],
-    name: ['sed sit f'],
-    season: ['in labo'],
-    slug: ['w'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverR6SiegeSeries: RangeOverR6SiegeSeries = {
+    beginAt: ['repreh'],
+    endAt: ['ex'],
+    id: [9],
+    leagueId: [4],
+    modifiedAt: ['elit et anim'],
+    name: ['culpa o'],
+    season: ['cillum aute ali'],
+    slug: ['sqp'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeSeries = {
-    name: 'fugiat dolor',
-    season: 'eiusmod e',
-    slug: 'bt',
-    winnerType: opponentType,
+  const searchOverR6SiegeSeries: SearchOverR6SiegeSeries = {
+    name: 'irure in',
+    season: 'ut pariatu',
+    slug: 'ey3',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeSeries.getR6siegeSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeSeries,
+    range: rangeOverR6SiegeSeries,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeSeries,
     page: page,
     perPage: 50,
   });
@@ -236,7 +234,6 @@ List running Rainbow Six Siege series
 ```typescript
 import {
   FilterOverR6SiegeSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -249,58 +246,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverR6SiegeSeriesVideogameTitle = 3;
+  const filterOverR6SiegeSeriesVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeSeries = {
-    beginAt: ['reprehende'],
-    endAt: ['dolore vol'],
-    id: [3],
-    leagueId: [9],
-    modifiedAt: ['velit'],
-    name: ['dolor sint'],
-    season: ['Lorem ut cul'],
-    slug: ['76vjcgm'],
+  const filterOverR6SiegeSeries: FilterOverR6SiegeSeries = {
+    beginAt: ['Ut'],
+    endAt: ['velit veniam'],
+    id: [10],
+    leagueId: [10],
+    modifiedAt: ['est minim eu Lo'],
+    name: ['sedut qui ma'],
+    season: ['ut sunt culpa'],
+    slug: ['bv9nvys'],
     videogameTitle: [filterOverR6SiegeSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeSeries = {
-    beginAt: ['dolor'],
-    endAt: ['re'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['i'],
-    name: ['sed sit f'],
-    season: ['in labo'],
-    slug: ['w'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverR6SiegeSeries: RangeOverR6SiegeSeries = {
+    beginAt: ['repreh'],
+    endAt: ['ex'],
+    id: [9],
+    leagueId: [4],
+    modifiedAt: ['elit et anim'],
+    name: ['culpa o'],
+    season: ['cillum aute ali'],
+    slug: ['sqp'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeSeries = {
-    name: 'fugiat dolor',
-    season: 'eiusmod e',
-    slug: 'bt',
-    winnerType: opponentType,
+  const searchOverR6SiegeSeries: SearchOverR6SiegeSeries = {
+    name: 'irure in',
+    season: 'ut pariatu',
+    slug: 'ey3',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeSeries.getR6siegeSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeSeries,
+    range: rangeOverR6SiegeSeries,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeSeries,
     page: page,
     perPage: 50,
   });
@@ -336,7 +333,6 @@ List upcoming Rainbow Six Siege series
 ```typescript
 import {
   FilterOverR6SiegeSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -349,58 +345,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverR6SiegeSeriesVideogameTitle = 3;
+  const filterOverR6SiegeSeriesVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeSeries = {
-    beginAt: ['reprehende'],
-    endAt: ['dolore vol'],
-    id: [3],
-    leagueId: [9],
-    modifiedAt: ['velit'],
-    name: ['dolor sint'],
-    season: ['Lorem ut cul'],
-    slug: ['76vjcgm'],
+  const filterOverR6SiegeSeries: FilterOverR6SiegeSeries = {
+    beginAt: ['Ut'],
+    endAt: ['velit veniam'],
+    id: [10],
+    leagueId: [10],
+    modifiedAt: ['est minim eu Lo'],
+    name: ['sedut qui ma'],
+    season: ['ut sunt culpa'],
+    slug: ['bv9nvys'],
     videogameTitle: [filterOverR6SiegeSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeSeries = {
-    beginAt: ['dolor'],
-    endAt: ['re'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['i'],
-    name: ['sed sit f'],
-    season: ['in labo'],
-    slug: ['w'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverR6SiegeSeries: RangeOverR6SiegeSeries = {
+    beginAt: ['repreh'],
+    endAt: ['ex'],
+    id: [9],
+    leagueId: [4],
+    modifiedAt: ['elit et anim'],
+    name: ['culpa o'],
+    season: ['cillum aute ali'],
+    slug: ['sqp'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeSeries = {
-    name: 'fugiat dolor',
-    season: 'eiusmod e',
-    slug: 'bt',
-    winnerType: opponentType,
+  const searchOverR6SiegeSeries: SearchOverR6SiegeSeries = {
+    name: 'irure in',
+    season: 'ut pariatu',
+    slug: 'ey3',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeSeries.getR6siegeSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeSeries,
+    range: rangeOverR6SiegeSeries,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeSeries,
     page: page,
     perPage: 50,
   });

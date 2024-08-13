@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverKogTeams = {
-    acronym: ['repreh'],
-    id: [6],
-    location: ['consectetur l'],
-    modifiedAt: ['adipisici'],
-    name: ['tempor '],
-    slug: ['dkfwxe0h'],
+  const filterOverKogTeams: FilterOverKogTeams = {
+    acronym: ['ea ut'],
+    id: [8],
+    location: ['ea Duis s'],
+    modifiedAt: ['labore'],
+    name: ['dolor vo'],
+    slug: ['cur_6z'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverKogTeams = {
-    acronym: ['anim cillum'],
-    id: [9],
-    location: ['deserunt E'],
-    modifiedAt: ['dolor'],
-    name: ['inid mini'],
-    slug: ['4f'],
+  const rangeOverKogTeams: RangeOverKogTeams = {
+    acronym: ['do adipis'],
+    id: [5],
+    location: ['Duis '],
+    modifiedAt: ['dolore'],
+    name: ['sunt dolore'],
+    slug: ['qwvw'],
   };
 
-  const search: SearchOverKogTeams = {
-    acronym: 'amet eiusmod ',
-    location: 'ad ut eius',
-    name: 'veniam Lore',
-    slug: '3cy',
+  const searchOverKogTeams: SearchOverKogTeams = {
+    acronym: 'paria',
+    location: 'sint anim sed',
+    name: 'reprehenderit ',
+    slug: 'nsoq',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogTeams.getKogTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverKogTeams,
+    range: rangeOverKogTeams,
     sort: [[]],
-    search: search,
+    search: searchOverKogTeams,
     page: page,
     perPage: 50,
   });

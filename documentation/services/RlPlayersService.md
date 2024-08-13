@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverRlPlayers = {
+  const filterOverRlPlayers: FilterOverRlPlayers = {
     active: true,
-    birthday: ['do lab'],
-    firstName: ['quiscupidat'],
-    id: [8],
-    lastName: ['irure'],
-    modifiedAt: ['sun'],
-    name: ['id pariatu'],
-    nationality: ['aute Ut cup'],
-    role: ['Lorem'],
-    slug: ['1gec_sj1s'],
-    teamId: [1],
+    birthday: ['fugia'],
+    firstName: ['ipsum'],
+    id: [5],
+    lastName: ['Utvoluptat'],
+    modifiedAt: ['in rep'],
+    name: ['adipi'],
+    nationality: ['sit sunt null'],
+    role: ['in ex'],
+    slug: ['a'],
+    teamId: [5],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverRlPlayers = {
-    birthday: ['sunt amet '],
-    firstName: ['Lorem'],
-    id: [5],
-    lastName: ['adinlaboru'],
-    modifiedAt: ['incidid'],
-    name: ['anim '],
-    nationality: ['proident '],
-    role: ['ullamco do'],
-    slug: ['7x7'],
+  const rangeOverRlPlayers: RangeOverRlPlayers = {
+    birthday: ['ex voluptate d'],
+    firstName: ['reprehenderi'],
+    id: [2],
+    lastName: ['labore'],
+    modifiedAt: ['do aute adipi'],
+    name: ['nisicommodo'],
+    nationality: ['occaecat '],
+    role: ['minim'],
+    slug: ['htxdf2z4lk'],
   };
 
-  const search: SearchOverRlPlayers = {
-    birthday: 'eu ul',
-    firstName: 'incidi',
-    lastName: 'sed esse commo',
-    name: 'est nostrud d',
-    nationality: 'eu mollit of',
-    role: 'sint nostr',
-    slug: '-aw4woc2v_2',
+  const searchOverRlPlayers: SearchOverRlPlayers = {
+    birthday: 'dolor',
+    firstName: 'adconsequ',
+    lastName: 'sint in lab',
+    name: 'dolore ',
+    nationality: 'culpa',
+    role: 'esse qui ex ',
+    slug: '7cfncmu',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.rlPlayers.getRlPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverRlPlayers,
+    range: rangeOverRlPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverRlPlayers,
     page: page,
     perPage: 50,
   });

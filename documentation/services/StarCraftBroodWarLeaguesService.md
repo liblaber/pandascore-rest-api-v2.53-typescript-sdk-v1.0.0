@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverStarcraftBroodWarLeagues = {
+  const filterOverStarcraftBroodWarLeagues: FilterOverStarcraftBroodWarLeagues = {
     id: [7],
-    modifiedAt: ['enim quis i'],
-    name: ['ullamc'],
-    slug: ['mm'],
-    url: ['aliqua '],
+    modifiedAt: ['magna '],
+    name: ['ea cu'],
+    slug: ['zf_27'],
+    url: ['cillum labore '],
   };
 
-  const range: RangeOverStarcraftBroodWarLeagues = {
-    id: [4],
-    modifiedAt: ['sunt nisi esse'],
-    name: ['Utdoelit adi'],
-    slug: ['50'],
-    url: ['nisielit'],
+  const rangeOverStarcraftBroodWarLeagues: RangeOverStarcraftBroodWarLeagues = {
+    id: [6],
+    modifiedAt: ['reprehender'],
+    name: ['sintelit'],
+    slug: ['xa9vcblu'],
+    url: ['dolore non'],
   };
 
-  const search: SearchOverStarcraftBroodWarLeagues = {
-    name: 'aliqu',
-    slug: 'l_lsj7qb',
-    url: 'ex exercitatio',
+  const searchOverStarcraftBroodWarLeagues: SearchOverStarcraftBroodWarLeagues = {
+    name: 'ex dolore do',
+    slug: '4-9',
+    url: 'nulla ',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarLeagues.getStarcraftBroodWarLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarLeagues,
+    range: rangeOverStarcraftBroodWarLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarLeagues,
     page: page,
     perPage: 50,
   });

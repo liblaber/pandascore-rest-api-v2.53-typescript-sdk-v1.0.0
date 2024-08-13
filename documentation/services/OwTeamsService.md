@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverOwTeams = {
-    acronym: ['voluptate E'],
-    id: [9],
-    location: ['Duis occa'],
-    modifiedAt: ['eiu'],
-    name: ['incididun'],
-    slug: ['0-lgzjvz0i'],
+  const filterOverOwTeams: FilterOverOwTeams = {
+    acronym: ['cupid'],
+    id: [1],
+    location: ['cupidat'],
+    modifiedAt: ['esse nostrud i'],
+    name: ['dolore rep'],
+    slug: ['q'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverOwTeams = {
-    acronym: ['aliquip'],
-    id: [2],
-    location: ['voluptate cul'],
-    modifiedAt: ['do'],
-    name: ['etsed Ut pro'],
-    slug: ['lt0l_rsiu6p'],
+  const rangeOverOwTeams: RangeOverOwTeams = {
+    acronym: ['nulla c'],
+    id: [8],
+    location: ['quis magn'],
+    modifiedAt: ['fu'],
+    name: ['cillum'],
+    slug: ['t2t8'],
   };
 
-  const search: SearchOverOwTeams = {
-    acronym: 'Utnon',
-    location: 'magna',
-    name: 'elit q',
-    slug: 'y-',
+  const searchOverOwTeams: SearchOverOwTeams = {
+    acronym: 'aliquip',
+    location: 'veniam non i',
+    name: 'Lorem',
+    slug: '8kr9',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owTeams.getOwTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverOwTeams,
+    range: rangeOverOwTeams,
     sort: [[]],
-    search: search,
+    search: searchOverOwTeams,
     page: page,
     perPage: 50,
   });

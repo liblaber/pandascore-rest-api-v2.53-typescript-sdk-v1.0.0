@@ -40,14 +40,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverCsgoMatches,
   SearchOverCsgoMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -61,38 +57,38 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverCsgoMatchesVideogameTitle = 10;
+  const filterOverCsgoMatchesVideogameTitle = 4;
 
-  const filterOverCsgoMatchesVideogameVersion = '74923129.023837';
+  const filterOverCsgoMatchesVideogameVersion = '46404802.4461.3142';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverCsgoMatches = {
-    beginAt: ['labore'],
+  const filterOverCsgoMatches: FilterOverCsgoMatches = {
+    beginAt: ['incidi'],
     detailedStats: true,
     draw: true,
-    endAt: ['veniam'],
+    endAt: ['exercita'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
+    id: [3],
     leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['dolor cill'],
-    name: ['ut in'],
+    modifiedAt: ['aliqua'],
+    name: ['aliquip eius'],
     notStarted: true,
     numberOfGames: [10],
     opponentId: [filterOverCsgoMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['non '],
-    serieId: [2],
-    slug: ['Q'],
+    scheduledAt: ['voluptate adipi'],
+    serieId: [5],
+    slug: ['kid'],
     status: [matchStatus],
     tournamentId: [5],
     unscheduled: true,
@@ -102,52 +98,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverCsgoMatches = {
-    beginAt: ['commodo dolore'],
+  const rangeOverCsgoMatches: RangeOverCsgoMatches = {
+    beginAt: ['incididunt ut'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['pr'],
+    endAt: ['in ex aute'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['dolore Ut '],
-    name: ['dolor do'],
-    numberOfGames: [7],
-    scheduledAt: ['ali'],
-    slug: ['S'],
-    status: [matchStatus],
-    tournamentId: [7],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [5],
+    matchType: [matchType1],
+    modifiedAt: ['do'],
+    name: ['adipisici'],
+    numberOfGames: [123],
+    scheduledAt: ['dolor Ut'],
+    slug: ['R37RucjN7s'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverCsgoMatches = {
-    matchType: matchType,
-    name: 'sed labore',
-    slug: 'Xj',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverCsgoMatches: SearchOverCsgoMatches = {
+    matchType: matchType12,
+    name: 'aliqua anim',
+    slug: 'x6lAktgCkB',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMatches.getCsgoMatches({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMatches,
+    range: rangeOverCsgoMatches,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMatches,
     page: page,
     perPage: 50,
   });
@@ -186,14 +182,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverCsgoMatches,
   SearchOverCsgoMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -207,38 +199,38 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverCsgoMatchesVideogameTitle = 10;
+  const filterOverCsgoMatchesVideogameTitle = 4;
 
-  const filterOverCsgoMatchesVideogameVersion = '74923129.023837';
+  const filterOverCsgoMatchesVideogameVersion = '46404802.4461.3142';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverCsgoMatches = {
-    beginAt: ['labore'],
+  const filterOverCsgoMatches: FilterOverCsgoMatches = {
+    beginAt: ['incidi'],
     detailedStats: true,
     draw: true,
-    endAt: ['veniam'],
+    endAt: ['exercita'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
+    id: [3],
     leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['dolor cill'],
-    name: ['ut in'],
+    modifiedAt: ['aliqua'],
+    name: ['aliquip eius'],
     notStarted: true,
     numberOfGames: [10],
     opponentId: [filterOverCsgoMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['non '],
-    serieId: [2],
-    slug: ['Q'],
+    scheduledAt: ['voluptate adipi'],
+    serieId: [5],
+    slug: ['kid'],
     status: [matchStatus],
     tournamentId: [5],
     unscheduled: true,
@@ -248,52 +240,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverCsgoMatches = {
-    beginAt: ['commodo dolore'],
+  const rangeOverCsgoMatches: RangeOverCsgoMatches = {
+    beginAt: ['incididunt ut'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['pr'],
+    endAt: ['in ex aute'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['dolore Ut '],
-    name: ['dolor do'],
-    numberOfGames: [7],
-    scheduledAt: ['ali'],
-    slug: ['S'],
-    status: [matchStatus],
-    tournamentId: [7],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [5],
+    matchType: [matchType1],
+    modifiedAt: ['do'],
+    name: ['adipisici'],
+    numberOfGames: [123],
+    scheduledAt: ['dolor Ut'],
+    slug: ['R37RucjN7s'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverCsgoMatches = {
-    matchType: matchType,
-    name: 'sed labore',
-    slug: 'Xj',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverCsgoMatches: SearchOverCsgoMatches = {
+    matchType: matchType12,
+    name: 'aliqua anim',
+    slug: 'x6lAktgCkB',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMatches.getCsgoMatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMatches,
+    range: rangeOverCsgoMatches,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMatches,
     page: page,
     perPage: 50,
   });
@@ -332,14 +324,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverCsgoMatches,
   SearchOverCsgoMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -353,38 +341,38 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverCsgoMatchesVideogameTitle = 10;
+  const filterOverCsgoMatchesVideogameTitle = 4;
 
-  const filterOverCsgoMatchesVideogameVersion = '74923129.023837';
+  const filterOverCsgoMatchesVideogameVersion = '46404802.4461.3142';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverCsgoMatches = {
-    beginAt: ['labore'],
+  const filterOverCsgoMatches: FilterOverCsgoMatches = {
+    beginAt: ['incidi'],
     detailedStats: true,
     draw: true,
-    endAt: ['veniam'],
+    endAt: ['exercita'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
+    id: [3],
     leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['dolor cill'],
-    name: ['ut in'],
+    modifiedAt: ['aliqua'],
+    name: ['aliquip eius'],
     notStarted: true,
     numberOfGames: [10],
     opponentId: [filterOverCsgoMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['non '],
-    serieId: [2],
-    slug: ['Q'],
+    scheduledAt: ['voluptate adipi'],
+    serieId: [5],
+    slug: ['kid'],
     status: [matchStatus],
     tournamentId: [5],
     unscheduled: true,
@@ -394,52 +382,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverCsgoMatches = {
-    beginAt: ['commodo dolore'],
+  const rangeOverCsgoMatches: RangeOverCsgoMatches = {
+    beginAt: ['incididunt ut'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['pr'],
+    endAt: ['in ex aute'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['dolore Ut '],
-    name: ['dolor do'],
-    numberOfGames: [7],
-    scheduledAt: ['ali'],
-    slug: ['S'],
-    status: [matchStatus],
-    tournamentId: [7],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [5],
+    matchType: [matchType1],
+    modifiedAt: ['do'],
+    name: ['adipisici'],
+    numberOfGames: [123],
+    scheduledAt: ['dolor Ut'],
+    slug: ['R37RucjN7s'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverCsgoMatches = {
-    matchType: matchType,
-    name: 'sed labore',
-    slug: 'Xj',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverCsgoMatches: SearchOverCsgoMatches = {
+    matchType: matchType12,
+    name: 'aliqua anim',
+    slug: 'x6lAktgCkB',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMatches.getCsgoMatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMatches,
+    range: rangeOverCsgoMatches,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMatches,
     page: page,
     perPage: 50,
   });
@@ -478,14 +466,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverCsgoMatches,
   SearchOverCsgoMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -499,38 +483,38 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverCsgoMatchesVideogameTitle = 10;
+  const filterOverCsgoMatchesVideogameTitle = 4;
 
-  const filterOverCsgoMatchesVideogameVersion = '74923129.023837';
+  const filterOverCsgoMatchesVideogameVersion = '46404802.4461.3142';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverCsgoMatches = {
-    beginAt: ['labore'],
+  const filterOverCsgoMatches: FilterOverCsgoMatches = {
+    beginAt: ['incidi'],
     detailedStats: true,
     draw: true,
-    endAt: ['veniam'],
+    endAt: ['exercita'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
+    id: [3],
     leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['dolor cill'],
-    name: ['ut in'],
+    modifiedAt: ['aliqua'],
+    name: ['aliquip eius'],
     notStarted: true,
     numberOfGames: [10],
     opponentId: [filterOverCsgoMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['non '],
-    serieId: [2],
-    slug: ['Q'],
+    scheduledAt: ['voluptate adipi'],
+    serieId: [5],
+    slug: ['kid'],
     status: [matchStatus],
     tournamentId: [5],
     unscheduled: true,
@@ -540,52 +524,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverCsgoMatches = {
-    beginAt: ['commodo dolore'],
+  const rangeOverCsgoMatches: RangeOverCsgoMatches = {
+    beginAt: ['incididunt ut'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['pr'],
+    endAt: ['in ex aute'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['dolore Ut '],
-    name: ['dolor do'],
-    numberOfGames: [7],
-    scheduledAt: ['ali'],
-    slug: ['S'],
-    status: [matchStatus],
-    tournamentId: [7],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [5],
+    matchType: [matchType1],
+    modifiedAt: ['do'],
+    name: ['adipisici'],
+    numberOfGames: [123],
+    scheduledAt: ['dolor Ut'],
+    slug: ['R37RucjN7s'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverCsgoMatches = {
-    matchType: matchType,
-    name: 'sed labore',
-    slug: 'Xj',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverCsgoMatches: SearchOverCsgoMatches = {
+    matchType: matchType12,
+    name: 'aliqua anim',
+    slug: 'x6lAktgCkB',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMatches.getCsgoMatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMatches,
+    range: rangeOverCsgoMatches,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMatches,
     page: page,
     perPage: 50,
   });
@@ -621,7 +605,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.counterStrikeMatches.getCsgoMatchesMatchIdOrSlug();
 

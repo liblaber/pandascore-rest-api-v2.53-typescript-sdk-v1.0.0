@@ -34,7 +34,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.owGames.getOwGamesOwGameId(1);
+  const { data } = await pandascoreClient.owGames.getOwGamesOwGameId(3);
 
   console.log(data);
 })();
@@ -72,60 +72,60 @@ import { FilterOverOwGames, GameStatus, MatchIdOrSlug, OpponentType, Page, Panda
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.FINISHED;
 
 const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverOwGames = {
-  beginAt: ["qu"],
+const filterOverOwGames: FilterOverOwGames = {
+  beginAt: ["e"],
   complete: true,
   detailedStats: true,
-  endAt: ["dolor nulla"],
+  endAt: ["si"],
   finished: true,
   forfeit: true,
-  id: [4],
-  length: [8],
-  matchId: [4],
-  position: [5],
+  id: [6],
+  length: [4],
+  matchId: [10],
+  position: [8],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverOwGames = {
-  beginAt: ["incidid"],
+const rangeOverOwGames: RangeOverOwGames = {
+  beginAt: ["cupidat"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["nostrud"],
+  endAt: ["conse"],
   finished: [true],
   forfeit: [true],
-  id: [3],
+  id: [9],
   length: [2],
-  matchId: [3],
+  matchId: [2],
   position: [6],
-  status: [gameStatus],
-  winnerType: [opponentType]
+  status: [gameStatus1],
+  winnerType: [opponentType1]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus12 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverOwGames = {
-  status: gameStatus,
-  winnerType: opponentType
+const searchOverOwGames: SearchOverOwGames = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.owGames.getOwMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverOwGames,
+		range: rangeOverOwGames,
     sort: [[]],
-		search: search,
+		search: searchOverOwGames,
 		page: page,
     perPage: 50,
   }

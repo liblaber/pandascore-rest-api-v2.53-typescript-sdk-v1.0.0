@@ -45,27 +45,27 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLSpells = {
-    id: [10],
-    name: ['consequa'],
+  const filterOverLoLSpells: FilterOverLoLSpells = {
+    id: [8],
+    name: ['laborum dolor'],
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLSpells = {
-    id: [9],
-    name: ['minim'],
+  const rangeOverLoLSpells: RangeOverLoLSpells = {
+    id: [2],
+    name: ['dolore com'],
   };
 
-  const search: SearchOverLoLSpells = {
-    name: 'Lorem ea eiusmo',
+  const searchOverLoLSpells: SearchOverLoLSpells = {
+    name: 'veniam ea',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSpells.getLolSpells({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSpells,
+    range: rangeOverLoLSpells,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSpells,
     page: page,
     perPage: 50,
   });
@@ -101,7 +101,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLSpells.getLolSpellsLolSpellId(9);
+  const { data } = await pandascoreClient.loLSpells.getLolSpellsLolSpellId(8);
 
   console.log(data);
 })();

@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverValorantTeams = {
-    acronym: ['Lorem '],
-    id: [8],
-    location: ['aliqua labo'],
-    modifiedAt: ['cupi'],
-    name: ['ea ex'],
-    slug: ['le1_0m9'],
+  const filterOverValorantTeams: FilterOverValorantTeams = {
+    acronym: ['laborum sit'],
+    id: [7],
+    location: ['ipsum'],
+    modifiedAt: ['cupidatat'],
+    name: ['proident in c'],
+    slug: ['hk-_38'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverValorantTeams = {
-    acronym: ['deserunt dolo'],
-    id: [9],
-    location: ['reprehender'],
-    modifiedAt: ['ea sunt'],
-    name: ['pariatur exe'],
-    slug: ['bjvs'],
+  const rangeOverValorantTeams: RangeOverValorantTeams = {
+    acronym: ['aute '],
+    id: [4],
+    location: ['elit sed'],
+    modifiedAt: ['mollit aliqua s'],
+    name: ['cillum eius'],
+    slug: ['3js6_bh'],
   };
 
-  const search: SearchOverValorantTeams = {
-    acronym: 'dolor an',
-    location: 'laboris',
-    name: 'innon eu',
-    slug: '8e',
+  const searchOverValorantTeams: SearchOverValorantTeams = {
+    acronym: 'sunt do',
+    location: 'Excepteur',
+    name: 'irure do id',
+    slug: 'z',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantTeams.getValorantTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantTeams,
+    range: rangeOverValorantTeams,
     sort: [[]],
-    search: search,
+    search: searchOverValorantTeams,
     page: page,
     perPage: 50,
   });

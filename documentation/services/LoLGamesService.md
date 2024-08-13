@@ -37,7 +37,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameId(9);
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameId(8);
 
   console.log(data);
 })();
@@ -74,7 +74,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdEvents(8, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdEvents(2, {
     page: page,
     perPage: 50,
   });
@@ -114,7 +114,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdFrames(9, {
+  const { data } = await pandascoreClient.loLGames.getLolGamesLolGameIdFrames(5, {
     page: page,
     perPage: 50,
   });
@@ -155,60 +155,60 @@ import { FilterOverLoLGames, GameStatus, MatchIdOrSlug, OpponentType, Page, Pand
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.FINISHED;
 
 const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverLoLGames = {
-  beginAt: ["consectetur la"],
+const filterOverLoLGames: FilterOverLoLGames = {
+  beginAt: ["eiusmod "],
   complete: true,
   detailedStats: true,
-  endAt: ["temp"],
+  endAt: ["veniam"],
   finished: true,
   forfeit: true,
-  id: [3],
-  length: [3],
-  matchId: [8],
-  position: [9],
-  status: [gameStatus],
-  winnerType: [opponentType]
-};
-const gameStatus = GameStatus.FINISHED;
-
-const opponentType = OpponentType.PLAYER;
-
-const range: RangeOverLoLGames = {
-  beginAt: ["voluptate"],
-  complete: [true],
-  detailedStats: [true],
-  endAt: ["ut"],
-  finished: [true],
-  forfeit: [true],
-  id: [10],
-  length: [6],
-  matchId: [2],
+  id: [5],
+  length: [4],
+  matchId: [7],
   position: [6],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType1 = OpponentType.PLAYER;
 
-const search: SearchOverLoLGames = {
-  status: gameStatus,
-  winnerType: opponentType
+const rangeOverLoLGames: RangeOverLoLGames = {
+  beginAt: ["velit l"],
+  complete: [true],
+  detailedStats: [true],
+  endAt: ["consequat sin"],
+  finished: [true],
+  forfeit: [true],
+  id: [5],
+  length: [3],
+  matchId: [7],
+  position: [2],
+  status: [gameStatus1],
+  winnerType: [opponentType1]
+};
+const gameStatus12 = GameStatus.FINISHED;
+
+const opponentType12 = OpponentType.PLAYER;
+
+const searchOverLoLGames: SearchOverLoLGames = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.loLGames.getLolMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverLoLGames,
+		range: rangeOverLoLGames,
     sort: [[]],
-		search: search,
+		search: searchOverLoLGames,
 		page: page,
     perPage: 50,
   }
@@ -255,55 +255,55 @@ const gameStatus = GameStatus.FINISHED;
 
 const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverLoLTeamLastGames = {
-  beginAt: ["commodo co"],
+const filterOverLoLTeamLastGames: FilterOverLoLTeamLastGames = {
+  beginAt: ["ut cillum Exc"],
   complete: true,
   detailedStats: true,
-  endAt: ["velit commodo"],
+  endAt: ["cillum id nul"],
   finished: true,
   forfeit: true,
-  id: [1],
-  length: [4],
+  id: [6],
+  length: [7],
   matchId: [1],
-  position: [3],
+  position: [8],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverLoLTeamLastGames = {
-  beginAt: ["non enim"],
+const rangeOverLoLTeamLastGames: RangeOverLoLTeamLastGames = {
+  beginAt: ["el"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["quis amet in "],
+  endAt: ["labor"],
   finished: [true],
   forfeit: [true],
-  id: [2],
-  length: [8],
-  matchId: [4],
-  position: [7],
-  status: [gameStatus],
-  winnerType: [opponentType]
+  id: [6],
+  length: [9],
+  matchId: [7],
+  position: [4],
+  status: [gameStatus1],
+  winnerType: [opponentType1]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus12 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverLoLTeamLastGames = {
-  status: gameStatus,
-  winnerType: opponentType
+const searchOverLoLTeamLastGames: SearchOverLoLTeamLastGames = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.loLGames.getLolTeamsTeamIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverLoLTeamLastGames,
+		range: rangeOverLoLTeamLastGames,
     sort: [[]],
-		search: search,
+		search: searchOverLoLTeamLastGames,
 		page: page,
     perPage: 50,
   }

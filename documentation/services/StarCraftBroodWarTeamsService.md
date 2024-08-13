@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverStarcraftBroodWarTeams = {
-    acronym: ['estipsum'],
-    id: [7],
-    location: ['tempo'],
-    modifiedAt: ['est'],
-    name: ['adipisici'],
-    slug: ['3lhpb4'],
+  const filterOverStarcraftBroodWarTeams: FilterOverStarcraftBroodWarTeams = {
+    acronym: ['sint co'],
+    id: [8],
+    location: ['ut dolo'],
+    modifiedAt: ['iru'],
+    name: ['cillum e'],
+    slug: ['m'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverStarcraftBroodWarTeams = {
-    acronym: ['elit eius'],
-    id: [9],
-    location: ['id pariat'],
-    modifiedAt: ['incidi'],
-    name: ['mollit cillum i'],
-    slug: ['6qw_5'],
+  const rangeOverStarcraftBroodWarTeams: RangeOverStarcraftBroodWarTeams = {
+    acronym: ['deserunt a'],
+    id: [3],
+    location: ['sunt aut'],
+    modifiedAt: ['deserunt aute'],
+    name: ['labor'],
+    slug: ['qt3q1roio'],
   };
 
-  const search: SearchOverStarcraftBroodWarTeams = {
-    acronym: 'velit do',
-    location: 'ipsum ',
-    name: 'minim occaecat',
-    slug: 'b',
+  const searchOverStarcraftBroodWarTeams: SearchOverStarcraftBroodWarTeams = {
+    acronym: 'dolore fugia',
+    location: 'dolore cillum',
+    name: 'irure ven',
+    slug: 'j',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarTeams,
+    range: rangeOverStarcraftBroodWarTeams,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarTeams,
     page: page,
     perPage: 50,
   });

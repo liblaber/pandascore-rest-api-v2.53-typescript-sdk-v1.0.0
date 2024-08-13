@@ -4,5 +4,5 @@ import { z } from 'zod';
 
 export enum LoLEventHeraldValue {
   RIFTHERALD = 'Rift Herald',
-  RIFTHERALD = 'riftherald',
+  RIFTHERALD1 = 'riftherald',
 }

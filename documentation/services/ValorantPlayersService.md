@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverValorantPlayers = {
+  const filterOverValorantPlayers: FilterOverValorantPlayers = {
     active: true,
-    birthday: ['ut fugiat ull'],
-    firstName: ['sint pariatur '],
-    id: [10],
-    lastName: ['euid et n'],
-    modifiedAt: ['te'],
-    name: ['deserunt au'],
-    nationality: ['indooccaecat q'],
-    role: ['etLor'],
-    slug: ['9'],
-    teamId: [3],
+    birthday: ['laboris'],
+    firstName: ['tempor'],
+    id: [2],
+    lastName: ['veniam'],
+    modifiedAt: ['Duis ex'],
+    name: ['incididunt '],
+    nationality: ['dolore'],
+    role: ['aliqu'],
+    slug: ['y'],
+    teamId: [2],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverValorantPlayers = {
-    birthday: ['etofficia eni'],
-    firstName: ['laborum do'],
-    id: [2],
-    lastName: ['est Ut consect'],
-    modifiedAt: ['aliquip exer'],
-    name: ['et ea'],
-    nationality: ['fugiat'],
-    role: ['sint sit qui'],
-    slug: ['65il1'],
+  const rangeOverValorantPlayers: RangeOverValorantPlayers = {
+    birthday: ['exercit'],
+    firstName: ['inExce'],
+    id: [8],
+    lastName: ['Lorem labor'],
+    modifiedAt: ['elit id l'],
+    name: ['irure incid'],
+    nationality: ['ullamco '],
+    role: ['fugiat labo'],
+    slug: ['o'],
   };
 
-  const search: SearchOverValorantPlayers = {
-    birthday: 'culpa Ut commo',
-    firstName: 'anim nos',
-    lastName: 'dolore ',
-    name: 'et commodo ir',
-    nationality: 'elit quis ',
-    role: 'deserunt',
-    slug: 'p-',
+  const searchOverValorantPlayers: SearchOverValorantPlayers = {
+    birthday: 'ea moll',
+    firstName: 'officia nulla',
+    lastName: 'labore eiu',
+    name: 'anim eu',
+    nationality: 'aliqua dolor',
+    role: 'consequat ',
+    slug: 'ybj02j05',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantPlayers.getValorantPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantPlayers,
+    range: rangeOverValorantPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverValorantPlayers,
     page: page,
     perPage: 50,
   });

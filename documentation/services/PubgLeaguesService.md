@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverPubgLeagues = {
-    id: [2],
-    modifiedAt: ['do anim'],
-    name: ['elit sed'],
-    slug: ['_gy006l'],
-    url: ['nostru'],
+  const filterOverPubgLeagues: FilterOverPubgLeagues = {
+    id: [8],
+    modifiedAt: ['ea'],
+    name: ['ad ex an'],
+    slug: ['j'],
+    url: ['proident adi'],
   };
 
-  const range: RangeOverPubgLeagues = {
-    id: [6],
-    modifiedAt: ['qu'],
-    name: ['ex ut'],
-    slug: ['1:cn7ma6'],
-    url: ['dolore'],
+  const rangeOverPubgLeagues: RangeOverPubgLeagues = {
+    id: [4],
+    modifiedAt: ['in dolore '],
+    name: ['Lorem do'],
+    slug: ['d6p5l'],
+    url: ['ut aut'],
   };
 
-  const search: SearchOverPubgLeagues = {
-    name: 'sed et',
-    slug: 'dx3o3d_',
-    url: 'sit ex',
+  const searchOverPubgLeagues: SearchOverPubgLeagues = {
+    name: 'officia',
+    slug: 'ue4e',
+    url: 'in eu des',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgLeagues.getPubgLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgLeagues,
+    range: rangeOverPubgLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverPubgLeagues,
     page: page,
     perPage: 50,
   });

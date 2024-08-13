@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverKogLeagues = {
-    id: [6],
-    modifiedAt: ['ad'],
-    name: ['volupt'],
-    slug: ['sl'],
-    url: ['aliqu'],
+  const filterOverKogLeagues: FilterOverKogLeagues = {
+    id: [2],
+    modifiedAt: ['dolor dolore et'],
+    name: ['quis aliquip '],
+    slug: ['8vznaumh'],
+    url: ['ullamco adipi'],
   };
 
-  const range: RangeOverKogLeagues = {
-    id: [4],
-    modifiedAt: ['i'],
-    name: ['minim ni'],
-    slug: ['2c2uy'],
-    url: ['non veniam'],
+  const rangeOverKogLeagues: RangeOverKogLeagues = {
+    id: [9],
+    modifiedAt: ['qui Duis'],
+    name: ['sunt c'],
+    slug: ['t'],
+    url: ['ea fug'],
   };
 
-  const search: SearchOverKogLeagues = {
-    name: 'dolor dolore et',
-    slug: '6tnd3eibb',
-    url: 'dolore ',
+  const searchOverKogLeagues: SearchOverKogLeagues = {
+    name: 'ut id',
+    slug: '6nz1_90t',
+    url: 'do ullamco labo',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogLeagues.getKogLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverKogLeagues,
+    range: rangeOverKogLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverKogLeagues,
     page: page,
     perPage: 50,
   });

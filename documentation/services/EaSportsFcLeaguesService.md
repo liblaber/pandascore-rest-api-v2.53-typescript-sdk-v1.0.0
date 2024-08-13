@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverFifaLeagues = {
-    id: [4],
-    modifiedAt: ['ullamco ipsum '],
-    name: ['culpa exercita'],
-    slug: ['hdti'],
-    url: ['laboris elit '],
+  const filterOverFifaLeagues: FilterOverFifaLeagues = {
+    id: [9],
+    modifiedAt: ['adipisicing'],
+    name: ['aliqua non'],
+    slug: ['uawy_:e'],
+    url: ['labor'],
   };
 
-  const range: RangeOverFifaLeagues = {
+  const rangeOverFifaLeagues: RangeOverFifaLeagues = {
     id: [4],
-    modifiedAt: ['anim v'],
-    name: ['quis in cil'],
-    slug: ['wa-'],
-    url: ['esse '],
+    modifiedAt: ['mini'],
+    name: ['ex Excep'],
+    slug: ['6'],
+    url: ['sint eu '],
   };
 
-  const search: SearchOverFifaLeagues = {
-    name: 'culpa',
-    slug: ':ocr',
-    url: 'ex dolore sed ',
+  const searchOverFifaLeagues: SearchOverFifaLeagues = {
+    name: 'cillum',
+    slug: '6d',
+    url: 'non ullamco ',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcLeagues.getFifaLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaLeagues,
+    range: rangeOverFifaLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverFifaLeagues,
     page: page,
     perPage: 50,
   });

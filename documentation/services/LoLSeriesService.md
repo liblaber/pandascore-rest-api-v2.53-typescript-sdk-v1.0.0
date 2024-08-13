@@ -36,7 +36,6 @@ List series for the League of Legends videogame
 ```typescript
 import {
   FilterOverLoLSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -49,58 +48,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLoLSeriesVideogameTitle = 5;
+  const filterOverLoLSeriesVideogameTitle = 9;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
-    beginAt: ['officia'],
-    endAt: ['Lor'],
-    id: [5],
-    leagueId: [3],
-    modifiedAt: ['Excepteur cill'],
-    name: ['commodo'],
-    season: ['deserunt'],
-    slug: ['1g8'],
+  const filterOverLoLSeries: FilterOverLoLSeries = {
+    beginAt: ['nisi amet'],
+    endAt: ['reprehen'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['Ut '],
+    name: ['sintmoll'],
+    season: ['ad aliqua in'],
+    slug: ['1br98fc'],
     videogameTitle: [filterOverLoLSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
-    beginAt: ['in'],
-    endAt: ['non o'],
-    id: [4],
-    leagueId: [8],
-    modifiedAt: ['cill'],
-    name: ['reprehender'],
-    season: ['commodo'],
-    slug: ['nynl12'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
+    beginAt: ['sint co'],
+    endAt: ['tempor esse co'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['E'],
+    name: ['eliti'],
+    season: ['labore exercita'],
+    slug: ['93mxp18t'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
-    name: 'enimqui',
-    season: 'cupidatat nos',
-    slug: 'swsuk5uu',
-    winnerType: opponentType,
+  const searchOverLoLSeries: SearchOverLoLSeries = {
+    name: 'mollit p',
+    season: 'exerc',
+    slug: 'wm55',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -136,7 +135,6 @@ List past League of Legends series
 ```typescript
 import {
   FilterOverLoLSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -149,58 +147,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLoLSeriesVideogameTitle = 5;
+  const filterOverLoLSeriesVideogameTitle = 9;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
-    beginAt: ['officia'],
-    endAt: ['Lor'],
-    id: [5],
-    leagueId: [3],
-    modifiedAt: ['Excepteur cill'],
-    name: ['commodo'],
-    season: ['deserunt'],
-    slug: ['1g8'],
+  const filterOverLoLSeries: FilterOverLoLSeries = {
+    beginAt: ['nisi amet'],
+    endAt: ['reprehen'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['Ut '],
+    name: ['sintmoll'],
+    season: ['ad aliqua in'],
+    slug: ['1br98fc'],
     videogameTitle: [filterOverLoLSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
-    beginAt: ['in'],
-    endAt: ['non o'],
-    id: [4],
-    leagueId: [8],
-    modifiedAt: ['cill'],
-    name: ['reprehender'],
-    season: ['commodo'],
-    slug: ['nynl12'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
+    beginAt: ['sint co'],
+    endAt: ['tempor esse co'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['E'],
+    name: ['eliti'],
+    season: ['labore exercita'],
+    slug: ['93mxp18t'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
-    name: 'enimqui',
-    season: 'cupidatat nos',
-    slug: 'swsuk5uu',
-    winnerType: opponentType,
+  const searchOverLoLSeries: SearchOverLoLSeries = {
+    name: 'mollit p',
+    season: 'exerc',
+    slug: 'wm55',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -236,7 +234,6 @@ List running League of Legends series
 ```typescript
 import {
   FilterOverLoLSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -249,58 +246,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLoLSeriesVideogameTitle = 5;
+  const filterOverLoLSeriesVideogameTitle = 9;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
-    beginAt: ['officia'],
-    endAt: ['Lor'],
-    id: [5],
-    leagueId: [3],
-    modifiedAt: ['Excepteur cill'],
-    name: ['commodo'],
-    season: ['deserunt'],
-    slug: ['1g8'],
+  const filterOverLoLSeries: FilterOverLoLSeries = {
+    beginAt: ['nisi amet'],
+    endAt: ['reprehen'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['Ut '],
+    name: ['sintmoll'],
+    season: ['ad aliqua in'],
+    slug: ['1br98fc'],
     videogameTitle: [filterOverLoLSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
-    beginAt: ['in'],
-    endAt: ['non o'],
-    id: [4],
-    leagueId: [8],
-    modifiedAt: ['cill'],
-    name: ['reprehender'],
-    season: ['commodo'],
-    slug: ['nynl12'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
+    beginAt: ['sint co'],
+    endAt: ['tempor esse co'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['E'],
+    name: ['eliti'],
+    season: ['labore exercita'],
+    slug: ['93mxp18t'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
-    name: 'enimqui',
-    season: 'cupidatat nos',
-    slug: 'swsuk5uu',
-    winnerType: opponentType,
+  const searchOverLoLSeries: SearchOverLoLSeries = {
+    name: 'mollit p',
+    season: 'exerc',
+    slug: 'wm55',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -336,7 +333,6 @@ List upcoming League of Legends series
 ```typescript
 import {
   FilterOverLoLSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -349,58 +345,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverLoLSeriesVideogameTitle = 5;
+  const filterOverLoLSeriesVideogameTitle = 9;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
-    beginAt: ['officia'],
-    endAt: ['Lor'],
-    id: [5],
-    leagueId: [3],
-    modifiedAt: ['Excepteur cill'],
-    name: ['commodo'],
-    season: ['deserunt'],
-    slug: ['1g8'],
+  const filterOverLoLSeries: FilterOverLoLSeries = {
+    beginAt: ['nisi amet'],
+    endAt: ['reprehen'],
+    id: [7],
+    leagueId: [2],
+    modifiedAt: ['Ut '],
+    name: ['sintmoll'],
+    season: ['ad aliqua in'],
+    slug: ['1br98fc'],
     videogameTitle: [filterOverLoLSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
-    beginAt: ['in'],
-    endAt: ['non o'],
-    id: [4],
-    leagueId: [8],
-    modifiedAt: ['cill'],
-    name: ['reprehender'],
-    season: ['commodo'],
-    slug: ['nynl12'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
+    beginAt: ['sint co'],
+    endAt: ['tempor esse co'],
+    id: [7],
+    leagueId: [3],
+    modifiedAt: ['E'],
+    name: ['eliti'],
+    season: ['labore exercita'],
+    slug: ['93mxp18t'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
-    name: 'enimqui',
-    season: 'cupidatat nos',
-    slug: 'swsuk5uu',
-    winnerType: opponentType,
+  const searchOverLoLSeries: SearchOverLoLSeries = {
+    name: 'mollit p',
+    season: 'exerc',
+    slug: 'wm55',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });

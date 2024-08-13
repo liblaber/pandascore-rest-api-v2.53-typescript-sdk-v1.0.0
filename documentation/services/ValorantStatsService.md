@@ -40,7 +40,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.valorantStats.getValorantMatchesMatchIdOrSlugPlayersStats();
 
@@ -75,7 +75,7 @@ import { MatchIdOrSlug, PandascoreClient, TeamIdOrSlug } from 'pandascore_client
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const teamIdOrSlug = 10;
 
   const { data } = await pandascoreClient.valorantStats.getValorantMatchesMatchIdOrSlugTeamsTeamIdOrSlugStats(
@@ -116,13 +116,13 @@ import { PandascoreClient, PlayerIdOrSlug, VideogameVersionOrAll } from 'pandasc
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 3;
-const videogameVersionOrAll = "61.9603071094";
+  const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantPlayersPlayerIdOrSlugStats(
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -160,15 +160,15 @@ import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug, VideogameVersionOrAll 
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const playerIdOrSlug = 3;
-const videogameVersionOrAll = "61.9603071094";
+  const serieIdOrSlug = 10;
+const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -204,15 +204,15 @@ import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug, VideogameVersionOrAll } 
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const teamIdOrSlug = 10;
-const videogameVersionOrAll = "61.9603071094";
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -250,12 +250,12 @@ import { PandascoreClient, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascor
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const videogameVersionOrAll = "61.9603071094";
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantTeamsTeamIdOrSlugStats(
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -293,15 +293,15 @@ import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug, VideogameVersionO
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
-const playerIdOrSlug = 3;
-const videogameVersionOrAll = "61.9603071094";
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -337,15 +337,15 @@ import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug, VideogameVersionOrA
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
+  const tournamentIdOrSlug = 2;
 const teamIdOrSlug = 10;
-const videogameVersionOrAll = "61.9603071094";
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.valorantStats.getValorantTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 

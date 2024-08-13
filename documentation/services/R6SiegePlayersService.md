@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverR6SiegePlayers = {
+  const filterOverR6SiegePlayers: FilterOverR6SiegePlayers = {
     active: true,
-    birthday: ['exercitation'],
-    firstName: ['elitlab'],
-    id: [7],
-    lastName: ['ut aliquip '],
-    modifiedAt: ['deserunt co'],
-    name: ['est Ex'],
-    nationality: ['tempo'],
-    role: ['culpa irur'],
-    slug: ['8ncs_'],
-    teamId: [2],
+    birthday: ['nostrud'],
+    firstName: ['esse enim'],
+    id: [10],
+    lastName: ['anim reprehen'],
+    modifiedAt: ['fugiat'],
+    name: ['ullamco'],
+    nationality: ['sed Duis'],
+    role: ['fugiat amet co'],
+    slug: ['47sl99p_'],
+    teamId: [7],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverR6SiegePlayers = {
-    birthday: ['utculpa volup'],
-    firstName: ['quis nisi'],
-    id: [2],
-    lastName: ['aute '],
-    modifiedAt: ['n'],
-    name: ['qui deserunt'],
-    nationality: ['nisi la'],
-    role: ['cillum in'],
-    slug: ['yr02ajb'],
+  const rangeOverR6SiegePlayers: RangeOverR6SiegePlayers = {
+    birthday: ['dolor'],
+    firstName: ['tempor la'],
+    id: [1],
+    lastName: ['eudese'],
+    modifiedAt: ['laborum '],
+    name: ['labore'],
+    nationality: ['eiusmo'],
+    role: ['non minim'],
+    slug: ['2ezwy23'],
   };
 
-  const search: SearchOverR6SiegePlayers = {
-    birthday: 'do ame',
-    firstName: 'anim el',
-    lastName: 'Duis occaecat ',
-    name: 'voluptate',
-    nationality: 'Utoccaecat dolo',
-    role: 'utsit d',
-    slug: '4wx',
+  const searchOverR6SiegePlayers: SearchOverR6SiegePlayers = {
+    birthday: 'minim dolore ea',
+    firstName: 'amet commodo ',
+    lastName: 'commod',
+    name: 'labori',
+    nationality: 'aliqua pr',
+    role: 'culpa ',
+    slug: 'i982ykf2nq',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegePlayers.getR6siegePlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegePlayers,
+    range: rangeOverR6SiegePlayers,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegePlayers,
     page: page,
     perPage: 50,
   });

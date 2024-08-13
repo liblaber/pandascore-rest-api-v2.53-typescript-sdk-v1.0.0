@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverPubgPlayers = {
+  const filterOverPubgPlayers: FilterOverPubgPlayers = {
     active: true,
-    birthday: ['deserunt mi'],
-    firstName: ['laboris est i'],
+    birthday: ['officia nulla'],
+    firstName: ['tempor'],
     id: [2],
-    lastName: ['elitin'],
-    modifiedAt: ['in veniam in'],
-    name: ['deserunt e'],
-    nationality: ['culpa volupta'],
-    role: ['ullamco'],
-    slug: ['p1l'],
-    teamId: [1],
+    lastName: ['qui aute'],
+    modifiedAt: ['aliqua'],
+    name: ['suntlab'],
+    nationality: ['estvelit '],
+    role: ['occae'],
+    slug: ['8w-9o4lf07'],
+    teamId: [10],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverPubgPlayers = {
-    birthday: ['in magna eiusm'],
-    firstName: ['ut in '],
-    id: [3],
-    lastName: ['ex proi'],
-    modifiedAt: ['pr'],
-    name: ['aliqua et'],
-    nationality: ['tempor ut cill'],
-    role: ['dolore anim nis'],
-    slug: ['l'],
+  const rangeOverPubgPlayers: RangeOverPubgPlayers = {
+    birthday: ['esse proide'],
+    firstName: ['ut ex minim v'],
+    id: [6],
+    lastName: ['et ea'],
+    modifiedAt: ['ex eu'],
+    name: ['cillum'],
+    nationality: ['irure anim '],
+    role: ['in adipisicing'],
+    slug: ['ts58g3zx8'],
   };
 
-  const search: SearchOverPubgPlayers = {
-    birthday: 'utlabore ',
-    firstName: 'ipsum sint dolo',
-    lastName: 'commodo ',
-    name: 'aliqu',
-    nationality: 'non velit ',
-    role: 'pariatur',
-    slug: 'kg',
+  const searchOverPubgPlayers: SearchOverPubgPlayers = {
+    birthday: 'Ut in',
+    firstName: 'molli',
+    lastName: 'eu non',
+    name: 'dolore ',
+    nationality: 'idfugiat sit e',
+    role: 'dolore',
+    slug: '6s90u8',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgPlayers.getPubgPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgPlayers,
+    range: rangeOverPubgPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverPubgPlayers,
     page: page,
     perPage: 50,
   });

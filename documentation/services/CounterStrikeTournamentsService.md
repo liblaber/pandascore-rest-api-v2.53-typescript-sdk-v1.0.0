@@ -36,7 +36,6 @@ List tournaments for the Counter-Strike videogame
 ```typescript
 import {
   FilterOverCsgoShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 1;
+  const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ex aute ad '],
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
+    beginAt: ['ad'],
     detailedStats: true,
-    endAt: ['cillum ad sunt '],
+    endAt: ['do cupidatat a'],
     hasBracket: true,
-    id: [8],
+    id: [10],
     liveSupported: true,
-    modifiedAt: ['quis l'],
-    name: ['Utdolore u'],
-    prizepool: ['cupidatat ip'],
-    serieId: [4],
-    slug: ['9e'],
+    modifiedAt: ['fugiat aliqua t'],
+    name: ['nisioccaecat'],
+    prizepool: ['et la'],
+    serieId: [1],
+    slug: ['by'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['sed l'],
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
+    beginAt: ['ma'],
     detailedStats: [true],
-    endAt: ['ipsu'],
+    endAt: ['n'],
     hasBracket: [true],
-    id: [1],
-    modifiedAt: ['Excepteur'],
-    name: ['incidid'],
-    prizepool: ['labore'],
+    id: [6],
+    modifiedAt: ['ad exe'],
+    name: ['ullamco a'],
+    prizepool: ['qui pr'],
     serieId: [2],
-    slug: ['lgwnrb'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    slug: ['yst'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
-    name: 'non dolore al',
-    prizepool: 'commodo et',
-    slug: '2_ylsbibbi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
+    name: 'tempor repr',
+    prizepool: 'nostrud ullamc',
+    slug: '5hi',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past Counter-Strike tournaments
 ```typescript
 import {
   FilterOverCsgoShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 1;
+  const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ex aute ad '],
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
+    beginAt: ['ad'],
     detailedStats: true,
-    endAt: ['cillum ad sunt '],
+    endAt: ['do cupidatat a'],
     hasBracket: true,
-    id: [8],
+    id: [10],
     liveSupported: true,
-    modifiedAt: ['quis l'],
-    name: ['Utdolore u'],
-    prizepool: ['cupidatat ip'],
-    serieId: [4],
-    slug: ['9e'],
+    modifiedAt: ['fugiat aliqua t'],
+    name: ['nisioccaecat'],
+    prizepool: ['et la'],
+    serieId: [1],
+    slug: ['by'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['sed l'],
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
+    beginAt: ['ma'],
     detailedStats: [true],
-    endAt: ['ipsu'],
+    endAt: ['n'],
     hasBracket: [true],
-    id: [1],
-    modifiedAt: ['Excepteur'],
-    name: ['incidid'],
-    prizepool: ['labore'],
+    id: [6],
+    modifiedAt: ['ad exe'],
+    name: ['ullamco a'],
+    prizepool: ['qui pr'],
     serieId: [2],
-    slug: ['lgwnrb'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    slug: ['yst'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
-    name: 'non dolore al',
-    prizepool: 'commodo et',
-    slug: '2_ylsbibbi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
+    name: 'tempor repr',
+    prizepool: 'nostrud ullamc',
+    slug: '5hi',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running Counter-Strike tournaments
 ```typescript
 import {
   FilterOverCsgoShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 1;
+  const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ex aute ad '],
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
+    beginAt: ['ad'],
     detailedStats: true,
-    endAt: ['cillum ad sunt '],
+    endAt: ['do cupidatat a'],
     hasBracket: true,
-    id: [8],
+    id: [10],
     liveSupported: true,
-    modifiedAt: ['quis l'],
-    name: ['Utdolore u'],
-    prizepool: ['cupidatat ip'],
-    serieId: [4],
-    slug: ['9e'],
+    modifiedAt: ['fugiat aliqua t'],
+    name: ['nisioccaecat'],
+    prizepool: ['et la'],
+    serieId: [1],
+    slug: ['by'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['sed l'],
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
+    beginAt: ['ma'],
     detailedStats: [true],
-    endAt: ['ipsu'],
+    endAt: ['n'],
     hasBracket: [true],
-    id: [1],
-    modifiedAt: ['Excepteur'],
-    name: ['incidid'],
-    prizepool: ['labore'],
+    id: [6],
+    modifiedAt: ['ad exe'],
+    name: ['ullamco a'],
+    prizepool: ['qui pr'],
     serieId: [2],
-    slug: ['lgwnrb'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    slug: ['yst'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
-    name: 'non dolore al',
-    prizepool: 'commodo et',
-    slug: '2_ylsbibbi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
+    name: 'tempor repr',
+    prizepool: 'nostrud ullamc',
+    slug: '5hi',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming Counter-Strike tournaments
 ```typescript
 import {
   FilterOverCsgoShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCsgoShortTournamentsVideogameTitle = 1;
+  const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
-    beginAt: ['ex aute ad '],
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
+    beginAt: ['ad'],
     detailedStats: true,
-    endAt: ['cillum ad sunt '],
+    endAt: ['do cupidatat a'],
     hasBracket: true,
-    id: [8],
+    id: [10],
     liveSupported: true,
-    modifiedAt: ['quis l'],
-    name: ['Utdolore u'],
-    prizepool: ['cupidatat ip'],
-    serieId: [4],
-    slug: ['9e'],
+    modifiedAt: ['fugiat aliqua t'],
+    name: ['nisioccaecat'],
+    prizepool: ['et la'],
+    serieId: [1],
+    slug: ['by'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCsgoShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
-    beginAt: ['sed l'],
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
+    beginAt: ['ma'],
     detailedStats: [true],
-    endAt: ['ipsu'],
+    endAt: ['n'],
     hasBracket: [true],
-    id: [1],
-    modifiedAt: ['Excepteur'],
-    name: ['incidid'],
-    prizepool: ['labore'],
+    id: [6],
+    modifiedAt: ['ad exe'],
+    name: ['ullamco a'],
+    prizepool: ['qui pr'],
     serieId: [2],
-    slug: ['lgwnrb'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    slug: ['yst'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
-    name: 'non dolore al',
-    prizepool: 'commodo et',
-    slug: '2_ylsbibbi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
+    name: 'tempor repr',
+    prizepool: 'nostrud ullamc',
+    slug: '5hi',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });

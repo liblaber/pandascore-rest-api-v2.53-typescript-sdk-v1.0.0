@@ -42,7 +42,6 @@ List series
 ```typescript
 import {
   FilterOverSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -55,58 +54,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverSeriesVideogameTitle = 8;
+  const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverSeries = {
-    beginAt: ['el'],
-    endAt: ['dolo'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['adipisic'],
-    name: ['et qui reprehe'],
-    season: ['ea Dui'],
-    slug: ['jinn8'],
+  const filterOverSeries: FilterOverSeries = {
+    beginAt: ['sunt cillum dol'],
+    endAt: ['dolor'],
+    id: [5],
+    leagueId: [7],
+    modifiedAt: ['deserunt'],
+    name: ['laboris'],
+    season: ['proident'],
+    slug: ['_9'],
     videogameTitle: [filterOverSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverSeries = {
-    beginAt: ['sun'],
-    endAt: ['f'],
-    id: [7],
+  const rangeOverSeries: RangeOverSeries = {
+    beginAt: ['sint c'],
+    endAt: ['ex dolore tempo'],
+    id: [6],
     leagueId: [6],
-    modifiedAt: ['cupi'],
-    name: ['aliqua in'],
-    season: ['Except'],
-    slug: ['-'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    modifiedAt: ['lab'],
+    name: ['animea labore e'],
+    season: ['ipsum i'],
+    slug: ['8'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverSeries = {
-    name: 'aliquip eu e',
-    season: 'et officia lab',
-    slug: 'ai8df',
-    winnerType: opponentType,
+  const searchOverSeries: SearchOverSeries = {
+    name: 'fugia',
+    season: 'aute al',
+    slug: 'cc3u_',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.series.getSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverSeries,
+    range: rangeOverSeries,
     sort: [[]],
-    search: search,
+    search: searchOverSeries,
     page: page,
     perPage: 50,
   });
@@ -142,7 +141,6 @@ List past series
 ```typescript
 import {
   FilterOverSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -155,58 +153,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverSeriesVideogameTitle = 8;
+  const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverSeries = {
-    beginAt: ['el'],
-    endAt: ['dolo'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['adipisic'],
-    name: ['et qui reprehe'],
-    season: ['ea Dui'],
-    slug: ['jinn8'],
+  const filterOverSeries: FilterOverSeries = {
+    beginAt: ['sunt cillum dol'],
+    endAt: ['dolor'],
+    id: [5],
+    leagueId: [7],
+    modifiedAt: ['deserunt'],
+    name: ['laboris'],
+    season: ['proident'],
+    slug: ['_9'],
     videogameTitle: [filterOverSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverSeries = {
-    beginAt: ['sun'],
-    endAt: ['f'],
-    id: [7],
+  const rangeOverSeries: RangeOverSeries = {
+    beginAt: ['sint c'],
+    endAt: ['ex dolore tempo'],
+    id: [6],
     leagueId: [6],
-    modifiedAt: ['cupi'],
-    name: ['aliqua in'],
-    season: ['Except'],
-    slug: ['-'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    modifiedAt: ['lab'],
+    name: ['animea labore e'],
+    season: ['ipsum i'],
+    slug: ['8'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverSeries = {
-    name: 'aliquip eu e',
-    season: 'et officia lab',
-    slug: 'ai8df',
-    winnerType: opponentType,
+  const searchOverSeries: SearchOverSeries = {
+    name: 'fugia',
+    season: 'aute al',
+    slug: 'cc3u_',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverSeries,
+    range: rangeOverSeries,
     sort: [[]],
-    search: search,
+    search: searchOverSeries,
     page: page,
     perPage: 50,
   });
@@ -242,7 +240,6 @@ List currently running series
 ```typescript
 import {
   FilterOverSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -255,58 +252,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverSeriesVideogameTitle = 8;
+  const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverSeries = {
-    beginAt: ['el'],
-    endAt: ['dolo'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['adipisic'],
-    name: ['et qui reprehe'],
-    season: ['ea Dui'],
-    slug: ['jinn8'],
+  const filterOverSeries: FilterOverSeries = {
+    beginAt: ['sunt cillum dol'],
+    endAt: ['dolor'],
+    id: [5],
+    leagueId: [7],
+    modifiedAt: ['deserunt'],
+    name: ['laboris'],
+    season: ['proident'],
+    slug: ['_9'],
     videogameTitle: [filterOverSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverSeries = {
-    beginAt: ['sun'],
-    endAt: ['f'],
-    id: [7],
+  const rangeOverSeries: RangeOverSeries = {
+    beginAt: ['sint c'],
+    endAt: ['ex dolore tempo'],
+    id: [6],
     leagueId: [6],
-    modifiedAt: ['cupi'],
-    name: ['aliqua in'],
-    season: ['Except'],
-    slug: ['-'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    modifiedAt: ['lab'],
+    name: ['animea labore e'],
+    season: ['ipsum i'],
+    slug: ['8'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverSeries = {
-    name: 'aliquip eu e',
-    season: 'et officia lab',
-    slug: 'ai8df',
-    winnerType: opponentType,
+  const searchOverSeries: SearchOverSeries = {
+    name: 'fugia',
+    season: 'aute al',
+    slug: 'cc3u_',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverSeries,
+    range: rangeOverSeries,
     sort: [[]],
-    search: search,
+    search: searchOverSeries,
     page: page,
     perPage: 50,
   });
@@ -342,7 +339,6 @@ List upcoming series
 ```typescript
 import {
   FilterOverSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -355,58 +351,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverSeriesVideogameTitle = 8;
+  const filterOverSeriesVideogameTitle = 7;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverSeries = {
-    beginAt: ['el'],
-    endAt: ['dolo'],
-    id: [10],
-    leagueId: [1],
-    modifiedAt: ['adipisic'],
-    name: ['et qui reprehe'],
-    season: ['ea Dui'],
-    slug: ['jinn8'],
+  const filterOverSeries: FilterOverSeries = {
+    beginAt: ['sunt cillum dol'],
+    endAt: ['dolor'],
+    id: [5],
+    leagueId: [7],
+    modifiedAt: ['deserunt'],
+    name: ['laboris'],
+    season: ['proident'],
+    slug: ['_9'],
     videogameTitle: [filterOverSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverSeries = {
-    beginAt: ['sun'],
-    endAt: ['f'],
-    id: [7],
+  const rangeOverSeries: RangeOverSeries = {
+    beginAt: ['sint c'],
+    endAt: ['ex dolore tempo'],
+    id: [6],
     leagueId: [6],
-    modifiedAt: ['cupi'],
-    name: ['aliqua in'],
-    season: ['Except'],
-    slug: ['-'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    modifiedAt: ['lab'],
+    name: ['animea labore e'],
+    season: ['ipsum i'],
+    slug: ['8'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverSeries = {
-    name: 'aliquip eu e',
-    season: 'et officia lab',
-    slug: 'ai8df',
-    winnerType: opponentType,
+  const searchOverSeries: SearchOverSeries = {
+    name: 'fugia',
+    season: 'aute al',
+    slug: 'cc3u_',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverSeries,
+    range: rangeOverSeries,
     sort: [[]],
-    search: search,
+    search: searchOverSeries,
     page: page,
     perPage: 50,
   });
@@ -442,7 +438,7 @@ import { PandascoreClient, SerieIdOrSlug } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlug();
 
@@ -476,53 +472,53 @@ List matches of the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, OpponentId, Page, PandascoreClient, PlayerIdOrSlug, RangeOverMatches, SearchOverMatches, SerieIdOrSlug, TeamIdOrSlug, VideogameIdOrSlug } from 'pandascore_client';
+import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, Page, PandascoreClient, RangeOverMatches, SearchOverMatches, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.ALLGAMESPLAYED;
 
 const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId._1;;
+const videogameId = VideogameId._1;;
 
-const filterOverMatchesVideogameTitle = 4;
+const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "54.99205.442619";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 8;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverMatches = {
-  beginAt: ["ad non"],
+const filterOverMatches: FilterOverMatches = {
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["repr"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [8],
-  leagueId: [5],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["deser"],
-  name: ["in labore t"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [9],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["quis conse"],
+  scheduledAt: ["esse aute n"],
   serieId: [10],
-  slug: ["JMIjc H"],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverMatchesVideogameTitle],
@@ -530,54 +526,54 @@ const filter: FilterOverMatches = {
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 8;
+const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverMatches = {
-  beginAt: ["ve"],
+const rangeOverMatches: RangeOverMatches = {
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["irure conse"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [3],
-  matchType: [matchType],
-  modifiedAt: ["adipisici"],
-  name: ["pariatur m"],
-  numberOfGames: [2],
-  scheduledAt: ["al"],
-  slug: ["on"],
-  status: [matchStatus],
-  tournamentId: [9],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
+  id: [6],
+  matchType: [matchType1],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
+  status: [matchStatus1],
+  tournamentId: [3],
+  winnerId: [opponentId1],
+  winnerType: [matchWinnerType1]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverMatches = {
-  matchType: matchType,
-  name: "Duis fug",
-  slug: "7jRFdQQ",
-  status: matchStatus,
-  winnerType: matchWinnerType
+const searchOverMatches: SearchOverMatches = {
+  matchType: matchType12,
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
+  status: matchStatus12,
+  winnerType: matchWinnerType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlugMatches(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverMatches,
+		range: rangeOverMatches,
     sort: [[]],
-		search: search,
+		search: searchOverMatches,
 		page: page,
     perPage: 50,
   }
@@ -613,53 +609,53 @@ List past matches for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, OpponentId, Page, PandascoreClient, PlayerIdOrSlug, RangeOverMatches, SearchOverMatches, SerieIdOrSlug, TeamIdOrSlug, VideogameIdOrSlug } from 'pandascore_client';
+import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, Page, PandascoreClient, RangeOverMatches, SearchOverMatches, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.ALLGAMESPLAYED;
 
 const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId._1;;
+const videogameId = VideogameId._1;;
 
-const filterOverMatchesVideogameTitle = 4;
+const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "54.99205.442619";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 8;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverMatches = {
-  beginAt: ["ad non"],
+const filterOverMatches: FilterOverMatches = {
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["repr"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [8],
-  leagueId: [5],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["deser"],
-  name: ["in labore t"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [9],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["quis conse"],
+  scheduledAt: ["esse aute n"],
   serieId: [10],
-  slug: ["JMIjc H"],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverMatchesVideogameTitle],
@@ -667,54 +663,54 @@ const filter: FilterOverMatches = {
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 8;
+const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverMatches = {
-  beginAt: ["ve"],
+const rangeOverMatches: RangeOverMatches = {
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["irure conse"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [3],
-  matchType: [matchType],
-  modifiedAt: ["adipisici"],
-  name: ["pariatur m"],
-  numberOfGames: [2],
-  scheduledAt: ["al"],
-  slug: ["on"],
-  status: [matchStatus],
-  tournamentId: [9],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
+  id: [6],
+  matchType: [matchType1],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
+  status: [matchStatus1],
+  tournamentId: [3],
+  winnerId: [opponentId1],
+  winnerType: [matchWinnerType1]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverMatches = {
-  matchType: matchType,
-  name: "Duis fug",
-  slug: "7jRFdQQ",
-  status: matchStatus,
-  winnerType: matchWinnerType
+const searchOverMatches: SearchOverMatches = {
+  matchType: matchType12,
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
+  status: matchStatus12,
+  winnerType: matchWinnerType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlugMatchesPast(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverMatches,
+		range: rangeOverMatches,
     sort: [[]],
-		search: search,
+		search: searchOverMatches,
 		page: page,
     perPage: 50,
   }
@@ -750,53 +746,53 @@ List currently running matches for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, OpponentId, Page, PandascoreClient, PlayerIdOrSlug, RangeOverMatches, SearchOverMatches, SerieIdOrSlug, TeamIdOrSlug, VideogameIdOrSlug } from 'pandascore_client';
+import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, Page, PandascoreClient, RangeOverMatches, SearchOverMatches, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.ALLGAMESPLAYED;
 
 const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId._1;;
+const videogameId = VideogameId._1;;
 
-const filterOverMatchesVideogameTitle = 4;
+const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "54.99205.442619";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 8;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverMatches = {
-  beginAt: ["ad non"],
+const filterOverMatches: FilterOverMatches = {
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["repr"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [8],
-  leagueId: [5],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["deser"],
-  name: ["in labore t"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [9],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["quis conse"],
+  scheduledAt: ["esse aute n"],
   serieId: [10],
-  slug: ["JMIjc H"],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverMatchesVideogameTitle],
@@ -804,54 +800,54 @@ const filter: FilterOverMatches = {
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 8;
+const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverMatches = {
-  beginAt: ["ve"],
+const rangeOverMatches: RangeOverMatches = {
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["irure conse"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [3],
-  matchType: [matchType],
-  modifiedAt: ["adipisici"],
-  name: ["pariatur m"],
-  numberOfGames: [2],
-  scheduledAt: ["al"],
-  slug: ["on"],
-  status: [matchStatus],
-  tournamentId: [9],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
+  id: [6],
+  matchType: [matchType1],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
+  status: [matchStatus1],
+  tournamentId: [3],
+  winnerId: [opponentId1],
+  winnerType: [matchWinnerType1]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverMatches = {
-  matchType: matchType,
-  name: "Duis fug",
-  slug: "7jRFdQQ",
-  status: matchStatus,
-  winnerType: matchWinnerType
+const searchOverMatches: SearchOverMatches = {
+  matchType: matchType12,
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
+  status: matchStatus12,
+  winnerType: matchWinnerType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlugMatchesRunning(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverMatches,
+		range: rangeOverMatches,
     sort: [[]],
-		search: search,
+		search: searchOverMatches,
 		page: page,
     perPage: 50,
   }
@@ -887,53 +883,53 @@ List upcoming matches for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, OpponentId, Page, PandascoreClient, PlayerIdOrSlug, RangeOverMatches, SearchOverMatches, SerieIdOrSlug, TeamIdOrSlug, VideogameIdOrSlug } from 'pandascore_client';
+import { FilterOverMatches, MatchStatus, MatchType, MatchWinnerType, Page, PandascoreClient, RangeOverMatches, SearchOverMatches, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const matchType = MatchType.ALLGAMESPLAYED;
 
 const teamIdOrSlug = 10;;
 
 const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId._1;;
+const videogameId = VideogameId._1;;
 
-const filterOverMatchesVideogameTitle = 4;
+const filterOverMatchesVideogameTitle = 6;
 
-const filterOverMatchesVideogameVersion = "54.99205.442619";
+const filterOverMatchesVideogameVersion = "1125897835.45";
 
-const opponentId = 8;
+const opponentId = 7;
 
 const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverMatches = {
-  beginAt: ["ad non"],
+const filterOverMatches: FilterOverMatches = {
+  beginAt: ["ani"],
   detailedStats: true,
   draw: true,
-  endAt: ["repr"],
+  endAt: ["ad ut com"],
   finished: true,
   forfeit: true,
   future: true,
-  id: [8],
-  leagueId: [5],
+  id: [3],
+  leagueId: [9],
   matchType: [matchType],
-  modifiedAt: ["deser"],
-  name: ["in labore t"],
+  modifiedAt: ["aute sit"],
+  name: ["exercitation te"],
   notStarted: true,
-  numberOfGames: [9],
+  numberOfGames: [8],
   opponentId: [filterOverMatchesOpponentId],
   opponentsFilled: true,
   past: true,
   running: true,
-  scheduledAt: ["quis conse"],
+  scheduledAt: ["esse aute n"],
   serieId: [10],
-  slug: ["JMIjc H"],
+  slug: ["HiGqjR9"],
   status: [matchStatus],
-  tournamentId: [8],
+  tournamentId: [3],
   unscheduled: true,
   videogame: [videogameIdOrSlug],
   videogameTitle: [filterOverMatchesVideogameTitle],
@@ -941,54 +937,54 @@ const filter: FilterOverMatches = {
   winnerId: [opponentId],
   winnerType: [matchWinnerType]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 8;
+const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverMatches = {
-  beginAt: ["ve"],
+const rangeOverMatches: RangeOverMatches = {
+  beginAt: ["al"],
   detailedStats: [true],
   draw: [true],
-  endAt: ["irure conse"],
+  endAt: ["do d"],
   forfeit: [true],
-  id: [3],
-  matchType: [matchType],
-  modifiedAt: ["adipisici"],
-  name: ["pariatur m"],
-  numberOfGames: [2],
-  scheduledAt: ["al"],
-  slug: ["on"],
-  status: [matchStatus],
-  tournamentId: [9],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
+  id: [6],
+  matchType: [matchType1],
+  modifiedAt: ["dolore ve"],
+  name: ["dolore "],
+  numberOfGames: [10],
+  scheduledAt: ["nisi sed aut"],
+  slug: ["bAjOZ"],
+  status: [matchStatus1],
+  tournamentId: [3],
+  winnerId: [opponentId1],
+  winnerType: [matchWinnerType1]
 };
-const matchType = MatchType.ALLGAMESPLAYED;
+const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.CANCELED;
+const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.PLAYER;
+const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverMatches = {
-  matchType: matchType,
-  name: "Duis fug",
-  slug: "7jRFdQQ",
-  status: matchStatus,
-  winnerType: matchWinnerType
+const searchOverMatches: SearchOverMatches = {
+  matchType: matchType12,
+  name: "nulla veniam ",
+  slug: "WfL1ZPQ",
+  status: matchStatus12,
+  winnerType: matchWinnerType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlugMatchesUpcoming(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverMatches,
+		range: rangeOverMatches,
     sort: [[]],
-		search: search,
+		search: searchOverMatches,
 		page: page,
     perPage: 50,
   }
@@ -1024,79 +1020,79 @@ List tournaments of the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { FilterOverShortTournaments, OpponentId, OpponentType, Page, PandascoreClient, RangeOverShortTournaments, SearchOverShortTournaments, SearchOverValorantShortTournamentsTier2, SerieIdOrSlug } from 'pandascore_client';
+import { FilterOverShortTournaments, OpponentType, Page, PandascoreClient, RangeOverShortTournaments, SearchOverShortTournaments, SearchOverValorantShortTournamentsTier2, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-const filterOverShortTournamentsVideogameTitle = 2;
+const filterOverShortTournamentsVideogameTitle = 5;
 
-const opponentId = 8;
+const opponentId = 7;
 
 const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverShortTournaments = {
-  beginAt: ["ullamco magn"],
+const filterOverShortTournaments: FilterOverShortTournaments = {
+  beginAt: ["pariat"],
   detailedStats: true,
-  endAt: ["mollit occ"],
+  endAt: ["eli"],
   hasBracket: true,
-  id: [6],
+  id: [4],
   liveSupported: true,
-  modifiedAt: ["dolor sunt ad e"],
-  name: ["dolor quis es"],
-  prizepool: ["irure "],
-  serieId: [4],
-  slug: ["l34"],
+  modifiedAt: ["cillu"],
+  name: ["Excepteur do"],
+  prizepool: ["in ut veniam "],
+  serieId: [10],
+  slug: ["z160_"],
   tier: [searchOverValorantShortTournamentsTier2],
   videogameTitle: [filterOverShortTournamentsVideogameTitle],
   winnerId: [opponentId],
   winnerType: [opponentType]
 };
-const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-const opponentId = 8;
+const opponentId1 = 7;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverShortTournaments = {
-  beginAt: ["non iru"],
+const rangeOverShortTournaments: RangeOverShortTournaments = {
+  beginAt: ["et"],
   detailedStats: [true],
-  endAt: ["e"],
+  endAt: ["commo"],
   hasBracket: [true],
-  id: [7],
-  modifiedAt: ["la"],
-  name: ["minim sit"],
-  prizepool: ["pariatur id "],
-  serieId: [1],
-  slug: ["2aqc93"],
-  tier: [searchOverValorantShortTournamentsTier2],
-  winnerId: [opponentId],
-  winnerType: [opponentType]
+  id: [1],
+  modifiedAt: ["nul"],
+  name: ["enim "],
+  prizepool: ["qui ull"],
+  serieId: [3],
+  slug: ["vyokv"],
+  tier: [searchOverValorantShortTournamentsTier21],
+  winnerId: [opponentId1],
+  winnerType: [opponentType1]
 };
-const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverShortTournaments = {
-  name: "dolor",
-  prizepool: "ullamco",
-  slug: "2",
-  tier: searchOverValorantShortTournamentsTier2,
-  winnerType: opponentType
+const searchOverShortTournaments: SearchOverShortTournaments = {
+  name: "sunt minim",
+  prizepool: "utid magna es",
+  slug: "50l9n",
+  tier: searchOverValorantShortTournamentsTier212,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.series.getSeriesSerieIdOrSlugTournaments(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverShortTournaments,
+		range: rangeOverShortTournaments,
     sort: [[]],
-		search: search,
+		search: searchOverShortTournaments,
 		page: page,
     perPage: 50,
   }

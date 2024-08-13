@@ -47,26 +47,26 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLRunesReforged = {
+  const filterOverLoLRunesReforged: FilterOverLoLRunesReforged = {
     id: [9],
-    name: ['labore '],
+    name: ['cillum sint'],
   };
 
-  const range: RangeOverLoLRunesReforged = {
-    id: [9],
-    name: ['Lorem nulla'],
+  const rangeOverLoLRunesReforged: RangeOverLoLRunesReforged = {
+    id: [6],
+    name: ['cillum do'],
   };
 
-  const search: SearchOverLoLRunesReforged = {
-    name: 'cillum sint',
+  const searchOverLoLRunesReforged: SearchOverLoLRunesReforged = {
+    name: 'do irure ',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLRunes.getLolRunesReforged({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLRunesReforged,
+    range: rangeOverLoLRunesReforged,
     sort: [[]],
-    search: search,
+    search: searchOverLoLRunesReforged,
     page: page,
     perPage: 50,
   });
@@ -113,27 +113,27 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLRunePaths = {
-    id: [6],
-    name: ['cillum do'],
+  const filterOverLoLRunePaths: FilterOverLoLRunePaths = {
+    id: [5],
+    name: ['occaecat esse'],
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLRunePaths = {
-    id: [4],
-    name: ['consequat co'],
+  const rangeOverLoLRunePaths: RangeOverLoLRunePaths = {
+    id: [6],
+    name: ['ipsum nul'],
   };
 
-  const search: SearchOverLoLRunePaths = {
-    name: 'occaecat esse',
+  const searchOverLoLRunePaths: SearchOverLoLRunePaths = {
+    name: 'tempor eli',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPaths({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLRunePaths,
+    range: rangeOverLoLRunePaths,
     sort: [[]],
-    search: search,
+    search: searchOverLoLRunePaths,
     page: page,
     perPage: 50,
   });
@@ -169,7 +169,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPathsLolRunePathId(3);
+  const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPathsLolRunePathId(5);
 
   console.log(data);
 })();

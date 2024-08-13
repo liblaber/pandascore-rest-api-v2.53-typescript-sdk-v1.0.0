@@ -36,7 +36,6 @@ List series for the StarCraft Brood War videogame
 ```typescript
 import {
   FilterOverStarcraftBroodWarSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -49,58 +48,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraftBroodWarSeriesVideogameTitle = 6;
+  const filterOverStarcraftBroodWarSeriesVideogameTitle = 10;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarSeries = {
-    beginAt: ['sit anim '],
-    endAt: ['eu voluptat'],
-    id: [1],
-    leagueId: [5],
-    modifiedAt: ['culpa laborum L'],
-    name: ['nisi commo'],
-    season: ['Duis ex no'],
-    slug: ['szd'],
+  const filterOverStarcraftBroodWarSeries: FilterOverStarcraftBroodWarSeries = {
+    beginAt: ['D'],
+    endAt: ['e'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['a'],
+    name: ['laborum offi'],
+    season: ['dolor'],
+    slug: ['s4shus'],
     videogameTitle: [filterOverStarcraftBroodWarSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarSeries = {
-    beginAt: ['Ut ea '],
-    endAt: ['sunt a'],
-    id: [6],
-    leagueId: [7],
-    modifiedAt: ['eiusmod volupta'],
-    name: ['officia Ex'],
-    season: ['deserunt Lo'],
-    slug: ['89hpad2lb'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverStarcraftBroodWarSeries: RangeOverStarcraftBroodWarSeries = {
+    beginAt: ['dolor'],
+    endAt: ['ut volu'],
+    id: [7],
+    leagueId: [6],
+    modifiedAt: ['enim in l'],
+    name: ['Ut Lorem'],
+    season: ['exadipisicing v'],
+    slug: ['exz4jb3a'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarSeries = {
-    name: 'ad pariatur ad',
-    season: 'occaecat se',
-    slug: 'wi',
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarSeries: SearchOverStarcraftBroodWarSeries = {
+    name: 'nostrud labo',
+    season: 'occaecat do ',
+    slug: 'k',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarSeries.getStarcraftBroodWarSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarSeries,
+    range: rangeOverStarcraftBroodWarSeries,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarSeries,
     page: page,
     perPage: 50,
   });
@@ -136,7 +135,6 @@ List past StarCraft Brood War series
 ```typescript
 import {
   FilterOverStarcraftBroodWarSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -149,58 +147,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraftBroodWarSeriesVideogameTitle = 6;
+  const filterOverStarcraftBroodWarSeriesVideogameTitle = 10;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarSeries = {
-    beginAt: ['sit anim '],
-    endAt: ['eu voluptat'],
-    id: [1],
-    leagueId: [5],
-    modifiedAt: ['culpa laborum L'],
-    name: ['nisi commo'],
-    season: ['Duis ex no'],
-    slug: ['szd'],
+  const filterOverStarcraftBroodWarSeries: FilterOverStarcraftBroodWarSeries = {
+    beginAt: ['D'],
+    endAt: ['e'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['a'],
+    name: ['laborum offi'],
+    season: ['dolor'],
+    slug: ['s4shus'],
     videogameTitle: [filterOverStarcraftBroodWarSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarSeries = {
-    beginAt: ['Ut ea '],
-    endAt: ['sunt a'],
-    id: [6],
-    leagueId: [7],
-    modifiedAt: ['eiusmod volupta'],
-    name: ['officia Ex'],
-    season: ['deserunt Lo'],
-    slug: ['89hpad2lb'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverStarcraftBroodWarSeries: RangeOverStarcraftBroodWarSeries = {
+    beginAt: ['dolor'],
+    endAt: ['ut volu'],
+    id: [7],
+    leagueId: [6],
+    modifiedAt: ['enim in l'],
+    name: ['Ut Lorem'],
+    season: ['exadipisicing v'],
+    slug: ['exz4jb3a'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarSeries = {
-    name: 'ad pariatur ad',
-    season: 'occaecat se',
-    slug: 'wi',
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarSeries: SearchOverStarcraftBroodWarSeries = {
+    name: 'nostrud labo',
+    season: 'occaecat do ',
+    slug: 'k',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarSeries.getStarcraftBroodWarSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarSeries,
+    range: rangeOverStarcraftBroodWarSeries,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarSeries,
     page: page,
     perPage: 50,
   });
@@ -236,7 +234,6 @@ List running StarCraft Brood War series
 ```typescript
 import {
   FilterOverStarcraftBroodWarSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -249,58 +246,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraftBroodWarSeriesVideogameTitle = 6;
+  const filterOverStarcraftBroodWarSeriesVideogameTitle = 10;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarSeries = {
-    beginAt: ['sit anim '],
-    endAt: ['eu voluptat'],
-    id: [1],
-    leagueId: [5],
-    modifiedAt: ['culpa laborum L'],
-    name: ['nisi commo'],
-    season: ['Duis ex no'],
-    slug: ['szd'],
+  const filterOverStarcraftBroodWarSeries: FilterOverStarcraftBroodWarSeries = {
+    beginAt: ['D'],
+    endAt: ['e'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['a'],
+    name: ['laborum offi'],
+    season: ['dolor'],
+    slug: ['s4shus'],
     videogameTitle: [filterOverStarcraftBroodWarSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarSeries = {
-    beginAt: ['Ut ea '],
-    endAt: ['sunt a'],
-    id: [6],
-    leagueId: [7],
-    modifiedAt: ['eiusmod volupta'],
-    name: ['officia Ex'],
-    season: ['deserunt Lo'],
-    slug: ['89hpad2lb'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverStarcraftBroodWarSeries: RangeOverStarcraftBroodWarSeries = {
+    beginAt: ['dolor'],
+    endAt: ['ut volu'],
+    id: [7],
+    leagueId: [6],
+    modifiedAt: ['enim in l'],
+    name: ['Ut Lorem'],
+    season: ['exadipisicing v'],
+    slug: ['exz4jb3a'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarSeries = {
-    name: 'ad pariatur ad',
-    season: 'occaecat se',
-    slug: 'wi',
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarSeries: SearchOverStarcraftBroodWarSeries = {
+    name: 'nostrud labo',
+    season: 'occaecat do ',
+    slug: 'k',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarSeries.getStarcraftBroodWarSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarSeries,
+    range: rangeOverStarcraftBroodWarSeries,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarSeries,
     page: page,
     perPage: 50,
   });
@@ -336,7 +333,6 @@ List upcoming StarCraft Brood War series
 ```typescript
 import {
   FilterOverStarcraftBroodWarSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -349,58 +345,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverStarcraftBroodWarSeriesVideogameTitle = 6;
+  const filterOverStarcraftBroodWarSeriesVideogameTitle = 10;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarSeries = {
-    beginAt: ['sit anim '],
-    endAt: ['eu voluptat'],
-    id: [1],
-    leagueId: [5],
-    modifiedAt: ['culpa laborum L'],
-    name: ['nisi commo'],
-    season: ['Duis ex no'],
-    slug: ['szd'],
+  const filterOverStarcraftBroodWarSeries: FilterOverStarcraftBroodWarSeries = {
+    beginAt: ['D'],
+    endAt: ['e'],
+    id: [9],
+    leagueId: [6],
+    modifiedAt: ['a'],
+    name: ['laborum offi'],
+    season: ['dolor'],
+    slug: ['s4shus'],
     videogameTitle: [filterOverStarcraftBroodWarSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarSeries = {
-    beginAt: ['Ut ea '],
-    endAt: ['sunt a'],
-    id: [6],
-    leagueId: [7],
-    modifiedAt: ['eiusmod volupta'],
-    name: ['officia Ex'],
-    season: ['deserunt Lo'],
-    slug: ['89hpad2lb'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+  const rangeOverStarcraftBroodWarSeries: RangeOverStarcraftBroodWarSeries = {
+    beginAt: ['dolor'],
+    endAt: ['ut volu'],
+    id: [7],
+    leagueId: [6],
+    modifiedAt: ['enim in l'],
+    name: ['Ut Lorem'],
+    season: ['exadipisicing v'],
+    slug: ['exz4jb3a'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarSeries = {
-    name: 'ad pariatur ad',
-    season: 'occaecat se',
-    slug: 'wi',
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarSeries: SearchOverStarcraftBroodWarSeries = {
+    name: 'nostrud labo',
+    season: 'occaecat do ',
+    slug: 'k',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarSeries.getStarcraftBroodWarSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarSeries,
+    range: rangeOverStarcraftBroodWarSeries,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarSeries,
     page: page,
     perPage: 50,
   });

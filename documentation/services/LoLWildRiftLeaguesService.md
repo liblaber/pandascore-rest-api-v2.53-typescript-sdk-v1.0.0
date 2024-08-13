@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLolWildRiftLeagues = {
-    id: [5],
-    modifiedAt: ['dolor esse'],
-    name: ['cillum a'],
-    slug: ['gc2'],
-    url: ['fugiat minim la'],
+  const filterOverLolWildRiftLeagues: FilterOverLolWildRiftLeagues = {
+    id: [7],
+    modifiedAt: ['laborum commo'],
+    name: ['offici'],
+    slug: ['aua2'],
+    url: ['ut tempor ipsu'],
   };
 
-  const range: RangeOverLolWildRiftLeagues = {
-    id: [3],
-    modifiedAt: ['in nulla'],
-    name: ['incididunt '],
-    slug: ['k_b'],
-    url: ['Lorem quis'],
+  const rangeOverLolWildRiftLeagues: RangeOverLolWildRiftLeagues = {
+    id: [1],
+    modifiedAt: ['aliquip'],
+    name: ['Excepte'],
+    slug: ['3-_m-u2zm7'],
+    url: ['ea Duis'],
   };
 
-  const search: SearchOverLolWildRiftLeagues = {
-    name: 'conseq',
-    slug: '558j5-0u',
-    url: 'sunt non mag',
+  const searchOverLolWildRiftLeagues: SearchOverLolWildRiftLeagues = {
+    name: 'sit officia ',
+    slug: 'vmrxzc',
+    url: 'cillum E',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLWildRiftLeagues.getLolWildRiftLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverLolWildRiftLeagues,
+    range: rangeOverLolWildRiftLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverLolWildRiftLeagues,
     page: page,
     perPage: 50,
   });

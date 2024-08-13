@@ -40,7 +40,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.loLStats.getLolMatchesMatchIdOrSlugPlayersStats();
 
@@ -79,16 +79,16 @@ import { PandascoreClient, PlayerIdOrSlug, VideogameVersionOrAll } from 'pandasc
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 3;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+  const playerIdOrSlug = 9;
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolPlayersPlayerIdOrSlugStats(
   ,
   {
-    gamesCount: 3,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 4,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -128,18 +128,18 @@ import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug, VideogameVersionOrAll 
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const playerIdOrSlug = 3;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+  const serieIdOrSlug = 10;
+const playerIdOrSlug = 9;
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 6,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 2,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -178,17 +178,17 @@ import { Page, PandascoreClient, SerieIdOrSlug, VideogameVersionOrAll } from 'pa
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+  const serieIdOrSlug = 10;
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 const page = 1;
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugTeamsStats(
   ,
   {
-    gamesCount: 2,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 3,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
 		page: page,
     perPage: 50,
   }
@@ -228,18 +228,18 @@ import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug, VideogameVersionOrAll } 
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolSeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 2,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 7,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -279,15 +279,15 @@ import { PandascoreClient, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascor
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolTeamsTeamIdOrSlugStats(
   ,
   {
-    gamesCount: 4,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 8,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -327,18 +327,18 @@ import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug, VideogameVersionO
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
-const playerIdOrSlug = 3;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 4,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 8,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -376,18 +376,18 @@ import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug, VideogameVersionOrA
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
+  const tournamentIdOrSlug = 2;
 const teamIdOrSlug = 10;
-const side = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
-const videogameVersionOrAll = "61.9603071094";
+const getLolPlayersPlayerIdOrSlugStatsSide = GetLolPlayersPlayerIdOrSlugStatsSide.BLUE;
+const videogameVersionOrAll = "5.4970743709";
 
   const { data } = await pandascoreClient.loLStats.getLolTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 5,
-		side: side,
-		videogameVersion: videogameVersion,
+    gamesCount: 9,
+		side: getLolPlayersPlayerIdOrSlugStatsSide,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 

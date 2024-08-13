@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameId(2);
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameId(1);
 
   console.log(data);
 })();
@@ -73,7 +73,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdEvents(6, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdEvents(9, {
     page: page,
     perPage: 50,
   });
@@ -113,7 +113,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdRounds(6, {
+  const { data } = await pandascoreClient.valorantGames.getValorantGamesValorantGameIdRounds(2, {
     page: page,
     perPage: 50,
   });
@@ -154,14 +154,14 @@ import { FilterOverValorantGames, GameStatus, MatchIdOrSlug, Page, PandascoreCli
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.FINISHED;
 
-const filter: FilterOverValorantGames = {
-  beginAt: ["in anim o"],
+const filterOverValorantGames: FilterOverValorantGames = {
+  beginAt: ["in nisi"],
   complete: true,
   detailedStats: true,
-  endAt: ["irure aliqu"],
+  endAt: ["e"],
   finished: true,
   forfeit: true,
   id: [6],
@@ -169,34 +169,34 @@ const filter: FilterOverValorantGames = {
   position: [2],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const range: RangeOverValorantGames = {
-  beginAt: ["culpa eu p"],
+const rangeOverValorantGames: RangeOverValorantGames = {
+  beginAt: ["au"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["D"],
+  endAt: ["nulla"],
   finished: [true],
   forfeit: [true],
-  id: [7],
-  length: [4],
-  position: [7],
-  status: [gameStatus]
+  id: [5],
+  length: [10],
+  position: [10],
+  status: [gameStatus1]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus12 = GameStatus.FINISHED;
 
-const search: SearchOverValorantGames = {
-  status: gameStatus
+const searchOverValorantGames: SearchOverValorantGames = {
+  status: gameStatus12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.valorantGames.getValorantMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverValorantGames,
+		range: rangeOverValorantGames,
     sort: [[]],
-		search: search,
+		search: searchOverValorantGames,
 		page: page,
     perPage: 50,
   }

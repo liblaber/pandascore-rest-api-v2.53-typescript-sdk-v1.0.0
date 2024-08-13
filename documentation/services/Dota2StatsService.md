@@ -39,7 +39,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2MatchesMatchIdOrSlugPlayersStats();
 
@@ -77,14 +77,14 @@ import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 3;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+  const playerIdOrSlug = 9;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2PlayersPlayerIdOrSlugStats(
   ,
   {
-    gamesCount: 123,
-		side: side,
+    gamesCount: 4,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -123,16 +123,16 @@ import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_clie
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const playerIdOrSlug = 3;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+  const serieIdOrSlug = 10;
+const playerIdOrSlug = 9;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 5,
-		side: side,
+    gamesCount: 6,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -169,16 +169,16 @@ import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug } from 'pandascore_client
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
+  const serieIdOrSlug = 10;
 const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 1,
-		side: side,
+    gamesCount: 9,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -217,13 +217,13 @@ import { PandascoreClient, TeamIdOrSlug } from 'pandascore_client';
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TeamsTeamIdOrSlugStats(
   ,
   {
-    gamesCount: 123,
-		side: side,
+    gamesCount: 4,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -262,16 +262,16 @@ import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
-const playerIdOrSlug = 3;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 9,
-		side: side,
+    gamesCount: 7,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -308,16 +308,16 @@ import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug } from 'pandascore_c
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
+  const tournamentIdOrSlug = 2;
 const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
-    gamesCount: 6,
-		side: side,
+    gamesCount: 3,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 

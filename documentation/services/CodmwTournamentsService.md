@@ -36,7 +36,6 @@ List tournaments for the CODMW videogame
 ```typescript
 import {
   FilterOverCodmwShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCodmwShortTournamentsVideogameTitle = 4;
+  const filterOverCodmwShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwShortTournaments = {
-    beginAt: ['ullamco'],
+  const filterOverCodmwShortTournaments: FilterOverCodmwShortTournaments = {
+    beginAt: ['ad tempor'],
     detailedStats: true,
-    endAt: ['do d'],
+    endAt: ['Duis esse'],
     hasBracket: true,
-    id: [9],
+    id: [2],
     liveSupported: true,
-    modifiedAt: ['nisi ut'],
-    name: ['cupidatat i'],
-    prizepool: ['esse irur'],
-    serieId: [6],
-    slug: ['p'],
+    modifiedAt: ['enim esse p'],
+    name: ['sit mollit'],
+    prizepool: ['labore offic'],
+    serieId: [1],
+    slug: ['p_bnz1'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCodmwShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwShortTournaments = {
-    beginAt: ['minim'],
+  const rangeOverCodmwShortTournaments: RangeOverCodmwShortTournaments = {
+    beginAt: ['non ven'],
     detailedStats: [true],
-    endAt: ['ve'],
+    endAt: ['dolor'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['exer'],
-    name: ['do proide'],
-    prizepool: ['et mollit'],
-    serieId: [4],
-    slug: ['emgwpjjylc'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['nostrud labo'],
+    name: ['est nisi sun'],
+    prizepool: ['fugiat el'],
+    serieId: [1],
+    slug: ['ghzvnc'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwShortTournaments = {
-    name: 'deser',
-    prizepool: 'dolor fugiat',
-    slug: 'wuovxuis1',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCodmwShortTournaments: SearchOverCodmwShortTournaments = {
+    name: 'ipsum ',
+    prizepool: 'dolore ea',
+    slug: '1-543h88_',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwTournaments.getCodmwTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwShortTournaments,
+    range: rangeOverCodmwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past CODMW tournaments
 ```typescript
 import {
   FilterOverCodmwShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCodmwShortTournamentsVideogameTitle = 4;
+  const filterOverCodmwShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwShortTournaments = {
-    beginAt: ['ullamco'],
+  const filterOverCodmwShortTournaments: FilterOverCodmwShortTournaments = {
+    beginAt: ['ad tempor'],
     detailedStats: true,
-    endAt: ['do d'],
+    endAt: ['Duis esse'],
     hasBracket: true,
-    id: [9],
+    id: [2],
     liveSupported: true,
-    modifiedAt: ['nisi ut'],
-    name: ['cupidatat i'],
-    prizepool: ['esse irur'],
-    serieId: [6],
-    slug: ['p'],
+    modifiedAt: ['enim esse p'],
+    name: ['sit mollit'],
+    prizepool: ['labore offic'],
+    serieId: [1],
+    slug: ['p_bnz1'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCodmwShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwShortTournaments = {
-    beginAt: ['minim'],
+  const rangeOverCodmwShortTournaments: RangeOverCodmwShortTournaments = {
+    beginAt: ['non ven'],
     detailedStats: [true],
-    endAt: ['ve'],
+    endAt: ['dolor'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['exer'],
-    name: ['do proide'],
-    prizepool: ['et mollit'],
-    serieId: [4],
-    slug: ['emgwpjjylc'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['nostrud labo'],
+    name: ['est nisi sun'],
+    prizepool: ['fugiat el'],
+    serieId: [1],
+    slug: ['ghzvnc'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwShortTournaments = {
-    name: 'deser',
-    prizepool: 'dolor fugiat',
-    slug: 'wuovxuis1',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCodmwShortTournaments: SearchOverCodmwShortTournaments = {
+    name: 'ipsum ',
+    prizepool: 'dolore ea',
+    slug: '1-543h88_',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwTournaments.getCodmwTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwShortTournaments,
+    range: rangeOverCodmwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running CODMW tournaments
 ```typescript
 import {
   FilterOverCodmwShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCodmwShortTournamentsVideogameTitle = 4;
+  const filterOverCodmwShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwShortTournaments = {
-    beginAt: ['ullamco'],
+  const filterOverCodmwShortTournaments: FilterOverCodmwShortTournaments = {
+    beginAt: ['ad tempor'],
     detailedStats: true,
-    endAt: ['do d'],
+    endAt: ['Duis esse'],
     hasBracket: true,
-    id: [9],
+    id: [2],
     liveSupported: true,
-    modifiedAt: ['nisi ut'],
-    name: ['cupidatat i'],
-    prizepool: ['esse irur'],
-    serieId: [6],
-    slug: ['p'],
+    modifiedAt: ['enim esse p'],
+    name: ['sit mollit'],
+    prizepool: ['labore offic'],
+    serieId: [1],
+    slug: ['p_bnz1'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCodmwShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwShortTournaments = {
-    beginAt: ['minim'],
+  const rangeOverCodmwShortTournaments: RangeOverCodmwShortTournaments = {
+    beginAt: ['non ven'],
     detailedStats: [true],
-    endAt: ['ve'],
+    endAt: ['dolor'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['exer'],
-    name: ['do proide'],
-    prizepool: ['et mollit'],
-    serieId: [4],
-    slug: ['emgwpjjylc'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['nostrud labo'],
+    name: ['est nisi sun'],
+    prizepool: ['fugiat el'],
+    serieId: [1],
+    slug: ['ghzvnc'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwShortTournaments = {
-    name: 'deser',
-    prizepool: 'dolor fugiat',
-    slug: 'wuovxuis1',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCodmwShortTournaments: SearchOverCodmwShortTournaments = {
+    name: 'ipsum ',
+    prizepool: 'dolore ea',
+    slug: '1-543h88_',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwTournaments.getCodmwTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwShortTournaments,
+    range: rangeOverCodmwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming CODMW tournaments
 ```typescript
 import {
   FilterOverCodmwShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverCodmwShortTournamentsVideogameTitle = 4;
+  const filterOverCodmwShortTournamentsVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwShortTournaments = {
-    beginAt: ['ullamco'],
+  const filterOverCodmwShortTournaments: FilterOverCodmwShortTournaments = {
+    beginAt: ['ad tempor'],
     detailedStats: true,
-    endAt: ['do d'],
+    endAt: ['Duis esse'],
     hasBracket: true,
-    id: [9],
+    id: [2],
     liveSupported: true,
-    modifiedAt: ['nisi ut'],
-    name: ['cupidatat i'],
-    prizepool: ['esse irur'],
-    serieId: [6],
-    slug: ['p'],
+    modifiedAt: ['enim esse p'],
+    name: ['sit mollit'],
+    prizepool: ['labore offic'],
+    serieId: [1],
+    slug: ['p_bnz1'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverCodmwShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwShortTournaments = {
-    beginAt: ['minim'],
+  const rangeOverCodmwShortTournaments: RangeOverCodmwShortTournaments = {
+    beginAt: ['non ven'],
     detailedStats: [true],
-    endAt: ['ve'],
+    endAt: ['dolor'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['exer'],
-    name: ['do proide'],
-    prizepool: ['et mollit'],
-    serieId: [4],
-    slug: ['emgwpjjylc'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['nostrud labo'],
+    name: ['est nisi sun'],
+    prizepool: ['fugiat el'],
+    serieId: [1],
+    slug: ['ghzvnc'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwShortTournaments = {
-    name: 'deser',
-    prizepool: 'dolor fugiat',
-    slug: 'wuovxuis1',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverCodmwShortTournaments: SearchOverCodmwShortTournaments = {
+    name: 'ipsum ',
+    prizepool: 'dolore ea',
+    slug: '1-543h88_',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwTournaments.getCodmwTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwShortTournaments,
+    range: rangeOverCodmwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwShortTournaments,
     page: page,
     perPage: 50,
   });

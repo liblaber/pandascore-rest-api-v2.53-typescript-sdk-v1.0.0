@@ -36,7 +36,6 @@ List tournaments for the StarCraft Brood War videogame
 ```typescript
 import {
   FilterOverStarcraftBroodWarShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 1;
+  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['n'],
+  const filterOverStarcraftBroodWarShortTournaments: FilterOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['lab'],
     detailedStats: true,
-    endAt: ['in veniam'],
+    endAt: ['aliqui'],
     hasBracket: true,
-    id: [10],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['offi'],
-    name: ['nulla'],
-    prizepool: ['ad nulla '],
-    serieId: [1],
-    slug: ['g'],
+    modifiedAt: ['culpa labor'],
+    name: ['sunt dolore'],
+    prizepool: ['officia '],
+    serieId: [3],
+    slug: ['k7gctqo03q9'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraftBroodWarShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['est exerci'],
+  const rangeOverStarcraftBroodWarShortTournaments: RangeOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['sint in'],
     detailedStats: [true],
-    endAt: ['fugia'],
+    endAt: ['ipsum aliqua oc'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['enim in '],
-    name: ['proident al'],
-    prizepool: ['fugiat'],
-    serieId: [6],
-    slug: ['0_xv'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [2],
+    modifiedAt: ['nulla esse ip'],
+    name: ['etcommodo cu'],
+    prizepool: ['labore '],
+    serieId: [2],
+    slug: ['1a4r6'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarShortTournaments = {
-    name: 'sint nostr',
-    prizepool: 'labori',
-    slug: 'xxq',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarShortTournaments: SearchOverStarcraftBroodWarShortTournaments = {
+    name: 'sit ea an',
+    prizepool: 'exercit',
+    slug: 'i9djk',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarTournaments.getStarcraftBroodWarTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarShortTournaments,
+    range: rangeOverStarcraftBroodWarShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past StarCraft Brood War tournaments
 ```typescript
 import {
   FilterOverStarcraftBroodWarShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 1;
+  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['n'],
+  const filterOverStarcraftBroodWarShortTournaments: FilterOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['lab'],
     detailedStats: true,
-    endAt: ['in veniam'],
+    endAt: ['aliqui'],
     hasBracket: true,
-    id: [10],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['offi'],
-    name: ['nulla'],
-    prizepool: ['ad nulla '],
-    serieId: [1],
-    slug: ['g'],
+    modifiedAt: ['culpa labor'],
+    name: ['sunt dolore'],
+    prizepool: ['officia '],
+    serieId: [3],
+    slug: ['k7gctqo03q9'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraftBroodWarShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['est exerci'],
+  const rangeOverStarcraftBroodWarShortTournaments: RangeOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['sint in'],
     detailedStats: [true],
-    endAt: ['fugia'],
+    endAt: ['ipsum aliqua oc'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['enim in '],
-    name: ['proident al'],
-    prizepool: ['fugiat'],
-    serieId: [6],
-    slug: ['0_xv'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [2],
+    modifiedAt: ['nulla esse ip'],
+    name: ['etcommodo cu'],
+    prizepool: ['labore '],
+    serieId: [2],
+    slug: ['1a4r6'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarShortTournaments = {
-    name: 'sint nostr',
-    prizepool: 'labori',
-    slug: 'xxq',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarShortTournaments: SearchOverStarcraftBroodWarShortTournaments = {
+    name: 'sit ea an',
+    prizepool: 'exercit',
+    slug: 'i9djk',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarTournaments.getStarcraftBroodWarTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarShortTournaments,
+    range: rangeOverStarcraftBroodWarShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running StarCraft Brood War tournaments
 ```typescript
 import {
   FilterOverStarcraftBroodWarShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 1;
+  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['n'],
+  const filterOverStarcraftBroodWarShortTournaments: FilterOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['lab'],
     detailedStats: true,
-    endAt: ['in veniam'],
+    endAt: ['aliqui'],
     hasBracket: true,
-    id: [10],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['offi'],
-    name: ['nulla'],
-    prizepool: ['ad nulla '],
-    serieId: [1],
-    slug: ['g'],
+    modifiedAt: ['culpa labor'],
+    name: ['sunt dolore'],
+    prizepool: ['officia '],
+    serieId: [3],
+    slug: ['k7gctqo03q9'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraftBroodWarShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['est exerci'],
+  const rangeOverStarcraftBroodWarShortTournaments: RangeOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['sint in'],
     detailedStats: [true],
-    endAt: ['fugia'],
+    endAt: ['ipsum aliqua oc'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['enim in '],
-    name: ['proident al'],
-    prizepool: ['fugiat'],
-    serieId: [6],
-    slug: ['0_xv'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [2],
+    modifiedAt: ['nulla esse ip'],
+    name: ['etcommodo cu'],
+    prizepool: ['labore '],
+    serieId: [2],
+    slug: ['1a4r6'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarShortTournaments = {
-    name: 'sint nostr',
-    prizepool: 'labori',
-    slug: 'xxq',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarShortTournaments: SearchOverStarcraftBroodWarShortTournaments = {
+    name: 'sit ea an',
+    prizepool: 'exercit',
+    slug: 'i9djk',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarTournaments.getStarcraftBroodWarTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarShortTournaments,
+    range: rangeOverStarcraftBroodWarShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming StarCraft Brood War tournaments
 ```typescript
 import {
   FilterOverStarcraftBroodWarShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 1;
+  const filterOverStarcraftBroodWarShortTournamentsVideogameTitle = 6;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['n'],
+  const filterOverStarcraftBroodWarShortTournaments: FilterOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['lab'],
     detailedStats: true,
-    endAt: ['in veniam'],
+    endAt: ['aliqui'],
     hasBracket: true,
-    id: [10],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['offi'],
-    name: ['nulla'],
-    prizepool: ['ad nulla '],
-    serieId: [1],
-    slug: ['g'],
+    modifiedAt: ['culpa labor'],
+    name: ['sunt dolore'],
+    prizepool: ['officia '],
+    serieId: [3],
+    slug: ['k7gctqo03q9'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraftBroodWarShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarShortTournaments = {
-    beginAt: ['est exerci'],
+  const rangeOverStarcraftBroodWarShortTournaments: RangeOverStarcraftBroodWarShortTournaments = {
+    beginAt: ['sint in'],
     detailedStats: [true],
-    endAt: ['fugia'],
+    endAt: ['ipsum aliqua oc'],
     hasBracket: [true],
-    id: [6],
-    modifiedAt: ['enim in '],
-    name: ['proident al'],
-    prizepool: ['fugiat'],
-    serieId: [6],
-    slug: ['0_xv'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [2],
+    modifiedAt: ['nulla esse ip'],
+    name: ['etcommodo cu'],
+    prizepool: ['labore '],
+    serieId: [2],
+    slug: ['1a4r6'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarShortTournaments = {
-    name: 'sint nostr',
-    prizepool: 'labori',
-    slug: 'xxq',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraftBroodWarShortTournaments: SearchOverStarcraftBroodWarShortTournaments = {
+    name: 'sit ea an',
+    prizepool: 'exercit',
+    slug: 'i9djk',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarTournaments.getStarcraftBroodWarTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarShortTournaments,
+    range: rangeOverStarcraftBroodWarShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarShortTournaments,
     page: page,
     perPage: 50,
   });

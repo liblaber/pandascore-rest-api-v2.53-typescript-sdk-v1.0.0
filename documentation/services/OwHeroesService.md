@@ -48,39 +48,39 @@ import {
 
   const owHeroRole = OwHeroRole.DAMAGE;
 
-  const filter: FilterOverOwHeroes = {
-    difficulty: [5],
-    id: [1],
-    name: ['voluptate labo'],
-    realName: ['incididu'],
-    role: [owHeroRole],
-    slug: ['6c8'],
-  };
-  const owHeroRole = OwHeroRole.DAMAGE;
-
-  const range: RangeOverOwHeroes = {
-    difficulty: [3],
+  const filterOverOwHeroes: FilterOverOwHeroes = {
+    difficulty: [9],
     id: [9],
-    name: ['est ipsum'],
-    realName: ['amet Duis mini'],
+    name: ['deserunt ex '],
+    realName: ['cupidat'],
     role: [owHeroRole],
-    slug: ['0jglsiw4s'],
+    slug: ['zv5jss750'],
   };
-  const owHeroRole = OwHeroRole.DAMAGE;
+  const owHeroRole1 = OwHeroRole.DAMAGE;
 
-  const search: SearchOverOwHeroes = {
-    name: 'in ad E',
-    realName: 'ipsum ullam',
-    role: owHeroRole,
-    slug: '9gt0-gkh',
+  const rangeOverOwHeroes: RangeOverOwHeroes = {
+    difficulty: [3],
+    id: [2],
+    name: ['minim sunt e'],
+    realName: ['sit e'],
+    role: [owHeroRole1],
+    slug: ['78i6qbl8zdp'],
+  };
+  const owHeroRole12 = OwHeroRole.DAMAGE;
+
+  const searchOverOwHeroes: SearchOverOwHeroes = {
+    name: 'officia',
+    realName: 'fugiat in off',
+    role: owHeroRole12,
+    slug: '1xp0s5w9_jk',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owHeroes.getOwHeroes({
-    filter: filter,
-    range: range,
+    filter: filterOverOwHeroes,
+    range: rangeOverOwHeroes,
     sort: [[]],
-    search: search,
+    search: searchOverOwHeroes,
     page: page,
     perPage: 50,
   });
@@ -116,7 +116,7 @@ import { OwHeroIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const owHeroIdOrSlug = 7;
+  const owHeroIdOrSlug = 2;
 
   const { data } = await pandascoreClient.owHeroes.getOwHeroesOwHeroIdOrSlug();
 

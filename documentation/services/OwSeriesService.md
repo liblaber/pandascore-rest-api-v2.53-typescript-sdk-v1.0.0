@@ -36,7 +36,6 @@ List series for the Overwatch videogame
 ```typescript
 import {
   FilterOverOwSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -49,58 +48,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverOwSeriesVideogameTitle = 1;
+  const filterOverOwSeriesVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
-    beginAt: ['pariatur s'],
-    endAt: ['aliquip ex'],
-    id: [4],
-    leagueId: [5],
-    modifiedAt: ['Duis dolor'],
-    name: ['elit est pro'],
-    season: ['eiusm'],
-    slug: ['bfo-pk33at'],
+  const filterOverOwSeries: FilterOverOwSeries = {
+    beginAt: ['deserunt'],
+    endAt: ['dolore'],
+    id: [8],
+    leagueId: [3],
+    modifiedAt: ['non in '],
+    name: ['ut consectetu'],
+    season: ['incidi'],
+    slug: ['0s_31dv1'],
     videogameTitle: [filterOverOwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
-    beginAt: ['nulla non l'],
-    endAt: ['irure'],
+  const rangeOverOwSeries: RangeOverOwSeries = {
+    beginAt: ['Exce'],
+    endAt: ['t'],
     id: [1],
-    leagueId: [8],
-    modifiedAt: ['consequat l'],
-    name: ['cillu'],
-    season: ['culpa eiusmod e'],
-    slug: ['qys2k1'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    leagueId: [2],
+    modifiedAt: ['nostrud i'],
+    name: ['sed enim do'],
+    season: ['culpa laborum '],
+    slug: ['98'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
-    name: 'dolore et ',
-    season: 'ex enim',
-    slug: 'a2c8ox87',
-    winnerType: opponentType,
+  const searchOverOwSeries: SearchOverOwSeries = {
+    name: 'ut qui',
+    season: 'eiusmod',
+    slug: 'van0',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -136,7 +135,6 @@ List past Overwatch series
 ```typescript
 import {
   FilterOverOwSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -149,58 +147,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverOwSeriesVideogameTitle = 1;
+  const filterOverOwSeriesVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
-    beginAt: ['pariatur s'],
-    endAt: ['aliquip ex'],
-    id: [4],
-    leagueId: [5],
-    modifiedAt: ['Duis dolor'],
-    name: ['elit est pro'],
-    season: ['eiusm'],
-    slug: ['bfo-pk33at'],
+  const filterOverOwSeries: FilterOverOwSeries = {
+    beginAt: ['deserunt'],
+    endAt: ['dolore'],
+    id: [8],
+    leagueId: [3],
+    modifiedAt: ['non in '],
+    name: ['ut consectetu'],
+    season: ['incidi'],
+    slug: ['0s_31dv1'],
     videogameTitle: [filterOverOwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
-    beginAt: ['nulla non l'],
-    endAt: ['irure'],
+  const rangeOverOwSeries: RangeOverOwSeries = {
+    beginAt: ['Exce'],
+    endAt: ['t'],
     id: [1],
-    leagueId: [8],
-    modifiedAt: ['consequat l'],
-    name: ['cillu'],
-    season: ['culpa eiusmod e'],
-    slug: ['qys2k1'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    leagueId: [2],
+    modifiedAt: ['nostrud i'],
+    name: ['sed enim do'],
+    season: ['culpa laborum '],
+    slug: ['98'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
-    name: 'dolore et ',
-    season: 'ex enim',
-    slug: 'a2c8ox87',
-    winnerType: opponentType,
+  const searchOverOwSeries: SearchOverOwSeries = {
+    name: 'ut qui',
+    season: 'eiusmod',
+    slug: 'van0',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -236,7 +234,6 @@ List running Overwatch series
 ```typescript
 import {
   FilterOverOwSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -249,58 +246,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverOwSeriesVideogameTitle = 1;
+  const filterOverOwSeriesVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
-    beginAt: ['pariatur s'],
-    endAt: ['aliquip ex'],
-    id: [4],
-    leagueId: [5],
-    modifiedAt: ['Duis dolor'],
-    name: ['elit est pro'],
-    season: ['eiusm'],
-    slug: ['bfo-pk33at'],
+  const filterOverOwSeries: FilterOverOwSeries = {
+    beginAt: ['deserunt'],
+    endAt: ['dolore'],
+    id: [8],
+    leagueId: [3],
+    modifiedAt: ['non in '],
+    name: ['ut consectetu'],
+    season: ['incidi'],
+    slug: ['0s_31dv1'],
     videogameTitle: [filterOverOwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
-    beginAt: ['nulla non l'],
-    endAt: ['irure'],
+  const rangeOverOwSeries: RangeOverOwSeries = {
+    beginAt: ['Exce'],
+    endAt: ['t'],
     id: [1],
-    leagueId: [8],
-    modifiedAt: ['consequat l'],
-    name: ['cillu'],
-    season: ['culpa eiusmod e'],
-    slug: ['qys2k1'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    leagueId: [2],
+    modifiedAt: ['nostrud i'],
+    name: ['sed enim do'],
+    season: ['culpa laborum '],
+    slug: ['98'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
-    name: 'dolore et ',
-    season: 'ex enim',
-    slug: 'a2c8ox87',
-    winnerType: opponentType,
+  const searchOverOwSeries: SearchOverOwSeries = {
+    name: 'ut qui',
+    season: 'eiusmod',
+    slug: 'van0',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -336,7 +333,6 @@ List upcoming Overwatch series
 ```typescript
 import {
   FilterOverOwSeries,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -349,58 +345,58 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filterOverOwSeriesVideogameTitle = 1;
+  const filterOverOwSeriesVideogameTitle = 5;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
-    beginAt: ['pariatur s'],
-    endAt: ['aliquip ex'],
-    id: [4],
-    leagueId: [5],
-    modifiedAt: ['Duis dolor'],
-    name: ['elit est pro'],
-    season: ['eiusm'],
-    slug: ['bfo-pk33at'],
+  const filterOverOwSeries: FilterOverOwSeries = {
+    beginAt: ['deserunt'],
+    endAt: ['dolore'],
+    id: [8],
+    leagueId: [3],
+    modifiedAt: ['non in '],
+    name: ['ut consectetu'],
+    season: ['incidi'],
+    slug: ['0s_31dv1'],
     videogameTitle: [filterOverOwSeriesVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
-    beginAt: ['nulla non l'],
-    endAt: ['irure'],
+  const rangeOverOwSeries: RangeOverOwSeries = {
+    beginAt: ['Exce'],
+    endAt: ['t'],
     id: [1],
-    leagueId: [8],
-    modifiedAt: ['consequat l'],
-    name: ['cillu'],
-    season: ['culpa eiusmod e'],
-    slug: ['qys2k1'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    leagueId: [2],
+    modifiedAt: ['nostrud i'],
+    name: ['sed enim do'],
+    season: ['culpa laborum '],
+    slug: ['98'],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
-    name: 'dolore et ',
-    season: 'ex enim',
-    slug: 'a2c8ox87',
-    winnerType: opponentType,
+  const searchOverOwSeries: SearchOverOwSeries = {
+    name: 'ut qui',
+    season: 'eiusmod',
+    slug: 'van0',
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });

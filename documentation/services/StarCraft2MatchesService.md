@@ -39,14 +39,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraft2Matches,
   SearchOverStarcraft2Matches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -60,40 +56,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraft2MatchesVideogameTitle = 4;
+  const filterOverStarcraft2MatchesVideogameTitle = 5;
 
-  const filterOverStarcraft2MatchesVideogameVersion = '4485.30919.76039064212';
+  const filterOverStarcraft2MatchesVideogameVersion = '002743.84027555632.65809687197';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraft2Matches = {
-    beginAt: ['s'],
+  const filterOverStarcraft2Matches: FilterOverStarcraft2Matches = {
+    beginAt: ['dol'],
     detailedStats: true,
     draw: true,
-    endAt: ['nisi d'],
+    endAt: ['repr'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [6],
+    id: [5],
+    leagueId: [8],
     matchType: [matchType],
-    modifiedAt: ['culpa'],
-    name: ['sint dolor pa'],
+    modifiedAt: ['aliquip dolore '],
+    name: ['sint i'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverStarcraft2MatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['ad'],
-    serieId: [2],
-    slug: ['k4L7L1L5N'],
+    scheduledAt: ['adipisicin'],
+    serieId: [7],
+    slug: ['blK8WjKK'],
     status: [matchStatus],
-    tournamentId: [7],
+    tournamentId: [1],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraft2MatchesVideogameTitle],
@@ -101,52 +97,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraft2Matches = {
-    beginAt: ['dolore in'],
+  const rangeOverStarcraft2Matches: RangeOverStarcraft2Matches = {
+    beginAt: ['sit'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['in fu'],
+    endAt: ['nostrud magna m'],
     forfeit: [true],
     id: [2],
-    matchType: [matchType],
-    modifiedAt: ['Ut'],
-    name: ['nisi ullam'],
-    numberOfGames: [1],
-    scheduledAt: ['r'],
-    slug: ['xmo'],
-    status: [matchStatus],
-    tournamentId: [9],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ve'],
+    name: ['inesse dolor '],
+    numberOfGames: [2],
+    scheduledAt: ['ullam'],
+    slug: ['QFi 0L'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraft2Matches = {
-    matchType: matchType,
-    name: 'laborum iru',
-    slug: 'eJeArFzo',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraft2Matches: SearchOverStarcraft2Matches = {
+    matchType: matchType12,
+    name: 'esse am',
+    slug: '5x5wgZT_',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Matches.getStarcraft2Matches({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Matches,
+    range: rangeOverStarcraft2Matches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Matches,
     page: page,
     perPage: 50,
   });
@@ -185,14 +181,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraft2Matches,
   SearchOverStarcraft2Matches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -206,40 +198,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraft2MatchesVideogameTitle = 4;
+  const filterOverStarcraft2MatchesVideogameTitle = 5;
 
-  const filterOverStarcraft2MatchesVideogameVersion = '4485.30919.76039064212';
+  const filterOverStarcraft2MatchesVideogameVersion = '002743.84027555632.65809687197';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraft2Matches = {
-    beginAt: ['s'],
+  const filterOverStarcraft2Matches: FilterOverStarcraft2Matches = {
+    beginAt: ['dol'],
     detailedStats: true,
     draw: true,
-    endAt: ['nisi d'],
+    endAt: ['repr'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [6],
+    id: [5],
+    leagueId: [8],
     matchType: [matchType],
-    modifiedAt: ['culpa'],
-    name: ['sint dolor pa'],
+    modifiedAt: ['aliquip dolore '],
+    name: ['sint i'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverStarcraft2MatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['ad'],
-    serieId: [2],
-    slug: ['k4L7L1L5N'],
+    scheduledAt: ['adipisicin'],
+    serieId: [7],
+    slug: ['blK8WjKK'],
     status: [matchStatus],
-    tournamentId: [7],
+    tournamentId: [1],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraft2MatchesVideogameTitle],
@@ -247,52 +239,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraft2Matches = {
-    beginAt: ['dolore in'],
+  const rangeOverStarcraft2Matches: RangeOverStarcraft2Matches = {
+    beginAt: ['sit'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['in fu'],
+    endAt: ['nostrud magna m'],
     forfeit: [true],
     id: [2],
-    matchType: [matchType],
-    modifiedAt: ['Ut'],
-    name: ['nisi ullam'],
-    numberOfGames: [1],
-    scheduledAt: ['r'],
-    slug: ['xmo'],
-    status: [matchStatus],
-    tournamentId: [9],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ve'],
+    name: ['inesse dolor '],
+    numberOfGames: [2],
+    scheduledAt: ['ullam'],
+    slug: ['QFi 0L'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraft2Matches = {
-    matchType: matchType,
-    name: 'laborum iru',
-    slug: 'eJeArFzo',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraft2Matches: SearchOverStarcraft2Matches = {
+    matchType: matchType12,
+    name: 'esse am',
+    slug: '5x5wgZT_',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Matches.getStarcraft2MatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Matches,
+    range: rangeOverStarcraft2Matches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Matches,
     page: page,
     perPage: 50,
   });
@@ -331,14 +323,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraft2Matches,
   SearchOverStarcraft2Matches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -352,40 +340,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraft2MatchesVideogameTitle = 4;
+  const filterOverStarcraft2MatchesVideogameTitle = 5;
 
-  const filterOverStarcraft2MatchesVideogameVersion = '4485.30919.76039064212';
+  const filterOverStarcraft2MatchesVideogameVersion = '002743.84027555632.65809687197';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraft2Matches = {
-    beginAt: ['s'],
+  const filterOverStarcraft2Matches: FilterOverStarcraft2Matches = {
+    beginAt: ['dol'],
     detailedStats: true,
     draw: true,
-    endAt: ['nisi d'],
+    endAt: ['repr'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [6],
+    id: [5],
+    leagueId: [8],
     matchType: [matchType],
-    modifiedAt: ['culpa'],
-    name: ['sint dolor pa'],
+    modifiedAt: ['aliquip dolore '],
+    name: ['sint i'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverStarcraft2MatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['ad'],
-    serieId: [2],
-    slug: ['k4L7L1L5N'],
+    scheduledAt: ['adipisicin'],
+    serieId: [7],
+    slug: ['blK8WjKK'],
     status: [matchStatus],
-    tournamentId: [7],
+    tournamentId: [1],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraft2MatchesVideogameTitle],
@@ -393,52 +381,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraft2Matches = {
-    beginAt: ['dolore in'],
+  const rangeOverStarcraft2Matches: RangeOverStarcraft2Matches = {
+    beginAt: ['sit'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['in fu'],
+    endAt: ['nostrud magna m'],
     forfeit: [true],
     id: [2],
-    matchType: [matchType],
-    modifiedAt: ['Ut'],
-    name: ['nisi ullam'],
-    numberOfGames: [1],
-    scheduledAt: ['r'],
-    slug: ['xmo'],
-    status: [matchStatus],
-    tournamentId: [9],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ve'],
+    name: ['inesse dolor '],
+    numberOfGames: [2],
+    scheduledAt: ['ullam'],
+    slug: ['QFi 0L'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraft2Matches = {
-    matchType: matchType,
-    name: 'laborum iru',
-    slug: 'eJeArFzo',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraft2Matches: SearchOverStarcraft2Matches = {
+    matchType: matchType12,
+    name: 'esse am',
+    slug: '5x5wgZT_',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Matches.getStarcraft2MatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Matches,
+    range: rangeOverStarcraft2Matches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Matches,
     page: page,
     perPage: 50,
   });
@@ -477,14 +465,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraft2Matches,
   SearchOverStarcraft2Matches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -498,40 +482,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraft2MatchesVideogameTitle = 4;
+  const filterOverStarcraft2MatchesVideogameTitle = 5;
 
-  const filterOverStarcraft2MatchesVideogameVersion = '4485.30919.76039064212';
+  const filterOverStarcraft2MatchesVideogameVersion = '002743.84027555632.65809687197';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraft2Matches = {
-    beginAt: ['s'],
+  const filterOverStarcraft2Matches: FilterOverStarcraft2Matches = {
+    beginAt: ['dol'],
     detailedStats: true,
     draw: true,
-    endAt: ['nisi d'],
+    endAt: ['repr'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [6],
+    id: [5],
+    leagueId: [8],
     matchType: [matchType],
-    modifiedAt: ['culpa'],
-    name: ['sint dolor pa'],
+    modifiedAt: ['aliquip dolore '],
+    name: ['sint i'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverStarcraft2MatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['ad'],
-    serieId: [2],
-    slug: ['k4L7L1L5N'],
+    scheduledAt: ['adipisicin'],
+    serieId: [7],
+    slug: ['blK8WjKK'],
     status: [matchStatus],
-    tournamentId: [7],
+    tournamentId: [1],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraft2MatchesVideogameTitle],
@@ -539,52 +523,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraft2Matches = {
-    beginAt: ['dolore in'],
+  const rangeOverStarcraft2Matches: RangeOverStarcraft2Matches = {
+    beginAt: ['sit'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['in fu'],
+    endAt: ['nostrud magna m'],
     forfeit: [true],
     id: [2],
-    matchType: [matchType],
-    modifiedAt: ['Ut'],
-    name: ['nisi ullam'],
-    numberOfGames: [1],
-    scheduledAt: ['r'],
-    slug: ['xmo'],
-    status: [matchStatus],
-    tournamentId: [9],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ve'],
+    name: ['inesse dolor '],
+    numberOfGames: [2],
+    scheduledAt: ['ullam'],
+    slug: ['QFi 0L'],
+    status: [matchStatus1],
+    tournamentId: [4],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraft2Matches = {
-    matchType: matchType,
-    name: 'laborum iru',
-    slug: 'eJeArFzo',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraft2Matches: SearchOverStarcraft2Matches = {
+    matchType: matchType12,
+    name: 'esse am',
+    slug: '5x5wgZT_',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Matches.getStarcraft2MatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Matches,
+    range: rangeOverStarcraft2Matches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Matches,
     page: page,
     perPage: 50,
   });

@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverCsgoPlayers = {
+  const filterOverCsgoPlayers: FilterOverCsgoPlayers = {
     active: true,
-    birthday: ['Lorem'],
-    firstName: ['sed proident v'],
-    id: [6],
-    lastName: ['sit molli'],
-    modifiedAt: ['off'],
-    name: ['proident nul'],
-    nationality: ['dolor la'],
-    role: ['Excepteur'],
-    slug: ['sa2v'],
-    teamId: [5],
+    birthday: ['ipsum est'],
+    firstName: ['commodo elit'],
+    id: [2],
+    lastName: ['sitesse aut'],
+    modifiedAt: ['exercit'],
+    name: ['dolore Excepte'],
+    nationality: ['exercitat'],
+    role: ['quis consectet'],
+    slug: ['hqupp'],
+    teamId: [4],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverCsgoPlayers = {
-    birthday: ['consectetur'],
-    firstName: ['eu re'],
-    id: [7],
-    lastName: ['ex ut'],
-    modifiedAt: ['occaecat aut'],
-    name: ['ea Ut'],
-    nationality: ['incidi'],
-    role: ['labore mollit'],
-    slug: ['dp'],
+  const rangeOverCsgoPlayers: RangeOverCsgoPlayers = {
+    birthday: ['nostrud '],
+    firstName: ['inaut'],
+    id: [2],
+    lastName: ['magna m'],
+    modifiedAt: ['nostrud inc'],
+    name: ['non qui sun'],
+    nationality: ['amet '],
+    role: ['non co'],
+    slug: ['srxr1-zb2sn'],
   };
 
-  const search: SearchOverCsgoPlayers = {
-    birthday: 'proide',
-    firstName: 'nostrud exe',
-    lastName: 'ad aliqui',
-    name: 'voluptate pr',
-    nationality: 'nulla cu',
-    role: 'ipsum',
-    slug: 'l6xic',
+  const searchOverCsgoPlayers: SearchOverCsgoPlayers = {
+    birthday: 'nostrud ad in ',
+    firstName: 'consequa',
+    lastName: 'laborum ',
+    name: 'ut Excepteur n',
+    nationality: 'proident mini',
+    role: 'aliquip ',
+    slug: '9y',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikePlayers.getCsgoPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoPlayers,
+    range: rangeOverCsgoPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoPlayers,
     page: page,
     perPage: 50,
   });

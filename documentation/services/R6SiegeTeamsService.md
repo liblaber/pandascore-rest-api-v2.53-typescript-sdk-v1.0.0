@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverR6SiegeTeams = {
-    acronym: ['qui cillum nisi'],
-    id: [1],
-    location: ['labore occaecat'],
-    modifiedAt: ['Duis conse'],
-    name: ['officia proide'],
-    slug: ['fafii1hq'],
+  const filterOverR6SiegeTeams: FilterOverR6SiegeTeams = {
+    acronym: ['pariatur co'],
+    id: [8],
+    location: ['aute ex'],
+    modifiedAt: ['pariatur elit m'],
+    name: ['adin sed'],
+    slug: ['1va2v7dm-j'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverR6SiegeTeams = {
-    acronym: ['ea sunt'],
-    id: [9],
-    location: ['est aliqui'],
-    modifiedAt: ['laborum null'],
-    name: ['dolore'],
-    slug: ['znwtmgib'],
+  const rangeOverR6SiegeTeams: RangeOverR6SiegeTeams = {
+    acronym: ['aliquip'],
+    id: [2],
+    location: ['commodo'],
+    modifiedAt: ['sed L'],
+    name: ['proid'],
+    slug: ['by-i4'],
   };
 
-  const search: SearchOverR6SiegeTeams = {
-    acronym: 'consec',
-    location: 'dolor minim ',
-    name: 'do labore Lore',
-    slug: 'zfshdk4rxr',
+  const searchOverR6SiegeTeams: SearchOverR6SiegeTeams = {
+    acronym: 'exercitati',
+    location: 'occaecat l',
+    name: 'ex incididunt',
+    slug: 'yck1qqq',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeTeams.getR6siegeTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeTeams,
+    range: rangeOverR6SiegeTeams,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeTeams,
     page: page,
     perPage: 50,
   });

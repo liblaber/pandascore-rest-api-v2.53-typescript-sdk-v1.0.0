@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverR6SiegeLeagues = {
-    id: [10],
-    modifiedAt: ['Ut dolore fugi'],
-    name: ['adipi'],
-    slug: ['i:'],
-    url: ['quis nulla u'],
+  const filterOverR6SiegeLeagues: FilterOverR6SiegeLeagues = {
+    id: [2],
+    modifiedAt: ['in p'],
+    name: ['dolore'],
+    slug: ['0g'],
+    url: ['quis deserunt '],
   };
 
-  const range: RangeOverR6SiegeLeagues = {
-    id: [7],
-    modifiedAt: ['officia de'],
-    name: ['enim ipsum inci'],
-    slug: ['l9950wriu'],
-    url: ['ea qui'],
+  const rangeOverR6SiegeLeagues: RangeOverR6SiegeLeagues = {
+    id: [4],
+    modifiedAt: ['non tem'],
+    name: ['Ut quis E'],
+    slug: ['sf43rbls-'],
+    url: ['Duis d'],
   };
 
-  const search: SearchOverR6SiegeLeagues = {
-    name: 'irure ipsum',
-    slug: 'ksmx1n',
-    url: 'ut anim sit',
+  const searchOverR6SiegeLeagues: SearchOverR6SiegeLeagues = {
+    name: 'auteconsequat ',
+    slug: 'ess81c',
+    url: 'Lorem elit',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeLeagues.getR6siegeLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeLeagues,
+    range: rangeOverR6SiegeLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeLeagues,
     page: page,
     perPage: 50,
   });

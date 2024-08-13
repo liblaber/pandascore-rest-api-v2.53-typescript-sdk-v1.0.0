@@ -39,14 +39,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverFifaMatches,
   SearchOverFifaMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -60,40 +56,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverFifaMatchesVideogameTitle = 1;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-  const filterOverFifaMatchesVideogameVersion = '49238084787.514806';
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverFifaMatches = {
-    beginAt: ['comm'],
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
     detailedStats: true,
     draw: true,
-    endAt: ['a'],
+    endAt: ['ad enim incidi'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [10],
-    leagueId: [1],
+    id: [2],
+    leagueId: [6],
     matchType: [matchType],
-    modifiedAt: ['culpa D'],
-    name: ['cillum '],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
     notStarted: true,
-    numberOfGames: [1],
+    numberOfGames: [9],
     opponentId: [filterOverFifaMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['dolor sunt'],
-    serieId: [4],
-    slug: ['6q'],
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
     status: [matchStatus],
-    tournamentId: [9],
+    tournamentId: [5],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverFifaMatchesVideogameTitle],
@@ -101,52 +97,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverFifaMatches = {
-    beginAt: ['c'],
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['ex irure id'],
+    endAt: ['con'],
     forfeit: [true],
-    id: [8],
-    matchType: [matchType],
-    modifiedAt: ['eiusmod cillu'],
-    name: ['enim anim eu '],
-    numberOfGames: [4],
-    scheduledAt: ['eu nisi mollit '],
-    slug: ['DY'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverFifaMatches = {
-    matchType: matchType,
-    name: 'magna officia E',
-    slug: '04j8Ucdf',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatches({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-    search: search,
+    search: searchOverFifaMatches,
     page: page,
     perPage: 50,
   });
@@ -185,14 +181,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverFifaMatches,
   SearchOverFifaMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -206,40 +198,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverFifaMatchesVideogameTitle = 1;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-  const filterOverFifaMatchesVideogameVersion = '49238084787.514806';
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverFifaMatches = {
-    beginAt: ['comm'],
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
     detailedStats: true,
     draw: true,
-    endAt: ['a'],
+    endAt: ['ad enim incidi'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [10],
-    leagueId: [1],
+    id: [2],
+    leagueId: [6],
     matchType: [matchType],
-    modifiedAt: ['culpa D'],
-    name: ['cillum '],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
     notStarted: true,
-    numberOfGames: [1],
+    numberOfGames: [9],
     opponentId: [filterOverFifaMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['dolor sunt'],
-    serieId: [4],
-    slug: ['6q'],
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
     status: [matchStatus],
-    tournamentId: [9],
+    tournamentId: [5],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverFifaMatchesVideogameTitle],
@@ -247,52 +239,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverFifaMatches = {
-    beginAt: ['c'],
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['ex irure id'],
+    endAt: ['con'],
     forfeit: [true],
-    id: [8],
-    matchType: [matchType],
-    modifiedAt: ['eiusmod cillu'],
-    name: ['enim anim eu '],
-    numberOfGames: [4],
-    scheduledAt: ['eu nisi mollit '],
-    slug: ['DY'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverFifaMatches = {
-    matchType: matchType,
-    name: 'magna officia E',
-    slug: '04j8Ucdf',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-    search: search,
+    search: searchOverFifaMatches,
     page: page,
     perPage: 50,
   });
@@ -331,14 +323,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverFifaMatches,
   SearchOverFifaMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -352,40 +340,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverFifaMatchesVideogameTitle = 1;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-  const filterOverFifaMatchesVideogameVersion = '49238084787.514806';
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverFifaMatches = {
-    beginAt: ['comm'],
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
     detailedStats: true,
     draw: true,
-    endAt: ['a'],
+    endAt: ['ad enim incidi'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [10],
-    leagueId: [1],
+    id: [2],
+    leagueId: [6],
     matchType: [matchType],
-    modifiedAt: ['culpa D'],
-    name: ['cillum '],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
     notStarted: true,
-    numberOfGames: [1],
+    numberOfGames: [9],
     opponentId: [filterOverFifaMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['dolor sunt'],
-    serieId: [4],
-    slug: ['6q'],
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
     status: [matchStatus],
-    tournamentId: [9],
+    tournamentId: [5],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverFifaMatchesVideogameTitle],
@@ -393,52 +381,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverFifaMatches = {
-    beginAt: ['c'],
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['ex irure id'],
+    endAt: ['con'],
     forfeit: [true],
-    id: [8],
-    matchType: [matchType],
-    modifiedAt: ['eiusmod cillu'],
-    name: ['enim anim eu '],
-    numberOfGames: [4],
-    scheduledAt: ['eu nisi mollit '],
-    slug: ['DY'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverFifaMatches = {
-    matchType: matchType,
-    name: 'magna officia E',
-    slug: '04j8Ucdf',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-    search: search,
+    search: searchOverFifaMatches,
     page: page,
     perPage: 50,
   });
@@ -477,14 +465,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverFifaMatches,
   SearchOverFifaMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -498,40 +482,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverFifaMatchesVideogameTitle = 1;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-  const filterOverFifaMatchesVideogameVersion = '49238084787.514806';
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverFifaMatches = {
-    beginAt: ['comm'],
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
     detailedStats: true,
     draw: true,
-    endAt: ['a'],
+    endAt: ['ad enim incidi'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [10],
-    leagueId: [1],
+    id: [2],
+    leagueId: [6],
     matchType: [matchType],
-    modifiedAt: ['culpa D'],
-    name: ['cillum '],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
     notStarted: true,
-    numberOfGames: [1],
+    numberOfGames: [9],
     opponentId: [filterOverFifaMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['dolor sunt'],
-    serieId: [4],
-    slug: ['6q'],
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
     status: [matchStatus],
-    tournamentId: [9],
+    tournamentId: [5],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverFifaMatchesVideogameTitle],
@@ -539,52 +523,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverFifaMatches = {
-    beginAt: ['c'],
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['ex irure id'],
+    endAt: ['con'],
     forfeit: [true],
-    id: [8],
-    matchType: [matchType],
-    modifiedAt: ['eiusmod cillu'],
-    name: ['enim anim eu '],
-    numberOfGames: [4],
-    scheduledAt: ['eu nisi mollit '],
-    slug: ['DY'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverFifaMatches = {
-    matchType: matchType,
-    name: 'magna officia E',
-    slug: '04j8Ucdf',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-    search: search,
+    search: searchOverFifaMatches,
     page: page,
     perPage: 50,
   });

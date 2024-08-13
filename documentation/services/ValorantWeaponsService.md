@@ -45,29 +45,29 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantWeapons = {
-    creds: [3.74],
-    id: [7],
-    name: ['dolore anim vo'],
+  const filterOverValorantWeapons: FilterOverValorantWeapons = {
+    creds: [8.36],
+    id: [9],
+    name: ['consectetu'],
     videogameVersion: [],
   };
 
-  const range: RangeOverValorantWeapons = {
-    creds: [4.26],
-    id: [10],
-    name: ['Duis m'],
+  const rangeOverValorantWeapons: RangeOverValorantWeapons = {
+    creds: [5.67],
+    id: [4],
+    name: ['amet pariatur s'],
   };
 
-  const search: SearchOverValorantWeapons = {
-    name: 'id do',
+  const searchOverValorantWeapons: SearchOverValorantWeapons = {
+    name: 'Duis do',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantWeapons.getValorantWeapons({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantWeapons,
+    range: rangeOverValorantWeapons,
     sort: [[]],
-    search: search,
+    search: searchOverValorantWeapons,
     page: page,
     perPage: 50,
   });
@@ -103,7 +103,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantWeapons.getValorantWeaponsValorantWeaponId(5);
+  const { data } = await pandascoreClient.valorantWeapons.getValorantWeaponsValorantWeaponId(10);
 
   console.log(data);
 })();

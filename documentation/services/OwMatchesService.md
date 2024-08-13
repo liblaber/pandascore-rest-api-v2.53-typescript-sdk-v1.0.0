@@ -39,14 +39,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverOwMatches,
   SearchOverOwMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -60,40 +56,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverOwMatchesVideogameTitle = 3;
+  const filterOverOwMatchesVideogameTitle = 6;
 
-  const filterOverOwMatchesVideogameVersion = '18.28195562';
+  const filterOverOwMatchesVideogameVersion = '50504779.61189519999';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverOwMatches = {
-    beginAt: ['irure'],
+  const filterOverOwMatches: FilterOverOwMatches = {
+    beginAt: ['Dui'],
     detailedStats: true,
     draw: true,
-    endAt: ['exercitation'],
+    endAt: ['d'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
-    leagueId: [7],
+    id: [10],
+    leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['minim i'],
-    name: ['do tempor cupid'],
+    modifiedAt: ['voluptate dol'],
+    name: ['veniam'],
     notStarted: true,
-    numberOfGames: [9],
+    numberOfGames: [6],
     opponentId: [filterOverOwMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['i'],
-    serieId: [1],
-    slug: ['Gr'],
+    scheduledAt: ['laboru'],
+    serieId: [8],
+    slug: ['Bbdi W6S'],
     status: [matchStatus],
-    tournamentId: [1],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -101,52 +97,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverOwMatches = {
-    beginAt: ['pariatu'],
+  const rangeOverOwMatches: RangeOverOwMatches = {
+    beginAt: ['r'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['aut'],
+    endAt: ['incididunt'],
     forfeit: [true],
     id: [1],
-    matchType: [matchType],
-    modifiedAt: ['venia'],
-    name: ['incidid'],
-    numberOfGames: [123],
-    scheduledAt: ['consectetur'],
-    slug: ['yYatbFrSyos'],
-    status: [matchStatus],
-    tournamentId: [6],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ipsum labo'],
+    name: ['inetea '],
+    numberOfGames: [1],
+    scheduledAt: ['consequat'],
+    slug: ['epM'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverOwMatches = {
-    matchType: matchType,
-    name: 'velit eu qui',
-    slug: 'J8CP',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverOwMatches: SearchOverOwMatches = {
+    matchType: matchType12,
+    name: 'ex Duis magn',
+    slug: 'B',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owMatches.getOwMatches({
-    filter: filter,
-    range: range,
+    filter: filterOverOwMatches,
+    range: rangeOverOwMatches,
     sort: [[]],
-    search: search,
+    search: searchOverOwMatches,
     page: page,
     perPage: 50,
   });
@@ -185,14 +181,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverOwMatches,
   SearchOverOwMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -206,40 +198,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverOwMatchesVideogameTitle = 3;
+  const filterOverOwMatchesVideogameTitle = 6;
 
-  const filterOverOwMatchesVideogameVersion = '18.28195562';
+  const filterOverOwMatchesVideogameVersion = '50504779.61189519999';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverOwMatches = {
-    beginAt: ['irure'],
+  const filterOverOwMatches: FilterOverOwMatches = {
+    beginAt: ['Dui'],
     detailedStats: true,
     draw: true,
-    endAt: ['exercitation'],
+    endAt: ['d'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
-    leagueId: [7],
+    id: [10],
+    leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['minim i'],
-    name: ['do tempor cupid'],
+    modifiedAt: ['voluptate dol'],
+    name: ['veniam'],
     notStarted: true,
-    numberOfGames: [9],
+    numberOfGames: [6],
     opponentId: [filterOverOwMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['i'],
-    serieId: [1],
-    slug: ['Gr'],
+    scheduledAt: ['laboru'],
+    serieId: [8],
+    slug: ['Bbdi W6S'],
     status: [matchStatus],
-    tournamentId: [1],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -247,52 +239,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverOwMatches = {
-    beginAt: ['pariatu'],
+  const rangeOverOwMatches: RangeOverOwMatches = {
+    beginAt: ['r'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['aut'],
+    endAt: ['incididunt'],
     forfeit: [true],
     id: [1],
-    matchType: [matchType],
-    modifiedAt: ['venia'],
-    name: ['incidid'],
-    numberOfGames: [123],
-    scheduledAt: ['consectetur'],
-    slug: ['yYatbFrSyos'],
-    status: [matchStatus],
-    tournamentId: [6],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ipsum labo'],
+    name: ['inetea '],
+    numberOfGames: [1],
+    scheduledAt: ['consequat'],
+    slug: ['epM'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverOwMatches = {
-    matchType: matchType,
-    name: 'velit eu qui',
-    slug: 'J8CP',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverOwMatches: SearchOverOwMatches = {
+    matchType: matchType12,
+    name: 'ex Duis magn',
+    slug: 'B',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owMatches.getOwMatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverOwMatches,
+    range: rangeOverOwMatches,
     sort: [[]],
-    search: search,
+    search: searchOverOwMatches,
     page: page,
     perPage: 50,
   });
@@ -331,14 +323,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverOwMatches,
   SearchOverOwMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -352,40 +340,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverOwMatchesVideogameTitle = 3;
+  const filterOverOwMatchesVideogameTitle = 6;
 
-  const filterOverOwMatchesVideogameVersion = '18.28195562';
+  const filterOverOwMatchesVideogameVersion = '50504779.61189519999';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverOwMatches = {
-    beginAt: ['irure'],
+  const filterOverOwMatches: FilterOverOwMatches = {
+    beginAt: ['Dui'],
     detailedStats: true,
     draw: true,
-    endAt: ['exercitation'],
+    endAt: ['d'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
-    leagueId: [7],
+    id: [10],
+    leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['minim i'],
-    name: ['do tempor cupid'],
+    modifiedAt: ['voluptate dol'],
+    name: ['veniam'],
     notStarted: true,
-    numberOfGames: [9],
+    numberOfGames: [6],
     opponentId: [filterOverOwMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['i'],
-    serieId: [1],
-    slug: ['Gr'],
+    scheduledAt: ['laboru'],
+    serieId: [8],
+    slug: ['Bbdi W6S'],
     status: [matchStatus],
-    tournamentId: [1],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -393,52 +381,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverOwMatches = {
-    beginAt: ['pariatu'],
+  const rangeOverOwMatches: RangeOverOwMatches = {
+    beginAt: ['r'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['aut'],
+    endAt: ['incididunt'],
     forfeit: [true],
     id: [1],
-    matchType: [matchType],
-    modifiedAt: ['venia'],
-    name: ['incidid'],
-    numberOfGames: [123],
-    scheduledAt: ['consectetur'],
-    slug: ['yYatbFrSyos'],
-    status: [matchStatus],
-    tournamentId: [6],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ipsum labo'],
+    name: ['inetea '],
+    numberOfGames: [1],
+    scheduledAt: ['consequat'],
+    slug: ['epM'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverOwMatches = {
-    matchType: matchType,
-    name: 'velit eu qui',
-    slug: 'J8CP',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverOwMatches: SearchOverOwMatches = {
+    matchType: matchType12,
+    name: 'ex Duis magn',
+    slug: 'B',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owMatches.getOwMatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverOwMatches,
+    range: rangeOverOwMatches,
     sort: [[]],
-    search: search,
+    search: searchOverOwMatches,
     page: page,
     perPage: 50,
   });
@@ -477,14 +465,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverOwMatches,
   SearchOverOwMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -498,40 +482,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverOwMatchesVideogameTitle = 3;
+  const filterOverOwMatchesVideogameTitle = 6;
 
-  const filterOverOwMatchesVideogameVersion = '18.28195562';
+  const filterOverOwMatchesVideogameVersion = '50504779.61189519999';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverOwMatches = {
-    beginAt: ['irure'],
+  const filterOverOwMatches: FilterOverOwMatches = {
+    beginAt: ['Dui'],
     detailedStats: true,
     draw: true,
-    endAt: ['exercitation'],
+    endAt: ['d'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [6],
-    leagueId: [7],
+    id: [10],
+    leagueId: [4],
     matchType: [matchType],
-    modifiedAt: ['minim i'],
-    name: ['do tempor cupid'],
+    modifiedAt: ['voluptate dol'],
+    name: ['veniam'],
     notStarted: true,
-    numberOfGames: [9],
+    numberOfGames: [6],
     opponentId: [filterOverOwMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['i'],
-    serieId: [1],
-    slug: ['Gr'],
+    scheduledAt: ['laboru'],
+    serieId: [8],
+    slug: ['Bbdi W6S'],
     status: [matchStatus],
-    tournamentId: [1],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverOwMatchesVideogameTitle],
@@ -539,52 +523,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverOwMatches = {
-    beginAt: ['pariatu'],
+  const rangeOverOwMatches: RangeOverOwMatches = {
+    beginAt: ['r'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['aut'],
+    endAt: ['incididunt'],
     forfeit: [true],
     id: [1],
-    matchType: [matchType],
-    modifiedAt: ['venia'],
-    name: ['incidid'],
-    numberOfGames: [123],
-    scheduledAt: ['consectetur'],
-    slug: ['yYatbFrSyos'],
-    status: [matchStatus],
-    tournamentId: [6],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    matchType: [matchType1],
+    modifiedAt: ['ipsum labo'],
+    name: ['inetea '],
+    numberOfGames: [1],
+    scheduledAt: ['consequat'],
+    slug: ['epM'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverOwMatches = {
-    matchType: matchType,
-    name: 'velit eu qui',
-    slug: 'J8CP',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverOwMatches: SearchOverOwMatches = {
+    matchType: matchType12,
+    name: 'ex Duis magn',
+    slug: 'B',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owMatches.getOwMatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverOwMatches,
+    range: rangeOverOwMatches,
     sort: [[]],
-    search: search,
+    search: searchOverOwMatches,
     page: page,
     perPage: 50,
   });

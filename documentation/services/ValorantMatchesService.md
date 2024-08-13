@@ -39,14 +39,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverValorantMatches,
   SearchOverValorantMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -60,40 +56,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverValorantMatchesVideogameTitle = 9;
+  const filterOverValorantMatchesVideogameTitle = 5;
 
-  const filterOverValorantMatchesVideogameVersion = '297342.45230068';
+  const filterOverValorantMatchesVideogameVersion = '848.5017114648.16441010106';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverValorantMatches = {
-    beginAt: ['est ex u'],
+  const filterOverValorantMatches: FilterOverValorantMatches = {
+    beginAt: ['dolor'],
     detailedStats: true,
     draw: true,
-    endAt: ['sit aliqua'],
+    endAt: ['ex'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [7],
-    leagueId: [5],
+    id: [9],
+    leagueId: [9],
     matchType: [matchType],
-    modifiedAt: ['non'],
-    name: ['sint '],
+    modifiedAt: ['dolor velit'],
+    name: ['minim'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverValorantMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['est cillum eiu'],
-    serieId: [10],
-    slug: ['U1'],
+    scheduledAt: ['repre'],
+    serieId: [1],
+    slug: ['P'],
     status: [matchStatus],
-    tournamentId: [6],
+    tournamentId: [3],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -101,52 +97,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverValorantMatches = {
-    beginAt: ['occaecat do'],
+  const rangeOverValorantMatches: RangeOverValorantMatches = {
+    beginAt: ['off'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['officia '],
+    endAt: ['f'],
     forfeit: [true],
-    id: [3],
-    matchType: [matchType],
-    modifiedAt: ['ut ullamco l'],
-    name: ['nulla es'],
-    numberOfGames: [10],
-    scheduledAt: ['dolor Ut u'],
-    slug: ['GXZ9'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [8],
+    matchType: [matchType1],
+    modifiedAt: ['adipisicin'],
+    name: ['elit dolore in'],
+    numberOfGames: [4],
+    scheduledAt: ['sunt s'],
+    slug: ['PUIjB6P_Y'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverValorantMatches = {
-    matchType: matchType,
-    name: 'id occaec',
-    slug: 'liL4T',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverValorantMatches: SearchOverValorantMatches = {
+    matchType: matchType12,
+    name: 'laboris ',
+    slug: 'vBwZ20H7NVH',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantMatches.getValorantMatches({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantMatches,
+    range: rangeOverValorantMatches,
     sort: [[]],
-    search: search,
+    search: searchOverValorantMatches,
     page: page,
     perPage: 50,
   });
@@ -185,14 +181,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverValorantMatches,
   SearchOverValorantMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -206,40 +198,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverValorantMatchesVideogameTitle = 9;
+  const filterOverValorantMatchesVideogameTitle = 5;
 
-  const filterOverValorantMatchesVideogameVersion = '297342.45230068';
+  const filterOverValorantMatchesVideogameVersion = '848.5017114648.16441010106';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverValorantMatches = {
-    beginAt: ['est ex u'],
+  const filterOverValorantMatches: FilterOverValorantMatches = {
+    beginAt: ['dolor'],
     detailedStats: true,
     draw: true,
-    endAt: ['sit aliqua'],
+    endAt: ['ex'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [7],
-    leagueId: [5],
+    id: [9],
+    leagueId: [9],
     matchType: [matchType],
-    modifiedAt: ['non'],
-    name: ['sint '],
+    modifiedAt: ['dolor velit'],
+    name: ['minim'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverValorantMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['est cillum eiu'],
-    serieId: [10],
-    slug: ['U1'],
+    scheduledAt: ['repre'],
+    serieId: [1],
+    slug: ['P'],
     status: [matchStatus],
-    tournamentId: [6],
+    tournamentId: [3],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -247,52 +239,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverValorantMatches = {
-    beginAt: ['occaecat do'],
+  const rangeOverValorantMatches: RangeOverValorantMatches = {
+    beginAt: ['off'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['officia '],
+    endAt: ['f'],
     forfeit: [true],
-    id: [3],
-    matchType: [matchType],
-    modifiedAt: ['ut ullamco l'],
-    name: ['nulla es'],
-    numberOfGames: [10],
-    scheduledAt: ['dolor Ut u'],
-    slug: ['GXZ9'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [8],
+    matchType: [matchType1],
+    modifiedAt: ['adipisicin'],
+    name: ['elit dolore in'],
+    numberOfGames: [4],
+    scheduledAt: ['sunt s'],
+    slug: ['PUIjB6P_Y'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverValorantMatches = {
-    matchType: matchType,
-    name: 'id occaec',
-    slug: 'liL4T',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverValorantMatches: SearchOverValorantMatches = {
+    matchType: matchType12,
+    name: 'laboris ',
+    slug: 'vBwZ20H7NVH',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantMatches.getValorantMatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantMatches,
+    range: rangeOverValorantMatches,
     sort: [[]],
-    search: search,
+    search: searchOverValorantMatches,
     page: page,
     perPage: 50,
   });
@@ -331,14 +323,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverValorantMatches,
   SearchOverValorantMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -352,40 +340,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverValorantMatchesVideogameTitle = 9;
+  const filterOverValorantMatchesVideogameTitle = 5;
 
-  const filterOverValorantMatchesVideogameVersion = '297342.45230068';
+  const filterOverValorantMatchesVideogameVersion = '848.5017114648.16441010106';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverValorantMatches = {
-    beginAt: ['est ex u'],
+  const filterOverValorantMatches: FilterOverValorantMatches = {
+    beginAt: ['dolor'],
     detailedStats: true,
     draw: true,
-    endAt: ['sit aliqua'],
+    endAt: ['ex'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [7],
-    leagueId: [5],
+    id: [9],
+    leagueId: [9],
     matchType: [matchType],
-    modifiedAt: ['non'],
-    name: ['sint '],
+    modifiedAt: ['dolor velit'],
+    name: ['minim'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverValorantMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['est cillum eiu'],
-    serieId: [10],
-    slug: ['U1'],
+    scheduledAt: ['repre'],
+    serieId: [1],
+    slug: ['P'],
     status: [matchStatus],
-    tournamentId: [6],
+    tournamentId: [3],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -393,52 +381,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverValorantMatches = {
-    beginAt: ['occaecat do'],
+  const rangeOverValorantMatches: RangeOverValorantMatches = {
+    beginAt: ['off'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['officia '],
+    endAt: ['f'],
     forfeit: [true],
-    id: [3],
-    matchType: [matchType],
-    modifiedAt: ['ut ullamco l'],
-    name: ['nulla es'],
-    numberOfGames: [10],
-    scheduledAt: ['dolor Ut u'],
-    slug: ['GXZ9'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [8],
+    matchType: [matchType1],
+    modifiedAt: ['adipisicin'],
+    name: ['elit dolore in'],
+    numberOfGames: [4],
+    scheduledAt: ['sunt s'],
+    slug: ['PUIjB6P_Y'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverValorantMatches = {
-    matchType: matchType,
-    name: 'id occaec',
-    slug: 'liL4T',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverValorantMatches: SearchOverValorantMatches = {
+    matchType: matchType12,
+    name: 'laboris ',
+    slug: 'vBwZ20H7NVH',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantMatches.getValorantMatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantMatches,
+    range: rangeOverValorantMatches,
     sort: [[]],
-    search: search,
+    search: searchOverValorantMatches,
     page: page,
     perPage: 50,
   });
@@ -477,14 +465,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverValorantMatches,
   SearchOverValorantMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -498,40 +482,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverValorantMatchesVideogameTitle = 9;
+  const filterOverValorantMatchesVideogameTitle = 5;
 
-  const filterOverValorantMatchesVideogameVersion = '297342.45230068';
+  const filterOverValorantMatchesVideogameVersion = '848.5017114648.16441010106';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverValorantMatches = {
-    beginAt: ['est ex u'],
+  const filterOverValorantMatches: FilterOverValorantMatches = {
+    beginAt: ['dolor'],
     detailedStats: true,
     draw: true,
-    endAt: ['sit aliqua'],
+    endAt: ['ex'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [7],
-    leagueId: [5],
+    id: [9],
+    leagueId: [9],
     matchType: [matchType],
-    modifiedAt: ['non'],
-    name: ['sint '],
+    modifiedAt: ['dolor velit'],
+    name: ['minim'],
     notStarted: true,
-    numberOfGames: [4],
+    numberOfGames: [8],
     opponentId: [filterOverValorantMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['est cillum eiu'],
-    serieId: [10],
-    slug: ['U1'],
+    scheduledAt: ['repre'],
+    serieId: [1],
+    slug: ['P'],
     status: [matchStatus],
-    tournamentId: [6],
+    tournamentId: [3],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverValorantMatchesVideogameTitle],
@@ -539,52 +523,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverValorantMatches = {
-    beginAt: ['occaecat do'],
+  const rangeOverValorantMatches: RangeOverValorantMatches = {
+    beginAt: ['off'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['officia '],
+    endAt: ['f'],
     forfeit: [true],
-    id: [3],
-    matchType: [matchType],
-    modifiedAt: ['ut ullamco l'],
-    name: ['nulla es'],
-    numberOfGames: [10],
-    scheduledAt: ['dolor Ut u'],
-    slug: ['GXZ9'],
-    status: [matchStatus],
-    tournamentId: [4],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    id: [8],
+    matchType: [matchType1],
+    modifiedAt: ['adipisicin'],
+    name: ['elit dolore in'],
+    numberOfGames: [4],
+    scheduledAt: ['sunt s'],
+    slug: ['PUIjB6P_Y'],
+    status: [matchStatus1],
+    tournamentId: [3],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverValorantMatches = {
-    matchType: matchType,
-    name: 'id occaec',
-    slug: 'liL4T',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverValorantMatches: SearchOverValorantMatches = {
+    matchType: matchType12,
+    name: 'laboris ',
+    slug: 'vBwZ20H7NVH',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantMatches.getValorantMatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantMatches,
+    range: rangeOverValorantMatches,
     sort: [[]],
-    search: search,
+    search: searchOverValorantMatches,
     page: page,
     perPage: 50,
   });

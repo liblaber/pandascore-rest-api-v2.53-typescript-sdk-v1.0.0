@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(7);
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameId(5);
 
   console.log(data);
 })();
@@ -73,7 +73,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(9, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdEvents(10, {
     page: page,
     perPage: 50,
   });
@@ -113,7 +113,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(10, {
+  const { data } = await pandascoreClient.counterStrikeGames.getCsgoGamesCsgoGameIdRounds(3, {
     page: page,
     perPage: 50,
   });
@@ -154,51 +154,51 @@ import { FilterOverCsgoGames, GameStatus, MatchIdOrSlug, Page, PandascoreClient,
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.FINISHED;
 
-const filter: FilterOverCsgoGames = {
-  beginAt: ["quis"],
+const filterOverCsgoGames: FilterOverCsgoGames = {
+  beginAt: ["ad anim ut i"],
   complete: true,
   detailedStats: true,
-  endAt: ["si"],
+  endAt: ["reprehende"],
   finished: true,
   forfeit: true,
-  id: [2],
-  length: [9],
-  matchId: [4],
-  position: [6],
+  id: [6],
+  length: [7],
+  matchId: [1],
+  position: [9],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const range: RangeOverCsgoGames = {
-  beginAt: ["in ex"],
+const rangeOverCsgoGames: RangeOverCsgoGames = {
+  beginAt: ["i"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["id m"],
+  endAt: ["en"],
   finished: [true],
   forfeit: [true],
-  id: [10],
-  length: [6],
-  matchId: [3],
-  position: [10],
-  status: [gameStatus]
+  id: [1],
+  length: [7],
+  matchId: [8],
+  position: [9],
+  status: [gameStatus1]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus12 = GameStatus.FINISHED;
 
-const search: SearchOverCsgoGames = {
-  status: gameStatus
+const searchOverCsgoGames: SearchOverCsgoGames = {
+  status: gameStatus12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeGames.getCsgoMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverCsgoGames,
+		range: rangeOverCsgoGames,
     sort: [[]],
-		search: search,
+		search: searchOverCsgoGames,
 		page: page,
     perPage: 50,
   }

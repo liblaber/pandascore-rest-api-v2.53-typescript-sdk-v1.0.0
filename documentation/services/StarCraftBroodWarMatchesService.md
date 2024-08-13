@@ -39,14 +39,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraftBroodWarMatches,
   SearchOverStarcraftBroodWarMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -60,40 +56,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
 
-  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '36795.89.22961879';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarMatches = {
-    beginAt: ['Duis irure con'],
+  const filterOverStarcraftBroodWarMatches: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['eu exe'],
     detailedStats: true,
     draw: true,
-    endAt: ['in '],
+    endAt: ['irure lab'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [2],
+    id: [7],
+    leagueId: [1],
     matchType: [matchType],
-    modifiedAt: ['sint e'],
-    name: ['sintdolo'],
+    modifiedAt: ['exercita'],
+    name: ['Lorem '],
     notStarted: true,
-    numberOfGames: [3],
+    numberOfGames: [123],
     opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['la'],
-    serieId: [8],
-    slug: ['JE_'],
+    scheduledAt: ['sed culpa la'],
+    serieId: [3],
+    slug: ['UDtH'],
     status: [matchStatus],
-    tournamentId: [3],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
@@ -101,52 +97,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarMatches = {
-    beginAt: ['ex magna ipsu'],
+  const rangeOverStarcraftBroodWarMatches: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis incididu'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['est'],
+    endAt: ['ex do cupi'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['elit nostrud u'],
-    name: ['incididunt q'],
-    numberOfGames: [9],
-    scheduledAt: ['Lor'],
-    slug: ['S'],
-    status: [matchStatus],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['aliqu'],
+    name: ['in no'],
+    numberOfGames: [123],
+    scheduledAt: ['elit nisi'],
+    slug: ['EZr49Ap-'],
+    status: [matchStatus1],
     tournamentId: [5],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarMatches = {
-    matchType: matchType,
-    name: 'sedirure',
-    slug: 'kcOA z',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraftBroodWarMatches: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType12,
+    name: 'dolor ut enim',
+    slug: 'KpN_Jh',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatches({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarMatches,
+    range: rangeOverStarcraftBroodWarMatches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarMatches,
     page: page,
     perPage: 50,
   });
@@ -185,14 +181,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraftBroodWarMatches,
   SearchOverStarcraftBroodWarMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -206,40 +198,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
 
-  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '36795.89.22961879';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarMatches = {
-    beginAt: ['Duis irure con'],
+  const filterOverStarcraftBroodWarMatches: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['eu exe'],
     detailedStats: true,
     draw: true,
-    endAt: ['in '],
+    endAt: ['irure lab'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [2],
+    id: [7],
+    leagueId: [1],
     matchType: [matchType],
-    modifiedAt: ['sint e'],
-    name: ['sintdolo'],
+    modifiedAt: ['exercita'],
+    name: ['Lorem '],
     notStarted: true,
-    numberOfGames: [3],
+    numberOfGames: [123],
     opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['la'],
-    serieId: [8],
-    slug: ['JE_'],
+    scheduledAt: ['sed culpa la'],
+    serieId: [3],
+    slug: ['UDtH'],
     status: [matchStatus],
-    tournamentId: [3],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
@@ -247,52 +239,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarMatches = {
-    beginAt: ['ex magna ipsu'],
+  const rangeOverStarcraftBroodWarMatches: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis incididu'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['est'],
+    endAt: ['ex do cupi'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['elit nostrud u'],
-    name: ['incididunt q'],
-    numberOfGames: [9],
-    scheduledAt: ['Lor'],
-    slug: ['S'],
-    status: [matchStatus],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['aliqu'],
+    name: ['in no'],
+    numberOfGames: [123],
+    scheduledAt: ['elit nisi'],
+    slug: ['EZr49Ap-'],
+    status: [matchStatus1],
     tournamentId: [5],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarMatches = {
-    matchType: matchType,
-    name: 'sedirure',
-    slug: 'kcOA z',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraftBroodWarMatches: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType12,
+    name: 'dolor ut enim',
+    slug: 'KpN_Jh',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarMatches,
+    range: rangeOverStarcraftBroodWarMatches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarMatches,
     page: page,
     perPage: 50,
   });
@@ -331,14 +323,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraftBroodWarMatches,
   SearchOverStarcraftBroodWarMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -352,40 +340,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
 
-  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '36795.89.22961879';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarMatches = {
-    beginAt: ['Duis irure con'],
+  const filterOverStarcraftBroodWarMatches: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['eu exe'],
     detailedStats: true,
     draw: true,
-    endAt: ['in '],
+    endAt: ['irure lab'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [2],
+    id: [7],
+    leagueId: [1],
     matchType: [matchType],
-    modifiedAt: ['sint e'],
-    name: ['sintdolo'],
+    modifiedAt: ['exercita'],
+    name: ['Lorem '],
     notStarted: true,
-    numberOfGames: [3],
+    numberOfGames: [123],
     opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['la'],
-    serieId: [8],
-    slug: ['JE_'],
+    scheduledAt: ['sed culpa la'],
+    serieId: [3],
+    slug: ['UDtH'],
     status: [matchStatus],
-    tournamentId: [3],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
@@ -393,52 +381,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarMatches = {
-    beginAt: ['ex magna ipsu'],
+  const rangeOverStarcraftBroodWarMatches: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis incididu'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['est'],
+    endAt: ['ex do cupi'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['elit nostrud u'],
-    name: ['incididunt q'],
-    numberOfGames: [9],
-    scheduledAt: ['Lor'],
-    slug: ['S'],
-    status: [matchStatus],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['aliqu'],
+    name: ['in no'],
+    numberOfGames: [123],
+    scheduledAt: ['elit nisi'],
+    slug: ['EZr49Ap-'],
+    status: [matchStatus1],
     tournamentId: [5],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarMatches = {
-    matchType: matchType,
-    name: 'sedirure',
-    slug: 'kcOA z',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraftBroodWarMatches: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType12,
+    name: 'dolor ut enim',
+    slug: 'KpN_Jh',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarMatches,
+    range: rangeOverStarcraftBroodWarMatches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarMatches,
     page: page,
     perPage: 50,
   });
@@ -477,14 +465,10 @@ import {
   MatchStatus,
   MatchType,
   MatchWinnerType,
-  OpponentId,
   Page,
   PandascoreClient,
-  PlayerIdOrSlug,
   RangeOverStarcraftBroodWarMatches,
   SearchOverStarcraftBroodWarMatches,
-  TeamIdOrSlug,
-  VideogameIdOrSlug,
 } from 'pandascore_client';
 
 (async () => {
@@ -498,40 +482,40 @@ import {
 
   const matchStatus = MatchStatus.CANCELED;
 
-  const videogameIdOrSlug = VideogameId._1;
+  const videogameId = VideogameId._1;
 
-  const filterOverStarcraftBroodWarMatchesVideogameTitle = 10;
+  const filterOverStarcraftBroodWarMatchesVideogameTitle = 7;
 
-  const filterOverStarcraftBroodWarMatchesVideogameVersion = '75879248.59.445946';
+  const filterOverStarcraftBroodWarMatchesVideogameVersion = '36795.89.22961879';
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const matchWinnerType = MatchWinnerType.PLAYER;
 
-  const filter: FilterOverStarcraftBroodWarMatches = {
-    beginAt: ['Duis irure con'],
+  const filterOverStarcraftBroodWarMatches: FilterOverStarcraftBroodWarMatches = {
+    beginAt: ['eu exe'],
     detailedStats: true,
     draw: true,
-    endAt: ['in '],
+    endAt: ['irure lab'],
     finished: true,
     forfeit: true,
     future: true,
-    id: [1],
-    leagueId: [2],
+    id: [7],
+    leagueId: [1],
     matchType: [matchType],
-    modifiedAt: ['sint e'],
-    name: ['sintdolo'],
+    modifiedAt: ['exercita'],
+    name: ['Lorem '],
     notStarted: true,
-    numberOfGames: [3],
+    numberOfGames: [123],
     opponentId: [filterOverStarcraftBroodWarMatchesOpponentId],
     opponentsFilled: true,
     past: true,
     running: true,
-    scheduledAt: ['la'],
-    serieId: [8],
-    slug: ['JE_'],
+    scheduledAt: ['sed culpa la'],
+    serieId: [3],
+    slug: ['UDtH'],
     status: [matchStatus],
-    tournamentId: [3],
+    tournamentId: [9],
     unscheduled: true,
     videogame: [videogameIdOrSlug],
     videogameTitle: [filterOverStarcraftBroodWarMatchesVideogameTitle],
@@ -539,52 +523,52 @@ import {
     winnerId: [opponentId],
     winnerType: [matchWinnerType],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-  const range: RangeOverStarcraftBroodWarMatches = {
-    beginAt: ['ex magna ipsu'],
+  const rangeOverStarcraftBroodWarMatches: RangeOverStarcraftBroodWarMatches = {
+    beginAt: ['Duis incididu'],
     detailedStats: [true],
     draw: [true],
-    endAt: ['est'],
+    endAt: ['ex do cupi'],
     forfeit: [true],
-    id: [4],
-    matchType: [matchType],
-    modifiedAt: ['elit nostrud u'],
-    name: ['incididunt q'],
-    numberOfGames: [9],
-    scheduledAt: ['Lor'],
-    slug: ['S'],
-    status: [matchStatus],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['aliqu'],
+    name: ['in no'],
+    numberOfGames: [123],
+    scheduledAt: ['elit nisi'],
+    slug: ['EZr49Ap-'],
+    status: [matchStatus1],
     tournamentId: [5],
-    winnerId: [opponentId],
-    winnerType: [matchWinnerType],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
   };
-  const matchType = MatchType.ALLGAMESPLAYED;
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-  const matchStatus = MatchStatus.CANCELED;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-  const matchWinnerType = MatchWinnerType.PLAYER;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-  const search: SearchOverStarcraftBroodWarMatches = {
-    matchType: matchType,
-    name: 'sedirure',
-    slug: 'kcOA z',
-    status: matchStatus,
-    winnerType: matchWinnerType,
+  const searchOverStarcraftBroodWarMatches: SearchOverStarcraftBroodWarMatches = {
+    matchType: matchType12,
+    name: 'dolor ut enim',
+    slug: 'KpN_Jh',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarMatches.getStarcraftBroodWarMatchesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarMatches,
+    range: rangeOverStarcraftBroodWarMatches,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarMatches,
     page: page,
     perPage: 50,
   });

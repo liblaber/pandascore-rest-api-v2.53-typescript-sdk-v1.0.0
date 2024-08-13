@@ -45,26 +45,26 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverDota2Items = {
-    id: [2],
-    name: ['wr'],
+  const filterOverDota2Items: FilterOverDota2Items = {
+    id: [3],
+    name: ['8cd5x'],
   };
 
-  const range: RangeOverDota2Items = {
+  const rangeOverDota2Items: RangeOverDota2Items = {
     id: [4],
-    name: ['wx3uq27'],
+    name: ['mmypoz-ntw9'],
   };
 
-  const search: SearchOverDota2Items = {
-    name: '3',
+  const searchOverDota2Items: SearchOverDota2Items = {
+    name: 'grbfwr',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Items.getDota2Items({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Items,
+    range: rangeOverDota2Items,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Items,
     page: page,
     perPage: 50,
   });
@@ -100,7 +100,7 @@ import { Dota2ItemIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const dota2ItemIdOrSlug = 5;
+  const dota2ItemIdOrSlug = 6;
 
   const { data } = await pandascoreClient.dota2Items.getDota2ItemsDota2ItemIdOrSlug();
 

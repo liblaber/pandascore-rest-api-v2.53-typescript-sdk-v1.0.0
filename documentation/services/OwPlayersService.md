@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverOwPlayers = {
+  const filterOverOwPlayers: FilterOverOwPlayers = {
     active: true,
-    birthday: ['molli'],
-    firstName: ['reprehenderit s'],
-    id: [4],
-    lastName: ['ullamco s'],
-    modifiedAt: ['ullamco aliqu'],
-    name: ['ut adipisicing'],
-    nationality: ['minim esse Ut'],
-    role: ['reprehend'],
-    slug: ['efnj6tm'],
-    teamId: [9],
+    birthday: ['est Excepteur '],
+    firstName: ['aliquip con'],
+    id: [1],
+    lastName: ['sit magna i'],
+    modifiedAt: ['id q'],
+    name: ['aliquip'],
+    nationality: ['Lorem offic'],
+    role: ['aute ad nu'],
+    slug: ['4l5'],
+    teamId: [3],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverOwPlayers = {
-    birthday: ['id veniam la'],
-    firstName: ['enim ex commodo'],
-    id: [8],
-    lastName: ['cupidatat fugi'],
-    modifiedAt: ['officia '],
-    name: ['aliquip'],
-    nationality: ['est non d'],
-    role: ['est commodo p'],
-    slug: ['uv'],
+  const rangeOverOwPlayers: RangeOverOwPlayers = {
+    birthday: ['pariat'],
+    firstName: ['id veniam la'],
+    id: [10],
+    lastName: ['laborum vel'],
+    modifiedAt: ['cupidatat fug'],
+    name: ['officia an'],
+    nationality: ['aliquip'],
+    role: ['est non d'],
+    slug: ['z3x5kp2w1'],
   };
 
-  const search: SearchOverOwPlayers = {
-    birthday: 'amet exe',
-    firstName: 'fugiat',
-    lastName: 'inlabore ',
-    name: 'pariatur ',
-    nationality: 'non inci',
-    role: 'culpa consec',
-    slug: 'mpgro',
+  const searchOverOwPlayers: SearchOverOwPlayers = {
+    birthday: 'cupidatat',
+    firstName: 'ut qui',
+    lastName: 'doquis ad ',
+    name: 'exercita',
+    nationality: 'irure dolor',
+    role: 'Duis non',
+    slug: 'z8o_9ly2hq',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owPlayers.getOwPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverOwPlayers,
+    range: rangeOverOwPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverOwPlayers,
     page: page,
     perPage: 50,
   });

@@ -45,30 +45,30 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantMaps = {
-    id: [10],
-    name: ['veniam cup'],
-    slug: ['dees'],
+  const filterOverValorantMaps: FilterOverValorantMaps = {
+    id: [7],
+    name: ['ex eu in amet m'],
+    slug: ['gp'],
     videogameVersion: [],
   };
 
-  const range: RangeOverValorantMaps = {
-    id: [1],
-    name: ['qui sunt cu'],
-    slug: ['so48j96l6'],
+  const rangeOverValorantMaps: RangeOverValorantMaps = {
+    id: [9],
+    name: ['in eiusmod'],
+    slug: ['poql9y'],
   };
 
-  const search: SearchOverValorantMaps = {
-    name: 'proident',
-    slug: 'n9clrui8u',
+  const searchOverValorantMaps: SearchOverValorantMaps = {
+    name: 'ullamco conse',
+    slug: 'duug0',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantMaps.getValorantMaps({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantMaps,
+    range: rangeOverValorantMaps,
     sort: [[]],
-    search: search,
+    search: searchOverValorantMaps,
     page: page,
     perPage: 50,
   });
@@ -104,7 +104,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantMaps.getValorantMapsValorantMapId(2);
+  const { data } = await pandascoreClient.valorantMaps.getValorantMapsValorantMapId(5);
 
   console.log(data);
 })();

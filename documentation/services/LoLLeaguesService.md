@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLLeagues = {
-    id: [1],
-    modifiedAt: ['qui'],
-    name: ['ad sit labore e'],
-    slug: ['c1wig'],
-    url: ['consequat'],
+  const filterOverLoLLeagues: FilterOverLoLLeagues = {
+    id: [3],
+    modifiedAt: ['dol'],
+    name: ['mollit occa'],
+    slug: ['evf'],
+    url: ['magna dolor ali'],
   };
 
-  const range: RangeOverLoLLeagues = {
-    id: [1],
-    modifiedAt: ['id'],
-    name: ['id adi'],
-    slug: ['b0y24'],
-    url: ['amet tempor '],
+  const rangeOverLoLLeagues: RangeOverLoLLeagues = {
+    id: [7],
+    modifiedAt: ['quis'],
+    name: ['adipisicing'],
+    slug: ['_l-t'],
+    url: ['cillum esse al'],
   };
 
-  const search: SearchOverLoLLeagues = {
-    name: 'conse',
-    slug: 'zyl',
-    url: 'velit minim Lo',
+  const searchOverLoLLeagues: SearchOverLoLLeagues = {
+    name: 'Lorem de',
+    slug: ':1pcxkfbh7q',
+    url: 'labore',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLLeagues.getLolLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLLeagues,
+    range: rangeOverLoLLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverLoLLeagues,
     page: page,
     perPage: 50,
   });

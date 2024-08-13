@@ -36,7 +36,6 @@ List tournaments for the StarCraft 2 videogame
 ```typescript
 import {
   FilterOverStarcraft2ShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraft2ShortTournamentsVideogameTitle = 4;
+  const filterOverStarcraft2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraft2ShortTournaments = {
-    beginAt: ['est'],
+  const filterOverStarcraft2ShortTournaments: FilterOverStarcraft2ShortTournaments = {
+    beginAt: ['labor'],
     detailedStats: true,
-    endAt: ['occae'],
+    endAt: ['incididunt '],
     hasBracket: true,
-    id: [5],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['Lorem qui '],
-    name: ['laboris '],
-    prizepool: ['sed consequ'],
-    serieId: [6],
-    slug: ['oeb'],
+    modifiedAt: ['sint'],
+    name: ['mollit Duis'],
+    prizepool: ['tempor'],
+    serieId: [9],
+    slug: ['nsn'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraft2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraft2ShortTournaments = {
-    beginAt: ['nisi in cupid'],
+  const rangeOverStarcraft2ShortTournaments: RangeOverStarcraft2ShortTournaments = {
+    beginAt: ['incididunt '],
     detailedStats: [true],
-    endAt: ['et occ'],
+    endAt: ['mollit sit co'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['velit elit '],
-    name: ['elit exercit'],
-    prizepool: ['dolor ani'],
-    serieId: [10],
-    slug: ['-cggmy1z'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['tempor'],
+    name: ['ex Ex'],
+    prizepool: ['magna'],
+    serieId: [9],
+    slug: ['nui1sjb1'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraft2ShortTournaments = {
-    name: 'eiusmo',
-    prizepool: 'enim fugia',
-    slug: '5xt',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraft2ShortTournaments: SearchOverStarcraft2ShortTournaments = {
+    name: 'mollit ea',
+    prizepool: 'proident dolore',
+    slug: '2fh161cl8e',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Tournaments.getStarcraft2Tournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2ShortTournaments,
+    range: rangeOverStarcraft2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past StarCraft 2 tournaments
 ```typescript
 import {
   FilterOverStarcraft2ShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraft2ShortTournamentsVideogameTitle = 4;
+  const filterOverStarcraft2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraft2ShortTournaments = {
-    beginAt: ['est'],
+  const filterOverStarcraft2ShortTournaments: FilterOverStarcraft2ShortTournaments = {
+    beginAt: ['labor'],
     detailedStats: true,
-    endAt: ['occae'],
+    endAt: ['incididunt '],
     hasBracket: true,
-    id: [5],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['Lorem qui '],
-    name: ['laboris '],
-    prizepool: ['sed consequ'],
-    serieId: [6],
-    slug: ['oeb'],
+    modifiedAt: ['sint'],
+    name: ['mollit Duis'],
+    prizepool: ['tempor'],
+    serieId: [9],
+    slug: ['nsn'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraft2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraft2ShortTournaments = {
-    beginAt: ['nisi in cupid'],
+  const rangeOverStarcraft2ShortTournaments: RangeOverStarcraft2ShortTournaments = {
+    beginAt: ['incididunt '],
     detailedStats: [true],
-    endAt: ['et occ'],
+    endAt: ['mollit sit co'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['velit elit '],
-    name: ['elit exercit'],
-    prizepool: ['dolor ani'],
-    serieId: [10],
-    slug: ['-cggmy1z'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['tempor'],
+    name: ['ex Ex'],
+    prizepool: ['magna'],
+    serieId: [9],
+    slug: ['nui1sjb1'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraft2ShortTournaments = {
-    name: 'eiusmo',
-    prizepool: 'enim fugia',
-    slug: '5xt',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraft2ShortTournaments: SearchOverStarcraft2ShortTournaments = {
+    name: 'mollit ea',
+    prizepool: 'proident dolore',
+    slug: '2fh161cl8e',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Tournaments.getStarcraft2TournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2ShortTournaments,
+    range: rangeOverStarcraft2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running StarCraft 2 tournaments
 ```typescript
 import {
   FilterOverStarcraft2ShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraft2ShortTournamentsVideogameTitle = 4;
+  const filterOverStarcraft2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraft2ShortTournaments = {
-    beginAt: ['est'],
+  const filterOverStarcraft2ShortTournaments: FilterOverStarcraft2ShortTournaments = {
+    beginAt: ['labor'],
     detailedStats: true,
-    endAt: ['occae'],
+    endAt: ['incididunt '],
     hasBracket: true,
-    id: [5],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['Lorem qui '],
-    name: ['laboris '],
-    prizepool: ['sed consequ'],
-    serieId: [6],
-    slug: ['oeb'],
+    modifiedAt: ['sint'],
+    name: ['mollit Duis'],
+    prizepool: ['tempor'],
+    serieId: [9],
+    slug: ['nsn'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraft2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraft2ShortTournaments = {
-    beginAt: ['nisi in cupid'],
+  const rangeOverStarcraft2ShortTournaments: RangeOverStarcraft2ShortTournaments = {
+    beginAt: ['incididunt '],
     detailedStats: [true],
-    endAt: ['et occ'],
+    endAt: ['mollit sit co'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['velit elit '],
-    name: ['elit exercit'],
-    prizepool: ['dolor ani'],
-    serieId: [10],
-    slug: ['-cggmy1z'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['tempor'],
+    name: ['ex Ex'],
+    prizepool: ['magna'],
+    serieId: [9],
+    slug: ['nui1sjb1'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraft2ShortTournaments = {
-    name: 'eiusmo',
-    prizepool: 'enim fugia',
-    slug: '5xt',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraft2ShortTournaments: SearchOverStarcraft2ShortTournaments = {
+    name: 'mollit ea',
+    prizepool: 'proident dolore',
+    slug: '2fh161cl8e',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Tournaments.getStarcraft2TournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2ShortTournaments,
+    range: rangeOverStarcraft2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming StarCraft 2 tournaments
 ```typescript
 import {
   FilterOverStarcraft2ShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverStarcraft2ShortTournamentsVideogameTitle = 4;
+  const filterOverStarcraft2ShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverStarcraft2ShortTournaments = {
-    beginAt: ['est'],
+  const filterOverStarcraft2ShortTournaments: FilterOverStarcraft2ShortTournaments = {
+    beginAt: ['labor'],
     detailedStats: true,
-    endAt: ['occae'],
+    endAt: ['incididunt '],
     hasBracket: true,
-    id: [5],
+    id: [9],
     liveSupported: true,
-    modifiedAt: ['Lorem qui '],
-    name: ['laboris '],
-    prizepool: ['sed consequ'],
-    serieId: [6],
-    slug: ['oeb'],
+    modifiedAt: ['sint'],
+    name: ['mollit Duis'],
+    prizepool: ['tempor'],
+    serieId: [9],
+    slug: ['nsn'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverStarcraft2ShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverStarcraft2ShortTournaments = {
-    beginAt: ['nisi in cupid'],
+  const rangeOverStarcraft2ShortTournaments: RangeOverStarcraft2ShortTournaments = {
+    beginAt: ['incididunt '],
     detailedStats: [true],
-    endAt: ['et occ'],
+    endAt: ['mollit sit co'],
     hasBracket: [true],
-    id: [10],
-    modifiedAt: ['velit elit '],
-    name: ['elit exercit'],
-    prizepool: ['dolor ani'],
-    serieId: [10],
-    slug: ['-cggmy1z'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [8],
+    modifiedAt: ['tempor'],
+    name: ['ex Ex'],
+    prizepool: ['magna'],
+    serieId: [9],
+    slug: ['nui1sjb1'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverStarcraft2ShortTournaments = {
-    name: 'eiusmo',
-    prizepool: 'enim fugia',
-    slug: '5xt',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverStarcraft2ShortTournaments: SearchOverStarcraft2ShortTournaments = {
+    name: 'mollit ea',
+    prizepool: 'proident dolore',
+    slug: '2fh161cl8e',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Tournaments.getStarcraft2TournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2ShortTournaments,
+    range: rangeOverStarcraft2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2ShortTournaments,
     page: page,
     perPage: 50,
   });

@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantLeagues = {
-    id: [2],
-    modifiedAt: ['ipsum aliqua'],
-    name: ['quisad'],
-    slug: ['j54gb'],
-    url: ['nulla'],
-  };
-
-  const range: RangeOverValorantLeagues = {
+  const filterOverValorantLeagues: FilterOverValorantLeagues = {
     id: [8],
-    modifiedAt: ['ut'],
-    name: ['sintaliqu'],
-    slug: ['d6866ju4_'],
-    url: ['nulla occaecat'],
+    modifiedAt: ['ipsum paria'],
+    name: ['Ut do'],
+    slug: ['fx45k:'],
+    url: ['Ut eni'],
   };
 
-  const search: SearchOverValorantLeagues = {
-    name: 'ipsum in e',
-    slug: '66z3qxolzd',
-    url: 'adipisicing',
+  const rangeOverValorantLeagues: RangeOverValorantLeagues = {
+    id: [8],
+    modifiedAt: ['sed sint nulla'],
+    name: ['proident '],
+    slug: ['4varbaoo0'],
+    url: ['ullamco'],
+  };
+
+  const searchOverValorantLeagues: SearchOverValorantLeagues = {
+    name: 'eiusmod',
+    slug: 'm55gkm',
+    url: 'non c',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantLeagues.getValorantLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantLeagues,
+    range: rangeOverValorantLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverValorantLeagues,
     page: page,
     perPage: 50,
   });

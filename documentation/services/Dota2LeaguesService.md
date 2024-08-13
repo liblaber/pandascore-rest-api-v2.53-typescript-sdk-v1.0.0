@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverDota2Leagues = {
-    id: [9],
-    modifiedAt: ['v'],
-    name: ['anim l'],
-    slug: ['csw342e'],
-    url: ['Ut ut'],
+  const filterOverDota2Leagues: FilterOverDota2Leagues = {
+    id: [3],
+    modifiedAt: ['proident labo'],
+    name: ['dolor proid'],
+    slug: ['_lxx'],
+    url: ['anim ea est U'],
   };
 
-  const range: RangeOverDota2Leagues = {
-    id: [6],
-    modifiedAt: ['id '],
-    name: ['consectetu'],
-    slug: ['eiho2k6'],
-    url: ['nulla'],
+  const rangeOverDota2Leagues: RangeOverDota2Leagues = {
+    id: [8],
+    modifiedAt: ['aliqua aute'],
+    name: ['aliqua ea '],
+    slug: ['uic'],
+    url: ['in aute elit'],
   };
 
-  const search: SearchOverDota2Leagues = {
-    name: 'consequat adip',
-    slug: '6smpmxi6',
-    url: 'reprehenderit',
+  const searchOverDota2Leagues: SearchOverDota2Leagues = {
+    name: 'Excepteur ip',
+    slug: 'pu97glcez',
+    url: 'dolore ipsum d',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Leagues.getDota2Leagues({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Leagues,
+    range: rangeOverDota2Leagues,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Leagues,
     page: page,
     perPage: 50,
   });

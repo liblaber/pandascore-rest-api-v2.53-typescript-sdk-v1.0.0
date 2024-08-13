@@ -36,7 +36,6 @@ List tournaments for the EA Sports FC videogame
 ```typescript
 import {
   FilterOverFifaShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -52,68 +51,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 6;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['do'],
+  const filterOverFifaShortTournaments: FilterOverFifaShortTournaments = {
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['adipisicing '],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['t'],
-    name: ['culpa'],
-    prizepool: ['do aute ip'],
-    serieId: [3],
-    slug: ['iphstt7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaShortTournaments = {
-    beginAt: ['cons'],
+  const rangeOverFifaShortTournaments: RangeOverFifaShortTournaments = {
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['cill'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [8],
-    modifiedAt: ['ut'],
-    name: ['autesed ut'],
-    prizepool: ['consequat s'],
-    serieId: [8],
-    slug: ['sqgbs9gtj-'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaShortTournaments = {
-    name: 'elit ven',
-    prizepool: 'fugiat',
-    slug: 'kfp4-f',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverFifaShortTournaments: SearchOverFifaShortTournaments = {
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaShortTournaments,
+    range: rangeOverFifaShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverFifaShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -149,7 +148,6 @@ List past EA Sports FC tournaments
 ```typescript
 import {
   FilterOverFifaShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -165,68 +163,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 6;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['do'],
+  const filterOverFifaShortTournaments: FilterOverFifaShortTournaments = {
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['adipisicing '],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['t'],
-    name: ['culpa'],
-    prizepool: ['do aute ip'],
-    serieId: [3],
-    slug: ['iphstt7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaShortTournaments = {
-    beginAt: ['cons'],
+  const rangeOverFifaShortTournaments: RangeOverFifaShortTournaments = {
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['cill'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [8],
-    modifiedAt: ['ut'],
-    name: ['autesed ut'],
-    prizepool: ['consequat s'],
-    serieId: [8],
-    slug: ['sqgbs9gtj-'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaShortTournaments = {
-    name: 'elit ven',
-    prizepool: 'fugiat',
-    slug: 'kfp4-f',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverFifaShortTournaments: SearchOverFifaShortTournaments = {
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaShortTournaments,
+    range: rangeOverFifaShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverFifaShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -262,7 +260,6 @@ List running EA Sports FC tournaments
 ```typescript
 import {
   FilterOverFifaShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -278,68 +275,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 6;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['do'],
+  const filterOverFifaShortTournaments: FilterOverFifaShortTournaments = {
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['adipisicing '],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['t'],
-    name: ['culpa'],
-    prizepool: ['do aute ip'],
-    serieId: [3],
-    slug: ['iphstt7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaShortTournaments = {
-    beginAt: ['cons'],
+  const rangeOverFifaShortTournaments: RangeOverFifaShortTournaments = {
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['cill'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [8],
-    modifiedAt: ['ut'],
-    name: ['autesed ut'],
-    prizepool: ['consequat s'],
-    serieId: [8],
-    slug: ['sqgbs9gtj-'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaShortTournaments = {
-    name: 'elit ven',
-    prizepool: 'fugiat',
-    slug: 'kfp4-f',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverFifaShortTournaments: SearchOverFifaShortTournaments = {
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaShortTournaments,
+    range: rangeOverFifaShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverFifaShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -375,7 +372,6 @@ List upcoming EA Sports FC tournaments
 ```typescript
 import {
   FilterOverFifaShortTournaments,
-  OpponentId,
   OpponentType,
   Page,
   PandascoreClient,
@@ -391,68 +387,68 @@ import {
 
   const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
-  const filterOverFifaShortTournamentsVideogameTitle = 6;
+  const filterOverFifaShortTournamentsVideogameTitle = 3;
 
-  const opponentId = 8;
+  const opponentId = 7;
 
   const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaShortTournaments = {
-    beginAt: ['do'],
+  const filterOverFifaShortTournaments: FilterOverFifaShortTournaments = {
+    beginAt: ['cillum '],
     detailedStats: true,
-    endAt: ['adipisicing '],
+    endAt: ['ad ullam'],
     hasBracket: true,
     id: [9],
     liveSupported: true,
-    modifiedAt: ['t'],
-    name: ['culpa'],
-    prizepool: ['do aute ip'],
-    serieId: [3],
-    slug: ['iphstt7'],
+    modifiedAt: ['s'],
+    name: ['nulla'],
+    prizepool: ['enim veniam'],
+    serieId: [6],
+    slug: ['-kk'],
     tier: [searchOverValorantShortTournamentsTier2],
     videogameTitle: [filterOverFifaShortTournamentsVideogameTitle],
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 8;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaShortTournaments = {
-    beginAt: ['cons'],
+  const rangeOverFifaShortTournaments: RangeOverFifaShortTournaments = {
+    beginAt: ['tempor '],
     detailedStats: [true],
-    endAt: ['cill'],
+    endAt: ['d'],
     hasBracket: [true],
-    id: [8],
-    modifiedAt: ['ut'],
-    name: ['autesed ut'],
-    prizepool: ['consequat s'],
-    serieId: [8],
-    slug: ['sqgbs9gtj-'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    id: [9],
+    modifiedAt: ['cillum Dui'],
+    name: ['veniam'],
+    prizepool: ['officia cons'],
+    serieId: [1],
+    slug: ['3j'],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.PLAYER;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaShortTournaments = {
-    name: 'elit ven',
-    prizepool: 'fugiat',
-    slug: 'kfp4-f',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+  const searchOverFifaShortTournaments: SearchOverFifaShortTournaments = {
+    name: 'proident',
+    prizepool: 'exaliq',
+    slug: 'bffn',
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcTournaments.getFifaTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaShortTournaments,
+    range: rangeOverFifaShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverFifaShortTournaments,
     page: page,
     perPage: 50,
   });

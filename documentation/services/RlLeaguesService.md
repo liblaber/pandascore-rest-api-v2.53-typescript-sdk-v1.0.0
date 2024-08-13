@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverRlLeagues = {
+  const filterOverRlLeagues: FilterOverRlLeagues = {
+    id: [7],
+    modifiedAt: ['ea'],
+    name: ['animea'],
+    slug: ['4p40'],
+    url: ['consectetu'],
+  };
+
+  const rangeOverRlLeagues: RangeOverRlLeagues = {
     id: [4],
-    modifiedAt: ['la'],
-    name: ['in ipsum en'],
-    slug: ['wdih84'],
-    url: ['laboris si'],
+    modifiedAt: ['sunt do labori'],
+    name: ['ex es'],
+    slug: ['7l'],
+    url: ['aliquip cul'],
   };
 
-  const range: RangeOverRlLeagues = {
-    id: [1],
-    modifiedAt: ['aute'],
-    name: ['nostrud eiusmo'],
-    slug: ['7aq-hl-w'],
-    url: ['cupidatat occ'],
-  };
-
-  const search: SearchOverRlLeagues = {
-    name: 'consectetur do',
-    slug: 'g',
-    url: 'eiusmod do',
+  const searchOverRlLeagues: SearchOverRlLeagues = {
+    name: 'ut consequat',
+    slug: 'no017ax',
+    url: 'do veniam',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.rlLeagues.getRlLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverRlLeagues,
+    range: rangeOverRlLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverRlLeagues,
     page: page,
     perPage: 50,
   });

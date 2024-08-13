@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverPubgTeams = {
-    acronym: ['volup'],
+  const filterOverPubgTeams: FilterOverPubgTeams = {
+    acronym: ['dolore cillum'],
     id: [2],
-    location: ['laborum t'],
-    modifiedAt: ['o'],
-    name: ['eiusmod adi'],
-    slug: ['0cypf61el32'],
+    location: ['nulla temp'],
+    modifiedAt: ['voluptate ven'],
+    name: ['irure'],
+    slug: ['1vxgxb'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverPubgTeams = {
-    acronym: ['laborum'],
+  const rangeOverPubgTeams: RangeOverPubgTeams = {
+    acronym: ['sit do'],
     id: [10],
-    location: ['adipi'],
-    modifiedAt: ['fugiat velit'],
-    name: ['labore id'],
-    slug: ['458y4s'],
+    location: ['Lorem nos'],
+    modifiedAt: ['sed la'],
+    name: ['incididunt aute'],
+    slug: ['_py'],
   };
 
-  const search: SearchOverPubgTeams = {
-    acronym: 'ad commodo in',
-    location: 'sed id',
-    name: 'magna laboris ',
-    slug: '9685qic',
+  const searchOverPubgTeams: SearchOverPubgTeams = {
+    acronym: 'qui f',
+    location: 'voluptate com',
+    name: 'dolore incidid',
+    slug: 'l5j_lafab',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgTeams.getPubgTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgTeams,
+    range: rangeOverPubgTeams,
     sort: [[]],
-    search: search,
+    search: searchOverPubgTeams,
     page: page,
     perPage: 50,
   });

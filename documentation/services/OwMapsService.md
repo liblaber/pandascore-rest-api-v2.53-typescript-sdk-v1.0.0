@@ -48,34 +48,34 @@ import {
 
   const owMapGameMode = OwMapGameMode.ASSAULT;
 
-  const filter: FilterOverOwMaps = {
+  const filterOverOwMaps: FilterOverOwMaps = {
     gameMode: [owMapGameMode],
-    id: [9],
-    name: ['non ali'],
-    slug: ['_-ef'],
+    id: [8],
+    name: ['fugiat'],
+    slug: ['uai7oxrjj5c'],
   };
-  const owMapGameMode = OwMapGameMode.ASSAULT;
+  const owMapGameMode1 = OwMapGameMode.ASSAULT;
 
-  const range: RangeOverOwMaps = {
-    gameMode: [owMapGameMode],
-    id: [7],
-    name: ['velit dolore '],
-    slug: ['yt198m9'],
+  const rangeOverOwMaps: RangeOverOwMaps = {
+    gameMode: [owMapGameMode1],
+    id: [6],
+    name: ['magna ess'],
+    slug: ['2'],
   };
-  const owMapGameMode = OwMapGameMode.ASSAULT;
+  const owMapGameMode12 = OwMapGameMode.ASSAULT;
 
-  const search: SearchOverOwMaps = {
-    gameMode: owMapGameMode,
-    name: 'ex non',
-    slug: 'f0q7_cwqkau',
+  const searchOverOwMaps: SearchOverOwMaps = {
+    gameMode: owMapGameMode12,
+    name: 'id fugiat t',
+    slug: '7jd1r8oey',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owMaps.getOwMaps({
-    filter: filter,
-    range: range,
+    filter: filterOverOwMaps,
+    range: rangeOverOwMaps,
     sort: [[]],
-    search: search,
+    search: searchOverOwMaps,
     page: page,
     perPage: 50,
   });
@@ -111,7 +111,7 @@ import { OwMapIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const owMapIdOrSlug = 5;
+  const owMapIdOrSlug = 4;
 
   const { data } = await pandascoreClient.owMaps.getOwMapsOwMapIdOrSlug();
 

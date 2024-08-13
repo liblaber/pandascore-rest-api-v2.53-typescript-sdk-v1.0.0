@@ -48,42 +48,42 @@ import {
 
   const csgoWeaponKind = CsgoWeaponKind.GRENADE;
 
-  const filter: FilterOverCsgoWeapons = {
-    ammoClipMax: [2],
-    ammoMax: [9],
-    cost: [1],
-    id: [8],
-    killReward: [8],
-    kind: [csgoWeaponKind],
-    name: ['mollit aute '],
-    slug: ['k3'],
-  };
-  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
-
-  const range: RangeOverCsgoWeapons = {
-    ammoClipMax: [10],
+  const filterOverCsgoWeapons: FilterOverCsgoWeapons = {
+    ammoClipMax: [4],
     ammoMax: [7],
-    cost: [6],
-    id: [2],
-    killReward: [10],
+    cost: [1],
+    id: [5],
+    killReward: [1],
     kind: [csgoWeaponKind],
-    name: ['consect'],
-    slug: ['gcl-aqn'],
+    name: ['minim u'],
+    slug: ['_lrp8s5nb'],
   };
-  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
+  const csgoWeaponKind1 = CsgoWeaponKind.GRENADE;
 
-  const search: SearchOverCsgoWeapons = {
-    kind: csgoWeaponKind,
-    name: 'elit q',
-    slug: 'h6_0ihg7pdd',
+  const rangeOverCsgoWeapons: RangeOverCsgoWeapons = {
+    ammoClipMax: [7],
+    ammoMax: [2],
+    cost: [9],
+    id: [10],
+    killReward: [8],
+    kind: [csgoWeaponKind1],
+    name: ['sed proident'],
+    slug: ['3'],
+  };
+  const csgoWeaponKind12 = CsgoWeaponKind.GRENADE;
+
+  const searchOverCsgoWeapons: SearchOverCsgoWeapons = {
+    kind: csgoWeaponKind12,
+    name: 'minim Excepteu',
+    slug: 'nq41ksr4c',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeapons({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoWeapons,
+    range: rangeOverCsgoWeapons,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoWeapons,
     page: page,
     perPage: 50,
   });
@@ -119,7 +119,7 @@ import { CsgoWeaponIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponIdOrSlug = 9;
+  const csgoWeaponIdOrSlug = 4;
 
   const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeaponsCsgoWeaponIdOrSlug();
 

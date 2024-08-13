@@ -45,27 +45,27 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantAgents = {
-    id: [5],
-    name: ['et quis'],
+  const filterOverValorantAgents: FilterOverValorantAgents = {
+    id: [4],
+    name: ['quiame'],
     videogameVersion: [],
   };
 
-  const range: RangeOverValorantAgents = {
-    id: [1],
-    name: ['id elit non ad'],
+  const rangeOverValorantAgents: RangeOverValorantAgents = {
+    id: [8],
+    name: ['voluptate '],
   };
 
-  const search: SearchOverValorantAgents = {
-    name: 'ad qui',
+  const searchOverValorantAgents: SearchOverValorantAgents = {
+    name: 'nisiexerc',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantAgents.getValorantAgents({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantAgents,
+    range: rangeOverValorantAgents,
     sort: [[]],
-    search: search,
+    search: searchOverValorantAgents,
     page: page,
     perPage: 50,
   });
@@ -101,7 +101,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantAgents.getValorantAgentsValorantAgentId(4);
+  const { data } = await pandascoreClient.valorantAgents.getValorantAgentsValorantAgentId(8);
 
   console.log(data);
 })();

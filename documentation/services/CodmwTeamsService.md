@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverCodmwTeams = {
-    acronym: ['dolore'],
+  const filterOverCodmwTeams: FilterOverCodmwTeams = {
+    acronym: ['tempo'],
     id: [7],
-    location: ['exercitat'],
-    modifiedAt: ['cupidatat ut c'],
-    name: ['deserunt qui'],
-    slug: ['a'],
+    location: ['nisi Excepteur'],
+    modifiedAt: ['veniam est'],
+    name: ['proiden'],
+    slug: ['ffzyrcp'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverCodmwTeams = {
-    acronym: ['minim co'],
-    id: [6],
-    location: ['aliqua non'],
-    modifiedAt: ['commodo'],
-    name: ['cupidatat'],
-    slug: ['m'],
+  const rangeOverCodmwTeams: RangeOverCodmwTeams = {
+    acronym: ['fugiat '],
+    id: [2],
+    location: ['consectetur i'],
+    modifiedAt: ['ullam'],
+    name: ['ut anim n'],
+    slug: ['ak'],
   };
 
-  const search: SearchOverCodmwTeams = {
-    acronym: 'laboris ull',
-    location: 'cupidatat',
-    name: 'irure e',
-    slug: 'y5z-vd_',
+  const searchOverCodmwTeams: SearchOverCodmwTeams = {
+    acronym: 'proident',
+    location: 'non ess',
+    name: 'in ut con',
+    slug: 'ap_',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwTeams.getCodmwTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwTeams,
+    range: rangeOverCodmwTeams,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwTeams,
     page: page,
     perPage: 50,
   });

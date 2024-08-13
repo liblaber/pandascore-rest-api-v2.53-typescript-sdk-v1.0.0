@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCsgoLeagues = {
-    id: [9],
-    modifiedAt: ['Duis sunt es'],
-    name: ['consect'],
-    slug: ['qpngvc'],
-    url: ['mollit'],
+  const filterOverCsgoLeagues: FilterOverCsgoLeagues = {
+    id: [5],
+    modifiedAt: ['l'],
+    name: ['nulla enim '],
+    slug: ['z072ishd'],
+    url: ['in veniam Ut'],
   };
 
-  const range: RangeOverCsgoLeagues = {
+  const rangeOverCsgoLeagues: RangeOverCsgoLeagues = {
     id: [4],
-    modifiedAt: ['sit fugiat'],
-    name: ['occae'],
-    slug: ['4o'],
-    url: ['ametqu'],
+    modifiedAt: ['su'],
+    name: ['ametnostrud n'],
+    slug: ['eufc_4tt'],
+    url: ['inea exercit'],
   };
 
-  const search: SearchOverCsgoLeagues = {
-    name: 'sunt tempo',
-    slug: 'rl',
-    url: 'nulla c',
+  const searchOverCsgoLeagues: SearchOverCsgoLeagues = {
+    name: 'exercitation a',
+    slug: 'i9kf',
+    url: 'irure do labor',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeLeagues.getCsgoLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoLeagues,
+    range: rangeOverCsgoLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoLeagues,
     page: page,
     perPage: 50,
   });

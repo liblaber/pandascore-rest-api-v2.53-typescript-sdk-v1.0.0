@@ -48,34 +48,34 @@ import {
 
   const valorantAbilityType = ValorantAbilityType.ABILITYONE;
 
-  const filter: FilterOverValorantAbilities = {
+  const filterOverValorantAbilities: FilterOverValorantAbilities = {
     abilityType: [valorantAbilityType],
-    creds: [2.45],
-    id: [7],
-    name: ['sunt '],
+    creds: [2.61],
+    id: [8],
+    name: ['sit dolore'],
     videogameVersion: [],
   };
-  const valorantAbilityType = ValorantAbilityType.ABILITYONE;
+  const valorantAbilityType1 = ValorantAbilityType.ABILITYONE;
 
-  const range: RangeOverValorantAbilities = {
-    abilityType: [valorantAbilityType],
-    creds: [2.01],
+  const rangeOverValorantAbilities: RangeOverValorantAbilities = {
+    abilityType: [valorantAbilityType1],
+    creds: [8.01],
     id: [3],
-    name: ['non ipsum'],
+    name: ['sitminim '],
   };
-  const valorantAbilityType = ValorantAbilityType.ABILITYONE;
+  const valorantAbilityType12 = ValorantAbilityType.ABILITYONE;
 
-  const search: SearchOverValorantAbilities = {
-    abilityType: valorantAbilityType,
-    name: 'etetExcepte',
+  const searchOverValorantAbilities: SearchOverValorantAbilities = {
+    abilityType: valorantAbilityType12,
+    name: 'et magna',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantAbilities.getValorantAbilities({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantAbilities,
+    range: rangeOverValorantAbilities,
     sort: [[]],
-    search: search,
+    search: searchOverValorantAbilities,
     page: page,
     perPage: 50,
   });
@@ -111,7 +111,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.valorantAbilities.getValorantAbilitiesValorantAbilityId(4);
+  const { data } = await pandascoreClient.valorantAbilities.getValorantAbilitiesValorantAbilityId(7);
 
   console.log(data);
 })();

@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverRlTeams = {
-    acronym: ['laboris'],
+  const filterOverRlTeams: FilterOverRlTeams = {
+    acronym: ['culpa '],
     id: [8],
-    location: ['elit Ut nostru'],
-    modifiedAt: ['cul'],
-    name: ['culpa conse'],
-    slug: ['e'],
+    location: ['Lorem '],
+    modifiedAt: ['elit'],
+    name: ['mollit sit'],
+    slug: ['zze1ryc3'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverRlTeams = {
-    acronym: ['reprehenderit '],
-    id: [7],
-    location: ['veniam irure '],
-    modifiedAt: ['t'],
-    name: ['autecupid'],
-    slug: ['3txp'],
+  const rangeOverRlTeams: RangeOverRlTeams = {
+    acronym: ['dolor'],
+    id: [2],
+    location: ['ut labor'],
+    modifiedAt: ['occaecat aute'],
+    name: ['exerc'],
+    slug: ['rok58e'],
   };
 
-  const search: SearchOverRlTeams = {
-    acronym: 'tempor veli',
-    location: 'est l',
-    name: 'eiusmod ',
-    slug: 'rjxyb',
+  const searchOverRlTeams: SearchOverRlTeams = {
+    acronym: 'sunt laborum p',
+    location: 'cupidatat ',
+    name: 'minim des',
+    slug: 'rig8',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.rlTeams.getRlTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverRlTeams,
+    range: rangeOverRlTeams,
     sort: [[]],
-    search: search,
+    search: searchOverRlTeams,
     page: page,
     perPage: 50,
   });

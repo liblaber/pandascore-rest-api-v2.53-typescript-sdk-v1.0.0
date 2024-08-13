@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverFifaPlayers = {
+  const filterOverFifaPlayers: FilterOverFifaPlayers = {
     active: true,
-    birthday: ['in no'],
-    firstName: ['non sed labo'],
-    id: [3],
-    lastName: ['cillum'],
-    modifiedAt: ['dolore'],
-    name: ['sit esse vo'],
-    nationality: ['eniml'],
-    role: ['magna culpa o'],
-    slug: ['hn9-y9nw'],
+    birthday: ['exercita'],
+    firstName: ['eu ex'],
+    id: [9],
+    lastName: ['adipisicing'],
+    modifiedAt: ['in'],
+    name: ['ullamco'],
+    nationality: ['minim c'],
+    role: ['dodolor'],
+    slug: ['8w'],
     teamId: [6],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverFifaPlayers = {
-    birthday: ['sunt exer'],
-    firstName: ['reprehenderit d'],
-    id: [9],
-    lastName: ['nulla in dolore'],
-    modifiedAt: ['adipisi'],
-    name: ['id su'],
-    nationality: ['minim n'],
-    role: ['aliquip e'],
-    slug: ['kipn'],
+  const rangeOverFifaPlayers: RangeOverFifaPlayers = {
+    birthday: ['suntdolor '],
+    firstName: ['Ut lab'],
+    id: [5],
+    lastName: ['voluptate in qu'],
+    modifiedAt: ['a'],
+    name: ['inmagna dolore '],
+    nationality: ['veniam'],
+    role: ['cupidatat '],
+    slug: ['tcgk'],
   };
 
-  const search: SearchOverFifaPlayers = {
-    birthday: 'cillum eni',
-    firstName: 'proide',
-    lastName: 'est pariatur D',
-    name: 'sit occaec',
-    nationality: 'sint dolo',
-    role: 'aute ut',
-    slug: 'ox-zwti4j2',
+  const searchOverFifaPlayers: SearchOverFifaPlayers = {
+    birthday: 'exercita',
+    firstName: 'commodo in la',
+    lastName: 'mollit adipisi',
+    name: 'tempor magna',
+    nationality: 'minim iru',
+    role: 'aliquip',
+    slug: 'dh5195t0x',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcPlayers.getFifaPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaPlayers,
+    range: rangeOverFifaPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverFifaPlayers,
     page: page,
     perPage: 50,
   });

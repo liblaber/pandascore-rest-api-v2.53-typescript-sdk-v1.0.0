@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverStarcraft2Players = {
+  const filterOverStarcraft2Players: FilterOverStarcraft2Players = {
     active: true,
-    birthday: ['nisi ullamco do'],
-    firstName: ['in ut volup'],
-    id: [9],
-    lastName: ['officia'],
-    modifiedAt: ['nulla q'],
-    name: ['dolor qui'],
-    nationality: ['sunt dolor'],
-    role: ['laborum cupid'],
-    slug: ['65bgx6'],
-    teamId: [9],
+    birthday: ['Utirure en'],
+    firstName: ['nulla'],
+    id: [8],
+    lastName: ['tempor do'],
+    modifiedAt: ['iru'],
+    name: ['officia in '],
+    nationality: ['Duisin'],
+    role: ['laboris nisi ad'],
+    slug: ['6akrbwuj'],
+    teamId: [7],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverStarcraft2Players = {
-    birthday: ['commodo nost'],
-    firstName: ['velit'],
-    id: [8],
-    lastName: ['ullamco eiusm'],
-    modifiedAt: ['aliquip '],
-    name: ['quis anim'],
-    nationality: ['aliqua'],
-    role: ['non sed aliq'],
-    slug: ['891r0htjkx9'],
+  const rangeOverStarcraft2Players: RangeOverStarcraft2Players = {
+    birthday: ['do cupidatat a'],
+    firstName: ['dolor la'],
+    id: [5],
+    lastName: ['velit sit '],
+    modifiedAt: ['repreh'],
+    name: ['labore l'],
+    nationality: ['magna amet Dui'],
+    role: ['mollit Duis'],
+    slug: ['s1'],
   };
 
-  const search: SearchOverStarcraft2Players = {
-    birthday: 'ullamco eli',
-    firstName: 'nostrud co',
-    lastName: 'Ut anim u',
-    name: 'officia Lo',
-    nationality: 'laborum',
-    role: 'labore id',
-    slug: 'lpjj8_n5j5',
+  const searchOverStarcraft2Players: SearchOverStarcraft2Players = {
+    birthday: 'eiusm',
+    firstName: 'enim si',
+    lastName: 'consequat s',
+    name: 'proiden',
+    nationality: 'fugiat eu sint',
+    role: 'nulla',
+    slug: '7-mandz0',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Players.getStarcraft2Players({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Players,
+    range: rangeOverStarcraft2Players,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Players,
     page: page,
     perPage: 50,
   });

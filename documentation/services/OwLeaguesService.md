@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverOwLeagues = {
-    id: [7],
+  const filterOverOwLeagues: FilterOverOwLeagues = {
+    id: [3],
     modifiedAt: ['cillum'],
-    name: ['ipsum r'],
-    slug: ['t'],
-    url: ['minim in L'],
+    name: ['consequat ni'],
+    slug: ['i_j01uy'],
+    url: ['ipsum'],
   };
 
-  const range: RangeOverOwLeagues = {
-    id: [7],
-    modifiedAt: ['n'],
-    name: ['est i'],
-    slug: ['j1r3nl'],
-    url: ['amet '],
+  const rangeOverOwLeagues: RangeOverOwLeagues = {
+    id: [5],
+    modifiedAt: ['c'],
+    name: ['laborum anim es'],
+    slug: ['cto0'],
+    url: ['cupidatat irur'],
   };
 
-  const search: SearchOverOwLeagues = {
-    name: 'ut veniam d',
-    slug: '72z9',
-    url: 'occaeca',
+  const searchOverOwLeagues: SearchOverOwLeagues = {
+    name: 'dolor mini',
+    slug: 'mt_2hbpfj',
+    url: 'qui exerci',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owLeagues.getOwLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverOwLeagues,
+    range: rangeOverOwLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverOwLeagues,
     page: page,
     perPage: 50,
   });

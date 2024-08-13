@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverKogPlayers = {
+  const filterOverKogPlayers: FilterOverKogPlayers = {
     active: true,
-    birthday: ['Lorem'],
-    firstName: ['nostru'],
-    id: [1],
-    lastName: ['pariatur mollit'],
-    modifiedAt: ['qui '],
-    name: ['culpa incid'],
-    nationality: ['eu ut esse'],
-    role: ['in sunt'],
-    slug: ['202j4i'],
-    teamId: [6],
+    birthday: ['Duis aute sit'],
+    firstName: ['occaec'],
+    id: [6],
+    lastName: ['mollit'],
+    modifiedAt: ['in'],
+    name: ['laboris aliqua '],
+    nationality: ['proident i'],
+    role: ['venia'],
+    slug: ['pdt-82'],
+    teamId: [7],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverKogPlayers = {
-    birthday: ['adipi'],
-    firstName: ['Excepteur in ea'],
-    id: [3],
-    lastName: ['repreh'],
-    modifiedAt: ['ex anim E'],
-    name: ['etdese'],
-    nationality: ['adipisicing ips'],
-    role: ['nulla eu'],
-    slug: ['l14dfqw-'],
+  const rangeOverKogPlayers: RangeOverKogPlayers = {
+    birthday: ['ad elit '],
+    firstName: ['tempor'],
+    id: [6],
+    lastName: ['aute ali'],
+    modifiedAt: ['consectetu'],
+    name: ['sintin'],
+    nationality: ['elit occaeca'],
+    role: ['minim '],
+    slug: ['_qmb96lw89'],
   };
 
-  const search: SearchOverKogPlayers = {
-    birthday: 'eiusmod',
-    firstName: 'cillu',
-    lastName: 'nisi ',
-    name: 'ex in ',
-    nationality: 'mollit la',
-    role: 'ut quis tempor',
-    slug: 'kc',
+  const searchOverKogPlayers: SearchOverKogPlayers = {
+    birthday: 'nisi sed deseru',
+    firstName: 'cupid',
+    lastName: 'aliqua magna no',
+    name: 'in dolore ',
+    nationality: 'proident',
+    role: 'magna cu',
+    slug: 'wiv',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogPlayers.getKogPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverKogPlayers,
+    range: rangeOverKogPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverKogPlayers,
     page: page,
     perPage: 50,
   });

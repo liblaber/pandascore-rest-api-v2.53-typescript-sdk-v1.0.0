@@ -44,34 +44,34 @@ import {
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCodmwLeagues = {
-    id: [5],
-    modifiedAt: ['elit '],
-    name: ['Lorem '],
-    slug: ['sdh7'],
-    url: ['ut aliq'],
+  const filterOverCodmwLeagues: FilterOverCodmwLeagues = {
+    id: [4],
+    modifiedAt: ['sunt magna'],
+    name: ['eu inc'],
+    slug: ['7pqnq'],
+    url: ['tempor sint Exc'],
   };
 
-  const range: RangeOverCodmwLeagues = {
-    id: [10],
-    modifiedAt: ['deserunt am'],
-    name: ['id deseru'],
-    slug: ['7fjol2o5-'],
-    url: ['et amet in'],
+  const rangeOverCodmwLeagues: RangeOverCodmwLeagues = {
+    id: [9],
+    modifiedAt: ['ex laboru'],
+    name: ['et consectetur '],
+    slug: ['gprmck'],
+    url: ['laboris moll'],
   };
 
-  const search: SearchOverCodmwLeagues = {
-    name: 'enim mo',
-    slug: 'wpi9qf',
-    url: 'non dolor con',
+  const searchOverCodmwLeagues: SearchOverCodmwLeagues = {
+    name: 'Ut mollit',
+    slug: 'su',
+    url: 'cillum',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwLeagues.getCodmwLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwLeagues,
+    range: rangeOverCodmwLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwLeagues,
     page: page,
     perPage: 50,
   });

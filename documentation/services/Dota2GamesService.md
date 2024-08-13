@@ -36,7 +36,7 @@ import { PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameId(8);
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameId(7);
 
   console.log(data);
 })();
@@ -73,7 +73,7 @@ import { Page, PandascoreClient } from 'pandascore_client';
 
   const page = 1;
 
-  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameIdFrames(9, {
+  const { data } = await pandascoreClient.dota2Games.getDota2GamesDota2GameIdFrames(5, {
     page: page,
     perPage: 50,
   });
@@ -114,62 +114,62 @@ import { FilterOverDota2Games, GameStatus, MatchIdOrSlug, OpponentType, Page, Pa
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 const gameStatus = GameStatus.FINISHED;
 
 const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverDota2Games = {
-  beginAt: ["nos"],
+const filterOverDota2Games: FilterOverDota2Games = {
+  beginAt: ["ad"],
   complete: true,
   detailedStats: true,
-  endAt: ["exer"],
+  endAt: ["laboris "],
   finished: true,
-  firstBlood: [9],
+  firstBlood: [7],
   forfeit: true,
-  id: [3],
+  id: [5],
   length: [2],
-  matchId: [8],
-  position: [8],
+  matchId: [10],
+  position: [2],
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverDota2Games = {
-  beginAt: ["in pariatur l"],
+const rangeOverDota2Games: RangeOverDota2Games = {
+  beginAt: ["Ut"],
   complete: [true],
   detailedStats: [true],
-  endAt: ["occaeca"],
+  endAt: ["cillum"],
   finished: [true],
-  firstBlood: [8],
+  firstBlood: [6],
   forfeit: [true],
-  id: [8],
-  length: [123],
+  id: [4],
+  length: [9],
   matchId: [2],
-  position: [7],
-  status: [gameStatus],
-  winnerType: [opponentType]
+  position: [1],
+  status: [gameStatus1],
+  winnerType: [opponentType1]
 };
-const gameStatus = GameStatus.FINISHED;
+const gameStatus12 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.PLAYER;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverDota2Games = {
-  status: gameStatus,
-  winnerType: opponentType
+const searchOverDota2Games: SearchOverDota2Games = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.dota2Games.getDota2MatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverDota2Games,
+		range: rangeOverDota2Games,
     sort: [[]],
-		search: search,
+		search: searchOverDota2Games,
 		page: page,
     perPage: 50,
   }

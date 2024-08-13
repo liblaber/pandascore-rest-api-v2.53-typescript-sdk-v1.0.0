@@ -47,38 +47,38 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverCsgoTeams = {
-    acronym: ['utinci'],
-    id: [8],
-    location: ['pariatur'],
-    modifiedAt: ['es'],
-    name: ['consectetur et '],
-    slug: ['_j'],
+  const filterOverCsgoTeams: FilterOverCsgoTeams = {
+    acronym: ['cupidatat v'],
+    id: [10],
+    location: ['proide'],
+    modifiedAt: ['n'],
+    name: ['exmoll'],
+    slug: ['388tc6im'],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverCsgoTeams = {
-    acronym: ['veniam'],
-    id: [6],
-    location: ['dolore ut dolo'],
-    modifiedAt: ['vel'],
-    name: ['qui elit aliqua'],
-    slug: ['x5z388t'],
+  const rangeOverCsgoTeams: RangeOverCsgoTeams = {
+    acronym: ['cupida'],
+    id: [4],
+    location: ['officia ani'],
+    modifiedAt: ['pariatur'],
+    name: ['nostrud qui '],
+    slug: ['k0k91e'],
   };
 
-  const search: SearchOverCsgoTeams = {
-    acronym: 'anim ',
-    location: 'esse dolor ma',
-    name: 'voluptate lab',
-    slug: '3sr',
+  const searchOverCsgoTeams: SearchOverCsgoTeams = {
+    acronym: 'culpa labor',
+    location: 'aute mollit i',
+    name: 'sunt ad',
+    slug: 'wnj8e',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTeams.getCsgoTeams({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoTeams,
+    range: rangeOverCsgoTeams,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoTeams,
     page: page,
     perPage: 50,
   });

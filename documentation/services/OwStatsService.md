@@ -39,9 +39,9 @@ import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const playerIdOrSlug = 3;
+  const playerIdOrSlug = 9;
 
-  const { data } = await pandascoreClient.owStats.getOwGamesOwGameIdPlayersPlayerIdOrSlugStats(8);
+  const { data } = await pandascoreClient.owStats.getOwGamesOwGameIdPlayersPlayerIdOrSlugStats(3);
 
   console.log(data);
 })();
@@ -74,7 +74,7 @@ import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
     token: 'YOUR_TOKEN',
   });
 
-  const matchIdOrSlug = 4;
+  const matchIdOrSlug = 5;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersStats();
 
@@ -109,8 +109,8 @@ import { MatchIdOrSlug, PandascoreClient, PlayerIdOrSlug } from 'pandascore_clie
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const matchIdOrSlug = 4;
-const playerIdOrSlug = 3;
+  const matchIdOrSlug = 5;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.owStats.getOwMatchesMatchIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -149,7 +149,7 @@ import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const playerIdOrSlug = 3;
+  const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.owStats.getOwPlayersPlayerIdOrSlugStats(
   ,
@@ -190,8 +190,8 @@ import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_clie
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const serieIdOrSlug = 8;
-const playerIdOrSlug = 3;
+  const serieIdOrSlug = 10;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.owStats.getOwSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
@@ -229,8 +229,8 @@ import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const tournamentIdOrSlug = 4;
-const playerIdOrSlug = 3;
+  const tournamentIdOrSlug = 2;
+const playerIdOrSlug = 9;
 
   const { data } = await pandascoreClient.owStats.getOwTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,

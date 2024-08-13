@@ -47,49 +47,49 @@ import {
 
   const videogameId = VideogameId._1;
 
-  const filter: FilterOverStarcraftBroodWarPlayers = {
+  const filterOverStarcraftBroodWarPlayers: FilterOverStarcraftBroodWarPlayers = {
     active: true,
-    birthday: ['Duis '],
-    firstName: ['enim qui'],
-    id: [2],
-    lastName: ['ut aliquip q'],
-    modifiedAt: ['mollit cu'],
-    name: ['ea cillu'],
-    nationality: ['cupidatat qui'],
-    role: ['ametExcepte'],
-    slug: ['_'],
-    teamId: [1],
+    birthday: ['consequat '],
+    firstName: ['dolore'],
+    id: [9],
+    lastName: ['adipi'],
+    modifiedAt: ['id no'],
+    name: ['ex dolor'],
+    nationality: ['ad tempor m'],
+    role: ['reprehende'],
+    slug: ['fx5dlw'],
+    teamId: [5],
     videogameId: [videogameId],
   };
 
-  const range: RangeOverStarcraftBroodWarPlayers = {
-    birthday: ['Ut qui in of'],
-    firstName: ['adipis'],
-    id: [10],
-    lastName: ['in an'],
-    modifiedAt: ['proi'],
-    name: ['dolor sunt in '],
-    nationality: ['consequ'],
-    role: ['ut voluptat'],
-    slug: ['ht'],
+  const rangeOverStarcraftBroodWarPlayers: RangeOverStarcraftBroodWarPlayers = {
+    birthday: ['nisi adipisicin'],
+    firstName: ['voluptat'],
+    id: [7],
+    lastName: ['proident'],
+    modifiedAt: ['officia id'],
+    name: ['adipisici'],
+    nationality: ['qui Ut'],
+    role: ['exercitatio'],
+    slug: ['65'],
   };
 
-  const search: SearchOverStarcraftBroodWarPlayers = {
-    birthday: 'fugiat consequa',
-    firstName: 'irure la',
-    lastName: 'id dolo',
-    name: 'laborum laboris',
-    nationality: 'aliquip ex n',
-    role: 'enim ex Lorem',
-    slug: 'hgp5ecp',
+  const searchOverStarcraftBroodWarPlayers: SearchOverStarcraftBroodWarPlayers = {
+    birthday: 'qui enim',
+    firstName: 'cillum ut temp',
+    lastName: 'pariatur fugia',
+    name: 'ullamco ',
+    nationality: 'proiden',
+    role: 'officia',
+    slug: 'fepvp',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarPlayers.getStarcraftBroodWarPlayers({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarPlayers,
+    range: rangeOverStarcraftBroodWarPlayers,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarPlayers,
     page: page,
     perPage: 50,
   });
