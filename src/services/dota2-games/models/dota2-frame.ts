@@ -6,7 +6,7 @@ import { dota2FrameTeam, dota2FrameTeamRequest, dota2FrameTeamResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2Frame: any = z.lazy(() => {
+export const dota2Frame = z.lazy(() => {
   return z.object({
     currentTimestamp: z.number().gte(0),
     direTeam: dota2FrameTeam,
@@ -27,7 +27,7 @@ export type Dota2Frame = z.infer<typeof dota2Frame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FrameResponse: any = z.lazy(() => {
+export const dota2FrameResponse = z.lazy(() => {
   return z
     .object({
       current_timestamp: z.number().gte(0),
@@ -45,7 +45,7 @@ export const dota2FrameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FrameRequest: any = z.lazy(() => {
+export const dota2FrameRequest = z.lazy(() => {
   return z
     .object({
       currentTimestamp: z.number().nullish(),

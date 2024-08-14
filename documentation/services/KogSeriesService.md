@@ -34,7 +34,14 @@ List series for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogSeries,
+  SearchOverKogSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogSeries = {
+  const filterOverKogSeries: FilterOverKogSeries = {
     beginAt: ['ex'],
     endAt: ['in sit no'],
     id: [8],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogSeries = {
+  const rangeOverKogSeries: RangeOverKogSeries = {
     beginAt: ['i'],
     endAt: ['ut'],
     id: [2],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['volupta'],
     season: ['officia'],
     slug: ['nl'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogSeries = {
+  const searchOverKogSeries: SearchOverKogSeries = {
     name: 'aliqu',
     season: 'dolor ipsum ',
     slug: '-n',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogSeries.getKogSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverKogSeries,
+    range: rangeOverKogSeries,
     sort: [[]],
-    search: search,
+    search: searchOverKogSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogSeries,
+  SearchOverKogSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogSeries = {
+  const filterOverKogSeries: FilterOverKogSeries = {
     beginAt: ['ex'],
     endAt: ['in sit no'],
     id: [8],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogSeries = {
+  const rangeOverKogSeries: RangeOverKogSeries = {
     beginAt: ['i'],
     endAt: ['ut'],
     id: [2],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['volupta'],
     season: ['officia'],
     slug: ['nl'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogSeries = {
+  const searchOverKogSeries: SearchOverKogSeries = {
     name: 'aliqu',
     season: 'dolor ipsum ',
     slug: '-n',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogSeries.getKogSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverKogSeries,
+    range: rangeOverKogSeries,
     sort: [[]],
-    search: search,
+    search: searchOverKogSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogSeries,
+  SearchOverKogSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogSeries = {
+  const filterOverKogSeries: FilterOverKogSeries = {
     beginAt: ['ex'],
     endAt: ['in sit no'],
     id: [8],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogSeries = {
+  const rangeOverKogSeries: RangeOverKogSeries = {
     beginAt: ['i'],
     endAt: ['ut'],
     id: [2],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['volupta'],
     season: ['officia'],
     slug: ['nl'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogSeries = {
+  const searchOverKogSeries: SearchOverKogSeries = {
     name: 'aliqu',
     season: 'dolor ipsum ',
     slug: '-n',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogSeries.getKogSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverKogSeries,
+    range: rangeOverKogSeries,
     sort: [[]],
-    search: search,
+    search: searchOverKogSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming King of Glory series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogSeries,
+  SearchOverKogSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogSeries = {
+  const filterOverKogSeries: FilterOverKogSeries = {
     beginAt: ['ex'],
     endAt: ['in sit no'],
     id: [8],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogSeries = {
+  const rangeOverKogSeries: RangeOverKogSeries = {
     beginAt: ['i'],
     endAt: ['ut'],
     id: [2],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['volupta'],
     season: ['officia'],
     slug: ['nl'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogSeries = {
+  const searchOverKogSeries: SearchOverKogSeries = {
     name: 'aliqu',
     season: 'dolor ipsum ',
     slug: '-n',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogSeries.getKogSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverKogSeries,
+    range: rangeOverKogSeries,
     sort: [[]],
-    search: search,
+    search: searchOverKogSeries,
     page: page,
     perPage: 50,
   });

@@ -34,7 +34,14 @@ List series for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaSeries,
+  SearchOverFifaSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
+  const filterOverFifaSeries: FilterOverFifaSeries = {
     beginAt: ['pariat'],
     endAt: ['n'],
     id: [7],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
     beginAt: ['qui nu'],
     endAt: ['nulla elit '],
     id: [6],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['nulla'],
     season: ['occaecat enim'],
     slug: ['dw'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
+  const searchOverFifaSeries: SearchOverFifaSeries = {
     name: 'sed do',
     season: 'cillum d',
     slug: 'ou',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaSeries,
+  SearchOverFifaSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
+  const filterOverFifaSeries: FilterOverFifaSeries = {
     beginAt: ['pariat'],
     endAt: ['n'],
     id: [7],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
     beginAt: ['qui nu'],
     endAt: ['nulla elit '],
     id: [6],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['nulla'],
     season: ['occaecat enim'],
     slug: ['dw'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
+  const searchOverFifaSeries: SearchOverFifaSeries = {
     name: 'sed do',
     season: 'cillum d',
     slug: 'ou',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaSeries,
+  SearchOverFifaSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
+  const filterOverFifaSeries: FilterOverFifaSeries = {
     beginAt: ['pariat'],
     endAt: ['n'],
     id: [7],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
     beginAt: ['qui nu'],
     endAt: ['nulla elit '],
     id: [6],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['nulla'],
     season: ['occaecat enim'],
     slug: ['dw'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
+  const searchOverFifaSeries: SearchOverFifaSeries = {
     name: 'sed do',
     season: 'cillum d',
     slug: 'ou',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming EA Sports FC series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaSeries,
+  SearchOverFifaSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverFifaSeries = {
+  const filterOverFifaSeries: FilterOverFifaSeries = {
     beginAt: ['pariat'],
     endAt: ['n'],
     id: [7],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverFifaSeries = {
+  const rangeOverFifaSeries: RangeOverFifaSeries = {
     beginAt: ['qui nu'],
     endAt: ['nulla elit '],
     id: [6],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['nulla'],
     season: ['occaecat enim'],
     slug: ['dw'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverFifaSeries = {
+  const searchOverFifaSeries: SearchOverFifaSeries = {
     name: 'sed do',
     season: 'cillum d',
     slug: 'ou',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcSeries.getFifaSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaSeries,
+    range: rangeOverFifaSeries,
     sort: [[]],
-    search: search,
+    search: searchOverFifaSeries,
     page: page,
     perPage: 50,
   });

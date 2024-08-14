@@ -31,51 +31,57 @@ List teams for the PUBG videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgTeams,
+  Page,
+  PandascoreClient,
+  RangeOverPubgTeams,
+  SearchOverPubgTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverPubgTeams = {
-  acronym: ["dolore cillum"],
-  id: [2],
-  location: ["nulla temp"],
-  modifiedAt: ["voluptate ven"],
-  name: ["irure"],
-  slug: ["1vxgxb"],
-  videogameId: [videogameId]
-};
+  const filterOverPubgTeams: FilterOverPubgTeams = {
+    acronym: ['dolore cillum'],
+    id: [2],
+    location: ['nulla temp'],
+    modifiedAt: ['voluptate ven'],
+    name: ['irure'],
+    slug: ['1vxgxb'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverPubgTeams = {
-  acronym: ["sit do"],
-  id: [10],
-  location: ["Lorem nos"],
-  modifiedAt: ["sed la"],
-  name: ["incididunt aute"],
-  slug: ["_py"]
-};
+  const rangeOverPubgTeams: RangeOverPubgTeams = {
+    acronym: ['sit do'],
+    id: [10],
+    location: ['Lorem nos'],
+    modifiedAt: ['sed la'],
+    name: ['incididunt aute'],
+    slug: ['_py'],
+  };
 
-const search: SearchOverPubgTeams = {
-  acronym: "qui f",
-  location: "voluptate com",
-  name: "dolore incidid",
-  slug: "l5j_lafab"
-};
-const page = 1;
+  const searchOverPubgTeams: SearchOverPubgTeams = {
+    acronym: 'qui f',
+    location: 'voluptate com',
+    name: 'dolore incidid',
+    slug: 'l5j_lafab',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.pubgTeams.getPubgTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.pubgTeams.getPubgTeams({
+    filter: filterOverPubgTeams,
+    range: rangeOverPubgTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverPubgTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

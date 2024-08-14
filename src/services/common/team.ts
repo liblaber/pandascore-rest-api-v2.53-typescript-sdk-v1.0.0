@@ -6,7 +6,7 @@ import { basePlayer, basePlayerRequest, basePlayerResponse } from './base-player
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const team: any = z.lazy(() => {
+export const team = z.lazy(() => {
   return z.object({
     acronym: z.string().nullable(),
     currentVideogame: z.any().nullable(),
@@ -43,7 +43,7 @@ export type Team = z.infer<typeof team>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamResponse: any = z.lazy(() => {
+export const teamResponse = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullable(),
@@ -77,7 +77,7 @@ export const teamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamRequest: any = z.lazy(() => {
+export const teamRequest = z.lazy(() => {
   return z
     .object({
       acronym: z.string().nullish(),

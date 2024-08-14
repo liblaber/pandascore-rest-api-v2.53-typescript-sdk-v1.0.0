@@ -2,16 +2,14 @@
 
 import { z } from 'zod';
 
-export const loLEventNeutralMinionValue = z.enum([
-  'Big Corbin',
-  'Big Golem',
-  'Big Wolf',
-  'Blue Buff',
-  'Gromp',
-  'Red Buff',
-  'Small Corbin',
-  'Small Golem',
-  'Small Wolf',
-]);
-
-export type LoLEventNeutralMinionValue = z.infer<typeof loLEventNeutralMinionValue>;
+export enum LoLEventNeutralMinionValue {
+  BIGCORBIN = 'Big Corbin',
+  BIGGOLEM = 'Big Golem',
+  BIGWOLF = 'Big Wolf',
+  BLUEBUFF = 'Blue Buff',
+  GROMP = 'Gromp',
+  REDBUFF = 'Red Buff',
+  SMALLCORBIN = 'Small Corbin',
+  SMALLGOLEM = 'Small Golem',
+  SMALLWOLF = 'Small Wolf',
+}

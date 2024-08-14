@@ -32,34 +32,40 @@ List agents
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantAgents,
+  Page,
+  PandascoreClient,
+  RangeOverValorantAgents,
+  SearchOverValorantAgents,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantAgents = {
+  const filterOverValorantAgents: FilterOverValorantAgents = {
     id: [4],
     name: ['quiame'],
     videogameVersion: [],
   };
 
-  const range: RangeOverValorantAgents = {
+  const rangeOverValorantAgents: RangeOverValorantAgents = {
     id: [8],
     name: ['voluptate '],
   };
 
-  const search: SearchOverValorantAgents = {
+  const searchOverValorantAgents: SearchOverValorantAgents = {
     name: 'nisiexerc',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.valorantAgents.getValorantAgents({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantAgents,
+    range: rangeOverValorantAgents,
     sort: [[]],
-    search: search,
+    search: searchOverValorantAgents,
     page: page,
     perPage: 50,
   });

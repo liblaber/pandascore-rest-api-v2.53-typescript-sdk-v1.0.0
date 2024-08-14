@@ -32,36 +32,36 @@ List maps
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverCsgoMaps, Page, PandascoreClient, RangeOverCsgoMaps, SearchOverCsgoMaps } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCsgoMaps = {
+  const filterOverCsgoMaps: FilterOverCsgoMaps = {
     id: [1],
     name: ['quiminim in de'],
     slug: ['l27p'],
   };
 
-  const range: RangeOverCsgoMaps = {
+  const rangeOverCsgoMaps: RangeOverCsgoMaps = {
     id: [9],
     name: ['cupida'],
     slug: ['k-4qt'],
   };
 
-  const search: SearchOverCsgoMaps = {
+  const searchOverCsgoMaps: SearchOverCsgoMaps = {
     name: 'fugiat culpa',
     slug: 'sw_b',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeMaps.getCsgoMaps({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoMaps,
+    range: rangeOverCsgoMaps,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoMaps,
     page: page,
     perPage: 50,
   });

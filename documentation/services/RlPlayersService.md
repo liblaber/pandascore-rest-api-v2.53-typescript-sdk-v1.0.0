@@ -31,62 +31,68 @@ List players for the Rocket League videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverRlPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverRlPlayers,
+  SearchOverRlPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverRlPlayers = {
-  active: true,
-  birthday: ["fugia"],
-  firstName: ["ipsum"],
-  id: [5],
-  lastName: ["Utvoluptat"],
-  modifiedAt: ["in rep"],
-  name: ["adipi"],
-  nationality: ["sit sunt null"],
-  role: ["in ex"],
-  slug: ["a"],
-  teamId: [5],
-  videogameId: [videogameId]
-};
+  const filterOverRlPlayers: FilterOverRlPlayers = {
+    active: true,
+    birthday: ['fugia'],
+    firstName: ['ipsum'],
+    id: [5],
+    lastName: ['Utvoluptat'],
+    modifiedAt: ['in rep'],
+    name: ['adipi'],
+    nationality: ['sit sunt null'],
+    role: ['in ex'],
+    slug: ['a'],
+    teamId: [5],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverRlPlayers = {
-  birthday: ["ex voluptate d"],
-  firstName: ["reprehenderi"],
-  id: [2],
-  lastName: ["labore"],
-  modifiedAt: ["do aute adipi"],
-  name: ["nisicommodo"],
-  nationality: ["occaecat "],
-  role: ["minim"],
-  slug: ["htxdf2z4lk"]
-};
+  const rangeOverRlPlayers: RangeOverRlPlayers = {
+    birthday: ['ex voluptate d'],
+    firstName: ['reprehenderi'],
+    id: [2],
+    lastName: ['labore'],
+    modifiedAt: ['do aute adipi'],
+    name: ['nisicommodo'],
+    nationality: ['occaecat '],
+    role: ['minim'],
+    slug: ['htxdf2z4lk'],
+  };
 
-const search: SearchOverRlPlayers = {
-  birthday: "dolor",
-  firstName: "adconsequ",
-  lastName: "sint in lab",
-  name: "dolore ",
-  nationality: "culpa",
-  role: "esse qui ex ",
-  slug: "7cfncmu"
-};
-const page = 1;
+  const searchOverRlPlayers: SearchOverRlPlayers = {
+    birthday: 'dolor',
+    firstName: 'adconsequ',
+    lastName: 'sint in lab',
+    name: 'dolore ',
+    nationality: 'culpa',
+    role: 'esse qui ex ',
+    slug: '7cfncmu',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.rlPlayers.getRlPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.rlPlayers.getRlPlayers({
+    filter: filterOverRlPlayers,
+    range: rangeOverRlPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverRlPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

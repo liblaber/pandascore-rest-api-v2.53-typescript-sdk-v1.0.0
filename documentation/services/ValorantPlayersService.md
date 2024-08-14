@@ -31,62 +31,68 @@ List players for the Valorant videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverValorantPlayers,
+  SearchOverValorantPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverValorantPlayers = {
-  active: true,
-  birthday: ["laboris"],
-  firstName: ["tempor"],
-  id: [2],
-  lastName: ["veniam"],
-  modifiedAt: ["Duis ex"],
-  name: ["incididunt "],
-  nationality: ["dolore"],
-  role: ["aliqu"],
-  slug: ["y"],
-  teamId: [2],
-  videogameId: [videogameId]
-};
+  const filterOverValorantPlayers: FilterOverValorantPlayers = {
+    active: true,
+    birthday: ['laboris'],
+    firstName: ['tempor'],
+    id: [2],
+    lastName: ['veniam'],
+    modifiedAt: ['Duis ex'],
+    name: ['incididunt '],
+    nationality: ['dolore'],
+    role: ['aliqu'],
+    slug: ['y'],
+    teamId: [2],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverValorantPlayers = {
-  birthday: ["exercit"],
-  firstName: ["inExce"],
-  id: [8],
-  lastName: ["Lorem labor"],
-  modifiedAt: ["elit id l"],
-  name: ["irure incid"],
-  nationality: ["ullamco "],
-  role: ["fugiat labo"],
-  slug: ["o"]
-};
+  const rangeOverValorantPlayers: RangeOverValorantPlayers = {
+    birthday: ['exercit'],
+    firstName: ['inExce'],
+    id: [8],
+    lastName: ['Lorem labor'],
+    modifiedAt: ['elit id l'],
+    name: ['irure incid'],
+    nationality: ['ullamco '],
+    role: ['fugiat labo'],
+    slug: ['o'],
+  };
 
-const search: SearchOverValorantPlayers = {
-  birthday: "ea moll",
-  firstName: "officia nulla",
-  lastName: "labore eiu",
-  name: "anim eu",
-  nationality: "aliqua dolor",
-  role: "consequat ",
-  slug: "ybj02j05"
-};
-const page = 1;
+  const searchOverValorantPlayers: SearchOverValorantPlayers = {
+    birthday: 'ea moll',
+    firstName: 'officia nulla',
+    lastName: 'labore eiu',
+    name: 'anim eu',
+    nationality: 'aliqua dolor',
+    role: 'consequat ',
+    slug: 'ybj02j05',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.valorantPlayers.getValorantPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.valorantPlayers.getValorantPlayers({
+    filter: filterOverValorantPlayers,
+    range: rangeOverValorantPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverValorantPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

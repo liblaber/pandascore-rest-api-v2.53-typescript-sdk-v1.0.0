@@ -2,6 +2,9 @@
 
 import { z } from 'zod';
 
-export const gameStatus = z.enum(['finished', 'not_played', 'not_started', 'running']);
-
-export type GameStatus = z.infer<typeof gameStatus>;
+export enum GameStatus {
+  FINISHED = 'finished',
+  NOTPLAYED = 'not_played',
+  NOTSTARTED = 'not_started',
+  RUNNING = 'running',
+}

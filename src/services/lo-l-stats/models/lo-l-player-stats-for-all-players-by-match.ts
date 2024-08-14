@@ -11,7 +11,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPlayerStatsForAllPlayersByMatch: any = z.lazy(() => {
+export const loLPlayerStatsForAllPlayersByMatch = z.lazy(() => {
   return z.object({
     averages: loLPlayerAverages,
     gamesCount: z.number().gte(0).nullable(),
@@ -32,7 +32,7 @@ export type LoLPlayerStatsForAllPlayersByMatch = z.infer<typeof loLPlayerStatsFo
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerStatsForAllPlayersByMatchResponse: any = z.lazy(() => {
+export const loLPlayerStatsForAllPlayersByMatchResponse = z.lazy(() => {
   return z
     .object({
       averages: loLPlayerAveragesResponse,
@@ -50,7 +50,7 @@ export const loLPlayerStatsForAllPlayersByMatchResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerStatsForAllPlayersByMatchRequest: any = z.lazy(() => {
+export const loLPlayerStatsForAllPlayersByMatchRequest = z.lazy(() => {
   return z
     .object({
       averages: loLPlayerAveragesRequest.nullish(),

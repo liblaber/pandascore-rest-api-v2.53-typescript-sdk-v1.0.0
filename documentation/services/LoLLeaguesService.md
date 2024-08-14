@@ -31,14 +31,20 @@ List League of Legends leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverLoLLeagues,
+  SearchOverLoLLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLLeagues = {
+  const filterOverLoLLeagues: FilterOverLoLLeagues = {
     id: [3],
     modifiedAt: ['dol'],
     name: ['mollit occa'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['magna dolor ali'],
   };
 
-  const range: RangeOverLoLLeagues = {
+  const rangeOverLoLLeagues: RangeOverLoLLeagues = {
     id: [7],
     modifiedAt: ['quis'],
     name: ['adipisicing'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['cillum esse al'],
   };
 
-  const search: SearchOverLoLLeagues = {
+  const searchOverLoLLeagues: SearchOverLoLLeagues = {
     name: 'Lorem de',
     slug: ':1pcxkfbh7q',
     url: 'labore',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.loLLeagues.getLolLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLLeagues,
+    range: rangeOverLoLLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverLoLLeagues,
     page: page,
     perPage: 50,
   });

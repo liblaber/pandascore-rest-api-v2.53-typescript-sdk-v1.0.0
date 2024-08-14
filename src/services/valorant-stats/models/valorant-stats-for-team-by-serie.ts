@@ -19,7 +19,7 @@ import { baseValorantTeam, baseValorantTeamRequest, baseValorantTeamResponse } f
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantStatsForTeamBySerie: any = z.lazy(() => {
+export const valorantStatsForTeamBySerie = z.lazy(() => {
   return z.object({
     assists: z.number().gte(0).nullable(),
     clutchWins: valorantTeamClutchWins,
@@ -86,7 +86,7 @@ export type ValorantStatsForTeamBySerie = z.infer<typeof valorantStatsForTeamByS
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForTeamBySerieResponse: any = z.lazy(() => {
+export const valorantStatsForTeamBySerieResponse = z.lazy(() => {
   return z
     .object({
       assists: z.number().gte(0).nullable(),
@@ -150,7 +150,7 @@ export const valorantStatsForTeamBySerieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForTeamBySerieRequest: any = z.lazy(() => {
+export const valorantStatsForTeamBySerieRequest = z.lazy(() => {
   return z
     .object({
       assists: z.number().nullish(),

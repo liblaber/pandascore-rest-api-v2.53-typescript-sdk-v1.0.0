@@ -64,7 +64,7 @@ List events for a given Counter-Strike game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -104,7 +104,7 @@ List rounds in a Counter-Strike game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -148,16 +148,16 @@ List games for a given Counter-Strike match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverCsgoGames, GameStatus, MatchIdOrSlug, Page, PandascoreClient, RangeOverCsgoGames, SearchOverCsgoGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const filter: FilterOverCsgoGames = {
+const filterOverCsgoGames: FilterOverCsgoGames = {
   beginAt: ["ad anim ut i"],
   complete: true,
   detailedStats: true,
@@ -170,9 +170,9 @@ const filter: FilterOverCsgoGames = {
   position: [9],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus1 = GameStatus.FINISHED;
 
-const range: RangeOverCsgoGames = {
+const rangeOverCsgoGames: RangeOverCsgoGames = {
   beginAt: ["i"],
   complete: [true],
   detailedStats: [true],
@@ -183,22 +183,22 @@ const range: RangeOverCsgoGames = {
   length: [7],
   matchId: [8],
   position: [9],
-  status: [gameStatus]
+  status: [gameStatus1]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus12 = GameStatus.FINISHED;
 
-const search: SearchOverCsgoGames = {
-  status: gameStatus
+const searchOverCsgoGames: SearchOverCsgoGames = {
+  status: gameStatus12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeGames.getCsgoMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverCsgoGames,
+		range: rangeOverCsgoGames,
     sort: [[]],
-		search: search,
+		search: searchOverCsgoGames,
 		page: page,
     perPage: 50,
   }

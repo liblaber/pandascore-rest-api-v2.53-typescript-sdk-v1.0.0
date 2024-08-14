@@ -2,15 +2,14 @@
 
 import { z } from 'zod';
 import { baseOpponent, baseOpponentRequest, baseOpponentResponse } from './base-opponent';
-import { opponentType } from './opponent-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const opponent: any = z.lazy(() => {
+export const opponent = z.lazy(() => {
   return z.object({
     opponent: baseOpponent,
-    type: opponentType,
+    type: z.string(),
   });
 });
 
@@ -26,11 +25,11 @@ export type Opponent = z.infer<typeof opponent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponentResponse: any = z.lazy(() => {
+export const opponentResponse = z.lazy(() => {
   return z
     .object({
       opponent: baseOpponentResponse,
-      type: opponentType,
+      type: z.string(),
     })
     .transform((data) => ({
       opponent: data['opponent'],
@@ -42,8 +41,8 @@ export const opponentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponentRequest: any = z.lazy(() => {
-  return z.object({ opponent: baseOpponentRequest.nullish(), type: opponentType.nullish() }).transform((data) => ({
+export const opponentRequest = z.lazy(() => {
+  return z.object({ opponent: baseOpponentRequest.nullish(), type: z.string().nullish() }).transform((data) => ({
     opponent: data['opponent'],
     type: data['type'],
   }));

@@ -6,7 +6,7 @@ import { baseValorantAgent, baseValorantAgentRequest, baseValorantAgentResponse 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantEventPlayer: any = z.lazy(() => {
+export const valorantEventPlayer = z.lazy(() => {
   return z.object({
     agent: baseValorantAgent,
     id: z.number().gte(1),
@@ -27,7 +27,7 @@ export type ValorantEventPlayer = z.infer<typeof valorantEventPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventPlayerResponse: any = z.lazy(() => {
+export const valorantEventPlayerResponse = z.lazy(() => {
   return z
     .object({
       agent: baseValorantAgentResponse,
@@ -45,7 +45,7 @@ export const valorantEventPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventPlayerRequest: any = z.lazy(() => {
+export const valorantEventPlayerRequest = z.lazy(() => {
   return z
     .object({ agent: baseValorantAgentRequest.nullish(), id: z.number().nullish(), name: z.string().nullish() })
     .transform((data) => ({

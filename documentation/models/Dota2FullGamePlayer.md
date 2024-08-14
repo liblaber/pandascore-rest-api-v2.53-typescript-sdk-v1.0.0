@@ -51,8 +51,8 @@ Player's data for a game
 
 | Name    | Type   | Required | Description |
 | :------ | :----- | :------- | :---------- |
-| dire    | string | ✅       | "dire"      |
-| radiant | string | ✅       | "radiant"   |
+| DIRE    | string | ✅       | "dire"      |
+| RADIANT | string | ✅       | "radiant"   |
 
 # Dota2FullGamePlayerHero
 

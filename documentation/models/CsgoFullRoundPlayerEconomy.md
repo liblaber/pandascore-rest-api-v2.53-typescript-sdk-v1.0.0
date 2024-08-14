@@ -15,10 +15,10 @@
 
 **Properties**
 
-| Name              | Type   | Required | Description         |
-| :---------------- | :----- | :------- | :------------------ |
-| kevlar            | string | ✅       | "kevlar"            |
-| kevlar_and_helmet | string | ✅       | "kevlar_and_helmet" |
+| Name            | Type   | Required | Description         |
+| :-------------- | :----- | :------- | :------------------ |
+| KEVLAR          | string | ✅       | "kevlar"            |
+| KEVLARANDHELMET | string | ✅       | "kevlar_and_helmet" |
 
 # PrimaryWeapon
 

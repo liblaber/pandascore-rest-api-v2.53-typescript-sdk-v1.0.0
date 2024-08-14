@@ -34,7 +34,14 @@ List series for the PUBG videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverPubgSeries,
+  SearchOverPubgSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgSeries = {
+  const filterOverPubgSeries: FilterOverPubgSeries = {
     beginAt: ['ex'],
     endAt: ['Lorem '],
     id: [5],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgSeries = {
+  const rangeOverPubgSeries: RangeOverPubgSeries = {
     beginAt: ['c'],
     endAt: ['amet elit et i'],
     id: [2],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['in enim '],
     season: ['occaecat n'],
     slug: ['z7v95uzd6'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgSeries = {
+  const searchOverPubgSeries: SearchOverPubgSeries = {
     name: 'nostrud ipsu',
     season: 'velit',
     slug: 'gu',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgSeries.getPubgSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgSeries,
+    range: rangeOverPubgSeries,
     sort: [[]],
-    search: search,
+    search: searchOverPubgSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverPubgSeries,
+  SearchOverPubgSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgSeries = {
+  const filterOverPubgSeries: FilterOverPubgSeries = {
     beginAt: ['ex'],
     endAt: ['Lorem '],
     id: [5],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgSeries = {
+  const rangeOverPubgSeries: RangeOverPubgSeries = {
     beginAt: ['c'],
     endAt: ['amet elit et i'],
     id: [2],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['in enim '],
     season: ['occaecat n'],
     slug: ['z7v95uzd6'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgSeries = {
+  const searchOverPubgSeries: SearchOverPubgSeries = {
     name: 'nostrud ipsu',
     season: 'velit',
     slug: 'gu',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgSeries.getPubgSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgSeries,
+    range: rangeOverPubgSeries,
     sort: [[]],
-    search: search,
+    search: searchOverPubgSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverPubgSeries,
+  SearchOverPubgSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgSeries = {
+  const filterOverPubgSeries: FilterOverPubgSeries = {
     beginAt: ['ex'],
     endAt: ['Lorem '],
     id: [5],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgSeries = {
+  const rangeOverPubgSeries: RangeOverPubgSeries = {
     beginAt: ['c'],
     endAt: ['amet elit et i'],
     id: [2],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['in enim '],
     season: ['occaecat n'],
     slug: ['z7v95uzd6'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgSeries = {
+  const searchOverPubgSeries: SearchOverPubgSeries = {
     name: 'nostrud ipsu',
     season: 'velit',
     slug: 'gu',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgSeries.getPubgSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgSeries,
+    range: rangeOverPubgSeries,
     sort: [[]],
-    search: search,
+    search: searchOverPubgSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming PUBG series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverPubgSeries,
+  SearchOverPubgSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverPubgSeries = {
+  const filterOverPubgSeries: FilterOverPubgSeries = {
     beginAt: ['ex'],
     endAt: ['Lorem '],
     id: [5],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverPubgSeries = {
+  const rangeOverPubgSeries: RangeOverPubgSeries = {
     beginAt: ['c'],
     endAt: ['amet elit et i'],
     id: [2],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['in enim '],
     season: ['occaecat n'],
     slug: ['z7v95uzd6'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverPubgSeries = {
+  const searchOverPubgSeries: SearchOverPubgSeries = {
     name: 'nostrud ipsu',
     season: 'velit',
     slug: 'gu',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.pubgSeries.getPubgSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgSeries,
+    range: rangeOverPubgSeries,
     sort: [[]],
-    search: search,
+    search: searchOverPubgSeries,
     page: page,
     perPage: 50,
   });

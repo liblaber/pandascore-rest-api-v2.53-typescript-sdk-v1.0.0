@@ -10,7 +10,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantFullRoundAttackerTeam: any = z.lazy(() => {
+export const valorantFullRoundAttackerTeam = z.lazy(() => {
   return z.object({
     players: z.array(valorantFullRoundPlayer),
     score: z.number().gte(0),
@@ -31,7 +31,7 @@ export type ValorantFullRoundAttackerTeam = z.infer<typeof valorantFullRoundAtta
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantFullRoundAttackerTeamResponse: any = z.lazy(() => {
+export const valorantFullRoundAttackerTeamResponse = z.lazy(() => {
   return z
     .object({
       players: z.array(valorantFullRoundPlayerResponse),
@@ -49,7 +49,7 @@ export const valorantFullRoundAttackerTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantFullRoundAttackerTeamRequest: any = z.lazy(() => {
+export const valorantFullRoundAttackerTeamRequest = z.lazy(() => {
   return z
     .object({
       players: z.array(valorantFullRoundPlayerRequest).nullish(),

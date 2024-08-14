@@ -7,7 +7,7 @@ import { groupStanding, groupStandingRequest, groupStandingResponse } from './gr
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const standing: any = z.lazy(() => {
+export const standing = z.lazy(() => {
   return z.union([bracketStanding, groupStanding]);
 });
 
@@ -23,7 +23,7 @@ export type Standing = z.infer<typeof standing>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const standingResponse: any = z.lazy(() => {
+export const standingResponse = z.lazy(() => {
   return z.union([bracketStandingResponse, groupStandingResponse]);
 });
 
@@ -31,6 +31,6 @@ export const standingResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const standingRequest: any = z.lazy(() => {
+export const standingRequest = z.lazy(() => {
   return z.union([bracketStandingRequest, groupStandingRequest]);
 });

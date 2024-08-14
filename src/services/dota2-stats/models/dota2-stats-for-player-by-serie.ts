@@ -18,7 +18,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2StatsForPlayerBySerie: any = z.lazy(() => {
+export const dota2StatsForPlayerBySerie = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -73,7 +73,7 @@ export type Dota2StatsForPlayerBySerie = z.infer<typeof dota2StatsForPlayerBySer
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForPlayerBySerieResponse: any = z.lazy(() => {
+export const dota2StatsForPlayerBySerieResponse = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -125,7 +125,7 @@ export const dota2StatsForPlayerBySerieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2StatsForPlayerBySerieRequest: any = z.lazy(() => {
+export const dota2StatsForPlayerBySerieRequest = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

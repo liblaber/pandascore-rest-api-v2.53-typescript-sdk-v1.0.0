@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoRoundsScore: any = z.lazy(() => {
+export const csgoRoundsScore = z.lazy(() => {
   return z.object({
     score: z.number().gte(0),
     teamId: z.number().gte(1),
@@ -24,7 +24,7 @@ export type CsgoRoundsScore = z.infer<typeof csgoRoundsScore>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundsScoreResponse: any = z.lazy(() => {
+export const csgoRoundsScoreResponse = z.lazy(() => {
   return z
     .object({
       score: z.number().gte(0),
@@ -40,7 +40,7 @@ export const csgoRoundsScoreResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundsScoreRequest: any = z.lazy(() => {
+export const csgoRoundsScoreRequest = z.lazy(() => {
   return z.object({ score: z.number().nullish(), teamId: z.number().nullish() }).transform((data) => ({
     score: data['score'],
     team_id: data['teamId'],

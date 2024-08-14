@@ -31,51 +31,57 @@ List teams for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaTeams,
+  Page,
+  PandascoreClient,
+  RangeOverFifaTeams,
+  SearchOverFifaTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverFifaTeams = {
-  acronym: ["nostrud in vel"],
-  id: [10],
-  location: ["reprehenderit t"],
-  modifiedAt: ["consectetur cil"],
-  name: ["quis Lor"],
-  slug: ["d3c"],
-  videogameId: [videogameId]
-};
+  const filterOverFifaTeams: FilterOverFifaTeams = {
+    acronym: ['nostrud in vel'],
+    id: [10],
+    location: ['reprehenderit t'],
+    modifiedAt: ['consectetur cil'],
+    name: ['quis Lor'],
+    slug: ['d3c'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverFifaTeams = {
-  acronym: ["minim "],
-  id: [6],
-  location: ["Duis in"],
-  modifiedAt: ["ut cu"],
-  name: ["consectetur "],
-  slug: ["o4l8d"]
-};
+  const rangeOverFifaTeams: RangeOverFifaTeams = {
+    acronym: ['minim '],
+    id: [6],
+    location: ['Duis in'],
+    modifiedAt: ['ut cu'],
+    name: ['consectetur '],
+    slug: ['o4l8d'],
+  };
 
-const search: SearchOverFifaTeams = {
-  acronym: "labore",
-  location: "minim ullamco c",
-  name: "quilaboris",
-  slug: "9ch1_rro"
-};
-const page = 1;
+  const searchOverFifaTeams: SearchOverFifaTeams = {
+    acronym: 'labore',
+    location: 'minim ullamco c',
+    name: 'quilaboris',
+    slug: '9ch1_rro',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcTeams.getFifaTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcTeams.getFifaTeams({
+    filter: filterOverFifaTeams,
+    range: rangeOverFifaTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverFifaTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

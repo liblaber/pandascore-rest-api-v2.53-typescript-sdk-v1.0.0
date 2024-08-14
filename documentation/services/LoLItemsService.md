@@ -32,14 +32,14 @@ List items
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLoLItems, Page, PandascoreClient, RangeOverLoLItems, SearchOverLoLItems } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLItems = {
+  const filterOverLoLItems: FilterOverLoLItems = {
     flatArmorMod: [5],
     flatCritChanceMod: [1],
     flatHpPoolMod: [1],
@@ -63,7 +63,7 @@ import { PandascoreClient } from 'pandascore_client';
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLItems = {
+  const rangeOverLoLItems: RangeOverLoLItems = {
     flatArmorMod: [8],
     flatCritChanceMod: [10],
     flatHpPoolMod: [10],
@@ -85,16 +85,16 @@ import { PandascoreClient } from 'pandascore_client';
     percentMovementSpeedMod: [1],
   };
 
-  const search: SearchOverLoLItems = {
+  const searchOverLoLItems: SearchOverLoLItems = {
     name: 'adipis',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLItems.getLolItems({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLItems,
+    range: rangeOverLoLItems,
     sort: [[]],
-    search: search,
+    search: searchOverLoLItems,
     page: page,
     perPage: 50,
   });

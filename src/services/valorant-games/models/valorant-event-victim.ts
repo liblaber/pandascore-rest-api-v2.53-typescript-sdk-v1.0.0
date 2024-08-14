@@ -2,17 +2,16 @@
 
 import { z } from 'zod';
 import { baseValorantAgent, baseValorantAgentRequest, baseValorantAgentResponse } from './base-valorant-agent';
-import { valorantTeamSide } from '../../common/valorant-team-side';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantEventVictim: any = z.lazy(() => {
+export const valorantEventVictim = z.lazy(() => {
   return z.object({
     agent: baseValorantAgent,
     id: z.number().gte(1),
     name: z.string(),
-    teamSide: valorantTeamSide,
+    teamSide: z.string(),
   });
 });
 
@@ -30,13 +29,13 @@ export type ValorantEventVictim = z.infer<typeof valorantEventVictim>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventVictimResponse: any = z.lazy(() => {
+export const valorantEventVictimResponse = z.lazy(() => {
   return z
     .object({
       agent: baseValorantAgentResponse,
       id: z.number().gte(1),
       name: z.string(),
-      team_side: valorantTeamSide,
+      team_side: z.string(),
     })
     .transform((data) => ({
       agent: data['agent'],
@@ -50,13 +49,13 @@ export const valorantEventVictimResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantEventVictimRequest: any = z.lazy(() => {
+export const valorantEventVictimRequest = z.lazy(() => {
   return z
     .object({
       agent: baseValorantAgentRequest.nullish(),
       id: z.number().nullish(),
       name: z.string().nullish(),
-      teamSide: valorantTeamSide.nullish(),
+      teamSide: z.string().nullish(),
     })
     .transform((data) => ({
       agent: data['agent'],

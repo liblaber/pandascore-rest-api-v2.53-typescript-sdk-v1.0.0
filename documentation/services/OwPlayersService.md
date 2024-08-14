@@ -31,62 +31,68 @@ List players for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverOwPlayers,
+  SearchOverOwPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverOwPlayers = {
-  active: true,
-  birthday: ["est Excepteur "],
-  firstName: ["aliquip con"],
-  id: [1],
-  lastName: ["sit magna i"],
-  modifiedAt: ["id q"],
-  name: ["aliquip"],
-  nationality: ["Lorem offic"],
-  role: ["aute ad nu"],
-  slug: ["4l5"],
-  teamId: [3],
-  videogameId: [videogameId]
-};
+  const filterOverOwPlayers: FilterOverOwPlayers = {
+    active: true,
+    birthday: ['est Excepteur '],
+    firstName: ['aliquip con'],
+    id: [1],
+    lastName: ['sit magna i'],
+    modifiedAt: ['id q'],
+    name: ['aliquip'],
+    nationality: ['Lorem offic'],
+    role: ['aute ad nu'],
+    slug: ['4l5'],
+    teamId: [3],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverOwPlayers = {
-  birthday: ["pariat"],
-  firstName: ["id veniam la"],
-  id: [10],
-  lastName: ["laborum vel"],
-  modifiedAt: ["cupidatat fug"],
-  name: ["officia an"],
-  nationality: ["aliquip"],
-  role: ["est non d"],
-  slug: ["z3x5kp2w1"]
-};
+  const rangeOverOwPlayers: RangeOverOwPlayers = {
+    birthday: ['pariat'],
+    firstName: ['id veniam la'],
+    id: [10],
+    lastName: ['laborum vel'],
+    modifiedAt: ['cupidatat fug'],
+    name: ['officia an'],
+    nationality: ['aliquip'],
+    role: ['est non d'],
+    slug: ['z3x5kp2w1'],
+  };
 
-const search: SearchOverOwPlayers = {
-  birthday: "cupidatat",
-  firstName: "ut qui",
-  lastName: "doquis ad ",
-  name: "exercita",
-  nationality: "irure dolor",
-  role: "Duis non",
-  slug: "z8o_9ly2hq"
-};
-const page = 1;
+  const searchOverOwPlayers: SearchOverOwPlayers = {
+    birthday: 'cupidatat',
+    firstName: 'ut qui',
+    lastName: 'doquis ad ',
+    name: 'exercita',
+    nationality: 'irure dolor',
+    role: 'Duis non',
+    slug: 'z8o_9ly2hq',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.owPlayers.getOwPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.owPlayers.getOwPlayers({
+    filter: filterOverOwPlayers,
+    range: rangeOverOwPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverOwPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

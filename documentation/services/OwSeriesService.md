@@ -34,7 +34,14 @@ List series for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwSeries,
+  SearchOverOwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
+  const filterOverOwSeries: FilterOverOwSeries = {
     beginAt: ['deserunt'],
     endAt: ['dolore'],
     id: [8],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
+  const rangeOverOwSeries: RangeOverOwSeries = {
     beginAt: ['Exce'],
     endAt: ['t'],
     id: [1],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['sed enim do'],
     season: ['culpa laborum '],
     slug: ['98'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
+  const searchOverOwSeries: SearchOverOwSeries = {
     name: 'ut qui',
     season: 'eiusmod',
     slug: 'van0',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past Overwatch series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwSeries,
+  SearchOverOwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
+  const filterOverOwSeries: FilterOverOwSeries = {
     beginAt: ['deserunt'],
     endAt: ['dolore'],
     id: [8],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
+  const rangeOverOwSeries: RangeOverOwSeries = {
     beginAt: ['Exce'],
     endAt: ['t'],
     id: [1],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['sed enim do'],
     season: ['culpa laborum '],
     slug: ['98'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
+  const searchOverOwSeries: SearchOverOwSeries = {
     name: 'ut qui',
     season: 'eiusmod',
     slug: 'van0',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running Overwatch series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwSeries,
+  SearchOverOwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
+  const filterOverOwSeries: FilterOverOwSeries = {
     beginAt: ['deserunt'],
     endAt: ['dolore'],
     id: [8],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
+  const rangeOverOwSeries: RangeOverOwSeries = {
     beginAt: ['Exce'],
     endAt: ['t'],
     id: [1],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['sed enim do'],
     season: ['culpa laborum '],
     slug: ['98'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
+  const searchOverOwSeries: SearchOverOwSeries = {
     name: 'ut qui',
     season: 'eiusmod',
     slug: 'van0',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming Overwatch series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwSeries,
+  SearchOverOwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwSeries = {
+  const filterOverOwSeries: FilterOverOwSeries = {
     beginAt: ['deserunt'],
     endAt: ['dolore'],
     id: [8],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwSeries = {
+  const rangeOverOwSeries: RangeOverOwSeries = {
     beginAt: ['Exce'],
     endAt: ['t'],
     id: [1],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['sed enim do'],
     season: ['culpa laborum '],
     slug: ['98'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwSeries = {
+  const searchOverOwSeries: SearchOverOwSeries = {
     name: 'ut qui',
     season: 'eiusmod',
     slug: 'van0',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owSeries.getOwSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverOwSeries,
+    range: rangeOverOwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverOwSeries,
     page: page,
     perPage: 50,
   });

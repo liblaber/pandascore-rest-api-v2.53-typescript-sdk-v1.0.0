@@ -6,7 +6,7 @@ import { owHero, owHeroRequest, owHeroResponse } from '../../common/ow-hero';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owFavoriteHero: any = z.lazy(() => {
+export const owFavoriteHero = z.lazy(() => {
   return z.object({
     gamesCount: z.number().gte(0),
     hero: owHero,
@@ -25,7 +25,7 @@ export type OwFavoriteHero = z.infer<typeof owFavoriteHero>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owFavoriteHeroResponse: any = z.lazy(() => {
+export const owFavoriteHeroResponse = z.lazy(() => {
   return z
     .object({
       games_count: z.number().gte(0),
@@ -41,7 +41,7 @@ export const owFavoriteHeroResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owFavoriteHeroRequest: any = z.lazy(() => {
+export const owFavoriteHeroRequest = z.lazy(() => {
   return z.object({ gamesCount: z.number().nullish(), hero: owHeroRequest.nullish() }).transform((data) => ({
     games_count: data['gamesCount'],
     hero: data['hero'],

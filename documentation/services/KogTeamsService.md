@@ -31,51 +31,57 @@ List teams for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogTeams,
+  Page,
+  PandascoreClient,
+  RangeOverKogTeams,
+  SearchOverKogTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverKogTeams = {
-  acronym: ["ea ut"],
-  id: [8],
-  location: ["ea Duis s"],
-  modifiedAt: ["labore"],
-  name: ["dolor vo"],
-  slug: ["cur_6z"],
-  videogameId: [videogameId]
-};
+  const filterOverKogTeams: FilterOverKogTeams = {
+    acronym: ['ea ut'],
+    id: [8],
+    location: ['ea Duis s'],
+    modifiedAt: ['labore'],
+    name: ['dolor vo'],
+    slug: ['cur_6z'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverKogTeams = {
-  acronym: ["do adipis"],
-  id: [5],
-  location: ["Duis "],
-  modifiedAt: ["dolore"],
-  name: ["sunt dolore"],
-  slug: ["qwvw"]
-};
+  const rangeOverKogTeams: RangeOverKogTeams = {
+    acronym: ['do adipis'],
+    id: [5],
+    location: ['Duis '],
+    modifiedAt: ['dolore'],
+    name: ['sunt dolore'],
+    slug: ['qwvw'],
+  };
 
-const search: SearchOverKogTeams = {
-  acronym: "paria",
-  location: "sint anim sed",
-  name: "reprehenderit ",
-  slug: "nsoq"
-};
-const page = 1;
+  const searchOverKogTeams: SearchOverKogTeams = {
+    acronym: 'paria',
+    location: 'sint anim sed',
+    name: 'reprehenderit ',
+    slug: 'nsoq',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogTeams.getKogTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogTeams.getKogTeams({
+    filter: filterOverKogTeams,
+    range: rangeOverKogTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverKogTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

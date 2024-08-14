@@ -31,51 +31,57 @@ List teams for the LoL Wild Rift videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftTeams,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftTeams,
+  SearchOverLolWildRiftTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLolWildRiftTeams = {
-  acronym: ["nulla"],
-  id: [4],
-  location: ["ut cul"],
-  modifiedAt: ["Lorem"],
-  name: ["eu anim"],
-  slug: ["smkajitdf56"],
-  videogameId: [videogameId]
-};
+  const filterOverLolWildRiftTeams: FilterOverLolWildRiftTeams = {
+    acronym: ['nulla'],
+    id: [4],
+    location: ['ut cul'],
+    modifiedAt: ['Lorem'],
+    name: ['eu anim'],
+    slug: ['smkajitdf56'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLolWildRiftTeams = {
-  acronym: ["dolore aute "],
-  id: [4],
-  location: ["mollit"],
-  modifiedAt: ["proident sun"],
-  name: ["tempor labore e"],
-  slug: ["qwl4m2"]
-};
+  const rangeOverLolWildRiftTeams: RangeOverLolWildRiftTeams = {
+    acronym: ['dolore aute '],
+    id: [4],
+    location: ['mollit'],
+    modifiedAt: ['proident sun'],
+    name: ['tempor labore e'],
+    slug: ['qwl4m2'],
+  };
 
-const search: SearchOverLolWildRiftTeams = {
-  acronym: "et commodo a",
-  location: "minim",
-  name: "labore",
-  slug: "jlv"
-};
-const page = 1;
+  const searchOverLolWildRiftTeams: SearchOverLolWildRiftTeams = {
+    acronym: 'et commodo a',
+    location: 'minim',
+    name: 'labore',
+    slug: 'jlv',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLWildRiftTeams.getLolWildRiftTeams({
+    filter: filterOverLolWildRiftTeams,
+    range: rangeOverLolWildRiftTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverLolWildRiftTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

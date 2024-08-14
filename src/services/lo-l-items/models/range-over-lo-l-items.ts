@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const rangeOverLoLItems: any = z.lazy(() => {
+export const rangeOverLoLItems = z.lazy(() => {
   return z.object({
     flatArmorMod: z.array(z.number()).min(2).max(2).optional(),
     flatCritChanceMod: z.array(z.number()).min(2).max(2).optional(),
@@ -58,7 +58,7 @@ export type RangeOverLoLItems = z.infer<typeof rangeOverLoLItems>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverLoLItemsResponse: any = z.lazy(() => {
+export const rangeOverLoLItemsResponse = z.lazy(() => {
   return z
     .object({
       flat_armor_mod: z.array(z.number()).min(2).max(2).optional(),
@@ -108,7 +108,7 @@ export const rangeOverLoLItemsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverLoLItemsRequest: any = z.lazy(() => {
+export const rangeOverLoLItemsRequest = z.lazy(() => {
   return z
     .object({
       flatArmorMod: z.array(z.number()).nullish(),

@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const teamIdOrSlug: any = z.lazy(() => {
+export const teamIdOrSlug = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -21,7 +21,7 @@ export type TeamIdOrSlug = z.infer<typeof teamIdOrSlug>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamIdOrSlugResponse: any = z.lazy(() => {
+export const teamIdOrSlugResponse = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });
 
@@ -29,6 +29,6 @@ export const teamIdOrSlugResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamIdOrSlugRequest: any = z.lazy(() => {
+export const teamIdOrSlugRequest = z.lazy(() => {
   return z.union([z.number(), z.string()]);
 });

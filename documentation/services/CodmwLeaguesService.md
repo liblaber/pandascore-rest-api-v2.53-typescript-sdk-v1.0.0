@@ -31,14 +31,20 @@ List CODMW leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwLeagues,
+  SearchOverCodmwLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCodmwLeagues = {
+  const filterOverCodmwLeagues: FilterOverCodmwLeagues = {
     id: [4],
     modifiedAt: ['sunt magna'],
     name: ['eu inc'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['tempor sint Exc'],
   };
 
-  const range: RangeOverCodmwLeagues = {
+  const rangeOverCodmwLeagues: RangeOverCodmwLeagues = {
     id: [9],
     modifiedAt: ['ex laboru'],
     name: ['et consectetur '],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['laboris moll'],
   };
 
-  const search: SearchOverCodmwLeagues = {
+  const searchOverCodmwLeagues: SearchOverCodmwLeagues = {
     name: 'Ut mollit',
     slug: 'su',
     url: 'cillum',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.codmwLeagues.getCodmwLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwLeagues,
+    range: rangeOverCodmwLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwLeagues,
     page: page,
     perPage: 50,
   });

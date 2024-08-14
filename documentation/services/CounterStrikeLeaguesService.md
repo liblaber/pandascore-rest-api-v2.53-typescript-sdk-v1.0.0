@@ -31,14 +31,20 @@ List Counter-Strike leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoLeagues,
+  SearchOverCsgoLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverCsgoLeagues = {
+  const filterOverCsgoLeagues: FilterOverCsgoLeagues = {
     id: [5],
     modifiedAt: ['l'],
     name: ['nulla enim '],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['in veniam Ut'],
   };
 
-  const range: RangeOverCsgoLeagues = {
+  const rangeOverCsgoLeagues: RangeOverCsgoLeagues = {
     id: [4],
     modifiedAt: ['su'],
     name: ['ametnostrud n'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['inea exercit'],
   };
 
-  const search: SearchOverCsgoLeagues = {
+  const searchOverCsgoLeagues: SearchOverCsgoLeagues = {
     name: 'exercitation a',
     slug: 'i9kf',
     url: 'irure do labor',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeLeagues.getCsgoLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoLeagues,
+    range: rangeOverCsgoLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoLeagues,
     page: page,
     perPage: 50,
   });

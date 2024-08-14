@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const barracksStatus: any = z.lazy(() => {
+export const barracksStatus = z.lazy(() => {
   return z.object({
     bottomMelee: z.boolean(),
     bottomRanged: z.boolean(),
@@ -32,7 +32,7 @@ export type BarracksStatus = z.infer<typeof barracksStatus>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const barracksStatusResponse: any = z.lazy(() => {
+export const barracksStatusResponse = z.lazy(() => {
   return z
     .object({
       bottom_melee: z.boolean(),
@@ -56,7 +56,7 @@ export const barracksStatusResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const barracksStatusRequest: any = z.lazy(() => {
+export const barracksStatusRequest = z.lazy(() => {
   return z
     .object({
       bottomMelee: z.boolean().nullish(),

@@ -2,12 +2,11 @@
 
 import { z } from 'zod';
 import { baseSerieWinnerId, baseSerieWinnerIdRequest, baseSerieWinnerIdResponse } from './base-serie-winner-id';
-import { baseSerieWinnerType } from './base-serie-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const baseSerie: any = z.lazy(() => {
+export const baseSerie = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     endAt: z.string().min(1).nullable(),
@@ -22,7 +21,7 @@ export const baseSerie: any = z.lazy(() => {
       .min(1)
       .regex(/^[a-z0-9_-]+$/),
     winnerId: baseSerieWinnerId,
-    winnerType: baseSerieWinnerType.nullable(),
+    winnerType: z.string().nullable(),
     year: z.number().gte(2012).nullable(),
   });
 });
@@ -49,7 +48,7 @@ export type BaseSerie = z.infer<typeof baseSerie>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseSerieResponse: any = z.lazy(() => {
+export const baseSerieResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -65,7 +64,7 @@ export const baseSerieResponse: any = z.lazy(() => {
         .min(1)
         .regex(/^[a-z0-9_-]+$/),
       winner_id: baseSerieWinnerIdResponse,
-      winner_type: baseSerieWinnerType.nullable(),
+      winner_type: z.string().nullable(),
       year: z.number().gte(2012).nullable(),
     })
     .transform((data) => ({
@@ -88,7 +87,7 @@ export const baseSerieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseSerieRequest: any = z.lazy(() => {
+export const baseSerieRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -101,7 +100,7 @@ export const baseSerieRequest: any = z.lazy(() => {
       season: z.string().nullish(),
       slug: z.string().nullish(),
       winnerId: baseSerieWinnerIdRequest.nullish(),
-      winnerType: baseSerieWinnerType.nullish(),
+      winnerType: z.string().nullish(),
       year: z.number().nullish(),
     })
     .transform((data) => ({

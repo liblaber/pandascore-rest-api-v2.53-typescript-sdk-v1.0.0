@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 
-export const serieWinnerType = z.enum(['Player', 'Team']);
-
-export type SerieWinnerType = z.infer<typeof serieWinnerType>;
+export enum SerieWinnerType {
+  PLAYER = 'Player',
+  TEAM = 'Team',
+}

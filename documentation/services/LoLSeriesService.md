@@ -34,7 +34,14 @@ List series for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSeries,
+  SearchOverLoLSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
+  const filterOverLoLSeries: FilterOverLoLSeries = {
     beginAt: ['nisi amet'],
     endAt: ['reprehen'],
     id: [7],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
     beginAt: ['sint co'],
     endAt: ['tempor esse co'],
     id: [7],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['eliti'],
     season: ['labore exercita'],
     slug: ['93mxp18t'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
+  const searchOverLoLSeries: SearchOverLoLSeries = {
     name: 'mollit p',
     season: 'exerc',
     slug: 'wm55',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past League of Legends series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSeries,
+  SearchOverLoLSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
+  const filterOverLoLSeries: FilterOverLoLSeries = {
     beginAt: ['nisi amet'],
     endAt: ['reprehen'],
     id: [7],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
     beginAt: ['sint co'],
     endAt: ['tempor esse co'],
     id: [7],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['eliti'],
     season: ['labore exercita'],
     slug: ['93mxp18t'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
+  const searchOverLoLSeries: SearchOverLoLSeries = {
     name: 'mollit p',
     season: 'exerc',
     slug: 'wm55',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running League of Legends series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSeries,
+  SearchOverLoLSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
+  const filterOverLoLSeries: FilterOverLoLSeries = {
     beginAt: ['nisi amet'],
     endAt: ['reprehen'],
     id: [7],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
     beginAt: ['sint co'],
     endAt: ['tempor esse co'],
     id: [7],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['eliti'],
     season: ['labore exercita'],
     slug: ['93mxp18t'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
+  const searchOverLoLSeries: SearchOverLoLSeries = {
     name: 'mollit p',
     season: 'exerc',
     slug: 'wm55',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming League of Legends series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSeries,
+  SearchOverLoLSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLSeries = {
+  const filterOverLoLSeries: FilterOverLoLSeries = {
     beginAt: ['nisi amet'],
     endAt: ['reprehen'],
     id: [7],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLSeries = {
+  const rangeOverLoLSeries: RangeOverLoLSeries = {
     beginAt: ['sint co'],
     endAt: ['tempor esse co'],
     id: [7],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['eliti'],
     season: ['labore exercita'],
     slug: ['93mxp18t'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLSeries = {
+  const searchOverLoLSeries: SearchOverLoLSeries = {
     name: 'mollit p',
     season: 'exerc',
     slug: 'wm55',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSeries.getLolSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSeries,
+    range: rangeOverLoLSeries,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSeries,
     page: page,
     perPage: 50,
   });

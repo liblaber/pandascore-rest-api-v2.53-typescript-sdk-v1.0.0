@@ -6,7 +6,7 @@ import { valorantEventPlayer, valorantEventPlayerRequest, valorantEventPlayerRes
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantSpikeEventPlayer: any = z.lazy(() => {
+export const valorantSpikeEventPlayer = z.lazy(() => {
   return z.object({
     player: valorantEventPlayer,
   });
@@ -23,7 +23,7 @@ export type ValorantSpikeEventPlayer = z.infer<typeof valorantSpikeEventPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantSpikeEventPlayerResponse: any = z.lazy(() => {
+export const valorantSpikeEventPlayerResponse = z.lazy(() => {
   return z
     .object({
       player: valorantEventPlayerResponse,
@@ -37,7 +37,7 @@ export const valorantSpikeEventPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantSpikeEventPlayerRequest: any = z.lazy(() => {
+export const valorantSpikeEventPlayerRequest = z.lazy(() => {
   return z.object({ player: valorantEventPlayerRequest.nullish() }).transform((data) => ({
     player: data['player'],
   }));

@@ -7,7 +7,7 @@ import { baseLoLSpell, baseLoLSpellRequest, baseLoLSpellResponse } from './base-
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPlayersRoleDetail: any = z.lazy(() => {
+export const loLPlayersRoleDetail = z.lazy(() => {
   return z.object({
     assists: z.number().gte(0),
     champion: baseLoLChampion,
@@ -40,7 +40,7 @@ export type LoLPlayersRoleDetail = z.infer<typeof loLPlayersRoleDetail>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayersRoleDetailResponse: any = z.lazy(() => {
+export const loLPlayersRoleDetailResponse = z.lazy(() => {
   return z
     .object({
       assists: z.number().gte(0),
@@ -70,7 +70,7 @@ export const loLPlayersRoleDetailResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayersRoleDetailRequest: any = z.lazy(() => {
+export const loLPlayersRoleDetailRequest = z.lazy(() => {
   return z
     .object({
       assists: z.number().nullish(),

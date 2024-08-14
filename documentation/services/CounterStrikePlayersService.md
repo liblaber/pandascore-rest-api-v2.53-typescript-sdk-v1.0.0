@@ -31,62 +31,68 @@ List players for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoPlayers,
+  SearchOverCsgoPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverCsgoPlayers = {
-  active: true,
-  birthday: ["ipsum est"],
-  firstName: ["commodo elit"],
-  id: [2],
-  lastName: ["sitesse aut"],
-  modifiedAt: ["exercit"],
-  name: ["dolore Excepte"],
-  nationality: ["exercitat"],
-  role: ["quis consectet"],
-  slug: ["hqupp"],
-  teamId: [4],
-  videogameId: [videogameId]
-};
+  const filterOverCsgoPlayers: FilterOverCsgoPlayers = {
+    active: true,
+    birthday: ['ipsum est'],
+    firstName: ['commodo elit'],
+    id: [2],
+    lastName: ['sitesse aut'],
+    modifiedAt: ['exercit'],
+    name: ['dolore Excepte'],
+    nationality: ['exercitat'],
+    role: ['quis consectet'],
+    slug: ['hqupp'],
+    teamId: [4],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverCsgoPlayers = {
-  birthday: ["nostrud "],
-  firstName: ["inaut"],
-  id: [2],
-  lastName: ["magna m"],
-  modifiedAt: ["nostrud inc"],
-  name: ["non qui sun"],
-  nationality: ["amet "],
-  role: ["non co"],
-  slug: ["srxr1-zb2sn"]
-};
+  const rangeOverCsgoPlayers: RangeOverCsgoPlayers = {
+    birthday: ['nostrud '],
+    firstName: ['inaut'],
+    id: [2],
+    lastName: ['magna m'],
+    modifiedAt: ['nostrud inc'],
+    name: ['non qui sun'],
+    nationality: ['amet '],
+    role: ['non co'],
+    slug: ['srxr1-zb2sn'],
+  };
 
-const search: SearchOverCsgoPlayers = {
-  birthday: "nostrud ad in ",
-  firstName: "consequa",
-  lastName: "laborum ",
-  name: "ut Excepteur n",
-  nationality: "proident mini",
-  role: "aliquip ",
-  slug: "9y"
-};
-const page = 1;
+  const searchOverCsgoPlayers: SearchOverCsgoPlayers = {
+    birthday: 'nostrud ad in ',
+    firstName: 'consequa',
+    lastName: 'laborum ',
+    name: 'ut Excepteur n',
+    nationality: 'proident mini',
+    role: 'aliquip ',
+    slug: '9y',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikePlayers.getCsgoPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.counterStrikePlayers.getCsgoPlayers({
+    filter: filterOverCsgoPlayers,
+    range: rangeOverCsgoPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverCsgoPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

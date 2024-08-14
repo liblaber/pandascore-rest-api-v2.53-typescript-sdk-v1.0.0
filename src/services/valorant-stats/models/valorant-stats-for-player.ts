@@ -22,7 +22,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantStatsForPlayer: any = z.lazy(() => {
+export const valorantStatsForPlayer = z.lazy(() => {
   return z.object({
     agents: z.array(valorantAgentStats),
     assists: z.number().gte(0).nullable(),
@@ -69,7 +69,7 @@ export type ValorantStatsForPlayer = z.infer<typeof valorantStatsForPlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForPlayerResponse: any = z.lazy(() => {
+export const valorantStatsForPlayerResponse = z.lazy(() => {
   return z
     .object({
       agents: z.array(valorantAgentStatsResponse),
@@ -113,7 +113,7 @@ export const valorantStatsForPlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForPlayerRequest: any = z.lazy(() => {
+export const valorantStatsForPlayerRequest = z.lazy(() => {
   return z
     .object({
       agents: z.array(valorantAgentStatsRequest).nullish(),

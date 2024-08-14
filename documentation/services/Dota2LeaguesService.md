@@ -31,14 +31,20 @@ List Dota2 leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Leagues,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Leagues,
+  SearchOverDota2Leagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverDota2Leagues = {
+  const filterOverDota2Leagues: FilterOverDota2Leagues = {
     id: [3],
     modifiedAt: ['proident labo'],
     name: ['dolor proid'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['anim ea est U'],
   };
 
-  const range: RangeOverDota2Leagues = {
+  const rangeOverDota2Leagues: RangeOverDota2Leagues = {
     id: [8],
     modifiedAt: ['aliqua aute'],
     name: ['aliqua ea '],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['in aute elit'],
   };
 
-  const search: SearchOverDota2Leagues = {
+  const searchOverDota2Leagues: SearchOverDota2Leagues = {
     name: 'Excepteur ip',
     slug: 'pu97glcez',
     url: 'dolore ipsum d',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Leagues.getDota2Leagues({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Leagues,
+    range: rangeOverDota2Leagues,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Leagues,
     page: page,
     perPage: 50,
   });

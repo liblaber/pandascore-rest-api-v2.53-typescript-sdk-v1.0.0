@@ -31,14 +31,20 @@ List EA Sports FC leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverFifaLeagues,
+  SearchOverFifaLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverFifaLeagues = {
+  const filterOverFifaLeagues: FilterOverFifaLeagues = {
     id: [9],
     modifiedAt: ['adipisicing'],
     name: ['aliqua non'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['labor'],
   };
 
-  const range: RangeOverFifaLeagues = {
+  const rangeOverFifaLeagues: RangeOverFifaLeagues = {
     id: [4],
     modifiedAt: ['mini'],
     name: ['ex Excep'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['sint eu '],
   };
 
-  const search: SearchOverFifaLeagues = {
+  const searchOverFifaLeagues: SearchOverFifaLeagues = {
     name: 'cillum',
     slug: '6d',
     url: 'non ullamco ',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.eaSportsFcLeagues.getFifaLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverFifaLeagues,
+    range: rangeOverFifaLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverFifaLeagues,
     page: page,
     perPage: 50,
   });

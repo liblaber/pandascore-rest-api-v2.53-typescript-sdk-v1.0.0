@@ -2,16 +2,14 @@
 
 import { z } from 'zod';
 
-export const loLEventType = z.enum([
-  'baron_nashor_kill',
-  'drake_kill',
-  'inhibitor_kill',
-  'other',
-  'player_kill',
-  'rift_herald_kill',
-  'suicide',
-  'tower_kill',
-  'voidgrub_kill',
-]);
-
-export type LoLEventType = z.infer<typeof loLEventType>;
+export enum LoLEventType {
+  BARONNASHORKILL = 'baron_nashor_kill',
+  DRAKEKILL = 'drake_kill',
+  INHIBITORKILL = 'inhibitor_kill',
+  OTHER = 'other',
+  PLAYERKILL = 'player_kill',
+  RIFTHERALDKILL = 'rift_herald_kill',
+  SUICIDE = 'suicide',
+  TOWERKILL = 'tower_kill',
+  VOIDGRUBKILL = 'voidgrub_kill',
+}

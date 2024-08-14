@@ -6,16 +6,15 @@ import {
   incidentDeletionReasonRequest,
   incidentDeletionReasonResponse,
 } from './incident-deletion-reason';
-import { videogameId } from '../../common/videogame-id';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const deletionObject: any = z.lazy(() => {
+export const deletionObject = z.lazy(() => {
   return z.object({
     deletedAt: z.string().min(1),
     reason: incidentDeletionReason,
-    videogameId: videogameId,
+    videogameId: z.number(),
   });
 });
 
@@ -32,12 +31,12 @@ export type DeletionObject = z.infer<typeof deletionObject>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const deletionObjectResponse: any = z.lazy(() => {
+export const deletionObjectResponse = z.lazy(() => {
   return z
     .object({
       deleted_at: z.string().min(1),
       reason: incidentDeletionReasonResponse,
-      videogame_id: videogameId,
+      videogame_id: z.number(),
     })
     .transform((data) => ({
       deletedAt: data['deleted_at'],
@@ -50,12 +49,12 @@ export const deletionObjectResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const deletionObjectRequest: any = z.lazy(() => {
+export const deletionObjectRequest = z.lazy(() => {
   return z
     .object({
       deletedAt: z.string().nullish(),
       reason: incidentDeletionReasonRequest.nullish(),
-      videogameId: videogameId.nullish(),
+      videogameId: z.number().nullish(),
     })
     .transform((data) => ({
       deleted_at: data['deletedAt'],

@@ -31,51 +31,57 @@ List teams for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarTeams,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraftBroodWarTeams,
+  SearchOverStarcraftBroodWarTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverStarcraftBroodWarTeams = {
-  acronym: ["sint co"],
-  id: [8],
-  location: ["ut dolo"],
-  modifiedAt: ["iru"],
-  name: ["cillum e"],
-  slug: ["m"],
-  videogameId: [videogameId]
-};
+  const filterOverStarcraftBroodWarTeams: FilterOverStarcraftBroodWarTeams = {
+    acronym: ['sint co'],
+    id: [8],
+    location: ['ut dolo'],
+    modifiedAt: ['iru'],
+    name: ['cillum e'],
+    slug: ['m'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverStarcraftBroodWarTeams = {
-  acronym: ["deserunt a"],
-  id: [3],
-  location: ["sunt aut"],
-  modifiedAt: ["deserunt aute"],
-  name: ["labor"],
-  slug: ["qt3q1roio"]
-};
+  const rangeOverStarcraftBroodWarTeams: RangeOverStarcraftBroodWarTeams = {
+    acronym: ['deserunt a'],
+    id: [3],
+    location: ['sunt aut'],
+    modifiedAt: ['deserunt aute'],
+    name: ['labor'],
+    slug: ['qt3q1roio'],
+  };
 
-const search: SearchOverStarcraftBroodWarTeams = {
-  acronym: "dolore fugia",
-  location: "dolore cillum",
-  name: "irure ven",
-  slug: "j"
-};
-const page = 1;
+  const searchOverStarcraftBroodWarTeams: SearchOverStarcraftBroodWarTeams = {
+    acronym: 'dolore fugia',
+    location: 'dolore cillum',
+    name: 'irure ven',
+    slug: 'j',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarTeams.getStarcraftBroodWarTeams({
+    filter: filterOverStarcraftBroodWarTeams,
+    range: rangeOverStarcraftBroodWarTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverStarcraftBroodWarTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

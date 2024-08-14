@@ -31,51 +31,57 @@ List teams for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoTeams,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoTeams,
+  SearchOverCsgoTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverCsgoTeams = {
-  acronym: ["cupidatat v"],
-  id: [10],
-  location: ["proide"],
-  modifiedAt: ["n"],
-  name: ["exmoll"],
-  slug: ["388tc6im"],
-  videogameId: [videogameId]
-};
+  const filterOverCsgoTeams: FilterOverCsgoTeams = {
+    acronym: ['cupidatat v'],
+    id: [10],
+    location: ['proide'],
+    modifiedAt: ['n'],
+    name: ['exmoll'],
+    slug: ['388tc6im'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverCsgoTeams = {
-  acronym: ["cupida"],
-  id: [4],
-  location: ["officia ani"],
-  modifiedAt: ["pariatur"],
-  name: ["nostrud qui "],
-  slug: ["k0k91e"]
-};
+  const rangeOverCsgoTeams: RangeOverCsgoTeams = {
+    acronym: ['cupida'],
+    id: [4],
+    location: ['officia ani'],
+    modifiedAt: ['pariatur'],
+    name: ['nostrud qui '],
+    slug: ['k0k91e'],
+  };
 
-const search: SearchOverCsgoTeams = {
-  acronym: "culpa labor",
-  location: "aute mollit i",
-  name: "sunt ad",
-  slug: "wnj8e"
-};
-const page = 1;
+  const searchOverCsgoTeams: SearchOverCsgoTeams = {
+    acronym: 'culpa labor',
+    location: 'aute mollit i',
+    name: 'sunt ad',
+    slug: 'wnj8e',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.counterStrikeTeams.getCsgoTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.counterStrikeTeams.getCsgoTeams({
+    filter: filterOverCsgoTeams,
+    range: rangeOverCsgoTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverCsgoTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

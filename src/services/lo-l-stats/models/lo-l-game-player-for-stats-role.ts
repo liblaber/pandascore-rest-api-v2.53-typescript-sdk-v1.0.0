@@ -2,6 +2,10 @@
 
 import { z } from 'zod';
 
-export const loLGamePlayerForStatsRole = z.enum(['adc', 'jun', 'mid', 'sup', 'top']);
-
-export type LoLGamePlayerForStatsRole = z.infer<typeof loLGamePlayerForStatsRole>;
+export enum LoLGamePlayerForStatsRole {
+  ADC = 'adc',
+  JUN = 'jun',
+  MID = 'mid',
+  SUP = 'sup',
+  TOP = 'top',
+}

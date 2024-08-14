@@ -34,7 +34,14 @@ List series for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwSeries = {
+  const filterOverCodmwSeries: FilterOverCodmwSeries = {
     beginAt: ['aliquip minim d'],
     endAt: ['aute ad ea'],
     id: [3],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwSeries = {
+  const rangeOverCodmwSeries: RangeOverCodmwSeries = {
     beginAt: ['aliq'],
     endAt: ['est dolore eu'],
     id: [10],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['anim ex eli'],
     season: ['pariatur '],
     slug: ['ic16v7gnnll'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwSeries = {
+  const searchOverCodmwSeries: SearchOverCodmwSeries = {
     name: 'qui ul',
     season: 'esse ullam',
     slug: 'c7',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwSeries.getCodmwSeries({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwSeries,
+    range: rangeOverCodmwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwSeries,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwSeries = {
+  const filterOverCodmwSeries: FilterOverCodmwSeries = {
     beginAt: ['aliquip minim d'],
     endAt: ['aute ad ea'],
     id: [3],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwSeries = {
+  const rangeOverCodmwSeries: RangeOverCodmwSeries = {
     beginAt: ['aliq'],
     endAt: ['est dolore eu'],
     id: [10],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['anim ex eli'],
     season: ['pariatur '],
     slug: ['ic16v7gnnll'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwSeries = {
+  const searchOverCodmwSeries: SearchOverCodmwSeries = {
     name: 'qui ul',
     season: 'esse ullam',
     slug: 'c7',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwSeries.getCodmwSeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwSeries,
+    range: rangeOverCodmwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwSeries,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwSeries = {
+  const filterOverCodmwSeries: FilterOverCodmwSeries = {
     beginAt: ['aliquip minim d'],
     endAt: ['aute ad ea'],
     id: [3],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwSeries = {
+  const rangeOverCodmwSeries: RangeOverCodmwSeries = {
     beginAt: ['aliq'],
     endAt: ['est dolore eu'],
     id: [10],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['anim ex eli'],
     season: ['pariatur '],
     slug: ['ic16v7gnnll'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwSeries = {
+  const searchOverCodmwSeries: SearchOverCodmwSeries = {
     name: 'qui ul',
     season: 'esse ullam',
     slug: 'c7',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwSeries.getCodmwSeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwSeries,
+    range: rangeOverCodmwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwSeries,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming CODMW series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwSeries,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwSeries,
+  SearchOverCodmwSeries,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCodmwSeries = {
+  const filterOverCodmwSeries: FilterOverCodmwSeries = {
     beginAt: ['aliquip minim d'],
     endAt: ['aute ad ea'],
     id: [3],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCodmwSeries = {
+  const rangeOverCodmwSeries: RangeOverCodmwSeries = {
     beginAt: ['aliq'],
     endAt: ['est dolore eu'],
     id: [10],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['anim ex eli'],
     season: ['pariatur '],
     slug: ['ic16v7gnnll'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCodmwSeries = {
+  const searchOverCodmwSeries: SearchOverCodmwSeries = {
     name: 'qui ul',
     season: 'esse ullam',
     slug: 'c7',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.codmwSeries.getCodmwSeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverCodmwSeries,
+    range: rangeOverCodmwSeries,
     sort: [[]],
-    search: search,
+    search: searchOverCodmwSeries,
     page: page,
     perPage: 50,
   });

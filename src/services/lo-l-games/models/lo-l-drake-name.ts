@@ -2,14 +2,12 @@
 
 import { z } from 'zod';
 
-export const loLDrakeName = z.enum([
-  'Chemtech Drake',
-  'Cloud Drake',
-  'Elder Drake',
-  'Hextech Drake',
-  'Infernal Drake',
-  'Mountain Drake',
-  'Ocean Drake',
-]);
-
-export type LoLDrakeName = z.infer<typeof loLDrakeName>;
+export enum LoLDrakeName {
+  CHEMTECHDRAKE = 'Chemtech Drake',
+  CLOUDDRAKE = 'Cloud Drake',
+  ELDERDRAKE = 'Elder Drake',
+  HEXTECHDRAKE = 'Hextech Drake',
+  INFERNALDRAKE = 'Infernal Drake',
+  MOUNTAINDRAKE = 'Mountain Drake',
+  OCEANDRAKE = 'Ocean Drake',
+}

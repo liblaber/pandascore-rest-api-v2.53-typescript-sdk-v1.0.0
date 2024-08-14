@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const searchOverPubgPlayers: any = z.lazy(() => {
+export const searchOverPubgPlayers = z.lazy(() => {
   return z.object({
     birthday: z.string().optional(),
     firstName: z.string().optional(),
@@ -38,7 +38,7 @@ export type SearchOverPubgPlayers = z.infer<typeof searchOverPubgPlayers>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverPubgPlayersResponse: any = z.lazy(() => {
+export const searchOverPubgPlayersResponse = z.lazy(() => {
   return z
     .object({
       birthday: z.string().optional(),
@@ -68,7 +68,7 @@ export const searchOverPubgPlayersResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const searchOverPubgPlayersRequest: any = z.lazy(() => {
+export const searchOverPubgPlayersRequest = z.lazy(() => {
   return z
     .object({
       birthday: z.string().nullish(),

@@ -23,7 +23,7 @@ import { tournament, tournamentRequest, tournamentResponse } from '../../common/
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantStatsForPlayerByTournament: any = z.lazy(() => {
+export const valorantStatsForPlayerByTournament = z.lazy(() => {
   return z.object({
     agents: z.array(valorantAgentStats),
     assists: z.number().gte(0).nullable(),
@@ -72,7 +72,7 @@ export type ValorantStatsForPlayerByTournament = z.infer<typeof valorantStatsFor
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForPlayerByTournamentResponse: any = z.lazy(() => {
+export const valorantStatsForPlayerByTournamentResponse = z.lazy(() => {
   return z
     .object({
       agents: z.array(valorantAgentStatsResponse),
@@ -118,7 +118,7 @@ export const valorantStatsForPlayerByTournamentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantStatsForPlayerByTournamentRequest: any = z.lazy(() => {
+export const valorantStatsForPlayerByTournamentRequest = z.lazy(() => {
   return z
     .object({
       agents: z.array(valorantAgentStatsRequest).nullish(),

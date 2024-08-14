@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2FullGamePlayerHero: any = z.lazy(() => {
+export const dota2FullGamePlayerHero = z.lazy(() => {
   return z.object({
     id: z.number().gte(1),
     imageUrl: z.string().nullable(),
@@ -31,7 +31,7 @@ export type Dota2FullGamePlayerHero = z.infer<typeof dota2FullGamePlayerHero>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FullGamePlayerHeroResponse: any = z.lazy(() => {
+export const dota2FullGamePlayerHeroResponse = z.lazy(() => {
   return z
     .object({
       id: z.number().gte(1),
@@ -54,7 +54,7 @@ export const dota2FullGamePlayerHeroResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2FullGamePlayerHeroRequest: any = z.lazy(() => {
+export const dota2FullGamePlayerHeroRequest = z.lazy(() => {
   return z
     .object({
       id: z.number().nullish(),

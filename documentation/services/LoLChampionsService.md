@@ -32,14 +32,20 @@ List champions
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLChampions,
+  Page,
+  PandascoreClient,
+  RangeOverLoLChampions,
+  SearchOverLoLChampions,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLChampions = {
+  const filterOverLoLChampions: FilterOverLoLChampions = {
     armor: [5.35],
     armorperlevel: [2.85],
     attackdamage: [4.76],
@@ -65,7 +71,7 @@ import { PandascoreClient } from 'pandascore_client';
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLChampions = {
+  const rangeOverLoLChampions: RangeOverLoLChampions = {
     armor: [6.96],
     armorperlevel: [9.76],
     attackdamage: [7.04],
@@ -90,16 +96,16 @@ import { PandascoreClient } from 'pandascore_client';
     spellblockperlevel: [4.75],
   };
 
-  const search: SearchOverLoLChampions = {
+  const searchOverLoLChampions: SearchOverLoLChampions = {
     name: 'eu ex',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLChampions.getLolChampions({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLChampions,
+    range: rangeOverLoLChampions,
     sort: [[]],
-    search: search,
+    search: searchOverLoLChampions,
     page: page,
     perPage: 50,
   });

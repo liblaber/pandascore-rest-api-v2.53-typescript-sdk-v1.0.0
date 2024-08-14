@@ -18,7 +18,7 @@ import { owPlayerTotals, owPlayerTotalsRequest, owPlayerTotalsResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owPlayerStatsByMatch: any = z.lazy(() => {
+export const owPlayerStatsByMatch = z.lazy(() => {
   return z.object({
     averages: owPlayerAverages,
     gamesCount: z.number().gte(0).nullable(),
@@ -45,7 +45,7 @@ export type OwPlayerStatsByMatch = z.infer<typeof owPlayerStatsByMatch>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerStatsByMatchResponse: any = z.lazy(() => {
+export const owPlayerStatsByMatchResponse = z.lazy(() => {
   return z
     .object({
       averages: owPlayerAveragesResponse,
@@ -69,7 +69,7 @@ export const owPlayerStatsByMatchResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerStatsByMatchRequest: any = z.lazy(() => {
+export const owPlayerStatsByMatchRequest = z.lazy(() => {
   return z
     .object({
       averages: owPlayerAveragesRequest.nullish(),

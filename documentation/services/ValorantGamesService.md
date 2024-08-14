@@ -64,7 +64,7 @@ List events for a given Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -104,7 +104,7 @@ List rounds in a Valorant game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -148,16 +148,16 @@ List games for a given Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverValorantGames, GameStatus, MatchIdOrSlug, Page, PandascoreClient, RangeOverValorantGames, SearchOverValorantGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const filter: FilterOverValorantGames = {
+const filterOverValorantGames: FilterOverValorantGames = {
   beginAt: ["in nisi"],
   complete: true,
   detailedStats: true,
@@ -169,9 +169,9 @@ const filter: FilterOverValorantGames = {
   position: [2],
   status: [gameStatus]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus1 = GameStatus.FINISHED;
 
-const range: RangeOverValorantGames = {
+const rangeOverValorantGames: RangeOverValorantGames = {
   beginAt: ["au"],
   complete: [true],
   detailedStats: [true],
@@ -181,22 +181,22 @@ const range: RangeOverValorantGames = {
   id: [5],
   length: [10],
   position: [10],
-  status: [gameStatus]
+  status: [gameStatus1]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus12 = GameStatus.FINISHED;
 
-const search: SearchOverValorantGames = {
-  status: gameStatus
+const searchOverValorantGames: SearchOverValorantGames = {
+  status: gameStatus12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.valorantGames.getValorantMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverValorantGames,
+		range: rangeOverValorantGames,
     sort: [[]],
-		search: search,
+		search: searchOverValorantGames,
 		page: page,
     perPage: 50,
   }

@@ -7,7 +7,7 @@ import { match, matchRequest, matchResponse } from '../../common/match';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const live: any = z.lazy(() => {
+export const live = z.lazy(() => {
   return z.object({
     endpoints: z.array(liveEndpoint),
     match: match,
@@ -26,7 +26,7 @@ export type Live = z.infer<typeof live>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const liveResponse: any = z.lazy(() => {
+export const liveResponse = z.lazy(() => {
   return z
     .object({
       endpoints: z.array(liveEndpointResponse),
@@ -42,7 +42,7 @@ export const liveResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const liveRequest: any = z.lazy(() => {
+export const liveRequest = z.lazy(() => {
   return z
     .object({ endpoints: z.array(liveEndpointRequest).nullish(), match: matchRequest.nullish() })
     .transform((data) => ({

@@ -7,7 +7,7 @@ import { deletionIncident, deletionIncidentRequest, deletionIncidentResponse } f
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const incident: any = z.lazy(() => {
+export const incident = z.lazy(() => {
   return z.union([nonDeletionIncident, deletionIncident]);
 });
 
@@ -23,7 +23,7 @@ export type Incident = z.infer<typeof incident>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const incidentResponse: any = z.lazy(() => {
+export const incidentResponse = z.lazy(() => {
   return z.union([nonDeletionIncidentResponse, deletionIncidentResponse]);
 });
 
@@ -31,6 +31,6 @@ export const incidentResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const incidentRequest: any = z.lazy(() => {
+export const incidentRequest = z.lazy(() => {
   return z.union([nonDeletionIncidentRequest, deletionIncidentRequest]);
 });

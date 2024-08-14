@@ -7,7 +7,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from '../../common/base-t
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const bracketStanding: any = z.lazy(() => {
+export const bracketStanding = z.lazy(() => {
   return z.object({
     lastMatch: baseMatch,
     rank: z.number().gte(0),
@@ -28,7 +28,7 @@ export type BracketStanding = z.infer<typeof bracketStanding>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const bracketStandingResponse: any = z.lazy(() => {
+export const bracketStandingResponse = z.lazy(() => {
   return z
     .object({
       last_match: baseMatchResponse,
@@ -46,7 +46,7 @@ export const bracketStandingResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const bracketStandingRequest: any = z.lazy(() => {
+export const bracketStandingRequest = z.lazy(() => {
   return z
     .object({ lastMatch: baseMatchRequest.nullish(), rank: z.number().nullish(), team: baseTeamRequest.nullish() })
     .transform((data) => ({

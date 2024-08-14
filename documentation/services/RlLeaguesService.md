@@ -31,14 +31,20 @@ List RL leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverRlLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverRlLeagues,
+  SearchOverRlLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverRlLeagues = {
+  const filterOverRlLeagues: FilterOverRlLeagues = {
     id: [7],
     modifiedAt: ['ea'],
     name: ['animea'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['consectetu'],
   };
 
-  const range: RangeOverRlLeagues = {
+  const rangeOverRlLeagues: RangeOverRlLeagues = {
     id: [4],
     modifiedAt: ['sunt do labori'],
     name: ['ex es'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['aliquip cul'],
   };
 
-  const search: SearchOverRlLeagues = {
+  const searchOverRlLeagues: SearchOverRlLeagues = {
     name: 'ut consequat',
     slug: 'no017ax',
     url: 'do veniam',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.rlLeagues.getRlLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverRlLeagues,
+    range: rangeOverRlLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverRlLeagues,
     page: page,
     perPage: 50,
   });

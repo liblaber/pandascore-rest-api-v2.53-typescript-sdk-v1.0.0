@@ -31,14 +31,20 @@ List LoL Wild Rift leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLolWildRiftLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverLolWildRiftLeagues,
+  SearchOverLolWildRiftLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLolWildRiftLeagues = {
+  const filterOverLolWildRiftLeagues: FilterOverLolWildRiftLeagues = {
     id: [7],
     modifiedAt: ['laborum commo'],
     name: ['offici'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['ut tempor ipsu'],
   };
 
-  const range: RangeOverLolWildRiftLeagues = {
+  const rangeOverLolWildRiftLeagues: RangeOverLolWildRiftLeagues = {
     id: [1],
     modifiedAt: ['aliquip'],
     name: ['Excepte'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['ea Duis'],
   };
 
-  const search: SearchOverLolWildRiftLeagues = {
+  const searchOverLolWildRiftLeagues: SearchOverLolWildRiftLeagues = {
     name: 'sit officia ',
     slug: 'vmrxzc',
     url: 'cillum E',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.loLWildRiftLeagues.getLolWildRiftLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverLolWildRiftLeagues,
+    range: rangeOverLolWildRiftLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverLolWildRiftLeagues,
     page: page,
     perPage: 50,
   });

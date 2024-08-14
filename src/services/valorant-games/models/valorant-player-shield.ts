@@ -2,6 +2,8 @@
 
 import { z } from 'zod';
 
-export const valorantPlayerShield = z.enum(['heavy_shield', 'light_shield', 'no_shield']);
-
-export type ValorantPlayerShield = z.infer<typeof valorantPlayerShield>;
+export enum ValorantPlayerShield {
+  HEAVYSHIELD = 'heavy_shield',
+  LIGHTSHIELD = 'light_shield',
+  NOSHIELD = 'no_shield',
+}

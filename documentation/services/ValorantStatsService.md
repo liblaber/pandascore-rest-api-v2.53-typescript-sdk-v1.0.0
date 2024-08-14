@@ -33,7 +33,7 @@ Get the aggregated statistics for all players in a Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -69,7 +69,7 @@ Get the aggregated team statistics for a Valorant match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -110,7 +110,7 @@ Get a Valorant player stats by ID or slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -122,7 +122,7 @@ const videogameVersionOrAll = "5.4970743709";
   const { data } = await pandascoreClient.valorantStats.getValorantPlayersPlayerIdOrSlugStats(
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -154,7 +154,7 @@ Get the aggregated player statistics for a Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -168,7 +168,7 @@ const videogameVersionOrAll = "5.4970743709";
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -198,7 +198,7 @@ Get the aggregated team statistics for a Valorant series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -212,7 +212,7 @@ const videogameVersionOrAll = "5.4970743709";
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -243,7 +243,7 @@ Get a Valorant team stats by ID or slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -255,7 +255,7 @@ const videogameVersionOrAll = "5.4970743709";
   const { data } = await pandascoreClient.valorantStats.getValorantTeamsTeamIdOrSlugStats(
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -287,7 +287,7 @@ Get the aggregated player statistics for a Valorant tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -301,7 +301,7 @@ const videogameVersionOrAll = "5.4970743709";
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 
@@ -331,7 +331,7 @@ Get the aggregated team statistics for a Valorant tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug, VideogameVersionOrAll } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -345,7 +345,7 @@ const videogameVersionOrAll = "5.4970743709";
   ,
   ,
   {
-		videogameVersion: videogameVersion,
+		videogameVersion: videogameVersionOrAll,
   }
 );
 

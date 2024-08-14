@@ -32,7 +32,7 @@ Get detailed statistics of Dota2 players for the given match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { MatchIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -71,20 +71,20 @@ Get detailed statistics of a given Dota2 player
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const playerIdOrSlug = 9;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2PlayersPlayerIdOrSlugStats(
   ,
   {
     gamesCount: 4,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -117,7 +117,7 @@ Get detailed statistics of a given Dota2 player for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, SerieIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -125,14 +125,14 @@ import { PandascoreClient } from 'pandascore_client';
 
   const serieIdOrSlug = 10;
 const playerIdOrSlug = 9;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
     gamesCount: 6,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -163,7 +163,7 @@ Get detailed statistics of a given Dota2 team for the given serie
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, SerieIdOrSlug, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -171,14 +171,14 @@ import { PandascoreClient } from 'pandascore_client';
 
   const serieIdOrSlug = 10;
 const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2SeriesSerieIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
     gamesCount: 9,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -210,20 +210,20 @@ Get detailed statistics of a given Dota2 team
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TeamsTeamIdOrSlugStats(
   ,
   {
     gamesCount: 4,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
     from: "2017-07-21",
     to: "2017-07-21",
   }
@@ -256,7 +256,7 @@ Get detailed statistics of a given Dota2 player for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, PlayerIdOrSlug, TournamentIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -264,14 +264,14 @@ import { PandascoreClient } from 'pandascore_client';
 
   const tournamentIdOrSlug = 2;
 const playerIdOrSlug = 9;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStats(
   ,
   ,
   {
     gamesCount: 7,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 
@@ -302,7 +302,7 @@ Get detailed statistics of a given Dota2 team for the given tournament
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, TeamIdOrSlug, TournamentIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -310,14 +310,14 @@ import { PandascoreClient } from 'pandascore_client';
 
   const tournamentIdOrSlug = 2;
 const teamIdOrSlug = 10;
-const side = GetDota2PlayersPlayerIdOrSlugStatsSide.radiant;
+const getDota2PlayersPlayerIdOrSlugStatsSide = GetDota2PlayersPlayerIdOrSlugStatsSide.RADIANT;
 
   const { data } = await pandascoreClient.dota2Stats.getDota2TournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStats(
   ,
   ,
   {
     gamesCount: 3,
-		side: side,
+		side: getDota2PlayersPlayerIdOrSlugStatsSide,
   }
 );
 

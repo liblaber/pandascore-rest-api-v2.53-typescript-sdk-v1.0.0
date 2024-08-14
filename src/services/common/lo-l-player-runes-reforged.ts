@@ -12,7 +12,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLPlayerRunesReforged: any = z.lazy(() => {
+export const loLPlayerRunesReforged = z.lazy(() => {
   return z.object({
     primaryPath: primaryPath.nullable(),
     secondaryPath: secondaryPath.nullable(),
@@ -33,7 +33,7 @@ export type LoLPlayerRunesReforged = z.infer<typeof loLPlayerRunesReforged>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerRunesReforgedResponse: any = z.lazy(() => {
+export const loLPlayerRunesReforgedResponse = z.lazy(() => {
   return z
     .object({
       primary_path: primaryPathResponse.nullable(),
@@ -51,7 +51,7 @@ export const loLPlayerRunesReforgedResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLPlayerRunesReforgedRequest: any = z.lazy(() => {
+export const loLPlayerRunesReforgedRequest = z.lazy(() => {
   return z
     .object({
       primaryPath: primaryPathRequest.nullish(),

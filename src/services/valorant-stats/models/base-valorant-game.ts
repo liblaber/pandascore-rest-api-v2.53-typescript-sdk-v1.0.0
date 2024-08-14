@@ -7,14 +7,13 @@ import {
   valorantGameRoundRequest,
   valorantGameRoundResponse,
 } from '../../common/valorant-game-round';
-import { gameStatus } from '../../common/game-status';
 import { valorantGameTeam, valorantGameTeamRequest, valorantGameTeamResponse } from '../../common/valorant-game-team';
 import { gameWinner, gameWinnerRequest, gameWinnerResponse } from '../../common/game-winner';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const baseValorantGame: any = z.lazy(() => {
+export const baseValorantGame = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     complete: z.boolean(),
@@ -28,7 +27,7 @@ export const baseValorantGame: any = z.lazy(() => {
     matchId: z.number().gte(1),
     position: z.number().gte(1),
     rounds: z.array(valorantGameRound).nullable(),
-    status: gameStatus,
+    status: z.string(),
     teams: z.array(valorantGameTeam).nullable(),
     winner: gameWinner,
   });
@@ -59,7 +58,7 @@ export type BaseValorantGame = z.infer<typeof baseValorantGame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseValorantGameResponse: any = z.lazy(() => {
+export const baseValorantGameResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -74,7 +73,7 @@ export const baseValorantGameResponse: any = z.lazy(() => {
       match_id: z.number().gte(1),
       position: z.number().gte(1),
       rounds: z.array(valorantGameRoundResponse).nullable(),
-      status: gameStatus,
+      status: z.string(),
       teams: z.array(valorantGameTeamResponse).nullable(),
       winner: gameWinnerResponse,
     })
@@ -101,7 +100,7 @@ export const baseValorantGameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const baseValorantGameRequest: any = z.lazy(() => {
+export const baseValorantGameRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -116,7 +115,7 @@ export const baseValorantGameRequest: any = z.lazy(() => {
       matchId: z.number().nullish(),
       position: z.number().nullish(),
       rounds: z.array(valorantGameRoundRequest).nullish(),
-      status: gameStatus.nullish(),
+      status: z.string().nullish(),
       teams: z.array(valorantGameTeamRequest).nullish(),
       winner: gameWinnerRequest.nullish(),
     })

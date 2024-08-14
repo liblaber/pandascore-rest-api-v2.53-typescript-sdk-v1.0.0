@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { ValorantMap, valorantMapResponse } from './models/valorant-map';
 import {
   GetValorantMapsParams,
@@ -27,23 +27,47 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/maps',
-      config: this.config,
-      responseSchema: z.array(valorantMapResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantMap[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/maps')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(valorantMapResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ValorantMap[]>(request);
   }
 
   /**
@@ -55,18 +79,24 @@ export class ValorantMapsService extends BaseService {
     valorantMapId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/maps/{valorant_map_id}',
-      config: this.config,
-      responseSchema: valorantMapResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('valorant_map_id', valorantMapId);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantMap>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/maps/{valorant_map_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantMapResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'valorant_map_id',
+        value: valorantMapId,
+      })
+      .build();
+    return this.client.call<ValorantMap>(request);
   }
 
   /**
@@ -83,23 +113,47 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantVersionsAllMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/versions/all/maps',
-      config: this.config,
-      responseSchema: z.array(valorantMapResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantMap[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/versions/all/maps')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(valorantMapResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ValorantMap[]>(request);
   }
 
   /**
@@ -118,23 +172,50 @@ export class ValorantMapsService extends BaseService {
     params?: GetValorantVersionsValorantVersionNameMapsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantMap[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/versions/{valorant_version_name}/maps',
-      config: this.config,
-      responseSchema: z.array(valorantMapResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('valorant_version_name', valorantVersionName);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantMap[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/versions/{valorant_version_name}/maps')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(valorantMapResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'valorant_version_name',
+        value: valorantVersionName,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<ValorantMap[]>(request);
   }
 }

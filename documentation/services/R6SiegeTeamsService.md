@@ -31,51 +31,57 @@ List teams for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeTeams,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeTeams,
+  SearchOverR6SiegeTeams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverR6SiegeTeams = {
-  acronym: ["pariatur co"],
-  id: [8],
-  location: ["aute ex"],
-  modifiedAt: ["pariatur elit m"],
-  name: ["adin sed"],
-  slug: ["1va2v7dm-j"],
-  videogameId: [videogameId]
-};
+  const filterOverR6SiegeTeams: FilterOverR6SiegeTeams = {
+    acronym: ['pariatur co'],
+    id: [8],
+    location: ['aute ex'],
+    modifiedAt: ['pariatur elit m'],
+    name: ['adin sed'],
+    slug: ['1va2v7dm-j'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverR6SiegeTeams = {
-  acronym: ["aliquip"],
-  id: [2],
-  location: ["commodo"],
-  modifiedAt: ["sed L"],
-  name: ["proid"],
-  slug: ["by-i4"]
-};
+  const rangeOverR6SiegeTeams: RangeOverR6SiegeTeams = {
+    acronym: ['aliquip'],
+    id: [2],
+    location: ['commodo'],
+    modifiedAt: ['sed L'],
+    name: ['proid'],
+    slug: ['by-i4'],
+  };
 
-const search: SearchOverR6SiegeTeams = {
-  acronym: "exercitati",
-  location: "occaecat l",
-  name: "ex incididunt",
-  slug: "yck1qqq"
-};
-const page = 1;
+  const searchOverR6SiegeTeams: SearchOverR6SiegeTeams = {
+    acronym: 'exercitati',
+    location: 'occaecat l',
+    name: 'ex incididunt',
+    slug: 'yck1qqq',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.r6SiegeTeams.getR6siegeTeams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.r6SiegeTeams.getR6siegeTeams({
+    filter: filterOverR6SiegeTeams,
+    range: rangeOverR6SiegeTeams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverR6SiegeTeams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

@@ -31,51 +31,57 @@ List teams for the StarCraft 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Teams,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Teams,
+  SearchOverStarcraft2Teams,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverStarcraft2Teams = {
-  acronym: ["sint n"],
-  id: [2],
-  location: ["esse "],
-  modifiedAt: ["ut amet"],
-  name: ["consequ"],
-  slug: ["5nm4baxub3g"],
-  videogameId: [videogameId]
-};
+  const filterOverStarcraft2Teams: FilterOverStarcraft2Teams = {
+    acronym: ['sint n'],
+    id: [2],
+    location: ['esse '],
+    modifiedAt: ['ut amet'],
+    name: ['consequ'],
+    slug: ['5nm4baxub3g'],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverStarcraft2Teams = {
-  acronym: ["et aute eius"],
-  id: [9],
-  location: ["in occ"],
-  modifiedAt: ["anim mo"],
-  name: ["cupidatat"],
-  slug: ["eclsej7"]
-};
+  const rangeOverStarcraft2Teams: RangeOverStarcraft2Teams = {
+    acronym: ['et aute eius'],
+    id: [9],
+    location: ['in occ'],
+    modifiedAt: ['anim mo'],
+    name: ['cupidatat'],
+    slug: ['eclsej7'],
+  };
 
-const search: SearchOverStarcraft2Teams = {
-  acronym: "nisi consecte",
-  location: "dolor cup",
-  name: "Ut aliquip ",
-  slug: "9ejb6qcy-q"
-};
-const page = 1;
+  const searchOverStarcraft2Teams: SearchOverStarcraft2Teams = {
+    acronym: 'nisi consecte',
+    location: 'dolor cup',
+    name: 'Ut aliquip ',
+    slug: '9ejb6qcy-q',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraft2Teams.getStarcraft2Teams(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraft2Teams.getStarcraft2Teams({
+    filter: filterOverStarcraft2Teams,
+    range: rangeOverStarcraft2Teams,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverStarcraft2Teams,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

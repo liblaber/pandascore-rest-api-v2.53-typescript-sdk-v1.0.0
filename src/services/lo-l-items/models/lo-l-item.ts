@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLItem: any = z.lazy(() => {
+export const loLItem = z.lazy(() => {
   return z.object({
     flatArmorMod: z.number().gte(0).nullable(),
     flatCritChanceMod: z.number().gte(0).nullable(),
@@ -64,7 +64,7 @@ export type LoLItem = z.infer<typeof loLItem>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLItemResponse: any = z.lazy(() => {
+export const loLItemResponse = z.lazy(() => {
   return z
     .object({
       flat_armor_mod: z.number().gte(0).nullable(),
@@ -120,7 +120,7 @@ export const loLItemResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLItemRequest: any = z.lazy(() => {
+export const loLItemRequest = z.lazy(() => {
   return z
     .object({
       flatArmorMod: z.number().nullish(),

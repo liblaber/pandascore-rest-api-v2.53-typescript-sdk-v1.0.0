@@ -6,7 +6,7 @@ import { loLFrameTeam, loLFrameTeamRequest, loLFrameTeamResponse } from './lo-l-
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLGameFrame: any = z.lazy(() => {
+export const loLGameFrame = z.lazy(() => {
   return z.object({
     blue: loLFrameTeam,
     currentTimestamp: z.number().gte(0),
@@ -33,7 +33,7 @@ export type LoLGameFrame = z.infer<typeof loLGameFrame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGameFrameResponse: any = z.lazy(() => {
+export const loLGameFrameResponse = z.lazy(() => {
   return z
     .object({
       blue: loLFrameTeamResponse,
@@ -57,7 +57,7 @@ export const loLGameFrameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGameFrameRequest: any = z.lazy(() => {
+export const loLGameFrameRequest = z.lazy(() => {
   return z
     .object({
       blue: loLFrameTeamRequest.nullish(),

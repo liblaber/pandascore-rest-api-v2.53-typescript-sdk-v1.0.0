@@ -18,7 +18,7 @@ import { serie, serieRequest, serieResponse } from '../../common/serie';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoTeamStatsBySerie: any = z.lazy(() => {
+export const csgoTeamStatsBySerie = z.lazy(() => {
   return z.object({
     counts: csgoStatsCounts,
     maps: z.array(csgoTeamMapStats),
@@ -43,7 +43,7 @@ export type CsgoTeamStatsBySerie = z.infer<typeof csgoTeamStatsBySerie>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoTeamStatsBySerieResponse: any = z.lazy(() => {
+export const csgoTeamStatsBySerieResponse = z.lazy(() => {
   return z
     .object({
       counts: csgoStatsCountsResponse,
@@ -65,7 +65,7 @@ export const csgoTeamStatsBySerieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoTeamStatsBySerieRequest: any = z.lazy(() => {
+export const csgoTeamStatsBySerieRequest = z.lazy(() => {
   return z
     .object({
       counts: csgoStatsCountsRequest.nullish(),

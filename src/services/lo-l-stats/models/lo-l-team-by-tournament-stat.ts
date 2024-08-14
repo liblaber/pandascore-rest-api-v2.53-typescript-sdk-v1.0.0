@@ -8,7 +8,7 @@ import { tournament, tournamentRequest, tournamentResponse } from '../../common/
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLTeamByTournamentStat: any = z.lazy(() => {
+export const loLTeamByTournamentStat = z.lazy(() => {
   return z.object({
     averages: loLTeamAverages,
     gamesCount: z.number().gte(0).nullable(),
@@ -31,7 +31,7 @@ export type LoLTeamByTournamentStat = z.infer<typeof loLTeamByTournamentStat>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLTeamByTournamentStatResponse: any = z.lazy(() => {
+export const loLTeamByTournamentStatResponse = z.lazy(() => {
   return z
     .object({
       averages: loLTeamAveragesResponse,
@@ -51,7 +51,7 @@ export const loLTeamByTournamentStatResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLTeamByTournamentStatRequest: any = z.lazy(() => {
+export const loLTeamByTournamentStatRequest = z.lazy(() => {
   return z
     .object({
       averages: loLTeamAveragesRequest.nullish(),

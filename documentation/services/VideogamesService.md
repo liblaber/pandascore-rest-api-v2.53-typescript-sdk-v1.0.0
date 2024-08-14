@@ -33,7 +33,7 @@ List videogames
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -71,17 +71,16 @@ Get a single videogame by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { PandascoreClient, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-  const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlug(
-
-);
+  const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlug();
 
   console.log(data);
 })();
@@ -113,15 +112,15 @@ List leagues for a given videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverLeagues, Page, PandascoreClient, RangeOverLeagues, SearchOverLeagues, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;;
 
-const filter: FilterOverLeagues = {
+const filterOverLeagues: FilterOverLeagues = {
   id: [7],
   modifiedAt: ["offici"],
   name: ["ad ut"],
@@ -129,7 +128,7 @@ const filter: FilterOverLeagues = {
   url: ["esse aliqu"]
 };
 
-const range: RangeOverLeagues = {
+const rangeOverLeagues: RangeOverLeagues = {
   id: [10],
   modifiedAt: ["ut nulla"],
   name: ["ea mol"],
@@ -137,7 +136,7 @@ const range: RangeOverLeagues = {
   url: ["ea aliquip"]
 };
 
-const search: SearchOverLeagues = {
+const searchOverLeagues: SearchOverLeagues = {
   name: "Duis dolo",
   slug: "-teig",
   url: "adipisicing"
@@ -147,10 +146,10 @@ const page = 1;
   const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlugLeagues(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverLeagues,
+		range: rangeOverLeagues,
     sort: [[]],
-		search: search,
+		search: searchOverLeagues,
 		page: page,
     perPage: 50,
   }
@@ -186,20 +185,20 @@ List series for the given videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverSeries, OpponentType, Page, PandascoreClient, RangeOverSeries, SearchOverSeries, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;;
 const filterOverSeriesVideogameTitle = 7;
 
 const opponentId = 7;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverSeries = {
+const filterOverSeries: FilterOverSeries = {
   beginAt: ["sunt cillum dol"],
   endAt: ["dolor"],
   id: [5],
@@ -213,11 +212,11 @@ const filter: FilterOverSeries = {
   winnerType: [opponentType],
   year: [123]
 };
-const opponentId = 7;
+const opponentId1 = 7;
 
-const opponentType = OpponentType.Player;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverSeries = {
+const rangeOverSeries: RangeOverSeries = {
   beginAt: ["sint c"],
   endAt: ["ex dolore tempo"],
   id: [6],
@@ -226,27 +225,27 @@ const range: RangeOverSeries = {
   name: ["animea labore e"],
   season: ["ipsum i"],
   slug: ["8"],
-  winnerId: [opponentId],
-  winnerType: [opponentType],
+  winnerId: [opponentId1],
+  winnerType: [opponentType1],
   year: [123]
 };
-const opponentType = OpponentType.Player;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverSeries = {
+const searchOverSeries: SearchOverSeries = {
   name: "fugia",
   season: "aute al",
   slug: "cc3u_",
-  winnerType: opponentType
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlugSeries(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverSeries,
+		range: rangeOverSeries,
     sort: [[]],
-		search: search,
+		search: searchOverSeries,
 		page: page,
     perPage: 50,
   }
@@ -278,13 +277,13 @@ List available titles for a given videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;;
 const page = 1;
 
   const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlugTitles(
@@ -325,22 +324,22 @@ List tournaments of the given videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverShortTournaments, OpponentType, Page, PandascoreClient, RangeOverShortTournaments, SearchOverShortTournaments, SearchOverValorantShortTournamentsTier2, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const videogameIdOrSlug = VideogameId.1;;
-const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const videogameId = VideogameId._1;;
+const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
 const filterOverShortTournamentsVideogameTitle = 5;
 
 const opponentId = 7;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverShortTournaments = {
+const filterOverShortTournaments: FilterOverShortTournaments = {
   beginAt: ["pariat"],
   detailedStats: true,
   endAt: ["eli"],
@@ -357,13 +356,13 @@ const filter: FilterOverShortTournaments = {
   winnerId: [opponentId],
   winnerType: [opponentType]
 };
-const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-const opponentId = 7;
+const opponentId1 = 7;
 
-const opponentType = OpponentType.Player;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverShortTournaments = {
+const rangeOverShortTournaments: RangeOverShortTournaments = {
   beginAt: ["et"],
   detailedStats: [true],
   endAt: ["commo"],
@@ -374,30 +373,30 @@ const range: RangeOverShortTournaments = {
   prizepool: ["qui ull"],
   serieId: [3],
   slug: ["vyokv"],
-  tier: [searchOverValorantShortTournamentsTier2],
-  winnerId: [opponentId],
-  winnerType: [opponentType]
+  tier: [searchOverValorantShortTournamentsTier21],
+  winnerId: [opponentId1],
+  winnerType: [opponentType1]
 };
-const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-const opponentType = OpponentType.Player;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverShortTournaments = {
+const searchOverShortTournaments: SearchOverShortTournaments = {
   name: "sunt minim",
   prizepool: "utid magna es",
   slug: "50l9n",
-  tier: searchOverValorantShortTournamentsTier2,
-  winnerType: opponentType
+  tier: searchOverValorantShortTournamentsTier212,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlugTournaments(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverShortTournaments,
+		range: rangeOverShortTournaments,
     sort: [[]],
-		search: search,
+		search: searchOverShortTournaments,
 		page: page,
     perPage: 50,
   }
@@ -429,13 +428,13 @@ List available versions for a given videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient, VideogameId, VideogameIdOrSlug, VideogameSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
-  const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;;
 const page = 1;
 
   const { data } = await pandascoreClient.videogames.getVideogamesVideogameIdOrSlugVersions(

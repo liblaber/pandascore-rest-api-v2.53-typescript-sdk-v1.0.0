@@ -38,7 +38,7 @@ import { videogameECricket, videogameECricketRequest, videogameECricketResponse 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const videogame: any = z.lazy(() => {
+export const videogame = z.lazy(() => {
   return z.union([
     videogameLoL,
     videogameCsgo,
@@ -87,7 +87,7 @@ export type Videogame = z.infer<typeof videogame>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const videogameResponse: any = z.lazy(() => {
+export const videogameResponse = z.lazy(() => {
   return z.union([
     videogameLoLResponse,
     videogameCsgoResponse,
@@ -113,7 +113,7 @@ export const videogameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const videogameRequest: any = z.lazy(() => {
+export const videogameRequest = z.lazy(() => {
   return z.union([
     videogameLoLRequest,
     videogameCsgoRequest,

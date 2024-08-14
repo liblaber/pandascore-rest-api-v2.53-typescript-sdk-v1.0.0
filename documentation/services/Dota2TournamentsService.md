@@ -34,22 +34,30 @@ List tournaments for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2ShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2ShortTournaments,
+  SearchOverDota2ShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2ShortTournaments = {
+  const filterOverDota2ShortTournaments: FilterOverDota2ShortTournaments = {
     beginAt: ['elit laboris'],
     detailedStats: true,
     endAt: ['anim sunt'],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2ShortTournaments = {
+  const rangeOverDota2ShortTournaments: RangeOverDota2ShortTournaments = {
     beginAt: ['dolor en'],
     detailedStats: [true],
     endAt: ['quis amet an'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['mollit et'],
     serieId: [8],
     slug: ['i6'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2ShortTournaments = {
+  const searchOverDota2ShortTournaments: SearchOverDota2ShortTournaments = {
     name: 'minim tempor de',
     prizepool: 'Duis laborum ',
     slug: '8xfo7sds7',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Tournaments.getDota2Tournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2ShortTournaments,
+    range: rangeOverDota2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverDota2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past Dota 2 tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2ShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2ShortTournaments,
+  SearchOverDota2ShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2ShortTournaments = {
+  const filterOverDota2ShortTournaments: FilterOverDota2ShortTournaments = {
     beginAt: ['elit laboris'],
     detailedStats: true,
     endAt: ['anim sunt'],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2ShortTournaments = {
+  const rangeOverDota2ShortTournaments: RangeOverDota2ShortTournaments = {
     beginAt: ['dolor en'],
     detailedStats: [true],
     endAt: ['quis amet an'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['mollit et'],
     serieId: [8],
     slug: ['i6'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2ShortTournaments = {
+  const searchOverDota2ShortTournaments: SearchOverDota2ShortTournaments = {
     name: 'minim tempor de',
     prizepool: 'Duis laborum ',
     slug: '8xfo7sds7',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Tournaments.getDota2TournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2ShortTournaments,
+    range: rangeOverDota2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverDota2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running Dota 2 tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2ShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2ShortTournaments,
+  SearchOverDota2ShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2ShortTournaments = {
+  const filterOverDota2ShortTournaments: FilterOverDota2ShortTournaments = {
     beginAt: ['elit laboris'],
     detailedStats: true,
     endAt: ['anim sunt'],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2ShortTournaments = {
+  const rangeOverDota2ShortTournaments: RangeOverDota2ShortTournaments = {
     beginAt: ['dolor en'],
     detailedStats: [true],
     endAt: ['quis amet an'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['mollit et'],
     serieId: [8],
     slug: ['i6'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2ShortTournaments = {
+  const searchOverDota2ShortTournaments: SearchOverDota2ShortTournaments = {
     name: 'minim tempor de',
     prizepool: 'Duis laborum ',
     slug: '8xfo7sds7',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Tournaments.getDota2TournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2ShortTournaments,
+    range: rangeOverDota2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverDota2ShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming Dota 2 tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2ShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2ShortTournaments,
+  SearchOverDota2ShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverDota2ShortTournamentsVideogameTitle = 3;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2ShortTournaments = {
+  const filterOverDota2ShortTournaments: FilterOverDota2ShortTournaments = {
     beginAt: ['elit laboris'],
     detailedStats: true,
     endAt: ['anim sunt'],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2ShortTournaments = {
+  const rangeOverDota2ShortTournaments: RangeOverDota2ShortTournaments = {
     beginAt: ['dolor en'],
     detailedStats: [true],
     endAt: ['quis amet an'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['mollit et'],
     serieId: [8],
     slug: ['i6'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2ShortTournaments = {
+  const searchOverDota2ShortTournaments: SearchOverDota2ShortTournaments = {
     name: 'minim tempor de',
     prizepool: 'Duis laborum ',
     slug: '8xfo7sds7',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Tournaments.getDota2TournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2ShortTournaments,
+    range: rangeOverDota2ShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverDota2ShortTournaments,
     page: page,
     perPage: 50,
   });

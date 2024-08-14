@@ -34,110 +34,118 @@ List matches for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Matches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Matches,
+  SearchOverDota2Matches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverDota2MatchesVideogameTitle = 10;
+  const filterOverDota2MatchesVideogameTitle = 10;
 
-const filterOverDota2MatchesVideogameVersion = "44537.153947.67145";
+  const filterOverDota2MatchesVideogameVersion = '44537.153947.67145';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverDota2Matches = {
-  beginAt: ["voluptate"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["laborum exerci"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [8],
-  matchType: [matchType],
-  modifiedAt: ["q"],
-  name: ["in occaecat"],
-  notStarted: true,
-  numberOfGames: [8],
-  opponentId: [filterOverDota2MatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Lorem"],
-  serieId: [2],
-  slug: ["l1K2WGjRGmW"],
-  status: [matchStatus],
-  tournamentId: [4],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverDota2MatchesVideogameTitle],
-  videogameVersion: [filterOverDota2MatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverDota2Matches: FilterOverDota2Matches = {
+    beginAt: ['voluptate'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['laborum exerci'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [8],
+    matchType: [matchType],
+    modifiedAt: ['q'],
+    name: ['in occaecat'],
+    notStarted: true,
+    numberOfGames: [8],
+    opponentId: [filterOverDota2MatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Lorem'],
+    serieId: [2],
+    slug: ['l1K2WGjRGmW'],
+    status: [matchStatus],
+    tournamentId: [4],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverDota2MatchesVideogameTitle],
+    videogameVersion: [filterOverDota2MatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverDota2Matches = {
-  beginAt: ["enim cupid"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et "],
-  forfeit: [true],
-  id: [4],
-  matchType: [matchType],
-  modifiedAt: ["mollit labori"],
-  name: ["non enim"],
-  numberOfGames: [1],
-  scheduledAt: ["anim tempor"],
-  slug: ["StboFnI"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverDota2Matches: RangeOverDota2Matches = {
+    beginAt: ['enim cupid'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['et '],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType1],
+    modifiedAt: ['mollit labori'],
+    name: ['non enim'],
+    numberOfGames: [1],
+    scheduledAt: ['anim tempor'],
+    slug: ['StboFnI'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverDota2Matches = {
-  matchType: matchType,
-  name: "officia",
-  slug: "R ",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverDota2Matches: SearchOverDota2Matches = {
+    matchType: matchType12,
+    name: 'officia',
+    slug: 'R ',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.dota2Matches.getDota2Matches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.dota2Matches.getDota2Matches({
+    filter: filterOverDota2Matches,
+    range: rangeOverDota2Matches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverDota2Matches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +176,118 @@ List past Dota 2 matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Matches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Matches,
+  SearchOverDota2Matches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverDota2MatchesVideogameTitle = 10;
+  const filterOverDota2MatchesVideogameTitle = 10;
 
-const filterOverDota2MatchesVideogameVersion = "44537.153947.67145";
+  const filterOverDota2MatchesVideogameVersion = '44537.153947.67145';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverDota2Matches = {
-  beginAt: ["voluptate"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["laborum exerci"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [8],
-  matchType: [matchType],
-  modifiedAt: ["q"],
-  name: ["in occaecat"],
-  notStarted: true,
-  numberOfGames: [8],
-  opponentId: [filterOverDota2MatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Lorem"],
-  serieId: [2],
-  slug: ["l1K2WGjRGmW"],
-  status: [matchStatus],
-  tournamentId: [4],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverDota2MatchesVideogameTitle],
-  videogameVersion: [filterOverDota2MatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverDota2Matches: FilterOverDota2Matches = {
+    beginAt: ['voluptate'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['laborum exerci'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [8],
+    matchType: [matchType],
+    modifiedAt: ['q'],
+    name: ['in occaecat'],
+    notStarted: true,
+    numberOfGames: [8],
+    opponentId: [filterOverDota2MatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Lorem'],
+    serieId: [2],
+    slug: ['l1K2WGjRGmW'],
+    status: [matchStatus],
+    tournamentId: [4],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverDota2MatchesVideogameTitle],
+    videogameVersion: [filterOverDota2MatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverDota2Matches = {
-  beginAt: ["enim cupid"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et "],
-  forfeit: [true],
-  id: [4],
-  matchType: [matchType],
-  modifiedAt: ["mollit labori"],
-  name: ["non enim"],
-  numberOfGames: [1],
-  scheduledAt: ["anim tempor"],
-  slug: ["StboFnI"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverDota2Matches: RangeOverDota2Matches = {
+    beginAt: ['enim cupid'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['et '],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType1],
+    modifiedAt: ['mollit labori'],
+    name: ['non enim'],
+    numberOfGames: [1],
+    scheduledAt: ['anim tempor'],
+    slug: ['StboFnI'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverDota2Matches = {
-  matchType: matchType,
-  name: "officia",
-  slug: "R ",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverDota2Matches: SearchOverDota2Matches = {
+    matchType: matchType12,
+    name: 'officia',
+    slug: 'R ',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesPast({
+    filter: filterOverDota2Matches,
+    range: rangeOverDota2Matches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverDota2Matches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +318,118 @@ List running Dota 2 matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Matches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Matches,
+  SearchOverDota2Matches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverDota2MatchesVideogameTitle = 10;
+  const filterOverDota2MatchesVideogameTitle = 10;
 
-const filterOverDota2MatchesVideogameVersion = "44537.153947.67145";
+  const filterOverDota2MatchesVideogameVersion = '44537.153947.67145';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverDota2Matches = {
-  beginAt: ["voluptate"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["laborum exerci"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [8],
-  matchType: [matchType],
-  modifiedAt: ["q"],
-  name: ["in occaecat"],
-  notStarted: true,
-  numberOfGames: [8],
-  opponentId: [filterOverDota2MatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Lorem"],
-  serieId: [2],
-  slug: ["l1K2WGjRGmW"],
-  status: [matchStatus],
-  tournamentId: [4],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverDota2MatchesVideogameTitle],
-  videogameVersion: [filterOverDota2MatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverDota2Matches: FilterOverDota2Matches = {
+    beginAt: ['voluptate'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['laborum exerci'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [8],
+    matchType: [matchType],
+    modifiedAt: ['q'],
+    name: ['in occaecat'],
+    notStarted: true,
+    numberOfGames: [8],
+    opponentId: [filterOverDota2MatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Lorem'],
+    serieId: [2],
+    slug: ['l1K2WGjRGmW'],
+    status: [matchStatus],
+    tournamentId: [4],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverDota2MatchesVideogameTitle],
+    videogameVersion: [filterOverDota2MatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverDota2Matches = {
-  beginAt: ["enim cupid"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et "],
-  forfeit: [true],
-  id: [4],
-  matchType: [matchType],
-  modifiedAt: ["mollit labori"],
-  name: ["non enim"],
-  numberOfGames: [1],
-  scheduledAt: ["anim tempor"],
-  slug: ["StboFnI"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverDota2Matches: RangeOverDota2Matches = {
+    beginAt: ['enim cupid'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['et '],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType1],
+    modifiedAt: ['mollit labori'],
+    name: ['non enim'],
+    numberOfGames: [1],
+    scheduledAt: ['anim tempor'],
+    slug: ['StboFnI'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverDota2Matches = {
-  matchType: matchType,
-  name: "officia",
-  slug: "R ",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverDota2Matches: SearchOverDota2Matches = {
+    matchType: matchType12,
+    name: 'officia',
+    slug: 'R ',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesRunning({
+    filter: filterOverDota2Matches,
+    range: rangeOverDota2Matches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverDota2Matches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +460,118 @@ List upcoming Dota 2 matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Matches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Matches,
+  SearchOverDota2Matches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverDota2MatchesVideogameTitle = 10;
+  const filterOverDota2MatchesVideogameTitle = 10;
 
-const filterOverDota2MatchesVideogameVersion = "44537.153947.67145";
+  const filterOverDota2MatchesVideogameVersion = '44537.153947.67145';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverDota2Matches = {
-  beginAt: ["voluptate"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["laborum exerci"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [8],
-  matchType: [matchType],
-  modifiedAt: ["q"],
-  name: ["in occaecat"],
-  notStarted: true,
-  numberOfGames: [8],
-  opponentId: [filterOverDota2MatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Lorem"],
-  serieId: [2],
-  slug: ["l1K2WGjRGmW"],
-  status: [matchStatus],
-  tournamentId: [4],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverDota2MatchesVideogameTitle],
-  videogameVersion: [filterOverDota2MatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverDota2Matches: FilterOverDota2Matches = {
+    beginAt: ['voluptate'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['laborum exerci'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [8],
+    matchType: [matchType],
+    modifiedAt: ['q'],
+    name: ['in occaecat'],
+    notStarted: true,
+    numberOfGames: [8],
+    opponentId: [filterOverDota2MatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Lorem'],
+    serieId: [2],
+    slug: ['l1K2WGjRGmW'],
+    status: [matchStatus],
+    tournamentId: [4],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverDota2MatchesVideogameTitle],
+    videogameVersion: [filterOverDota2MatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverDota2Matches = {
-  beginAt: ["enim cupid"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["et "],
-  forfeit: [true],
-  id: [4],
-  matchType: [matchType],
-  modifiedAt: ["mollit labori"],
-  name: ["non enim"],
-  numberOfGames: [1],
-  scheduledAt: ["anim tempor"],
-  slug: ["StboFnI"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverDota2Matches: RangeOverDota2Matches = {
+    beginAt: ['enim cupid'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['et '],
+    forfeit: [true],
+    id: [4],
+    matchType: [matchType1],
+    modifiedAt: ['mollit labori'],
+    name: ['non enim'],
+    numberOfGames: [1],
+    scheduledAt: ['anim tempor'],
+    slug: ['StboFnI'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverDota2Matches = {
-  matchType: matchType,
-  name: "officia",
-  slug: "R ",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverDota2Matches: SearchOverDota2Matches = {
+    matchType: matchType12,
+    name: 'officia',
+    slug: 'R ',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.dota2Matches.getDota2MatchesUpcoming({
+    filter: filterOverDota2Matches,
+    range: rangeOverDota2Matches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverDota2Matches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

@@ -6,17 +6,16 @@ import {
   valorantSpikeEventPlayerRequest,
   valorantSpikeEventPlayerResponse,
 } from './valorant-spike-event-player';
-import { valorantEventType } from './valorant-event-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantSpikeDefusedEvent: any = z.lazy(() => {
+export const valorantSpikeDefusedEvent = z.lazy(() => {
   return z.object({
     number: z.number().gte(1),
     spikeDefused: valorantSpikeEventPlayer,
     timestamp: z.number().gte(0),
-    type: valorantEventType,
+    type: z.string(),
   });
 });
 
@@ -34,13 +33,13 @@ export type ValorantSpikeDefusedEvent = z.infer<typeof valorantSpikeDefusedEvent
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantSpikeDefusedEventResponse: any = z.lazy(() => {
+export const valorantSpikeDefusedEventResponse = z.lazy(() => {
   return z
     .object({
       number: z.number().gte(1),
       spike_defused: valorantSpikeEventPlayerResponse,
       timestamp: z.number().gte(0),
-      type: valorantEventType,
+      type: z.string(),
     })
     .transform((data) => ({
       number: data['number'],
@@ -54,13 +53,13 @@ export const valorantSpikeDefusedEventResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantSpikeDefusedEventRequest: any = z.lazy(() => {
+export const valorantSpikeDefusedEventRequest = z.lazy(() => {
   return z
     .object({
       number: z.number().nullish(),
       spikeDefused: valorantSpikeEventPlayerRequest.nullish(),
       timestamp: z.number().nullish(),
-      type: valorantEventType.nullish(),
+      type: z.string().nullish(),
     })
     .transform((data) => ({
       number: data['number'],

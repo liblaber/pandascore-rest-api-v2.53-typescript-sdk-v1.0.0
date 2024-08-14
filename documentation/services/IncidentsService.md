@@ -36,7 +36,7 @@ Get the latest additions. <br/> <br/>This endpoint only shows unchanged objects.
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverAdditionIncidents, Page, PandascoreClient, RangeOverAdditionIncidents } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,22 +45,22 @@ import { PandascoreClient } from 'pandascore_client';
 
   const incidentId = 9;
 
-  const filter: FilterOverAdditionIncidents = {
+  const filterOverAdditionIncidents: FilterOverAdditionIncidents = {
     id: [incidentId],
     modifiedAt: ['labore nul'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId1 = 9;
 
-  const range: RangeOverAdditionIncidents = {
-    id: [incidentId],
+  const rangeOverAdditionIncidents: RangeOverAdditionIncidents = {
+    id: [incidentId1],
     modifiedAt: ['id a'],
   };
   const page = 1;
 
   const { data } = await pandascoreClient.incidents.getAdditions({
-    filter: filter,
-    range: range,
+    filter: filterOverAdditionIncidents,
+    range: rangeOverAdditionIncidents,
     sort: [[]],
     page: page,
     perPage: 50,
@@ -100,7 +100,7 @@ Get the latest updates. <br/> <br/>This endpoint only provides the latest change
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverChangeIncidents, Page, PandascoreClient, RangeOverChangeIncidents } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -109,22 +109,22 @@ import { PandascoreClient } from 'pandascore_client';
 
   const incidentId = 9;
 
-  const filter: FilterOverChangeIncidents = {
+  const filterOverChangeIncidents: FilterOverChangeIncidents = {
     id: [incidentId],
     modifiedAt: ['id eiusmod'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId1 = 9;
 
-  const range: RangeOverChangeIncidents = {
-    id: [incidentId],
+  const rangeOverChangeIncidents: RangeOverChangeIncidents = {
+    id: [incidentId1],
     modifiedAt: ['adipisici'],
   };
   const page = 1;
 
   const { data } = await pandascoreClient.incidents.getChanges({
-    filter: filter,
-    range: range,
+    filter: filterOverChangeIncidents,
+    range: rangeOverChangeIncidents,
     sort: [[]],
     page: page,
     perPage: 50,
@@ -164,7 +164,7 @@ Get the latest deleted documents
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverDeletionIncidents, Page, PandascoreClient, RangeOverDeletionIncidents } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -173,21 +173,21 @@ import { PandascoreClient } from 'pandascore_client';
 
   const incidentId = 9;
 
-  const filter: FilterOverDeletionIncidents = {
+  const filterOverDeletionIncidents: FilterOverDeletionIncidents = {
     id: [incidentId],
     modifiedAt: ['voluptate cu'],
   };
-  const incidentId = 9;
+  const incidentId1 = 9;
 
-  const range: RangeOverDeletionIncidents = {
-    id: [incidentId],
+  const rangeOverDeletionIncidents: RangeOverDeletionIncidents = {
+    id: [incidentId1],
     modifiedAt: ['reprehenderit o'],
   };
   const page = 1;
 
   const { data } = await pandascoreClient.incidents.getDeletions({
-    filter: filter,
-    range: range,
+    filter: filterOverDeletionIncidents,
+    range: rangeOverDeletionIncidents,
     sort: [[]],
     page: page,
     perPage: 50,
@@ -227,7 +227,7 @@ Get the latest updates and additions. <br/> <br/>This endpoint only provides the
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverIncidents, Page, PandascoreClient, RangeOverIncidents } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -236,22 +236,22 @@ import { PandascoreClient } from 'pandascore_client';
 
   const incidentId = 9;
 
-  const filter: FilterOverIncidents = {
+  const filterOverIncidents: FilterOverIncidents = {
     id: [incidentId],
     modifiedAt: ['eu'],
     opponentsFilled: true,
   };
-  const incidentId = 9;
+  const incidentId1 = 9;
 
-  const range: RangeOverIncidents = {
-    id: [incidentId],
+  const rangeOverIncidents: RangeOverIncidents = {
+    id: [incidentId1],
     modifiedAt: ['id offici'],
   };
   const page = 1;
 
   const { data } = await pandascoreClient.incidents.getIncidents({
-    filter: filter,
-    range: range,
+    filter: filterOverIncidents,
+    range: rangeOverIncidents,
     sort: [[]],
     page: page,
     perPage: 50,

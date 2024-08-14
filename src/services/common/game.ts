@@ -2,14 +2,12 @@
 
 import { z } from 'zod';
 import { gameId, gameIdRequest, gameIdResponse } from './game-id';
-import { gameStatus } from './game-status';
 import { gameWinner, gameWinnerRequest, gameWinnerResponse } from './game-winner';
-import { gameWinnerType1 } from './game-winner-type-1';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const game: any = z.lazy(() => {
+export const game = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     complete: z.boolean(),
@@ -21,9 +19,9 @@ export const game: any = z.lazy(() => {
     length: z.number().gte(0).nullable(),
     matchId: z.number().gte(1),
     position: z.number().gte(1),
-    status: gameStatus,
+    status: z.string(),
     winner: gameWinner,
-    winnerType: gameWinnerType1.nullable(),
+    winnerType: z.string().nullable(),
   });
 });
 
@@ -50,7 +48,7 @@ export type Game = z.infer<typeof game>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const gameResponse: any = z.lazy(() => {
+export const gameResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -63,9 +61,9 @@ export const gameResponse: any = z.lazy(() => {
       length: z.number().gte(0).nullable(),
       match_id: z.number().gte(1),
       position: z.number().gte(1),
-      status: gameStatus,
+      status: z.string(),
       winner: gameWinnerResponse,
-      winner_type: gameWinnerType1.nullable(),
+      winner_type: z.string().nullable(),
     })
     .transform((data) => ({
       beginAt: data['begin_at'],
@@ -88,7 +86,7 @@ export const gameResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const gameRequest: any = z.lazy(() => {
+export const gameRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -101,9 +99,9 @@ export const gameRequest: any = z.lazy(() => {
       length: z.number().nullish(),
       matchId: z.number().nullish(),
       position: z.number().nullish(),
-      status: gameStatus.nullish(),
+      status: z.string().nullish(),
       winner: gameWinnerRequest.nullish(),
-      winnerType: gameWinnerType1.nullish(),
+      winnerType: z.string().nullish(),
     })
     .transform((data) => ({
       begin_at: data['beginAt'],

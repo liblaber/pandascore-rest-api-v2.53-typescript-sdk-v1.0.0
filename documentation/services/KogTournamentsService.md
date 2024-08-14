@@ -34,22 +34,30 @@ List tournaments for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverKogShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogShortTournaments = {
+  const filterOverKogShortTournaments: FilterOverKogShortTournaments = {
     beginAt: ['voluptate i'],
     detailedStats: true,
     endAt: ['Lo'],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogShortTournaments = {
+  const rangeOverKogShortTournaments: RangeOverKogShortTournaments = {
     beginAt: ['do des'],
     detailedStats: [true],
     endAt: ['a'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['ex et Lo'],
     serieId: [3],
     slug: ['hpq1rop'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogShortTournaments = {
+  const searchOverKogShortTournaments: SearchOverKogShortTournaments = {
     name: 'amet ut ',
     prizepool: 'laborum in v',
     slug: 'csu',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogTournaments.getKogTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverKogShortTournaments,
+    range: rangeOverKogShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverKogShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverKogShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogShortTournaments = {
+  const filterOverKogShortTournaments: FilterOverKogShortTournaments = {
     beginAt: ['voluptate i'],
     detailedStats: true,
     endAt: ['Lo'],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogShortTournaments = {
+  const rangeOverKogShortTournaments: RangeOverKogShortTournaments = {
     beginAt: ['do des'],
     detailedStats: [true],
     endAt: ['a'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['ex et Lo'],
     serieId: [3],
     slug: ['hpq1rop'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogShortTournaments = {
+  const searchOverKogShortTournaments: SearchOverKogShortTournaments = {
     name: 'amet ut ',
     prizepool: 'laborum in v',
     slug: 'csu',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogTournaments.getKogTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverKogShortTournaments,
+    range: rangeOverKogShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverKogShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverKogShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogShortTournaments = {
+  const filterOverKogShortTournaments: FilterOverKogShortTournaments = {
     beginAt: ['voluptate i'],
     detailedStats: true,
     endAt: ['Lo'],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogShortTournaments = {
+  const rangeOverKogShortTournaments: RangeOverKogShortTournaments = {
     beginAt: ['do des'],
     detailedStats: [true],
     endAt: ['a'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['ex et Lo'],
     serieId: [3],
     slug: ['hpq1rop'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogShortTournaments = {
+  const searchOverKogShortTournaments: SearchOverKogShortTournaments = {
     name: 'amet ut ',
     prizepool: 'laborum in v',
     slug: 'csu',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogTournaments.getKogTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverKogShortTournaments,
+    range: rangeOverKogShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverKogShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming King of Glory tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverKogShortTournaments,
+  SearchOverKogShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverKogShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverKogShortTournaments = {
+  const filterOverKogShortTournaments: FilterOverKogShortTournaments = {
     beginAt: ['voluptate i'],
     detailedStats: true,
     endAt: ['Lo'],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverKogShortTournaments = {
+  const rangeOverKogShortTournaments: RangeOverKogShortTournaments = {
     beginAt: ['do des'],
     detailedStats: [true],
     endAt: ['a'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['ex et Lo'],
     serieId: [3],
     slug: ['hpq1rop'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverKogShortTournaments = {
+  const searchOverKogShortTournaments: SearchOverKogShortTournaments = {
     name: 'amet ut ',
     prizepool: 'laborum in v',
     slug: 'csu',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.kogTournaments.getKogTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverKogShortTournaments,
+    range: rangeOverKogShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverKogShortTournaments,
     page: page,
     perPage: 50,
   });

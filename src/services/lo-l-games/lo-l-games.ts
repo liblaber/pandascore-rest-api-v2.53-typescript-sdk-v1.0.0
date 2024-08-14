@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { LoLGame, loLGameResponse } from './models/lo-l-game';
 import { LoLGameEvent, loLGameEventResponse } from './models/lo-l-game-event';
 import {
@@ -14,8 +14,9 @@ import {
   GetLolTeamsTeamIdOrSlugGamesParams,
 } from './request-params';
 import { LoLGameFrame, loLGameFrameResponse } from './models/lo-l-game-frame';
-import { MatchIdOrSlug, TeamIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import { LoLTeamLastGame, loLTeamLastGameResponse } from '../common/lo-l-team-last-game';
+import { TeamIdOrSlug } from '../common/team-id-or-slug';
 
 export class LoLGamesService extends BaseService {
   /**
@@ -24,18 +25,24 @@ export class LoLGamesService extends BaseService {
    * @returns {Promise<HttpResponse<LoLGame>>} A League-of-Legends game
    */
   async getLolGamesLolGameId(lolGameId: number, requestConfig?: RequestConfig): Promise<HttpResponse<LoLGame>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/games/{lol_game_id}',
-      config: this.config,
-      responseSchema: loLGameResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_game_id', lolGameId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLGame>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/games/{lol_game_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLGameResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_game_id',
+        value: lolGameId,
+      })
+      .build();
+    return this.client.call<LoLGame>(request);
   }
 
   /**
@@ -50,20 +57,32 @@ export class LoLGamesService extends BaseService {
     params?: GetLolGamesLolGameIdEventsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLGameEvent[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/games/{lol_game_id}/events',
-      config: this.config,
-      responseSchema: z.array(loLGameEventResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_game_id', lolGameId);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLGameEvent[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/games/{lol_game_id}/events')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLGameEventResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_game_id',
+        value: lolGameId,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLGameEvent[]>(request);
   }
 
   /**
@@ -78,20 +97,32 @@ export class LoLGamesService extends BaseService {
     params?: GetLolGamesLolGameIdFramesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLGameFrame[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/games/{lol_game_id}/frames',
-      config: this.config,
-      responseSchema: z.array(loLGameFrameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_game_id', lolGameId);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLGameFrame[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/games/{lol_game_id}/frames')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLGameFrameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_game_id',
+        value: lolGameId,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLGameFrame[]>(request);
   }
 
   /**
@@ -110,24 +141,51 @@ export class LoLGamesService extends BaseService {
     params?: GetLolMatchesMatchIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLGame[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/matches/{match_id_or_slug}/games',
-      config: this.config,
-      responseSchema: z.array(loLGameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLGame[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/matches/{match_id_or_slug}/games')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLGameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLGame[]>(request);
   }
 
   /**
@@ -146,23 +204,50 @@ export class LoLGamesService extends BaseService {
     params?: GetLolTeamsTeamIdOrSlugGamesParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLTeamLastGame[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/teams/{team_id_or_slug}/games',
-      config: this.config,
-      responseSchema: z.array(loLTeamLastGameResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLTeamLastGame[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/teams/{team_id_or_slug}/games')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLTeamLastGameResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLTeamLastGame[]>(request);
   }
 }

@@ -7,7 +7,7 @@ import { winner2_4, winner2_4Request, winner2_4Response } from './winner-2-4';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const dota2GameMatchWinner: any = z.lazy(() => {
+export const dota2GameMatchWinner = z.lazy(() => {
   return z.union([winner1_4, winner2_4]);
 });
 
@@ -23,7 +23,7 @@ export type Dota2GameMatchWinner = z.infer<typeof dota2GameMatchWinner>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GameMatchWinnerResponse: any = z.lazy(() => {
+export const dota2GameMatchWinnerResponse = z.lazy(() => {
   return z.union([winner1_4Response, winner2_4Response]);
 });
 
@@ -31,6 +31,6 @@ export const dota2GameMatchWinnerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const dota2GameMatchWinnerRequest: any = z.lazy(() => {
+export const dota2GameMatchWinnerRequest = z.lazy(() => {
   return z.union([winner1_4Request, winner2_4Request]);
 });

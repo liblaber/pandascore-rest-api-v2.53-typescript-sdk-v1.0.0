@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { Live, liveResponse } from './models/live';
 import { GetLivesParams } from './request-params';
 
@@ -16,18 +16,27 @@ export class LivesService extends BaseService {
    * @returns {Promise<HttpResponse<Live[]>>} A list of games being played or about to be played
    */
   async getLives(params?: GetLivesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Live[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lives',
-      config: this.config,
-      responseSchema: z.array(liveResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<Live[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lives')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(liveResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<Live[]>(request);
   }
 }

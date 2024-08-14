@@ -22,7 +22,6 @@ import {
   loLGamePlayerForStatsOpponentResponse,
 } from './lo-l-game-player-for-stats-opponent';
 import { basePlayer, basePlayerRequest, basePlayerResponse } from '../../common/base-player';
-import { loLGamePlayerForStatsRole } from './lo-l-game-player-for-stats-role';
 import { loLRune, loLRuneRequest, loLRuneResponse } from '../../common/lo-l-rune';
 import {
   loLPlayerRunesReforged,
@@ -36,7 +35,7 @@ import { loLWards, loLWardsRequest, loLWardsResponse } from '../../common/lo-l-w
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLGamePlayerForStats: any = z.lazy(() => {
+export const loLGamePlayerForStats = z.lazy(() => {
   return z.object({
     assists: z.number().gte(0).nullable(),
     champion: loLGamePlayerForStatsChampion.nullable(),
@@ -62,7 +61,7 @@ export const loLGamePlayerForStats: any = z.lazy(() => {
     physicalDamage: loLGamePlayerDamageForStats,
     player: basePlayer,
     playerId: z.number().gte(1),
-    role: loLGamePlayerForStatsRole.nullable(),
+    role: z.string().nullable(),
     runes: z.array(loLRune),
     runesReforged: loLPlayerRunesReforged,
     spells: z.array(loLSpell),
@@ -123,7 +122,7 @@ export type LoLGamePlayerForStats = z.infer<typeof loLGamePlayerForStats>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerForStatsResponse: any = z.lazy(() => {
+export const loLGamePlayerForStatsResponse = z.lazy(() => {
   return z
     .object({
       assists: z.number().gte(0).nullable(),
@@ -150,7 +149,7 @@ export const loLGamePlayerForStatsResponse: any = z.lazy(() => {
       physical_damage: loLGamePlayerDamageForStatsResponse,
       player: basePlayerResponse,
       player_id: z.number().gte(1),
-      role: loLGamePlayerForStatsRole.nullable(),
+      role: z.string().nullable(),
       runes: z.array(loLRuneResponse),
       runes_reforged: loLPlayerRunesReforgedResponse,
       spells: z.array(loLSpellResponse),
@@ -207,7 +206,7 @@ export const loLGamePlayerForStatsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLGamePlayerForStatsRequest: any = z.lazy(() => {
+export const loLGamePlayerForStatsRequest = z.lazy(() => {
   return z
     .object({
       assists: z.number().nullish(),
@@ -234,7 +233,7 @@ export const loLGamePlayerForStatsRequest: any = z.lazy(() => {
       physicalDamage: loLGamePlayerDamageForStatsRequest.nullish(),
       player: basePlayerRequest.nullish(),
       playerId: z.number().nullish(),
-      role: loLGamePlayerForStatsRole.nullish(),
+      role: z.string().nullish(),
       runes: z.array(loLRuneRequest).nullish(),
       runesReforged: loLPlayerRunesReforgedRequest.nullish(),
       spells: z.array(loLSpellRequest).nullish(),

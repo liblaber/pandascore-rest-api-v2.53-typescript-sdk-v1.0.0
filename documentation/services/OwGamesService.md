@@ -66,18 +66,18 @@ List games for a given Overwatch match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverOwGames, GameStatus, MatchIdOrSlug, OpponentType, Page, PandascoreClient, RangeOverOwGames, SearchOverOwGames } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverOwGames = {
+const filterOverOwGames: FilterOverOwGames = {
   beginAt: ["e"],
   complete: true,
   detailedStats: true,
@@ -91,11 +91,11 @@ const filter: FilterOverOwGames = {
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverOwGames = {
+const rangeOverOwGames: RangeOverOwGames = {
   beginAt: ["cupidat"],
   complete: [true],
   detailedStats: [true],
@@ -106,26 +106,26 @@ const range: RangeOverOwGames = {
   length: [2],
   matchId: [2],
   position: [6],
-  status: [gameStatus],
-  winnerType: [opponentType]
+  status: [gameStatus1],
+  winnerType: [opponentType1]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus12 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverOwGames = {
-  status: gameStatus,
-  winnerType: opponentType
+const searchOverOwGames: SearchOverOwGames = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.owGames.getOwMatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverOwGames,
+		range: rangeOverOwGames,
     sort: [[]],
-		search: search,
+		search: searchOverOwGames,
 		page: page,
     perPage: 50,
   }

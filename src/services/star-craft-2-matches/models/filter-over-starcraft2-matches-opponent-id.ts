@@ -7,7 +7,7 @@ import { playerIdOrSlug, playerIdOrSlugRequest, playerIdOrSlugResponse } from '.
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverStarcraft2MatchesOpponentId: any = z.lazy(() => {
+export const filterOverStarcraft2MatchesOpponentId = z.lazy(() => {
   return z.union([teamIdOrSlug, playerIdOrSlug]);
 });
 
@@ -23,7 +23,7 @@ export type FilterOverStarcraft2MatchesOpponentId = z.infer<typeof filterOverSta
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverStarcraft2MatchesOpponentIdResponse: any = z.lazy(() => {
+export const filterOverStarcraft2MatchesOpponentIdResponse = z.lazy(() => {
   return z.union([teamIdOrSlugResponse, playerIdOrSlugResponse]);
 });
 
@@ -31,6 +31,6 @@ export const filterOverStarcraft2MatchesOpponentIdResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverStarcraft2MatchesOpponentIdRequest: any = z.lazy(() => {
+export const filterOverStarcraft2MatchesOpponentIdRequest = z.lazy(() => {
   return z.union([teamIdOrSlugRequest, playerIdOrSlugRequest]);
 });

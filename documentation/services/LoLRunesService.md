@@ -34,33 +34,39 @@ List the latest version of League of Legends (reforged) runes
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLRunesReforged,
+  Page,
+  PandascoreClient,
+  RangeOverLoLRunesReforged,
+  SearchOverLoLRunesReforged,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLRunesReforged = {
+  const filterOverLoLRunesReforged: FilterOverLoLRunesReforged = {
     id: [9],
     name: ['cillum sint'],
   };
 
-  const range: RangeOverLoLRunesReforged = {
+  const rangeOverLoLRunesReforged: RangeOverLoLRunesReforged = {
     id: [6],
     name: ['cillum do'],
   };
 
-  const search: SearchOverLoLRunesReforged = {
+  const searchOverLoLRunesReforged: SearchOverLoLRunesReforged = {
     name: 'do irure ',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLRunes.getLolRunesReforged({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLRunesReforged,
+    range: rangeOverLoLRunesReforged,
     sort: [[]],
-    search: search,
+    search: searchOverLoLRunesReforged,
     page: page,
     perPage: 50,
   });
@@ -94,34 +100,40 @@ List the latest version of League of Legends (reforged) rune paths
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLRunePaths,
+  Page,
+  PandascoreClient,
+  RangeOverLoLRunePaths,
+  SearchOverLoLRunePaths,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLRunePaths = {
+  const filterOverLoLRunePaths: FilterOverLoLRunePaths = {
     id: [5],
     name: ['occaecat esse'],
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLRunePaths = {
+  const rangeOverLoLRunePaths: RangeOverLoLRunePaths = {
     id: [6],
     name: ['ipsum nul'],
   };
 
-  const search: SearchOverLoLRunePaths = {
+  const searchOverLoLRunePaths: SearchOverLoLRunePaths = {
     name: 'tempor eli',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLRunes.getLolRunesReforgedPaths({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLRunePaths,
+    range: rangeOverLoLRunePaths,
     sort: [[]],
-    search: search,
+    search: searchOverLoLRunePaths,
     page: page,
     perPage: 50,
   });

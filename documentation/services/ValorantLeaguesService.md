@@ -31,14 +31,20 @@ List Valorant leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverValorantLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverValorantLeagues,
+  SearchOverValorantLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverValorantLeagues = {
+  const filterOverValorantLeagues: FilterOverValorantLeagues = {
     id: [8],
     modifiedAt: ['ipsum paria'],
     name: ['Ut do'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['Ut eni'],
   };
 
-  const range: RangeOverValorantLeagues = {
+  const rangeOverValorantLeagues: RangeOverValorantLeagues = {
     id: [8],
     modifiedAt: ['sed sint nulla'],
     name: ['proident '],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['ullamco'],
   };
 
-  const search: SearchOverValorantLeagues = {
+  const searchOverValorantLeagues: SearchOverValorantLeagues = {
     name: 'eiusmod',
     slug: 'm55gkm',
     url: 'non c',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.valorantLeagues.getValorantLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverValorantLeagues,
+    range: rangeOverValorantLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverValorantLeagues,
     page: page,
     perPage: 50,
   });

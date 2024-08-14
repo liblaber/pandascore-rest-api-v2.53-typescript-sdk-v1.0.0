@@ -31,62 +31,68 @@ List players for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverLoLPlayers,
+  SearchOverLoLPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverLoLPlayers = {
-  active: true,
-  birthday: ["quis exercita"],
-  firstName: ["enimconsec"],
-  id: [7],
-  lastName: ["Excepte"],
-  modifiedAt: ["culpa"],
-  name: ["sit commodo a"],
-  nationality: ["sed aliquip ut"],
-  role: ["enim nulla"],
-  slug: ["4"],
-  teamId: [9],
-  videogameId: [videogameId]
-};
+  const filterOverLoLPlayers: FilterOverLoLPlayers = {
+    active: true,
+    birthday: ['quis exercita'],
+    firstName: ['enimconsec'],
+    id: [7],
+    lastName: ['Excepte'],
+    modifiedAt: ['culpa'],
+    name: ['sit commodo a'],
+    nationality: ['sed aliquip ut'],
+    role: ['enim nulla'],
+    slug: ['4'],
+    teamId: [9],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverLoLPlayers = {
-  birthday: ["proiden"],
-  firstName: ["esse officia m"],
-  id: [2],
-  lastName: ["Ut lab"],
-  modifiedAt: ["aute do volup"],
-  name: ["nostrud"],
-  nationality: ["velit pari"],
-  role: ["exercit"],
-  slug: ["bs51gp"]
-};
+  const rangeOverLoLPlayers: RangeOverLoLPlayers = {
+    birthday: ['proiden'],
+    firstName: ['esse officia m'],
+    id: [2],
+    lastName: ['Ut lab'],
+    modifiedAt: ['aute do volup'],
+    name: ['nostrud'],
+    nationality: ['velit pari'],
+    role: ['exercit'],
+    slug: ['bs51gp'],
+  };
 
-const search: SearchOverLoLPlayers = {
-  birthday: "dolore",
-  firstName: "adipi",
-  lastName: "conse",
-  name: "dolore",
-  nationality: "sunt Duis",
-  role: "animno",
-  slug: "d-"
-};
-const page = 1;
+  const searchOverLoLPlayers: SearchOverLoLPlayers = {
+    birthday: 'dolore',
+    firstName: 'adipi',
+    lastName: 'conse',
+    name: 'dolore',
+    nationality: 'sunt Duis',
+    role: 'animno',
+    slug: 'd-',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.loLPlayers.getLolPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.loLPlayers.getLolPlayers({
+    filter: filterOverLoLPlayers,
+    range: rangeOverLoLPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverLoLPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

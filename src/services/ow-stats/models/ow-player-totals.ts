@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owPlayerTotals: any = z.lazy(() => {
+export const owPlayerTotals = z.lazy(() => {
   return z.object({
     averageTimeToChargeUltimate: z.number().gte(0).nullable(),
     damageDone: z.number().gte(0).nullable(),
@@ -46,7 +46,7 @@ export type OwPlayerTotals = z.infer<typeof owPlayerTotals>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerTotalsResponse: any = z.lazy(() => {
+export const owPlayerTotalsResponse = z.lazy(() => {
   return z
     .object({
       average_time_to_charge_ultimate: z.number().gte(0).nullable(),
@@ -84,7 +84,7 @@ export const owPlayerTotalsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owPlayerTotalsRequest: any = z.lazy(() => {
+export const owPlayerTotalsRequest = z.lazy(() => {
   return z
     .object({
       averageTimeToChargeUltimate: z.number().nullish(),

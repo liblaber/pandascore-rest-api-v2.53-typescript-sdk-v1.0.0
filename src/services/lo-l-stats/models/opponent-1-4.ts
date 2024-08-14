@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const opponent1_4: any = z.lazy(() => {
+export const opponent1_4 = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -48,7 +48,7 @@ export type Opponent1_4 = z.infer<typeof opponent1_4>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponent1_4Response: any = z.lazy(() => {
+export const opponent1_4Response = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -88,7 +88,7 @@ export const opponent1_4Response: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const opponent1_4Request: any = z.lazy(() => {
+export const opponent1_4Request = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

@@ -6,17 +6,16 @@ import {
   csgoRoundStartEventDetailsRequest,
   csgoRoundStartEventDetailsResponse,
 } from './csgo-round-start-event-details';
-import { csgoEventType } from './csgo-event-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const csgoRoundStartEvent: any = z.lazy(() => {
+export const csgoRoundStartEvent = z.lazy(() => {
   return z.object({
     ingameTimestamp: z.number().gte(0),
     roundNumber: z.number().gte(1),
     roundStart: csgoRoundStartEventDetails,
-    type: csgoEventType,
+    type: z.string(),
   });
 });
 
@@ -34,13 +33,13 @@ export type CsgoRoundStartEvent = z.infer<typeof csgoRoundStartEvent>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundStartEventResponse: any = z.lazy(() => {
+export const csgoRoundStartEventResponse = z.lazy(() => {
   return z
     .object({
       ingame_timestamp: z.number().gte(0),
       round_number: z.number().gte(1),
       round_start: csgoRoundStartEventDetailsResponse,
-      type: csgoEventType,
+      type: z.string(),
     })
     .transform((data) => ({
       ingameTimestamp: data['ingame_timestamp'],
@@ -54,13 +53,13 @@ export const csgoRoundStartEventResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const csgoRoundStartEventRequest: any = z.lazy(() => {
+export const csgoRoundStartEventRequest = z.lazy(() => {
   return z
     .object({
       ingameTimestamp: z.number().nullish(),
       roundNumber: z.number().nullish(),
       roundStart: csgoRoundStartEventDetailsRequest.nullish(),
-      type: csgoEventType.nullish(),
+      type: z.string().nullish(),
     })
     .transform((data) => ({
       ingame_timestamp: data['ingameTimestamp'],

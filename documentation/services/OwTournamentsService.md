@@ -34,22 +34,30 @@ List tournaments for the Overwatch videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwShortTournaments,
+  SearchOverOwShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverOwShortTournamentsVideogameTitle = 7;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwShortTournaments = {
+  const filterOverOwShortTournaments: FilterOverOwShortTournaments = {
     beginAt: ['nulla adipi'],
     detailedStats: true,
     endAt: ['non '],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwShortTournaments = {
+  const rangeOverOwShortTournaments: RangeOverOwShortTournaments = {
     beginAt: ['e'],
     detailedStats: [true],
     endAt: ['est'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['consequ'],
     serieId: [7],
     slug: ['9sb0udh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwShortTournaments = {
+  const searchOverOwShortTournaments: SearchOverOwShortTournaments = {
     name: 'elit ad velit i',
     prizepool: 'velit',
     slug: 'pd9o',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owTournaments.getOwTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverOwShortTournaments,
+    range: rangeOverOwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverOwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past Overwatch tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwShortTournaments,
+  SearchOverOwShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverOwShortTournamentsVideogameTitle = 7;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwShortTournaments = {
+  const filterOverOwShortTournaments: FilterOverOwShortTournaments = {
     beginAt: ['nulla adipi'],
     detailedStats: true,
     endAt: ['non '],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwShortTournaments = {
+  const rangeOverOwShortTournaments: RangeOverOwShortTournaments = {
     beginAt: ['e'],
     detailedStats: [true],
     endAt: ['est'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['consequ'],
     serieId: [7],
     slug: ['9sb0udh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwShortTournaments = {
+  const searchOverOwShortTournaments: SearchOverOwShortTournaments = {
     name: 'elit ad velit i',
     prizepool: 'velit',
     slug: 'pd9o',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owTournaments.getOwTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverOwShortTournaments,
+    range: rangeOverOwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverOwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running Overwatch tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwShortTournaments,
+  SearchOverOwShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverOwShortTournamentsVideogameTitle = 7;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwShortTournaments = {
+  const filterOverOwShortTournaments: FilterOverOwShortTournaments = {
     beginAt: ['nulla adipi'],
     detailedStats: true,
     endAt: ['non '],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwShortTournaments = {
+  const rangeOverOwShortTournaments: RangeOverOwShortTournaments = {
     beginAt: ['e'],
     detailedStats: [true],
     endAt: ['est'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['consequ'],
     serieId: [7],
     slug: ['9sb0udh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwShortTournaments = {
+  const searchOverOwShortTournaments: SearchOverOwShortTournaments = {
     name: 'elit ad velit i',
     prizepool: 'velit',
     slug: 'pd9o',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owTournaments.getOwTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverOwShortTournaments,
+    range: rangeOverOwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverOwShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming Overwatch tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverOwShortTournaments,
+  SearchOverOwShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverOwShortTournamentsVideogameTitle = 7;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverOwShortTournaments = {
+  const filterOverOwShortTournaments: FilterOverOwShortTournaments = {
     beginAt: ['nulla adipi'],
     detailedStats: true,
     endAt: ['non '],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverOwShortTournaments = {
+  const rangeOverOwShortTournaments: RangeOverOwShortTournaments = {
     beginAt: ['e'],
     detailedStats: [true],
     endAt: ['est'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['consequ'],
     serieId: [7],
     slug: ['9sb0udh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverOwShortTournaments = {
+  const searchOverOwShortTournaments: SearchOverOwShortTournaments = {
     name: 'elit ad velit i',
     prizepool: 'velit',
     slug: 'pd9o',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.owTournaments.getOwTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverOwShortTournaments,
+    range: rangeOverOwShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverOwShortTournaments,
     page: page,
     perPage: 50,
   });

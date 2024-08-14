@@ -16,7 +16,7 @@ import {
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantGamePlayer: any = z.lazy(() => {
+export const valorantGamePlayer = z.lazy(() => {
   return z.object({
     active: z.boolean(),
     age: z.number().gte(0).nullable(),
@@ -91,7 +91,7 @@ export type ValorantGamePlayer = z.infer<typeof valorantGamePlayer>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGamePlayerResponse: any = z.lazy(() => {
+export const valorantGamePlayerResponse = z.lazy(() => {
   return z
     .object({
       active: z.boolean(),
@@ -163,7 +163,7 @@ export const valorantGamePlayerResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantGamePlayerRequest: any = z.lazy(() => {
+export const valorantGamePlayerRequest = z.lazy(() => {
   return z
     .object({
       active: z.boolean().nullish(),

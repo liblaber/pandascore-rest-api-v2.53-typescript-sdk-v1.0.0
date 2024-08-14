@@ -31,62 +31,68 @@ List players for the StarCraft Brood War videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraftBroodWarPlayers,
+  SearchOverStarcraftBroodWarPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverStarcraftBroodWarPlayers = {
-  active: true,
-  birthday: ["consequat "],
-  firstName: ["dolore"],
-  id: [9],
-  lastName: ["adipi"],
-  modifiedAt: ["id no"],
-  name: ["ex dolor"],
-  nationality: ["ad tempor m"],
-  role: ["reprehende"],
-  slug: ["fx5dlw"],
-  teamId: [5],
-  videogameId: [videogameId]
-};
+  const filterOverStarcraftBroodWarPlayers: FilterOverStarcraftBroodWarPlayers = {
+    active: true,
+    birthday: ['consequat '],
+    firstName: ['dolore'],
+    id: [9],
+    lastName: ['adipi'],
+    modifiedAt: ['id no'],
+    name: ['ex dolor'],
+    nationality: ['ad tempor m'],
+    role: ['reprehende'],
+    slug: ['fx5dlw'],
+    teamId: [5],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverStarcraftBroodWarPlayers = {
-  birthday: ["nisi adipisicin"],
-  firstName: ["voluptat"],
-  id: [7],
-  lastName: ["proident"],
-  modifiedAt: ["officia id"],
-  name: ["adipisici"],
-  nationality: ["qui Ut"],
-  role: ["exercitatio"],
-  slug: ["65"]
-};
+  const rangeOverStarcraftBroodWarPlayers: RangeOverStarcraftBroodWarPlayers = {
+    birthday: ['nisi adipisicin'],
+    firstName: ['voluptat'],
+    id: [7],
+    lastName: ['proident'],
+    modifiedAt: ['officia id'],
+    name: ['adipisici'],
+    nationality: ['qui Ut'],
+    role: ['exercitatio'],
+    slug: ['65'],
+  };
 
-const search: SearchOverStarcraftBroodWarPlayers = {
-  birthday: "qui enim",
-  firstName: "cillum ut temp",
-  lastName: "pariatur fugia",
-  name: "ullamco ",
-  nationality: "proiden",
-  role: "officia",
-  slug: "fepvp"
-};
-const page = 1;
+  const searchOverStarcraftBroodWarPlayers: SearchOverStarcraftBroodWarPlayers = {
+    birthday: 'qui enim',
+    firstName: 'cillum ut temp',
+    lastName: 'pariatur fugia',
+    name: 'ullamco ',
+    nationality: 'proiden',
+    role: 'officia',
+    slug: 'fepvp',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.starCraftBroodWarPlayers.getStarcraftBroodWarPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.starCraftBroodWarPlayers.getStarcraftBroodWarPlayers({
+    filter: filterOverStarcraftBroodWarPlayers,
+    range: rangeOverStarcraftBroodWarPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverStarcraftBroodWarPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

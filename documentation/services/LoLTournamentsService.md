@@ -34,22 +34,30 @@ List tournaments for the League of Legends videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLShortTournaments,
+  SearchOverLoLShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverLoLShortTournamentsVideogameTitle = 8;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLShortTournaments = {
+  const filterOverLoLShortTournaments: FilterOverLoLShortTournaments = {
     beginAt: ['Excep'],
     detailedStats: true,
     endAt: ['fugiat'],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLShortTournaments = {
+  const rangeOverLoLShortTournaments: RangeOverLoLShortTournaments = {
     beginAt: ['amet ullamco'],
     detailedStats: [true],
     endAt: ['cupidatat'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['id culp'],
     serieId: [10],
     slug: ['8dyh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLShortTournaments = {
+  const searchOverLoLShortTournaments: SearchOverLoLShortTournaments = {
     name: 'sed p',
     prizepool: 'laboris ut c',
     slug: 'pbrmjq9u2_',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLTournaments.getLolTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLShortTournaments,
+    range: rangeOverLoLShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverLoLShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past League of Legends tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLShortTournaments,
+  SearchOverLoLShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverLoLShortTournamentsVideogameTitle = 8;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLShortTournaments = {
+  const filterOverLoLShortTournaments: FilterOverLoLShortTournaments = {
     beginAt: ['Excep'],
     detailedStats: true,
     endAt: ['fugiat'],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLShortTournaments = {
+  const rangeOverLoLShortTournaments: RangeOverLoLShortTournaments = {
     beginAt: ['amet ullamco'],
     detailedStats: [true],
     endAt: ['cupidatat'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['id culp'],
     serieId: [10],
     slug: ['8dyh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLShortTournaments = {
+  const searchOverLoLShortTournaments: SearchOverLoLShortTournaments = {
     name: 'sed p',
     prizepool: 'laboris ut c',
     slug: 'pbrmjq9u2_',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLTournaments.getLolTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLShortTournaments,
+    range: rangeOverLoLShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverLoLShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running League of Legends tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLShortTournaments,
+  SearchOverLoLShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverLoLShortTournamentsVideogameTitle = 8;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLShortTournaments = {
+  const filterOverLoLShortTournaments: FilterOverLoLShortTournaments = {
     beginAt: ['Excep'],
     detailedStats: true,
     endAt: ['fugiat'],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLShortTournaments = {
+  const rangeOverLoLShortTournaments: RangeOverLoLShortTournaments = {
     beginAt: ['amet ullamco'],
     detailedStats: [true],
     endAt: ['cupidatat'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['id culp'],
     serieId: [10],
     slug: ['8dyh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLShortTournaments = {
+  const searchOverLoLShortTournaments: SearchOverLoLShortTournaments = {
     name: 'sed p',
     prizepool: 'laboris ut c',
     slug: 'pbrmjq9u2_',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLTournaments.getLolTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLShortTournaments,
+    range: rangeOverLoLShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverLoLShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming League of Legends tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverLoLShortTournaments,
+  SearchOverLoLShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverLoLShortTournamentsVideogameTitle = 8;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverLoLShortTournaments = {
+  const filterOverLoLShortTournaments: FilterOverLoLShortTournaments = {
     beginAt: ['Excep'],
     detailedStats: true,
     endAt: ['fugiat'],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverLoLShortTournaments = {
+  const rangeOverLoLShortTournaments: RangeOverLoLShortTournaments = {
     beginAt: ['amet ullamco'],
     detailedStats: [true],
     endAt: ['cupidatat'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['id culp'],
     serieId: [10],
     slug: ['8dyh'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverLoLShortTournaments = {
+  const searchOverLoLShortTournaments: SearchOverLoLShortTournaments = {
     name: 'sed p',
     prizepool: 'laboris ut c',
     slug: 'pbrmjq9u2_',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLTournaments.getLolTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLShortTournaments,
+    range: rangeOverLoLShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverLoLShortTournaments,
     page: page,
     perPage: 50,
   });

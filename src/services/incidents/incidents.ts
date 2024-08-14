@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { NonDeletionIncident, nonDeletionIncidentResponse } from './models/non-deletion-incident';
 import { GetAdditionsParams, GetChangesParams, GetDeletionsParams, GetIncidentsParams } from './request-params';
 import { Incident, incidentResponse } from './models/incident';
@@ -27,25 +27,54 @@ export class IncidentsService extends BaseService {
     params?: GetAdditionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<NonDeletionIncident[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/additions',
-      config: this.config,
-      responseSchema: z.array(nonDeletionIncidentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    request.addQueryParam('type', params?.type);
-    request.addQueryParam('since', params?.since);
-    request.addQueryParam('videogame', params?.videogame);
-    return this.client.call(request);
+    const request = new RequestBuilder<NonDeletionIncident[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/additions')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(nonDeletionIncidentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .addQueryParam({
+        key: 'type',
+        value: params?.type,
+      })
+      .addQueryParam({
+        key: 'since',
+        value: params?.since,
+      })
+      .addQueryParam({
+        key: 'videogame',
+        value: params?.videogame,
+      })
+      .build();
+    return this.client.call<NonDeletionIncident[]>(request);
   }
 
   /**
@@ -61,25 +90,54 @@ export class IncidentsService extends BaseService {
    * @returns {Promise<HttpResponse<Incident[]>>} A list of changed entities
    */
   async getChanges(params?: GetChangesParams, requestConfig?: RequestConfig): Promise<HttpResponse<Incident[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/changes',
-      config: this.config,
-      responseSchema: z.array(incidentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    request.addQueryParam('type', params?.type);
-    request.addQueryParam('since', params?.since);
-    request.addQueryParam('videogame', params?.videogame);
-    return this.client.call(request);
+    const request = new RequestBuilder<Incident[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/changes')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(incidentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .addQueryParam({
+        key: 'type',
+        value: params?.type,
+      })
+      .addQueryParam({
+        key: 'since',
+        value: params?.since,
+      })
+      .addQueryParam({
+        key: 'videogame',
+        value: params?.videogame,
+      })
+      .build();
+    return this.client.call<Incident[]>(request);
   }
 
   /**
@@ -98,25 +156,54 @@ export class IncidentsService extends BaseService {
     params?: GetDeletionsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<DeletionIncident[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/deletions',
-      config: this.config,
-      responseSchema: z.array(deletionIncidentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    request.addQueryParam('type', params?.type);
-    request.addQueryParam('since', params?.since);
-    request.addQueryParam('videogame', params?.videogame);
-    return this.client.call(request);
+    const request = new RequestBuilder<DeletionIncident[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/deletions')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(deletionIncidentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .addQueryParam({
+        key: 'type',
+        value: params?.type,
+      })
+      .addQueryParam({
+        key: 'since',
+        value: params?.since,
+      })
+      .addQueryParam({
+        key: 'videogame',
+        value: params?.videogame,
+      })
+      .build();
+    return this.client.call<DeletionIncident[]>(request);
   }
 
   /**
@@ -132,24 +219,53 @@ export class IncidentsService extends BaseService {
    * @returns {Promise<HttpResponse<Incident[]>>} A list of created or updated entities
    */
   async getIncidents(params?: GetIncidentsParams, requestConfig?: RequestConfig): Promise<HttpResponse<Incident[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/incidents',
-      config: this.config,
-      responseSchema: z.array(incidentResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    request.addQueryParam('type', params?.type);
-    request.addQueryParam('since', params?.since);
-    request.addQueryParam('videogame', params?.videogame);
-    return this.client.call(request);
+    const request = new RequestBuilder<Incident[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/incidents')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(incidentResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .addQueryParam({
+        key: 'type',
+        value: params?.type,
+      })
+      .addQueryParam({
+        key: 'since',
+        value: params?.since,
+      })
+      .addQueryParam({
+        key: 'videogame',
+        value: params?.videogame,
+      })
+      .build();
+    return this.client.call<Incident[]>(request);
   }
 }

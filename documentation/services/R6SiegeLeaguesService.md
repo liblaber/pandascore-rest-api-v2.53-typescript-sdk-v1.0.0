@@ -31,14 +31,20 @@ List Rainbow Six Siege leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeLeagues,
+  SearchOverR6SiegeLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverR6SiegeLeagues = {
+  const filterOverR6SiegeLeagues: FilterOverR6SiegeLeagues = {
     id: [2],
     modifiedAt: ['in p'],
     name: ['dolore'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['quis deserunt '],
   };
 
-  const range: RangeOverR6SiegeLeagues = {
+  const rangeOverR6SiegeLeagues: RangeOverR6SiegeLeagues = {
     id: [4],
     modifiedAt: ['non tem'],
     name: ['Ut quis E'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['Duis d'],
   };
 
-  const search: SearchOverR6SiegeLeagues = {
+  const searchOverR6SiegeLeagues: SearchOverR6SiegeLeagues = {
     name: 'auteconsequat ',
     slug: 'ess81c',
     url: 'Lorem elit',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeLeagues.getR6siegeLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeLeagues,
+    range: rangeOverR6SiegeLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeLeagues,
     page: page,
     perPage: 50,
   });

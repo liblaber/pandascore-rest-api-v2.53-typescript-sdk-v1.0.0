@@ -7,12 +7,11 @@ import {
   filterOverFifaSeriesVideogameTitleResponse,
 } from './filter-over-fifa-series-videogame-title';
 import { opponentId, opponentIdRequest, opponentIdResponse } from '../../common/opponent-id';
-import { opponentType } from '../../common/opponent-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverFifaSeries: any = z.lazy(() => {
+export const filterOverFifaSeries = z.lazy(() => {
   return z.object({
     beginAt: z.array(z.string()).min(1).optional(),
     endAt: z.array(z.string()).min(1).optional(),
@@ -24,7 +23,7 @@ export const filterOverFifaSeries: any = z.lazy(() => {
     slug: z.array(z.string()).min(1).optional(),
     videogameTitle: z.array(filterOverFifaSeriesVideogameTitle).min(1).optional(),
     winnerId: z.array(opponentId).min(1).optional(),
-    winnerType: z.array(opponentType).min(1).optional(),
+    winnerType: z.array(z.string()).min(1).optional(),
     year: z.array(z.number()).min(1).optional(),
   });
 });
@@ -51,7 +50,7 @@ export type FilterOverFifaSeries = z.infer<typeof filterOverFifaSeries>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverFifaSeriesResponse: any = z.lazy(() => {
+export const filterOverFifaSeriesResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.array(z.string()).min(1).optional(),
@@ -64,7 +63,7 @@ export const filterOverFifaSeriesResponse: any = z.lazy(() => {
       slug: z.array(z.string()).min(1).optional(),
       videogame_title: z.array(filterOverFifaSeriesVideogameTitleResponse).min(1).optional(),
       winner_id: z.array(opponentIdResponse).min(1).optional(),
-      winner_type: z.array(opponentType).min(1).optional(),
+      winner_type: z.array(z.string()).min(1).optional(),
       year: z.array(z.number()).min(1).optional(),
     })
     .transform((data) => ({
@@ -87,7 +86,7 @@ export const filterOverFifaSeriesResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverFifaSeriesRequest: any = z.lazy(() => {
+export const filterOverFifaSeriesRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.array(z.string()).nullish(),
@@ -100,7 +99,7 @@ export const filterOverFifaSeriesRequest: any = z.lazy(() => {
       slug: z.array(z.string()).nullish(),
       videogameTitle: z.array(filterOverFifaSeriesVideogameTitleRequest).nullish(),
       winnerId: z.array(opponentIdRequest).nullish(),
-      winnerType: z.array(opponentType).nullish(),
+      winnerType: z.array(z.string()).nullish(),
       year: z.array(z.number()).nullish(),
     })
     .transform((data) => ({

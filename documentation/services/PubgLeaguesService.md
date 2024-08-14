@@ -31,14 +31,20 @@ List PUBG leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverPubgLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverPubgLeagues,
+  SearchOverPubgLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverPubgLeagues = {
+  const filterOverPubgLeagues: FilterOverPubgLeagues = {
     id: [8],
     modifiedAt: ['ea'],
     name: ['ad ex an'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['proident adi'],
   };
 
-  const range: RangeOverPubgLeagues = {
+  const rangeOverPubgLeagues: RangeOverPubgLeagues = {
     id: [4],
     modifiedAt: ['in dolore '],
     name: ['Lorem do'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['ut aut'],
   };
 
-  const search: SearchOverPubgLeagues = {
+  const searchOverPubgLeagues: SearchOverPubgLeagues = {
     name: 'officia',
     slug: 'ue4e',
     url: 'in eu des',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.pubgLeagues.getPubgLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverPubgLeagues,
+    range: rangeOverPubgLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverPubgLeagues,
     page: page,
     perPage: 50,
   });

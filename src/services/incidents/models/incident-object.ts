@@ -11,7 +11,7 @@ import { team, teamRequest, teamResponse } from '../../common/team';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const incidentObject: any = z.lazy(() => {
+export const incidentObject = z.lazy(() => {
   return z.union([league, serie, tournament, match, player, team]);
 });
 
@@ -31,7 +31,7 @@ export type IncidentObject = z.infer<typeof incidentObject>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const incidentObjectResponse: any = z.lazy(() => {
+export const incidentObjectResponse = z.lazy(() => {
   return z.union([leagueResponse, serieResponse, tournamentResponse, matchResponse, playerResponse, teamResponse]);
 });
 
@@ -39,6 +39,6 @@ export const incidentObjectResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const incidentObjectRequest: any = z.lazy(() => {
+export const incidentObjectRequest = z.lazy(() => {
   return z.union([leagueRequest, serieRequest, tournamentRequest, matchRequest, playerRequest, teamRequest]);
 });

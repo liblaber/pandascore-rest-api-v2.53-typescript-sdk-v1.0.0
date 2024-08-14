@@ -5,12 +5,11 @@ import { baseLeague, baseLeagueRequest, baseLeagueResponse } from './base-league
 import { baseTournament, baseTournamentRequest, baseTournamentResponse } from './base-tournament';
 import { serieVideogameTitle, serieVideogameTitleRequest, serieVideogameTitleResponse } from './serie-videogame-title';
 import { serieWinnerId, serieWinnerIdRequest, serieWinnerIdResponse } from './serie-winner-id';
-import { serieWinnerType } from './serie-winner-type';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const serie: any = z.lazy(() => {
+export const serie = z.lazy(() => {
   return z.object({
     beginAt: z.string().min(1).nullable(),
     endAt: z.string().min(1).nullable(),
@@ -29,7 +28,7 @@ export const serie: any = z.lazy(() => {
     videogame: z.any(),
     videogameTitle: serieVideogameTitle.nullable(),
     winnerId: serieWinnerId,
-    winnerType: serieWinnerType.nullable(),
+    winnerType: z.string().nullable(),
     year: z.number().gte(2012).nullable(),
   });
 });
@@ -60,7 +59,7 @@ export type Serie = z.infer<typeof serie>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const serieResponse: any = z.lazy(() => {
+export const serieResponse = z.lazy(() => {
   return z
     .object({
       begin_at: z.string().min(1).nullable(),
@@ -80,7 +79,7 @@ export const serieResponse: any = z.lazy(() => {
       videogame: z.any(),
       videogame_title: serieVideogameTitleResponse.nullable(),
       winner_id: serieWinnerIdResponse,
-      winner_type: serieWinnerType.nullable(),
+      winner_type: z.string().nullable(),
       year: z.number().gte(2012).nullable(),
     })
     .transform((data) => ({
@@ -107,7 +106,7 @@ export const serieResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const serieRequest: any = z.lazy(() => {
+export const serieRequest = z.lazy(() => {
   return z
     .object({
       beginAt: z.string().nullish(),
@@ -124,7 +123,7 @@ export const serieRequest: any = z.lazy(() => {
       videogame: z.any().nullish(),
       videogameTitle: serieVideogameTitleRequest.nullish(),
       winnerId: serieWinnerIdRequest.nullish(),
-      winnerType: serieWinnerType.nullish(),
+      winnerType: z.string().nullish(),
       year: z.number().nullish(),
     })
     .transform((data) => ({

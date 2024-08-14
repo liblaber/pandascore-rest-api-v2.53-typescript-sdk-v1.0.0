@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const loLWards: any = z.lazy(() => {
+export const loLWards = z.lazy(() => {
   return z.object({
     placed: z.number().gte(0).nullable(),
     sightWardsBoughtInGame: z.number().gte(0).nullable(),
@@ -26,7 +26,7 @@ export type LoLWards = z.infer<typeof loLWards>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLWardsResponse: any = z.lazy(() => {
+export const loLWardsResponse = z.lazy(() => {
   return z
     .object({
       placed: z.number().gte(0).nullable(),
@@ -44,7 +44,7 @@ export const loLWardsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const loLWardsRequest: any = z.lazy(() => {
+export const loLWardsRequest = z.lazy(() => {
   return z
     .object({
       placed: z.number().nullish(),

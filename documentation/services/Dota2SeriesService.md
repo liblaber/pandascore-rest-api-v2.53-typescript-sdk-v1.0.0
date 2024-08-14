@@ -34,7 +34,14 @@ List series for the Dota 2 videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Series,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Series,
+  SearchOverDota2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -45,9 +52,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2Series = {
+  const filterOverDota2Series: FilterOverDota2Series = {
     beginAt: ['cillum d'],
     endAt: ['laboris'],
     id: [5],
@@ -61,11 +68,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2Series = {
+  const rangeOverDota2Series: RangeOverDota2Series = {
     beginAt: ['exercitation'],
     endAt: ['ex'],
     id: [4],
@@ -74,25 +81,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['dolor elit co'],
     season: ['exercitat'],
     slug: ['6wkd46'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2Series = {
+  const searchOverDota2Series: SearchOverDota2Series = {
     name: 'dolore ut en',
     season: 'autesed',
     slug: '1jo-8',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Series.getDota2Series({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Series,
+    range: rangeOverDota2Series,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Series,
     page: page,
     perPage: 50,
   });
@@ -126,7 +133,14 @@ List past Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Series,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Series,
+  SearchOverDota2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -137,9 +151,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2Series = {
+  const filterOverDota2Series: FilterOverDota2Series = {
     beginAt: ['cillum d'],
     endAt: ['laboris'],
     id: [5],
@@ -153,11 +167,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2Series = {
+  const rangeOverDota2Series: RangeOverDota2Series = {
     beginAt: ['exercitation'],
     endAt: ['ex'],
     id: [4],
@@ -166,25 +180,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['dolor elit co'],
     season: ['exercitat'],
     slug: ['6wkd46'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2Series = {
+  const searchOverDota2Series: SearchOverDota2Series = {
     name: 'dolore ut en',
     season: 'autesed',
     slug: '1jo-8',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Series.getDota2SeriesPast({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Series,
+    range: rangeOverDota2Series,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Series,
     page: page,
     perPage: 50,
   });
@@ -218,7 +232,14 @@ List running Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Series,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Series,
+  SearchOverDota2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -229,9 +250,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2Series = {
+  const filterOverDota2Series: FilterOverDota2Series = {
     beginAt: ['cillum d'],
     endAt: ['laboris'],
     id: [5],
@@ -245,11 +266,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2Series = {
+  const rangeOverDota2Series: RangeOverDota2Series = {
     beginAt: ['exercitation'],
     endAt: ['ex'],
     id: [4],
@@ -258,25 +279,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['dolor elit co'],
     season: ['exercitat'],
     slug: ['6wkd46'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2Series = {
+  const searchOverDota2Series: SearchOverDota2Series = {
     name: 'dolore ut en',
     season: 'autesed',
     slug: '1jo-8',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Series.getDota2SeriesRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Series,
+    range: rangeOverDota2Series,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Series,
     page: page,
     perPage: 50,
   });
@@ -310,7 +331,14 @@ List upcoming Dota 2 series
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Series,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Series,
+  SearchOverDota2Series,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -321,9 +349,9 @@ import { PandascoreClient } from 'pandascore_client';
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverDota2Series = {
+  const filterOverDota2Series: FilterOverDota2Series = {
     beginAt: ['cillum d'],
     endAt: ['laboris'],
     id: [5],
@@ -337,11 +365,11 @@ import { PandascoreClient } from 'pandascore_client';
     winnerType: [opponentType],
     year: [123],
   };
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverDota2Series = {
+  const rangeOverDota2Series: RangeOverDota2Series = {
     beginAt: ['exercitation'],
     endAt: ['ex'],
     id: [4],
@@ -350,25 +378,25 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['dolor elit co'],
     season: ['exercitat'],
     slug: ['6wkd46'],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
     year: [123],
   };
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverDota2Series = {
+  const searchOverDota2Series: SearchOverDota2Series = {
     name: 'dolore ut en',
     season: 'autesed',
     slug: '1jo-8',
-    winnerType: opponentType,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Series.getDota2SeriesUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Series,
+    range: rangeOverDota2Series,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Series,
     page: page,
     perPage: 50,
   });

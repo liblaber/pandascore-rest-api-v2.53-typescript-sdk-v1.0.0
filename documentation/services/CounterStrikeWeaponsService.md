@@ -32,16 +32,23 @@ List weapons
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  CsgoWeaponKind,
+  FilterOverCsgoWeapons,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoWeapons,
+  SearchOverCsgoWeapons,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
+  const csgoWeaponKind = CsgoWeaponKind.GRENADE;
 
-  const filter: FilterOverCsgoWeapons = {
+  const filterOverCsgoWeapons: FilterOverCsgoWeapons = {
     ammoClipMax: [4],
     ammoMax: [7],
     cost: [1],
@@ -51,32 +58,32 @@ import { PandascoreClient } from 'pandascore_client';
     name: ['minim u'],
     slug: ['_lrp8s5nb'],
   };
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
+  const csgoWeaponKind1 = CsgoWeaponKind.GRENADE;
 
-  const range: RangeOverCsgoWeapons = {
+  const rangeOverCsgoWeapons: RangeOverCsgoWeapons = {
     ammoClipMax: [7],
     ammoMax: [2],
     cost: [9],
     id: [10],
     killReward: [8],
-    kind: [csgoWeaponKind],
+    kind: [csgoWeaponKind1],
     name: ['sed proident'],
     slug: ['3'],
   };
-  const csgoWeaponKind = CsgoWeaponKind.grenade;
+  const csgoWeaponKind12 = CsgoWeaponKind.GRENADE;
 
-  const search: SearchOverCsgoWeapons = {
-    kind: csgoWeaponKind,
+  const searchOverCsgoWeapons: SearchOverCsgoWeapons = {
+    kind: csgoWeaponKind12,
     name: 'minim Excepteu',
     slug: 'nq41ksr4c',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeWeapons.getCsgoWeapons({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoWeapons,
+    range: rangeOverCsgoWeapons,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoWeapons,
     page: page,
     perPage: 50,
   });
@@ -105,7 +112,7 @@ Get a single weapon by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { CsgoWeaponIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({

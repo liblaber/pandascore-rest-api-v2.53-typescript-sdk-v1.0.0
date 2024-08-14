@@ -31,62 +31,68 @@ List players for the CODMW videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCodmwPlayers,
+  Page,
+  PandascoreClient,
+  RangeOverCodmwPlayers,
+  SearchOverCodmwPlayers,
+  VideogameId,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const videogameId = VideogameId.1;
+  const videogameId = VideogameId._1;
 
-const filter: FilterOverCodmwPlayers = {
-  active: true,
-  birthday: ["laboris s"],
-  firstName: ["ea su"],
-  id: [4],
-  lastName: ["nisi "],
-  modifiedAt: ["sit sed non al"],
-  name: ["ea occaecat "],
-  nationality: ["velit i"],
-  role: ["ut ven"],
-  slug: ["0x"],
-  teamId: [2],
-  videogameId: [videogameId]
-};
+  const filterOverCodmwPlayers: FilterOverCodmwPlayers = {
+    active: true,
+    birthday: ['laboris s'],
+    firstName: ['ea su'],
+    id: [4],
+    lastName: ['nisi '],
+    modifiedAt: ['sit sed non al'],
+    name: ['ea occaecat '],
+    nationality: ['velit i'],
+    role: ['ut ven'],
+    slug: ['0x'],
+    teamId: [2],
+    videogameId: [videogameId],
+  };
 
-const range: RangeOverCodmwPlayers = {
-  birthday: ["exdo aute"],
-  firstName: ["fugiat D"],
-  id: [3],
-  lastName: ["anim e"],
-  modifiedAt: ["la"],
-  name: ["ipsum veniam"],
-  nationality: ["nisi min"],
-  role: ["anim aliqua"],
-  slug: ["tdx6k-"]
-};
+  const rangeOverCodmwPlayers: RangeOverCodmwPlayers = {
+    birthday: ['exdo aute'],
+    firstName: ['fugiat D'],
+    id: [3],
+    lastName: ['anim e'],
+    modifiedAt: ['la'],
+    name: ['ipsum veniam'],
+    nationality: ['nisi min'],
+    role: ['anim aliqua'],
+    slug: ['tdx6k-'],
+  };
 
-const search: SearchOverCodmwPlayers = {
-  birthday: "Ut non amet ",
-  firstName: "dolore comm",
-  lastName: "minim ",
-  name: "amet d",
-  nationality: "ut minim",
-  role: "enimut ex si",
-  slug: "mpp4jva"
-};
-const page = 1;
+  const searchOverCodmwPlayers: SearchOverCodmwPlayers = {
+    birthday: 'Ut non amet ',
+    firstName: 'dolore comm',
+    lastName: 'minim ',
+    name: 'amet d',
+    nationality: 'ut minim',
+    role: 'enimut ex si',
+    slug: 'mpp4jva',
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.codmwPlayers.getCodmwPlayers(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.codmwPlayers.getCodmwPlayers({
+    filter: filterOverCodmwPlayers,
+    range: rangeOverCodmwPlayers,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverCodmwPlayers,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

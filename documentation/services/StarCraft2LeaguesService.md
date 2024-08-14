@@ -31,14 +31,20 @@ List StarCraft 2 leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraft2Leagues,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraft2Leagues,
+  SearchOverStarcraft2Leagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverStarcraft2Leagues = {
+  const filterOverStarcraft2Leagues: FilterOverStarcraft2Leagues = {
     id: [4],
     modifiedAt: ['ad'],
     name: ['utex est'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['consequat '],
   };
 
-  const range: RangeOverStarcraft2Leagues = {
+  const rangeOverStarcraft2Leagues: RangeOverStarcraft2Leagues = {
     id: [7],
     modifiedAt: ['et ex in'],
     name: ['consectetur e'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['veniam ut c'],
   };
 
-  const search: SearchOverStarcraft2Leagues = {
+  const searchOverStarcraft2Leagues: SearchOverStarcraft2Leagues = {
     name: 'in ei',
     slug: 'kb1dlt',
     url: 'aute ',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.starCraft2Leagues.getStarcraft2Leagues({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraft2Leagues,
+    range: rangeOverStarcraft2Leagues,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraft2Leagues,
     page: page,
     perPage: 50,
   });

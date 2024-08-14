@@ -34,22 +34,30 @@ List tournaments for the Rainbow Six Siege videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeShortTournaments = {
+  const filterOverR6SiegeShortTournaments: FilterOverR6SiegeShortTournaments = {
     beginAt: ['dolore esse'],
     detailedStats: true,
     endAt: ['aliquip'],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeShortTournaments = {
+  const rangeOverR6SiegeShortTournaments: RangeOverR6SiegeShortTournaments = {
     beginAt: ['veniam '],
     detailedStats: [true],
     endAt: ['adipis'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['indolor eiu'],
     serieId: [9],
     slug: ['owgd'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeShortTournaments = {
+  const searchOverR6SiegeShortTournaments: SearchOverR6SiegeShortTournaments = {
     name: 'ullam',
     prizepool: 'incididun',
     slug: '6ix7vd2l-ow',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeTournaments.getR6siegeTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeShortTournaments,
+    range: rangeOverR6SiegeShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeShortTournaments = {
+  const filterOverR6SiegeShortTournaments: FilterOverR6SiegeShortTournaments = {
     beginAt: ['dolore esse'],
     detailedStats: true,
     endAt: ['aliquip'],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeShortTournaments = {
+  const rangeOverR6SiegeShortTournaments: RangeOverR6SiegeShortTournaments = {
     beginAt: ['veniam '],
     detailedStats: [true],
     endAt: ['adipis'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['indolor eiu'],
     serieId: [9],
     slug: ['owgd'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeShortTournaments = {
+  const searchOverR6SiegeShortTournaments: SearchOverR6SiegeShortTournaments = {
     name: 'ullam',
     prizepool: 'incididun',
     slug: '6ix7vd2l-ow',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeTournaments.getR6siegeTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeShortTournaments,
+    range: rangeOverR6SiegeShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeShortTournaments = {
+  const filterOverR6SiegeShortTournaments: FilterOverR6SiegeShortTournaments = {
     beginAt: ['dolore esse'],
     detailedStats: true,
     endAt: ['aliquip'],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeShortTournaments = {
+  const rangeOverR6SiegeShortTournaments: RangeOverR6SiegeShortTournaments = {
     beginAt: ['veniam '],
     detailedStats: [true],
     endAt: ['adipis'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['indolor eiu'],
     serieId: [9],
     slug: ['owgd'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeShortTournaments = {
+  const searchOverR6SiegeShortTournaments: SearchOverR6SiegeShortTournaments = {
     name: 'ullam',
     prizepool: 'incididun',
     slug: '6ix7vd2l-ow',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeTournaments.getR6siegeTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeShortTournaments,
+    range: rangeOverR6SiegeShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming Rainbow Six Siege tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverR6SiegeShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverR6SiegeShortTournaments,
+  SearchOverR6SiegeShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverR6SiegeShortTournamentsVideogameTitle = 4;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverR6SiegeShortTournaments = {
+  const filterOverR6SiegeShortTournaments: FilterOverR6SiegeShortTournaments = {
     beginAt: ['dolore esse'],
     detailedStats: true,
     endAt: ['aliquip'],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverR6SiegeShortTournaments = {
+  const rangeOverR6SiegeShortTournaments: RangeOverR6SiegeShortTournaments = {
     beginAt: ['veniam '],
     detailedStats: [true],
     endAt: ['adipis'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['indolor eiu'],
     serieId: [9],
     slug: ['owgd'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverR6SiegeShortTournaments = {
+  const searchOverR6SiegeShortTournaments: SearchOverR6SiegeShortTournaments = {
     name: 'ullam',
     prizepool: 'incididun',
     slug: '6ix7vd2l-ow',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.r6SiegeTournaments.getR6siegeTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverR6SiegeShortTournaments,
+    range: rangeOverR6SiegeShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverR6SiegeShortTournaments,
     page: page,
     perPage: 50,
   });

@@ -34,110 +34,118 @@ List matches for the King of Glory videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverKogMatches,
+  SearchOverKogMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverKogMatchesVideogameTitle = 6;
+  const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
+  const filterOverKogMatchesVideogameVersion = '6.4314860.74685349364';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverKogMatches = {
-  beginAt: ["Du"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["voluptate"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [6],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["labore id fugi"],
-  name: ["nostrud veniam"],
-  notStarted: true,
-  numberOfGames: [7],
-  opponentId: [filterOverKogMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Du"],
-  serieId: [10],
-  slug: ["GJ7GWuEfy"],
-  status: [matchStatus],
-  tournamentId: [1],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverKogMatchesVideogameTitle],
-  videogameVersion: [filterOverKogMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverKogMatches: FilterOverKogMatches = {
+    beginAt: ['Du'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['voluptate'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['labore id fugi'],
+    name: ['nostrud veniam'],
+    notStarted: true,
+    numberOfGames: [7],
+    opponentId: [filterOverKogMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Du'],
+    serieId: [10],
+    slug: ['GJ7GWuEfy'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverKogMatchesVideogameTitle],
+    videogameVersion: [filterOverKogMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverKogMatches = {
-  beginAt: ["Lo"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["eu minim par"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["est"],
-  name: ["Lorem "],
-  numberOfGames: [2],
-  scheduledAt: ["et"],
-  slug: ["vBKKlSKdbR"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverKogMatches: RangeOverKogMatches = {
+    beginAt: ['Lo'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['eu minim par'],
+    forfeit: [true],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['est'],
+    name: ['Lorem '],
+    numberOfGames: [2],
+    scheduledAt: ['et'],
+    slug: ['vBKKlSKdbR'],
+    status: [matchStatus1],
+    tournamentId: [5],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverKogMatches = {
-  matchType: matchType,
-  name: "cillum v",
-  slug: "Vy-2dZKJxf",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverKogMatches: SearchOverKogMatches = {
+    matchType: matchType12,
+    name: 'cillum v',
+    slug: 'Vy-2dZKJxf',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogMatches.getKogMatches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogMatches.getKogMatches({
+    filter: filterOverKogMatches,
+    range: rangeOverKogMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverKogMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +176,118 @@ List past King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverKogMatches,
+  SearchOverKogMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverKogMatchesVideogameTitle = 6;
+  const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
+  const filterOverKogMatchesVideogameVersion = '6.4314860.74685349364';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverKogMatches = {
-  beginAt: ["Du"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["voluptate"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [6],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["labore id fugi"],
-  name: ["nostrud veniam"],
-  notStarted: true,
-  numberOfGames: [7],
-  opponentId: [filterOverKogMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Du"],
-  serieId: [10],
-  slug: ["GJ7GWuEfy"],
-  status: [matchStatus],
-  tournamentId: [1],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverKogMatchesVideogameTitle],
-  videogameVersion: [filterOverKogMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverKogMatches: FilterOverKogMatches = {
+    beginAt: ['Du'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['voluptate'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['labore id fugi'],
+    name: ['nostrud veniam'],
+    notStarted: true,
+    numberOfGames: [7],
+    opponentId: [filterOverKogMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Du'],
+    serieId: [10],
+    slug: ['GJ7GWuEfy'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverKogMatchesVideogameTitle],
+    videogameVersion: [filterOverKogMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverKogMatches = {
-  beginAt: ["Lo"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["eu minim par"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["est"],
-  name: ["Lorem "],
-  numberOfGames: [2],
-  scheduledAt: ["et"],
-  slug: ["vBKKlSKdbR"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverKogMatches: RangeOverKogMatches = {
+    beginAt: ['Lo'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['eu minim par'],
+    forfeit: [true],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['est'],
+    name: ['Lorem '],
+    numberOfGames: [2],
+    scheduledAt: ['et'],
+    slug: ['vBKKlSKdbR'],
+    status: [matchStatus1],
+    tournamentId: [5],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverKogMatches = {
-  matchType: matchType,
-  name: "cillum v",
-  slug: "Vy-2dZKJxf",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverKogMatches: SearchOverKogMatches = {
+    matchType: matchType12,
+    name: 'cillum v',
+    slug: 'Vy-2dZKJxf',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogMatches.getKogMatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesPast({
+    filter: filterOverKogMatches,
+    range: rangeOverKogMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverKogMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +318,118 @@ List running King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverKogMatches,
+  SearchOverKogMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverKogMatchesVideogameTitle = 6;
+  const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
+  const filterOverKogMatchesVideogameVersion = '6.4314860.74685349364';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverKogMatches = {
-  beginAt: ["Du"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["voluptate"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [6],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["labore id fugi"],
-  name: ["nostrud veniam"],
-  notStarted: true,
-  numberOfGames: [7],
-  opponentId: [filterOverKogMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Du"],
-  serieId: [10],
-  slug: ["GJ7GWuEfy"],
-  status: [matchStatus],
-  tournamentId: [1],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverKogMatchesVideogameTitle],
-  videogameVersion: [filterOverKogMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverKogMatches: FilterOverKogMatches = {
+    beginAt: ['Du'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['voluptate'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['labore id fugi'],
+    name: ['nostrud veniam'],
+    notStarted: true,
+    numberOfGames: [7],
+    opponentId: [filterOverKogMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Du'],
+    serieId: [10],
+    slug: ['GJ7GWuEfy'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverKogMatchesVideogameTitle],
+    videogameVersion: [filterOverKogMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverKogMatches = {
-  beginAt: ["Lo"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["eu minim par"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["est"],
-  name: ["Lorem "],
-  numberOfGames: [2],
-  scheduledAt: ["et"],
-  slug: ["vBKKlSKdbR"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverKogMatches: RangeOverKogMatches = {
+    beginAt: ['Lo'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['eu minim par'],
+    forfeit: [true],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['est'],
+    name: ['Lorem '],
+    numberOfGames: [2],
+    scheduledAt: ['et'],
+    slug: ['vBKKlSKdbR'],
+    status: [matchStatus1],
+    tournamentId: [5],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverKogMatches = {
-  matchType: matchType,
-  name: "cillum v",
-  slug: "Vy-2dZKJxf",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverKogMatches: SearchOverKogMatches = {
+    matchType: matchType12,
+    name: 'cillum v',
+    slug: 'Vy-2dZKJxf',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogMatches.getKogMatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesRunning({
+    filter: filterOverKogMatches,
+    range: rangeOverKogMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverKogMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +460,118 @@ List upcoming King of Glory matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverKogMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverKogMatches,
+  SearchOverKogMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverKogMatchesVideogameTitle = 6;
+  const filterOverKogMatchesVideogameTitle = 6;
 
-const filterOverKogMatchesVideogameVersion = "6.4314860.74685349364";
+  const filterOverKogMatchesVideogameVersion = '6.4314860.74685349364';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverKogMatches = {
-  beginAt: ["Du"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["voluptate"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [6],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["labore id fugi"],
-  name: ["nostrud veniam"],
-  notStarted: true,
-  numberOfGames: [7],
-  opponentId: [filterOverKogMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["sed Du"],
-  serieId: [10],
-  slug: ["GJ7GWuEfy"],
-  status: [matchStatus],
-  tournamentId: [1],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverKogMatchesVideogameTitle],
-  videogameVersion: [filterOverKogMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverKogMatches: FilterOverKogMatches = {
+    beginAt: ['Du'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['voluptate'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [6],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['labore id fugi'],
+    name: ['nostrud veniam'],
+    notStarted: true,
+    numberOfGames: [7],
+    opponentId: [filterOverKogMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['sed Du'],
+    serieId: [10],
+    slug: ['GJ7GWuEfy'],
+    status: [matchStatus],
+    tournamentId: [1],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverKogMatchesVideogameTitle],
+    videogameVersion: [filterOverKogMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverKogMatches = {
-  beginAt: ["Lo"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["eu minim par"],
-  forfeit: [true],
-  id: [6],
-  matchType: [matchType],
-  modifiedAt: ["est"],
-  name: ["Lorem "],
-  numberOfGames: [2],
-  scheduledAt: ["et"],
-  slug: ["vBKKlSKdbR"],
-  status: [matchStatus],
-  tournamentId: [5],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverKogMatches: RangeOverKogMatches = {
+    beginAt: ['Lo'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['eu minim par'],
+    forfeit: [true],
+    id: [6],
+    matchType: [matchType1],
+    modifiedAt: ['est'],
+    name: ['Lorem '],
+    numberOfGames: [2],
+    scheduledAt: ['et'],
+    slug: ['vBKKlSKdbR'],
+    status: [matchStatus1],
+    tournamentId: [5],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverKogMatches = {
-  matchType: matchType,
-  name: "cillum v",
-  slug: "Vy-2dZKJxf",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverKogMatches: SearchOverKogMatches = {
+    matchType: matchType12,
+    name: 'cillum v',
+    slug: 'Vy-2dZKJxf',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.kogMatches.getKogMatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.kogMatches.getKogMatchesUpcoming({
+    filter: filterOverKogMatches,
+    range: rangeOverKogMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverKogMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

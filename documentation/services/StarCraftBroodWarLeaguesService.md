@@ -31,14 +31,20 @@ List StarCraft Brood War leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverStarcraftBroodWarLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverStarcraftBroodWarLeagues,
+  SearchOverStarcraftBroodWarLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverStarcraftBroodWarLeagues = {
+  const filterOverStarcraftBroodWarLeagues: FilterOverStarcraftBroodWarLeagues = {
     id: [7],
     modifiedAt: ['magna '],
     name: ['ea cu'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['cillum labore '],
   };
 
-  const range: RangeOverStarcraftBroodWarLeagues = {
+  const rangeOverStarcraftBroodWarLeagues: RangeOverStarcraftBroodWarLeagues = {
     id: [6],
     modifiedAt: ['reprehender'],
     name: ['sintelit'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['dolore non'],
   };
 
-  const search: SearchOverStarcraftBroodWarLeagues = {
+  const searchOverStarcraftBroodWarLeagues: SearchOverStarcraftBroodWarLeagues = {
     name: 'ex dolore do',
     slug: '4-9',
     url: 'nulla ',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.starCraftBroodWarLeagues.getStarcraftBroodWarLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverStarcraftBroodWarLeagues,
+    range: rangeOverStarcraftBroodWarLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverStarcraftBroodWarLeagues,
     page: page,
     perPage: 50,
   });

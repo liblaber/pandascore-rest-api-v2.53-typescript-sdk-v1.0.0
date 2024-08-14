@@ -7,7 +7,7 @@ import { baseTeam, baseTeamRequest, baseTeamResponse } from './base-team';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const owGameRoundTeam: any = z.lazy(() => {
+export const owGameRoundTeam = z.lazy(() => {
   return z.object({
     players: z.array(owGameRoundPlayer),
     team: baseTeam,
@@ -26,7 +26,7 @@ export type OwGameRoundTeam = z.infer<typeof owGameRoundTeam>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const owGameRoundTeamResponse: any = z.lazy(() => {
+export const owGameRoundTeamResponse = z.lazy(() => {
   return z
     .object({
       players: z.array(owGameRoundPlayerResponse),
@@ -42,7 +42,7 @@ export const owGameRoundTeamResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const owGameRoundTeamRequest: any = z.lazy(() => {
+export const owGameRoundTeamRequest = z.lazy(() => {
   return z
     .object({ players: z.array(owGameRoundPlayerRequest).nullish(), team: baseTeamRequest.nullish() })
     .transform((data) => ({

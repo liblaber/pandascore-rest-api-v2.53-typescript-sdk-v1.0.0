@@ -34,110 +34,118 @@ List matches for the EA Sports FC videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaMatches,
+  SearchOverFifaMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverFifaMatchesVideogameTitle = 10;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-const filterOverFifaMatchesVideogameVersion = "5793643.972";
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverFifaMatches = {
-  beginAt: ["laboris elit"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["ad enim incidi"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["elit "],
-  name: ["laborum do "],
-  notStarted: true,
-  numberOfGames: [9],
-  opponentId: [filterOverFifaMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["dolor cupida"],
-  serieId: [9],
-  slug: ["5y-BKFQ "],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverFifaMatchesVideogameTitle],
-  videogameVersion: [filterOverFifaMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['ad enim incidi'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverFifaMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
+    status: [matchStatus],
+    tournamentId: [5],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverFifaMatchesVideogameTitle],
+    videogameVersion: [filterOverFifaMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverFifaMatches = {
-  beginAt: ["labore ea p"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["con"],
-  forfeit: [true],
-  id: [9],
-  matchType: [matchType],
-  modifiedAt: ["dolore"],
-  name: ["id deserunt "],
-  numberOfGames: [123],
-  scheduledAt: ["al"],
-  slug: ["AH"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['con'],
+    forfeit: [true],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverFifaMatches = {
-  matchType: matchType,
-  name: "dolore ci",
-  slug: "L",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatches(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatches({
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverFifaMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -168,110 +176,118 @@ List past EA Sports FC matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaMatches,
+  SearchOverFifaMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverFifaMatchesVideogameTitle = 10;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-const filterOverFifaMatchesVideogameVersion = "5793643.972";
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverFifaMatches = {
-  beginAt: ["laboris elit"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["ad enim incidi"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["elit "],
-  name: ["laborum do "],
-  notStarted: true,
-  numberOfGames: [9],
-  opponentId: [filterOverFifaMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["dolor cupida"],
-  serieId: [9],
-  slug: ["5y-BKFQ "],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverFifaMatchesVideogameTitle],
-  videogameVersion: [filterOverFifaMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['ad enim incidi'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverFifaMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
+    status: [matchStatus],
+    tournamentId: [5],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverFifaMatchesVideogameTitle],
+    videogameVersion: [filterOverFifaMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverFifaMatches = {
-  beginAt: ["labore ea p"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["con"],
-  forfeit: [true],
-  id: [9],
-  matchType: [matchType],
-  modifiedAt: ["dolore"],
-  name: ["id deserunt "],
-  numberOfGames: [123],
-  scheduledAt: ["al"],
-  slug: ["AH"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['con'],
+    forfeit: [true],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverFifaMatches = {
-  matchType: matchType,
-  name: "dolore ci",
-  slug: "L",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesPast(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesPast({
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverFifaMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -302,110 +318,118 @@ List running EA Sports FC matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaMatches,
+  SearchOverFifaMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverFifaMatchesVideogameTitle = 10;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-const filterOverFifaMatchesVideogameVersion = "5793643.972";
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverFifaMatches = {
-  beginAt: ["laboris elit"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["ad enim incidi"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["elit "],
-  name: ["laborum do "],
-  notStarted: true,
-  numberOfGames: [9],
-  opponentId: [filterOverFifaMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["dolor cupida"],
-  serieId: [9],
-  slug: ["5y-BKFQ "],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverFifaMatchesVideogameTitle],
-  videogameVersion: [filterOverFifaMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['ad enim incidi'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverFifaMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
+    status: [matchStatus],
+    tournamentId: [5],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverFifaMatchesVideogameTitle],
+    videogameVersion: [filterOverFifaMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverFifaMatches = {
-  beginAt: ["labore ea p"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["con"],
-  forfeit: [true],
-  id: [9],
-  matchType: [matchType],
-  modifiedAt: ["dolore"],
-  name: ["id deserunt "],
-  numberOfGames: [123],
-  scheduledAt: ["al"],
-  slug: ["AH"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['con'],
+    forfeit: [true],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverFifaMatches = {
-  matchType: matchType,
-  name: "dolore ci",
-  slug: "L",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesRunning(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesRunning({
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverFifaMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();
@@ -436,110 +460,118 @@ List upcoming EA Sports FC matches
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverFifaMatches,
+  MatchStatus,
+  MatchType,
+  MatchWinnerType,
+  Page,
+  PandascoreClient,
+  RangeOverFifaMatches,
+  SearchOverFifaMatches,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
-	token: 'YOUR_TOKEN'});
+    token: 'YOUR_TOKEN',
+  });
 
-  const matchType = MatchType.all_games_played;
+  const matchType = MatchType.ALLGAMESPLAYED;
 
-const teamIdOrSlug = 10;;
+  const teamIdOrSlug = 10;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus = MatchStatus.CANCELED;
 
-const videogameIdOrSlug = VideogameId.1;;
+  const videogameId = VideogameId._1;
 
-const filterOverFifaMatchesVideogameTitle = 10;
+  const filterOverFifaMatchesVideogameTitle = 10;
 
-const filterOverFifaMatchesVideogameVersion = "5793643.972";
+  const filterOverFifaMatchesVideogameVersion = '5793643.972';
 
-const opponentId = 7;
+  const opponentId = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType = MatchWinnerType.PLAYER;
 
-const filter: FilterOverFifaMatches = {
-  beginAt: ["laboris elit"],
-  detailedStats: true,
-  draw: true,
-  endAt: ["ad enim incidi"],
-  finished: true,
-  forfeit: true,
-  future: true,
-  id: [2],
-  leagueId: [6],
-  matchType: [matchType],
-  modifiedAt: ["elit "],
-  name: ["laborum do "],
-  notStarted: true,
-  numberOfGames: [9],
-  opponentId: [filterOverFifaMatchesOpponentId],
-  opponentsFilled: true,
-  past: true,
-  running: true,
-  scheduledAt: ["dolor cupida"],
-  serieId: [9],
-  slug: ["5y-BKFQ "],
-  status: [matchStatus],
-  tournamentId: [5],
-  unscheduled: true,
-  videogame: [videogameIdOrSlug],
-  videogameTitle: [filterOverFifaMatchesVideogameTitle],
-  videogameVersion: [filterOverFifaMatchesVideogameVersion],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const filterOverFifaMatches: FilterOverFifaMatches = {
+    beginAt: ['laboris elit'],
+    detailedStats: true,
+    draw: true,
+    endAt: ['ad enim incidi'],
+    finished: true,
+    forfeit: true,
+    future: true,
+    id: [2],
+    leagueId: [6],
+    matchType: [matchType],
+    modifiedAt: ['elit '],
+    name: ['laborum do '],
+    notStarted: true,
+    numberOfGames: [9],
+    opponentId: [filterOverFifaMatchesOpponentId],
+    opponentsFilled: true,
+    past: true,
+    running: true,
+    scheduledAt: ['dolor cupida'],
+    serieId: [9],
+    slug: ['5y-BKFQ '],
+    status: [matchStatus],
+    tournamentId: [5],
+    unscheduled: true,
+    videogame: [videogameIdOrSlug],
+    videogameTitle: [filterOverFifaMatchesVideogameTitle],
+    videogameVersion: [filterOverFifaMatchesVideogameVersion],
+    winnerId: [opponentId],
+    winnerType: [matchWinnerType],
+  };
+  const matchType1 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus1 = MatchStatus.CANCELED;
 
-const opponentId = 7;
+  const opponentId1 = 7;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType1 = MatchWinnerType.PLAYER;
 
-const range: RangeOverFifaMatches = {
-  beginAt: ["labore ea p"],
-  detailedStats: [true],
-  draw: [true],
-  endAt: ["con"],
-  forfeit: [true],
-  id: [9],
-  matchType: [matchType],
-  modifiedAt: ["dolore"],
-  name: ["id deserunt "],
-  numberOfGames: [123],
-  scheduledAt: ["al"],
-  slug: ["AH"],
-  status: [matchStatus],
-  tournamentId: [1],
-  winnerId: [opponentId],
-  winnerType: [matchWinnerType]
-};
-const matchType = MatchType.all_games_played;
+  const rangeOverFifaMatches: RangeOverFifaMatches = {
+    beginAt: ['labore ea p'],
+    detailedStats: [true],
+    draw: [true],
+    endAt: ['con'],
+    forfeit: [true],
+    id: [9],
+    matchType: [matchType1],
+    modifiedAt: ['dolore'],
+    name: ['id deserunt '],
+    numberOfGames: [123],
+    scheduledAt: ['al'],
+    slug: ['AH'],
+    status: [matchStatus1],
+    tournamentId: [1],
+    winnerId: [opponentId1],
+    winnerType: [matchWinnerType1],
+  };
+  const matchType12 = MatchType.ALLGAMESPLAYED;
 
-const matchStatus = MatchStatus.canceled;
+  const matchStatus12 = MatchStatus.CANCELED;
 
-const matchWinnerType = MatchWinnerType.Player;
+  const matchWinnerType12 = MatchWinnerType.PLAYER;
 
-const search: SearchOverFifaMatches = {
-  matchType: matchType,
-  name: "dolore ci",
-  slug: "L",
-  status: matchStatus,
-  winnerType: matchWinnerType
-};
-const page = 1;
+  const searchOverFifaMatches: SearchOverFifaMatches = {
+    matchType: matchType12,
+    name: 'dolore ci',
+    slug: 'L',
+    status: matchStatus12,
+    winnerType: matchWinnerType12,
+  };
+  const page = 1;
 
-  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesUpcoming(
-  {
-		filter: filter,
-		range: range,
+  const { data } = await pandascoreClient.eaSportsFcMatches.getFifaMatchesUpcoming({
+    filter: filterOverFifaMatches,
+    range: rangeOverFifaMatches,
     sort: [[]],
-		search: search,
-		page: page,
+    search: searchOverFifaMatches,
+    page: page,
     perPage: 50,
-  }
-);
+  });
 
   console.log(data);
 })();

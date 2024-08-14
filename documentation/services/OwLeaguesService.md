@@ -31,14 +31,20 @@ List Overwatch leagues
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverOwLeagues,
+  Page,
+  PandascoreClient,
+  RangeOverOwLeagues,
+  SearchOverOwLeagues,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverOwLeagues = {
+  const filterOverOwLeagues: FilterOverOwLeagues = {
     id: [3],
     modifiedAt: ['cillum'],
     name: ['consequat ni'],
@@ -46,7 +52,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['ipsum'],
   };
 
-  const range: RangeOverOwLeagues = {
+  const rangeOverOwLeagues: RangeOverOwLeagues = {
     id: [5],
     modifiedAt: ['c'],
     name: ['laborum anim es'],
@@ -54,7 +60,7 @@ import { PandascoreClient } from 'pandascore_client';
     url: ['cupidatat irur'],
   };
 
-  const search: SearchOverOwLeagues = {
+  const searchOverOwLeagues: SearchOverOwLeagues = {
     name: 'dolor mini',
     slug: 'mt_2hbpfj',
     url: 'qui exerci',
@@ -62,10 +68,10 @@ import { PandascoreClient } from 'pandascore_client';
   const page = 1;
 
   const { data } = await pandascoreClient.owLeagues.getOwLeagues({
-    filter: filter,
-    range: range,
+    filter: filterOverOwLeagues,
+    range: rangeOverOwLeagues,
     sort: [[]],
-    search: search,
+    search: searchOverOwLeagues,
     page: page,
     perPage: 50,
   });

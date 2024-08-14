@@ -34,22 +34,30 @@ List tournaments for the Counter-Strike videogame
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoShortTournaments,
+  SearchOverCsgoShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
     beginAt: ['ad'],
     detailedStats: true,
     endAt: ['do cupidatat a'],
@@ -66,13 +74,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
     beginAt: ['ma'],
     detailedStats: [true],
     endAt: ['n'],
@@ -83,28 +91,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['qui pr'],
     serieId: [2],
     slug: ['yst'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
     name: 'tempor repr',
     prizepool: 'nostrud ullamc',
     slug: '5hi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournaments({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -138,22 +146,30 @@ List past Counter-Strike tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoShortTournaments,
+  SearchOverCsgoShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
     beginAt: ['ad'],
     detailedStats: true,
     endAt: ['do cupidatat a'],
@@ -170,13 +186,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
     beginAt: ['ma'],
     detailedStats: [true],
     endAt: ['n'],
@@ -187,28 +203,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['qui pr'],
     serieId: [2],
     slug: ['yst'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
     name: 'tempor repr',
     prizepool: 'nostrud ullamc',
     slug: '5hi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsPast({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -242,22 +258,30 @@ List running Counter-Strike tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoShortTournaments,
+  SearchOverCsgoShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
     beginAt: ['ad'],
     detailedStats: true,
     endAt: ['do cupidatat a'],
@@ -274,13 +298,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
     beginAt: ['ma'],
     detailedStats: [true],
     endAt: ['n'],
@@ -291,28 +315,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['qui pr'],
     serieId: [2],
     slug: ['yst'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
     name: 'tempor repr',
     prizepool: 'nostrud ullamc',
     slug: '5hi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsRunning({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });
@@ -346,22 +370,30 @@ List upcoming Counter-Strike tournaments
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverCsgoShortTournaments,
+  OpponentType,
+  Page,
+  PandascoreClient,
+  RangeOverCsgoShortTournaments,
+  SearchOverCsgoShortTournaments,
+  SearchOverValorantShortTournamentsTier2,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.A;
 
   const filterOverCsgoShortTournamentsVideogameTitle = 2;
 
   const opponentId = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType = OpponentType.PLAYER;
 
-  const filter: FilterOverCsgoShortTournaments = {
+  const filterOverCsgoShortTournaments: FilterOverCsgoShortTournaments = {
     beginAt: ['ad'],
     detailedStats: true,
     endAt: ['do cupidatat a'],
@@ -378,13 +410,13 @@ import { PandascoreClient } from 'pandascore_client';
     winnerId: [opponentId],
     winnerType: [opponentType],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier21 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentId = 7;
+  const opponentId1 = 7;
 
-  const opponentType = OpponentType.Player;
+  const opponentType1 = OpponentType.PLAYER;
 
-  const range: RangeOverCsgoShortTournaments = {
+  const rangeOverCsgoShortTournaments: RangeOverCsgoShortTournaments = {
     beginAt: ['ma'],
     detailedStats: [true],
     endAt: ['n'],
@@ -395,28 +427,28 @@ import { PandascoreClient } from 'pandascore_client';
     prizepool: ['qui pr'],
     serieId: [2],
     slug: ['yst'],
-    tier: [searchOverValorantShortTournamentsTier2],
-    winnerId: [opponentId],
-    winnerType: [opponentType],
+    tier: [searchOverValorantShortTournamentsTier21],
+    winnerId: [opponentId1],
+    winnerType: [opponentType1],
   };
-  const searchOverValorantShortTournamentsTier2 = SearchOverValorantShortTournamentsTier2.a;
+  const searchOverValorantShortTournamentsTier212 = SearchOverValorantShortTournamentsTier2.A;
 
-  const opponentType = OpponentType.Player;
+  const opponentType12 = OpponentType.PLAYER;
 
-  const search: SearchOverCsgoShortTournaments = {
+  const searchOverCsgoShortTournaments: SearchOverCsgoShortTournaments = {
     name: 'tempor repr',
     prizepool: 'nostrud ullamc',
     slug: '5hi',
-    tier: searchOverValorantShortTournamentsTier2,
-    winnerType: opponentType,
+    tier: searchOverValorantShortTournamentsTier212,
+    winnerType: opponentType12,
   };
   const page = 1;
 
   const { data } = await pandascoreClient.counterStrikeTournaments.getCsgoTournamentsUpcoming({
-    filter: filter,
-    range: range,
+    filter: filterOverCsgoShortTournaments,
+    range: rangeOverCsgoShortTournaments,
     sort: [[]],
-    search: search,
+    search: searchOverCsgoShortTournaments,
     page: page,
     perPage: 50,
   });

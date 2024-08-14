@@ -2,15 +2,14 @@
 
 import { z } from 'zod';
 import { team, teamRequest, teamResponse } from '../../common/team';
-import { opponentTypeTeam } from '../../common/opponent-type-team';
 
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const teamRosters: any = z.lazy(() => {
+export const teamRosters = z.lazy(() => {
   return z.object({
     rosters: z.array(team),
-    type: opponentTypeTeam,
+    type: z.string(),
   });
 });
 
@@ -26,11 +25,11 @@ export type TeamRosters = z.infer<typeof teamRosters>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamRostersResponse: any = z.lazy(() => {
+export const teamRostersResponse = z.lazy(() => {
   return z
     .object({
       rosters: z.array(teamResponse),
-      type: opponentTypeTeam,
+      type: z.string(),
     })
     .transform((data) => ({
       rosters: data['rosters'],
@@ -42,8 +41,8 @@ export const teamRostersResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const teamRostersRequest: any = z.lazy(() => {
-  return z.object({ rosters: z.array(teamRequest).nullish(), type: opponentTypeTeam.nullish() }).transform((data) => ({
+export const teamRostersRequest = z.lazy(() => {
+  return z.object({ rosters: z.array(teamRequest).nullish(), type: z.string().nullish() }).transform((data) => ({
     rosters: data['rosters'],
     type: data['type'],
   }));

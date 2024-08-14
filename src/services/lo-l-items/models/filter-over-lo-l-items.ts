@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const filterOverLoLItems: any = z.lazy(() => {
+export const filterOverLoLItems = z.lazy(() => {
   return z.object({
     flatArmorMod: z.array(z.number()).min(1).optional(),
     flatCritChanceMod: z.array(z.number()).min(1).optional(),
@@ -62,7 +62,7 @@ export type FilterOverLoLItems = z.infer<typeof filterOverLoLItems>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverLoLItemsResponse: any = z.lazy(() => {
+export const filterOverLoLItemsResponse = z.lazy(() => {
   return z
     .object({
       flat_armor_mod: z.array(z.number()).min(1).optional(),
@@ -116,7 +116,7 @@ export const filterOverLoLItemsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const filterOverLoLItemsRequest: any = z.lazy(() => {
+export const filterOverLoLItemsRequest = z.lazy(() => {
   return z
     .object({
       flatArmorMod: z.array(z.number()).nullish(),

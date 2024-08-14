@@ -32,34 +32,40 @@ List spells
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverLoLSpells,
+  Page,
+  PandascoreClient,
+  RangeOverLoLSpells,
+  SearchOverLoLSpells,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverLoLSpells = {
+  const filterOverLoLSpells: FilterOverLoLSpells = {
     id: [8],
     name: ['laborum dolor'],
     videogameVersion: [],
   };
 
-  const range: RangeOverLoLSpells = {
+  const rangeOverLoLSpells: RangeOverLoLSpells = {
     id: [2],
     name: ['dolore com'],
   };
 
-  const search: SearchOverLoLSpells = {
+  const searchOverLoLSpells: SearchOverLoLSpells = {
     name: 'veniam ea',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.loLSpells.getLolSpells({
-    filter: filter,
-    range: range,
+    filter: filterOverLoLSpells,
+    range: rangeOverLoLSpells,
     sort: [[]],
-    search: search,
+    search: searchOverLoLSpells,
     page: page,
     perPage: 50,
   });

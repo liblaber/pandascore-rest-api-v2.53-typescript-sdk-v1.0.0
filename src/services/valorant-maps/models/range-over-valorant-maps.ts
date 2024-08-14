@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const rangeOverValorantMaps: any = z.lazy(() => {
+export const rangeOverValorantMaps = z.lazy(() => {
   return z.object({
     id: z.array(z.number()).min(2).max(2).optional(),
     name: z.array(z.string()).min(2).max(2).optional(),
@@ -26,7 +26,7 @@ export type RangeOverValorantMaps = z.infer<typeof rangeOverValorantMaps>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverValorantMapsResponse: any = z.lazy(() => {
+export const rangeOverValorantMapsResponse = z.lazy(() => {
   return z
     .object({
       id: z.array(z.number()).min(2).max(2).optional(),
@@ -44,7 +44,7 @@ export const rangeOverValorantMapsResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const rangeOverValorantMapsRequest: any = z.lazy(() => {
+export const rangeOverValorantMapsRequest = z.lazy(() => {
   return z
     .object({
       id: z.array(z.number()).nullish(),

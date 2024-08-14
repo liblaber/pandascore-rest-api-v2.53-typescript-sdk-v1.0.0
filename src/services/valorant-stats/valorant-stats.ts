@@ -2,19 +2,21 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import {
   ValorantStatsForPlayersByMatch,
   valorantStatsForPlayersByMatchResponse,
 } from './models/valorant-stats-for-players-by-match';
-import { MatchIdOrSlug, PlayerIdOrSlug, SerieIdOrSlug, TeamIdOrSlug, TournamentIdOrSlug } from '../common';
+import { MatchIdOrSlug } from '../common/match-id-or-slug';
 import {
   ValorantStatsForTeamByMatch,
   valorantStatsForTeamByMatchResponse,
 } from './models/valorant-stats-for-team-by-match';
+import { TeamIdOrSlug } from '../common/team-id-or-slug';
 import { ValorantStatsForPlayer, valorantStatsForPlayerResponse } from './models/valorant-stats-for-player';
+import { PlayerIdOrSlug } from '../common/player-id-or-slug';
 import {
   GetValorantPlayersPlayerIdOrSlugStatsParams,
   GetValorantSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
@@ -27,6 +29,7 @@ import {
   ValorantStatsForPlayerBySerie,
   valorantStatsForPlayerBySerieResponse,
 } from './models/valorant-stats-for-player-by-serie';
+import { SerieIdOrSlug } from '../common/serie-id-or-slug';
 import {
   ValorantStatsForTeamBySerie,
   valorantStatsForTeamBySerieResponse,
@@ -36,6 +39,7 @@ import {
   ValorantStatsForPlayerByTournament,
   valorantStatsForPlayerByTournamentResponse,
 } from './models/valorant-stats-for-player-by-tournament';
+import { TournamentIdOrSlug } from '../common/tournament-id-or-slug';
 import {
   ValorantStatsForTeamByTournament,
   valorantStatsForTeamByTournamentResponse,
@@ -51,18 +55,24 @@ export class ValorantStatsService extends BaseService {
     matchIdOrSlug: MatchIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForPlayersByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/matches/{match_id_or_slug}/players/stats',
-      config: this.config,
-      responseSchema: valorantStatsForPlayersByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForPlayersByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/matches/{match_id_or_slug}/players/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForPlayersByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .build();
+    return this.client.call<ValorantStatsForPlayersByMatch>(request);
   }
 
   /**
@@ -76,19 +86,28 @@ export class ValorantStatsService extends BaseService {
     teamIdOrSlug: TeamIdOrSlug,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForTeamByMatch>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/matches/{match_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForTeamByMatchResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('match_id_or_slug', matchIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForTeamByMatch>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/matches/{match_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForTeamByMatchResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'match_id_or_slug',
+        value: matchIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .build();
+    return this.client.call<ValorantStatsForTeamByMatch>(request);
   }
 
   /**
@@ -104,21 +123,36 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForPlayer>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForPlayerResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForPlayer>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForPlayerResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<ValorantStatsForPlayer>(request);
   }
 
   /**
@@ -134,20 +168,32 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantSeriesSerieIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForPlayerBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForPlayerBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForPlayerBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/series/{serie_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForPlayerBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<ValorantStatsForPlayerBySerie>(request);
   }
 
   /**
@@ -163,20 +209,32 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantSeriesSerieIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForTeamBySerie>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForTeamBySerieResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('serie_id_or_slug', serieIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForTeamBySerie>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/series/{serie_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForTeamBySerieResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'serie_id_or_slug',
+        value: serieIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<ValorantStatsForTeamBySerie>(request);
   }
 
   /**
@@ -192,21 +250,36 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForTeam>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForTeamResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    request.addQueryParam('from', params?.from);
-    request.addQueryParam('to', params?.to);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForTeam>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForTeamResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .addQueryParam({
+        key: 'from',
+        value: params?.from,
+      })
+      .addQueryParam({
+        key: 'to',
+        value: params?.to,
+      })
+      .build();
+    return this.client.call<ValorantStatsForTeam>(request);
   }
 
   /**
@@ -222,20 +295,32 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantTournamentsTournamentIdOrSlugPlayersPlayerIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForPlayerByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForPlayerByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('player_id_or_slug', playerIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForPlayerByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/tournaments/{tournament_id_or_slug}/players/{player_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForPlayerByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'player_id_or_slug',
+        value: playerIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<ValorantStatsForPlayerByTournament>(request);
   }
 
   /**
@@ -251,19 +336,31 @@ export class ValorantStatsService extends BaseService {
     params?: GetValorantTournamentsTournamentIdOrSlugTeamsTeamIdOrSlugStatsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<ValorantStatsForTeamByTournament>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/valorant/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats',
-      config: this.config,
-      responseSchema: valorantStatsForTeamByTournamentResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('tournament_id_or_slug', tournamentIdOrSlug);
-    request.addPathParam('team_id_or_slug', teamIdOrSlug);
-    request.addQueryParam('videogame_version', params?.videogameVersion);
-    return this.client.call(request);
+    const request = new RequestBuilder<ValorantStatsForTeamByTournament>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/valorant/tournaments/{tournament_id_or_slug}/teams/{team_id_or_slug}/stats')
+      .setRequestSchema(z.any())
+      .setResponseSchema(valorantStatsForTeamByTournamentResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'tournament_id_or_slug',
+        value: tournamentIdOrSlug,
+      })
+      .addPathParam({
+        key: 'team_id_or_slug',
+        value: teamIdOrSlug,
+      })
+      .addQueryParam({
+        key: 'videogame_version',
+        value: params?.videogameVersion,
+      })
+      .build();
+    return this.client.call<ValorantStatsForTeamByTournament>(request);
   }
 }

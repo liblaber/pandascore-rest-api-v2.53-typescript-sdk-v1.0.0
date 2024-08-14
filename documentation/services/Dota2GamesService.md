@@ -64,7 +64,7 @@ List frames for a given Dota 2 game
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
@@ -108,18 +108,18 @@ List games for a given Dota 2 match
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { FilterOverDota2Games, GameStatus, MatchIdOrSlug, OpponentType, Page, PandascoreClient, RangeOverDota2Games, SearchOverDota2Games } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
 	token: 'YOUR_TOKEN'});
 
   const matchIdOrSlug = 5;
-const gameStatus = GameStatus.finished;
+const gameStatus = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType = OpponentType.PLAYER;
 
-const filter: FilterOverDota2Games = {
+const filterOverDota2Games: FilterOverDota2Games = {
   beginAt: ["ad"],
   complete: true,
   detailedStats: true,
@@ -134,11 +134,11 @@ const filter: FilterOverDota2Games = {
   status: [gameStatus],
   winnerType: [opponentType]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus1 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType1 = OpponentType.PLAYER;
 
-const range: RangeOverDota2Games = {
+const rangeOverDota2Games: RangeOverDota2Games = {
   beginAt: ["Ut"],
   complete: [true],
   detailedStats: [true],
@@ -150,26 +150,26 @@ const range: RangeOverDota2Games = {
   length: [9],
   matchId: [2],
   position: [1],
-  status: [gameStatus],
-  winnerType: [opponentType]
+  status: [gameStatus1],
+  winnerType: [opponentType1]
 };
-const gameStatus = GameStatus.finished;
+const gameStatus12 = GameStatus.FINISHED;
 
-const opponentType = OpponentType.Player;
+const opponentType12 = OpponentType.PLAYER;
 
-const search: SearchOverDota2Games = {
-  status: gameStatus,
-  winnerType: opponentType
+const searchOverDota2Games: SearchOverDota2Games = {
+  status: gameStatus12,
+  winnerType: opponentType12
 };
 const page = 1;
 
   const { data } = await pandascoreClient.dota2Games.getDota2MatchesMatchIdOrSlugGames(
   ,
   {
-		filter: filter,
-		range: range,
+		filter: filterOverDota2Games,
+		range: rangeOverDota2Games,
     sort: [[]],
-		search: search,
+		search: searchOverDota2Games,
 		page: page,
     perPage: 50,
   }
@@ -201,7 +201,7 @@ List finished games for a given Dota 2 team
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Page, PandascoreClient, TeamIdOrSlug } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({

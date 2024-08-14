@@ -2,9 +2,9 @@
 
 import { z } from 'zod';
 import { BaseService } from '../base-service';
-import { ContentType, HttpResponse } from '../../http';
-import { RequestConfig } from '../../http/types';
-import { Request } from '../../http/transport/request';
+import { ContentType, HttpResponse, RequestConfig } from '../../http/types';
+import { RequestBuilder } from '../../http/transport/request-builder';
+import { SerializationStyle } from '../../http/serialization/base-serializer';
 import { LoLRune, loLRuneResponse } from '../common/lo-l-rune';
 import { GetLolRunesParams, GetLolRunesReforgedParams, GetLolRunesReforgedPathsParams } from './request-params';
 import { LoLRuneReforged, loLRuneReforgedResponse } from '../common/lo-l-rune-reforged';
@@ -22,23 +22,47 @@ export class LoLRunesService extends BaseService {
    * @returns {Promise<HttpResponse<LoLRune[]>>} A list of League-of-Legends runes
    */
   async getLolRunes(params?: GetLolRunesParams, requestConfig?: RequestConfig): Promise<HttpResponse<LoLRune[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes',
-      config: this.config,
-      responseSchema: z.array(loLRuneResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRune[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLRuneResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLRune[]>(request);
   }
 
   /**
@@ -55,23 +79,47 @@ export class LoLRunesService extends BaseService {
     params?: GetLolRunesReforgedParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLRuneReforged[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes-reforged',
-      config: this.config,
-      responseSchema: z.array(loLRuneReforgedResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRuneReforged[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes-reforged')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLRuneReforgedResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLRuneReforged[]>(request);
   }
 
   /**
@@ -88,23 +136,47 @@ export class LoLRunesService extends BaseService {
     params?: GetLolRunesReforgedPathsParams,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLRunePath[]>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes-reforged-paths',
-      config: this.config,
-      responseSchema: z.array(loLRunePathResponse),
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addQueryParam('filter', params?.filter);
-    request.addQueryParam('range', params?.range);
-    request.addQueryParam('sort', params?.sort);
-    request.addQueryParam('search', params?.search);
-    request.addQueryParam('page', params?.page);
-    request.addQueryParam('per_page', params?.perPage);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRunePath[]>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes-reforged-paths')
+      .setRequestSchema(z.any())
+      .setResponseSchema(z.array(loLRunePathResponse))
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addQueryParam({
+        key: 'filter',
+        value: params?.filter,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'range',
+        value: params?.range,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'sort',
+        value: params?.sort,
+      })
+      .addQueryParam({
+        key: 'search',
+        value: params?.search,
+        style: SerializationStyle.DEEP_OBJECT,
+      })
+      .addQueryParam({
+        key: 'page',
+        value: params?.page,
+      })
+      .addQueryParam({
+        key: 'per_page',
+        value: params?.perPage,
+      })
+      .build();
+    return this.client.call<LoLRunePath[]>(request);
   }
 
   /**
@@ -116,18 +188,24 @@ export class LoLRunesService extends BaseService {
     lolRunePathId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLRunePath>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes-reforged-paths/{lol_rune_path_id}',
-      config: this.config,
-      responseSchema: loLRunePathResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_rune_path_id', lolRunePathId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRunePath>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes-reforged-paths/{lol_rune_path_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLRunePathResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_rune_path_id',
+        value: lolRunePathId,
+      })
+      .build();
+    return this.client.call<LoLRunePath>(request);
   }
 
   /**
@@ -139,18 +217,24 @@ export class LoLRunesService extends BaseService {
     lolRuneReforgedId: number,
     requestConfig?: RequestConfig,
   ): Promise<HttpResponse<LoLRuneReforged>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes-reforged/{lol_rune_reforged_id}',
-      config: this.config,
-      responseSchema: loLRuneReforgedResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_rune_reforged_id', lolRuneReforgedId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRuneReforged>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes-reforged/{lol_rune_reforged_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLRuneReforgedResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_rune_reforged_id',
+        value: lolRuneReforgedId,
+      })
+      .build();
+    return this.client.call<LoLRuneReforged>(request);
   }
 
   /**
@@ -159,17 +243,23 @@ export class LoLRunesService extends BaseService {
    * @returns {Promise<HttpResponse<LoLRune>>} A League-of-Legends rune
    */
   async getLolRunesLolRuneId(lolRuneId: number, requestConfig?: RequestConfig): Promise<HttpResponse<LoLRune>> {
-    const request = new Request({
-      method: 'GET',
-      path: '/lol/runes/{lol_rune_id}',
-      config: this.config,
-      responseSchema: loLRuneResponse,
-      requestSchema: z.any(),
-      requestContentType: ContentType.Json,
-      responseContentType: ContentType.Json,
-      requestConfig,
-    });
-    request.addPathParam('lol_rune_id', lolRuneId);
-    return this.client.call(request);
+    const request = new RequestBuilder<LoLRune>()
+      .setConfig(this.config)
+      .setBaseUrl(this.config)
+      .setMethod('GET')
+      .setPath('/lol/runes/{lol_rune_id}')
+      .setRequestSchema(z.any())
+      .setResponseSchema(loLRuneResponse)
+      .setRequestContentType(ContentType.Json)
+      .setResponseContentType(ContentType.Json)
+      .setRetryAttempts(this.config, requestConfig)
+      .setRetryDelayMs(this.config, requestConfig)
+      .setResponseValidation(this.config, requestConfig)
+      .addPathParam({
+        key: 'lol_rune_id',
+        value: lolRuneId,
+      })
+      .build();
+    return this.client.call<LoLRune>(request);
   }
 }

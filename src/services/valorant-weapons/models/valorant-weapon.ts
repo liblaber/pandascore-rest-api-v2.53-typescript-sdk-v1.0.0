@@ -5,7 +5,7 @@ import { z } from 'zod';
 /**
  * The shape of the model inside the application code - what the users use
  */
-export const valorantWeapon: any = z.lazy(() => {
+export const valorantWeapon = z.lazy(() => {
   return z.object({
     creds: z.number().gte(0).nullable(),
     id: z.number().gte(1),
@@ -30,7 +30,7 @@ export type ValorantWeapon = z.infer<typeof valorantWeapon>;
  * The shape of the model mapping from the api schema into the application shape.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantWeaponResponse: any = z.lazy(() => {
+export const valorantWeaponResponse = z.lazy(() => {
   return z
     .object({
       creds: z.number().gte(0).nullable(),
@@ -52,7 +52,7 @@ export const valorantWeaponResponse: any = z.lazy(() => {
  * The shape of the model mapping from the application shape into the api schema.
  * Is equal to application shape if all property names match the api schema
  */
-export const valorantWeaponRequest: any = z.lazy(() => {
+export const valorantWeaponRequest = z.lazy(() => {
   return z
     .object({
       creds: z.number().nullish(),

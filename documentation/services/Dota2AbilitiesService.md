@@ -32,33 +32,39 @@ List abilities
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import {
+  FilterOverDota2Abilities,
+  Page,
+  PandascoreClient,
+  RangeOverDota2Abilities,
+  SearchOverDota2Abilities,
+} from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
     token: 'YOUR_TOKEN',
   });
 
-  const filter: FilterOverDota2Abilities = {
+  const filterOverDota2Abilities: FilterOverDota2Abilities = {
     id: [10],
     name: ['mv8o1gq'],
   };
 
-  const range: RangeOverDota2Abilities = {
+  const rangeOverDota2Abilities: RangeOverDota2Abilities = {
     id: [10],
     name: ['g6tgc'],
   };
 
-  const search: SearchOverDota2Abilities = {
+  const searchOverDota2Abilities: SearchOverDota2Abilities = {
     name: 'a78ls0h8h80',
   };
   const page = 1;
 
   const { data } = await pandascoreClient.dota2Abilities.getDota2Abilities({
-    filter: filter,
-    range: range,
+    filter: filterOverDota2Abilities,
+    range: rangeOverDota2Abilities,
     sort: [[]],
-    search: search,
+    search: searchOverDota2Abilities,
     page: page,
     perPage: 50,
   });
@@ -87,7 +93,7 @@ Get a single ability by ID or by slug
 **Example Usage Code Snippet**
 
 ```typescript
-import { PandascoreClient } from 'pandascore_client';
+import { Dota2AbilityIdOrSlug, PandascoreClient } from 'pandascore_client';
 
 (async () => {
   const pandascoreClient = new PandascoreClient({
